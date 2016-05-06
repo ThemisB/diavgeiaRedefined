@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/redmine/dioikitiki-metarithmisi/!svn/ver/15/drasi1/frontend/sites/web/mini_sites
+END
+functions.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/functions.php
+END
+data.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/data.php
+END
+theme_header.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/theme_header.php
+END
+list.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/list.php
+END
+queries.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/queries.php
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/.gitignore
+END
+theme_footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/theme_footer.php
+END
+get_items.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/get_items.php
+END
+preview.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/preview.php
+END
+_right-sidebar.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/_right-sidebar.php
+END
+db.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/db.php
+END
+theme_sidebar.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/theme_sidebar.php
+END
+db.template.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/db.template.php
+END
+site.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/site.php
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/config.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/index.php
+END
+rss.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/redmine/dioikitiki-metarithmisi/!svn/ver/5/drasi1/frontend/sites/web/mini_sites/rss.php
+END

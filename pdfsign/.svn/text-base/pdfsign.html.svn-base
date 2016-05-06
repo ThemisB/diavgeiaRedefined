@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="pdfsign.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <p>
+    <label for="ada">ADA:</label>
+    <input type="text" name="ada" id="ada" />
+  </p>
+  <p>
+    <label for="file_box">PDF File</label>
+    <input type="file" name="file_box" id="file_box" />
+  </p>
+  <p>
+    <input type="submit" name="btn" id="btn" value="Submit" />
+  </p>
+</form>
+</body>
+</html>
