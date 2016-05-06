@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Inflow ScrollBars</title>
+<script language="JavaScript" src="../src/dynapi.js"></script>
+<script language="Javascript">
+DynAPI.setLibraryPath('../src/lib/');
+DynAPI.include('dynapi.api.browser.js');
+DynAPI.include('dynapi.api.dynlayer.js');
+DynAPI.include('dynapi.api.dyndocument.js');
+DynAPI.include('dynapi.event.*')
+DynAPI.include('dynapi.event.dragevent.js');
+DynAPI.include('dynapi.util.thread.js');
+DynAPI.include('dynapi.util.pathanim.js');
+DynAPI.include('dynapi.gui.scrollbar.js');
+DynAPI.include('dynapi.gui.dynimage.js');
+</script>
+<script language="Javascript">
+
+	vbar = new ScrollBar(ScrollBar.VERTICAL); // vetical
+	vbar.moveTo(250,50);
+	vbar.setHeight(150);
+
+	var vlistener = new EventListener()
+	vlistener.onscroll = function(e) {
+		var src = e.getSource();
+		document.scrollbar.vratiox.value = src.getRatioX();
+		document.scrollbar.vratioy.value = src.getRatioY();
+	}
+	vbar.addEventListener(vlistener);
+
+	hbar = new ScrollBar(ScrollBar.HORIZONTAL); // horizontal
+	hbar.moveTo(300,50);
+	hbar.setWidth(150);
+
+	var hlistener = new EventListener()
+	hlistener.onscroll = function(e) {
+		var src = e.getSource();
+		document.scrollbar.hratiox.value = src.getRatioX();
+		document.scrollbar.hratioy.value = src.getRatioY();
+	}
+	hbar.addEventListener(hlistener);
+
+	box = new ScrollBar(1,false);  // both horizontal and vertical (manually customized)
+	box.moveTo(310,110);
+	box.setSize(150,150);
+	box.setBgColor('#c0c0c0');
+	box.knob.setSize(37,37);
+	box.knob.setBgColor('black');
+
+	var blistener = new EventListener();
+	blistener.onscroll = function(e) {
+		var src = e.getSource();
+		document.scrollbar.bratiox.value = src.getRatioX();
+		document.scrollbar.bratioy.value = src.getRatioY();
+	}
+	box.addEventListener(blistener);
+
+</script>
+</head>
+<body bgcolor="#ffffff">
+
+This is some test of widgets added during page loading rather than on page load. The two scrollbars are added
+with position absolute ( normal addChild), while the third one is added using addInflowChild() and thus follows
+the page content flow.
+
+<hr>
+
+<form name="scrollbar">
+
+Vertical:
+<br>ratioX <input type="text" name="vratiox" size=5>
+<br>ratioY <input type="text" name="vratioy" size=5>
+<br>set height: <a href="javascript:vbar.setHeight(50)">50</a>, <a href="javascript:vbar.setHeight(100)">100</a>, <a href="javascript:vbar.setHeight(150)">150</a>, <a href="javascript:vbar.setHeight(200)">200</a>
+<br>set ratioY: <a href="javascript:vbar.setRatioY(0)">0</a>, <a href="javascript:vbar.setRatioY(0.5)">0.5</a>, <a href="javascript:vbar.setRatioY(1)">1</a>
+
+<p>Horizontal:
+<br>ratioX <input type="text" name="hratiox" size=5>
+<br>ratioY <input type="text" name="hratioy" size=5>
+<br>set width: <a href="javascript:hbar.setWidth(50)">50</a>, <a href="javascript:hbar.setWidth(100)">100</a>, <a href="javascript:hbar.setWidth(150)">150</a>, <a href="javascript:hbar.setWidth(200)">200</a>
+<br>set ratioX: <a href="javascript:hbar.setRatioX(0)">0</a>, <a href="javascript:hbar.setRatioX(0.5)">0.5</a>, <a href="javascript:hbar.setRatioX(1)">1</a>
+
+<hr>
+
+Here goes a table. Amazing.
+<table width=500 bgcolor=red border=1>
+<tr>
+<td bgcolor=white>
+Box:
+<br>ratioX <input type="text" name="bratiox" size=5>
+<br>ratioY <input type="text" name="bratioy" size=5>
+<br>set size: <a href="javascript:box.setSize(50,50)">50</a>, <a href="javascript:box.setSize(100,100)">100</a>, <a href="javascript:box.setWidth(150)">150</a>, <a href="javascript:box.setSize(200,200)">200</a>
+<br>set ratioX: <a href="javascript:box.setRatioX(0)">0</a>, <a href="javascript:box.setRatioX(0.5)">0.5</a>, <a href="javascript:box.setRatioX(1)">1</a>
+<br>set ratioY: <a href="javascript:box.setRatioY(0)">0</a>, <a href="javascript:box.setRatioY(0.5)">0.5</a>, <a href="javascript:box.setRatioY(1)">1</a>
+</td>
+<td bgcolor=green align=center>
+<script>
+	DynAPI.document.addChild(vbar);
+	DynAPI.document.addChild(hbar);
+	DynAPI.document.addInflowChild(box)
+</script>
+</td>
+</tr>
+</table>
+</form>
+<p>
+End of page. wow
+<p>
+Note: some problems while sliding the knob in the inline scrollbar, but must be something about the event coordinate
+calculation. Mozilla resizes the table cell while dragging the knob. Oh my. Anyway.
+<p>
+<b>Update: 26/2/2002</b>
+IE is fine now.
+<br>
+
+</body>
+</html>

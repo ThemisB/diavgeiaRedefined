@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict
+END
+datadict-mssql.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-mssql.inc.php
+END
+datadict-access.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-access.inc.php
+END
+datadict-oci8.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-oci8.inc.php
+END
+datadict-ibase.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-ibase.inc.php
+END
+datadict-mysql.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-mysql.inc.php
+END
+datadict-firebird.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-firebird.inc.php
+END
+datadict-postgres.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-postgres.inc.php
+END
+datadict-sybase.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-sybase.inc.php
+END
+datadict-db2.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-db2.inc.php
+END
+datadict-sapdb.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-sapdb.inc.php
+END
+datadict-informix.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-informix.inc.php
+END
+datadict-generic.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/redmine/dioikitiki-metarithmisi/!svn/ver/24/drasi1/vcl-bin/adodb/datadict/datadict-generic.inc.php
+END

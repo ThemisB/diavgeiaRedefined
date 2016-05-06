@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend
+END
+Pdf.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Pdf.php
+END
+OpenId.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/OpenId.php
+END
+Gdata.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Gdata.php
+END
+Ldap.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Ldap.php
+END
+Db.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Db.php
+END
+Debug.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Debug.php
+END
+Validate.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Validate.php
+END
+Currency.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Currency.php
+END
+TimeSync.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/TimeSync.php
+END
+Translate.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Translate.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Exception.php
+END
+Locale.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Locale.php
+END
+Acl.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Acl.php
+END
+Uri.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Uri.php
+END
+Auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Auth.php
+END
+Cache.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache.php
+END
+Memory.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Memory.php
+END
+Json.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Json.php
+END
+View.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/View.php
+END
+Layout.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Layout.php
+END
+Date.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Date.php
+END
+Log.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Log.php
+END
+Mail.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Mail.php
+END
+Session.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Session.php
+END
+Version.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Version.php
+END
+InfoCard.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/InfoCard.php
+END
+Filter.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Filter.php
+END
+Mime.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Mime.php
+END
+Form.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Form.php
+END
+Feed.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Feed.php
+END
+Config.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Config.php
+END
+Loader.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Loader.php
+END
+Registry.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Registry.php
+END

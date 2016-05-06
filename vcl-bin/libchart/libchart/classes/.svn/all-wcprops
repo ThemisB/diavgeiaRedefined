@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes
+END
+Axis.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/Axis.php
+END
+Text.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/Text.php
+END
+BarChart.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/BarChart.php
+END
+Primitive.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/Primitive.php
+END
+LineChart.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/LineChart.php
+END
+Point.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/Point.php
+END
+HorizontalChart.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/HorizontalChart.php
+END
+VerticalChart.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/VerticalChart.php
+END
+Color.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/Color.php
+END
+PieChart.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/PieChart.php
+END
+Chart.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/libchart/libchart/classes/Chart.php
+END

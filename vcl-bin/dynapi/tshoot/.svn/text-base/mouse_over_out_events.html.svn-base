@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Mouse Over/Out Events</title>
+<script language="JavaScript" src="../src/dynapi.js"></script>
+<script language="Javascript">
+	dynapi.library.setPath('../src/');
+	dynapi.library.include('dynapi.api');
+	dynapi.library.include('dynapi.functions');
+	dynapi.library.include('dynapi.library');
+	dynapi.library.include('dynapi.api.ext.DragEvent');
+	dynapi.library.include('BorderManager');
+</script>
+<script language="Javascript">
+	var t='<table bgcolor="yellow" border="1" width="100" height="100"><tr><td align="center" valign="middle"><table border="1"><tr><td>Hello</td></tr></table></td></tr></table>';
+	var lyr = dynapi.document.addChild(new DynLayer(t,150,200,100,100,'blue'));
+	lyr.addChild(new DynLayer("Y",60,60,30,30,'pink'),"lyrChild1");
+	var chld=lyr.addChild(new DynLayer("X",10,10,30,30,'lime'),"lyrChild2");
+	chld._m = true;
+	chld.setInnerBorder(1);
+	chld.enableBlackboard();
+	e={
+		onmouseout:function(e){
+			var o=e.getSource();
+			var txt=document.forms['frm']['txt'];
+			txt.value='mouse out for '+o;
+			if(o._m) o.setInnerBorder(0);
+		},
+		onmouseover:function(e){
+			var o=e.getSource();
+			var txt=document.forms['frm']['txt'];
+			txt.value='mouse over for '+o;
+			if(o._m) o.setInnerBorder(1);
+		}
+	};
+	lyr.addEventListener(e);
+	lyr.lyrChild1.addEventListener(e);
+	lyr.lyrChild2.addEventListener(e);
+</script>
+</head>
+<body>
+Mouse out is been triggered in the middle of a layer
+when the mouse is passed over the word hello. This
+problem only occurs within IE and NS6+, it seems to me
+that NS4 and opera have a problem with the child layer.
+
+I speculate that this has something to do with the
+&lt;table&gt; objects and the way how events are handled
+within the mouse event js files.
+<form name="frm">
+<input name="txt" type="text" size="50">
+</form>
+</body>
+</html>

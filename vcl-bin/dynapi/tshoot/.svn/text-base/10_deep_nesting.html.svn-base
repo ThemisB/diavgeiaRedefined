@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Return false test</title>
+<style>
+.testClass{
+	color: red;
+}
+</style>
+<script language="Javascript" src="../src/dynapi.js"></script>
+<script language="Javascript">
+dynapi.library.setPath('../src/');
+dynapi.library.include('dynapi.debug');
+dynapi.library.include('dynapi.api');
+dynapi.library.include('DragEvent');
+</script>
+<script language="Javascript">
+
+myHtml='<a style="color:green;" href="http://www.cnn.com" onclick="alert(\'hi\');return false;">Return false</a><br /><a class="testClass" href="http://www.cnn.com" onclick="alert(\'hi\');return true;">Return true</a>'
+
+function make10(){
+		myLayers=[]
+		myLayers[0] = new DynLayer(myHtml,100,200,500,500,"#AA0000")
+
+		for(i=1;i<11;i++){
+			c="#BB"+(i-1)+"A"+(i-1)+"A"
+			myLayers[i] = new DynLayer(myHtml,30,40,500,500,c)
+			myLayers[i-1].addChild(myLayers[i])
+			if(i==10)dynapi.document.addChild(myLayers[0])
+		}
+
+		for(i=0;i<11;i++){
+			DragEvent.enableDragEvents(myLayers[i])
+		}
+}
+
+</script>
+</head>
+
+<body >
+<a class="testClass" href="#" onclick="make10()">make 10 nested layers</a><br />
+<b>Issue</b><br />
+This is a test where Dynlayers are nested 10 deep, and each one contains one link with:<br />
+style="color='green'"<br />
+and one with:
+class="testClass"<br />
+"testClass" has been defined in the &lt;style> tags at the top of the page.<br /><br />
+
+This would mainly affect NS4.<br />
+P.s. Only te second link should navigate to CNN each time.
+
+
+
+</body>
+</html>

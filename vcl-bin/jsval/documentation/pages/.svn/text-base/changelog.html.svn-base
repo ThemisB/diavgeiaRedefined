@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<title>Changelog</title>
+	<link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+
+<body style="margin: 10px 10px 10px 10px">
+    <h1>Changelog</h1>
+    <h2>V.1.3.4 (<em>19.03.2006</em>)</h2>
+    <ul>
+    	<li>Fixing bug #6545: Eats up last character in regular expression</li>
+    	<li>Improve E-Mail regular expression, so german umlaut-domains are working now</li>
+    </ul>
+    <h2>V.1.3.3 (<em>15.04.2005</em>)</h2>
+    <ul>
+    	<li>Fixing bug with callback handling</li>
+    	<li>Fixing another bug with CSS error tagging</li>
+    </ul>
+    <h2>V.1.3.2 (<em>05.04.2005</em>)</h2>
+    <ul>
+    	<li>Fixing small bug, thanks again to Fuinion for spotting the problem</li>
+    </ul>
+    <h2>V.1.3.1 (<em>05.04.2005</em>)</h2>
+    <ul>
+    	<li>Including patches for CSS bug provided by Fuinion</li>
+    </ul>
+    <h2>V.1.3.0 (<em>25.03.2005</em>)</h2>
+    <ul>
+    	<li>Renaming the Regular expression, so there can't be collisions with other javascript variables (ATTENTION: if you use the old regex constants (email...) you have to rename them in your html pages!)</li>
+    	<li>New feature: validating the file input field</li>
+    	<li>Fixing bug: If no error css class is defined the field is set to an undefined css class</li>
+    	<li>Fixing bug: if a fieldset was defined in a form the validation was abourted with true</li>
+		<li>Fixing bug: Reset the css-class to previous class failed</li>
+    </ul>
+    <h2>V.1.2.0 (<em>09.03.2005</em>)</h2>
+	<ul>
+		<li>New property for checking a textfield with a callback function (see <a href="documentation.html#callbackfct">documentation</a>)</li>
+		<li>The script file is now compressed by default (Reducing the size of the script about 30%). If you like to use it uncompressed or want to 
+				look into the source please use the script in the source folder. </li>
+	</ul>
+    <h2>V.1.1.0 (<em>23.02.2005</em>)</h2>
+	<ul>
+		<li>New property <em>equals</em> for checking if two fields are equal</li>
+	</ul>
+    <h2>V.1.0.2 (<em>03.02.2005</em>)</h2>
+	<ul>
+		<li>Fixing bug with css error class handling that was introduced in version 1.0.1</li>
+	</ul>
+    <h2>V.1.0.1 (<em>01.02.2005</em>)</h2>
+	<ul>
+		<li>Small bugfixing release that makes jsVal more stable and reliable</li>
+	</ul>
+    <h2>V.1.0.0 (<em>03.12.2004</em>)</h2>
+	<ul>
+		<li>Fixing bug #2864: Multiline error messages with \n were broken</li>
+		<li>Fixing bug #2506: v 0.5.3 missing the css error flagging from css code</li>
+		<li>Finetuning the regular expression handling</li>
+	</ul>
+	<h2>V.0.5.3 (<em>22.09.2004</em>)</h2>
+	<ul>
+		<li>Fixing bug #2496: Problem with numeric fields and maxlegth</li>
+		<li>Fixing bug #2948: Inline initialisation of regular expressions work not properly</li>
+	</ul>
+	<h2>V.0.5.2 (<em>20.09.2004</em>)</h2>
+	<ul>
+		<li>Fixing bug #2463: The css style of form buttons isn't resetted any more</li>
+		<li>Fixing bug #2475: Fixing a small documentation error</li>
+	</ul>
+	<h2>V.0.5.1 (<em>19.08.2004</em>)</h2>
+    <ul>
+        <li>Fix: email regular expression always returns false</li>
+        <li>Fix: Reset the css-class to previous class failed</li>
+    </ul>
+    <h2>V.0.5.0 (<em>07.08.2004</em>)</h2>
+    <ul>
+        <li>Improved multi-language support (see <a href="documentation.html#multilang">documentation</a>)</li>
+        <li>New attribute "realname". If filled with value this Realname is used in error messages instead of the fields id or name</li>
+        <li>Fixing bugs with regular expression handling in inline init</li>
+    </ul>
+    <h2>V.0.4.0 (<em>04.07.2004</em>)</h2>
+    <ul>
+        <li>Major code refactorings</li>
+        <li>Support for inline initilizing in IE, Mozilla and Opera (see <a href="documentation.html#inline">documentation</a>)</li>
+        <li>Better error handling of checkboxes and radio buttons</li>
+        <li>All elements in a group now get the CSS Error class applied to them</li>
+        <li>Added support for select-multiple (&lt;select multiple&gt;&lt;/select&gt;) it behaves exactly like checkbox</li>
+        <li>Took out unused Credit Card methods</li>
+    </ul>
+    <h2>V.0.3.1 (<em>20.06.2004</em>)</h2>
+    <ul>
+        <li>Focusing the first error, when using <em>validateCompleteForm</em></li>
+        <li>fixing bugs with internet explorer</li>
+    </ul>
+    <h2>V.0.3.0 (<em>18.06.2004</em>)</h2>
+	<ul>
+		<li>Refactoring the sourcecode. Don't use jsval() function for validating any more. Please use validateStandard() instead</li>
+        <li>Adding a new validation method validateCompleteForm() for checking the complete formular</li>
+	</ul>
+    <h2>V.0.2.0 (<em>10.06.2004</em>)</h2>
+	<ul>
+		<li>There is now the possibilty of defining a min and max value for checking numeric inputs fields</li>
+        <li>Changed the behaviour of not required fields a little bit. If you define a regex for a field and set the field to required = 0 the field can be empty to be valid, but if there is a value entered this value will be checked with the regex.</li>
+        <li>New property maxLength</li>
+        <li>Add the possibility to define a error css</li>
+	</ul>
+	<h2>V.0.1.0 (<em>10.04.2004</em>)</h2>
+	<ul>
+		<li>First release of jsVal on Berlios</li>
+	</ul>
+</body>
+</html>

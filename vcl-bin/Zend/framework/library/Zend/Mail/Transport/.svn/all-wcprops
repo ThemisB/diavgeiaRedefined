@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Transport
+END
+Sendmail.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Transport/Sendmail.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Transport/Exception.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Transport/Abstract.php
+END
+Smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Transport/Smtp.php
+END

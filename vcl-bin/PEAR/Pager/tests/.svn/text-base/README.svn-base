@@ -1,0 +1,5 @@
+These tests require Simple Test: http://www.lastcraft.com/simple_test.php
+
+- edit the simple_include.php script and set your SimpleTest install dir;
+- edit the pager_include.php and pager_wrapper_include.php scripts to set 
+  your Pager directory.

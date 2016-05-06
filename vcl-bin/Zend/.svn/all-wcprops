@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/redmine/dioikitiki-metarithmisi/!svn/ver/95/drasi1/vcl-bin/Zend
+END
+zacl.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/redmine/dioikitiki-metarithmisi/!svn/ver/79/drasi1/vcl-bin/Zend/zacl.inc.php
+END
+zauth.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/redmine/dioikitiki-metarithmisi/!svn/ver/79/drasi1/vcl-bin/Zend/zauth.inc.php
+END
+zauthdigest.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/redmine/dioikitiki-metarithmisi/!svn/ver/79/drasi1/vcl-bin/Zend/zauthdigest.inc.php
+END
+zauthadapter.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/79/drasi1/vcl-bin/Zend/zauthadapter.inc.php
+END
+zcache.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/redmine/dioikitiki-metarithmisi/!svn/ver/79/drasi1/vcl-bin/Zend/zcache.inc.php
+END
+zauthdb.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/redmine/dioikitiki-metarithmisi/!svn/ver/79/drasi1/vcl-bin/Zend/zauthdb.inc.php
+END
+zcommon.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/redmine/dioikitiki-metarithmisi/!svn/ver/79/drasi1/vcl-bin/Zend/zcommon.inc.php
+END

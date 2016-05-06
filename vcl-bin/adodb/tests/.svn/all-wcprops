@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests
+END
+test-perf.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test-perf.php
+END
+client.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/client.php
+END
+test.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test.php
+END
+test_rs_array.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test_rs_array.php
+END
+test-pgblob.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test-pgblob.php
+END
+pdo.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/pdo.php
+END
+tmssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/tmssql.php
+END
+testgenid.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testgenid.php
+END
+testpear.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testpear.php
+END
+xmlschema-mssql.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/xmlschema-mssql.xml
+END
+test-php5.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test-php5.php
+END
+test-datadict.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test-datadict.php
+END
+benchmark.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/benchmark.php
+END
+xmlschema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/xmlschema.xml
+END
+test-xmlschema.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test-xmlschema.php
+END
+time.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/time.php
+END
+testdatabases.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testdatabases.inc.php
+END
+testmssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testmssql.php
+END
+testoci8cursor.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testoci8cursor.php
+END
+test2.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test2.php
+END
+test3.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test3.php
+END
+testoci8.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testoci8.php
+END
+test4.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test4.php
+END
+testcache.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testcache.php
+END
+test5.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test5.php
+END
+test-active-recs2.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test-active-recs2.php
+END
+test-active-record.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/test-active-record.php
+END
+testpaging.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testpaging.php
+END
+testsessions.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/redmine/dioikitiki-metarithmisi/!svn/ver/30/drasi1/vcl-bin/adodb/tests/testsessions.php
+END

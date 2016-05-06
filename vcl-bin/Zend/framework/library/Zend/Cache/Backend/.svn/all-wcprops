@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache/Backend
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache/Backend/Interface.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache/Backend/Sqlite.php
+END
+Apc.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache/Backend/Apc.php
+END
+ZendPlatform.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache/Backend/ZendPlatform.php
+END
+Memcached.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache/Backend/Memcached.php
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache/Backend/File.php
+END
+Test.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/redmine/dioikitiki-metarithmisi/!svn/ver/87/drasi1/vcl-bin/Zend/framework/library/Zend/Cache/Backend/Test.php
+END

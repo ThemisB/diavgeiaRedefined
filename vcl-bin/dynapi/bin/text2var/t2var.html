@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>DynAPI Tex2Var Converter - Converts text/html to JavaScript variable</title>
+<script>
+
+function convert(){
+	var f=document.forms['frm'];
+	var cbo=f.cbo;
+	if(cbo.options[0].selected) text2string();
+	else if(cbo.options[1].selected) text2array();
+};
+
+function revert(){
+	var t,f=document.forms['frm'];
+	var vn=(f.txtname.value||'h'); // variable name
+	var t = (f['out'].value||'');
+	var re=new RegExp('var '+vn);
+	if(!vn) {
+		alert('Please enter a valid variable name');
+		return;
+	}
+	t=t.replace(re,'var t');
+	eval(t);
+	if(t.join) t=t.join('\n');
+	f['in'].value = t||'';
+};
+
+function text2string(){
+	var f=document.forms['frm'];
+	var vn=(f.txtname.value||'h'); // variable name
+	var t=(f['in'].value.length=0)? '':f['in'].value;
+	if(f['chktabs'].checked) t=t.replace(/>(\r\n|\n)(\W+?)</g,'>\n<'); // remove tabs and white spaces
+	t="var "+vn+"='"+Var2TextEncode(t)+"';\n";
+	f['out'].value=t;
+};
+
+function text2array(){
+	var f=document.forms['frm'];
+	var vn=(f.txtname.value||'h'); // variable name
+	var t=['var '+vn+'=['];
+	var i=f['in'].value
+	i=i.replace(/\r/g,'');
+
+	if(f['chktabs'].checked) i=i.replace(/>(\r\n|\n)(\W+?)</g,'>\n<'); // remove tabs and white spaces
+	var arr=i.split("\n");
+	for (var c=0;c<arr.length;c++){
+		x=arr[c];
+		if(x) {
+			x = Var2TextEncode(x);
+			if(t.length>1) t[t.length-1]+=',';
+			t[t.length]="'"+x+"'";
+		}
+	}
+	t[t.length]='];';
+	f['out'].value=t.join('\n');
+};
+
+// Var2Text Encode - converts multiline text into single line
+Var2TextEncode=function (text){
+	if (!text) return '';
+	text=text.replace(/\\/g,"\\\\");	// replace \ with \\
+	text=text.replace(/\'/g,"\\'");		// replace ' with \'
+	text=text.replace(/\r\n/g,"\\n");	// replace CrLf with \n
+	text=text.replace(/\n/g,"\\n");		// replace single Lf with \n
+	text=text.replace(/\r/g,"\\r");		// replace single Cr with \n
+	return text;
+};
+
+</script>
+</head>
+<body bgcolor="#FFFFFF">
+<form name="frm">
+<div align="center">
+  <table border="0" bgcolor="#E0E0E0" style="border: 2px solid #000080" cellpadding="3">
+    <tr>
+      <td bgcolor="#000080" style="border-bottom: 1px solid #C0C0C0">
+        <p><b><font face="Arial" color="#FFFFFF" size="2">Text2Var
+        Converter</font></b>
+      </td>
+    </tr>
+  <center>
+    <tr>
+      <td bgcolor="#F5F5DC" style="border-bottom: 1px solid #C0C0C0">
+        <table border="0" cellspacing="1" cellpadding="2">
+          <tr>
+            <td valign="bottom"><font face="Arial" size="2">
+Variable Name:</font><br>
+<input type="text" size="32" name="txtname"> &nbsp; </td>
+            <td valign="bottom"><font face="Arial" size="2">Format: </font><font face="Arial">
+<input type="checkbox" name="chktabs" value="ON"><font size="2">Remove
+Tabs</font></font><br>
+ <select size="1" name="cbo">
+          <option selected value="single">Text/HTML-to-JS String</option>
+          <option value="multi">Text/HTML-to-JS Array</option>
+        </select></td>
+            <td valign="bottom">&nbsp;<input type="button" onclick="convert()" value="Convert" name="cmdconvert">
+              <input type="button" onclick="revert()" value="Revert" name="cmdrevert">
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><font face="Arial">
+Text/HTML to be converted (Input):</font><br>
+<textarea cols=76 rows=10 name="in"></textarea></td>
+    </tr>
+    <tr>
+      <td>
+        <table border="0" cellspacing="1" cellpadding="0">
+          <tr>
+            <td><font face="Arial">
+JavaScript (Output): </font></td>
+            <td align="right"><font face="Arial">
+<input type="checkbox" name="chkwrap" value="ON" onclick="this.form.out.wrap=(this.checked)? 'soft':'off';" checked>Wrap
+              </font></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+<textarea cols=76 rows=7 name="out"></textarea>
+<br>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+</form>
+</body>
+</html>

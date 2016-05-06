@@ -1,0 +1,178 @@
+<head>
+<title>DynAPI Compressor</title>
+<script language="javascript" src="compressor.js"></script>
+<script language="javascript" src="compressor.init.js"></script>
+<script language="vbscript" src="fsobject.vbs"></script>
+</head>
+
+<body bgcolor="#FFFFFF">
+<form name="frmcompressor" method="POST">
+  <table border="0" style="border-left: 2 solid #EEEEEE; border-right: 2 solid #999999; border-top: 2 solid #EEEEEE; border-bottom: 2 solid #999999" width="100%" bgcolor="#D6D3CE">
+    <tr>
+      <td bgcolor="#336699" width="100%" ><b><font face="Arial" size="2" color="#FFFFFF">&nbsp;DynAPI
+        Compressor&nbsp;</font></b></td>
+    </tr>
+    <tr>
+      <td valign="top" width="100%" align="right">
+        <table border="0" width="100%">
+          <tr>
+            <td width="50%"><font size="2" face="Arial">Compression Level:<br>
+              </font><select size="1" name="cbolevel" style="width: 98%; height: 23">
+          <option value="high" selected>High</option>
+          <option value="low">Low</option>
+          <option value="none">None</option>
+        </select></td>
+            <td width="50%"><a href="javascript:;" onclick="showHideAbout()" style="text-decoration:none;font-family: Arial"><img border="0" src="../images/dc_icon.gif" width="32" height="32" align="absmiddle">
+              <b><font size="4" color="#000080">About DynAPI Compressor&nbsp;</font></b></a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="100%">
+        <table border="0" width="100%" cellpadding="2" cellspacing="1">
+          <tr>
+            <td width="50%"><font size="2" face="Arial">Source Path<br>
+              <input type="text" name="txtsource" size="20" style="width: 100%"></font></td>
+            <td width="50%"><font size="2" face="Arial">Destination Path<br>
+              <input type="text" name="txttarget" size="20" style="width: 100%">
+              </font></td>
+          </tr>
+        </table>
+        <table border="0" width="100%" cellpadding="2" cellspacing="1">
+          <tr>
+            <td colspan="3" style="font-size: 8pt; font-family: Arial; font-weight: bold; border-bottom: 2 solid #C0C0C0"><font size="2" face="Arial">Modules</font></td>
+          </tr>
+          <tr>
+            <td width="33%"><font size="2" face="Arial"><input type="checkbox" name="chk" value="api" checked>API
+              Libraries</font></td>
+            <td width="33%"><font size="2" face="Arial"><input type="checkbox" name="chk" value="fx" checked>FX
+              Libraries</font></td>
+            <td width="33%"><font size="2" face="Arial"><input type="checkbox" name="chk" value="util" checked>UTIL
+              Libraries</font></td>
+          </tr>
+          <tr>
+            <td width="33%"><font size="2" face="Arial"><input type="checkbox" name="chk" value="ext" checked>EXT
+              (Extension) Libraries</font></td>
+            <td width="33%"><font size="2" face="Arial"><input type="checkbox" name="chk" value="gui" checked>GUI&nbsp;</font><font size="2" face="Arial">Libraries</font></td>
+            <td width="33%"></td>
+          </tr>
+          <tr>
+            <td style="border-top: 2 solid #C0C0C0" width="33%"><font size="2" face="Arial"><input type="checkbox" name="chkcvs" value="true" checked>Ignore
+              CVS folders</font></td>
+            <td style="border-top: 2 solid #C0C0C0" width="33%"><font size="2" face="Arial"><input type="checkbox" name="chkdebug" value="true">
+              Include Debugger</font></td>
+            <td style="border-top: 2 solid #C0C0C0" width="33%"><font size="2" face="Arial"><input type="checkbox" name="chkns4" value="true" checked>NS4
+              Support</font></td>
+          </tr>
+        </table>
+  <table border="0"  cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+      <td width="100%" >
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" ><font size="2" face="Arial"><input type="text" name="txtstatus" size="74" style="background-color: #D6D3CE; border-style: solid; border-width: 0" value="Ready"></font></td>
+    </tr>
+    <tr>
+      <td width="100%" >
+        <table border="0" width="100%">
+          <tr>
+            <td style="border: 1 solid #000000" bgcolor="#FFFFFF"><img name="bar" border="0" src="../examples/images/pixel.gif" width="10" height="20" style="visibility:hidden;background-color: #0000FF"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" >
+        &nbsp;<font size="2" face="Arial"><input type="text" name="txtsizestatus" size="74" style="background-color: #D6D3CE; border-style: solid; border-width: 0"></font>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" >
+        <table border="0" width="100%">
+          <tr>
+            <td width="100%" align="right">
+        <hr>
+            </td>
+          </tr>
+          <tr>
+            <td width="100%" align="right">
+        <input language="javascript" type="button" value="Check semi-colons" name="cmdtrace" onclick="compress(true)">
+              <input language="javascript" type="button" value="Compile" name="cmdcompress" onclick="compress()">
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+    <tr id="dvscreenrow" style="display:none"><td bgcolor="#FFFFFF" style="font-family: Arial; border-style: inset; border-width: 2"><div id="dvscreen"></div></td></tr>
+    <tr id="dvabout" style="display:none">
+      <td  bgcolor="#D6D3CE" valign="top" width="100%">
+        <table border="0" style="font-family: Arial; font-size: 10pt; border-style: inset; border-width: 2" cellspacing="1" cellpadding="2">
+          <tr>
+            <td bgcolor="#FFFFFF" valign="top">
+              <p>The DynAPI Compressor&nbsp; is used to compress the DynAPI source
+              code by removing comments, white spaces, etc from the source files.
+              It's based on the JavaScript compressor used at <a href="http://www.brainjar.com">Brainjar.com</a>.
+              Please visit <a href="http://www.brainjar.com">Brainjar.com</a>
+              for more information on how to write scripts that are&nbsp; JavaScript
+              compressor friendly.</p>
+              <p>&nbsp;This version only
+              works the Internet Explorer (version 5+).</p>
+              <ul>
+                <li><b>Compression Level</b> - Sets the level of compression to
+                  use when compressing files or modules.&nbsp;Three levels of compression are
+                  supported:<br>
+                  <blockquote>
+                  High - Removes comments and white spaces from the
+                  files/modules<br>
+                  Low - Removes only&nbsp; comments from the files/modules<br>
+                  None - Makes a copy of the files/modules&nbsp;&nbsp;</blockquote>Note:
+                  Conditional statements will be included or excluded regardless
+                  of the compression level selected<br>
+                  &nbsp;
+                  </li>
+                <li>
+              <b>Source Path</b> - Path where the uncompressed files are.&nbsp;For
+              example c:\developer\dynapi\src<br>
+                  &nbsp;</li>
+                <li>
+              <b>Destination Path </b>- Path where newly compressed files are to
+              be placed. For example c:\production\dynapi\src<br>
+                  &nbsp;</li>
+                <li>
+              <b>Modules</b> - These are modules to&nbsp; be included or excluded from the
+              compressed output.<br>
+                  &nbsp;</li>
+                <li>
+              <b>Compressor Directives</b> - By placing directives inside
+              the source code the compressor can remove blocks of codes if it
+              is not needed after compression</li>
+              </ul>
+              <blockquote>
+              <blockquote>
+                <p><font face="Arial" size="2">//@IF:DEBUG[&nbsp;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; // Some debugging code here.&nbsp;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; This line of code will remain if the
+                Include Debugger check box&nbsp; is checked&nbsp;<br>
+                //]:DEBUG<br>
+                <br>
+                //@IF:NS4[<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Some ns4 code here. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This lines of code will remain if
+                the NS4 support check box is checked<br>
+                //]:NS4</font></p>
+              </blockquote>
+              </blockquote>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype
+END
+mysqli.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/mysqli.php
+END
+querysim.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/querysim.php
+END
+mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/mssql.php
+END
+sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/sqlite.php
+END
+oci8.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/oci8.php
+END
+ibase.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/ibase.php
+END
+mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/mysql.php
+END
+pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/pgsql.php
+END
+fbsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/fbsql.php
+END
+Common.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/dioikitiki-metarithmisi/!svn/ver/57/drasi1/vcl-bin/PEAR/MDB2/Driver/Datatype/Common.php
+END

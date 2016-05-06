@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>DynAPI Examples - HTML Menu with Images</title>
+<script language="JavaScript" src="dynapi.js"></script>
+<script language="Javascript">
+dynapi.library.setPath('');
+dynapi.library.include('dynapi.api');
+dynapi.library.include('HTMLMenu');
+dynapi.library.include('Image');
+
+</script>
+<script language="Javascript">
+
+// Write Style to browser
+HTMLComponent.writeStyle({
+	MNUItm: 		'border: 1px solid #E0E0E0',
+	MNUItmText:	'cursor: default; text-decoration: none; color: #000000; font: 12px Arial, Helvetica;'
+});
+
+var  p ={align:"top"}
+var i1 = dynapi.functions.getImage('images/btn_new.gif',16,16,p);
+var i2 = dynapi.functions.getImage('images/btn_save.gif',16,16,p);
+var i3 = dynapi.functions.getImage('images/eicon3.gif',32,32,p);
+var i4 = dynapi.functions.getImage('images/eicon2.gif',32,32,p);
+var i5 = dynapi.functions.getImage('images/eicon1.gif',32,32,p);
+var px = dynapi.functions.getImage('images/pixel.gif',16,16,p);
+
+var mnu = dynapi.document.addChild(new HTMLMenu(),'mnu');
+mnu.backCol = "#EFEBD7"
+mnu.selBgCol = '#C1D2EE';
+mnu.cssMenu = 'MNU';
+mnu.cssMenuText = 'MNUItmText';
+mnu.cssMenuItem = 'MNUItm';
+
+var mbar;
+// Main Menu
+mbar= mnu.createMenuBar('main',40,20);
+mbar.addItem(null,'File','file');
+mbar.addItem(null,'Edit','edit');
+mbar.addItem(null,'View','view');
+	//File menu
+	mbar = mnu.createMenuBar('file',120);
+	mbar.addItem(null,{image:i1,text:' New'});
+	mbar.addItem(null,{image:px,text:' Open'},null,'alert("Open files")');
+	mbar.addItem(null,{image:i2,text:' Save'});
+	mbar.addItem(null,'Save As ...');
+	mbar.addItem(null,'Recent Files','recent');
+	mbar.addItem(null,'Exit');
+		//Recent menu
+		mbar = mnu.createMenuBar('recent',120);
+		mbar.addItem(null,'Dynapi.js');
+		mbar.addItem(null,'Quickref.html');
+		mbar.addItem(null,'Changelog.html');
+		mbar.addItem(null,'Index.html');
+	//edit menu
+	mbar = mnu.createMenuBar('edit',120);
+	mbar.addItem(null,'Undo');
+	mbar.addItem(null,'Cut');
+	mbar.addItem(null,'Copy');
+	mbar.addItem(null,'Paste');
+	//view menu
+	mbar = mnu.createMenuBar('view',130);
+	mbar.addItem(null,{image:px,text:'Icon #1'},'eicon1');
+	mbar.addItem(null,{image:px,text:'Icon #2'},'eicon2');
+	mbar.addItem(null,{image:px,text:'Icon #3'},'eicon3');
+		mbar = mnu.createMenuBar('eicon1',40,36);
+		mbar.addItem(null,i3.getHTML());
+		mbar = mnu.createMenuBar('eicon2',40,36);
+		mbar.addItem(null,i4.getHTML());
+		mbar = mnu.createMenuBar('eicon3',40,36);
+		mbar.addItem(null,i5.getHTML());
+
+</script>
+</head>
+<body>
+<script>
+	dynapi.document.insertChild(mnu);
+</script>
+</body>
+</html>

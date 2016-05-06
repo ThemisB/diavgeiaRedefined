@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>DynAPI Intro</title>
+</head>
+<body bgcolor="#FFFFFF">
+<p>&nbsp;</p>
+<div align="center">
+  <center>
+  <table border="0">
+    <tr>
+      <td>
+<center>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+  codebase="http://active.macromedia.com/flash4/cabs/swflash.cab#version=4,0,0,0"
+  id="dynapi" width="400" height="200">
+  <param name="movie" value="docs/images/dynapi.swf">
+  <param name="quality" value="high">
+  <param name="bgcolor" value="#FFFFFF">
+  <embed name="dynapi" src="docs/images/dynapi.swf" quality="high" bgcolor="#FFFFFF"
+    width="400" height="200"
+    type="application/x-shockwave-flash"
+    pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
+  </embed>
+</object>
+</center>
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><font face="Arial" size="2"><a href="docs/index.html">Click
+        Here</a> to continue</font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+&nbsp;
+</body>
+</html>

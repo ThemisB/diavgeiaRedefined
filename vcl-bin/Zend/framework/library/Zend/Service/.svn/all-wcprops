@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Service
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Exception.php
+END
+Nirvanix.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Nirvanix.php
+END
+Audioscrobbler.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Audioscrobbler.php
+END
+Yahoo.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Yahoo.php
+END
+Technorati.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Technorati.php
+END
+Delicious.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Delicious.php
+END
+Simpy.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Simpy.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Abstract.php
+END
+SlideShare.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/SlideShare.php
+END
+Amazon.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Amazon.php
+END
+StrikeIron.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/StrikeIron.php
+END
+Flickr.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Flickr.php
+END
+Akismet.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/redmine/dioikitiki-metarithmisi/!svn/ver/69/drasi1/vcl-bin/Zend/framework/library/Zend/Service/Akismet.php
+END

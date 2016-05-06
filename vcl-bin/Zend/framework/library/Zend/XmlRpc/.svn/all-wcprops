@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/redmine/dioikitiki-metarithmisi/!svn/ver/68/drasi1/vcl-bin/Zend/framework/library/Zend/XmlRpc
+END
+Request.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/68/drasi1/vcl-bin/Zend/framework/library/Zend/XmlRpc/Request.php
+END
+Fault.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/redmine/dioikitiki-metarithmisi/!svn/ver/68/drasi1/vcl-bin/Zend/framework/library/Zend/XmlRpc/Fault.php
+END
+Value.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/redmine/dioikitiki-metarithmisi/!svn/ver/68/drasi1/vcl-bin/Zend/framework/library/Zend/XmlRpc/Value.php
+END
+Client.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/68/drasi1/vcl-bin/Zend/framework/library/Zend/XmlRpc/Client.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/redmine/dioikitiki-metarithmisi/!svn/ver/68/drasi1/vcl-bin/Zend/framework/library/Zend/XmlRpc/Exception.php
+END
+Response.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/redmine/dioikitiki-metarithmisi/!svn/ver/68/drasi1/vcl-bin/Zend/framework/library/Zend/XmlRpc/Response.php
+END
+Server.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/68/drasi1/vcl-bin/Zend/framework/library/Zend/XmlRpc/Server.php
+END

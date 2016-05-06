@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Dragging Large Child Layers</title>
+<script language="JavaScript" src="../src/dynapi.js"></script>
+<script language="Javascript">
+dynapi.library.setPath('../src/');
+dynapi.library.include('dynapi.api');
+dynapi.library.include('DragEvent');
+</script>
+<script language="Javascript">
+
+var container = new DynLayer(null,0,0,200,200,"e0e0e0");
+var insideObj = new DynLayer("Can drag until x & y=0. This due to boundrary  {left:0, right:0, top:0, bottom:0} and this layer being larger than it's parent",100,100,400,400, "lime"); // larger than our container...
+container.addChild(insideObj);
+
+DragEvent.setDragBoundary(insideObj, {left:0, right:0, top:0, bottom:0});
+DragEvent.enableDragEvents(insideObj);
+
+dynapi.document.addChild(container);
+
+var container = new DynLayer(null,250,0,200,200,"e0e0e0");
+var insideObj = new DynLayer("Can't drag due to boundrary  {left:0, right:0, top:0, bottom:0} and this layer being larger than it's parent",0,0,400,400, "yellow"); // larger than our container...
+container.addChild(insideObj);
+
+DragEvent.setDragBoundary(insideObj, {left:0, right:0, top:0, bottom:0});
+DragEvent.enableDragEvents(insideObj);
+
+dynapi.document.addChild(container);
+
+</script>
+</head>
+<body>
+<script>
+	dynapi.document.insertAllChildren();
+</script>
+</body>
+</html>

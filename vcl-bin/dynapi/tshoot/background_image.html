@@ -1,0 +1,57 @@
+<HTML>
+
+<HEAD><TITLE>Background color examples</TITLE>
+</HEAD>
+
+
+<STYLE TYPE="text/css">
+<!--
+LAYER{position:absolute;
+ top:0px;
+ left:20px;
+ width:400px;
+ height:200px;
+ background-image:url("http://developer.netscape.com:80/docs/manuals/communicator/dynhtml/bluelite.gif");
+ /*
+ using layer-background-image no-repeat is not supported it seems.
+ layer-background-image:url("http://developer.netscape.com:80/docs/manuals/communicator/dynhtml/bluelite.gif");
+ */
+ background-repeat:no-repeat;
+}
+
+DIV {position:absolute;
+ top:250px;
+ left:20px;
+ width:400px;
+ height:200px;
+ background-image:url("http://developer.netscape.com:80/docs/manuals/communicator/dynhtml/bluelite.gif");
+ background-repeat:no-repeat;
+}
+
+-->
+</STYLE>
+
+<BODY BGCOLOR=white>
+<b>Issue :</b><br />
+This is a simple test to see if no-repeat is supported by all browsers.<br />
+In NS4 you should see two squares with background image, as one Layer is used, and one DIV.<br /><br />
+In NS4 it seems when a layers background-image is set with layer layer-background-image no-repeat is not supported<br /><br />
+<LAYER>
+<H4>Layer 1</H4>
+<P>This layer is defined with a &lt;LAYER&gt; tag.</P>
+<P>You see that the background image is not repeated. (NS4 only)
+
+</P>
+</LAYER>
+
+<DIV >
+<H4>DIV 1</H4>
+
+<P>This DIV is defined in CSS syntax. </P>
+<P>
+The style definition sets the
+background-image property which is not repeated.
+</P>
+</DIV>
+
+</BODY>

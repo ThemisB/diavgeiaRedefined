@@ -1,0 +1,55 @@
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<SCRIPT language=JavaScript src="../src/dynapi.js"></SCRIPT>
+
+<SCRIPT language=Javascript>
+dynapi.library.setPath('../src/');
+dynapi.library.include('dynapi.api');
+dynapi.library.include('DragEvent');
+</SCRIPT>
+
+<SCRIPT language=Javascript>
+	dynapi.onLoad(function() {
+
+		myLayer1 = new DynLayer('dragLyr1',50,50,175,75,'#0000FF');
+		myLayer2 = new DynLayer('dragLyr2',50,50,175,75,'#FF0000');
+
+		dynapi.document.addChild(myLayer1);
+		DragEvent.enableDragEvents(myLayer1);
+		DragEvent.setDragBoundary(myLayer1);
+
+		dynapi.document2=dynapi.addChild(new DynDocument(parent.frame2));
+		dynapi.document2.addChild(myLayer2);
+		DragEvent.enableDragEvents(myLayer2);
+		DragEvent.setDragBoundary(myLayer2);
+
+		myLayer3 = new DynLayer('dragLyr3',50,150,175,75,'#00FF00');
+
+		DragEvent.enableDragEvents(myLayer3,dynapi.document2);
+		//DragEvent.setDragBoundary(myLayer3);
+		dynapi.document2.addChild(myLayer3);
+
+		var count=0
+		var EListener1 = new EventListener();
+			EListener1.onmousemove = function(e) {
+				window.status=count++;
+			};
+		dynapi.document.addEventListener(EListener1);
+		dynapi.document2.addEventListener(EListener1);
+
+	});
+
+</SCRIPT>
+
+</HEAD>
+<BODY><B>Issue :</B> This document is a frameset (drag_frame.htm),<BR>with two
+documents loaded in it.<BR><BR>All the dynAPI code is in
+_drag_frame1.html (this page).<BR>_drag_frame2.html is
+empty. Layers are created in both frames and made draggable using
+the dragevent extension.
+
+<BR>If the dynlayer has been created, it gets the dyndocument
+from the dynlayer, without passing it in the enableDragEvents function.
+<BR><BR><B>Problems :</B> In IE5.5, and to a lesser extent Mozilla, (win2000)
+dragging is repeated when the mouse moves over the second frame during dragging.
+NS4 works fine. </BODY></HTML>

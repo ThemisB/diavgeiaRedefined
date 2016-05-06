@@ -1,0 +1,94 @@
+--------------------------
+DynAPI Distribution Readme
+--------------------------
+
+Information
+------------
+DynAPI 2 is an open-sourced project initiated by Dan Steinman.  The 
+DynAPI has been created to make cross-browser dynamic html a reality.  
+The DynAPI Distribution is distributed under the terms of the GNU LGPL 
+license.  Please see below or view the LICENSE file for more details.
+
+
+Release Notes
+-------------
+The revision history can be found in the REVISION file included with 
+this distribution.  Please report any bugs to the dynapi mailing 
+list, dynapi-dev@lists.sourceforge.net.
+
+
+Documentation
+-------------
+Currently, DynAPI project documentation is being created.  For more 
+documentation, visit the documentation section at http://dynapi.sourceforge.net.
+
+
+Naming Conventions
+------------------
+The following class structure is used:
+
+dynapi.api.*    - Main API classes
+dynapi.ext.*    - API Extensions
+dynapi.event.*	- Event classes
+dynapi.gui.*    - GUI Widgets
+dynapi.images.* - Default Images
+dynapi.util.*   - Utility functions
+
+
+Browser support
+---------------
+The DynAPI distribution supports the following browsers:
+
+Netscape 4.x
+Internet Explorer 4
+Internet Explorer 5
+Mozilla
+Netscape 6
+
+
+More information
+----------------
+For more information about the DynAPI Distribution, extensions, widgets, 
+examples or new releases please visit http://dynapi.sourceforge.net.
+
+More information about the original auther of the DynAPI 1 and 2, Dan 
+Steinman, can be found at http://www.dansteinman.com.
+
+
+DynAPI Credits
+--------------
+ Bill Tammen
+ Brandon Myers
+ Cameron Hart
+ Chris Bodar
+ Clack Pacheco
+ Dan Steinman
+ Guangyi Wu
+ IlMaestro
+ Jason Pelzer
+ Jared Nuzzolillo
+ Micah Goulart
+ Michael Lilli
+ Michael Pemberton
+ Pascal Bestebroer
+ Robert Rainwater
+ Ryan Grenz
+ Scott Andrew
+ And Many Others ...
+
+
+Copyright Information
+---------------------
+This library is free software; you can redistribute it and/or modify it 
+under the terms of the GNU Lesser General Public License as published 
+by the Free Software Foundation; either version 2.1 of the License, or 
+(at your option) any later version.
+
+This library is distributed in the hope that it will be useful, but 
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General 
+Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License 
+along with this library; if not, write to the Free Software Foundation, 
+Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA

@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<title>Links, Forms and Events</title>
+<script language="Javascript" src="../src/dynapi.js"></script>
+<script language="Javascript">
+
+dynapi.library.setPath('../src/')
+dynapi.library.include('dynapi.api')
+dynapi.library.include('dynapi.api.ext.DynkeyEvent')
+
+</script>
+<script language="Javascript">
+
+	var htmlcode='<form name=myform><table border="0" cellspacing="1">'
+	htmlcode+='<tr><td><font face="Arial" size="2">Name</font></td>'
+	htmlcode+='<td><input onchange="alert(\'change\')" type=text size="15" name="fname"></td></tr>'
+	htmlcode+='<tr><td><font face="Arial" size="2">Address</font></td>'
+	htmlcode+='<td><input onchange="alert(\'change\')" type=text size="15" name="address"></td></tr>'
+	htmlcode+='<tr><td colspan="2"><font face="Arial" size="2"><input onclick="alert(\'click\')" type=radio name="gender" value="male">Male&nbsp;</font>'
+	htmlcode+='<input onclick="alert(\'click\')" type=radio name="gender" value="female"><font face="Arial" size="2">Female</font></td></tr>'
+	htmlcode+='<tr><td colspan="2" align="right"><input onclick="alert(\'click\')" type=button name=cmd value=Button></td></tr>'
+	htmlcode+='</table></form><a href="#" onclick="alert(\'click\')">click here test the onclick event</a>'
+
+	myLayer=new DynLayer(null,135,120,220,180)
+	myLayer.setBgColor('#cccccc')
+	myLayer.setHTML(htmlcode)
+
+	// when an event listener is added
+	// form elements stop responding to events
+	e= {
+		onclick : function(e,control){
+			alert("in myLayer.onclick")
+		}
+	};
+
+	myLayer.addEventListener(e)
+
+	dynapi.document.addChild(myLayer)
+
+	myListener = {
+		onkeyup : function(e) {
+			if (e.charKey=='s') alert('You\'ve found the secret key')
+			if ((e.charKey>='a')&&(e.charKey<='z')) alert('You pressed the key  \''+e.charKey+'\'.')
+		},
+		onkeydown : function(e) {
+			if (e.ctrlKey) { myLayer.setLocation(myLayer.x+20,myLayer.y+20);return true }
+			if (e.shiftKey) alert('SHIFT!')
+		}
+	}
+	dynapi.document.addEventListener(myListener)
+
+</script>
+</head>
+<body>
+<font size=2 face=arial><b>Issue:</b> In NS4 form elements do not respond to mouse or keyboard events.<br>
+This issue only occurs when the mouse.js and keybord.js events are included and an event listener is added to the layer. The same goes for hyperlinks
+<br /><b>[update 25/Oct/2001]</b>
+<br />As of now this issue should be fixed.
+<br />A keyevent has been added to the DynAPI.document, and an onclick event to the DynLayer for testing.
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<b>Discrepancies: (tested on win2000/Linux)</b>
+<br /><br />IE:
+<br />The DynAPI onclick event is caught by all form elements on the DynLayer.
+<br />The DynAPI onkeyup event is caught at all times.
+<br />The textbox' change event is caught when changing focus to another element.
+<br /><br />NS4/Win:
+<br />The DynAPI onclick event is <b>only caught by the hyperlink, and the DynLayer</b>.
+<br />The DynAPI onkeyup <b>event is not caught when a form element has the focus</b>.
+<br />The textbox' change event is caught when changing focus to another element.
+<br /><br />Mozilla (NS6)/Win:
+<br />The DynAPI onclick event is caught by all form elements on the DynLayer.
+<br />The DynAPI onkeyup event is caught at all times.
+<br />The textbox' change event is caught <b>on each keyup</b>.
+<br />
+<br /><br />NS4/Linux:
+<br />onclick is caught by the hyperlink only.
+<br />change is called with each key
+<br />onkeyup is called two times with each key - one before and one after the change-event
+<br /><br />Mozilla/Linux:
+<br />The DynAPI onclick event is caught by all form elements on the DynLayer.
+<br />The DynAPI onkeyup event and the textbox' change event couldn't be tested,</b>
+as the textbox lost focus due too the "in myWindow.onclick" alert.
+<br />
+</font>
+</body>
+</html>

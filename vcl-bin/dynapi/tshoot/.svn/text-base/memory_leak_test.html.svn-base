@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Memory Leak Test</title>
+<script language="JavaScript" src="../src/dynapi.js"></script>
+<script language="JavaScript">
+dynapi.library.setPath('../src/');
+dynapi.library.include('dynapi.api');
+dynapi.onLoad(init);
+var topLayer;
+function init(){
+ topLayer=new DynLayer(null,10,100,200,210,'yellow');
+ dynapi.document.addChild(topLayer);
+}
+function addLayers(){
+ var i,j,lyr;
+ for (i=0;i<100;i++){
+  for (j=0;j<10;j++){
+   lyr=new DynLayer(null,10,10+20*j,180,10,'green');
+   topLayer.addChild(lyr);
+  }
+ topLayer.deleteAllChildren();
+ }
+}
+</script>
+</head>
+<body>
+<button onclick="addLayers();">Memory Leak Test</button>
+</body>
+</html>

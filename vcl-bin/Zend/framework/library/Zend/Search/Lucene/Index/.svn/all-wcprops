@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index
+END
+DictionaryLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/DictionaryLoader.php
+END
+Writer.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/Writer.php
+END
+SegmentInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/SegmentInfo.php
+END
+FieldInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/FieldInfo.php
+END
+SegmentWriter.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/SegmentWriter.php
+END
+TermInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/TermInfo.php
+END
+SegmentMerger.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/SegmentMerger.php
+END
+SegmentInfoPriorityQueue.php
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/SegmentInfoPriorityQueue.php
+END
+Term.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/redmine/dioikitiki-metarithmisi/!svn/ver/70/drasi1/vcl-bin/Zend/framework/library/Zend/Search/Lucene/Index/Term.php
+END

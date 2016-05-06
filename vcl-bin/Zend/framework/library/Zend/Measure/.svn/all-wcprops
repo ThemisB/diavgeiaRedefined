@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/dioikitiki-metarithmisi/!svn/ver/74/drasi1/vcl-bin/Zend/framework/library/Zend/Measure
+END
+Angle.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Angle.php
+END
+Weight.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Weight.php
+END
+Number.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Number.php
+END
+Energy.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Energy.php
+END
+Acceleration.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Acceleration.php
+END
+Capacitance.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Capacitance.php
+END
+Power.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Power.php
+END
+Temperature.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Temperature.php
+END
+Force.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Force.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Exception.php
+END
+Lightness.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Lightness.php
+END
+Speed.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Speed.php
+END
+Frequency.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Frequency.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Abstract.php
+END
+Illumination.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Illumination.php
+END
+Volume.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Volume.php
+END
+Pressure.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Pressure.php
+END
+Area.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Area.php
+END
+Density.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Density.php
+END
+Torque.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Torque.php
+END
+Length.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Length.php
+END
+Current.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Current.php
+END
+Binary.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Measure/Binary.php
+END

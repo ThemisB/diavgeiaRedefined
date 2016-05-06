@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Storage/Folder
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Storage/Folder/Interface.php
+END
+Maildir.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Storage/Folder/Maildir.php
+END
+Mbox.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/redmine/dioikitiki-metarithmisi/!svn/ver/73/drasi1/vcl-bin/Zend/framework/library/Zend/Mail/Storage/Folder/Mbox.php
+END

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "<!DO<!DO<!DO<!DO<!DO<!DO<!DO<!DO.dtd">
+
+<html>
+<head>
+	<title>Documentation</title>
+	<link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+
+<body style="margin: 10px 10px 10px 10px">
+	<h1>Documentation</h1>
+<h2>Installation</h2>
+ jsVal is contained within it's own .js file.  Simply copy the jsval.js file to your source directory.<br>
+
+ Include the jsval.js page in your HTML page:<br><br>
+ <code>&lt;script language="javascript" src="jsval.js"&gt;&lt;/script&gt;</code><br><br>
+
+ The src= value can change if jsval.js is not located in the same directory
+
+ <h2>Usage</h2>
+ Call the <em>validateStandard</em> or <em>validateCompleteForm</em> from your html form like this:<br><br>
+ &lt;form name="reg" method="post" onSubmit="return validateStandard(this);"&gt;
+ <br><br>
+ There are two functions for form validation:<br><br>
+ <ul>
+     <li><strong>validateStandard</strong>: This function displays an error message one field at a time.  Each time an field fails to validate, the error is displayed and validation stops.  See <a href="example1.html">example 1</a> for a sample.</li>
+     <li><strong>validateCompleteForm</strong>: This functions validates a complete form and throws a single error for all invalid field.  See <a href="example3.html">example 3</a> for a sample. </li>
+ </ul>
+ <br>
+ Both functions having the same parameter list:
+ <table>
+	<tr>
+		<td width=200px" class="headline" style="background-color:#C9C8C8">Parameter</td>
+		<td class="headline" style="background-color:#C9C8C8">Description</td>
+	</tr>
+	<tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">form</td>
+		<td style="background-color:#F4f3f3;">The form object that should be validated (i.e. "this")</td>
+	</tr>
+     <tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">strErrorClass</td>
+		<td style="background-color:#F4f3f3;"><strong>Optional:</strong> The style-class name of a css style definition that should be used for a field if it is invalid (see <a href="example1.html">example 1</a>). This parameter is optional.</td>
+	</tr>
+ </table>
+
+ <h2>Initialization</h2>
+ In order for jsVal to know which validation rules to apply, you must first initialize the validation process.  This is done by setting properties on the form fields you wish to validate.
+ You can use two kind of initialization methods
+
+ <h3>1. Through a JavaScript function</h3>
+ The best place to do this when the OnLoad event of your page fires.  Let's look at a brief example (line #s are included for reference purposes only):
+ <code ><pre style="background-color:#DFDFDF;">
+&lt;html&gt;
+&lt;head&gt;
+   <strong>&lt;script language="javascript" src="jsval.js"&gt;&lt;/script&gt;</strong>
+   <strong>&lt;script language="javascript" type="text/javascript"&gt;</strong>
+   &lt;!--
+   1:  function initValidation()
+   2:  {
+   3:      var objForm = document.forms["testform"];
+   4:      objForm.name.required = 1;
+   5:      objForm.name.regexp = /^\w*$/;
+   6:
+   7:      objForm.password.required = 1;
+   8:      objForm.password.minlength = 3;
+   9:      objForm.password.maxlength = 8;
+   10:  }
+   --//&gt;
+   &lt;/script&gt;
+&lt;/head&gt;
+&lt;body <strong>onLoad="initValidation();"</strong>&gt;
+   &lt;form name="testform" method="post" action="process.php" <strong>onSubmit="return validateStandard(this);"</strong>&gt;
+        Name: &lt;input type="text" name="name"&gt;&lt;br /&gt;
+        Password: &gt;input type="password" name="password"&gt;&lt;br /&gt;
+        &lt;input type="submit" value="Login"&gt;
+   &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+ </pre></code>
+ <br>
+ Breaking the <em>initValidation</em> down, we see the following:
+ <ol>
+   <li>Get a reference to the form (line 1).</li>
+   <li>Set the name and password fields are required (lines 4 and 7)</li>
+   <li>The name field should only contain characters (this is done via a regular expression, don't worry, jsVal comes with several built-in!) (line 3).</li>
+   <li>The password must atleast 3 characters but no more than 8 (lines 8 and 9).<br>
+</ol>
+ <br>
+<a name="inline">&nbsp;</a>
+<h3>2. Inline initialization</h3>
+Instead of using an explizit init-function for setting all field properties you can use the inline init method for
+doing this (V.0.4.0 and higher).<br>
+Let's look at the preveous example using inline initialization (line #s are included for reference purposes only)
+<code><pre style="background-color:#DFDFDF;">
+&lt;html&gt;
+&lt;head&gt;
+   <strong>&lt;script language="javascript" src="jsval.js"&gt;&lt;/script&gt;</strong>
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;form name="testform" method="post" action="process.php" <strong>onSubmit="return validateStandard(this);"</strong>&gt;
+        Name: &lt;input type="text" <strong>required="1" regexp="/^\w*$/"</strong> name="name"&gt;&lt;br /&gt;
+        Password: &gt;input type="password" <strong>required="1" minlength="3" maxlength="8"</strong> name="password"&gt;&lt;br /&gt;
+        &lt;input type="submit" value="Login"&gt;
+   &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></code>
+
+ <h2>Properties</h2>
+ Following is a complete list of properties available.  In addition, you can visit the examples page, and "View Source" in your browser to see other real exampels.
+ <table>
+	<tr>
+		<td width=200px" class="headline" style="background-color:#C9C8C8">Property</td>
+         <td class="headline" style="background-color:#C9C8C8">Possible values</td>
+		<td class="headline" style="background-color:#C9C8C8">Description</td>
+	</tr>
+	<tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">required</td>
+		<td style="background-color:#F4f3f3;">1<br>0</td>
+         <td style="background-color:#F4f3f3;">Field is required<br>Field is optional</td>
+	</tr>
+     <tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">regexp</td>
+		<td style="background-color:#F4f3f3;">/regex/<br>JSVAL_RX_EMAIL<br>JSVAL_RX_TEL<br>JSVAL_RX_ZIP<br>JSVAL_RX_MONEY<br>JSVAL_RX_CREDITCARD<br>JSVAL_RX_POSTALZIP<br>JSVAL_RX_PC</td>
+         <td style="background-color:#F4f3f3;">Free regular expresion (i.e. /^\w*$/)<br>
+             Check for correct email adress<br>
+             check for correct phone number<br>
+             check for correct zip code<br>
+             check for correct money amount<br>
+             check for correct credit card number<br>
+             check for correct postal zip code<br>
+             check for correct postal code
+         </td>
+	</tr>
+     <tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">minlength</td>
+		<td style="background-color:#F4f3f3;">numeric</td>
+         <td style="background-color:#F4f3f3;">defines the miniumum length of an input value</td>
+	</tr>
+     <tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">maxlength</td>
+		<td style="background-color:#F4f3f3;">numeric</td>
+         <td style="background-color:#F4f3f3;">defines the maximum length of an input value</td>
+	</tr>
+     <tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">minvalue</td>
+		<td style="background-color:#F4f3f3;">numeric, float</td>
+         <td style="background-color:#F4f3f3;">defines the miniumum value of an input field (must be numeric or float)</td>
+	</tr>
+     <tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">maxvalue</td>
+		<td style="background-color:#F4f3f3;">numeric, float</td>
+         <td style="background-color:#F4f3f3;">defines the maximum value of an input field (must be numeric or float)</td>
+	</tr>
+     <tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">err</td>
+		<td style="background-color:#F4f3f3;">string</td>
+         <td style="background-color:#F4f3f3;">user defined error message thats printed when field value is invalid</td>
+	</tr>
+     <tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">realname</td>
+		<td style="background-color:#F4f3f3;">string</td>
+         <td style="background-color:#F4f3f3;">user defined field name, that is used for error messages. If not defined the fields ID or name attribute is used.</td>
+	</tr>
+	<tr>
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">equals</td>
+		<td style="background-color:#F4f3f3;">string</td>
+         <td style="background-color:#F4f3f3;">The name or id of a form field to which the value of this field must be equal. Usefull for password retype fields (see example 5)</td>
+	</tr>
+	<tr>
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">callback</td>
+		<td style="background-color:#F4f3f3;">string</td>
+         <td style="background-color:#F4f3f3;">The name of the callback function that is called for validating this form field (see Callback section below for details)</td>
+	</tr>
+ </table>
+ 
+<a name="callbackfct">&nbsp;</a>
+<h2>Callback functions</h2>
+If you need to do more complicated validations on a form field you can use callback functions. That means that a script part of your
+page is doing the validation instead of jsVal. For this you can define a callback function as a attribute of the form field<br>
+<br>
+Example:<br>
+<code><pre style="background-color:#DFDFDF;">
+&lt;input type="text" required="1" callback="mycallback" name="value"&gt;
+</pre>
+</code>
+<br>
+A callback funtion needs to be defined with 3 parameters
+<table>
+	<tr>
+		<td width=200px" class="headline" style="background-color:#C9C8C8">Parameter</td>
+		<td class="headline" style="background-color:#C9C8C8">Description</td>
+	</tr>
+	<tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">id</td>
+        <td style="background-color:#F4f3f3;">The id of the form field that should be validated</td>
+	</tr>
+	<tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">name</td>
+        <td style="background-color:#F4f3f3;">The name of the form field that should be validated</td>
+	</tr>
+	<tr valign="top">
+		<td width=200px" style="background-color:#E1E1E1;font-weight:bold;">value</td>
+        <td style="background-color:#F4f3f3;">The value of the form field that should be validated</td>
+	</tr>
+</table>
+<br>
+The callback function needs to return a boolean value. true if the field is valid and false if not.
+<br>
+Example:
+<code><pre style="background-color:#DFDFDF;">
+&lt;html&gt;
+&lt;head&gt;
+   <strong>&lt;script language="javascript" src="jsval.js"&gt;&lt;/script&gt;</strong>
+   <strong>&lt;script language="javascript"&gt;
+        function mycallback(id, name, value) {
+            if (value * 10 >= 200) {
+               return true;
+            }
+            return false;
+        }
+   &lt;/script&gt;</strong>
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;form name="testform" method="post" action="process.php" onSubmit="return validateStandard(this);"&gt;
+        Name: &lt;input type="text" required="1" <strong>callback="mycallback"</strong> name="testvalue"&gt;&lt;br /&gt;
+        &lt;input type="submit" value="Login"&gt;
+   &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></code>
+
+    
+    
+    <a name="multilang">&nbsp;</a>
+    <h2>Multilanguage support</h2>
+    The default error messages of jsVal are in english. To change them to your own language you are able
+    to provide this messages in other languages.<br>
+    For this you have to define a class jsVal_Language in your HTML page.
+    See the following example (defining the error messages in german):<br>
+
+<code><pre style="background-color:#DFDFDF;">
+&lt;html&gt;
+&lt;head&gt;
+   <strong>&lt;script language="javascript" src="jsval.js"&gt;&lt;/script&gt;</strong>
+   <strong>&lt;script language="javascript"&gt;
+        function jsVal_Language() {
+            this.err_enter = "Bitte geben Sie f&uuml;r das Feld "%FIELDNAME%" einen g&uuml;ltigen Wert ein.";
+            this.err_form = "Bitte geben Sie f&uuml;r die folgenden Felder g&uuml;ltige Werte ein:\n\n";
+            this.err_select = "Bitte w&auml;hlen Sie f&uuml;r das Feld "%FIELDNAME%" einen g&uuml;ltigen Wert aus.";
+        }
+   &lt;/script&gt;</strong>
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;form name="testform" method="post" action="process.php" onSubmit="return validateStandard(this);"&gt;
+        Name: &lt;input type="text" required="1" regexp="/^\w*$/" name="name"&gt;&lt;br /&gt;
+        Password: &gt;input type="password" required="1" minlength="3" maxlength="8" name="password"&gt;&lt;br /&gt;
+        &lt;input type="submit" value="Login"&gt;
+   &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></code>
+You can insert the replacement-tag <strong>%FIELDNAME%</strong> into the translated strings. This variable will be
+replaced by the field name in the error message. 
+    <br><br>
+</body>
+</html>
