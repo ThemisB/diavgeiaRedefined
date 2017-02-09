@@ -2,6 +2,7 @@
 Αντικείμενο της δράσης είναι η ανάπτυξη, παράδοση και τεκμηρίωση πρότυπου λογισμικού για την προώθηση της διαφάνειας σε Φορείς της Δημόσιας Διοίκησης.  Η πρότυπη ηλεκτρονική πλατφόρμα έχει τη δυνατότητα δημοσιοποίησης διαφορετικών τύπων αποφάσεων / διοικητικών πράξεων για τη δημόσια διοίκηση, εμφάνισης του σχετικού περιεχομένου με κατηγοριοποιημένο τρόπο καθώς και διάθεσης του συνόλου του περιεχομένου σε επεξεργάσιμη μορφή μέσω ανοικτής διεπαφής.
 Στόχος του εγγράφου είναι να παρουσιάσει τις δυνατότητες του διαχειριστή και του απλού χρήστη της εφαρμογής.
 
+
 ## The Transparency Program initiative
 
 Beginning October 1st, 2010, all government institutions are obliged to upload their acts and decisions on the Internet with special attention to issues of national security and sensitive personal data. Each document is digitally signed and assigned a unique Internet Uploading Number (IUN) certifying that the decision has been uploaded at the “Transparency Portal”. Following the latest legislative initiative (Law 4210/2013) of the Ministry of Administrative Reform and e-Governance, administrative acts and decisions are not valid unless published online.
