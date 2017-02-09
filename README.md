@@ -34,13 +34,6 @@ Access to Information
     Uploaded acts can be used by citizens and the other public authorities without validation, by solely referring to their unique number.
 
 
-The new Transparency Portal
-
-    Easing accessibility and increasing user inclusion [e.g. for people with disabilities]
-    Ensuring efficient access to government information and documents through a new powerful portal search-mechanism.
-    Building new online communication channels enabling greater user interaction, and engagement e.g. through the possibility of commenting on government and administrative acts.
-
-
 Project Management
 
 Beyond the leadership and political will from the top, transparency and collaborative governance policies required culture changes that propagate bottom up. In this respect, the function of a dynamic nationwide human network of Project Task Forces that share strong authority to coordinate and educate their associates, as well as to communicate the merits of the program, contributes to the rapid spread of the new values of transparency, responsibility, accountability, participation and collaboration. The Leaders of the individual Project Task Forces of the 13 participating Ministries form a Joint Task Force which supports this network, with focus on providing strong cooperation between the task forces, solving common problems, sharing best practices and collecting feedback. An education program is held in every Region covering all legal, business and technical issues. The official website, diavgeia.gov.gr, provides information and assistance for operational and technical issues along with training and supporting material. An online Help Desk is the main channel for the submission of suggestions and requests for assistance. A first level support team receives and redirects each issue to the respective thematic second level support team in order to take relevant action. Furthermore, popular social media such as Twitter and Facebook is used to achieve the widest possible publicity and as an additional means to circulate and re-publicize the day to day material that is posted on the official Transparency websites.
