@@ -25,7 +25,7 @@ Taking the view that the Greek crisis, including its economic manifestations, is
 Public authorities adopted the Program in three phases: Ministries in October 2010, Extended Public Sector and Independent Authorities in November 2010, Regional and Local Authorities in March 2011. In the 3,5 years, 11.262.086 acts and decisions have been published on the Transparency Portal from 3.677 public authorities. The current rate of uploads is 16.000 decisions per working day. Statistical information
 
 
-Innovation
+# Innovation
 
 Access to Information
 
