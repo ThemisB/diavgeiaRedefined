@@ -58,7 +58,7 @@ The Transparency Program has also been presented as a major successful open gove
 
 Recent improvements - “DIAVGEIA II”
 
-MAREG has recently taken the following actions concerning the Program’s policies and tools.
+The greek government has recently taken the following actions concerning the Program’s policies and tools.
 
 I. Strengthening the Program through Law 4210/2013 (O.G. A’ 254)
 
@@ -70,9 +70,7 @@ The main interventions include:
 
  Uploaded acts can be used by citizens and the other public authorities without validation, by solely referring to their unique number.
 
-II. Building the new enhanced Transparency Portal
-
-MAREG is implementing and will launch in June 2014 the new Transparency Portal which will focus on:
+II. Extentions to the Transparency Portal
 
  Easing accessibility and increasing user inclusion [e.g. for people with disabilities]
 
