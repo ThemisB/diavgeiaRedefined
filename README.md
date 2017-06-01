@@ -7,30 +7,83 @@ You can see the detailed timeline [here](https://github.com/eellak/gsoc17-diavge
 
 Synopsis
 --------
+Beginning October 1st, 2010, all government institutions are obliged to upload their acts and decisions on the Internet with special attention to issues of national security and sensitive personal data. Each document is digitally signed and assigned a unique Internet Uploading Number (IUN), certifying that the decision has been uploaded at the “Transparency Portal”. Following the latest legislative initiative (Law 4210/2013) of the Ministry of Administrative Reform and e-Governance, **administrative acts and decisions are not valid unless published online**.
 
-Diavgeia is the [open governance](https://en.wikipedia.org/wiki/Open_government) initiative which forces greek public administrative units to publish their acts and
-decisions online.
+The main objectives of the Program concern:
 
-This repository is part of [GSoC 2017: Diavgeia Project](https://summerofcode.withgoogle.com/projects/6340447621349376), and aims to enhance Diavgeias' transparency  in the following ways:
+1. Safeguarding transparency of government actions.
 
-1. Through the use of the Bitcoin blockchain, we force government data
-to remain immutable. While decisions and actions are currently signed, citizens or even the government institutions, who do not own an
-<i>immediate</i> signed document (that is a short time after the document
-was uploaded), have no guarantee that this document was not
-altered some time after the upload. Thus, in order to limit the time span in which a document can be altered,
-Diavgeia is forced to store a log in Bitcoin Blockchain, at predefined
-time intervals.
+2. Eliminating corruption by exposing it more easily when it takes place.
 
-2. The current production code of Diavgeia is proprietary. That is completely contradictory to the open government movement. Thus, we adopt the [old open source production code](https://github.com/eellak/gsoc17-diavgeia/tree/master/old_diavgeia) and we refactor it, using the Laravel Framework.
+3. Observing legality and good administration.
 
-3. [Diavgeia](https://diavgeia.gov.gr/) currently hosts over 24.1 million acts and decisions, which have some metadata (that is information which the uploader must also fill, during the document-upload process). Diavgeia will provide an API (JSON-XML responses) which can be used to explore these documents.
+4. Reinforcing citizens’ constitutional rights, such as the participation in the Information Society
+
+5. Enhancing and modernizing existing publication systems of administrative acts and decisions.
+
+6. Making of all administrative acts available in formats that are easy to access, navigate and comprehend, regardless of the citizen’s knowledge level of the inner processes of the administration.
+
+Taking the view that the Greek crisis, including its economic manifestations, is also due to the non transparent relationship between the citizens and the state, the transparency program introduced **unprecedented levels of transparency** within all levels of Greek public administration and established a new “social contract” between the citizen and the state. This initiative has a **silent but profound impact on the way officials handle their executive power**. The direct accountability brought upon the administration by the radical transparency that the Transparency program introduces, leaves considerably less room for corruption, and exposes it much more easily when it takes place since any citizen and every interested party enjoy the widest possible access to questionable acts. Such a collective scrutiny can be extremely effective, since it allows citizens directly involved or concerned with an issue to scrutinize it in depth, rather than leaving public scrutiny to the media, whose choice of issues necessarily may be restricted and oriented towards sensational topics. [[source](https://diavgeia.gov.gr/en)]
+
+
+Diavgeia on GSoC
+----------------
+During the Google Summer of Code, i aim to enhance even more the transparency of Diavgeia, reduce the disk-space needs of document storage and promote the notion of [Open Government](https://en.wikipedia.org/wiki/Open_government). First i describe the problems of the current implementation of Diavgeia and then i present solutions to these problems.
+
+
+Problems
+--------
+
+### Disk-space needs - No representation of Decisions as Open Linked Data
+
+1. By the time i write this documentation, Diavgeia hosts over 24.3 Million documents. That said, it is obvious that there is a great demand for space storage, as well as the fact that documents are stored as pdf files, eliminates our ability to extract statistical information. Extraction of statistical information is based on unreliable techniques (i.e. OCR) and thus we can not explore documents (that is pose queries) in an efficient way.
+
+2. The majority of decisions, follow the model of ‘taking into consideration the law X - we decide’. We want to make sure, that these laws exist and link each decision with the laws that has taken into consideration. In order to achieve this, we should first express decisions as open linked data and then find a way to link them with a  current open data dataset of greek legislation.
+
+### Diavgeia does not ensure that decisions remain immutable over time
+
+As we said before, Diavgeia digitally signs the decisions and beggining 1st July 2017, all government institutions will be forced to digitally sign these decisions too. However, Diavgeia does not guarantee that decisions will remain immutable over time. Government may modify or completely remove a decision from Diavgeia and thus citizens and government institutions that have not downloaded this specific decision on their personal computers, have no way to prove its existence.
+
+Solutions
+--------
+
+### Disk Space Decrease - Representation of Decisions as Open Linked Data
+
+1. During the GSoC, i will implement a general decision “template”, which the current production code of Diavgeia can adopt, in order to express its decisions as RDF data. Thus, Diavgeia will store RDF triples (**Master Document**) which will be fully equivalent to the PDF representation (no pdf files will be stored on Diavgeia). We should state here, that during GSoC i will develop the RDF Schema and provide a sample RDF dataset including a set of decisions, that will indicate that our approach is feasible. During GSoC, i will not develop an automation tool that converts the already uploaded pdf decisions to the RDF dataset. Having expressed the decisions as RDF, citizens and government institutions will be able to pose SPARQL queries, explore Diavgeia in an efficient way and the storage requirements need will be significantly decreased.
+
+2. In order to solve the problem of linking the decision with the greek laws which it considers, we will use [ΝΟΜΟΘΕΣΙ@](http://legislation.di.uoa.gr/). This is a project which has expressed  the greek legislation as RDF Data. Thus, government institutions can link their decisions to the greek legislation or to prior decisions of Diavgeia. Moreover, government institutions will be provided with the option to not link the decision with other open data, as there are decisions which have not yet been expressed as rdf.
+
+This is an example which summarizes  1. , 2. :
+
+![Equivalence of RDF-PDF](https://image.ibb.co/fqJ3iF/Example_Decision.png)
+
+Almost all red letters denote the predicates of our ontology that can be used to correspond to the original PDF file. This figure also demonstrates the use of the rdf legislation dataset via the refers_to predicate.  Of course this is a simplified version of the rdf schema, as decisions can become a lot more complicated.
+
+### Immutability of decisions based on the use of the Bitcoin Blockchain
+
+In order to limit the time span in which a document can be altered (modified or removed), Diavgeia will be forced to store a log in the Bitcoin Network, at predefined time intervals. It is obvious that smaller time intervals imply more transparency, as the government keeps more logs. That said, let’s assume Diavgeia is forced to keep a log each day. The following happen:
+
+1. Diavgeia gathers all RDF-documents (**Master**) that have not been included in the previous log. These documents are organized into a Merkle Tree.
+
+2. Diavgeia gets the root of the Merkle tree and signs it. Diavgeia commits the signed root of the Merkle Tree as [proof](https://en.bitcoin.it/wiki/Proof_of_burn) of burn to the Bitcoin Network.
+
+3. After the confirmation of the transaction, Diavgeia should also publish the following to its website:
+  - The merkle tree (that is the order of the documents). This is crucial, because citizens should be able to verify that the root of the merkle tree is valid.
+  - The Bitcoin Address / transaction.
+
+Then, citizens and government institutions can verify their acts and be sure that their decisions will remain immutable over time.
+
+An overview of this procedure can be visualized as following:
+
+![Commit to Bitcoin Blockchain procedure](https://image.ibb.co/fH0Nca/Drawing_2.jpg)
 
 Deliverables
 ------------
 
-1. A standalone node.js app, which will put data of Diavgeia on the Bitcoin Network.
-2. Refactored code of the old production code of Diavgeia, using the Laravel Framework.
-3. Diavgeia API, using Laravel Formatter.
+1. The RDF Schema of decisions.
+2. A set of existing decisions, expressed as RDF triplets (sample RDF-Dataset).
+3. A service that converts on demand a RDF decision to a PDF document (once again, no pdf files will be stored on Diavgeia).
+4. A standalone nodejs application, which commits the RDF-data to the Bitcoin Blockchain Network.
 
 ### GSoC Mentors
 
