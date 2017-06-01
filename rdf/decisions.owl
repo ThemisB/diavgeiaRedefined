@@ -21,6 +21,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/Circular -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Circular">
+        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion"/>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΥΚΛΙΟΣ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/DecisionEntity -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DecisionEntity"/>
@@ -31,6 +40,16 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DevelopmentLaw">
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DecisionEntity"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΑΝΑΠΤΥΞΙΑΚΩΝ ΝΟΜΩΝ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/EvaluationReportOfLaw -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/EvaluationReportOfLaw">
+        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion"/>
+        <rdfs:comment>Corresponds to &quot;ΕΚΘΕΣΗ ΑΠΟΤΙΜΗΣΗΣ ΓΙΑ ΤΗΝ ΚΑΤΑΣΤΑΣΗ ΤΗΣ ΥΦΙΣΤΑΜΕΝΗΣ ΝΟΜΟΘΕΣΙΑΣ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -39,6 +58,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Financial">
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DecisionEntity"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΟΙΚΟΝΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -47,6 +67,34 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/FundingContestsPublicContracts">
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DecisionEntity"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΑΝΑΘΕΣΕΩΝ ΠΡΟΜΗΘΕΙΩΝ ΚΑΙ ΔΙΑΓΩΝΙΣΜΩΝ - ΔΗΜΟΣΙΩΝ ΣΥΜΒΑΣΕΩΝ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Law -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Law">
+        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion"/>
+        <rdfs:comment>Corresponds to &quot;ΝΟΜΟΣ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/LegislativeDecree -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/LegislativeDecree">
+        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1)&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Normative -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Normative">
+        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion"/>
+        <rdfs:comment>Corresponds to &quot;ΚΑΝΟΝΙΣΤΙΚΗ ΠΡΑΞΗ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -55,6 +103,16 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion">
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DecisionEntity"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΚΑΝΟΝΙΣΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ, ΕΓΚΥΚΛΙΟΙ, ΓΝΩΜΟΔΟΤΗΣΕΙΣ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Opinion -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Opinion">
+        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion"/>
+        <rdfs:comment>Corresponds to &quot;ΓΝΩΜΟΔΟΤΗΣΗ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -63,6 +121,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative">
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DecisionEntity"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΟΡΓΑΝΩΤΙΚΟΥ ΚΑΙ ΔΙΟΙΚΗΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -71,6 +130,16 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Other">
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DecisionEntity"/>
+        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΑΤΟΜΙΚΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Records -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Records">
+        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΚΤΙΚΑ (Νομικού Συμβουλίου του Κράτους)&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -79,6 +148,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/SpatialPlanning">
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DecisionEntity"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
