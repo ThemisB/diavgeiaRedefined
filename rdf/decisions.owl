@@ -39,7 +39,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories">
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DiavgeiaEntity"/>
-        <rdfs:comment>Corresponds to &quot;ΘΕΜΑΤΙΚΕΣ ΚΑΤΗΓΟΡΙΕΣ&quot;</rdfs:comment>
+        <rdfs:comment></rdfs:comment>
     </owl:Class>
     
 
@@ -170,192 +170,203 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/AgricultureForestryFishery -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/AgricultureForestryFishery">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/AgricultureForestryFishery -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/AgricultureForestryFishery">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΓΕΩΡΓΙΑ, ΔΑΣΟΚΟΜΙΑ ΚΑΙ ΑΛΙΕΙΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/BusinessCompetition -->
+    <!-- http://diavgeia.gov.gr/ontology/BusinessCompetition -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/BusinessCompetition">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/BusinessCompetition">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΠΙΧΕΙΡΗΣΕΙΣ ΚΑΙ ΑΝΤΑΓΩΝΙΣΜΟΣ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/CommunicationEducation -->
+    <!-- http://diavgeia.gov.gr/ontology/CommunicationEducation -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/CommunicationEducation">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/CommunicationEducation">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΠΙΚΟΙΝΩΝΙΑ ΚΑΙ ΜΟΡΦΩΣΗ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/EconomicActivity -->
+    <!-- http://diavgeia.gov.gr/ontology/EconomicActivity -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/EconomicActivity">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EconomicActivity">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΟΙΚΟΝΟΜΙΚΗ ΖΩΗ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/EconomicTradeExchanges -->
+    <!-- http://diavgeia.gov.gr/ontology/EconomicTradeExchanges -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/EconomicTradeExchanges">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EconomicTradeExchanges">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΙ ΕΜΠΟΡΙΚΕΣ ΣΥΝΑΛΛΑΓΕΣ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Employment -->
+    <!-- http://diavgeia.gov.gr/ontology/Employment -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Employment">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Employment">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΑΠΑΣΧΟΛΗΣΗ ΚΑΙ ΕΡΓΑΣΙΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Energy -->
+    <!-- http://diavgeia.gov.gr/ontology/Energy -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Energy">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Energy">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΝΕΡΓΕΙΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Environment -->
+    <!-- http://diavgeia.gov.gr/ontology/Environment -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Environment">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Environment">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΠΕΡΙΒΑΛΛΟΝ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/EuropeanUnion -->
+    <!-- http://diavgeia.gov.gr/ontology/EuropeanUnion -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/EuropeanUnion">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EuropeanUnion">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΥΡΩΠΑΪΚΗ ΕΝΩΣΗ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Fiscals -->
+    <!-- http://diavgeia.gov.gr/ontology/Fiscals -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Fiscals">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Fiscals">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΟΝΟΜΙΚΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Geography -->
+    <!-- http://diavgeia.gov.gr/ontology/Geography -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Geography">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Geography">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΓΕΩΓΡΑΦΙΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Industry -->
+    <!-- http://diavgeia.gov.gr/ontology/Industry -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Industry">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Industry">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΒΙΟΜΗΧΑΝΙΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/InternationalOrganizations -->
+    <!-- http://diavgeia.gov.gr/ontology/InternationalOrganizations -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/InternationalOrganizations">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/InternationalOrganizations">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΕΘΝΕΙΣ ΟΡΓΑΝΙΣΜΟΙ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/InternationalRelations -->
+    <!-- http://diavgeia.gov.gr/ontology/InternationalRelations -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/InternationalRelations">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/InternationalRelations">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Law -->
+    <!-- http://diavgeia.gov.gr/ontology/Law -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Law">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Law">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΚΑΙΟ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/ManufactureTechnologyResearch -->
+    <!-- http://diavgeia.gov.gr/ontology/ManufactureTechnologyResearch -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/ManufactureTechnologyResearch">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/ManufactureTechnologyResearch">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΠΑΡΑΓΩΓΗ, ΤΕΧΝΟΛΟΓΙΑ ΚΑΙ ΕΡΕΥΝΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/NutritionAgriculturalProducts -->
+    <!-- http://diavgeia.gov.gr/ontology/NutritionAgriculturalProducts -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/NutritionAgriculturalProducts">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/NutritionAgriculturalProducts">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΑΤΡΟΦΗ ΚΑΙ ΓΕΩΡΓΙΚΑ ΠΡΟΪΟΝΤΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/PoliticalLife -->
+    <!-- http://diavgeia.gov.gr/ontology/PoliticalLife -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/PoliticalLife">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/PoliticalLife">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΠΟΛΙΤΙΚΗ ΖΩΗ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Science -->
+    <!-- http://diavgeia.gov.gr/ontology/Science -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Science">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Science">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΠΙΣΤΗΜΕΣ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/SocialIssues -->
+    <!-- http://diavgeia.gov.gr/ontology/SocialIssues -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/SocialIssues">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SocialIssues">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΚΟΙΝΩΝΙΚΑ ΘΕΜΑΤΑ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories/Transport -->
+    <!-- http://diavgeia.gov.gr/ontology/Transport -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories/Transport">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Transport">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΜΕΤΑΦΟΡΕΣ&quot;</rdfs:comment>
-    </owl:Class>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
