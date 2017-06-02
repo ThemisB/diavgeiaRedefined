@@ -87,24 +87,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/OtherDecisions -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
-        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΑΤΟΜΙΚΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/SpatialPlanning -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/SpatialPlanning">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/ThematicCategories -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories">
@@ -125,6 +107,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/AffiliatedInvestments -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/AffiliatedInvestments">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/DevelopmentLaw"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/AgricultureForestryFishery -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/AgricultureForestryFishery">
@@ -139,6 +130,15 @@
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Appointment">
         <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΟΡΙΣΜΟΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Award -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Award">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/FundingContestsPublicContracts"/>
+        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -211,6 +211,24 @@
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Contract">
         <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
         <rdfs:comment>Corresponds to &quot;ΣΥΜΒΑΣΗ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/DeclarationSummary -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/FundingContestsPublicContracts"/>
+        <rdfs:comment>Corresponds to &quot;ΠΕΡΙΛΗΨΗ ΔΙΑΚΗΡΥΞΗΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/DevelopmentLawContract -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/DevelopmentLawContract">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/DevelopmentLaw"/>
+        <rdfs:comment>Corresponds to &quot;ΣΥΜΒΑΣΗ-ΠΡΑΞΕΙΣ ΑΝΑΠΤΥΞΙΑΚΩΝ ΝΟΜΩΝ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -431,6 +449,31 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/OtherDecision -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OtherDecision">
+        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΑΤΟΜΙΚΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/OtherDecisions -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/DevelopmentLaw"/>
+        <rdfs:comment>Corresponds to &quot;ΑΛΛΗ ΠΡΑΞΗ ΑΝΑΠΤΥΞΙΑΚΟΥ ΝΟΜΟΥ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/OwnershipTranserfOfAssets -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTranserfOfAssets">
@@ -494,6 +537,31 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/SpatialPlanning -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SpatialPlanning">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions">
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/StartProductionalFunctionOfInvestment -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/StartProductionalFunctionOfInvestment">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/DevelopmentLaw"/>
+        <rdfs:comment>Corresponds to &quot;ΑΠΟΦΑΣΗ ΕΝΑΡΞΗΣ ΠΑΡΑΓΩΓΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ ΕΠΕΝΔΥΣΗΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList">
@@ -517,6 +585,15 @@
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Undertaking">
         <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
         <rdfs:comment>Corresponds to &quot;ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/FundingContestsPublicContracts"/>
+        <rdfs:comment>Corresponds to &quot;ΑΝΑΘΕΣΗ ΕΡΓΩΝ / ΠΡΟΜΗΘΕΙΩΝ / ΥΠΗΡΕΣΙΩΝ / ΜΕΛΕΤΩΝ&quot;</rdfs:comment>
     </owl:NamedIndividual>
 </rdf:RDF>
 
