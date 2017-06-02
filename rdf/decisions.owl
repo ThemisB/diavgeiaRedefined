@@ -134,6 +134,33 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/Appointment -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Appointment">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
+        <rdfs:comment>Corresponds to &quot;ΔΙΟΡΙΣΜΟΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/BalanceReview -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/BalanceReview">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
+        <rdfs:comment>Corresponds to &quot;ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/BudgetApproval -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΠΡΟΥΠΟΛΟΓΙΣΜΟΥ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/BusinessCompetition -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/BusinessCompetition">
@@ -152,11 +179,56 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΣΥΛΛΟΓΙΚΟ ΟΡΓΑΝΟ - ΕΠΙΤΡΟΠΗ - ΟΜΑΔΑ ΕΡΓΑΣΙΑΣ - ΟΜΑΔΑ ΕΡΓΟΥ - ΜΕΛΗ ΣΥΛΛΟΓΙΚΟΥ ΟΡΓΑΝΟΥ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/CommisionWarrant -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
+        <rdfs:comment>Corresponds to &quot;ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/CommunicationEducation -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/CommunicationEducation">
         <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΠΙΚΟΙΝΩΝΙΑ ΚΑΙ ΜΟΡΦΩΣΗ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Contract -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Contract">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
+        <rdfs:comment>Corresponds to &quot;ΣΥΜΒΑΣΗ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/DisciplinaryAcquitance -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/DisciplinaryAcquitance">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
+        <rdfs:comment>Corresponds to &quot;ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/DonationGrant -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
+        <rdfs:comment>Corresponds to &quot;ΔΩΡΕΑ - ΕΠΙΧΟΡΗΓΗΣΗ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -224,11 +296,29 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/ExpenditureApproval -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΔΑΠΑΝΗΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/Fiscals -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Fiscals">
         <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΟΝΟΜΙΚΑ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΘΕΣΗ ΓΕΝΙΚΟΥ - ΕΙΔΙΚΟΥ ΓΡΑΜΜΑΤΕΑ - ΜΟΝΟΜΕΛΕΣ ΟΡΓΑΝΟ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -323,11 +413,38 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/OccupationInvation -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OccupationInvation">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/Opinion -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Opinion">
         <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion"/>
         <rdfs:comment>Corresponds to &quot;ΓΝΩΜΟΔΟΤΗΣΗ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/OwnershipTranserfOfAssets -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTranserfOfAssets">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
+        <rdfs:comment>Corresponds to &quot;ΠΑΡΑΧΩΡΗΣΗ ΧΡΗΣΗΣ ΠΕΡΙΟΥΣΙΑΚΩΝ ΣΤΟΙΧΕΙΩΝ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/PaymentFinalisation -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/PaymentFinalisation">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
+        <rdfs:comment>Corresponds to &quot;ΟΡΙΣΤΙΚΟΠΟΙΗΣΗ ΠΛΗΡΩΜΗΣ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -359,6 +476,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/ServiceChange -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
+        <rdfs:comment>Corresponds to &quot;ΥΠΗΡΕΣΙΑΚΗ ΜΕΤΑΒΟΛΗ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/SocialIssues -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SocialIssues">
@@ -368,11 +494,29 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative"/>
+        <rdfs:comment>Corresponds to &quot;ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ &amp; ΕΠΙΛΑΧΟΝΤΩΝ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/Transport -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Transport">
         <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΜΕΤΑΦΟΡΕΣ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Undertaking -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Undertaking">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Financial"/>
+        <rdfs:comment>Corresponds to &quot;ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ&quot;</rdfs:comment>
     </owl:NamedIndividual>
 </rdf:RDF>
 
