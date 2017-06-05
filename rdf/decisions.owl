@@ -74,9 +74,45 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/decision_number -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/decision_number">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_address -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_address">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/government_institution_department -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_department">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_email -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_email">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_fax -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_fax">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -95,6 +131,42 @@
     <!-- http://diavgeia.gov.gr/ontology/government_institution_name -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_name">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_phone -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_phone">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_postalcode -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_postalcode">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/protocol_number -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/protocol_number">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/recipients -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/recipients">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
