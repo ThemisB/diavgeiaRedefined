@@ -173,6 +173,24 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/signerJob -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signerJob">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/signerName -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signerName">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -433,6 +451,12 @@
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
     </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Signer -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Signer"/>
     
 
 
