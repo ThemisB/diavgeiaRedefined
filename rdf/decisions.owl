@@ -49,7 +49,7 @@
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/MetadataCorrection">
         <rdfs:subPropertyOf rdf:resource="http://data.europa.eu/eli/ontology#repeals"/>
-        <vann:preferredNamespacePrefix>Diavgeia property which denotes a metadata correction (that is no text changes have been made on decision)</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>Diavgeia property which denote a metadata correction (that is no text changes have been made on decision)</vann:preferredNamespacePrefix>
     </owl:ObjectProperty>
     
 
@@ -66,6 +66,26 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/GovernmentInstitution -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/GovernmentInstitution">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/DecisionText"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -74,10 +94,20 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/Decision -->
+    <!-- http://diavgeia.gov.gr/ontology/DecisionMetadata -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Decision">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DiavgeiaEntity"/>
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DecisionMetadata">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResourceSubdivision"/>
+        <rdfs:comment>Everything that is not visible as text to Decisions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/DecisionText -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DecisionText">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResourceSubdivision"/>
+        <rdfs:comment>Everything that is visible as text to Decisions.</rdfs:comment>
     </owl:Class>
     
 
@@ -85,22 +115,16 @@
     <!-- http://diavgeia.gov.gr/ontology/DevelopmentLaw -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DevelopmentLaw">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΑΝΑΠΤΥΞΙΑΚΩΝ ΝΟΜΩΝ&quot;</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/DiavgeiaEntity -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DiavgeiaEntity"/>
     
 
 
     <!-- http://diavgeia.gov.gr/ontology/Financial -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Financial">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΟΙΚΟΝΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
     </owl:Class>
     
@@ -109,7 +133,7 @@
     <!-- http://diavgeia.gov.gr/ontology/FundingContestsPublicContracts -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/FundingContestsPublicContracts">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΑΝΑΘΕΣΕΩΝ ΠΡΟΜΗΘΕΙΩΝ ΚΑΙ ΔΙΑΓΩΝΙΣΜΩΝ - ΔΗΜΟΣΙΩΝ ΣΥΜΒΑΣΕΩΝ&quot;</rdfs:comment>
     </owl:Class>
     
@@ -118,7 +142,7 @@
     <!-- http://diavgeia.gov.gr/ontology/NormativeCircularOpinion -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/NormativeCircularOpinion">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΚΑΝΟΝΙΣΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ, ΕΓΚΥΚΛΙΟΙ, ΓΝΩΜΟΔΟΤΗΣΕΙΣ&quot;</rdfs:comment>
     </owl:Class>
     
@@ -127,7 +151,7 @@
     <!-- http://diavgeia.gov.gr/ontology/OrganisationalAdministrative -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OrganisationalAdministrative">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΟΡΓΑΝΩΤΙΚΟΥ ΚΑΙ ΔΙΟΙΚΗΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
     </owl:Class>
     
@@ -136,7 +160,16 @@
     <!-- http://diavgeia.gov.gr/ontology/Other -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Other">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/OtherAdministrativeDecisions -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OtherAdministrativeDecisions">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΑΤΟΜΙΚΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
     </owl:Class>
     
@@ -145,7 +178,7 @@
     <!-- http://diavgeia.gov.gr/ontology/SpatialPlanning -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/SpatialPlanning">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
     </owl:Class>
     
@@ -154,7 +187,6 @@
     <!-- http://diavgeia.gov.gr/ontology/ThematicCategories -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/DiavgeiaEntity"/>
         <rdfs:comment>Corresponds to &quot;ΘΕΜΑΤΙΚΕΣ ΚΑΤΗΓΟΡΙΕΣ&quot;</rdfs:comment>
     </owl:Class>
     
@@ -516,8 +548,7 @@
     <!-- http://diavgeia.gov.gr/ontology/OtherDecisions -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Other"/>
-        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΑΤΟΜΙΚΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/OtherAdministrativeDecisions"/>
     </owl:NamedIndividual>
     
 
@@ -554,6 +585,15 @@
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/PoliticalLife">
         <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΠΟΛΙΤΙΚΗ ΖΩΗ&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/PublicPrototypeDocuments -->
+
+    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/PublicPrototypeDocuments">
+        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/Other"/>
+        <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
 
