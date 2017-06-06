@@ -1,0 +1,1482 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY metalex "http://www.metalex.eu/metalex/2008-05-02#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.metalex.eu/metalex/2008-05-02#"
+     xml:base="http://www.metalex.eu/metalex/2008-05-02"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:metalex="http://www.metalex.eu/metalex/2008-05-02#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <rdfs:comment xml:lang="en"
+            >Most OWL axioms in this schema belong in the OWL Lite syntactic fragment. Some disjointness axioms are used. These constraints should be validated, but can sometimes be removed in carefully controlled production environments. The use of certain datatype properties may also trigger classification as OWL full by validation software. The datatype properties are only used to establish a correspondence between the meaningful components of the relative URIs conforming to the Metalex naming convention used in Metalex documents and OWL classes. They can be removed with impunity if the need arises.</rdfs:comment>
+        <rdfs:comment xml:lang="en"
+            >The CEN agreement on an open XML interchange format for legal and legislative resources (Metalex) is applicable to sources of law and references to sources of law. It consists of a written specification, an XML schema, and an OWL schema defining classes and properties for use in metadata describing sources of law. This document represents the OWL schema.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+ <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#language">
+   <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ </rdf:Description>
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#agent -->
+
+    <owl:ObjectProperty rdf:about="#agent">
+        <rdfs:range rdf:resource="#Action"/>
+        <rdfs:domain rdf:resource="#Event"/>
+        <rdfs:subPropertyOf rdf:resource="#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#agentOf -->
+
+    <owl:ObjectProperty rdf:about="#agentOf">
+        <owl:inverseOf rdf:resource="#agent"/>
+        <rdfs:subPropertyOf rdf:resource="#participantOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#cites -->
+
+    <owl:ObjectProperty rdf:about="#cites">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#BibliographicCitation"/>
+        <rdfs:range rdf:resource="#CitableBibliographicObject"/>
+        <rdfs:subPropertyOf rdf:resource="#refersTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#component -->
+
+    <owl:ObjectProperty rdf:about="#component">
+        <rdfs:range rdf:resource="#Component"/>
+        <rdfs:domain rdf:resource="#CompoundObject"/>
+        <rdfs:subPropertyOf rdf:resource="#part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#componentOf -->
+
+    <owl:ObjectProperty rdf:about="#componentOf">
+        <owl:inverseOf rdf:resource="#component"/>
+        <rdfs:subPropertyOf rdf:resource="#partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#date -->
+
+    <owl:ObjectProperty rdf:about="#date">
+        <rdfs:range rdf:resource="#Date"/>
+        <rdfs:domain rdf:resource="#Event"/>
+        <rdfs:subPropertyOf rdf:resource="#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#dateOf -->
+
+    <owl:ObjectProperty rdf:about="#dateOf">
+        <owl:inverseOf rdf:resource="#date"/>
+        <rdfs:subPropertyOf rdf:resource="#participantOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#embodiedBy -->
+
+    <owl:ObjectProperty rdf:about="#embodiedBy">
+        <owl:inverseOf rdf:resource="#embodies"/>
+        <rdfs:subPropertyOf rdf:resource="#recordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#embodies -->
+
+    <owl:ObjectProperty rdf:about="#embodies">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#BibliographicExpression"/>
+        <rdfs:domain rdf:resource="#BibliographicManifestation"/>
+        <rdfs:subPropertyOf rdf:resource="#records"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#exemplifiedBy -->
+
+    <owl:ObjectProperty rdf:about="#exemplifiedBy">
+        <owl:inverseOf rdf:resource="#exemplifies"/>
+        <rdfs:subPropertyOf rdf:resource="#recordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#exemplifies -->
+
+    <owl:ObjectProperty rdf:about="#exemplifies">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#BibliographicItem"/>
+        <rdfs:range rdf:resource="#BibliographicManifestation"/>
+        <rdfs:subPropertyOf rdf:resource="#records"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#fragment -->
+
+    <owl:ObjectProperty rdf:about="#fragment">
+        <rdfs:domain rdf:resource="#Document"/>
+        <rdfs:range rdf:resource="#Fragment"/>
+        <rdfs:subPropertyOf rdf:resource="#part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#fragmentOf -->
+
+    <owl:ObjectProperty rdf:about="#fragmentOf">
+        <owl:inverseOf rdf:resource="#fragment"/>
+        <rdfs:subPropertyOf rdf:resource="#partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#identifierComponent -->
+
+    <owl:ObjectProperty rdf:about="#identifierComponent">
+        <rdfs:domain rdf:resource="#BibliographicIdentifier"/>
+        <rdfs:range rdf:resource="#BibliographicIdentifierComponent"/>
+        <rdfs:subPropertyOf rdf:resource="#part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#identifierComponentOf -->
+
+    <owl:ObjectProperty rdf:about="#identifierComponentOf">
+        <owl:inverseOf rdf:resource="#identifierComponent"/>
+        <rdfs:subPropertyOf rdf:resource="#partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#instrument -->
+
+    <owl:ObjectProperty rdf:about="#instrument">
+        <rdfs:domain rdf:resource="#Event"/>
+        <rdfs:range rdf:resource="#Instrument"/>
+        <rdfs:subPropertyOf rdf:resource="#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#instrumentOf -->
+
+    <owl:ObjectProperty rdf:about="#instrumentOf">
+        <owl:inverseOf rdf:resource="#instrument"/>
+        <rdfs:subPropertyOf rdf:resource="#participantOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#languageVariant -->
+
+    <owl:ObjectProperty rdf:about="#languageVariant">
+        <rdfs:subPropertyOf rdf:resource="#variant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#legislativeCompetenceGround -->
+
+    <owl:ObjectProperty rdf:about="#legislativeCompetenceGround">
+        <rdfs:subPropertyOf rdf:resource="#instrument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#legislativeCompetenceGroundOf -->
+
+    <owl:ObjectProperty rdf:about="#legislativeCompetenceGroundOf">
+        <rdfs:subPropertyOf rdf:resource="#instrumentOf"/>
+        <owl:inverseOf rdf:resource="#legislativeCompetenceGround"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#matter -->
+
+    <owl:ObjectProperty rdf:about="#matter">
+        <rdfs:subPropertyOf rdf:resource="#instrument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#matterOf -->
+
+    <owl:ObjectProperty rdf:about="#matterOf">
+        <rdfs:subPropertyOf rdf:resource="#instrumentOf"/>
+        <owl:inverseOf rdf:resource="#matter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#part -->
+
+    <owl:ObjectProperty rdf:about="#part">
+        <rdfs:range rdf:resource="#BibliographicThing"/>
+        <rdfs:domain rdf:resource="#BibliographicThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#partOf -->
+
+    <owl:ObjectProperty rdf:about="#partOf">
+        <owl:inverseOf rdf:resource="#part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#participant -->
+
+    <owl:ObjectProperty rdf:about="#participant">
+        <rdfs:domain rdf:resource="#Event"/>
+        <rdfs:range rdf:resource="#EventParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#participantOf -->
+
+    <owl:ObjectProperty rdf:about="#participantOf">
+        <owl:inverseOf rdf:resource="#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#patient -->
+
+    <owl:ObjectProperty rdf:about="#patient">
+        <rdfs:domain rdf:resource="#Event"/>
+        <rdfs:range rdf:resource="#Patient"/>
+        <rdfs:subPropertyOf rdf:resource="#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#patientOf -->
+
+    <owl:ObjectProperty rdf:about="#patientOf">
+        <rdfs:subPropertyOf rdf:resource="#participantOf"/>
+        <owl:inverseOf rdf:resource="#patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#predecessor -->
+
+    <owl:ObjectProperty rdf:about="#predecessor">
+        <rdfs:subPropertyOf rdf:resource="#variant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#realizedBy -->
+
+    <owl:ObjectProperty rdf:about="#realizedBy">
+        <owl:inverseOf rdf:resource="#realizes"/>
+        <rdfs:subPropertyOf rdf:resource="#recordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#realizes -->
+
+    <owl:ObjectProperty rdf:about="#realizes">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#BibliographicExpression"/>
+        <rdfs:range rdf:resource="#BibliographicWork"/>
+        <rdfs:subPropertyOf rdf:resource="#records"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#recipient -->
+
+    <owl:ObjectProperty rdf:about="#recipient">
+        <rdfs:domain rdf:resource="#Event"/>
+        <rdfs:range rdf:resource="#Recipient"/>
+        <rdfs:subPropertyOf rdf:resource="#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#recipientOf -->
+
+    <owl:ObjectProperty rdf:about="#recipientOf">
+        <rdfs:subPropertyOf rdf:resource="#participantOf"/>
+        <owl:inverseOf rdf:resource="#recipient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#recordedBy -->
+
+    <owl:ObjectProperty rdf:about="#recordedBy">
+        <owl:inverseOf rdf:resource="#records"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#records -->
+
+    <owl:ObjectProperty rdf:about="#records">
+        <rdfs:range rdf:resource="#BibliographicObject"/>
+        <rdfs:domain rdf:resource="#BibliographicObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#refersTo -->
+
+    <owl:ObjectProperty rdf:about="#refersTo">
+        <rdfs:domain rdf:resource="#BibliographicReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#represents -->
+
+    <owl:ObjectProperty rdf:about="#represents">
+        <rdfs:domain rdf:resource="#BibliographicObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#result -->
+
+    <owl:ObjectProperty rdf:about="#result">
+        <rdfs:domain rdf:resource="#Event"/>
+        <rdfs:range rdf:resource="#Result"/>
+        <rdfs:subPropertyOf rdf:resource="#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#resultOf -->
+
+    <owl:ObjectProperty rdf:about="#resultOf">
+        <rdfs:subPropertyOf rdf:resource="#participantOf"/>
+        <owl:inverseOf rdf:resource="#result"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#successor -->
+
+    <owl:ObjectProperty rdf:about="#successor">
+        <rdfs:subPropertyOf rdf:resource="#variant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#temporalFictionOf -->
+
+    <owl:ObjectProperty rdf:about="#temporalFictionOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Event"/>
+        <rdfs:domain rdf:resource="#FictionalExpressionCreation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#thisEmbodies -->
+
+    <owl:ObjectProperty rdf:about="#thisEmbodies">
+        <rdfs:range rdf:resource="#BibliographicExpression"/>
+        <rdfs:domain rdf:resource="#BibliographicItem"/>
+        <rdfs:subPropertyOf rdf:resource="#records"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#thisRealizes -->
+
+    <owl:ObjectProperty rdf:about="#thisRealizes">
+        <rdfs:domain rdf:resource="#BibliographicItem"/>
+        <rdfs:range rdf:resource="#BibliographicWork"/>
+        <rdfs:subPropertyOf rdf:resource="#records"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#variant -->
+
+    <owl:ObjectProperty rdf:about="#variant">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="#BibliographicExpression"/>
+        <rdfs:range rdf:resource="#BibliographicExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#countryCode -->
+
+    <owl:DatatypeProperty rdf:about="#countryCode">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment xml:lang="en"
+            >Should be constrained to to or three characters from the ISO 3166-1 standard.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Country"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#issueID -->
+
+    <owl:DatatypeProperty rdf:about="#issueID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Issue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#languageCode -->
+
+    <owl:DatatypeProperty rdf:about="#languageCode">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Language"/>
+        <rdfs:range rdf:resource="&xsd;language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#manifestationTypeID -->
+
+    <owl:DatatypeProperty rdf:about="#manifestationTypeID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ManifestationType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#workTypeID -->
+
+    <owl:DatatypeProperty rdf:about="#workTypeID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#WorkType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#xsdDate -->
+
+    <owl:DatatypeProperty rdf:about="#xsdDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment xml:lang="en"
+            >Range is an XML schema date.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Action -->
+
+    <owl:Class rdf:about="#Action">
+        <rdfs:subClassOf rdf:resource="#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#agent"/>
+                <owl:someValuesFrom rdf:resource="#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A bibliographically relevant event intended and caused by an agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Addressee -->
+
+    <owl:Class rdf:about="#Addressee">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#recipientOf"/>
+                <owl:someValuesFrom rdf:resource="#LegislativeCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Recipient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Agent -->
+
+    <owl:Class rdf:about="#Agent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#agentOf"/>
+                <owl:someValuesFrom rdf:resource="#Action"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#EventParticipant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Author -->
+
+    <owl:Class rdf:about="#Author">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#agentOf"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicCitation -->
+
+    <owl:Class rdf:about="#BibliographicCitation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#cites"/>
+                <owl:someValuesFrom rdf:resource="#CitableBibliographicObject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#represents"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicIdentifier"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicReference"/>
+        <owl:versionInfo xml:lang="en"
+            >a representation of a bibliographic identi&#64257;er of a bibliographic object, with the intent of referring to that bibliographic object. Article 1, the &#64257;rst article and the previous article are examples of citation, and the Minister, the President of the Republic, and the accused, are examples of references to other, interesting but non-bibliographic, things.</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicCreation -->
+
+    <owl:Class rdf:about="#BibliographicCreation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#result"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicObject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#agent"/>
+                <owl:someValuesFrom rdf:resource="#Author"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A bibliographic creation results in a bibliographic object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicExpression -->
+
+    <owl:Class rdf:about="#BibliographicExpression">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#realizes"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicWork"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#embodiedBy"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicManifestation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#CitableBibliographicObject"/>
+        <owl:disjointWith rdf:resource="#BibliographicWork"/>
+        <rdfs:comment xml:lang="en"
+            >a realization of one bibliographic work in the form of signs, words, sentences, paragraphs, etc. by the author of that work. Physical form aspects, as typeface or page-layout, are generally speaking excluded from the expression level. Any change in content constitutes a gives rise to a new expression. If an expression is revised or modi&#64257;ed, the resulting expression is considered to be a new expression, no matter how minor the modi&#64257;cation may be.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicExpressionCreation -->
+
+    <owl:Class rdf:about="#BibliographicExpressionCreation">
+        <rdfs:subClassOf rdf:resource="#BibliographicCreation"/>
+        <rdfs:comment xml:lang="en"
+            >Creation of an expression.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicIdentifier -->
+
+    <owl:Class rdf:about="#BibliographicIdentifier">
+        <rdfs:subClassOf rdf:resource="#BibliographicThing"/>
+        <rdfs:comment xml:lang="en"
+            >A unique bibliographic identi&#64257;er identi&#64257;es a bibliographic object uniquely. The uniform resource identi&#64257;er can for instance be used as a unique bibliographic identi&#64257;er but it by default dereferences to the thing it identifies in RDF/OWL.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicIdentifierComponent -->
+
+    <owl:Class rdf:about="#BibliographicIdentifierComponent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#identifierComponentOf"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicIdentifier"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicThing"/>
+        <rdfs:comment xml:lang="en"
+            >Component of the mURI naming convention, This is the only part of the schema where datatype properties play a role.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicItem -->
+
+    <owl:Class rdf:about="#BibliographicItem">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#exemplifies"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicManifestation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicObject"/>
+        <rdfs:comment xml:lang="en"
+            >exempli&#64257;es one manifestation of one expression of one work: a speci&#64257;c copy of a book on a speci&#64257;c shelf in a library, a &#64257;le stored on a computer in a speci&#64257;c location, etc. Items stored on a computer can be easily copied to another location, resulting in another item, but the same manifestation. This makes adding metadata about the item to the item in principle impossible. On the Internet generally speaking only the uniform resource locator (URL) is an item-speci&#64257;c datum.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicManifestation -->
+
+    <owl:Class rdf:about="#BibliographicManifestation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#embodies"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicExpression"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#exemplifiedBy"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicItem"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicObject"/>
+        <rdfs:comment xml:lang="en"
+            >embodies one expression of one bibliographic work. The boundaries between one manifestation and another are drawn on the basis of both content and physical form. When the production process involves changes in physical form the resulting product is considered a new manifestation. Thus, a speci&#64257;c XML representation, a PDF &#64257;le (as generated by printing into PDF a speci&#64257;c Word &#64257;le with a speci&#64257;c PDF distiller), a printed booklet, all represent di&#64256;erent manifestations of the same expression of a work.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicModification -->
+
+    <owl:Class rdf:about="#BibliographicModification">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#matter"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicObject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicCreation"/>
+        <rdfs:comment xml:lang="en"
+            >A modification operates on some existing matter to create a new bibliographic object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicObject -->
+
+    <owl:Class rdf:about="#BibliographicObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#resultOf"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#represents"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >a bounded representation of a body of information, designed with the intent to communicate, preserved in a form independent of a sender or receiver. The bibliographic object represents something else (a rule, definition, etc.). A bibliographic work, expression, manifestation, and item are bibliographic objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicReference -->
+
+    <owl:Class rdf:about="#BibliographicReference">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#refersTo"/>
+                <owl:someValuesFrom rdf:resource="#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicObject"/>
+        <rdfs:comment xml:lang="en"
+            >A representation of something, a bibliographic identifier, with the intent of referring to that something. The adjective bibliographic pertains to the nature of the reference itself, not its target.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicSourceOfLaw -->
+
+    <owl:Class rdf:about="#BibliographicSourceOfLaw">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#resultOf"/>
+                <owl:someValuesFrom rdf:resource="#LegislativeCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#CitableBibliographicObject"/>
+        <rdfs:comment xml:lang="en"
+            >a bibliographic object that can be, is, was, or presumably will be referred to, by way of bibliographic citation, to back an argument claiming the existence of a legal rule in a certain legal system, or, alternatively, a bibliographic object published or realized by a competent legislator to communicate a legal rule to a certain group of addressees. Both the legislator and the user of the bibliographic source of law understand it as a medium used for communicating the existence of legal rules, including auxiliary declarations required for the proper understanding of legal rules, between legislator and user.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicThing -->
+
+    <owl:Class rdf:about="#BibliographicThing">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+        <rdfs:comment xml:lang="en"
+            >a body of information, designed with the intent to communicate, preserved in a form independent of a sender or receiver, or something pertaining to such bodies of information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicWork -->
+
+    <owl:Class rdf:about="#BibliographicWork">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#realizedBy"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicExpression"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#resultOf"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicWorkCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#CitableBibliographicObject"/>
+        <rdfs:comment xml:lang="en"
+            >a bibliographic object, realized by one or more expressions, and created by one or more persons in a single creative process ending in a BibliographicWorkCreation event. A work has an author or authors, and is the result of a BibliographicWorkCreation event. We recognize the work through individual expressions of the work, but the work itself exists only in the commonality of content between and among the various expressions of the work.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BibliographicWorkCreation -->
+
+    <owl:Class rdf:about="#BibliographicWorkCreation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#result"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicWork"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicCreation"/>
+        <rdfs:comment xml:lang="en"
+            >It is the intention that the date at which this event happens is by definition the same date as found in the mURI for a Metalex work.  It is the date at which the self-identifying data in the document become stable and valid for bibliographic purposes. What this event is (a signing, a passing in parliament, or a publication in the state gazette) differs per jurisdiction. It is also typically the date at which auxiliary provisions (at minimum entry into force provisions) by default must enter into force.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#BlockFragment -->
+
+    <owl:Class rdf:about="#BlockFragment">
+        <rdfs:subClassOf rdf:resource="#Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#CitableBibliographicObject -->
+
+    <owl:Class rdf:about="#CitableBibliographicObject">
+        <rdfs:subClassOf rdf:resource="#BibliographicObject"/>
+        <owl:disjointWith rdf:resource="#BibliographicItem"/>
+        <owl:disjointWith rdf:resource="#BibliographicManifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Component -->
+
+    <owl:Class rdf:about="#Component">
+        <rdfs:subClassOf rdf:resource="#BibliographicObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#componentOf"/>
+                <owl:someValuesFrom rdf:resource="#CompoundObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Component of a folder, composite document or composite document component.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#CompoundDocument -->
+
+    <owl:Class rdf:about="#CompoundDocument">
+        <rdfs:subClassOf rdf:resource="#CompoundObject"/>
+        <rdfs:subClassOf rdf:resource="#Document"/>
+        <rdfs:comment
+            >A document that has components.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#CompoundObject -->
+
+    <owl:Class rdf:about="#CompoundObject">
+        <rdfs:subClassOf rdf:resource="#BibliographicObject"/>
+        <rdfs:comment
+            >A bibliographic object that has components.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#ContainerFragment -->
+
+    <owl:Class rdf:about="#ContainerFragment">
+        <rdfs:subClassOf rdf:resource="#Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Copy -->
+
+    <owl:Class rdf:about="#Copy">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#matter"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicItem"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#result"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicItem"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicModification"/>
+        <rdfs:comment xml:lang="en"
+            >Items can be copied. This metadatum cannot possibly be part of a Metalex XML manifestation. This class in included only for explanatory purposes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Country -->
+
+    <owl:Class rdf:about="#Country">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#countryCode"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicIdentifierComponent"/>
+        <rdfs:comment xml:lang="en"
+            >The standard assumes that bibliographic works of interest always originate in a clearly identifiable country. Now interpreted as country codes, but ccTLD is an option (eu, int, etc.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Date -->
+
+    <owl:Class rdf:about="#Date">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#dateOf"/>
+                <owl:someValuesFrom rdf:resource="#Event"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#xsdDate"/>
+                <owl:someValuesFrom rdf:resource="&xsd;date"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#EventParticipant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Document -->
+
+    <owl:Class rdf:about="#Document">
+        <rdfs:subClassOf rdf:resource="#BibliographicObject"/>
+        <rdfs:comment
+            >A document has fragments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Edit -->
+
+    <owl:Class rdf:about="#Edit">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#result"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicManifestation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#matter"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicManifestation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicModification"/>
+        <rdfs:comment xml:lang="en"
+            >A modification made to a Metalex XML file that does not change the embodied expression is an edit, made by an editor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Editor -->
+
+    <owl:Class rdf:about="#Editor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#agentOf"/>
+                <owl:someValuesFrom rdf:resource="#Edit"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Event -->
+
+    <owl:Class rdf:about="#Event">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#date"/>
+                <owl:someValuesFrom rdf:resource="#Date"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+        <rdfs:comment xml:lang="en"
+            >A bibliographically relevant change that happens during some time period; In the context of this schema always a date because both legislative technique and publishing practice rarely require more detailed identification of time intervals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#EventParticipant -->
+
+    <owl:Class rdf:about="#EventParticipant">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#participantOf"/>
+                <owl:someValuesFrom rdf:resource="#Event"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+        <rdfs:comment xml:lang="en"
+            >These are reified participant roles in specific types of event. For each participant role there is a corresponding property of the same name of an event of which it is the value. The event participants are inspired by those of Judith Dick.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#ExpressionCreationDate -->
+
+    <owl:Class rdf:about="#ExpressionCreationDate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#dateOf"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicExpressionCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicIdentifierComponent"/>
+        <rdfs:subClassOf rdf:resource="#Date"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#ExpressionCreationExTunc -->
+
+    <owl:Class rdf:about="#ExpressionCreationExTunc">
+        <rdfs:subClassOf rdf:resource="#FictionalExpressionCreation"/>
+        <rdfs:comment xml:lang="en"
+            >A fictional creation that happened before the event of which it is a fiction. This occurs in the case of annument after the fact of a modification by a constitutional court, or if errata corrige repairing minor errors are applied.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#FictionalExpressionCreation -->
+
+    <owl:Class rdf:about="#FictionalExpressionCreation">
+        <rdfs:subClassOf rdf:resource="#BibliographicExpressionCreation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#temporalFictionOf"/>
+                <owl:someValuesFrom rdf:resource="#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >An expression creation that did not actuially happen on the given date: it is in reality a fiction of another event that happened before (in the case of fictional expressions made by a publisher in order to forecast what future legislation after the application of expected modifications will look like) of after (in the case of ex tunc expressions) it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Folder -->
+
+    <owl:Class rdf:about="#Folder">
+        <rdfs:subClassOf rdf:resource="#CompoundObject"/>
+        <owl:disjointWith rdf:resource="#CompoundDocument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Fragment -->
+
+    <owl:Class rdf:about="#Fragment">
+        <rdfs:subClassOf rdf:resource="#BibliographicObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#partOf"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Document"/>
+        <rdfs:comment xml:lang="en"
+            >Identified fragment of a document, corresponds with the content of an XML element if it is a manifestation level fragment, has then element name and type, but these are rarely directly relevant.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#InlineFragment -->
+
+    <owl:Class rdf:about="#InlineFragment">
+        <rdfs:subClassOf rdf:resource="#Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Instrument -->
+
+    <owl:Class rdf:about="#Instrument">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#instrumentOf"/>
+                <owl:someValuesFrom rdf:resource="#Event"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#EventParticipant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Issue -->
+
+    <owl:Class rdf:about="#Issue">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#issueID"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicIdentifierComponent"/>
+        <rdfs:comment xml:lang="en"
+            >Is a modifier when date of event does not uniquely identify the object, i.e. issue number or qualifier on that date. Applies both to works and to expressions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Language -->
+
+    <owl:Class rdf:about="#Language">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#languageCode"/>
+                <owl:someValuesFrom rdf:resource="&xsd;language"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicIdentifierComponent"/>
+        <rdfs:comment xml:lang="en"
+            >Is an expression level metadatum, conformant to RFC 3066</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#LegislativeCommencement -->
+
+    <owl:Class rdf:about="#LegislativeCommencement">
+        <rdfs:subClassOf rdf:resource="#LegislativeEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#patient"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicSourceOfLaw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Legal entry of the BibliographicSourceOfLaw into the legal system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#LegislativeCompetenceGround -->
+
+    <owl:Class rdf:about="#LegislativeCompetenceGround">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#legislativeCompetenceGroundOf"/>
+                <owl:someValuesFrom rdf:resource="#LegislativeCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#LegislativeCreation -->
+
+    <owl:Class rdf:about="#LegislativeCreation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#result"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicSourceOfLaw"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicCreation"/>
+        <rdfs:subClassOf rdf:resource="#LegislativeEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#agent"/>
+                <owl:someValuesFrom rdf:resource="#Legislator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#LegislativeDelivery -->
+
+    <owl:Class rdf:about="#LegislativeDelivery">
+        <rdfs:subClassOf rdf:resource="#BibliographicWorkCreation"/>
+        <rdfs:subClassOf rdf:resource="#LegislativeCreation"/>
+        <rdfs:comment xml:lang="en"
+            >Official Act of delivery (promulgation, signature of the King, etc.). This is the event that creates the legislative work.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#LegislativeEvent -->
+
+    <owl:Class rdf:about="#LegislativeEvent">
+        <rdfs:subClassOf rdf:resource="#Event"/>
+        <rdfs:comment xml:lang="en"
+            >For purposes of standardization this list of legislative events is proposed. If procedures deviate significantly, other events may be defined as legislative events. Do note that it is very important to identify the relevant work creation and expression creation events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#LegislativeModification -->
+
+    <owl:Class rdf:about="#LegislativeModification">
+        <rdfs:subClassOf rdf:resource="#BibliographicExpressionCreation"/>
+        <rdfs:subClassOf rdf:resource="#BibliographicModification"/>
+        <rdfs:subClassOf rdf:resource="#LegislativeCreation"/>
+        <rdfs:comment xml:lang="en"
+            >Modification creates a new expression of a work.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#LegislativePublication -->
+
+    <owl:Class rdf:about="#LegislativePublication">
+        <rdfs:subClassOf rdf:resource="#LegislativeEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#patient"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicSourceOfLaw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A public act by a legislative body which publishes or gives a delegation to third body to publish a manifestation of the act with legal value in the designated piblication channel (official hournal, state gazette, etc). May coincide with delivery, but is in legislative practice often a different event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#LegislativeTransposition -->
+
+    <owl:Class rdf:about="#LegislativeTransposition">
+        <rdfs:subClassOf rdf:resource="#LegislativeEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#patient"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicSourceOfLaw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The transposition deadline is a date within EU member states before they must implement/transpose EU Directives into national Law. Added for informational purposes. Some events are (also) transposition events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Legislator -->
+
+    <owl:Class rdf:about="#Legislator">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#agentOf"/>
+                <owl:someValuesFrom rdf:resource="#LegislativeCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#MainComponent -->
+
+    <owl:Class rdf:about="#MainComponent">
+        <rdfs:subClassOf rdf:resource="#Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#componentOf"/>
+                <owl:allValuesFrom rdf:resource="#Folder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Has components, but is not a component of a document.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#ManifestationType -->
+
+    <owl:Class rdf:about="#ManifestationType">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#manifestationTypeID"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicIdentifierComponent"/>
+        <rdfs:comment xml:lang="en"
+            >Generally a three letter string identifying a manifestation by type. Often the file type extension, e.g. pdf, xml,  doc. NOT the mime type, as it is appended to the manifestation level mURI. pck is the extension for a package (see naming convention).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Matter -->
+
+    <owl:Class rdf:about="#Matter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#matterOf"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicModification"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#MetalexIdentifier -->
+
+    <owl:Class rdf:about="#MetalexIdentifier">
+        <rdfs:subClassOf rdf:resource="#BibliographicIdentifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Patient -->
+
+    <owl:Class rdf:about="#Patient">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#patientOf"/>
+                <owl:someValuesFrom rdf:resource="#Event"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#EventParticipant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Recipient -->
+
+    <owl:Class rdf:about="#Recipient">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#recipientOf"/>
+                <owl:someValuesFrom rdf:resource="#Event"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#EventParticipant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Result -->
+
+    <owl:Class rdf:about="#Result">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#resultOf"/>
+                <owl:someValuesFrom rdf:resource="#Event"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#EventParticipant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Thing -->
+
+    <owl:Class rdf:about="#Thing">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment
+            >A thing relevant to the Metalex standard.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Translation -->
+
+    <owl:Class rdf:about="#Translation">
+        <rdfs:subClassOf rdf:resource="#BibliographicModification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#result"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicExpression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#matter"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicExpression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A translation of an expression of a bibliographic work is an expression that shares its in force time interval, differs in nothing but language, and has been realized by way of translation of one expression into another expression. Translation is an asymmetric relation between bibliographic expressions, expressed by a metalex-owl:Translation event, which has a metalex-owl:translator, taking the initial expression as a metalex-owl:matter, and the translated document as metalex-owl:result. The translation should not be confused with language variant: while language variants can be realized concurrently by the legislator, and are equally authoritive if they are, the translation of an expression is generally speaking less authoritive than the expression it is a translation of, even if officially translated.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#Translator -->
+
+    <owl:Class rdf:about="#Translator">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#agentOf"/>
+                <owl:someValuesFrom rdf:resource="#Translation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#WorkCreationDate -->
+
+    <owl:Class rdf:about="#WorkCreationDate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#dateOf"/>
+                <owl:someValuesFrom rdf:resource="#BibliographicWorkCreation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicIdentifierComponent"/>
+        <rdfs:subClassOf rdf:resource="#Date"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metalex.eu/metalex/2008-05-02#WorkType -->
+
+    <owl:Class rdf:about="#WorkType">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#workTypeID"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#BibliographicIdentifierComponent"/>
+        <rdfs:comment
+            >Generally a string from a controlled vocabulary identifying a work by type (statute, act, directive, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>

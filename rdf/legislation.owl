@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ontology "http://legislation.di.uoa.gr/ontology/" >
+    <!ENTITY metalex "http://www.metalex.eu/metalex/2008-05-02#" >
+    <!ENTITY eli "http://data.europa.eu/eli/ontology#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://legislation.di.uoa.gr#"
+     xml:base="http://legislation.di.uoa.gr"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:metalex="http://www.metalex.eu/metalex/2008-05-02#"
+     xmlns:eli="http://data.europa.eu/eli/ontology#"
+     xmlns:ontology="http://legislation.di.uoa.gr/ontology/">
+    <owl:Ontology rdf:about="http://legislation.di.uoa.gr/ontology/">
+        <owl:imports rdf:resource="http://www.metalex.eu/metalex/2008-05-02"/>
+        <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/context -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;context"/>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/fragmentID -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;fragmentID">
+        <rdfs:domain rdf:resource="&metalex;Fragment"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+	
+    
+	
+	<!-- http://legislation.di.uoa.gr/ontology/tag -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;tag">
+        <rdfs:domain rdf:resource="&metalex;LegalResource"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+	
+	
+	
+	<!-- http://legislation.di.uoa.gr/ontology/views -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;views">
+        <rdfs:domain rdf:resource="&metalex;LegalResource"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/has_text -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;has_text">
+        <rdfs:domain rdf:resource="&ontology;Passage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://legislation.di.uoa.gr/ontology/LegislativeAct -->
+
+    <owl:Class rdf:about="&ontology;LegislativeAct">
+        <rdfs:subClassOf rdf:resource="&metalex;LegalResource"/>
+    </owl:Class>
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/ActOfMinisterialCabinet -->
+
+    <owl:Class rdf:about="&ontology;ActOfMinisterialCabinet">
+        <rdfs:subClassOf rdf:resource="&metalex;LegalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Article -->
+
+    <owl:Class rdf:about="&ontology;Article">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Book -->
+
+    <owl:Class rdf:about="&ontology;Book">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Case -->
+
+    <owl:Class rdf:about="&ontology;Case">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/ChangeWords -->
+
+    <owl:Class rdf:about="&ontology;ChangeWords">
+        <rdfs:subClassOf rdf:resource="&metalex;LegislativeModification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Chapter -->
+
+    <owl:Class rdf:about="&ontology;Chapter">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Insertion -->
+
+    <owl:Class rdf:about="&ontology;Insertion">
+        <rdfs:subClassOf rdf:resource="&metalex;LegislativeModification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Deletion -->
+
+    <owl:Class rdf:about="&ontology;Deletion">
+        <rdfs:subClassOf rdf:resource="&metalex;LegislativeModification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Substitution -->
+
+    <owl:Class rdf:about="&ontology;Substitution">
+        <rdfs:subClassOf rdf:resource="&metalex;LegislativeModification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Law -->
+
+    <owl:Class rdf:about="&ontology;Law">
+        <rdfs:subClassOf rdf:resource="&metalex;LegalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/MinisterialDecision -->
+
+    <owl:Class rdf:about="&ontology;MinisterialDecision">
+        <rdfs:subClassOf rdf:resource="&metalex;LegalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Paragraph -->
+
+    <owl:Class rdf:about="&ontology;Paragraph">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Part -->
+
+    <owl:Class rdf:about="&ontology;Part">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Passage -->
+
+    <owl:Class rdf:about="&ontology;Passage">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/PrecidentialDecree -->
+
+    <owl:Class rdf:about="&ontology;PrecidentialDecree">
+        <rdfs:subClassOf rdf:resource="&metalex;LegalResource"/>
+    </owl:Class>
+	
+	
+	
+	<!-- http://legislation.di.uoa.gr/ontology/RoyalDecree -->
+
+    <owl:Class rdf:about="&ontology;RoyalDecree">
+        <rdfs:subClassOf rdf:resource="&metalex;LegalResource"/>
+    </owl:Class>
+    
+	
+
+    <!-- http://legislation.di.uoa.gr/ontology/Section -->
+
+    <owl:Class rdf:about="&ontology;Section">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Signer -->
+
+    <owl:Class rdf:about="&ontology;Signer">
+        <rdfs:subClassOf rdf:resource="&metalex;Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://legislation.di.uoa.gr/ontology/Table -->
+
+    <owl:Class rdf:about="&ontology;Table">
+        <rdfs:subClassOf rdf:resource="&metalex;Fragment"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
