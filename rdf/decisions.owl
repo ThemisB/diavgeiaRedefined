@@ -63,6 +63,25 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/considers -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/considers">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Consideration"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>considers property can be used for solving the &quot;Having considered laws/legislation/other decisions- we decide&quot;. Considers property links a Consideration of the decision with another decision or with greek legislation expressed in rdf (http://legislation.di.uoa.gr/legislation.owl).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/thematic_category -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/thematic_category">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -155,6 +174,14 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_text -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_text">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/protocol_number -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/protocol_number">
@@ -173,18 +200,18 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/signerJob -->
+    <!-- http://diavgeia.gov.gr/ontology/signer_job -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signerJob">
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signer_job">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/signerName -->
+    <!-- http://diavgeia.gov.gr/ontology/signer_name -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signerName">
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signer_name">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -266,11 +293,23 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/Consideration -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Consideration"/>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/Contract -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Contract">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
     </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Decision -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Decision"/>
     
 
 
