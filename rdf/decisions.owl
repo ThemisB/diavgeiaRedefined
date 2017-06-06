@@ -313,24 +313,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/DecisionMetadata -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DecisionMetadata">
-        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResourceSubdivision"/>
-        <rdfs:comment>Everything that is not visible as text to Decisions.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/DecisionText -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DecisionText">
-        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResourceSubdivision"/>
-        <rdfs:comment>Everything that is visible as text to Decisions.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/DeclarationSummary -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary">
