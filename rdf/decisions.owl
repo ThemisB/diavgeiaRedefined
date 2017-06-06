@@ -72,7 +72,42 @@
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/considers">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Consideration"/>
         <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>considers property can be used for solving the &quot;Having considered laws/legislation/other decisions- we decide&quot;. Considers property links a Consideration of the decision with another decision or with greek legislation expressed in rdf (http://legislation.di.uoa.gr/legislation.owl).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/decides -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/decides">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/has_consideration -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_consideration">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Consideration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/has_decision -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_decision">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/signed_by -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/signed_by">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
     </owl:ObjectProperty>
     
 
@@ -180,7 +215,26 @@
 
     <!-- http://diavgeia.gov.gr/ontology/has_decision_type -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_decision_type"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_decision_type">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Ανάκληση</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Απόφαση</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
     
 
 
