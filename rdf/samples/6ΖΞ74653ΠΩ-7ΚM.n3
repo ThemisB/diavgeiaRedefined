@@ -1,27 +1,33 @@
-<http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23> a <http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw> ;
-	<http://diavgeia.gov.gr/ontology/has_version> "9b31854f-228d-4a12-b0ab-c606b4994c23" ;
-	<http://diavgeia.gov.gr/ontology/has_iun> "6ΖΞ74653ΠΩ-7ΚΜ" ;
-	<http://data.europa.eu/eli/ontology#title> "Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής"@el ;
-	<http://data.europa.eu/eli/ontology#date_publication> "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date> ;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΝΑΥΤΙΛΙΑΣ & ΝΗΣΙΩΤΙΚΗΣ ΠΟΛΙΤΙΚΗΣ"@el ;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΑΡΧΗΓΕΙΟ ΛΙΜΕΝΙΚΟΥ ΣΩΜΑΤΟΣ - ΕΛΛΗΝΙΚΗΣ ΑΚΤΟΦΥΛΑΚΗΣ"@el ;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΛΙΜΕΝΑΡΧΕΙΟ ΠΑΤΜΟΥ"@el ;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Σκάλα Πάτμου"@el ;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "85500" ;
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2247031231" ;
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2247034131" ;
-	<http://diavgeia.gov.gr/ontology/recipients> "Αποδέκτες Πίνακα Διανομής"@el ;
-	<http://diavgeia.gov.gr/ontology/government_email> "patmos@hcg.gr" ;
-	<http://diavgeia.gov.gr/ontology/protocol_number> "2131.7/665/17" ;
-	<http://diavgeia.gov.gr/ontology/decision_number> "06/2017" ;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Consideration/1> ;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Consideration/2> ;
+<http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23> a <http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw>;
+	<http://diavgeia.gov.gr/ontology/has_version> "9b31854f-228d-4a12-b0ab-c606b4994c23";
+	<http://diavgeia.gov.gr/ontology/has_iun> "6ΖΞ74653ΠΩ-7ΚΜ";
+	<http://data.europa.eu/eli/ontology#title> "Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΝΑΥΤΙΛΙΑΣ & ΝΗΣΙΩΤΙΚΗΣ ΠΟΛΙΤΙΚΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΑΡΧΗΓΕΙΟ ΛΙΜΕΝΙΚΟΥ ΣΩΜΑΤΟΣ - ΕΛΛΗΝΙΚΗΣ ΑΚΤΟΦΥΛΑΚΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΛΙΜΕΝΑΡΧΕΙΟ ΠΑΤΜΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_address> "Σκάλα Πάτμου"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "85500";
+	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2247031231";
+	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2247034131";
+	<http://diavgeia.gov.gr/ontology/recipients> "Αποδέκτες Πίνακα Διανομής"@el;
+	<http://diavgeia.gov.gr/ontology/government_email> "patmos@hcg.gr";
+	<http://diavgeia.gov.gr/ontology/protocol_number> "2131.7/665/17";
+	<http://diavgeia.gov.gr/ontology/decision_number> "06/2017";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Consideration/2>;
 	<http://diavgeia.gov.gr/ontology/has_decision_type> "Ανάκληση"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Decision/1> ;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Decision/2> ;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Signer/1> ;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el ;
-	<http://diavgeia.gov.gr/ontology/recipient_for_action> "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el.
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Decision/2>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
+	<http://diavgeia.gov.gr/ontology/recipient_for_action> "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
+	<http://diavgeia.gov.gr/ontology/has_thematic_category> <http://diavgeia.gov.gr/ontology/Employment>;
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "100015969";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1496232550111";
+	<http://diavgeia.gov.gr/ontology/unit_id> "93244".
+
 
 <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του N.3409/2005 <<Καταδύσεις αναψυχής και άλλες διατάξεις>> (ΦΕΚ 273 Α')."@el;
@@ -32,11 +38,12 @@
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/md/2006/Φ449Β/article/4/paragraph/2>.
 
 <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Στην παροχέα υπηρεσιών καταδύσεων αναψυχής κα ΣΤΑΜΠΟΥΛΗ Χρυσή του Κωνσταντίνου με Αριθμ. Μητρώου: 302 και με διακριτικό τίτλο \"BABY DIVERS\" την κάτωθι βεβαίωση που εκδόθηκε από την Υπηρεσία μας: Εκπαίδευση αυτοδυτών με Α.Φ.:513.3/13/Α.Σ.:2550/19-08-2013, λόγω παύσης επιτηδεύματος."@el;
+	<http://diavgeia.gov.gr/ontology/has_text> "Στην παροχέα υπηρεσιών καταδύσεων αναψυχής κα ΣΤΑΜΠΟΥΛΗ Χρυσή του Κωνσταντίνου με Αριθμ. Μητρώου: 302 και με διακριτικό τίτλο \"BABY DIVERS\" την κάτωθι βεβαίωση που εκδόθηκε από την Υπηρεσία μας: Εκπαίδευση αυτοδυτών με Α.Φ.:513.3/13/Α.Σ.:2550/19-08-2013, λόγω παύσης επιτηδεύματος."@el.
 
 <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Decision/2> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Να κοινοποιηθεί για εκτέλεση."@el;
+	<http://diavgeia.gov.gr/ontology/has_text> "Να κοινοποιηθεί για εκτέλεση."@el.
 
 <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
 	<http://diavgeia.gov.gr/ontology/signer_job> "Ο ΛΙΜΕΝΑΡΧΗΣ ΥΠΟΠΛΟΙΑΡΧΟΣ Λ.Σ."@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "ΣΙΑΡΜΠΑΣ Στυλιανός"@el.
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΣΙΑΡΜΠΑΣ Στυλιανός"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "137132".

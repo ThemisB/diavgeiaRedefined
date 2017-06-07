@@ -103,6 +103,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_thematic_category -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_thematic_category">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/signed_by -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/signed_by">
@@ -247,6 +256,16 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_private_data -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_private_data">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether a decision contains private data.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/has_text -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_text">
@@ -260,6 +279,16 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_version">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/organization_id -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/organization_id">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Metadata information that corresponds to the government institution which has uploaded the decision.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -294,6 +323,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/signer_id -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signer_id">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/signer_job -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signer_job">
@@ -307,6 +345,25 @@
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signer_name">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/submission_timestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/submission_timestamp">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Metadata Information (UNIX-timestamp).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/unit_id -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/unit_id">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
