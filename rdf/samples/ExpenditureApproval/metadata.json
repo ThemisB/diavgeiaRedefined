@@ -1,0 +1,55 @@
+{
+  "protocolNumber": "493692",
+  "subject": "Έγκριση Δαπάνης βάσει Αρ. Πρωτ.  493692",
+  "issueDate": 1473292800000,
+  "organizationId": "99203020",
+  "signerIds": [
+    "100005898"
+  ],
+  "unitIds": [
+    "73426"
+  ],
+  "decisionTypeId": "Β.2.1",
+  "thematicCategoryIds": [
+    "32"
+  ],
+  "extraFieldValues": {
+    "org": {
+      "afm": "090010689",
+      "afmType": "EL",
+      "afmCountry": "EL",
+      "name": "ΕΘΝΙΚΟ & ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ"
+    },
+    "sponsor": [
+      {
+        "sponsorAFMName": {
+          "afm": "099362767",
+          "afmType": "EL",
+          "afmCountry": "EL",
+          "name": "ΚΟΝΕ ΑΝΩΝΥΜΗ ΤΕΧΝΙΚΗ ΕΤΑΙΡΕΙΑ ΑΝΕΛΚΥΣΤΗΡΩΝ"
+        },
+        "expenseAmount": {
+          "amount": 1123.44,
+          "currency": "EUR"
+        },
+        "cpv": "50000000-5",
+        "kae": ""
+      }
+    ],
+    "relatedAnalipsiYpoxreosis": null,
+    "relatedDecisions": null,
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "7ΧΔΛ46ΨΖ2Ν-87Ν",
+  "publishTimestamp": 1473327869593,
+  "submissionTimestamp": 1473327869593,
+  "versionId": "d92a0b08-1f01-4658-84ee-38cb0e87a87a",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/7ΧΔΛ46ΨΖ2Ν-87Ν",
+  "documentUrl": "https://diavgeia.gov.gr/doc/7ΧΔΛ46ΨΖ2Ν-87Ν",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

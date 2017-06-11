@@ -1,0 +1,35 @@
+{
+  "protocolNumber": "2131.7/665/17",
+  "subject": "Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής",
+  "issueDate": 1496188800000,
+  "organizationId": "100015969",
+  "signerIds": [
+    "137132"
+  ],
+  "unitIds": [
+    "93244"
+  ],
+  "decisionTypeId": "2.4.7.1",
+  "thematicCategoryIds": [
+    "44"
+  ],
+  "extraFieldValues": {
+    "kanonistikipraxitype": "Πράξη Ρυθμιστικής Αρχής",
+    "kanonistikiPraxiPublishMedium": "στο κατάστημα της υπηρεσίας",
+    "fek": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "6ΖΞ74653ΠΩ-7ΚΜ",
+  "publishTimestamp": 1496232550111,
+  "submissionTimestamp": 1496232550111,
+  "versionId": "9b31854f-228d-4a12-b0ab-c606b4994c23",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/6ΖΞ74653ΠΩ-7ΚΜ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/6ΖΞ74653ΠΩ-7ΚΜ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

@@ -45,28 +45,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/MetadataCorrects -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/MetadataCorrects">
-        <rdfs:subPropertyOf rdf:resource="http://data.europa.eu/eli/ontology#repeals"/>
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <vann:preferredNamespacePrefix>Diavgeia property which denote a metadata correction (that is no text changes have been made on decision)</vann:preferredNamespacePrefix>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/RepeatToCorrect -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/RepeatToCorrect">
-        <rdfs:subPropertyOf rdf:resource="http://data.europa.eu/eli/ontology#repeals"/>
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Diavgeia property which denotes a text change.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/considers -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/considers">
@@ -112,6 +90,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_expense -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_expense">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/has_organization_sponsor -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_organization_sponsor">
@@ -120,6 +107,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -131,17 +119,37 @@
     <!-- http://diavgeia.gov.gr/ontology/has_sponsored -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_sponsored">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/has_thematic_category -->
+    <!-- http://diavgeia.gov.gr/ontology/metadata_correction -->
 
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_thematic_category">
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/metadata_correction">
+        <rdfs:subPropertyOf rdf:resource="http://data.europa.eu/eli/ontology#repeals"/>
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <vann:preferredNamespacePrefix>Diavgeia property which denote a metadata correction (that is no text changes have been made on decision)</vann:preferredNamespacePrefix>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/repeat_to_correct -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/repeat_to_correct">
+        <rdfs:subPropertyOf rdf:resource="http://data.europa.eu/eli/ontology#repeals"/>
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Diavgeia property which denotes a text change.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -175,7 +183,6 @@
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/thematic_category">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
     </owl:ObjectProperty>
     
 
@@ -191,6 +198,72 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/afm -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/afm">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Sponsored"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/afm_type -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/afm_type">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Sponsored"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Εθνικό</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Εκτός Ε.Ε.</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first xml:lang="el">Νομικό Πρόσωπο στην Ε.Ε.</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first xml:lang="el">Φυσικό Πρόσωπο στην Ε.Ε.</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>There are 4 kinds of AFM that an organization may have:
+
+1. (Natural Person) belongs to E.U.
+2. (Legal Person) belongs to E.U.
+3. National (Countries inside Greece).
+4. Do not belong to E.U.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/cpv -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/cpv">
@@ -202,6 +275,15 @@
     <!-- http://diavgeia.gov.gr/ontology/decision_number -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/decision_number">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/decision_type -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/decision_type">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -242,6 +324,18 @@
             </rdfs:Datatype>
         </rdfs:range>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/expense_ammount_currency -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/expense_ammount_currency"/>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/expense_amount -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/expense_amount"/>
     
 
 
@@ -290,6 +384,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_information -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_information">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/government_institution_name -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_name">
@@ -317,46 +420,20 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/has_decision_type -->
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_single_name -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_decision_type">
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first xml:lang="el">Ανάκληση</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first xml:lang="el">Απόφαση</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/has_iun -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_iun">
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_single_name">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/has_organization_sponsor_afm -->
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_website -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_organization_sponsor_afm">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment>An organization may not have AFM (4 specific organizations)</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_website">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -379,9 +456,18 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/has_version -->
+    <!-- http://diavgeia.gov.gr/ontology/internal_distribution -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_version">
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/internal_distribution">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/iun -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/iun">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -396,73 +482,28 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/name -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Sponsored"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/organization_id -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/organization_id">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Metadata information that corresponds to the government institution which has uploaded the decision.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/organization_sponsor_afm -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/organization_sponsor_afm">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/organization_sponsor_afm_type -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/organization_sponsor_afm_type">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first xml:lang="el">Εθνικό</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Εκτός Ε.Ε.</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first xml:lang="el">Νομικό Πρόσωπο στην Ε.Ε.</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first xml:lang="el">Φυσικό Πρόσωπο στην Ε.Ε.</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:comment>There are 4 kinds of AFM that an organization may have:
-
-1. (Natural Person) belongs to E.U.
-2. (Legal Person) belongs to E.U.
-3. National (Countries inside Greece).
-4. Do not belong to E.U.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/organization_sponsor_name -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/organization_sponsor_name">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -524,38 +565,141 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/sponsored_afm -->
+    <!-- http://diavgeia.gov.gr/ontology/submission_timestamp -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/sponsored_afm">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/submission_timestamp">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Metadata Information (UNIX-timestamp).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/sponsored_afm_type -->
+    <!-- http://diavgeia.gov.gr/ontology/thematic_category -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/sponsored_afm_type">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/thematic_category">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first xml:lang="el">Εθνικό</rdf:first>
+                        <rdf:first>AgricultureForestryFishery</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Εκτός Ε.Ε.</rdf:first>
+                                <rdf:first>BusinessCompetition</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first xml:lang="el">Νομικό Πρόσωπο στην Ε.Ε.</rdf:first>
+                                        <rdf:first>CommunicationEducation</rdf:first>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first xml:lang="el">Φυσικό Πρόσωπο στην Ε.Ε.</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                <rdf:first>EconomicActivity</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>EconomicTradeExchanges</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>Employment</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>Energy</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>Environment</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first>EuropeanUnion</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first>Fiscals</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first>Geography</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first>Industry</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first>InternationalOrganizations</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first>InternationalRelations</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first>Laws</rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                <rdf:first>ManufactureTechnologyResearch</rdf:first>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                        <rdf:first>NutritionAgriculturalProducts</rdf:first>
+                                                                                                                                                        <rdf:rest>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                <rdf:first>PoliticalLife</rdf:first>
+                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                        <rdf:first>Science</rdf:first>
+                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                <rdf:first>SocialIssues</rdf:first>
+                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                        <rdf:first>Transport</rdf:first>
+                                                                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:rest>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
                                             </rdf:Description>
                                         </rdf:rest>
                                     </rdf:Description>
@@ -570,46 +714,18 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/sponsored_amount -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/sponsored_amount">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/sponsored_amount_currency -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/sponsored_amount_currency">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/sponsored_name -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/sponsored_name">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/submission_timestamp -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/submission_timestamp">
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Metadata Information (UNIX-timestamp).</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/unit_id -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/unit_id">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/version -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/version">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -756,6 +872,12 @@
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
     </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Expense -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
     
 
 
@@ -919,14 +1041,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/ThematicCategories -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ThematicCategories">
-        <rdfs:comment>Corresponds to &quot;ΘΕΜΑΤΙΚΕΣ ΚΑΤΗΓΟΡΙΕΣ&quot;</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/Undertaking -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Undertaking">
@@ -972,7 +1086,6 @@
     <!-- http://diavgeia.gov.gr/ontology/AgricultureForestryFishery -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/AgricultureForestryFishery">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΓΕΩΡΓΙΑ, ΔΑΣΟΚΟΜΙΑ ΚΑΙ ΑΛΙΕΙΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1005,7 +1118,6 @@
     <!-- http://diavgeia.gov.gr/ontology/BusinessCompetition -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/BusinessCompetition">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΠΙΧΕΙΡΗΣΕΙΣ ΚΑΙ ΑΝΤΑΓΩΝΙΣΜΟΣ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1032,7 +1144,6 @@
     <!-- http://diavgeia.gov.gr/ontology/CommunicationEducation -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/CommunicationEducation">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΠΙΚΟΙΝΩΝΙΑ ΚΑΙ ΜΟΡΦΩΣΗ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1071,7 +1182,6 @@
     <!-- http://diavgeia.gov.gr/ontology/EconomicActivity -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EconomicActivity">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΟΙΚΟΝΟΜΙΚΗ ΖΩΗ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1080,7 +1190,6 @@
     <!-- http://diavgeia.gov.gr/ontology/EconomicTradeExchanges -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EconomicTradeExchanges">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΙ ΕΜΠΟΡΙΚΕΣ ΣΥΝΑΛΛΑΓΕΣ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1089,7 +1198,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Employment -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Employment">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΑΠΑΣΧΟΛΗΣΗ ΚΑΙ ΕΡΓΑΣΙΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1098,7 +1206,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Energy -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Energy">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΝΕΡΓΕΙΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1107,7 +1214,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Environment -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Environment">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΠΕΡΙΒΑΛΛΟΝ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1116,7 +1222,6 @@
     <!-- http://diavgeia.gov.gr/ontology/EuropeanUnion -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EuropeanUnion">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΥΡΩΠΑΪΚΗ ΕΝΩΣΗ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1137,7 +1242,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Fiscals -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Fiscals">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΟΝΟΜΙΚΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1152,7 +1256,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Geography -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Geography">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΓΕΩΓΡΑΦΙΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1161,7 +1264,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Industry -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Industry">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΒΙΟΜΗΧΑΝΙΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1170,7 +1272,6 @@
     <!-- http://diavgeia.gov.gr/ontology/InternationalOrganizations -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/InternationalOrganizations">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΕΘΝΕΙΣ ΟΡΓΑΝΙΣΜΟΙ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1179,7 +1280,6 @@
     <!-- http://diavgeia.gov.gr/ontology/InternationalRelations -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/InternationalRelations">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1194,7 +1294,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Laws -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Laws">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΚΑΙΟ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1209,7 +1308,6 @@
     <!-- http://diavgeia.gov.gr/ontology/ManufactureTechnologyResearch -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/ManufactureTechnologyResearch">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΠΑΡΑΓΩΓΗ, ΤΕΧΝΟΛΟΓΙΑ ΚΑΙ ΕΡΕΥΝΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1224,7 +1322,6 @@
     <!-- http://diavgeia.gov.gr/ontology/NutritionAgriculturalProducts -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/NutritionAgriculturalProducts">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΔΙΑΤΡΟΦΗ ΚΑΙ ΓΕΩΡΓΙΚΑ ΠΡΟΪΟΝΤΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1271,7 +1368,6 @@
     <!-- http://diavgeia.gov.gr/ontology/PoliticalLife -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/PoliticalLife">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΠΟΛΙΤΙΚΗ ΖΩΗ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1292,7 +1388,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Science -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Science">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΕΠΙΣΤΗΜΕΣ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1307,7 +1402,6 @@
     <!-- http://diavgeia.gov.gr/ontology/SocialIssues -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SocialIssues">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΚΟΙΝΩΝΙΚΑ ΘΕΜΑΤΑ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1334,7 +1428,6 @@
     <!-- http://diavgeia.gov.gr/ontology/Transport -->
 
     <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Transport">
-        <rdf:type rdf:resource="http://diavgeia.gov.gr/ontology/ThematicCategories"/>
         <rdfs:comment>Corresponds to &quot;ΜΕΤΑΦΟΡΕΣ&quot;</rdfs:comment>
     </owl:NamedIndividual>
     
