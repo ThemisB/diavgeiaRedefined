@@ -1,0 +1,45 @@
+{
+  "protocolNumber": "60516",
+  "subject": "ΑΠΟΦΑΣΗ - ΕΝΤΟΛΗ ΠΛΗΡΩΜΗΣ – ΕΘΝΙΚΟ ΣΚΕΛΟΣ ΠΔΕ",
+  "issueDate": 1460332800000,
+  "organizationId": "100015990",
+  "signerIds": [
+    "100008317"
+  ],
+  "unitIds": [
+    "100008312"
+  ],
+  "decisionTypeId": "Β.4",
+  "thematicCategoryIds": [
+    "24"
+  ],
+  "extraFieldValues": {
+    "donationType": "Επιχορήγηση",
+    "amountWithVAT": {
+      "amount": 1.04,
+      "currency": "EUR"
+    },
+    "kae": "8299",
+    "donationGiver": {
+      "afm": "090055799",
+      "afmType": "EL",
+      "enterName": false,
+      "name": "ΥΠΟΥΡΓΕΙΟ ΕΘΝΙΚΗΣ ΠΑΙΔΕΙΑΣ ΚΑΙ ΘΡΗΣΚΕΥΜΑΤΩΝ"
+    },
+    "donationReceiver": [],
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΩΥΦΒ4653ΠΣ-1ΤΦ",
+  "publishTimestamp": 1460698810440,
+  "submissionTimestamp": 1473244239140,
+  "versionId": "d217641b-5109-43a2-aa00-03801c8361f1",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΥΦΒ4653ΠΣ-1ΤΦ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΥΦΒ4653ΠΣ-1ΤΦ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": "2e006bdd-4021-4b06-8aa8-50b7a82f5af2"
+}
