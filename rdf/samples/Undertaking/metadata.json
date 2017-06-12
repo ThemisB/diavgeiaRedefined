@@ -1,0 +1,50 @@
+{
+  "protocolNumber": "Α/318",
+  "subject": "Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)",
+  "issueDate": 1457308800000,
+  "organizationId": "6196",
+  "signerIds": [
+    "129345"
+  ],
+  "unitIds": [
+    "88880"
+  ],
+  "decisionTypeId": "Β.1.3",
+  "thematicCategoryIds": [
+    "20"
+  ],
+  "extraFieldValues": {
+    "financialYear": 2016,
+    "budgettype": "Τακτικός Προϋπολογισμός",
+    "entryNumber": "Α/318",
+    "partialead": false,
+    "recalledExpenseDecision": false,
+    "amountWithVAT": {
+      "amount": 1387.3,
+      "currency": "EUR"
+    },
+    "amountWithKae": [
+      {
+        "amountWithVAT": 1387.3,
+        "kae": "25-6263.013",
+        "kaeBudgetRemainder": 7000.0,
+        "kaeCreditRemainder": 5337.59
+      }
+    ],
+    "relatedPartialADA": null,
+    "relatedDecisions": null,
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "6ΧΙΥΩΚ9-4ΑΟ",
+  "publishTimestamp": 1457342895250,
+  "submissionTimestamp": 1457342895250,
+  "versionId": "50dc1566-7769-4af4-ad5e-0acab54e08e6",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/6ΧΙΥΩΚ9-4ΑΟ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/6ΧΙΥΩΚ9-4ΑΟ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

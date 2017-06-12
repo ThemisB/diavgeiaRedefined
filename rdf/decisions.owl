@@ -99,6 +99,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_expense_kae -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_expense_kae">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/has_organization_sponsor -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_organization_sponsor">
@@ -128,6 +137,15 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/has_verified -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_verified">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Verification"/>
     </owl:ObjectProperty>
     
 
@@ -183,6 +201,15 @@
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/thematic_category">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/verified_by -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/verified_by">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Verification"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
     </owl:ObjectProperty>
     
 
@@ -264,6 +291,37 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/budget_type -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/budget_type">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Ίδια Έσοδα</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Πρόγραμμα Δημοσίων Επενδύσεων</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first xml:lang="el">Τακτικός Προϋπολογισμός</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/cpv -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/cpv">
@@ -327,15 +385,33 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/expense_ammount_currency -->
+    <!-- http://diavgeia.gov.gr/ontology/entry_number -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/expense_ammount_currency"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/entry_number">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://diavgeia.gov.gr/ontology/expense_amount -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/expense_amount"/>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/expense_amount_currency -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/expense_amount_currency"/>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/financial_year -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/financial_year">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -420,15 +496,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/government_institution_single_name -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_single_name">
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/government_institution_website -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_website">
@@ -482,6 +549,18 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/kae_budget_remainder -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae_budget_remainder"/>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/kae_credit_remainder -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae_credit_remainder"/>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/name -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/name">
@@ -508,11 +587,29 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/partialead -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/partialead">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/protocol_number -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/protocol_number">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/recalled_expense -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/recalled_expense">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -881,6 +978,12 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/ExpenseWithKae -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody">
@@ -1049,6 +1152,14 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/Verification -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Verification">
+        <rdfs:comment>Decisions are very often verified by other services and is useful to store this information (both for metadata and text format) as a separate special entity (not in decision_text)</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies">
@@ -1063,495 +1174,6 @@
         <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/GovernmentInstitution"/>
         <rdfs:comment>Corresponds to &quot;Υπουργεία&quot;</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/AffiliatedInvestments -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/AffiliatedInvestments"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/AgricultureForestryFishery -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/AgricultureForestryFishery">
-        <rdfs:comment>Corresponds to &quot;ΓΕΩΡΓΙΑ, ΔΑΣΟΚΟΜΙΑ ΚΑΙ ΑΛΙΕΙΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Appointment -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Appointment"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Award -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Award"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/BalanceReview -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/BalanceReview"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/BudgetApproval -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/BusinessCompetition -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/BusinessCompetition">
-        <rdfs:comment>Corresponds to &quot;ΕΠΙΧΕΙΡΗΣΕΙΣ ΚΑΙ ΑΝΤΑΓΩΝΙΣΜΟΣ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Circular -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Circular"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/CommisionWarrant -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/CommunicationEducation -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/CommunicationEducation">
-        <rdfs:comment>Corresponds to &quot;ΕΠΙΚΟΙΝΩΝΙΑ ΚΑΙ ΜΟΡΦΩΣΗ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Contract -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Contract"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/DeclarationSummary -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/DevelopmentLawContract -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/DevelopmentLawContract"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/DisciplinaryAcquitance -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/DisciplinaryAcquitance"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/DonationGrant -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/EconomicActivity -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EconomicActivity">
-        <rdfs:comment>Corresponds to &quot;ΟΙΚΟΝΟΜΙΚΗ ΖΩΗ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/EconomicTradeExchanges -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EconomicTradeExchanges">
-        <rdfs:comment>Corresponds to &quot;ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΙ ΕΜΠΟΡΙΚΕΣ ΣΥΝΑΛΛΑΓΕΣ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Employment -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Employment">
-        <rdfs:comment>Corresponds to &quot;ΑΠΑΣΧΟΛΗΣΗ ΚΑΙ ΕΡΓΑΣΙΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Energy -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Energy">
-        <rdfs:comment>Corresponds to &quot;ΕΝΕΡΓΕΙΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Environment -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Environment">
-        <rdfs:comment>Corresponds to &quot;ΠΕΡΙΒΑΛΛΟΝ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/EuropeanUnion -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EuropeanUnion">
-        <rdfs:comment>Corresponds to &quot;ΕΥΡΩΠΑΪΚΗ ΕΝΩΣΗ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/EvaluationReportOfLaw -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/EvaluationReportOfLaw"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/ExpenditureApproval -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Fiscals -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Fiscals">
-        <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΟΝΟΜΙΚΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Geography -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Geography">
-        <rdfs:comment>Corresponds to &quot;ΓΕΩΓΡΑΦΙΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Industry -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Industry">
-        <rdfs:comment>Corresponds to &quot;ΒΙΟΜΗΧΑΝΙΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/InternationalOrganizations -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/InternationalOrganizations">
-        <rdfs:comment>Corresponds to &quot;ΔΙΕΘΝΕΙΣ ΟΡΓΑΝΙΣΜΟΙ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/InternationalRelations -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/InternationalRelations">
-        <rdfs:comment>Corresponds to &quot;ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Law -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Law"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Laws -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Laws">
-        <rdfs:comment>Corresponds to &quot;ΔΙΚΑΙΟ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/LegislativeDecree -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/LegislativeDecree"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/ManufactureTechnologyResearch -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/ManufactureTechnologyResearch">
-        <rdfs:comment>Corresponds to &quot;ΠΑΡΑΓΩΓΗ, ΤΕΧΝΟΛΟΓΙΑ ΚΑΙ ΕΡΕΥΝΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Normative -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Normative"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/NutritionAgriculturalProducts -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/NutritionAgriculturalProducts">
-        <rdfs:comment>Corresponds to &quot;ΔΙΑΤΡΟΦΗ ΚΑΙ ΓΕΩΡΓΙΚΑ ΠΡΟΪΟΝΤΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/OccupationInvation -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OccupationInvation"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Opinion -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Opinion"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/OtherDecisions -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/OwnershipTranserfOfAssets -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTranserfOfAssets">
-        <rdfs:comment>Corresponds to &quot;ΠΑΡΑΧΩΡΗΣΗ ΧΡΗΣΗΣ ΠΕΡΙΟΥΣΙΑΚΩΝ ΣΤΟΙΧΕΙΩΝ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/PaymentFinalisation -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/PaymentFinalisation"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/PoliticalLife -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/PoliticalLife">
-        <rdfs:comment>Corresponds to &quot;ΠΟΛΙΤΙΚΗ ΖΩΗ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/PublicPrototypeDocuments -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/PublicPrototypeDocuments"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Records -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Records"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Science -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Science">
-        <rdfs:comment>Corresponds to &quot;ΕΠΙΣΤΗΜΕΣ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/ServiceChange -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/SocialIssues -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SocialIssues">
-        <rdfs:comment>Corresponds to &quot;ΚΟΙΝΩΝΙΚΑ ΘΕΜΑΤΑ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/StartProductionalFunctionOfInvestment -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/StartProductionalFunctionOfInvestment"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Transport -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Transport">
-        <rdfs:comment>Corresponds to &quot;ΜΕΤΑΦΟΡΕΣ&quot;</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Undertaking -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies"/>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/GovernmentInstitution/Ministry/RuralDevelopmentFood -->
-
-    <owl:NamedIndividual rdf:about="http://diavgeia.gov.gr/ontology/GovernmentInstitution/Ministry/RuralDevelopmentFood"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/AffiliatedInvestments">
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Appointment">
-        <rdfs:comment>Corresponds to &quot;ΔΙΟΡΙΣΜΟΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Award">
-        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BalanceReview">
-        <rdfs:comment>Corresponds to &quot;ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval">
-        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΠΡΟΥΠΟΛΟΓΙΣΜΟΥ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Circular">
-        <rdfs:comment>Corresponds to &quot;ΕΓΚΥΚΛΙΟΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup">
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΣΥΛΛΟΓΙΚΟ ΟΡΓΑΝΟ - ΕΠΙΤΡΟΠΗ - ΟΜΑΔΑ ΕΡΓΑΣΙΑΣ - ΟΜΑΔΑ ΕΡΓΟΥ - ΜΕΛΗ ΣΥΛΛΟΓΙΚΟΥ ΟΡΓΑΝΟΥ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant">
-        <rdfs:comment>Corresponds to &quot;ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Contract">
-        <rdfs:comment>Corresponds to &quot;ΣΥΜΒΑΣΗ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary">
-        <rdfs:comment>Corresponds to &quot;ΠΕΡΙΛΗΨΗ ΔΙΑΚΗΡΥΞΗΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DevelopmentLawContract">
-        <rdfs:comment>Corresponds to &quot;ΣΥΜΒΑΣΗ-ΠΡΑΞΕΙΣ ΑΝΑΠΤΥΞΙΑΚΩΝ ΝΟΜΩΝ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DisciplinaryAcquitance">
-        <rdfs:comment>Corresponds to &quot;ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant">
-        <rdfs:comment>Corresponds to &quot;ΔΩΡΕΑ - ΕΠΙΧΟΡΗΓΗΣΗ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/EvaluationReportOfLaw">
-        <rdfs:comment>Corresponds to &quot;ΕΚΘΕΣΗ ΑΠΟΤΙΜΗΣΗΣ ΓΙΑ ΤΗΝ ΚΑΤΑΣΤΑΣΗ ΤΗΣ ΥΦΙΣΤΑΜΕΝΗΣ ΝΟΜΟΘΕΣΙΑΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval">
-        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΔΑΠΑΝΗΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody">
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΘΕΣΗ ΓΕΝΙΚΟΥ - ΕΙΔΙΚΟΥ ΓΡΑΜΜΑΤΕΑ - ΜΟΝΟΜΕΛΕΣ ΟΡΓΑΝΟ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Law">
-        <rdfs:comment>Corresponds to &quot;ΝΟΜΟΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/LegislativeDecree">
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1)&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Normative">
-        <rdfs:comment>Corresponds to &quot;ΚΑΝΟΝΙΣΤΙΚΗ ΠΡΑΞΗ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OccupationInvation">
-        <rdfs:comment>Corresponds to &quot;ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Opinion">
-        <rdfs:comment>Corresponds to &quot;ΓΝΩΜΟΔΟΤΗΣΗ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw">
-        <rdfs:comment>Corresponds to &quot;ΑΛΛΗ ΠΡΑΞΗ ΑΝΑΠΤΥΞΙΑΚΟΥ ΝΟΜΟΥ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/PaymentFinalisation">
-        <rdfs:comment>Corresponds to &quot;ΟΡΙΣΤΙΚΟΠΟΙΗΣΗ ΠΛΗΡΩΜΗΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/PublicPrototypeDocuments">
-        <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Records">
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΚΤΙΚΑ (Νομικού Συμβουλίου του Κράτους)&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange">
-        <rdfs:comment>Corresponds to &quot;ΥΠΗΡΕΣΙΑΚΗ ΜΕΤΑΒΟΛΗ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions">
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/StartProductionalFunctionOfInvestment">
-        <rdfs:comment>Corresponds to &quot;ΑΠΟΦΑΣΗ ΕΝΑΡΞΗΣ ΠΑΡΑΓΩΓΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ ΕΠΕΝΔΥΣΗΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList">
-        <rdfs:comment>Corresponds to &quot;ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ &amp; ΕΠΙΛΑΧΟΝΤΩΝ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking">
-        <rdfs:comment>Corresponds to &quot;ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ&quot;</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies">
-        <rdfs:comment>Corresponds to &quot;ΑΝΑΘΕΣΗ ΕΡΓΩΝ / ΠΡΟΜΗΘΕΙΩΝ / ΥΠΗΡΕΣΙΩΝ / ΜΕΛΕΤΩΝ&quot;</rdfs:comment>
-    </rdf:Description>
 </rdf:RDF>
 
 
