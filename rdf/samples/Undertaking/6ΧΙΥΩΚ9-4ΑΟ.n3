@@ -1,21 +1,21 @@
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250> a <http://diavgeia.gov.gr/ontology/Undertaking>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6> a <http://diavgeia.gov.gr/ontology/Undertaking>;
 	<http://diavgeia.gov.gr/ontology/version> "50dc1566-7769-4af4-ad5e-0acab54e08e6";
 	<http://diavgeia.gov.gr/ontology/iun> "6ΧΙΥΩΚ9-4ΑΟ";
 	<http://data.europa.eu/eli/ontology#title> "Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)"@el;
 	<http://data.europa.eu/eli/ontology#date_publication> "2016-07-03"^^<http://www.w3.org/2001/XMLSchema#date>;
 	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΔΗΜΟΣ ΜΟΝΕΜΒΑΣΙΑΣ"@el;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/1>;
-  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/2>;
-  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/3>;
-  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/4>;
-  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/5>;
-  <http://diavgeia.gov.gr/ontology/has_verified> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Verification/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/1>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/2>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/3>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/4>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/5>;
+  <http://diavgeia.gov.gr/ontology/has_verified> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Verification/1>;
 	<http://diavgeia.gov.gr/ontology/decision_type> "Προτείνουμε"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Decision/1>;
-  <http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Verification/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Signer/1>;
-  <http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Signer/2>;
-  <http://diavgeia.gov.gr/ontology/has_expense_with_kae> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/ExpenseWithKae/1>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Decision/1>;
+  <http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Verification/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Signer/1>;
+  <http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Signer/2>;
+  <http://diavgeia.gov.gr/ontology/has_expense_with_kae> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/ExpenseWithKae/1>;
 	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Ελεγκτικό Συνέδριο"@el;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
 	<http://diavgeia.gov.gr/ontology/has_private_data> false;
@@ -23,48 +23,48 @@
   <http://diavgeia.gov.gr/ontology/unit_id> "88880".
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1457342895250";
   <http://diavgeia.gov.gr/ontology/financial_year> "2016";
-  <http://diavgeia.gov.gr/ontology/budget_type> "Τακτικός Προϋπολογισμός"@el;
+  <http://diavgeia.gov.gr/ontology/budget_category> "Τακτικός Προϋπολογισμός"@el;
   <http://diavgeia.gov.gr/ontology/entry_number> "A/318"@el;
   <http://diavgeia.gov.gr/ontology/parialead> false;
   <http://diavgeia.gov.gr/ontology/recalled_expense> false.
 
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Τα άρθρα 21 και 22 του ν.2362/95 «Περί Δημοσίου Λογιστικού κ.λπ.» (Α.247) όπως τροποποίηθηκε και
 συμπληρώθηκε με τα αρθ.21 και 23 του ν.3871/2010(Α.141)"@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/21>;
   <http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/23>.
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Το π.δ 113/2010 περί αναλήψεως υποχρεώσεων από τους Διατάκτες (Α.194)"@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2010/113>.
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ. 6/2013 απόφαση του Δημάρχου περί μεταβίβασης εξουσίας να υπογράφουν "Με εντολή..."@el.
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ. 6/2013 απόφαση του Δημάρχου περί μεταβίβασης εξουσίας να υπογράφουν \"Με εντολή..\"."@el.
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Την ανάγκη για Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)."@el.
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Το γεγονός ότι το ποσό της δεσμευόμενης, με την παρούσα, πίστωσης είναι εντός του εγκεκριμένου ποσοστού διάθεσης"@el.
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-  <http://diavgeia.gov.gr/ontology/has_text> "Τη δέσμευση πίστωσης ύψους χίλια τριακόσια ογδονταεπτά ευρώ και τριάντα λεπτά 1.387,30 € για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογσμού εξόδων του ΔΗΜΟΥ ΜΟΝΕΜΒΑΣΙΑΣ, "Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)" Κ.Α.Ε. 25-6263.013 οικ. έτος 2016 για την Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)"@el.
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+  <http://diavgeia.gov.gr/ontology/has_text> "Τη δέσμευση πίστωσης ύψους χίλια τριακόσια ογδονταεπτά ευρώ και τριάντα λεπτά 1.387,30 € για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογσμού εξόδων του ΔΗΜΟΥ ΜΟΝΕΜΒΑΣΙΑΣ, \"Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)\" Κ.Α.Ε. 25-6263.013 οικ. έτος 2016 για την Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)"@el.
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Verification/1> a <http://diavgeia.gov.gr/ontology/Verification>;
-  <http://diavgeia.gov.gr/ontology/verified_by> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Signer/2>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Verification/1> a <http://diavgeia.gov.gr/ontology/Verification>;
+  <http://diavgeia.gov.gr/ontology/verified_by> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Signer/2>;
   <http://diavgeia.gov.gr/ontology/has_text> "ΕΛΕΓΧΘΗΚΕ και βεβαιώνεται ότι η ανωτέρω δαπάνη χίλια τριακόσια ογδονταεπτά ευρώ και τριάντα λεπτά (1.387,30) € είναι εντός του διαθεσίμου ποσού πίστωσης του ΔΗΜΟΥ ΜΟΝΕΜΒΑΣΙΑΣ - Κ.Α. 25-6263.013.Καταχωρήθηκε με α/α Α/318 στο Βιβλίο Εγκρίσεων και Εντολών Πληρωμής της Υπηρεσίας μας. Υπόλοιπο προς ανάληψη :€ 5.337,59"@el.
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
 	<http://diavgeia.gov.gr/ontology/signer_job> "ΑΝΤΙΔΗΜΑΡΧΟΣ ΜΟΝΕΜΒΑΣΙΑΣ"@el;
 	<http://diavgeia.gov.gr/ontology/signer_name> "ΚΩΝΣΤΑΝΤΙΝΟΣ ΜΑΥΡΟΜΙΧΑΛΗΣ"@el;
 	<http://diavgeia.gov.gr/ontology/signer_id> "129345".
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/Signer/2> a <http://diavgeia.gov.gr/ontology/Signer>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Signer/2> a <http://diavgeia.gov.gr/ontology/Signer>;
   <http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΟΪΣΤΑΜΕΝΟΣ ΤΗΣ ΟΙΚΟΝΟΜΙΚΗΣ ΥΠΗΡΕΣΙΑΣ ΜΟΝΕΜΒΑΣΙΑΣ"@el;
   <http://diavgeia.gov.gr/ontology/signer_name> "ΜΙΧΑΛΗΣ ΛΙΒΑΝΟΣ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/1457342895250/ExpenseWithKae/1> a <http://diavgeia.gov.gr/ontology/ExpenseWithKae>;
+<http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/ExpenseWithKae/1> a <http://diavgeia.gov.gr/ontology/ExpenseWithKae>;
   <http://diavgeia.gov.gr/ontology/expense_amount> "1387.3";
   <http://diavgeia.gov.gr/ontology/expense_amount_currency> "EUR";
   <http://diavgeia.gov.gr/ontology/kae> "25-6263.013";

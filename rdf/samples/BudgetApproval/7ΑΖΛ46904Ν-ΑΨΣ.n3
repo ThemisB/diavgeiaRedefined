@@ -1,0 +1,70 @@
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250> a <http://diavgeia.gov.gr/ontology/Undertaking>;
+	<http://diavgeia.gov.gr/ontology/version> "11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6";
+	<http://diavgeia.gov.gr/ontology/iun> "7ΑΖΛ46904Ν-ΑΨΣ";
+	<http://data.europa.eu/eli/ontology#title> "Απόφαση δέσμευσης πίστωσης ύψους € 2.500,00 για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογισμού εξόδων οικονομικού έτους 2016, στον ΚΑΕ 1511 για την προμήθεια φρούτων, λαχανικών και συναφών προϊόντων."@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-12-01"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΓΕΝΙΚΟ ΝΟΣΟΚΟΜΕΙΟ ΑΘΗΝΩΝ «Η ΕΛΠΙΣ»"@el;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/1>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/2>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/3>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/4>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/5>;
+  <http://diavgeia.gov.gr/ontology/has_verified> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Verification/1>;
+	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζουμε"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Signer/1>;
+  <http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Signer/2>;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "97";
+	<http://diavgeia.gov.gr/ontology/commitment_number> "70";
+	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Γρ. Διατροφής"@el;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "NutritionAgriculturalProducts";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "99221890";
+  <http://diavgeia.gov.gr/ontology/unit_id> "77026".
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1452674356709";
+  <http://diavgeia.gov.gr/ontology/financial_year> "2016";
+  <http://diavgeia.gov.gr/ontology/budget_category> "Τακτικός Προϋπολογισμός"@el;
+	<http://diavgeia.gov.gr/ontology/budget_type> "Φορέα"@el;
+	<http://diavgeia.gov.gr/ontology/is_budget_approval_for_org> false.
+
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις των άρθρ. 21 και 22Α του Ν. 2362/95 «Περί Δημοσίου Λογιστικού κ.λπ.» (Α.247), όπως τροποποιήθηκε και συμπληρώθηκε με τα υπ΄ αρ. 21 και 23 άρθ. Του Ν. 3871/2010 (Α.141)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/21>;
+  <http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/23>.
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το π.δ 113/2010 περί αναλήψεως υποχρεώσεων από τους Διατάκτες (Α.194)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2010/113>.
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> " Την υπ΄ αρ. 452/2015 Απόφαση Δ.Σ. του Νοσοκομείου περί εξουσιοδότησης υπογραφής από τον Διατάκτη"@el.
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την κατακύρωση του ενιαίου επαναληπτικού διαγωνισμού του ΠΠΥΥ 2011, προμήθειας « φρούτων, λαχανικών και συναφών προϊόντων », που διεξήγαγε το Νοσοκομείο Παίδων Πεντέλης."@el.
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την ανάγκη δέσμευσης πίστωσης 2.500,00 € για την προμήθεια « φρούτων, λαχανικών και συναφών προϊόντων » για την κάλυψη αναγκών τριμήνου."@el.
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+  <http://diavgeia.gov.gr/ontology/has_text> "Εγκρίνουμε τη δέσμευση πίστωσης ύψους € 2.500,00 για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογισμού εξόδων οικονομικού έτους 2016, στον ΚΑΕ 1511 για την προμήθεια φρούτων, λαχανικών και συναφών προϊόντων"@el.
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Verification/1> a <http://diavgeia.gov.gr/ontology/Verification>;
+  <http://diavgeia.gov.gr/ontology/verified_by> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Signer/2>;
+  <http://diavgeia.gov.gr/ontology/has_text> "ΕΛΕΓΧΘΗΚΕ Και βεβαιώνεται ότι η ανωτέρω δαπάνη 2.500,00 είναι εντός του διαθέσιμου ποσοστού του ΦΟΡΕΑ 210 ΕΙΔ. ΦΟΡΕΑ 815 στον ΚΑΕ 1511 ΟΙΚ. ΕΤΟΣ 2016. ΚΑΤΑΧΩΡΗΘΗΚΕ με α/α 70 στο Βιβλίο Εγκρίσεων & Εντολών Πληρωμής της Υπηρεσίας μας. ΥΠΟΛΟΙΠΟ προς ανάληψη: € 86.600,00"@el.
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Δ/ΝΤΗΣ ΙΑΤΡ. ΥΠΗΡΕΣΙΑΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Σωτήριος Καρβέλας"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "135487".
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/Signer/2> a <http://diavgeia.gov.gr/ontology/Signer>;
+  <http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
+  <http://diavgeia.gov.gr/ontology/signer_name> "Ηλ. Κοκκίνης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/1457342895250/ExpenseWithKae/1> a <http://diavgeia.gov.gr/ontology/ExpenseWithKae>;
+  <http://diavgeia.gov.gr/ontology/expense_amount> "1387.3";
+  <http://diavgeia.gov.gr/ontology/expense_amount_currency> "EUR";
+  <http://diavgeia.gov.gr/ontology/kae> "25-6263.013";
+  <http://diavgeia.gov.gr/ontology/kae_budget_remainder> "7000";
+  <http://diavgeia.gov.gr/ontology/kae_credit_remainder> "5337.59".

@@ -291,10 +291,17 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/budget_type -->
+    <!-- http://diavgeia.gov.gr/ontology/budget_category -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/budget_type">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/budget_category">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -318,6 +325,40 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/budget_type -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/budget_type">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Κρατικός</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Φορέα</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/commitment_number -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/commitment_number">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -409,7 +450,14 @@
     <!-- http://diavgeia.gov.gr/ontology/financial_year -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/financial_year">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -515,6 +563,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_related_institution -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_related_institution">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/has_text -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_text">
@@ -528,6 +585,15 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/internal_distribution">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/is_budget_approval_for_org -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/is_budget_approval_for_org">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -601,6 +667,31 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/protocol_number">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/reason_multiple_afm_ignorance -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/reason_multiple_afm_ignorance">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/PaymentFinalisation"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Μαζικές Αποζημιώσεις</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Μισθοδοσία</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -952,6 +1043,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΔΩΡΕΑ - ΕΠΙΧΟΡΗΓΗΣΗ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -968,6 +1060,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΔΑΠΑΝΗΣ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -1061,6 +1154,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΑΛΛΗ ΠΡΑΞΗ ΑΝΑΠΤΥΞΙΑΚΟΥ ΝΟΜΟΥ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -1078,6 +1172,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/PaymentFinalisation">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΟΡΙΣΤΙΚΟΙΠΟΙΗΣΗ ΠΛΗΡΩΜΗΣ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -1148,6 +1243,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Undertaking">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ&quot;</rdfs:comment>
     </owl:Class>
     
 

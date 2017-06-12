@@ -1,0 +1,37 @@
+{
+  "protocolNumber": "97",
+  "subject": "Απόφαση δέσμευσης πίστωσης ύψους €              2.500,00          για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογισμού εξόδων οικονομικού έτους 2016, στον ΚΑΕ 1511 για την προμήθεια φρούτων, λαχανικών και συναφών προϊόντων.",
+  "issueDate": 1452556800000,
+  "organizationId": "99221890",
+  "signerIds": [
+    "135487"
+  ],
+  "unitIds": [
+    "77026"
+  ],
+  "decisionTypeId": "Β.1.1",
+  "thematicCategoryIds": [
+    "60"
+  ],
+  "extraFieldValues": {
+    "financialYear": 2016,
+    "budgettype": "Τακτικός Προϋπολογισμός",
+    "budgetkind": "Φορέα",
+    "isBudgetApprovalForOrg": false,
+    "refersToOtherOrgBudget": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "7ΑΖΛ46904Ν-ΑΨΣ",
+  "publishTimestamp": 1452674356709,
+  "submissionTimestamp": 1452674356709,
+  "versionId": "11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/7ΑΖΛ46904Ν-ΑΨΣ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/7ΑΖΛ46904Ν-ΑΨΣ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
