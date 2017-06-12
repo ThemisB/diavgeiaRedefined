@@ -99,9 +99,9 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/has_expense_kae -->
+    <!-- http://diavgeia.gov.gr/ontology/has_expense_with_kae -->
 
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_expense_kae">
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_expense_with_kae">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
     </owl:ObjectProperty>
