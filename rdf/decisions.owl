@@ -124,6 +124,7 @@
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -140,6 +141,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -200,14 +202,6 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/thematic_category -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/thematic_category">
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
     </owl:ObjectProperty>
     
 

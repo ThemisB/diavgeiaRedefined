@@ -1,0 +1,65 @@
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552> a <http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets>;
+	<http://diavgeia.gov.gr/ontology/version> "82c075dd-73f4-40fa-b0fb-690a3b61f552";
+	<http://diavgeia.gov.gr/ontology/iun> "7Ν7ΚΟΞΩΡ-4ΨΨ"@el;
+	<http://data.europa.eu/eli/ontology#title> "ΠΑΡΑΧΩΡΗΣΗ ΤΟΥ 747 Α.Α.Κ ΓΗΠΕΔΟ ΠΟΔΟΣΦΑΙΡΟΥ 5Χ5 ΣΤΟΝ Π.Α.Σ. ΠΡΩΤΕΑΣ ΚΑΘΕ ΤΕΤΑΡΤΗ 18:30 - 19:30 ΕΩΣ 30/4/2016. Η ΟΙΚΟΝΟΜΙΚΗ ΕΠΙΒΑΡΥΝΣΗ ΤΟΥ ΣΥΛΛΟΓΟΥ ΑΝΕΡΧΕΤΑΙ ΣΤΟ ΠΟΣΟ ΤΩΝ 100 € ΜΗΝΙΑΙΩΣ"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-03-01"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "Ν.Π.Δ.Δ - ΟΡΓΑΝΙΣΜΟΣ ΠΟΛΙΤΙΣΜΟΥ, ΑΘΛΗΤΙΣΜΟΥ ΚΑΙ ΝΕΟΛΑΙΑΣ ΔΗΜΟΥ ΑΘΗΝΑΙΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΔΙΕΥΘΥΝΣΗ ΑΘΛΗΤΙΣΜΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΑΝΟΙΧΤΩΝ ΧΩΡΩΝ ΑΘΛΗΣΗΣ ΚΑΙ ΠΑΙΧΝΙΔΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_address> "Ακαδημίας 50"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2013646857";
+	<http://diavgeia.gov.gr/ontology/protocol_number> "3387";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/3>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/4>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/5>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/6>;
+	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζουμε"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicActivity";
+	<http://diavgeia.gov.gr/ontology/has_organization_sponsor> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/OrganizationSponsor/1>;
+	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Sponsored/1>;
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "54511";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1457341365897";
+	<http://diavgeia.gov.gr/ontology/unit_id> "92904".
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθµ. 1302/11 πράξη του ∆ηµοτικού Συµβουλίου ∆ήµου Αθηναίων – ΦΕΚ 2784/11 – Τ.Β’ το αριθµ. 1290/28-5-2013 ΦΕΚ και την αρίθµ. οικ.14660/13681/2012 (ΦΕΚ Β΄1005) απόφαση του Γενικού Γραµµατέα Αποκεντρωµένης ∆ιοίκησης Αττικής περί εγκρίσεως συγχώνευσης των Ν.Π.∆.∆. του ∆ήµου Αθηναίων ∆.Α.ΜΣ., Π.Ο.∆.Α., και Ο.Ν.Α. σε ένα νέο Ν.Π.∆.∆. µε την ονοµασία : Οργανισµός, Πολιτισµού, Αθλητισµού και Νεολαίας ∆ήµου Αθηναίων "@el.
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του άρθρου 241 παρ. 1 εδ. Β’ του Ν. 3463/06-ΦΕΚ 114/28-6-06 – Τ.Α’"@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/241/paragraph/1>.
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Tην αριθµ. 1377/2014 πράξη του ∆ηµοτικού Συµβουλίου ∆ήµου Αθηναίων περί εκλογής Προέδρου του ∆.Σ. σε συνδυασµό µε τις διατάξεις του άρθρου 240 του Ν. 3463/06 (ΦΕΚ 114/06-Τ.Α’)."@el.
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις της Κοινής Υπουργικής Απόφασης (Φ.Ε.Κ 1362 Β’ / 18-10-2001). "@el.
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Tην αριθµ. 119/2011 πράξη του ∆.Σ. του Ο.Ν.Α., όπως τροποποιήθηκε και συµπληρώθηκε µε την αριθµ. 142/2011 οµοία και την αριθµ. 459/2014 πράξη του ∆.Σ. του Ο.Π.Α.Ν.∆.Α."@el.
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Tην αριθµ. Πρωτ 13592/30-9-2015 αίτηση του Π.Α.Σ «ΠΡΩΤΕΑΣ»."@el.
+
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Παραχωρούµε µετά την υπογραφή σύµβασης, στο 747 Α.Α.Κ. (Γ. Παπανδρέου & Κανελλοπούλου - Γουδή) ένα γήπεδο ποδοσφαίρου 5Χ5, κάθε Τετάρτη 18:30-19:30, έως 30 Απριλίου 2016, στον Π.Α.Σ «ΠΡΩΤΕΑΣ», προκειµένου να πραγµατοποιεί τις προπονήσεις του για την αγωνιστική περίοδο 2015 – 2016, σύµφωνα µε το ωρολόγιο πρόγραµµα του γηπέδου. Η οικονοµική συµµετοχή του Φορέα βάσει της 119/2011 Π.∆.Σ. του Ο.Ν.Α., ορίζεται στο ποσό των 100.00 ευρώ µηνιαίως για την χρήση του γηπέδου. Ο Φορέας χρήσης έχει την ευθύνη: Α) Της προστασίας και της καθαριότητας του χώρου και των εγκαταστάσεων, καθώς και της ιατροφαρµακευτικής κάλυψης για την αντιµετώπιση των έκτακτων περιστατικών. Β) Της µεταφοράς, της προπόνησης (επίβλεψη κ.λ.π.) και της ασφάλειας των αθλητών – τριών. Γ) Την πιστοποίηση της ικανότητας των αθλουµένων µέσω των προβλεπόµενων εκ του νόµου ιατρικών πιστοποιητικών."@el.
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΟΕΔΡΟΣ ΔΣ Ο.Π.Α.Ν.Δ.Α"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΧΡΗΣΤΟΣ ΤΕΝΤΟΜΑΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "100007189".
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/OrganizationSponsor/1> a <http://diavgeia.gov.gr/ontology/OrganizationSponsor>;
+	<http://diavgeia.gov.gr/ontology/afm> "997420620";
+	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
+	<http://diavgeia.gov.gr/ontology/name> "ΟΡΓΑΝΙΣΜΟΣ ΠΟΛΙΤΙΣΜΟΥ ΑΘΛΗΤΙΣΜΟΥ ΚΑΙ ΝΕΟΛΑΙΑΣ ΔΗΜΟΥ ΑΘΗΝΑΙΩΝ"@el.
+
+<http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Sponsored/1> a <http://diavgeia.gov.gr/ontology/Sponsored>;
+	<http://diavgeia.gov.gr/ontology/afm> "997488903";
+	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
+	<http://diavgeia.gov.gr/ontology/name> "ΠΑΣ ΠΡΩΤΕΑΣ"@el.

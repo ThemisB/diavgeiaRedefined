@@ -1,0 +1,47 @@
+{
+  "protocolNumber": "3387",
+  "subject": "ΠΑΡΑΧΩΡΗΣΗ ΤΟΥ 747 Α.Α.Κ ΓΗΠΕΔΟ ΠΟΔΟΣΦΑΙΡΟΥ 5Χ5 ΣΤΟΝ Π.Α.Σ. ΠΡΩΤΕΑΣ ΚΑΘΕ ΤΕΤΑΡΤΗ 18:30 - 19:30 ΕΩΣ 30/4/2016. Η ΟΙΚΟΝΟΜΙΚΗ ΕΠΙΒΑΡΥΝΣΗ ΤΟΥ ΣΥΛΛΟΓΟΥ ΑΝΕΡΧΕΤΑΙ ΣΤΟ ΠΟΣΟ ΤΩΝ 100 € ΜΗΝΙΑΙΩΣ",
+  "issueDate": 1456790400000,
+  "organizationId": "54511",
+  "signerIds": [
+    "100007189"
+  ],
+  "unitIds": [
+    "92904"
+  ],
+  "decisionTypeId": "Β.5",
+  "thematicCategoryIds": [
+    "16"
+  ],
+  "extraFieldValues": {
+    "grantor": {
+      "afm": "997420620",
+      "afmType": "EL",
+      "enterName": false,
+      "name": "ΟΡΓΑΝΙΣΜΟΣ ΠΟΛΙΤΙΣΜΟΥ ΑΘΛΗΤΙΣΜΟΥ ΚΑΙ ΝΕΟΛΑΙΑΣ ΔΗΜΟΥ ΑΘΗΝΑΙΩΝ"
+    },
+    "grantee": [
+      {
+        "afm": "997488903",
+        "name": "ΠΑΣ   ΠΡΩΤΕΑΣ",
+        "enterName": false,
+        "afmType": "EL"
+      }
+    ],
+    "antikeimeno": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "7Ν7ΚΟΞΩΡ-4ΨΨ",
+  "publishTimestamp": 1457341365897,
+  "submissionTimestamp": 1457341365897,
+  "versionId": "82c075dd-73f4-40fa-b0fb-690a3b61f552",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/7Ν7ΚΟΞΩΡ-4ΨΨ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/7Ν7ΚΟΞΩΡ-4ΨΨ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
