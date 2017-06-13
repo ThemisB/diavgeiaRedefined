@@ -1,0 +1,45 @@
+{
+  "protocolNumber": "ΧΕΠ 198/2016",
+  "subject": "Καταβολή μισθοδοσίας Φεβρουαρίου 2016, για παροχή υπηρεσιών Νοσηλεύτριας, στο Βοήθεια στο Σπίτι της Κοινωφελούς Δημοτικής Επιχείρησης ΔΕΠΟΚΑΛ Δήμου Λευκάδας.",
+  "issueDate": 1456963200000,
+  "organizationId": "50941",
+  "signerIds": [
+    "100005700"
+  ],
+  "unitIds": [
+    "94510"
+  ],
+  "decisionTypeId": "Β.1.2",
+  "thematicCategoryIds": [
+    "20"
+  ],
+  "extraFieldValues": {
+    "financialYear": 2016,
+    "budgettype": "Τακτικός Προϋπολογισμός",
+    "amountWithVATAndKae": [
+      {
+        "kae": "53.00",
+        "amountWithVAT": {
+          "amount": 979.88,
+          "currency": "EUR"
+        }
+      }
+    ],
+    "primaryOfficer": null,
+    "secondaryOfficer": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "7ΔΦΖΟΕ4Ρ-ΒΚ7",
+  "publishTimestamp": 1457093342701,
+  "submissionTimestamp": 1457093342701,
+  "versionId": "ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/7ΔΦΖΟΕ4Ρ-ΒΚ7",
+  "documentUrl": "https://diavgeia.gov.gr/doc/7ΔΦΖΟΕ4Ρ-ΒΚ7",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

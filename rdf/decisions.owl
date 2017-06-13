@@ -102,7 +102,14 @@
     <!-- http://diavgeia.gov.gr/ontology/has_expense_with_kae -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_expense_with_kae">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
     </owl:ObjectProperty>
     
@@ -360,6 +367,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
                 </owl:unionOf>
             </owl:Class>
@@ -517,6 +525,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BalanceAccount"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
                 </owl:unionOf>
             </owl:Class>
@@ -741,6 +750,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/primary_officer -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/primary_officer">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/protocol_number -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/protocol_number">
@@ -800,6 +818,15 @@
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/recipients">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/secondary_officer -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/secondary_officer">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1071,6 +1098,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ&quot;</rdfs:comment>
     </owl:Class>
     
 
