@@ -1,4 +1,4 @@
-<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6> a <http://diavgeia.gov.gr/ontology/Undertaking>;
+<http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6> a <http://diavgeia.gov.gr/ontology/BudgetApproval>;
 	<http://diavgeia.gov.gr/ontology/version> "11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6";
 	<http://diavgeia.gov.gr/ontology/iun> "7ΑΖΛ46904Ν-ΑΨΣ"@el;
 	<http://data.europa.eu/eli/ontology#title> "Απόφαση δέσμευσης πίστωσης ύψους € 2.500,00 για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογισμού εξόδων οικονομικού έτους 2016, στον ΚΑΕ 1511 για την προμήθεια φρούτων, λαχανικών και συναφών προϊόντων."@el;

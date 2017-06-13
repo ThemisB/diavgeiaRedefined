@@ -1,4 +1,4 @@
-<http://diavgeia.gov.gr/eli/decision/71Η8ΩΛΞ-2ΡΝ/173572b7-35c4-4ef4-b1b0-b2bbb6d61dff> a <http://diavgeia.gov.gr/ontology/Undertaking>;
+<http://diavgeia.gov.gr/eli/decision/71Η8ΩΛΞ-2ΡΝ/173572b7-35c4-4ef4-b1b0-b2bbb6d61dff> a <http://diavgeia.gov.gr/ontology/BalanceAccount>;
 	<http://diavgeia.gov.gr/ontology/version> "11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6";
 	<http://diavgeia.gov.gr/ontology/iun> "71Η8ΩΛΞ-2ΡΝ"@el;
 	<http://data.europa.eu/eli/ontology#title> "Έγκριση απολογισμού οικ.έτους 2015 του σωματείου Ελληνική Μέριμνα Λάρισας"@el;

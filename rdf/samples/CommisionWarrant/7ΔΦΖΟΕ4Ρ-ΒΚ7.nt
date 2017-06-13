@@ -1,4 +1,4 @@
-<http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec> a <http://diavgeia.gov.gr/ontology/Undertaking>;
+<http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec> a <http://diavgeia.gov.gr/ontology/CommisionWarrant>;
 	<http://diavgeia.gov.gr/ontology/version> "ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec";
 	<http://diavgeia.gov.gr/ontology/iun> "7ΔΦΖΟΕ4Ρ-ΒΚ7"@el;
 	<http://data.europa.eu/eli/ontology#title> "Καταβολή μισθοδοσίας Φεβρουαρίου 2016, για παροχή υπηρεσιών Νοσηλεύτριας, στο Βοήθεια στο Σπίτι της Κοινωφελούς Δημοτικής Επιχείρησης ΔΕΠΟΚΑΛ Δήμου Λευκάδας."@el;
