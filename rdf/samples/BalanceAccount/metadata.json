@@ -1,0 +1,37 @@
+{
+  "protocolNumber": "2285",
+  "subject": "ΕΓΚΡΙΣΗ ΑΠΟΛΟΓΙΣΜΟΥ ΟΙΚ. ΕΤΟΥΣ 2015 ΤΟΥ ΣΩΜΑΤΕΙΟΥ ΕΛΛΗΝΙΚΗ ΜΕΡΙΜΝΑ ΛΑΡΙΣΑΣ",
+  "issueDate": 1465171200000,
+  "organizationId": "6167",
+  "signerIds": [
+    "100002493"
+  ],
+  "unitIds": [
+    "88337"
+  ],
+  "decisionTypeId": "Β.3",
+  "thematicCategoryIds": [
+    "20"
+  ],
+  "extraFieldValues": {
+    "accountType": "Απολογισμός",
+    "financialYear": 2015,
+    "timePeriod": "Έτος",
+    "isAccountApprovalForOtherOrg": false,
+    "refersToOtherOrgAccount": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "71Η8ΩΛΞ-2ΡΝ",
+  "publishTimestamp": 1465364124434,
+  "submissionTimestamp": 1465364124434,
+  "versionId": "173572b7-35c4-4ef4-b1b0-b2bbb6d61dff",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/71Η8ΩΛΞ-2ΡΝ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/71Η8ΩΛΞ-2ΡΝ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

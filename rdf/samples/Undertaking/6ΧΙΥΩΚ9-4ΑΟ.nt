@@ -1,6 +1,6 @@
 <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6> a <http://diavgeia.gov.gr/ontology/Undertaking>;
 	<http://diavgeia.gov.gr/ontology/version> "50dc1566-7769-4af4-ad5e-0acab54e08e6";
-	<http://diavgeia.gov.gr/ontology/iun> "6ΧΙΥΩΚ9-4ΑΟ";
+	<http://diavgeia.gov.gr/ontology/iun> "6ΧΙΥΩΚ9-4ΑΟ"@el;
 	<http://data.europa.eu/eli/ontology#title> "Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)"@el;
 	<http://data.europa.eu/eli/ontology#date_publication> "2016-07-03"^^<http://www.w3.org/2001/XMLSchema#date>;
 	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΔΗΜΟΣ ΜΟΝΕΜΒΑΣΙΑΣ"@el;

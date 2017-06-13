@@ -1,6 +1,6 @@
 <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a> a <http://diavgeia.gov.gr/ontology/ExpenditureApproval>;
 	<http://diavgeia.gov.gr/ontology/version> "d92a0b08-1f01-4658-84ee-38cb0e87a87a";
-	<http://diavgeia.gov.gr/ontology/iun> "7ΧΔΛ46ΨΖ2Ν-87Ν";
+	<http://diavgeia.gov.gr/ontology/iun> "7ΧΔΛ46ΨΖ2Ν-87Ν"@el;
 	<http://data.europa.eu/eli/ontology#title> "Έγκριση Δαπάνης βάσει Αρ. Πρωτ.  493692"@el;
 	<http://data.europa.eu/eli/ontology#date_publication> "2016-09-08"^^<http://www.w3.org/2001/XMLSchema#date>;
 	<http://diavgeia.gov.gr/ontology/government_institution_name> "Εθνικόν και Καποδιστριακόν Πανεπιστήμιον Αθηνών"@el;

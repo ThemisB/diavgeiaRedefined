@@ -1,6 +1,6 @@
 <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23> a <http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw>;
 	<http://diavgeia.gov.gr/ontology/version> "9b31854f-228d-4a12-b0ab-c606b4994c23";
-	<http://diavgeia.gov.gr/ontology/iun> "6ΖΞ74653ΠΩ-7ΚΜ";
+	<http://diavgeia.gov.gr/ontology/iun> "6ΖΞ74653ΠΩ-7ΚΜ"@el;
 	<http://data.europa.eu/eli/ontology#title> "Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής"@el;
 	<http://data.europa.eu/eli/ontology#date_publication> "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
 	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΝΑΥΤΙΛΙΑΣ & ΝΗΣΙΩΤΙΚΗΣ ΠΟΛΙΤΙΚΗΣ"@el;
