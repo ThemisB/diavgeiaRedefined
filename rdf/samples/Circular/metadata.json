@@ -1,0 +1,33 @@
+{
+  "protocolNumber": "Γ2/ 59954/ 7478",
+  "subject": "Ανάρτηση Υπουργικής Απόφασης πιστοποίησης πραγματογνωμόνων ADR.",
+  "issueDate": 1473811200000,
+  "organizationId": "100016011",
+  "signerIds": [
+    "100007427"
+  ],
+  "unitIds": [
+    "100007425"
+  ],
+  "decisionTypeId": "Α.3",
+  "thematicCategoryIds": [
+    "48"
+  ],
+  "extraFieldValues": {
+    "onomaEgkykliou": "59954/ 7478",
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "71ΥΟ4653ΟΞ-89Ε",
+  "publishTimestamp": 1473847008526,
+  "submissionTimestamp": 1473847008526,
+  "versionId": "fc671a1a-7c5a-442a-9dae-d597002f732b",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/71ΥΟ4653ΟΞ-89Ε",
+  "documentUrl": "https://diavgeia.gov.gr/doc/71ΥΟ4653ΟΞ-89Ε",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

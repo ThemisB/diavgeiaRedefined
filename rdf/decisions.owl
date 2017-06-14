@@ -63,6 +63,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/decision_relates -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/decision_relates">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/expenditure_related_undertaking -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/expenditure_related_undertaking">
@@ -430,6 +439,15 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/circular_number -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/circular_number">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Circular"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -1092,6 +1110,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Circular">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΥΚΛΙΟΣ&quot;</rdfs:comment>
     </owl:Class>
     
 
