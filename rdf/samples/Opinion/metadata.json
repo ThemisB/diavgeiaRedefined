@@ -1,0 +1,33 @@
+{
+  "protocolNumber": "647/2012",
+  "subject": "Δυνατότητα επανεγγραφής φοιτήτριας στο Τμήμα του ΕΚΠΑ από το οποίο διεγράφη, προκειμένου να εγγραφεί σε Τμήμα Περιφερειακού Πανεπιστημίου.",
+  "issueDate": 1356652800000,
+  "organizationId": "50024",
+  "signerIds": [
+    "104073"
+  ],
+  "unitIds": [
+    "72922"
+  ],
+  "decisionTypeId": "Α.4",
+  "thematicCategoryIds": [
+    "32"
+  ],
+  "extraFieldValues": {
+    "gnomodotisiEidosForea": "ΝΣΚ",
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "6ΓΖΚΟΡΡΕ-ΖΞΚ",
+  "publishTimestamp": 1465905726603,
+  "submissionTimestamp": 1465905726603,
+  "versionId": "cdf757ba-e623-498a-acac-450ef521a8f2",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/6ΓΖΚΟΡΡΕ-ΖΞΚ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/6ΓΖΚΟΡΡΕ-ΖΞΚ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
