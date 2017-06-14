@@ -1,0 +1,118 @@
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6> a <http://diavgeia.gov.gr/ontology/BalanceAccount>;
+	<http://diavgeia.gov.gr/ontology/version> "11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6";
+	<http://diavgeia.gov.gr/ontology/iun> "Ω4Σ4ΟΡ1Φ-ΥΙΩ"@el;
+	<http://data.europa.eu/eli/ontology#title> "Περί επανακαθορισμού των ορίων παραλίας στην περιοχή βορείως εκβολής χειμάρρου «Βυρού», εκτός οικισμού Καρδαμύλης Τ.Κ Καρδαμύλης Δήμου Δυτικής Μάνης Ν.Μεσσηνίας"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-04-27"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΑΠΟΚΕΝΤΡΩΜΕΝΗ ΔΙΟΙΚΗΣΗ ΠΕΛΟΠΟΝΝΗΣΟΥ ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ ΚΑΙ ΝΗΣΩΝ"@el;
+  <http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΓΕΝΙΚΗ Δ/ΝΣΗ ΕΣΩΤΕΡΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ"@el;
+  <http://diavgeia.gov.gr/ontology/government_institution_department> "Δ/ΝΣΗ ΟΙΚΟΝΟΜΙΚΟΥ, ΤΜ. ΔΗΜΟΣΙΑΣ ΠΕΡΙΟΥΣΙΑΣ"@el;
+  <http://diavgeia.gov.gr/ontology/government_institution_address> "Ν.Ε.Ο. Πατρών - Αθηνών 28"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2613600156";
+	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2610423421";
+  <http://diavgeia.gov.gr/ontology/government_institution_information> "Π. Αθανασοπούλου"@el;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "44881/2926";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/1>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/2>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/3>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/4>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/5>;
+  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/6>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/7>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/8>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/9>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/10>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/11>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/12>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/13>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/14>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/15>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/16>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/17>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/18>;
+	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζουμε"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Εθνικό Τυπογραφείο"@el;
+	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Αυτοτελές Γραφείο Δημ.Περιουσία Ν.Μεσσηνίας"@el;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "Fiscals";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "50202";
+  <http://diavgeia.gov.gr/ontology/unit_id> "76454";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1465365638137";
+	<http://diavgeia.gov.gr/ontology/fek_number> "145"@el;
+	<http://diavgeia.gov.gr/ontology/fek_issue> "Δ"@el;
+	<http://diavgeia.gov.gr/ontology/fek_year> "2016"@el;
+	<http://diavgeia.gov.gr/ontology/normative_type> "Πράξη Γενικού Γραμματέα Αποκεντρωμένης Διοίκησης"@el.
+
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 2503/97 «Διοίκηση, Οργάνωση, Στελέχωση της Περιφέρειας, ρύθμιση θεμάτων για την Τοπική Αυτοδιοίκηση και άλλες διατάξεις», ως ισχύει."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1997/2503>.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 3200/55 «περί Διοικητικής Αποκέντρωσης», όπως τροποποιήθηκε και ισχύει."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1955/3200>.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις της παρ. 21 του άρθρου 46 του Ν. 3220/2004 (Φ.Ε.Κ 15 τ.Α΄28-1-2004) «Μέτρα αναπτυξιακής και κοινωνικής πολιτικής - αντικειμενικοποίηση του φορολογικού ελέγχου και άλλες διατάξεις»."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2004/3220/article/46/paragraph/21>.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του άρθρου 280 του Ν. 3852/2010(ΦΕΚ Α/87/7-6-2010) «Νέα Αρχιτεκτονική της Αυτοδιοίκησης και της Αποκεντρωμένης Διοίκησης –Πρόγραμμα Καλλικράτης»"@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3852/article/280>.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το Π.Δ.139/2010(ΦΕΚ Α 232/27-12-2010) «Οργανισμός της Αποκεντρωμένης Διοίκησης Πελοποννήσου , Δυτ. Ελλάδος και Ιονίου»"@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2010/139>.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
+  	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις των άρθρων 3 και 5 του Ν. 2971/2001 (ΦΕΚ 285/ΤΑ/19-12- 2001) «Περί αιγιαλού και παραλίας», όπως συμπληρώθηκε με τις διατάξεις του άρθρου 113 του Ν. 3978/11 «Περί Δημοσίων Συμβάσεων…ρύθμιση θεμάτων Εθνικής Άμυνας.»"@el;
+		<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2001/2971/article/3>;
+		<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2001/2971/article/5>;
+		<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2011/3978/article/113>.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/7> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν.Δ. 439/70 «Περί συμπληρώσεως των διατάξεων περί αιγιαλού»"@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/8> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την πράξη 4 της 06-02-2015 (ΦΕΚ Α’24/06-02-2015) Αποδοχή παραιτήσεων Γενικών Γραμματέων Αποκεντρωμένων Διοικήσεων της Χώρας."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/9> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν.4257/2014 αρ.56 «Επείγουσες Ρυθμίσεις Αρμοδιότητας Υπουργείου Εσωτερικών»"@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2014/4257/article/56>.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/10> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την με αρ.πρωτ.643/03-04-2014 αίτηση του Δήμου Δυτικής Μάνης προς την Κτηματική Υπηρεσία Ν.Μεσσηνίας που ζητά να επανακαθοριστεί η ζώνη παραλίας επί του γηπέδου ιδιοκτησίας Δ.Δυτικής Μάνης για την κατασκευή Αθλητικού Κέντρου Καρδαμύλης εκτός σχεδίου οικισμού Καρδαμύλης Δ.Δυτ.Μάνης."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/11> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το γεγονός ότι σύμφωνα με τις διατάξεις του προϊσχύσαντος ΝΔ 797/1971 «Περί αναγκαστικών απαλλοτριώσεων» λόγω παρέλευσης τριετίας από την κήρυξη της αναγκαστικής απαλλοτρίωσης δεν έχει καθοριστεί δικαστικώς ή εξωδίκως η προσωρινή αποζημίωση ,η αναγκαστική απαλλοτρίωση θεωρείται αυτοδικαίως ανακληθείσα."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/12> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Ο ισχύον Ν.2882/2001 «Κώδικας αναγκαστικών απαλλοτριώσεων» ορίζει ότι οι απαλλοτριώσεις που κηρύχτηκαν από 1/2/1971 και εφεξής διέπονται από τις διατάξεις του νόμου αυτού από το σημείο στο οποίο βρίσκονται κατά την έναρξη της ισχύος του.Στην συγκεκριμένη περίπτωση και κατά την έναρξη ισχύος του Ν.2882/2001 η τριετής προθεσμία για τον καθορισμό της αποζημίωσης της απαλλοτρίωσης της ζώνης παραλίας είχε λήξει. Επομένως έχει επέλθει η αυτοδίκαιη ανάκληση της ζώνης παραλίας και υπάρχει ανάγκη επανακαθορισμού της."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2001/2882>.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/13> a <http://diavgeia.gov.gr/ontology/Consideration>;
+		<http://diavgeia.gov.gr/ontology/has_text> "Τον καθορισμό των ορίων του αιγιαλού και δημιουργία ζώνης παραλίας στη θέση από Ρέμα μέχρι Κάβο περιοχής Καρδαμύλης Ν.Μεσσηνίας που ισχύει σύμφωνα με την αρ. Ν104/13-08-1986 Απόφαση Νομάρχη Μεσσηνίας (ΦΕΚ 340/Δ/1987)."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/14> a <http://diavgeia.gov.gr/ontology/Consideration>;
+		<http://diavgeia.gov.gr/ontology/has_text> "Το με αρ. Φ.900/40/827227/Σ.366/19-07-2015 εμπιστευτικό έγγραφο του ΓΕΕΘΑ προς την Κτηματική Υπηρεσία Ν.Μεσσηνίας, με το οποίο καθορίζονται οι περιοχές που για λόγους εθνικής άμυνας και ασφάλειας πρέπει να εξαιρούνται από την ανάρτηση ,από το οποίο προκύπτει ότι η υπό μελέτη περιοχή δεν εμπίπτει σε ζώνη της παρ.6 του άρθρου 4 του Ν.2971/2001 όπως τροποποιήθηκε και ισχύει από το αρ.11 του Ν.4281/2014."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/15> a <http://diavgeia.gov.gr/ontology/Consideration>;
+		<http://diavgeia.gov.gr/ontology/has_text> "Το από Μάρτιο του 2016 υπόβαθρο ορθοφωτοχάρτη το οποίο συνέταξε η Τζώρτζη Καλλιόπη Τοπογράφος Μηχανικός του Αυτοτελούς Γραφείου Δημόσιας Περιουσίας Ν.Μεσσηνίας ,αποτελούμενο από μια πινακίδα ,κλίμακας 1:500."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/16> a <http://diavgeia.gov.gr/ontology/Consideration>;
+		<http://diavgeia.gov.gr/ontology/has_text> "Το με αρ.πρωτ.171/Φ.11/001/Β΄/21-3-16 έγγραφο της Περιφερειακής Δ/νσης Δημ.Περιουσίας Πελοποννήσου Δυτ.Ελλάδας και Ιονίου με το οποίο εκφράζει την σύμφωνη γνώμη της για την συνέχιση της διαδικασίας επανακαθορισμού."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/17> a <http://diavgeia.gov.gr/ontology/Consideration>;
+		<http://diavgeia.gov.gr/ontology/has_text> "Την από 22-03-2016 Έκθεση της Επιτροπής Αιγιαλού παραλίας για τον επανακαθορισμό των ορίων παραλίας στην περιοχή βορείως εκβολής χειμάρρου «Βυρού», εκτός οικισμού Καρδαμύλης Τ.Κ Καρδαμύλης Δήμου Δυτικής Μάνης Ν.Μεσσηνίας."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Consideration/17> a <http://diavgeia.gov.gr/ontology/Consideration>;
+		<http://diavgeia.gov.gr/ontology/has_text> "Το με αρ. πρωτ.6329/24-03-2016 έγγραφο της Περιφερειακής Δ/νσης Δημ.Περιουσίας Πελοποννήσου,Δυτ.Ελλάδας & Ιονίου, Αυτοτελές Γραφείο Μεσσηνίας προς την Αποκεντρωμένη Διοίκηση Πελοποννήσου Δυτ. Ελλάδας και Ιονίου τμήμα Δημόσιας Περιουσίας για έκδοση της σχετικής Απόφασης."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+  <http://diavgeia.gov.gr/ontology/has_text> "Επικυρώνουμε την από 22-03-2016 Έκθεση της Επιτροπής αιγιαλού και παραλίας για τον επανακαθορισμό των ορίων παραλίας στη θέση «περιοχή βορείως εκβολής χειμάρρου «Βυρού», εκτός οικισμού Καρδαμύλης Τ.Κ Καρδαμύλης Δήμου Δυτικής Μάνης Ν.Μεσσηνίας, καθώς και το από Μάρτιο του 2016 υπόβαθρο ορθοφωτοχάρτη το οποίο συνέταξε η Τζώρτζη Καλλιόπη Τοπογράφος Μηχανικός του Αυτοτελούς Γραφείου Δημόσιας Περιουσίας Ν.Μεσσηνίας ,αποτελούμενο από μια πινακίδα ,κλίμακας 1:500 όπως ορίζουν οι διατάξεις του άρθρου 4 του Ν.2971/2001 ως εξής: 1-Επανακαθορίζουμε την γραμμή παραλίας, ανάντι της γραμμής αιγιαλού και σε συνέχεια αυτής ,με κίτρινη πολυγωνική γραμμή Π1,Π2,Π3,Π4,Π5,Π6,Π7,Π8 οκτώ (8) συνολικώς σημείων. 2-Η γραμμή αιγιαλού παραμένει όπως αυτή ισχύει σύμφωνα με την Απόφαση Νομάρχη Μεσσηνίας υπαρ.Ν.104/1986 η οποία δημοσιεύτηκε στο ΦΕΚ 340/Τ.Δ./1987. 3-Δεν διαπιστώθηκε η ύπαρξη παλαιού αιγιαλού. Η παρούσα, με την Έκθεση της Επιτροπής καθορισμού ορίων αιγιαλού παραλίας και το Τοπογραφικό Διάγραμμα να δημοσιευθούν στην Εφημερίδα της Κυβέρνησης."@el.
+
+<http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΓΕΝΙΚΟΣ Δ/ΝΤΗΣ ΧΩΡΟΤΑΞΙΚΗΣ & ΠΕΡΙΒΑΛΛΟΝΤΙΚΗΣ ΠΟΛΙΤΙΚΗΣ (ΑΣΚΩΝ ΚΑΘΗΚΟΝΤΑ ΓΕΝΙΚΟΥ ΓΡΑΜΜΑΤΕΑ)"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΔΙΟΝΥΣΙΟΣ ΠΑΝΑΓΙΩΤΟΠΟΥΛΟΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "100011930".

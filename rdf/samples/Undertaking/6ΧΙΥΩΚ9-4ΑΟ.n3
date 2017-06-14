@@ -20,7 +20,7 @@
 	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
 	<http://diavgeia.gov.gr/ontology/has_private_data> false;
 	<http://diavgeia.gov.gr/ontology/organization_id> "6196";
-  <http://diavgeia.gov.gr/ontology/unit_id> "88880".
+  <http://diavgeia.gov.gr/ontology/unit_id> "88880";
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1457342895250";
   <http://diavgeia.gov.gr/ontology/financial_year> "2016";
   <http://diavgeia.gov.gr/ontology/budget_category> "Τακτικός Προϋπολογισμός"@el;
@@ -30,8 +30,7 @@
 
 
 <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τα άρθρα 21 και 22 του ν.2362/95 «Περί Δημοσίου Λογιστικού κ.λπ.» (Α.247) όπως τροποποίηθηκε και
-συμπληρώθηκε με τα αρθ.21 και 23 του ν.3871/2010(Α.141)"@el;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τα άρθρα 21 και 22 του ν.2362/95 «Περί Δημοσίου Λογιστικού κ.λπ.» (Α.247) όπως τροποποίηθηκε και συμπληρώθηκε με τα αρθ.21 και 23 του ν.3871/2010(Α.141)"@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/21>;
   <http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/23>.
 

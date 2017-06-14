@@ -1,0 +1,40 @@
+{
+  "protocolNumber": "44881/2926",
+  "subject": "Περί επανακαθορισμού των ορίων παραλίας στην περιοχή βορείως εκβολής χειμάρρου «Βυρού», εκτός οικισμού Καρδαμύλης Τ.Κ Καρδαμύλης Δήμου Δυτικής Μάνης Ν.Μεσσηνίας.",
+  "issueDate": 1461715200000,
+  "organizationId": "50202",
+  "signerIds": [
+    "100011930"
+  ],
+  "unitIds": [
+    "76454"
+  ],
+  "decisionTypeId": "Α.2",
+  "thematicCategoryIds": [
+    "24"
+  ],
+  "extraFieldValues": {
+    "fek": {
+      "aa": "145",
+      "issue": "fektype_D",
+      "issueyear": 2016
+    },
+    "kanonistikipraxiaa": null,
+    "kanonistikipraxitype": "Πράξη Γενικού Γραμματέα Αποκεντρωμένης Διοίκησης",
+    "co_competent": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "Ω4Σ4ΟΡ1Φ-ΥΙΩ",
+  "publishTimestamp": 1465365638137,
+  "submissionTimestamp": 1465365638137,
+  "versionId": "a8654657-ffbc-45d1-ba93-dd6f018a50e6",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/Ω4Σ4ΟΡ1Φ-ΥΙΩ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/Ω4Σ4ΟΡ1Φ-ΥΙΩ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

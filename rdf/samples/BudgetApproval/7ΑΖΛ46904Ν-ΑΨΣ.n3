@@ -20,7 +20,7 @@
 	<http://diavgeia.gov.gr/ontology/thematic_category> "NutritionAgriculturalProducts";
 	<http://diavgeia.gov.gr/ontology/has_private_data> false;
 	<http://diavgeia.gov.gr/ontology/organization_id> "99221890";
-  <http://diavgeia.gov.gr/ontology/unit_id> "77026".
+  <http://diavgeia.gov.gr/ontology/unit_id> "77026";
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1452674356709";
   <http://diavgeia.gov.gr/ontology/financial_year> "2016";
   <http://diavgeia.gov.gr/ontology/budget_category> "Τακτικός Προϋπολογισμός"@el;

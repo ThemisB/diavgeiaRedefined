@@ -34,7 +34,7 @@
   <http://diavgeia.gov.gr/ontology/government_institution_information> "Η. Πάσιος"@el;
 	<http://diavgeia.gov.gr/ontology/government_institution_email> "h.pasios@yme.gov.gr";
 	<http://diavgeia.gov.gr/ontology/protocol_number> "Γ2/ 59954/ 7478";
-  <http://diavgeia.gov.gr/ontology/circular_number>: "59954/ 7478",
+  <http://diavgeia.gov.gr/ontology/circular_number> "59954/ 7478";
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "Transport";

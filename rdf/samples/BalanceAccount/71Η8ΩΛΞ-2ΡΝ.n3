@@ -27,7 +27,7 @@
 	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
 	<http://diavgeia.gov.gr/ontology/has_private_data> false;
 	<http://diavgeia.gov.gr/ontology/organization_id> "6167";
-  <http://diavgeia.gov.gr/ontology/unit_id> "88337".
+  <http://diavgeia.gov.gr/ontology/unit_id> "88337";
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1465364124434";
   <http://diavgeia.gov.gr/ontology/financial_year> "2015";
   <http://diavgeia.gov.gr/ontology/is_balance_account_approval_for_org> false;
@@ -50,7 +50,7 @@
 <http://diavgeia.gov.gr/eli/decision/71Η8ΩΛΞ-2ΡΝ/173572b7-35c4-4ef4-b1b0-b2bbb6d61dff/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ.939/2008 απόφαση του μονομελούς πρωτοδικείου Λάρισας «έγκριση τροποποίησης καταστατικού της ΕΛΛΗΝΙΚΗΣ ΜΕΡΙΜΝΑΣ»."@el.
 
-<http://diavgeia.gov.gr/eli/decision/71Η8ΩΛΞ-2ΡΝ/173572b7-35c4-4ef4-b1b0-b2bbb6d61dff/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
+<http://diavgeia.gov.gr/eli/decision/71Η8ΩΛΞ-2ΡΝ/173572b7-35c4-4ef4-b1b0-b2bbb6d61dff/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
   	<http://diavgeia.gov.gr/ontology/has_text> "Το αριθμ. 47/3-5-2016 έγγραφο του σωματείου «Ελληνική Μέριμνα Λάρισας», με το οποίο στάλθηκε ο απολογισμός οικ.έτους 2015."@el.
 
 <http://diavgeia.gov.gr/eli/decision/71Η8ΩΛΞ-2ΡΝ/173572b7-35c4-4ef4-b1b0-b2bbb6d61dff/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
