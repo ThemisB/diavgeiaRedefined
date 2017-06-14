@@ -1,0 +1,32 @@
+{
+  "protocolNumber": "5649",
+  "subject": "ΕΠΙΧΟΡΗΓΗΣΕΙΣ ΝΕΕ & ΝΘΕ",
+  "issueDate": 1457308800000,
+  "organizationId": "99219675",
+  "signerIds": [
+    "137530"
+  ],
+  "unitIds": [
+    "72345"
+  ],
+  "decisionTypeId": "Α.6",
+  "thematicCategoryIds": [
+    "20"
+  ],
+  "extraFieldValues": {
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΩΖΝ04691Ω2-ΗΚ6",
+  "publishTimestamp": 1457335841850,
+  "submissionTimestamp": 1457335841850,
+  "versionId": "5798f099-3abc-4ee1-bd1e-fc18ce18e501",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΖΝ04691Ω2-ΗΚ6",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΖΝ04691Ω2-ΗΚ6",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

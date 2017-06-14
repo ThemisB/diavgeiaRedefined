@@ -133,6 +133,22 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_related_expenditureapproval_undertaking -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_related_expenditureapproval_undertaking">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/has_sponsored -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_sponsored">
@@ -1154,6 +1170,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/EvaluationReportOfLaw">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΕΚΘΕΣΗ ΑΠΟΤΙΜΗΣΗΣ ΓΙΑ ΤΗΝ ΚΑΤΑΣΤΑΣΗ ΤΗΣ ΥΦΙΣΤΑΜΕΝΗΣ ΝΟΜΟΘΕΣΙΑΣ&quot;</rdfs:comment>
     </owl:Class>
     
 
