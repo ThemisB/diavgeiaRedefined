@@ -1,0 +1,33 @@
+{
+  "protocolNumber": "3142/2016",
+  "subject": "Μη άσκηση αίτησης αναίρεσης κατά της υπ’αριθ. 709/2016 τελεσίδικης απόφασης του Διοικητικού Εφετείου Αθηνών (Τμήμα 8ο Τριμελές)",
+  "issueDate": 1468454400000,
+  "organizationId": "50024",
+  "signerIds": [
+    "103135"
+  ],
+  "unitIds": [
+    "72922"
+  ],
+  "decisionTypeId": "Α.5",
+  "thematicCategoryIds": [
+    "12"
+  ],
+  "extraFieldValues": {
+    "arPraktikou": "3142/2016",
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΩΥΛΦΟΡΡΕ-ΗΓΘ",
+  "publishTimestamp": 1473059465462,
+  "submissionTimestamp": 1473059465462,
+  "versionId": "d95145cf-c3e6-461d-a851-734c1d0474f3",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΥΛΦΟΡΡΕ-ΗΓΘ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΥΛΦΟΡΡΕ-ΗΓΘ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

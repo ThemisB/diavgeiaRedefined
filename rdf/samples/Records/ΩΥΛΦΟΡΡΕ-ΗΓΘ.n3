@@ -1,0 +1,41 @@
+<http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3> a <http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets>;
+	<http://diavgeia.gov.gr/ontology/version> "d95145cf-c3e6-461d-a851-734c1d0474f3";
+	<http://diavgeia.gov.gr/ontology/iun> "ΩΥΛΦΟΡΡΕ-ΗΓΘ"@el;
+	<http://data.europa.eu/eli/ontology#title> "Μη άσκηση αίτησης αναίρεσης κατά της υπ’αριθ. 709/2016 τελεσίδικης απόφασης του Διοικητικού Εφετείου Αθηνών (Τμήμα 8ο Τριμελές)"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-07-27"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΝΟΜΙΚΟ ΣΥΜΒΟΥΛΙΟ ΤΟΥ ΚΡΑΤΟΥΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΓΡΑΦΕΙΟ ΝΟΜΙΚΟΥ ΣΥΜΒΟΥΛΟΥ ΥΠΟΥΡΓΕΙΟΥ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "3142/2016";
+	<http://diavgeia.gov.gr/ontology/thematic_category> "Laws";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "50024";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473059465462";
+	<http://diavgeia.gov.gr/ontology/unit_id> "72922";
+	<http://diavgeia.gov.gr/ontology/record_number> "3142/2016";
+	<http://diavgeia.gov.gr/ontology/has_present> <http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Present/1>;
+	<http://diavgeia.gov.gr/ontology/has_present> <http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Present/2>;
+	<http://diavgeia.gov.gr/ontology/has_present> <http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Present/3>;
+	<http://diavgeia.gov.gr/ontology/has_present> <http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Present/4>;
+	<http://diavgeia.gov.gr/ontology/record_subject> "Μη άσκηση αίτησης αναίρεσης κατά της υπ’αριθ. 709/2016 τελεσίδικης απόφασης του Διοικητικού Εφετείου Αθηνών (Τμήμα 8ο Τριμελές) Για την παραπάνω υπόθεση η εισηγήτρια, αφού ανέπτυξε προφορικά τις απόψεις της που εμπεριέχονται στην από 14.7.2016 εισήγησή της, πρότεινε να μην ασκηθεί αίτηση αναίρεσης κατά της υπ΄αριθ. 709/2016 απόφασης του Διοικητικού Εφετείου Αθηνών (Τμήμα 8ο Τριμελές), με την οποία επικυρώθηκε τελεσίδικα η υπ’αριθ.12519/2013 απόφαση ΔΠρΑθ (Τμήμα 28ο Μονομελές). Με την τελευταία αυτή απόφαση το πρωτοβάθμιο δικαστήριο, κατά μερική αποδοχή της από 10.10.2008 ανακοπής της ανώνυμης εταιρείας με την επωνυμία «ΠΟΡΣΕΛ Ανώνυμη Εμπορική και Βιοτεχνική Εταιρία Γ.Ζαφειρόπουλος», ακύρωσε τις υπ’αριθ. 4358 και 4359/13.4.2006 πράξεις ταμειακής βεβαίωσης του Προϊσταμένου της Δ.Ο.Υ. Φ.Α.Ε.Ε. Αθηνών, ποσών 2.631.492 ευρώ και 5.266.129 ευρώ, αντίστοιχα, και τροποποίησε ως προς το ύψος της οφειλής την υπ’αριθ.161β/8.9.2008 έκθεση αναγκαστικής κατάσχεσης του δικαστικού επιμελητή του Πρωτοδικείου Αθηνών Φώτη Α.Καρσανίδη, μειώνοντάς το κατά τα ποσά των ακυρωθεισών ταμειακών βεβαιώσεων πλέον τυχόν προσαυξήσεων, με την αιτιολογία ότι ελλείψει έγκυρης επίδοσης των καταλογιστικών πράξεων στην παραπάνω εταιρεία οι νόμιμοι τίτλοι δεν είχαν οριστικοποιηθεί και ως εκ τούτου δεν μπορούσαν να επιστηρίξουν τις παραπάνω ταμειακές βεβαιώσεις και την έκθεση αναγκαστικής κατάσχεσης κατ’ αντίστοιχο σκέλος. Τούτο διότι: α) αν και το αντικείμενο της διαφοράς υπερβαίνει το αναιρετέο ποσό των 40.000 ευρώ της παρ. 4 του άρθρου 53 του ΠΔ 18/1989, εντούτοις η υπό κρίση απόφαση προβαίνει σε ερμηνεία και εφαρμογή των διατάξεων των άρθρων 50, 54 ΚΔΔ, 2, 18 παρ.1 και 2, 34 παρ.1 στοιχ.β και 2 στοιχ.β του ν.2190/1920 «περί ανωνύμων εταιρειών» και 69 ΑΚ, η οποία είναι σύμφωνη με την διαμορφωθείσα μέχρι τώρα και μη ανατραπείσα νομολογία ΣτΕ και ΑΠ επί του ενδιαφέροντος εν προκειμένω νομικού ζητήματος της έγκυρης επίδοσης σε ανώνυμη εταιρεία που στερείται τακτικής διοίκησης, και άρα δεν συντρέχουν σωρευτικώς (ΣτΕ 1873/2012 επταμ.) οι προϋποθέσεις της παρ.3 και παρ.4 του άρθρου 53 του ΠΔ 18/1989 για την παραδεκτή άσκηση αναίρεσης, ββ) περαιτέρω, δεν μπορεί να τύχει εφαρμογής η διάταξη του άρθρου 2 του Ν. 3900/2010, αφού δεν πρόκειται περί αποφάσεως διοικητικού δικαστηρίου που κρίνει διάταξη τυπικού νόμου αντισυνταγματική ή αντίθετη σε άλλη υπερνομοθετική διάταξη, χωρίς το ζήτημα αυτό να έχει κριθεί με προηγούμενη απόφαση του Συμβουλίου της Επικρατείας. Επακολούθησε συζήτηση μεταξύ των παρισταμένων, οι οποίοι συμφώνησαν με την πρόταση της εισηγήτριας."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Present/1> a <http://diavgeia.gov.gr/ontology/Present>;
+	<http://diavgeia.gov.gr/ontology/present_name> "ΕΛΕΝΗ ΠΑΣΑΜΙΧΑΛΗ"@el;
+	<http://diavgeia.gov.gr/ontology/present_title> "Προεδρεύουσα της Επιτροπής, Νομικός Σύμβουλος"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Present/2> a <http://diavgeia.gov.gr/ontology/Present>;
+	<http://diavgeia.gov.gr/ontology/present_name> "ΑΝΝΑ ΠΡΕΒΕΝΑ"@el;
+	<http://diavgeia.gov.gr/ontology/present_title> "Πάρεδρος Ν.Σ.Κ."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Present/3> a <http://diavgeia.gov.gr/ontology/Present>;
+	<http://diavgeia.gov.gr/ontology/present_name> "ΜΑΡΙΑ ΣΚΟΡΙΛΑ"@el;
+	<http://diavgeia.gov.gr/ontology/present_title> "Δικαστική Πληρεξούσια Ν.Σ.Κ."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Present/4> a <http://diavgeia.gov.gr/ontology/Present>;
+	<http://diavgeia.gov.gr/ontology/present_name> "ΜΑΡΙΑ ΣΚΟΡΙΛΑ"@el;
+	<http://diavgeia.gov.gr/ontology/present_title> "Εισηγήτρια"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΥΛΦΟΡΡΕ-ΗΓΘ/d95145cf-c3e6-461d-a851-734c1d0474f3/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Αντιπρόεδρος Ν.Σ.Κ."@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΑΛΕΞΑΝΔΡΟΣ Γ. ΚΑΡΑΓΙΑΝΝΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "103135".
