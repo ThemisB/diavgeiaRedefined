@@ -1571,6 +1571,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/InvestmentPlacing -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/InvestmentPlacing">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/Law -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Law">

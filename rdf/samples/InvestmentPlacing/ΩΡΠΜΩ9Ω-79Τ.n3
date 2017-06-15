@@ -1,0 +1,37 @@
+<http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d> a <http://diavgeia.gov.gr/ontology/InvestmentPlacing>;
+	<http://diavgeia.gov.gr/ontology/version> "0f1eeece-ae51-454d-a895-63868455f63d";
+	<http://diavgeia.gov.gr/ontology/iun> "ΩΡΠΜΩ9Ω-79Τ"@el;
+	<http://data.europa.eu/eli/ontology#title> "Υποβολή αιτήματος συμμετοχής του Δήμου Βόλβης στο Mayor Adapt city twinning -2016 programme"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-09-09"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΔΗΜΟΣ ΒΟΛΒΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "18180/9-9-2016";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/3>;
+	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζει"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "EuropeanUnion";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "6057";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473410847593";
+	<http://diavgeia.gov.gr/ontology/unit_id> "10940".
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το άρθρο 58 παρ. 2 του Ν. 3852/2010."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3852>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την πρόσκληση σποβολής αιτημάτων συμμετοχής στο Mayors Adapt city twinning - 2016 programme για το έτος 2016."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το γεγομός ότι η προθεσμία σποβολής αίτησης σσμμετοχής στο Mayors Adapt city twinning -2016 programme λήγει στις 12/09/2016."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την υποβολή αιτήματος συμμετοχής του Δήμου Βόλβης στο Mayors Adapt city twinning - 2016 programme. Η απόφαση αυτή θα υποβληθεί για έγκριση στο Δημοτικό Συμβούλιο του Δήμου Βόλβης."@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2010/3852/article/58/paragraph/2>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Δήμαρχος Βόλβης"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Διαμαντής Λιάμας"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "135716".
