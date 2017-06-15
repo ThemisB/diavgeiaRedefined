@@ -1,0 +1,49 @@
+{
+  "protocolNumber": "1158",
+  "subject": "ΑΝΑΘΕΣΗ ΠΡΟΜΗΘΕΙΑΣ ΑΝΤΑΛΛΑΚΤΙΚΩΝ",
+  "issueDate": 1450742400000,
+  "organizationId": "6167",
+  "signerIds": [
+    "100010971"
+  ],
+  "unitIds": [
+    "100010968"
+  ],
+  "decisionTypeId": "Δ.1",
+  "thematicCategoryIds": [
+    "20"
+  ],
+  "extraFieldValues": {
+    "person": [
+      {
+        "afm": "082000463",
+        "name": "Α ΣΑΡΡΟΣ ΚΑΙ ΣΙΑ ΕΕ",
+        "enterName": false,
+        "afmType": "EL"
+      }
+    ],
+    "awardAmount": {
+      "amount": 170.97,
+      "currency": "EUR"
+    },
+    "assignmentType": "Προμήθειες",
+    "cpv": [
+      "42913300-2"
+    ],
+    "textRelatedADA": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΩΡΡΠΩΛΞ-2ΓΔ",
+  "publishTimestamp": 1452674256474,
+  "submissionTimestamp": 1452674256474,
+  "versionId": "139c6b46-6b98-4aaa-89ee-5b704aa5b157",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΡΡΠΩΛΞ-2ΓΔ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΡΡΠΩΛΞ-2ΓΔ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

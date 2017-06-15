@@ -59,5 +59,6 @@
 <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Expense/1> a <http://diavgeia.gov.gr/ontology/Expense>;
 	<http://diavgeia.gov.gr/ontology/expense_amount> "1123.44";
 	<http://diavgeia.gov.gr/ontology/expense_currency> "EUR";
+	<http://diavgeia.gov.gr/ontology/cpv> "50000000-5";
 	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Sponsored/1>;
 	<http://diavgeia.gov.gr/ontology/has_organization_sponsor> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/OrganizationSponsor/1>.
