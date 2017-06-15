@@ -1,0 +1,32 @@
+{
+  "protocolNumber": "68666",
+  "subject": "ΑΠΟΦΑΣΗ ΑΝΑΚΤΗΣΗΣ ΑΧΡΕΩΣΤΗΤΩΣ ΚΑΤΑΒΛΗΘΕΝΤΟΣ ΠΟΣΟΥ",
+  "issueDate": 1473292800000,
+  "organizationId": "99219675",
+  "signerIds": [
+    "121880"
+  ],
+  "unitIds": [
+    "72341"
+  ],
+  "decisionTypeId": "Ε.2",
+  "thematicCategoryIds": [
+    "10"
+  ],
+  "extraFieldValues": {
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "6ΜΣΜ4691Ω2-0Ι7",
+  "publishTimestamp": 1473333552193,
+  "submissionTimestamp": 1473333552193,
+  "versionId": "4fd88d93-661b-4aa4-a564-0aa4e1cb1273",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/6ΜΣΜ4691Ω2-0Ι7",
+  "documentUrl": "https://diavgeia.gov.gr/doc/6ΜΣΜ4691Ω2-0Ι7",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
