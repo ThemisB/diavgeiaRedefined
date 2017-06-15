@@ -1,0 +1,40 @@
+{
+  "protocolNumber": "ΠΝΠ_07.10.2015",
+  "subject": "Ρύθμιση κατεπειγόντων θεμάτων των Υπουργείων Εργασίας, Κοινωνικής Ασφάλισης και Κοινωνικής Αλληλεγγύης, Οικονομίας, Ανάπτυξης και Τουρισμού, Εσωτερικών και Διοικητικής Ανασυγκρότησης, Υποδομών Μεταφορών και Δικτύων και  Παιδείας, Έρευνας και Θρησκευμάτων.",
+  "issueDate": 1444176000000,
+  "organizationId": "23290",
+  "signerIds": [
+    "100011328",
+    "100011130"
+  ],
+  "unitIds": [
+    "91380"
+  ],
+  "decisionTypeId": "Α.1.2",
+  "thematicCategoryIds": [
+    "10004",
+    "16"
+  ],
+  "extraFieldValues": {
+    "fek": {
+      "aa": "127",
+      "issue": "fektype_A",
+      "issueyear": 2015
+    },
+    "lawpraxiaa": "ΠΝΠ_07.10",
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΩΟ00ΘΩΠ-ΧΔΝ",
+  "publishTimestamp": 1458728268398,
+  "submissionTimestamp": 1458728268398,
+  "versionId": "51c1bc5c-0eb8-4cb5-8204-3a48efef91bb",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΟ00ΘΩΠ-ΧΔΝ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΟ00ΘΩΠ-ΧΔΝ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

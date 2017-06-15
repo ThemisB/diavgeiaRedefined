@@ -81,6 +81,14 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_article -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_article">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/LegislativeDecree"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/has_considered -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_considered">
@@ -858,6 +866,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/legislative_decree_number -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/legislative_decree_number">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/LegislativeDecree"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/name -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/name">
@@ -1293,16 +1310,22 @@
                                                                                                                                                                 <rdf:rest>
                                                                                                                                                                     <rdf:Description>
                                                                                                                                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                                                                        <rdf:first>Science</rdf:first>
+                                                                                                                                                                        <rdf:first>PublicAdministration</rdf:first>
                                                                                                                                                                         <rdf:rest>
                                                                                                                                                                             <rdf:Description>
                                                                                                                                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                                                                                <rdf:first>SocialIssues</rdf:first>
+                                                                                                                                                                                <rdf:first>Science</rdf:first>
                                                                                                                                                                                 <rdf:rest>
                                                                                                                                                                                     <rdf:Description>
                                                                                                                                                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                                                                                        <rdf:first>Transport</rdf:first>
-                                                                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                                                        <rdf:first>SocialIssues</rdf:first>
+                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                <rdf:first>Transport</rdf:first>
+                                                                                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                        </rdf:rest>
                                                                                                                                                                                     </rdf:Description>
                                                                                                                                                                                 </rdf:rest>
                                                                                                                                                                             </rdf:Description>
@@ -1559,6 +1582,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/LegislativeDecree">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1)&quot;</rdfs:comment>
     </owl:Class>
     
 
