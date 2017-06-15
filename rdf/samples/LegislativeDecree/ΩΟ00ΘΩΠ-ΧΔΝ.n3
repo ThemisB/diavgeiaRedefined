@@ -1,4 +1,4 @@
-<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb> a <http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw>;
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb> a <http://diavgeia.gov.gr/ontology/LegislativeDecree>;
 	<http://diavgeia.gov.gr/ontology/version> "51c1bc5c-0eb8-4cb5-8204-3a48efef91bb";
 	<http://diavgeia.gov.gr/ontology/iun> "ΩΟ00ΘΩΠ-ΧΔΝ"@el;
 	<http://data.europa.eu/eli/ontology#title> "Ρύθμιση κατεπειγόντων θεμάτων των Υπουργείων Εργασίας, Κοινωνικής Ασφάλισης και Κοινωνικής Αλληλεγγύης, Οικονομίας, Ανάπτυξης και Τουρισμού, Εσωτερικών και Διοικητικής Ανασυγκρότησης, Υποδομών Μεταφορών και Δικτύων και  Παιδείας, Έρευνας και Θρησκευμάτων."@el;
