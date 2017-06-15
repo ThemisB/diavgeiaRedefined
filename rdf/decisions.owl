@@ -1713,6 +1713,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/StartProductionalFunctionOfInvestment">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΑΠΟΦΑΣΗ ΕΝΑΡΞΗΣ ΠΑΡΑΓΩΓΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ ΕΠΕΝΔΥΣΗΣ&quot;</rdfs:comment>
     </owl:Class>
     
 

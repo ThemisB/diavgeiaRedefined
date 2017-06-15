@@ -133,7 +133,7 @@
 	<http://diavgeia.gov.gr/ontology/has_text> "Το δεύτερο εδάφιο της 4 του άρθρου 30 του ν. 4327/2015 αντικαθίσταται ως εξής: «Η ισχύς της διάταξης αυτής άρχεται από 8.3.2015 και λήγει στις 31.12.2015»."@el;
 	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2015/4327/article/30>.
 
-<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/8>;
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/8> a <http://diavgeia.gov.gr/ontology/Decision>;
 <http://diavgeia.gov.gr/ontology/has_text> "Η ισχύς της παρούσας, η οποία θα κυρωθεί νομοθετικά κατά το άρθρο 44 παράγραφος 1 του Συντάγματος, αρχίζει από τη δημοσίευσή της στην Εφημερίδα της Κυβερνήσεως, εκτός αν ορίζεται διαφορετικά στις επιμέρους διατάξεις. "@el.
 
 <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
