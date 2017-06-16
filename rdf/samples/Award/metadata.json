@@ -1,0 +1,45 @@
+{
+  "protocolNumber": "438",
+  "subject": "ΑΠΟΦΑΣΗ ΚΑΤΑΚΥΡΩΣΗΣ ΕΡΓΟΥ ΣΥΝΤΗΡΗΣΗΣ ΑΝΕΛΚΥΣΤΗΡΩΝ",
+  "issueDate": 1452643200000,
+  "organizationId": "99219667",
+  "signerIds": [
+    "132989"
+  ],
+  "unitIds": [
+    "76046"
+  ],
+  "decisionTypeId": "Δ.2.2",
+  "thematicCategoryIds": [
+    "44"
+  ],
+  "extraFieldValues": {
+    "person": [
+      {
+        "afm": "800579607",
+        "name": "Θ ΑΡΒΑΝΙΤΗΣ ΚΑΙ ΣΙΑ ΟΕ",
+        "enterName": false,
+        "afmType": "EL"
+      }
+    ],
+    "awardAmount": {
+      "amount": 2804.4,
+      "currency": "EUR"
+    },
+    "textRelatedADA": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "64Μ44691ΩΓ-5ΨΑ",
+  "publishTimestamp": 1452675672553,
+  "submissionTimestamp": 1452675672553,
+  "versionId": "7076e4dc-7352-41ff-ae5f-8b7a5de23353",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/64Μ44691ΩΓ-5ΨΑ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/64Μ44691ΩΓ-5ΨΑ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
