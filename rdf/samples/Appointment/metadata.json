@@ -1,0 +1,39 @@
+{
+  "protocolNumber": "16054",
+  "subject": "Διορισμός του μόνιμου Αναπληρωτή Καθηγητή κ. Γεωργίου Κουτσούμπα  σε μόνιμη θέση Καθηγητή της βαθμίδας του Καθηγητή πρώτης βαθμίδας (εξέλιξη).",
+  "issueDate": 1469577600000,
+  "organizationId": "99203026",
+  "signerIds": [
+    "100002980"
+  ],
+  "unitIds": [
+    "73627"
+  ],
+  "decisionTypeId": "Γ.3.3",
+  "thematicCategoryIds": [
+    "10004"
+  ],
+  "extraFieldValues": {
+    "numberOfPeople": 1,
+    "employerOrg": "99203026",
+    "fek": {
+      "aa": "814",
+      "issue": "fektype_C",
+      "issueyear": 2016
+    },
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΨΟΗΩ46ΨΖΣ4-Ι56",
+  "publishTimestamp": 1473328177091,
+  "submissionTimestamp": 1473328177091,
+  "versionId": "a2481493-7f59-4f43-8799-3eb554c36d23",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΨΟΗΩ46ΨΖΣ4-Ι56",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΨΟΗΩ46ΨΖΣ4-Ι56",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

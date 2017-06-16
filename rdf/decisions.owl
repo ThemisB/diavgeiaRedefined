@@ -368,6 +368,24 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/appointment_employer_org -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/appointment_employer_org">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Appointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/appointment_number_employees -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/appointment_number_employees">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Appointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/balance_account_time_period -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/balance_account_time_period">
