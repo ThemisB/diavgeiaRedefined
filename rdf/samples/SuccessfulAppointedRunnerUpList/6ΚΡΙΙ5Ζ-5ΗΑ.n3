@@ -1,4 +1,4 @@
-<http://diavgeia.gov.gr/eli/decision/6ΚΡΙΙ5Ζ-5ΗΑ/38a2ad2f-ab1c-417f-94b6-607077a4b2f6> a <http://diavgeia.gov.gr/ontology/Appointment>;
+<http://diavgeia.gov.gr/eli/decision/6ΚΡΙΙ5Ζ-5ΗΑ/38a2ad2f-ab1c-417f-94b6-607077a4b2f6> a <http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList>;
 	<http://diavgeia.gov.gr/ontology/version> "38a2ad2f-ab1c-417f-94b6-607077a4b2f6";
 	<http://diavgeia.gov.gr/ontology/iun> "6ΚΡΙΙ5Ζ-5ΗΑ"@el;
 	<http://data.europa.eu/eli/ontology#title> "Επιλογή τριών (3) υποψηφίων εξωτερικών συνεργατών στο πλαίσιο της Πρόσκλησης εκδήλωσης ενδιαφέροντος με αρ. πρωτ. 1456/08-07-2016 «ΠΡΟΣΚΛΗΣΗ ΓΙΑ ΤΗΝ ΥΠΟΒΟΛΗ ΠΡΟΤΑΣΗΣ ΣΥΝΕΡΓΑΤΩΝ ΓΙΑ ΤΗ ΣΥΝΑΨΗ ΣΥΜΒΑΣΗΣ ΜΙΣΘΩΣΗΣ EΡΓΟΥ ΙΔΙΩΤΙΚΟΥ ΔΙΚΑΙΟΥ ΣΤΟ ΠΛΑΙΣΙΟ ΕΚΤΕΛΕΣΗΣ ΤΗΣ ΠΡΑΞΗΣ «ΥΠΟΣΤΗΡΙΞΗ ΤΗΣ Α.ΔΙ.Π.» ΣΤΟΥΣ ΑΞΟΝΕΣ ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ 6,8, 9»"@el;

@@ -1,0 +1,39 @@
+{
+  "protocolNumber": "207699",
+  "subject": "ΑΠΟΖΗΜΙΩΣΗ Ν. 993/79 (ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ ΙΩΑΝΝΗΣ)",
+  "issueDate": 1457395200000,
+  "organizationId": "99200192",
+  "signerIds": [
+    "103167"
+  ],
+  "unitIds": [
+    "73175"
+  ],
+  "decisionTypeId": "100",
+  "thematicCategoryIds": [
+    "04"
+  ],
+  "extraFieldValues": {
+    "eidosPraxis": "Καθορισμός Αμοιβής – Αποζημίωσης",
+    "positionSalary": {
+      "amount": 9370.08,
+      "currency": "EUR"
+    },
+    "position": "Μονομελές Όργανο",
+    "employerOrg": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "7ΤΘ846ΨΧΕΔ-4Γ6",
+  "publishTimestamp": 1457424900872,
+  "submissionTimestamp": 1457424900872,
+  "versionId": "837e73a6-a4b6-4912-9fb9-fb27c74fc2bb",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/7ΤΘ846ΨΧΕΔ-4Γ6",
+  "documentUrl": "https://diavgeia.gov.gr/doc/7ΤΘ846ΨΧΕΔ-4Γ6",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
