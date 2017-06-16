@@ -230,6 +230,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/related_occupation_invitation -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/related_occupation_invitation">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/OccupationInvation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/related_undertaking -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/related_undertaking">
@@ -1786,15 +1795,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/GovernmentInstitution -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/GovernmentInstitution">
-        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
-        <rdfs:comment>Represents the Government Institution (Φορέας) which has uploaded a decision.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/InvestmentPlacing -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/InvestmentPlacing">
@@ -1964,6 +1964,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ &amp; ΕΠΙΛΑΧΟΝΤΩΝ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -1990,15 +1991,6 @@
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΑΝΑΘΕΣΗ ΕΡΓΩΝ / ΠΡΟΜΗΘΕΙΩΝ / ΥΠΗΡΕΣΙΩΝ / ΜΕΛΕΤΩΝ&quot;</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/GovernmentInstitution/Ministry -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/GovernmentInstitution/Ministry">
-        <rdfs:subClassOf rdf:resource="http://diavgeia.gov.gr/ontology/GovernmentInstitution"/>
-        <rdfs:comment>Corresponds to &quot;Υπουργεία&quot;</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
