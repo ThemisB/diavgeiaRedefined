@@ -72,15 +72,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/expenditure_related_undertaking -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/expenditure_related_undertaking">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/has_afterdecision -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_afterdecision">
@@ -226,6 +217,31 @@
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <vann:preferredNamespacePrefix>Diavgeia property which denote a metadata correction (that is no text changes have been made on decision)</vann:preferredNamespacePrefix>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/related_declaration_summary -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/related_declaration_summary">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Award"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/related_undertaking -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/related_undertaking">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
     </owl:ObjectProperty>
     
 
@@ -496,6 +512,43 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/contract_type -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_type">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Έργα</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Μελέτες</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first xml:lang="el">Προμήθειες</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first xml:lang="el">Υπηρεσίες</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/cpv -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/cpv">
@@ -709,6 +762,37 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_address">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/government_institution_budget_code -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_budget_code">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Πρόγραμμα Δημοσίων Επενδύσεων</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Συγχρηματοδοτούμενο Έργο</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first xml:lang="el">Τακτικός Προϋπολογισμός</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -1210,6 +1294,31 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/selection_criterion -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/selection_criterion">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Συμφερότερη από οικονομικής άποψης</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Χαμηλότερη Τιμή</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/signer_id -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signer_id">
@@ -1243,6 +1352,37 @@
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Metadata Information (UNIX-timestamp).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/tendering_procedure -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/tendering_procedure">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Ανοικτός</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Κλειστός</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first xml:lang="el">Πρόχειρος</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -1486,6 +1626,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Award">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -1557,6 +1698,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΠΕΡΙΛΗΨΗ ΔΙΑΚΗΡΥΞΗΣ&quot;</rdfs:comment>
     </owl:Class>
     
 

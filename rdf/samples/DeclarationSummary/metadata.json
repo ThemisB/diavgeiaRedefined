@@ -1,0 +1,44 @@
+{
+  "protocolNumber": "1.2.2/183",
+  "subject": "« Διενέργεια του 0516 πρόχειρου  διαγωνισμού  »\n[Οδική Βοήθεια μεταφορικών μέσων ΕΛΤΑ (δικύκλων)]",
+  "issueDate": 1452643200000,
+  "organizationId": "50039",
+  "signerIds": [
+    "100014730"
+  ],
+  "unitIds": [
+    "73442"
+  ],
+  "decisionTypeId": "Δ.2.1",
+  "thematicCategoryIds": [
+    "20"
+  ],
+  "extraFieldValues": {
+    "cpv": [
+      "66000000-0"
+    ],
+    "contestProgressType": "Πρόχειρος",
+    "manifestSelectionCriterion": "Χαμηλότερη Τιμή",
+    "manifestContractType": "Υπηρεσίες",
+    "orgBudgetCode": "Τακτικός Προϋπολογισμός",
+    "estimatedAmount": {
+      "amount": 13008.13,
+      "currency": "EUR"
+    },
+    "textRelatedADA": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "67ΒΘΟΡΡ2-85Ω",
+  "publishTimestamp": 1452674041256,
+  "submissionTimestamp": 1452674041256,
+  "versionId": "d1adf316-f432-4726-bd03-b237cbf463cb",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/67ΒΘΟΡΡ2-85Ω",
+  "documentUrl": "https://diavgeia.gov.gr/doc/67ΒΘΟΡΡ2-85Ω",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
