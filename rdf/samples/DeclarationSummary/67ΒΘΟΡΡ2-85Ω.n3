@@ -16,7 +16,7 @@
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Decision/2>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Expense/1>>;
+	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Expense/1>;
 	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Δ/νση Οικονομικών - Τομέας Γενικής Λογιστικής / Πρωτόγραφο"@el;
 	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Δ/νση Οικονομικών - Τομέας Οικον. Σχεδιασμού & Πληροφόρησης (101 88) ΑΘΗΝΑ"@el;
 	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Γενικό Διευθυντή Υποστηρικτικών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;

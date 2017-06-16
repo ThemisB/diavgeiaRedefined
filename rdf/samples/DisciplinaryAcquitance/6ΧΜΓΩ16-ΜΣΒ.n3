@@ -1,0 +1,49 @@
+<http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea> a <http://diavgeia.gov.gr/ontology/DisciplinaryAcquitance>;
+	<http://diavgeia.gov.gr/ontology/version> "3177abd8-4180-429a-b1c2-c665c08767ea";
+	<http://diavgeia.gov.gr/ontology/iun> "6ΧΜΓΩ16-ΜΣΒ"@el;
+	<http://data.europa.eu/eli/ontology#title> "ΑΠΟΦΑΣΗ ΔΗΜΑΡΧΟΥ ΥΠ. ΑΡΙΘΜΟΝ 136/2016 (ΠΕΡΙ ΑΠΑΛΛΑΓΗΣ ΥΠΑΛΛΗΛΟΥ ΤΟΥ ΔΗΜΟΥ ΑΠΟ ΤΗΝ ΚΑΤΗΓΟΡΙΑ ΤΗΣ ΤΕΛΕΣΗΣ ΠΕΙΘΑΡΧΙΚΟΥ ΠΑΡΑΠΤΩΜΑΤΟΣ ΛΟΓΩ ΕΛΛΕΙΨΗΣ ΣΤΟΙΧΕΙΩΝ)"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-04-05"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΔΗΜΟΣ ΡΑΦΗΝΑΣ - ΠΙΚΕΡΜΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_address> "Αραφηνίδων Αλών 12"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "19009";
+	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2294321054";
+	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2294023481";
+	<http://diavgeia.gov.gr/ontology/government_institution_information> "Γ. Μπαρκούρα";
+	<http://diavgeia.gov.gr/ontology/government_institution_email> "gbarkoura@0164.syzefxis.gov.gr";
+	<http://diavgeia.gov.gr/ontology/protocol_number> "136";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Consideration/3>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Consideration/4>;
+	<http://diavgeia.gov.gr/ontology/decision_type> "ΑΠΟΦΑΣΙΖΕΙ"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "Employment";
+	<http://diavgeia.gov.gr/ontology/thematic_category> "PublicAdministration";
+	<http://diavgeia.gov.gr/ontology/thematic_category> "Laws";
+	<http://diavgeia.gov.gr/ontology/has_private_data> true;
+	<http://diavgeia.gov.gr/ontology/organization_id> "6262";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1459937621791";
+	<http://diavgeia.gov.gr/ontology/unit_id> "94725".
+
+<http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις των άρθρων 125 επομ. του Ν. 3528/2007."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2007/3528/article/125>.
+
+<http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του άρθρου πέντε του Ν.4057/2012."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2012/4057/article/5>.
+
+<http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ΄αριθμ. 16/18.01.2016 Απόφαση Δημάρχου περί ορισμού της υπαλλήλου Κλεισούρα Ελένης, Προϊσταμένης του Τμήματος Δημοτικής Κατάστασης, Ληξιαρχείου, Αλλοδαπών, Κλάδου ΠΕ Διοικητικού, με βαθμό Γ’, για τη διενέργεια Ένορκης Διοικητικής Εξέτασης για τη διαπίστωση της πιθανής τέλεσης πειθαρχικού παραπτώματος από την υπάλληλο αορίστου χρόνου, Ιακωβάκη Αναστασία, Κλάδου ΠΕ Διοικητικού, με Βαθμό Ε’."@el.
+
+<http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την με αριθμ. πρωτ. ΠΕΑ 738/18.03.2016 Πορισματική Έκθεση και του σχετικού φακέλου της ΕΔΕ, που κατέθεσε η διενεργήσασα την ΕΔΕ στο Δήμαρχο Ραφήνας- Πικερμίου, με το υπ’ αριθμ. ΠΕΑ 739/18.03.2016 διαβιβαστικό έγγραφο."@el.
+
+<http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Απαλλάσσει την υπάλληλο αορίστου χρόνου, Ιακωβάκη Αναστασία, Κλάδου ΠΕ Διοικητικού, με Βαθμό Ε’, καθότι δεν προκύπτουν επαρκή στοιχεία που να τεκμηριώνουν την τέλεση πειθαρχικού παραπτώματος και θέτει στο αρχείο την υπόθεση, μαζί με την Πορισματική Έκθεση και όλα τα έγγραφα και τα λοιπά στοιχεία, που συγκεντρώθηκαν κατά τη διάρκεια της διενέργειας της Ένορκης Διοικητικής Εξέτασης."@el.
+
+<http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Ο ΔΗΜΑΡΧΟΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΒΑΣΙΛΕΙΟΣ ΠΙΣΤΙΚΙΔΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "100002256".
