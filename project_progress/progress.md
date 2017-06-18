@@ -6,7 +6,7 @@
 - Create [samples](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples) for each currently supported decision type. Every directory of the given link corresponds to a decision type. These directories may have 3 or 4 files inside. More specifically:
   1. There is a `.pdf` file, which is found in the current production website of Diavgeia and it can be downloaded from https://diavgeia.gov.gr/{IUN}
   2. A `metadata.json` file, which has the metadata that government institutions may fill during the procedure. Metadata is downloaded from https://diavgeia.gov.gr/luminapi/api/decisions/{IUN}
-  3. Α `version_history.json` file, which corresponds to the history of a specific decision. This file is included only in the examples that alternate a decision (e.g. this DonationGrant[https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/DonationGrant/version_history.json])
+  3. Α `version_history.json` file, which corresponds to the history of a specific decision. This file is included only in the examples that alternate a decision (e.g. this [DonationGrant](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/DonationGrant/version_history.json)
   4. A `.n3` file, which is the decision expressed according to the rdf schema.
 - By exploring the `.n3` files, it is fairly simple to understand the rdf schema. There are various examples, in which you can see the way:
   1. An economic transaction among government institution and individuals.
