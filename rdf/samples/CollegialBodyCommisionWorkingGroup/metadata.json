@@ -1,0 +1,40 @@
+{
+  "protocolNumber": "126004/Ζ1",
+  "subject": "Διαπιστωτική Πράξη Διορισμού του Προέδρου του Ακαδημαϊκού Συμβουλίου της Ανώτατης Εκκλησιαστικής Ακαδημίας Θεσσαλονίκης.",
+  "issueDate": 1469750400000,
+  "organizationId": "100015990",
+  "signerIds": [
+    "100015163"
+  ],
+  "unitIds": [
+    "100007927"
+  ],
+  "decisionTypeId": "Γ.2",
+  "thematicCategoryIds": [
+    "36"
+  ],
+  "extraFieldValues": {
+    "eidosPraxisSyllogikou": "Παύση - Αντικατάσταση μέλους",
+    "typeOfSullogiko": "Όργανο άλλης αρμοδιοότητας",
+    "positionSalary": null,
+    "fek": {
+      "aa": "429",
+      "issue": "fektype_YODD",
+      "issueyear": 2016
+    },
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΩΓΒΥ4653ΠΣ-ΘΣ7",
+  "publishTimestamp": 1473252453013,
+  "submissionTimestamp": 1473252453013,
+  "versionId": "e8c8d1df-a927-43a2-9b0e-1ce59ad92569",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΓΒΥ4653ΠΣ-ΘΣ7",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΓΒΥ4653ΠΣ-ΘΣ7",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
