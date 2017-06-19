@@ -1,4 +1,4 @@
-<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e> a <http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw>;
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e> a <http://diavgeia.gov.gr/ontology/OccupationInvitation>;
 	<http://diavgeia.gov.gr/ontology/version> "e1e27523-ab46-440f-ab28-d8f930435d1e";
 	<http://diavgeia.gov.gr/ontology/iun> "72ΞΑ46Ψ8ΧΒ-ΙΑΜ"@el;
 	<http://data.europa.eu/eli/ontology#title> "Προκήρυξη θέσης καθηγητή του Τμήματος Μη\nχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη βαθμίδα του καθηγητή πρώτης βαθμίδας, με γνωστικό αντικείμενο\n«Μέθοδοι παραγωγής και αξιολόγηση ιδιοτήτων μεταλλικών υλικών»."@el;

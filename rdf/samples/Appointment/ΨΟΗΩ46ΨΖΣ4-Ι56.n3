@@ -11,7 +11,7 @@
 	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2107221088";
 	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2107721948";
 	<http://diavgeia.gov.gr/ontology/government_institution_email> "apofiti@central.ntua.gr";
-	<http://diavgeia.gov.gr/ontology/government_institution_email> "Κ. Ποδάρα";
+	<http://diavgeia.gov.gr/ontology/government_institution_information> "Κ. Ποδάρα";
 	<http://diavgeia.gov.gr/ontology/protocol_number> "16054";
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/Consideration/1>;
 	<http://diavgeia.gov.gr/ontology/has_afterdecision> <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/AfterDecision>;
@@ -24,7 +24,7 @@
 	<http://diavgeia.gov.gr/ontology/fek_number> "814"@el;
 	<http://diavgeia.gov.gr/ontology/fek_issue> "Γ"@el;
 	<http://diavgeia.gov.gr/ontology/fek_year> "2016"@el;
-	<http://diavgeia.gov.gr/ontology/appointment_number_employees> "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	<http://diavgeia.gov.gr/ontology/number_employees> "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	<http://diavgeia.gov.gr/ontology/appointment_employer_org> "99203026";
 	<http://diavgeia.gov.gr/ontology/has_private_data> false;
 	<http://diavgeia.gov.gr/ontology/organization_id> "99203026";

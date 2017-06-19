@@ -1,0 +1,48 @@
+{
+  "protocolNumber": "44312/25-11-2015",
+  "subject": "ΣΥΜΒΑΣΗ ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΠΟ 20/6/13 ΕΩΣ 31/8/15",
+  "issueDate": 1371686400000,
+  "organizationId": "99206920",
+  "signerIds": [
+    "131549"
+  ],
+  "unitIds": [
+    "74045"
+  ],
+  "decisionTypeId": "Γ.3.4",
+  "thematicCategoryIds": [
+    "10004"
+  ],
+  "extraFieldValues": {
+    "contractType": "Σύμβαση Έργου",
+    "numberOfPeople": 1,
+    "financedProject": true,
+    "person": [
+      {
+        "afm": "062343801",
+        "name": "ΣΕΡΠΕΤΣΙΔΑΚΗ,,ΑΝΝΑ,ΙΩΑΝΝΗΣ",
+        "enterName": false,
+        "afmType": "EL"
+      }
+    ],
+    "contractAmount": {
+      "amount": 5500.0,
+      "currency": "EUR"
+    },
+    "duration": "ΑΠΟ 20/6/13 ΕΩΣ 31/8/15",
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": true,
+  "ada": "ΩΜΟΔ469Β7Θ-6Τ9",
+  "publishTimestamp": 1452594644088,
+  "submissionTimestamp": 1452594644088,
+  "versionId": "b3db8d62-c6b2-49f0-bc79-707b8e4a1c21",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΜΟΔ469Β7Θ-6Τ9",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΜΟΔ469Β7Θ-6Τ9",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
