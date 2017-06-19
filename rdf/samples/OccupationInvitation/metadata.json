@@ -1,0 +1,34 @@
+{
+  "protocolNumber": "14501",
+  "subject": "Προκήρυξη θέσης καθηγητή του Τμήματος Μη\nχανολόγων Μηχανικών του Αριστοτελείου Πανε\nπιστημίου Θεσσαλονίκης στη βαθμίδα του καθη\nγητή πρώτης βαθμίδας, με γνωστικό αντικείμενο\n«Μέθοδοι παραγωγής και αξιολόγηση ιδιοτήτων\nμεταλλικών υλικών».",
+  "issueDate": 1465257600000,
+  "organizationId": "99202041",
+  "signerIds": [
+    "100001408"
+  ],
+  "unitIds": [
+    "72831"
+  ],
+  "decisionTypeId": "Γ.3.1",
+  "thematicCategoryIds": [
+    "10004"
+  ],
+  "extraFieldValues": {
+    "vacancyOpeningType": "Προκήρυξη Πλήρωσης Θέσεων Διδακτικού Ερευνητικού Προσωπικού (ΔΕΠ) Πανεπιστημιακού τομέα",
+    "textRelatedADA": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "72ΞΑ46Ψ8ΧΒ-ΙΑΜ",
+  "publishTimestamp": 1465284835474,
+  "submissionTimestamp": 1465284835474,
+  "versionId": "e1e27523-ab46-440f-ab28-d8f930435d1e",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/72ΞΑ46Ψ8ΧΒ-ΙΑΜ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/72ΞΑ46Ψ8ΧΒ-ΙΑΜ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

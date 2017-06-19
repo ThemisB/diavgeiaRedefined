@@ -234,7 +234,7 @@
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/related_occupation_invitation">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList"/>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/OccupationInvation"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/OccupationInvitation"/>
     </owl:ObjectProperty>
     
 
@@ -247,6 +247,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OccupationInvitation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1740,6 +1741,55 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/vacancy_opening_type -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/vacancy_opening_type">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OccupationInvitation"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Προκήρυξη Εξετάσεων Άμισθων Υποθηκοφυλάκων</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Προκήρυξη Εξετάσεων Συμβολαιγράφων</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first xml:lang="el">Προκήρυξη Εξετάσεων Υποψήφιων Δικηγόρων</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first xml:lang="el">Προκήρυξη Πλήρωσης Θέσεων Διδακτικού Ερευνητικού Προσωπικού (ΔΕΠ) Πανεπιστημιακού τομέα</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first xml:lang="el">Προκήρυξη Πλήρωσης Θέσεων Εκπαιδευτικού Προσωπικού (ΕΠ) Τεχνολογικού τομέα της Ανώτατης Εκπαίδευσης</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first xml:lang="el">Προκήρυξη Πλήρωσης Θέσεων με διαγωνισμό ή επιλογή στις οποίες περιλαμβάνονται και οι προκηρύξεις για επιλογή και πλήρωση θέσεων διευθυντικών στελεχών των ΝΠΔΔ, φορέων του ευρύτερου δημόσιου τομέα, και των επιχειρήσεων και φορέων του ΟΤΑ &apos;Α &amp; Β΄βαθμού</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/version -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/version">
@@ -2005,10 +2055,11 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/OccupationInvation -->
+    <!-- http://diavgeia.gov.gr/ontology/OccupationInvitation -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OccupationInvation">
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OccupationInvitation">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ&quot;</rdfs:comment>
     </owl:Class>
     
 
