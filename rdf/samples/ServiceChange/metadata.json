@@ -1,0 +1,38 @@
+{
+  "protocolNumber": "100",
+  "subject": "ΔΙΑΠΙΣΤΩΤΙΚΗ ΠΡΑΞΗ ΑΥΤΟΔΙΚΑΙΗΣ ΛΥΣΗΣ ΤΗΣ ΥΠΑΛΛΗΛΙΚΗΣ ΣΧΕΣΗΣ\nΥΠΑΛΛΗΛΟΥ, ΛΟΓΩ ΚΑΤΟΧΗΣ ΔΕΥΤΕΡΗΣ ΘΕΣΗΣ",
+  "issueDate": 1451952000000,
+  "organizationId": "6046",
+  "signerIds": [
+    "110748"
+  ],
+  "unitIds": [
+    "93991"
+  ],
+  "decisionTypeId": "Γ.3.5",
+  "thematicCategoryIds": [
+    "10004"
+  ],
+  "extraFieldValues": {
+    "eidosYpMetavolis": "Λύση Υπαλληλικής Σχέσης",
+    "fek": {
+      "aa": "41",
+      "issue": "fektype_C",
+      "issueyear": 2016
+    },
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΩΕΒ4ΩΨ5-ΖΤ0",
+  "publishTimestamp": 1457342365381,
+  "submissionTimestamp": 1457342365381,
+  "versionId": "9607fd19-6084-42f4-9cfd-0a56c867e165",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΕΒ4ΩΨ5-ΖΤ0",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΕΒ4ΩΨ5-ΖΤ0",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

@@ -1575,6 +1575,49 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/service_change_decision_type -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/service_change_decision_type">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/ServiceChange"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first xml:lang="el">Αποδοχή Παραίτησης</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first xml:lang="el">Διαθεσιμότητα</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first xml:lang="el">Λύση Υπαλληλικής Σχέσης</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first xml:lang="el">Μετάταξη</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first xml:lang="el">Υποβιβασμός</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/signer_id -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/signer_id">
@@ -2208,6 +2251,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;Υπηρεσιακή Μεταβολή&quot;</rdfs:comment>
     </owl:Class>
     
 
