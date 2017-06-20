@@ -2360,6 +2360,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/PublicPrototypeDocuments">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ&quot;</rdfs:comment>
     </owl:Class>
     
 

@@ -1,0 +1,31 @@
+{
+  "protocolNumber": "25551",
+  "subject": "Υποβολή προς έγκριση του πρακτικού τεχνικής αξιολόγησης όπως αυτό υπεβλήθη από την αρμοδίως ορισθείσα επιτροπή διενέργειας του πρόχειρου διαγωνισμού για την ανάδειξη παρόχου του έργου του ελέγχου των οικονομικών καταστάσεων της οικονομικής χρήσης των ετών 2013 και 2014 (Α.Δ. 29-14).",
+  "issueDate": 1401408000000,
+  "organizationId": "99222003",
+  "signerIds": [
+    "129341"
+  ],
+  "unitIds": [
+    "75132"
+  ],
+  "decisionTypeId": "Ζ.1",
+  "thematicCategoryIds": [
+    "20"
+  ],
+  "extraFieldValues": {
+    "documentType": "ΠΡΟΤΥΠΟ ΕΓΓΡΑΦΟ"
+  },
+  "privateData": false,
+  "ada": "784Ι46906Ψ-59Σ",
+  "publishTimestamp": 1404193811006,
+  "submissionTimestamp": 1404193811006,
+  "versionId": "b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/784Ι46906Ψ-59Σ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/784Ι46906Ψ-59Σ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
