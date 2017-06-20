@@ -1,0 +1,32 @@
+{
+  "protocolNumber": "15331",
+  "subject": "353/2016 ΑΠΟΦΑΣΗ ΕΠΙΤΡΟΠΗΣ ΣΥΝΤΗΡΗΣΗΣ ΚΑΙ ΕΠΙΣΚΕΥΗΣ ΟΧΗΜΑΤΩΝ ΓΙΑ ΤΟ ΚΗΥ 9946",
+  "issueDate": 1467763200000,
+  "organizationId": "6105",
+  "signerIds": [
+    "133110"
+  ],
+  "unitIds": [
+    "93302"
+  ],
+  "decisionTypeId": "Ε.1",
+  "thematicCategoryIds": [
+    "20"
+  ],
+  "extraFieldValues": {
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "60Β3ΩΡΙ-ΒΝ3",
+  "publishTimestamp": 1473317717387,
+  "submissionTimestamp": 1473317717387,
+  "versionId": "b4ae1411-f81d-437b-9c63-a8b7d4ed866b",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/60Β3ΩΡΙ-ΒΝ3",
+  "documentUrl": "https://diavgeia.gov.gr/doc/60Β3ΩΡΙ-ΒΝ3",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

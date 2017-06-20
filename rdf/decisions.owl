@@ -162,7 +162,7 @@
     <!-- http://diavgeia.gov.gr/ontology/has_present -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_present">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Records"/>
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Present"/>
     </owl:ObjectProperty>
     
@@ -2074,6 +2074,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/AffiliatedInvestments">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -2117,6 +2118,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΙΣΜΟΥ&quot;</rdfs:comment>
     </owl:Class>
     
 
