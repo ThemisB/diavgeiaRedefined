@@ -1,0 +1,35 @@
+{
+  "protocolNumber": "Φ14.1/2991",
+  "subject": "Αναγνώριση συνάφειας M.Τ.Σ. σε  εκπαιδευτικό",
+  "issueDate": 1465257600000,
+  "organizationId": "100015990",
+  "signerIds": [
+    "100018799"
+  ],
+  "unitIds": [
+    "71549"
+  ],
+  "decisionTypeId": "2.4.7.1",
+  "thematicCategoryIds": [
+    "10004"
+  ],
+  "extraFieldValues": {
+    "kanonistikipraxitype": null,
+    "kanonistikiPraxiPublishMedium": null,
+    "fek": null,
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "ΩΠΨ64653ΠΣ-5ΚΠ",
+  "publishTimestamp": 1465363673192,
+  "submissionTimestamp": 1465363673192,
+  "versionId": "af622e94-52b1-455c-914e-249fbb444093",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/ΩΠΨ64653ΠΣ-5ΚΠ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/ΩΠΨ64653ΠΣ-5ΚΠ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
