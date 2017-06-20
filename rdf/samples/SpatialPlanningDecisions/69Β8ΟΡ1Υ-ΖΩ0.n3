@@ -1,0 +1,72 @@
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec> a <http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions>;
+	<http://diavgeia.gov.gr/ontology/version> "b07f8acc-1558-4bb4-a138-d30dd71e39ec";
+	<http://diavgeia.gov.gr/ontology/iun> "69Β8ΟΡ1Υ-ΖΩ0"@el;
+	<http://data.europa.eu/eli/ontology#title> "Μη άσκηση αντίρρησης επί της με αριθμό πρωτ. 27704/18-11-2015 πράξης χαρακτηρισμού"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-01-13"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "486";
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΑΠΟΚΕΝΤΡΩΜΕΝΗ ΔΙΟΙΚΗΣΗ ΜΑΚΕΔΟΝΙΑΣ - ΘΡΑΚΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΔΑΣΩΝ & ΑΓΡΟΤΙΚΩΝ ΥΠΟΘΕΣΕΩΝ - ΔΙΕΥΘΥΝΣΗ ΔΑΣΩΝ Ν. ΧΑΛΚΙΔΙΚΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΔΑΣΙΚΩΝ ΧΑΡΤΟΓΡΑΦΗΣΕΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_address> "Δασικό κτίριο"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "63100";
+	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2371022072";
+	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2371021419";
+	<http://diavgeia.gov.gr/ontology/recipients> "Α.Δ.Μ.Θ Γεν. Δ/νση Δασών & Αγροτικών Υποθέσεων, Δ/νση Συντονισμού και Επιθεώρησης Δασών (Λεωφόρος Γεωργικής Σχολής 46, Τ.Κ. 551 02 ΘΕΣΣΑΛΟΝΙΚΗ)"@el;
+	<http://diavgeia.gov.gr/ontology/recipients> "Δασαρχείο Πολύγυρου ΕΝΤΑΥΘΑ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_email> "ddas-xal@damt.gov.gr";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/3>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/4>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/5>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/6>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/7>;
+	<http://diavgeia.gov.gr/ontology/decision_type> "ΑΠΟΦΑΣΙΖΟΥΜΕ"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "AgricultureForestryFishery";
+	<http://diavgeia.gov.gr/ontology/spatial_planning_decision_type> "Καθορισμός εθνικών δρυμών, δασών και δασικών εκτάσεων"@el;
+	<http://diavgeia.gov.gr/ontology/municipality> "ΔΗΜΟΣ ΝΕΑΣ ΠΡΟΠΟΝΤΙΔΑΣ"@el;
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "50205";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1452674845595";
+	<http://diavgeia.gov.gr/ontology/unit_id> "77472".
+
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την § 3 του άρθρου 14 του Ν. 998/79 «Περί προστασίας δασών»."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1979/998/article/14/paragraph/3>.
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 3852/10 για τη «Νέα Αρχιτεκτονική της Αυτοδιοίκησης και της Αποκεντρωµένης ∆ιοίκησης – Πρόγραµµα Καλλικράτης», σε συνδυασµό µε τις διατάξεις του Π.∆. 142/2010 «Οργανισµός της Αποκεντρωµένης ∆ιοίκησης Μακεδονίας-Θράκης» (ΦΕΚ: 235/τ.Α΄/27-12-2010). "@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3582>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2010/142>.
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την µε αριθµό πρωτ. οικ. 99386/06-11-2014 ανάθεση άσκησης αρµοδιοτήτων σε οργανικές µονάδες της Αποκεντρωµένης ∆ιοίκησης Μακεδονίας – Θράκης και παροχή εξουσιοδότησης υπογραφής πράξεων και εγγράφων «Με εντολή Γενικού Γραµµατέα» στους προϊσταµένους των οργανικών µονάδων της Αποκεντρωµένης ∆ιοίκησης Μακεδονίας – Θράκης (ΦΕΚ: 3105/τ. Β΄/18-11-2014)."@el.
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την µε αριθµό πρωτ. 14124/11-03-2011 απόφαση του Γ.Γ. Α∆ΜΘ για ορισµό υπαλλήλων ως Αναπληρωτών Προϊσταµένων των ∆/νσεων ∆ασών, ∆/νσεων Αναδασώσεων των ∆/νσεων Αγροτικών Υποθέσεων και ∆ασαρχείων."@el.
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 3861/2010 «Ενίσχυση της διαφάνειας µε την υποχρεωτική ανάρτηση νόµων και πράξεων των κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο διαδίκτυο «Πρόγραµµα ∆ιαύγεια» και άλλες διατάξεις»."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3861>.
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 4061/2012 «περί διαχείρισης και προστασίας ακινήτων Υπουργείου Αγροτικής Ανάπτυξης και Τροφίµων − Ρύθµιση εµπραγµάτων δικαιωµάτων και λοιπές διατάξεις» (Φ.Ε.Κ. 66 τΑ΄/22-3-2012) σε συνδυασµό µε τα οριζόµενα των µε αριθµό πρωτ. 169536/19-4-2012, 1204/51539/2-5-2012, 779/34393/23-5-2012 και 171460/2421/19-6-2012 Εγκυκλίων ∆ιαταγών του Υ.Π.Ε.Κ.Α. «περί οδηγιών για την εφαρµογή του Ν. 4061/2012»."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2012/4061>.
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/7> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την µε αριθµό πρωτ. 27704/18-11-2015 πράξη χαρακτηρισµού του ∆ασάρχη Πολυγύρου και τον έλεγχο των στοιχείων της, από τον οποίο προκύπτει ότι δεν συντρέχουν λόγοι προσφυγής κατά αυτής."@el.
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "∆εν ασκούµε αντίρρηση κατά της µε αριθµό πρωτ. 27704/18-11-2015 πράξης χαρακτηρισµού του ∆ασάρχη Πολυγύρου (Α∆Α: 7Α6ΞΟΡ1Υ-62Ξ) που αφορά έκταση µε εµβαδόν Ε = 2126,70 m2 που αποτελεί το µε αριθµό 4273 τεµάχιο αγροκτήµατος «Ν. Τρίγλιας» της ∆.Κ. Ν. Τρίγλιας του ∆ήµου Ν. Προποντίδας. Η παραπάνω έκταση δεν υπάγεται στην κατηγορία δασών ή δασικών εκτάσεων κατά την έννοια της §6 περίπτωση α του άρθρου 3 του Ν. 998/1979 όπως αντικαταστάθηκε από την §4 του άρθρου 32 του Ν.4280/2014. "@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/7Α6ΞΟΡ1Υ-62Ξ>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1979/998/article/3/paragraph/3>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2014/4280/article/32/paragraph/4>.
+
+<http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Αναπληρωτής Δ/ντης Δασών Χαλκιδικής"@el;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Δασολόγος"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "112320"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Γεώργιος Καψάλης"@el.

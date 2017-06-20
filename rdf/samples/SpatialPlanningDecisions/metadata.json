@@ -1,0 +1,38 @@
+{
+  "protocolNumber": "486",
+  "subject": "Μη άσκηση αντίρρησης επί της με αριθμό πρωτ. 27704/18-11-2015 πράξης χαρακτηρισμού",
+  "issueDate": 1452643200000,
+  "organizationId": "50205",
+  "signerIds": [
+    "112320"
+  ],
+  "unitIds": [
+    "77472"
+  ],
+  "decisionTypeId": "2.4.6.1",
+  "thematicCategoryIds": [
+    "56"
+  ],
+  "extraFieldValues": {
+    "xorotaxikipraxitype": "Καθορισμός εθνικών δρυμών, δασών και δασικών εκτάσεων",
+    "municipality": "1304",
+    "relatedDecisions": [
+      {
+        "relatedDecisionsADA": "7Α6ΞΟΡ1Υ-62Ξ"
+      }
+    ],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "69Β8ΟΡ1Υ-ΖΩ0",
+  "publishTimestamp": 1452674845595,
+  "submissionTimestamp": 1452674845595,
+  "versionId": "b07f8acc-1558-4bb4-a138-d30dd71e39ec",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/69Β8ΟΡ1Υ-ΖΩ0",
+  "documentUrl": "https://diavgeia.gov.gr/doc/69Β8ΟΡ1Υ-ΖΩ0",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
