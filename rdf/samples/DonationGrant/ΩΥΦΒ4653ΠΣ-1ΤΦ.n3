@@ -1,7 +1,7 @@
 <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1> a <http://diavgeia.gov.gr/ontology/DonationGrant>;
 	<http://diavgeia.gov.gr/ontology/version> "d217641b-5109-43a2-aa00-03801c8361f1";
 	<http://diavgeia.gov.gr/ontology/iun> "ΩΥΦΒ4653ΠΣ-1ΤΦ"@el;
-  <http://diavgeia.gov.gr/ontology/repeat_to_correct> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/2e006bdd-4021-4b06-8aa8-50b7a82f5af2>;
+  <http://data.europa.eu/eli/ontology#repeals> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/2e006bdd-4021-4b06-8aa8-50b7a82f5af2>;
 	<http://data.europa.eu/eli/ontology#title> "ΑΠΟΦΑΣΗ - ΕΝΤΟΛΗ ΠΛΗΡΩΜΗΣ - ΕΘΝΙΚΟ ΣΚΕΛΟΣ ΠΔΕ"@el;
 	<http://data.europa.eu/eli/ontology#date_publication> "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
 	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ, ΕΡΕΥΝΑΣ & ΘΡΗΣΚΕΥΜΑΤΩΝ"@el;

@@ -6,7 +6,6 @@
 	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΑΣ"@el;
 	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΕΠΙΤΡΟΠΗ ΣΥΝΤΗΡΗΣΗΣ ΚΑΙ ΕΠΙΣΚΕΥΗΣ ΟΧΗΜΑΤΩΝ"@el;
 	<http://diavgeia.gov.gr/ontology/protocol_number> "15331";
-	<http://diavgeia.gov.gr/ontology/has_preconsideration> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/PreConsideration>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/1>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/2>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/2>;
