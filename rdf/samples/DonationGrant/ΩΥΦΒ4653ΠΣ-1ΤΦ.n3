@@ -28,7 +28,7 @@
   <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/10>;
   <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/11>;
   <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/12>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζουμε"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζουμε"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΑΣ, ΥΠΟΔΟΜΩΝ, ΑΝΑΠΤΥΞΗΣ ΚΑΙ ΤΟΥΡΙΣΜΟΥ Δ/ΝΣΗ Δ'- ΤΜΗΜΑ Ε-101 8- ΑΘΗΝΑ'"@el;

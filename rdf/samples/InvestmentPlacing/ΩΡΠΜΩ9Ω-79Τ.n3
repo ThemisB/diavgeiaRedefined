@@ -8,7 +8,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/1>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/2>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζει"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζει"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΡΠΜΩ9Ω-79Τ/0f1eeece-ae51-454d-a895-63868455f63d/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "EuropeanUnion";

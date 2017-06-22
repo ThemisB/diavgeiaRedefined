@@ -15,7 +15,7 @@
   <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/4>;
   <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/5>;
   <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Consideration/6>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζουμε"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζουμε"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7Ν7ΚΟΞΩΡ-4ΨΨ/82c075dd-73f4-40fa-b0fb-690a3b61f552/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicActivity";

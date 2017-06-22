@@ -586,15 +586,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/commitment_number -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/commitment_number">
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/contract_decision_type -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_decision_type">
@@ -684,14 +675,15 @@
     <!-- http://diavgeia.gov.gr/ontology/cpv -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/cpv">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/decision_type -->
+    <!-- http://diavgeia.gov.gr/ontology/decision_call -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/decision_type">
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/decision_call">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -779,6 +771,19 @@
     <!-- http://diavgeia.gov.gr/ontology/fek_issue -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/fek_issue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Appointment"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/LegislativeDecree"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Normative"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -869,6 +874,19 @@
     <!-- http://diavgeia.gov.gr/ontology/fek_number -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/fek_number">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Appointment"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/LegislativeDecree"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Normative"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -877,6 +895,19 @@
     <!-- http://diavgeia.gov.gr/ontology/fek_year -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/fek_year">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Appointment"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/LegislativeDecree"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Normative"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1050,6 +1081,17 @@
     <!-- http://diavgeia.gov.gr/ontology/has_text -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_text">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/AfterDecision"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Consideration"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Decision"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/PreConsideration"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Verification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1094,6 +1136,15 @@
     <!-- http://diavgeia.gov.gr/ontology/kae -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1101,13 +1152,19 @@
 
     <!-- http://diavgeia.gov.gr/ontology/kae_budget_remainder -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae_budget_remainder"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae_budget_remainder">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://diavgeia.gov.gr/ontology/kae_credit_remainder -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae_credit_remainder"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae_credit_remainder">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -1555,13 +1612,19 @@
 
     <!-- http://diavgeia.gov.gr/ontology/recipient_for_action -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/recipient_for_action"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/recipient_for_action">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://diavgeia.gov.gr/ontology/recipient_for_share -->
 
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/recipient_for_share"/>
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/recipient_for_share">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 

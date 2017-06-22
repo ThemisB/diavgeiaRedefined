@@ -12,7 +12,7 @@
 	<http://diavgeia.gov.gr/ontology/protocol_number> "25551";
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Consideration/1>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Consideration/2>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "ΕΓΚΡΙΝΕΙ"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΕΓΚΡΙΝΕΙ"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/2>;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/3>;

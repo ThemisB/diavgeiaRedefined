@@ -10,7 +10,7 @@
   <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/4>;
   <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Consideration/5>;
   <http://diavgeia.gov.gr/ontology/has_verified> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Verification/1>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Προτείνουμε"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Προτείνουμε"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Decision/1>;
   <http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Verification/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΧΙΥΩΚ9-4ΑΟ/50dc1566-7769-4af4-ad5e-0acab54e08e6/Signer/1>;

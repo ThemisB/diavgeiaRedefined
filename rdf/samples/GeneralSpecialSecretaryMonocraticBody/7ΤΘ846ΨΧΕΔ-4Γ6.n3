@@ -8,7 +8,7 @@
 	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΜΙΣΘΟΛΟΓΙΟΥ & ΠΑΡΟΧΩΝ"@el;
 	<http://diavgeia.gov.gr/ontology/protocol_number> "207699";
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζει"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζει"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "PoliticalLife";

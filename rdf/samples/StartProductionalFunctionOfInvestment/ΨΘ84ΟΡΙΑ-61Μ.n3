@@ -38,7 +38,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/24>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/25>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/26>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Αποφασίζει"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζει"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Decision/2>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Signer/1>;

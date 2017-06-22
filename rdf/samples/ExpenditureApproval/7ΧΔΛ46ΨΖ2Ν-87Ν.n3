@@ -14,7 +14,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/1>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/2>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Δίνεται Εντολή Πληρωμής"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Δίνεται Εντολή Πληρωμής"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "CommunicationEducation";

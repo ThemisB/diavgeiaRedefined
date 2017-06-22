@@ -21,7 +21,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/5>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/6>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/7>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "ΑΠΟΦΑΣΙΖΟΥΜΕ"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΖΟΥΜΕ"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "AgricultureForestryFishery";

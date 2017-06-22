@@ -19,7 +19,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/4>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/5>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/6>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "ΑΠΟΦΑΣΙΖΟΥΜΕ"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΖΟΥΜΕ"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/recipient> "ΝΑΥΤΙΛΙΑΚΗ ΕΤΑΙΡΕΙΑ ΘΑΣΟΥ Α.Ε. 64004 ΘΑΣΟΣ"@el;

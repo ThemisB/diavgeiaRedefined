@@ -11,7 +11,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/1>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/2>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "ΑΠΟΦΑΣΙΣΑΝ"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΣΑΝ"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Decision/2>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/1>;

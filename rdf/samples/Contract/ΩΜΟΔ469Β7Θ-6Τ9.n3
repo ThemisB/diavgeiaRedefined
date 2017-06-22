@@ -16,7 +16,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/1>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/2>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Εγκρίνεται"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Εγκρίνεται"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Expense/1>;

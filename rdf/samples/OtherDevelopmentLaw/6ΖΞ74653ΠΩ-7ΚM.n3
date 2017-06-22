@@ -15,7 +15,7 @@
 	<http://diavgeia.gov.gr/ontology/protocol_number> "2131.7/665/17";
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Consideration/1>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Consideration/2>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Ανακαλούμε"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Ανακαλούμε"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Decision/2>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Signer/1>;

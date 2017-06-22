@@ -19,7 +19,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/11>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/12>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/13>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "ΑΠΟΦΑΣΙΣΕ"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΣΕ"@el;
 	<http://diavgeia.gov.gr/ontology/vacancy_opening_type> "Προκήρυξη Πλήρωσης Θέσεων Διδακτικού Ερευνητικού Προσωπικού (ΔΕΠ) Πανεπιστημιακού τομέα"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Signer/1>;

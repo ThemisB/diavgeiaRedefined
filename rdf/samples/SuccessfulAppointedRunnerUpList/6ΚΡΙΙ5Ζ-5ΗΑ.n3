@@ -16,7 +16,7 @@
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΚΡΙΙ5Ζ-5ΗΑ/38a2ad2f-ab1c-417f-94b6-607077a4b2f6/Consideration/9>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΚΡΙΙ5Ζ-5ΗΑ/38a2ad2f-ab1c-417f-94b6-607077a4b2f6/Consideration/10>;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΚΡΙΙ5Ζ-5ΗΑ/38a2ad2f-ab1c-417f-94b6-607077a4b2f6/Consideration/11>;
-	<http://diavgeia.gov.gr/ontology/decision_type> "Εγκρίνει"@el;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Εγκρίνει"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΚΡΙΙ5Ζ-5ΗΑ/38a2ad2f-ab1c-417f-94b6-607077a4b2f6/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΚΡΙΙ5Ζ-5ΗΑ/38a2ad2f-ab1c-417f-94b6-607077a4b2f6/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "Employment";
