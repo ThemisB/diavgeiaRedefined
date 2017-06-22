@@ -9,6 +9,15 @@ Sections
 4. [URIs - ELI](#uris---eli)
 5. [Schema Classes](#schema-classes)
 6. [Common Datatype Properties](#common-datatype-properties)
+7. [Decision specific Object and Datatype Properties](#decision-specific-object-and-datatype-properties)
+    1. [AffiliatedInvestments](#affiliatedinvestments)
+    2. [Appointment](#appointment)
+    3. [Award](#award)
+    4. [BalanceAccount](#balanceaccount)
+    5. [BudgetApproval](#budgetapproval)
+    6. [Circular](#circular)
+    7. [CollegialBodyCommisionWorkingGroup](#collegialbodycommisionworkinggroup)
+    8. [CommisionWarrant](#commisionwarrant)
 
 Diavgeia Issues
 --------
@@ -17,8 +26,7 @@ Diavgeia Issues
 
 2. The majority of decisions, follow the model of `taking into consideration the law  X - we decide`. We want to make sure, that these laws exist and link each decision with the laws that has taken into consideration, or even with other decisions of Diavgeia. Ideally, the user would be able to just click a consideration of the decision and read the specific law of the greek legislation. That would greatly limit the time spend on navigating through the greek law.
 
-The RDF Schema
-----------------
+## The RDF Schema
 
 We will solve the aforementioned issues, by expressing decisions using a RDF Schema. A "side-effect" of this work is to promote the [Open Linked Data movement](https://en.wikipedia.org/wiki/Linked_data#Linked_open_data) and more generally the [open governance](https://en.wikipedia.org/wiki/Open_government).
 
@@ -72,7 +80,7 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
   3. Α `version_history.json` file, which corresponds to the history of a specific decision. This file is included only in the examples that alternate a decision (e.g. this [DonationGrant](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/DonationGrant/version_history.json))
   4. A `.n3` file, which is the decision expressed according to the rdf schema.
 
-### URIs - ELI
+## URIs - ELI
 
   Recently, the European Council introduced the European Legislation Identifier ([ELI](http://www.eli.fr/en/)) as a new common framework that has to be adopted by the national legal publishing systems in order to unify and link national legislation with European legislation. Diavgeia's RDF Schema adopts the ELI URI Format, as follows:
 
@@ -221,7 +229,7 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
     1. `present_name` : The name of the person (__Range__:**xsd:string**).
     2. `present_title` : The role of the person (__Range__:**xsd:string**).
 
-### Common Datatype Properties
+## Common Datatype Properties
 
 These properties have as subject a `Decision(LegalResource)` entity and thus we can say they are common for all the different decision types.
 
@@ -248,3 +256,84 @@ These properties have as subject a `Decision(LegalResource)` entity and thus we 
 21. **unit_id** : Every decision should have at least one unit_id code, which is related to the units involved in signing the decision (__Range__:**xsd:string**).
 22. **organization_id** : Every decision should have exactly one organization_id which is in fact the government institution code (__Range__:**xsd:string**).
 23. **submission_timestamp** : Time of the upload, expressed in Unix Timestamp (Milliseconds from epoch) (__Range__:**xsd:string**).
+
+## Decision Specific Object and Datatype Properties
+
+As it was previously mentioned, Diavgeia hosts 34 different decision types. This means that the rdf schema should include decision-specific object and datatype properties which are presented here.
+
+### AffiliatedInvestments
+
+**Greek Translation** : ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ
+
+This type of decision does not have any specific object or datatype properties.
+
+### Appointment
+
+**Greek Translation** : ΔΙΟΡΙΣΜΟΣ
+
+**Datatype Properties**
+  - **appointment_employer_org** : The organization id of the government institution that is responsible for the appointment (__Range__:**xsd:string**).
+  - **fek_issue** : Relates the Appointment with the fek issue. (__Range__:**OneOf {"Α"@el , "Α.Α.Π."@el , "Α.Ε.Δ."@el , "Α.Π.Σ."@el , "Α.Σ.Ε.Π."@el , "Β"@el , "Γ"@el , "Δ"@el , "Δ.Δ.Σ."@el , "Ε.Β.Ι"@el , "Ν.Π.Δ.Δ."@el , "Ο.Π.Κ."@el , "ΠΑΡΑΡΤΗΜΑ"@el}**).
+  - **fek_number** : (__Range__:**xsd:string**).
+  - **fek_year** : (__Range__:**xsd:string**).
+  - **number_employees** : Number of employees of this appointment (__Range__:**xsd:integer**).
+- - -
+### Award
+
+**Greek Translation** : ΚΑΤΑΚΥΡΩΣΗ
+
+**Object Properties**
+  - **related_declaration_summary** : An optional object property which relates an `Award` with a `DeclarationSummary` (__Range__:**dvg:DeclarationSummary**).
+
+- - -
+### BalanceAccount
+
+**Greek Translation** : ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ
+
+**Datatype Properties**
+  - **balance_account_type** : (__Range__:**OneOf{"Απολογισμός"@el , "Ισολογισμός"@el , "Ισολογισμός και Απολογισμός"@el}**).
+  - **balance_account_time_period** : (__Range__:**OneOf{"Έτος"@el , "Εξάμηνο"@el , "Τρίμηνο"@el}**).
+  - **financial_year** : (__Range__ :**xsd_string**).
+  - **has_related_institution** : (__Range__ :**xsd_string**).
+  - **is_balance_account_approval_for_org** : True if a third government institutuion should approve this balance account (__Range__ :**xsd_boolean**).
+- - -
+### BudgetApproval
+
+**Greek Translation** : ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ
+
+**Datatype Properties**
+  - **budget_type** : (__Range__:**OneOf{"Κρατικός"@el , "Φορέα"@el}**).
+  - **budget_category** : (__Range__:**OneOf{"Ίδια Έσοδα"@el , "Πρόγραμμα Δημοσίων Επενδύσεων"@el , "Τακτικός Προϋπολογισμός"@el}**).
+  - **is_budget_approval_for_org** : Similar to [BalanceAccount](#balanceaccount).
+  - **financial_year** : Similar to [BalanceAccount](#balanceaccount).
+  - **has_related_institution** : Similar to [BalanceAccount](#balanceaccount).
+
+- - -
+### Circular
+
+**Greek Translation** : ΕΓΚΥΚΛΙΟΣ
+
+**Datatype Properties**
+  - **circular_number** : (__Range__:**xsd:string**).
+
+- - -
+
+### CollegialBodyCommisionWorkingGroup
+
+**Greek Translation** : ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΣΥΛΛΟΓΙΚΟ ΟΡΓΑΝΟ - ΕΠΙΤΡΟΠΗ - ΟΜΑΔΑ ΕΡΓΑΣΙΑΣ - ΟΜΑΔΑ ΕΡΓΟΥ - ΜΕΛΗ ΣΥΛΛΟΓΙΚΟΥ ΟΡΓΑΝΟΥ
+
+**Datatype Properties**
+  - **collegial_body_decision_type** : (__Range__:**OneOf{"Αποδοχή Παραίτησης Μέλους"@el , "Καθορισμός Αμοιβής - Αποζημίωσης"@el , "Παύση - Αντικατάσταση μέλους"@el , "Συγκρότηση"@el}**).
+  - **collegial_body_party_type** : (__Range__:**OneOf{"Όργανο Γνωμοδοτικής Αρμοδιότητας"@el , "Όργανο άλλης αρμοδιότητας"@el , "Επιτροπή"@el , "Ομάδα έργου"@el , "Ομάδα εργασίας"@el , "Συλλογικό όργανο Διοίκησης"@el}**).
+  - **fek/fek_issue/fek_year** : Similar to [Appointment](#appointment).
+
+- - -
+### CommisionWarrant
+
+**Greek Translation** : ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ
+
+**Datatype Properties**
+  - **primary_officer** : (__Range__:**xsd:string**).
+  - **secondary_officer** : (__Range__:**xsd:string**).
+  - **budget_category** : Similar to [BudgetApproval](#budgetapproval).
+  - **financial_year** : Similar to [BalanceAccount](#balanceaccount).

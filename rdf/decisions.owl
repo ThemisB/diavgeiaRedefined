@@ -2406,9 +2406,7 @@
 
     <!-- http://diavgeia.gov.gr/ontology/OrganizationSponsor -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OrganizationSponsor">
-        <rdfs:comment>Currently used for BudgetApproval</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
     
 
 
@@ -2506,9 +2504,7 @@
 
     <!-- http://diavgeia.gov.gr/ontology/Sponsored -->
 
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Sponsored">
-        <rdfs:comment>Currently used for BudgetApproval</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Sponsored"/>
     
 
 
