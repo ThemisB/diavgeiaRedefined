@@ -1,15 +1,26 @@
-RDF Schema
+Adoption of RDF in Diavgeia
 ====
 
-Why RDF ?
+Sections
+-------
+1. [Diavgeia Issues](#diavgeia-issues)
+2. [The RDF Schema](#the-rdf-schema)
+3. [Decision Types and Samples](#decision-types-and-samples)
+4. [URIs - ELI](#uris---eli)
+5. [Schema Classes](#schema-classes)
+6. [Common Datatype Properties](#common-datatype-properties)
+
+Diavgeia Issues
 --------
 
 1. By the time i write this documentation, Diavgeia hosts over 24.3 Million pdf documents. That said, it is obvious that there is a great demand for space storage, as well as the fact that documents are stored as pdf files, eliminates our ability to extract statistical information. Extraction of statistical information is based on unreliable techniques (i.e. OCR) and thus we can not explore documents in an efficient way (i.e. pose queries). In other words, we want to upgrade the currently stored [1 star-decisions to 5 stars-decisions](http://5stardata.info/en/) and save some disk space.
 
 2. The majority of decisions, follow the model of `taking into consideration the law  X - we decide`. We want to make sure, that these laws exist and link each decision with the laws that has taken into consideration, or even with other decisions of Diavgeia. Ideally, the user would be able to just click a consideration of the decision and read the specific law of the greek legislation. That would greatly limit the time spend on navigating through the greek law.
 
-The Schema
+The RDF Schema
 ----------------
+
+We will solve the aforementioned issues, by expressing decisions using a RDF Schema. A "side-effect" of this work is to promote the [Open Linked Data movement](https://en.wikipedia.org/wiki/Linked_data#Linked_open_data) and more generally the [open governance](https://en.wikipedia.org/wiki/Open_government).
 
 ### Decision Types and Samples
 
@@ -73,7 +84,7 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
 
   Every different decision type is implemented as a subclass of `eli:LegalResource`. The `eli:repeals` object property links a decision with another decision when a correction happens. It is obvious that a `eli:repeals` which connects two entities that have the same IUN version, indicates a *Metadata Correction*, whereas in the case of decisions with different IUN, it indicates a *Decision Change*.
 
-### Classes
+### Schema Classes
   The ontology prefix of Diavgeia is `dvg` with value `http://diavgeia.gov.gr/ontology/`.
 
 #### Consideration
