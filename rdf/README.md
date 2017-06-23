@@ -38,7 +38,23 @@ Sections
     15. [ExpenditureApproval](#expenditureapproval)
     16. [GeneralSpecialSecretaryMonocraticBody](#generalspecialsecretarymonocraticbody)
     17. [InvestmentPlacing](#investmentplacing)
-        
+    18. [LegislativeDecree](#legislativedecree)
+    19. [Normative](#normative)
+    20. [OccupationInvitation](#occupationinvitation)
+    21. [Opinion](#opinion)
+    22. [OtherDecisions](#otherdecisions)
+    23. [OtherDevelopmentLaw](#otherdevelopmentlaw)
+    24. [OwnershipTransferOfAssets](#ownershiptransferofassets)
+    25. [PublicPrototypeDocuments](#publicprototypedocuments)
+    26. [Records](#records)
+    27. [ServiceChange](#servicechange)
+    28. [SpatialPlanningDecisions](#spatialplanningdecisions)
+    29. [StartProductionalFunctionOfInvestment](#startproductionalfunctionofinvestment)
+    30. [SuccessfulAppointedRunnerUpList](#successfilappointedrunneruplist)
+    31. [Undertaking](#undertaking)
+    32. [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies)
+8. [Conclusions](#conclusions)
+
 Diavgeia Issues
 --------
 
@@ -459,4 +475,177 @@ This type of decision does not have any specific object or data properties.
 
 ### InvestmentPlacing
 
+**Greek Translation** : ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ
+
 This type of decision does not have any specific object or data properties.
+
+- - -
+
+### LegislativeDecree
+
+**Greek Translation** : ΠΡΑΞΗ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1)
+
+**Data Properties**
+  - **legislative_decree_number** : |`Range → xsd:string`|
+  - **fek/fek_issue/fek_year** : Similar to [Appointment](#appointment).
+
+- - -
+
+### Normative
+
+**Greek Translation** : ΚΑΝΟΝΙΣΤΙΚΗ ΠΡΑΞΗ
+
+**Data Properties**
+  - **normative_number** : |`Range → xsd:string`|
+  - **normative_type** : |`Range → OneOf{"Κοινή Υπουργική Απόφαση"@el , "Πράξη Ανεξάρτητης Αρχής"@el , "Πράξη Γενικού / Ειδικού Γραμματέα Υπουργείου"@el , "Πράξη Γενικού Γραμματέα Αποκεντρωμένης Διοίκησης"@el , "Πράξη Οργάνου Διοίκησης Ν.Π.Δ.Δ."@el , "Πράξη Οργάνου Διοίκησης ΟΤΑ Α' και Β' Βαθμού (και εποπτευόμενων φορέων τους)"@el , "Πράξη Οργάνου Διοίκησης Φορέων Ευρύτερου Δημοσίου Τομέα"@el , "Πράξη Προέδρου της Δημοκρατίας"@el , "Πράξη Πρωθυπουργού"@el , "Πράξη Υπουργικού Συμβουλίου"@el , "Προεδρικό Διάταγμα"@el , "Υπουργική Απόφαση"@el, "Πράξη Ρυθμιστικής Αρχής"@el, "Πράξη Συλλογικού Κυβερνητικού Οργάνου"@el, "Διϋπουργική Απόφαση(ΔΕΕΑ)"@el, "Πράξη Υπουργού, Αναπληρωτή Υπουργού, Υφυπουργού"@el}`|
+  - **fek/fek_issue/fek_year** : Similar to [Appointment](#appointment).
+
+- - -
+
+### OccupationInvitation
+
+**Greek Translation** : ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ
+
+**Object Properties**
+  - **has_related_undertaking** : relates a [OccupationInvitation](#declarationsummary) with an [Undertaking](#undertaking). |`Range → dvg:Undertaking`|
+
+**Data Properties**
+  - **vacancy_opening_type** : |`Range → OneOf{"Προκήρυξη Εξετάσεων Άμισθων Υποθηκοφυλάκων"@el , "Προκήρυξη Εξετάσεων Συμβολαιγράφων"@el , "Προκήρυξη Εξετάσεων Υποψήφιων Δικηγόρων"@el , "Προκήρυξη Πλήρωσης Θέσεων Διδακτικού Ερευνητικού Προσωπικού (ΔΕΠ) Πανεπιστημιακού τομέα"@el , "Προκήρυξη Πλήρωσης Θέσεων Εκπαιδευτικού Προσωπικού (ΕΠ) Τεχνολογικού τομέα της Ανώτατης Εκπαίδευσης"@el , "Προκήρυξη Πλήρωσης Θέσεων με διαγωνισμό ή επιλογή στις οποίες περιλαμβάνονται και οι προκηρύξεις για επιλογή και πλήρωση θέσεων διευθυντικών στελεχών των ΝΠΔΔ, φορέων του ευρύτερου δημόσιου τομέα, και των επιχειρήσεων και φορέων του ΟΤΑ 'Α & Β΄βαθμού"@el}`|
+
+- - -
+
+### Opinion
+
+**Greek Translation** : ΓΝΩΜΟΔΟΤΗΣΗ
+
+*Note* : Opinion's format differentiates from other decisions, but it is quite specific. You can consider [this opinion sample](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Opinion).
+
+**Data Properties**
+  - **opinion_question_number** : Opinions have a specific question number which is used for reference. |`Range → xsd:string`|
+  - **opinion_question_summary** : The summary of the question |`Range → xsd:string`|
+  - **opinion_history** : The historical background of the question |`Range → xsd:string`|
+  - **opinion_analysis** : Based on the [Considerations](#consideration) which were quoted, *opinion_analysis* proceeds to in depth analysis and gives answers to the question. |`Range → xsd:string`|
+  - **opinion_conclusion** : It sums up *opinion_analysis* and simply states the answers of the question. |`Range → xsd:string`|
+  - **opinion_government_institution_type** : |`Range → {"Ανεξάρτητη Αρχή"@el, "ΝΣΚ"@el}`|
+
+- - -
+
+### OtherDecisions
+
+**Greek Translation** : ΛΟΙΠΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ
+
+**Data Properties**
+  - **publish_via** : |`Range → OneOf{"Ημερήσιο Τύπο"@el, "Ιστοσελίδα του φορέα"@el, "Κατάστημα της υπηρεσίας"@el, "ΦΕΚ"@el}`|
+  - **normative_type** : Similar to [Normative](#normative).
+  - **fek/fek_issue/fek_year** : Similar to [Appointment](#appointment).
+
+- - -
+
+### OtherDevelopmentLaw
+
+**Greek Translation** : ΑΛΛΗ ΠΡΑΞΗ ΑΝΑΠΤΥΞΙΑΚΟΥ ΝΟΜΟΥ
+
+**Data Properties**
+  - **publish_via** : |`Range → OneOf{"Ημερήσιο Τύπο"@el, "Ιστοσελίδα του φορέα"@el, "Κατάστημα της υπηρεσίας"@el, "ΦΕΚ"@el}`|
+  - **normative_type** : Similar to [Normative](#normative).
+  - **fek/fek_issue/fek_year** : Similar to [Appointment](#appointment).
+
+- - -
+
+### OwnershipTransferOfAssets
+
+**Greek Translation** : ΠΑΡΑΧΩΡΗΣΗ ΧΡΗΣΗΣ ΠΕΡΙΟΥΣΙΑΚΩΝ ΣΤΟΙΧΕΙΩΝ
+
+**Object Properties**
+  - **has_expense** : expressing the transfer as  [expense](#expense) of the [OwnershipTransferOfAssets](#ownershiptransferofassets). |`Range → dvg:Expense`|
+
+- - -
+
+### PublicPrototypeDocuments
+
+**Greek Translation** : ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ
+
+This type of decision does not have any specific object or data properties.
+
+- - -
+
+### Records
+
+**Greek Translation** : ΠΡΑΚΤΙΚΑ (Νομικού Συμβουλίου του Κράτους)
+
+**Data Properties**
+  - **record_number** : |`Range → xsd:string`|
+  - **record_subject** : |`Range → xsd:string`|
+
+- - -
+
+### ServiceChange
+
+**Greek Translation** : ΥΠΗΡΕΣΙΑΚΗ ΜΕΤΑΒΟΛΗ
+
+**Data Properties**
+  - **service_change_decision_type** : |`Range → OneOf{"Αποδοχή Παραίτησης"@el, "Διαθεσιμότητα"@el, "Λύση Υπαλληλικής Σχέσης"@el, "Μετάταξη"@el, "Υποβιβασμός"@el}`|
+  - **fek/fek_issue/fek_year** : Similar to [Appointment](#appointment).
+
+- - -
+
+### SpatialPlanningDecisions
+
+**Greek Translation** : ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ
+
+**Data Properties**
+  - **municipality** : The name of the municipality which this decision has effect on. |`Range → xsd:string`|
+  - **spatial_planning_decision_type** : |`Range → OneOf{"Έγκριση - τροποποίηση χωροταξικών και ρυμοτομικών σχεδίων"@el , "Αλλαγή χρήσης γης κοινόχρηστου κτήματος"@el , "Καθορισμός - τροποποίηση όρων δόμησης"@el , "Καθορισμός αιγιαλού, παραλίας, λιμνών, ποταμών, ρεμάτων και χειμάρων"@el , "Καθορισμός αρχαιολογικών χώρων"@el , "Καθορισμός βιομηχανικών ζωνών"@el , "Καθορισμός γης παραχωρούμενου δημόσιου κτήματος"@el , "Καθορισμός εθνικών δρυμών, δασών και δασικών εκτάσεων"@el , "Καθορισμός λατομικών ζωνών"@el , "Παραχώρηση δημόσιων και δημοτικών κτημάτων"@el , "Προσδιορισμός - τροποποίηση ορίων οικισμού και έγκριση μεταφοράς αυτόυ"@el , "Σύνταξη - έγκριση ζωνών οικιστικού ελέγχου (ΖΟΕ)"@el , "Σύνταξη - έγκριση πολεοδομικών μελετών και γενικού πολεοδομικού σχεδίου"@el , "Χαρακτηρισμός εκτάσεων ως αναδασωτέων"@el , "Χαρακτηρισμός κτιρίων ως διατηρητέων και αποχαρακτηρισμός αυτών"@el , "Χορήγηση - αναστολή - τροποποίηση οικοδομικών αδειών"@el , "Χωροθέτηση"@el}`|
+
+- - -
+
+### StartProductionalFunctionOfInvestment
+
+**Greek Translation** : ΑΠΟΦΑΣΗ ΕΝΑΡΞΗΣ ΠΑΡΑΓΩΓΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ ΕΠΕΝΔΥΣΗΣ
+
+This type of decision does not have any specific object or data properties.
+
+- - -
+
+### SuccessfulAppointedRunnerUpList
+
+**Greek Translation** : ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ & ΕΠΙΛΑΧΟΝΤΩΝ
+
+**Object Properties**
+  - **has_related_occupation_invitation** : An optional object property which relates a [SuccessfulAppointedRunnerUpList](#successfilappointedrunneruplist) with an [OccupationInvitation](#occupationinvitation). |`Range → dvg:OccupationInvitation`|
+
+- - -
+
+### Undertaking
+
+**Greek Translation** : ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ
+
+**Object Properties**
+  - **has_expense_with_kae** : expressing the expense as  [ExpenseWithKae](#expensewithkae) |`Range → dvg:ExpenseWithKae`|
+  - **has_expense** : expressing the expense as [Expense](#expense). |`Range → dvg:Expense`|
+
+**Data Properties**
+  - **partialead** : True if this is a partial undertaking. |`Range → xsd:boolean`|
+  - **entry_number** : |`Range → xsd:string`|
+  - **recalled_expense** : True if this undertaking has a recall role. |`Range → xsd:boolean`|
+  - **budget_category** : Similar to [BudgetApproval](#budgetapproval).
+  - **financial_year** : Similar to [BalanceAccount](#balanceaccount).
+
+- - -
+
+### WorkAssignmentSupplyServicesStudies
+
+**Greek Translation** : ΑΝΑΘΕΣΗ ΕΡΓΩΝ / ΠΡΟΜΗΘΕΙΩΝ / ΥΠΗΡΕΣΙΩΝ / ΜΕΛΕΤΩΝ
+
+**Object Properties**
+  - **has_expense** : expressing the expense as [Expense](#expense). |`Range → dvg:Expense`|
+
+**Data Properties**
+  - **work_assignment_etc_category** : |`Range → OneOf{"Έργα"@el , "Μελέτες"@el , "Προμήθειες"@el , "Υπηρεσίες"@el}`|
+
+Conclusions
+-----------
+
+The proposed rdf schema solves all the aforementioned problems. As far as the disk space is concerned, `.pdf` [samples](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples) take up 7.1MB (without the extra metadata of `metadata.json` files), while `.n3` samples take up 432KB and include the information of `metadata.json` files.
+
+Moreover, we have linked the `decisions.owl` to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/) and by adopting ELI, we unified and linked our ontology with European legislation.

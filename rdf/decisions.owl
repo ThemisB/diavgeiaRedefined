@@ -81,14 +81,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/has_article -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_article">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/LegislativeDecree"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/has_considered -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_considered">
@@ -1185,6 +1177,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Normative"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1193,52 +1186,76 @@
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first xml:lang="el">Κοινή Υπουργική Απόφαση</rdf:first>
+                        <rdf:first xml:lang="el">Διϋπουργική Απόφαση(ΔΕΕΑ)</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first xml:lang="el">Πράξη Ανεξάρτητης Αρχής</rdf:first>
+                                <rdf:first xml:lang="el">Κοινή Υπουργική Απόφαση</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first xml:lang="el">Πράξη Γενικού / Ειδικού Γραμματέα Υπουργείου</rdf:first>
+                                        <rdf:first xml:lang="el">Πράξη Ανεξάρτητης Αρχής</rdf:first>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first xml:lang="el">Πράξη Γενικού Γραμματέα Αποκεντρωμένης Διοίκησης</rdf:first>
+                                                <rdf:first xml:lang="el">Πράξη Γενικού / Ειδικού Γραμματέα Υπουργείου</rdf:first>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first xml:lang="el">Πράξη Οργάνου Διοίκησης Ν.Π.Δ.Δ.</rdf:first>
+                                                        <rdf:first xml:lang="el">Πράξη Γενικού Γραμματέα Αποκεντρωμένης Διοίκησης</rdf:first>
                                                         <rdf:rest>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first xml:lang="el">Πράξη Οργάνου Διοίκησης ΟΤΑ Α&apos; και Β&apos; Βαθμού (και εποπτευόμενων φορέων τους)</rdf:first>
+                                                                <rdf:first xml:lang="el">Πράξη Οργάνου Διοίκησης Ν.Π.Δ.Δ.</rdf:first>
                                                                 <rdf:rest>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first xml:lang="el">Πράξη Οργάνου Διοίκησης Φορέων Ευρύτερου Δημοσίου Τομέα</rdf:first>
+                                                                        <rdf:first xml:lang="el">Πράξη Οργάνου Διοίκησης ΟΤΑ Α&apos; και Β&apos; Βαθμού (και εποπτευόμενων φορέων τους)</rdf:first>
                                                                         <rdf:rest>
                                                                             <rdf:Description>
                                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                <rdf:first xml:lang="el">Πράξη Προέδρου της Δημοκρατίας</rdf:first>
+                                                                                <rdf:first xml:lang="el">Πράξη Οργάνου Διοίκησης Φορέων Ευρύτερου Δημοσίου Τομέα</rdf:first>
                                                                                 <rdf:rest>
                                                                                     <rdf:Description>
                                                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                        <rdf:first xml:lang="el">Πράξη Πρωθυπουργού</rdf:first>
+                                                                                        <rdf:first xml:lang="el">Πράξη Προέδρου της Δημοκρατίας</rdf:first>
                                                                                         <rdf:rest>
                                                                                             <rdf:Description>
                                                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                <rdf:first xml:lang="el">Πράξη Υπουργικού Συμβουλίου</rdf:first>
+                                                                                                <rdf:first xml:lang="el">Πράξη Πρωθυπουργού</rdf:first>
                                                                                                 <rdf:rest>
                                                                                                     <rdf:Description>
                                                                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                        <rdf:first xml:lang="el">Προεδρικό Διάταγμα</rdf:first>
+                                                                                                        <rdf:first xml:lang="el">Πράξη Ρυθμιστικής Αρχής</rdf:first>
                                                                                                         <rdf:rest>
                                                                                                             <rdf:Description>
                                                                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                <rdf:first xml:lang="el">Υπουργική Απόφαση</rdf:first>
-                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                <rdf:first xml:lang="el">Πράξη Συλλογικού Κυβερνητικού Οργάνου</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first xml:lang="el">Πράξη Υπουργικού Συμβουλίου</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first xml:lang="el">Πράξη Υπουργού, Αναπληρωτή Υπουργού, Υφυπουργού</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first xml:lang="el">Προεδρικό Διάταγμα</rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                <rdf:first xml:lang="el">Υπουργική Απόφαση</rdf:first>
+                                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
                                                                                                             </rdf:Description>
                                                                                                         </rdf:rest>
                                                                                                     </rdf:Description>
@@ -1508,7 +1525,14 @@
     <!-- http://diavgeia.gov.gr/ontology/publish_via -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/publish_via">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OtherDecisions"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OtherDevelopmentLaw"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
