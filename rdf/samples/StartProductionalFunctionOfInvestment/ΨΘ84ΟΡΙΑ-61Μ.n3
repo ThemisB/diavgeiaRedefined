@@ -51,7 +51,6 @@
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1465905620397";
 	<http://diavgeia.gov.gr/ontology/unit_id> "82528".
 
-
 <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις της παραγράφου 2 του άρθρου 209 και του άρθρου 273 του Ν. 3463/2006 «Κύρωση του Κώδικα Δήμων & Κοινοτήτων» (ΦΕΚ 114/Α΄/8-6-2006)."@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/209/paragraph/2>;

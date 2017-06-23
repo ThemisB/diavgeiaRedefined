@@ -18,8 +18,6 @@
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "CommunicationEducation";
-	<http://diavgeia.gov.gr/ontology/has_organization_sponsor> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/OrganizationSponsor/1>;
-	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Sponsored/1>;
 	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Expense/1>;
 	<http://diavgeia.gov.gr/ontology/has_private_data> false;
 	<http://diavgeia.gov.gr/ontology/organization_id> "99203020";

@@ -5,33 +5,33 @@
 	<http://data.europa.eu/eli/ontology#date_publication> "2016-12-01"^^<http://www.w3.org/2001/XMLSchema#date>;
 	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΓΕΝΙΚΟ ΝΟΣΟΚΟΜΕΙΟ ΑΘΗΝΩΝ «Η ΕΛΠΙΣ»"@el;
 	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/1>;
-  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/2>;
-  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/3>;
-  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/4>;
-  <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/5>;
-  <http://diavgeia.gov.gr/ontology/has_verified> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Verification/1>;
+    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/2>;
+    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/3>;
+    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/4>;
+    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/5>;
+    <http://diavgeia.gov.gr/ontology/has_verified> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Verification/1>;
 	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζουμε"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Signer/1>;
-  <http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Signer/2>;
+    <http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Signer/2>;
 	<http://diavgeia.gov.gr/ontology/protocol_number> "97";
 	<http://diavgeia.gov.gr/ontology/commitment_number> "70";
 	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Γρ. Διατροφής"@el;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "NutritionAgriculturalProducts";
+    <http://diavgeia.gov.gr/ontology/has_expense_with_kae> <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/ExpenseWithKae/1>;
 	<http://diavgeia.gov.gr/ontology/has_private_data> false;
 	<http://diavgeia.gov.gr/ontology/organization_id> "99221890";
-  <http://diavgeia.gov.gr/ontology/unit_id> "77026";
+    <http://diavgeia.gov.gr/ontology/unit_id> "77026";
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1452674356709";
-  <http://diavgeia.gov.gr/ontology/financial_year> "2016";
-  <http://diavgeia.gov.gr/ontology/budget_category> "Τακτικός Προϋπολογισμός"@el;
+    <http://diavgeia.gov.gr/ontology/financial_year> "2016";
+    <http://diavgeia.gov.gr/ontology/budget_category> "Τακτικός Προϋπολογισμός"@el;
 	<http://diavgeia.gov.gr/ontology/budget_type> "Φορέα"@el;
 	<http://diavgeia.gov.gr/ontology/is_budget_approval_for_org> false.
-
 
 <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις των άρθρ. 21 και 22Α του Ν. 2362/95 «Περί Δημοσίου Λογιστικού κ.λπ.» (Α.247), όπως τροποποιήθηκε και συμπληρώθηκε με τα υπ΄ αρ. 21 και 23 άρθ. Του Ν. 3871/2010 (Α.141)."@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/21>;
-  <http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/23>.
+    <http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/23>.
 
 <http://diavgeia.gov.gr/eli/decision/7ΑΖΛ46904Ν-ΑΨΣ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Το π.δ 113/2010 περί αναλήψεως υποχρεώσεων από τους Διατάκτες (Α.194)."@el;

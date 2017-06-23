@@ -27,7 +27,6 @@
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1496232550111";
 	<http://diavgeia.gov.gr/ontology/unit_id> "93244".
 
-
 <http://diavgeia.gov.gr/eli/decision/6ΖΞ74653ΠΩ-7ΚΜ/9b31854f-228d-4a12-b0ab-c606b4994c23/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του N.3409/2005 <<Καταδύσεις αναψυχής και άλλες διατάξεις>> (ΦΕΚ 273 Α')."@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2005/3409>.

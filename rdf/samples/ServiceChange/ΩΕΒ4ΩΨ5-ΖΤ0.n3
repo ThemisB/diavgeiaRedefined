@@ -24,7 +24,6 @@
 	<http://diavgeia.gov.gr/ontology/fek_year> "2016"@el;
 	<http://diavgeia.gov.gr/ontology/unit_id> "93991".
 
-
 <http://diavgeia.gov.gr/eli/decision/ΩΕΒ4ΩΨ5-ΖΤ0/9607fd19-6084-42f4-9cfd-0a56c867e165/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του άρθρου 58 του Ν.3852/2010 (ΦΕΚ Α’87) «Νέα Αρχιτεκτονική της Αυτοδιοίκησης και της Αποκεντρωμένης Διοίκησης - Πρόγραμμα Καλλικράτης»."@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3852/article/58>.

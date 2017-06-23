@@ -7,9 +7,20 @@ Sections
 2. [The RDF Schema](#the-rdf-schema)
 3. [Decision Types and Samples](#decision-types-and-samples)
 4. [URIs - ELI](#uris---eli)
-5. [Schema Classes](#schema-classes)
-6. [Common Datatype Properties](#common-datatype-properties)
-7. [Decision specific Object and Datatype Properties](#decision-specific-object-and-datatype-properties)
+5. [General Schema Classes](#general-schema-classes)
+    1. [Consideration](#consideration)
+    2. [Decision](#decision)
+    3. [PreConsideration](#preconsideration)
+    4. [AfterDecision](#afterdecision)
+    5. [Expense](#expense)
+    6. [ExpenseWithKae](#expensewithkae)
+    7. [OrganizationSponsor](#organizationsponsor)
+    8. [Sponsored](#sponsored)
+    9. [Verification](#verification)
+    10. [Signer](#signer)
+    11. [Present](#present)
+6. [Common Data Properties](#common-data-properties)
+7. [Decision specific Object and Data Properties](#decision-specific-object-and-data-properties)
     1. [AffiliatedInvestments](#affiliatedinvestments)
     2. [Appointment](#appointment)
     3. [Award](#award)
@@ -18,7 +29,16 @@ Sections
     6. [Circular](#circular)
     7. [CollegialBodyCommisionWorkingGroup](#collegialbodycommisionworkinggroup)
     8. [CommisionWarrant](#commisionwarrant)
-
+    9. [Contract](#contract)
+    10. [DeclarationSummary](#declarationsummary)
+    11. [DevelopmentLawContract](#developmentlawcontract)
+    12. [DisciplinaryAcquitance](#disciplinaryacquitance)
+    13. [DonationGrant](#donationgrant)
+    14. [EvaluationReportOfLaw](#evaluationreportoflaw)
+    15. [ExpenditureApproval](#expenditureapproval)
+    16. [GeneralSpecialSecretaryMonocraticBody](#generalspecialsecretarymonocraticbody)
+    17. [InvestmentPlacing](#investmentplacing)
+        
 Diavgeia Issues
 --------
 
@@ -92,30 +112,30 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
 
   Every different decision type is implemented as a subclass of `eli:LegalResource`. The `eli:repeals` object property links a decision with another decision when a correction happens. It is obvious that a `eli:repeals` which connects two entities that have the same IUN version, indicates a *Metadata Correction*, whereas in the case of decisions with different IUN, it indicates a *Decision Change*.
 
-### Schema Classes
-  The ontology prefix of Diavgeia is `dvg` with value `http://diavgeia.gov.gr/ontology/`.
+### General Schema Classes
+  The ontology prefix of Diavgeia is `dvg` with value `http://diavgeia.gov.gr/ontology/`. In the following sections we will refer to `Decision(LegalResource)` as the Class which contains all the different decision types of Diavgeia and is in fact the eli:LegalResource class.
 
 #### Consideration
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/Consideration/{consideration_number}`
 
-  *Description* : `Consideration` is the entity of a law/decision or any other source that has been considered, in order to decide an action.
+  *Description* : [Consideration](consideration) is the entity of a law/decision or any other source that has been considered, in order to decide an action.
 
   *Properties*
-  - A `Decision(LegalResource)` uses the `dvg:has_considered` object property to connect the decision entity with its `Considerations`.
-  - A `Consideration` uses the `dvg:considers` object property, in order to link to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/), or to other decisions of Diavgeia. For instance the second consideration of [this legislative decree](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.n3), is expressed as `<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/2>`, it `dvg:considers` the *article 18 of law 3446/2006* and the last one can be found at  `<http://legislation.di.uoa.gr/eli/law/2006/3446/article/18>`.
-  - `Considerations` also have `dvg:text` data type property which is the actual text that government institutions compose.
+  - A `Decision(LegalResource)` uses the **dvg:has_considered** object property to connect the decision entity with its [Considerations](#consideration) |`Range → dvg:LegalResource`|.
+  - A [Consideration](consideration) uses the **dvg:considers** object property, in order to link to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/), or to other decisions of Diavgeia. For instance the second consideration of [this legislative decree](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.n3), is expressed as `<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/2>`, it **dvg:considers** the *article 18 of law 3446/2006* and the last one can be found at  `<http://legislation.di.uoa.gr/eli/law/2006/3446/article/18>`. |`Range → dvg:LegalResource or ontology:LegalResource`|
+  - [Considerations](#consideration) also have **dvg:text** data property which is the actual text that government institutions write. |`Range → xsd:string`|
 
 - - -
 
 #### Decision
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/Decision/{decision_number}`
 
-  *Description* : `Decision` is the entity which describes everything that the government institution has decided.
+  *Description* : [Decision](#decision) is the entity which describes everything that the government institution has decided.
 
   *Properties*
-  - A `Decision(LegalResource)` uses the `dvg:has_decided` object property to connect the decision entity with its `Decisions`.
-  - A `Decision` uses the `dvg:decision_relates` object property, in order to link to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/), or to other decisions of Diavgeia. For instance the forth decision of [this legislative decree](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.n3), is expressed as `<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/4>`, it  `dvg:decision_relates` the *second paragraph of article 18 of law 3446/2006* and the last one can be found at `<http://legislation.di.uoa.gr/eli/law/2006/3446/article/18/paragraph/2>`.
-  - `Decisions` also have `dvg:has_text` data type property which is the actual text that government institutions compose (__Range__:**xsd:string**).
+  - A `Decision(LegalResource)` uses the **dvg:has_decided** object property to connect the decision entity with its [Decisions](#decision).
+  - A [Decision](#decision) uses the **dvg:decision_relates** object property, in order to link to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/), or to other decisions of Diavgeia. For instance the forth decision of [this legislative decree](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.n3), is expressed as `<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/4>`, it  **dvg:decision_relates** the *second paragraph of article 18 of law 3446/2006* and the last one can be found at `<http://legislation.di.uoa.gr/eli/law/2006/3446/article/18/paragraph/2>`. |`Range → dvg:LegalResource or ontology:LegalResource`|
+  - [Decisions](#decision) also have **dvg:has_text** data property which is the actual text that government institutions write. |`Range → xsd:string`|
 
 - - -
 
@@ -125,8 +145,8 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
   *Description* : `PreConsideration` is the entity which describes everything that the government institution wants to be included before the Consideration segment.
 
   *Properties*
-  - A `Decision(LegalResource)` uses the `dvg:has_preconsideration` object property to connect the decision with its `PreConsideration`.
-  - `PreConsideration` also has `dvg:has_text` data type property which is the actual text that government institutions compose (__Range__:**xsd:string**).
+  - A `Decision(LegalResource)` uses the **dvg:has_preconsideration** object property to connect the decision with its [PreConsideration](#preconsideration).|`Range → dvg:PreConsideration`|
+  - `PreConsideration` also has **dvg:has_text** data property which is the actual text that government institutions write. |`Range → xsd:string`|
 
 - - -
 
@@ -136,174 +156,179 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
   *Description* : `AfterDecision` is the entity which describes everything that the government institution wants to be included after the Decision segment.
 
   *Properties*
-  - A `Decision(LegalResource)` uses the `dvg:has_afterdecision` object property to connect the decision with its `AfterDecision`.
-  - `PreConsideration` also has `dvg:has_text` data type property which is the actual text that government institutions compose (__Range__:**xsd:string**).
+  - A `Decision(LegalResource)` uses the **dvg:has_afterdecision** object property to connect the decision with its [AfterDecision](#afterdecision). |`Range → xsd:AfterDecision`|
+  - [PreConsideration](#preconsideration) also has **dvg:has_text** data type property which is the actual text that government institutions write. |`Range → xsd:string`|
 
 - - -
 
 #### Expense
   *Format*: `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/Expense/{expense_number}`
 
-  *Description* : `Expense` is a general entity which describes an expense between two individuals and is used in various decision types which include economic exchanges (e.g. `DonationGrant`, `WorkAssignmentSupplyServicesStudies`, etc).
+  *Description* : `Expense` is a general entity which describes an expense between two individuals and is used in various decision types which include economic exchanges.
 
   *Properties*
-  - A `Decision(LegalResource)` uses the `dvg:has_expense` object property to connect the decision with its `Expense`.
-  - An `Expense` has an optional `has_sponsored` object property which links to a `Sponsored` class and denotes the payment recipient.
-  - An `Expense` has an optional `has_organization_sponsor` object property which links to a `OrganizationSponsor` class and denotes the payment sender.
-  - `Expense` also has a number of datatype properties:
-    1. **contract_start** : used only in `Contract` decisions and denote the start of the contract (__Range__:**xsd:date**).
-    2. **contract_end** : similar to **contract_start** (__Range__:**xsd:date**).
-    3. **expense_amount** : Amount of money spent on the `Expense` (__Range__:**xsd:string**).
-    4. **expense_currency** : The currency of the *expense_amount* (__Range__:**xsd:string**).
+  - An [Award](#award), [Contract](#contract), [DeclarationSummary](#declarationsummary), [DonationGrant](#donationgrant), [ExpenditureApproval](#expenditureapproval), [GeneralSpecialSecretaryMonocraticBody][#generalspecialsecretarymonocraticbody], [Undertaking](#undertaking),  [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies), [OwnershipTransferOfAssets](#ownershiptransferofassets) may use the **dvg:has_expense** object property to connect the decision entity with its [Expense](#expense). |`Range → dvg:Expense`|
+  - An [Expense](#expense) has an optional **dvg:has_sponsored** object property which links to a [Sponsored](#sponsored) class and denotes the payment recipient. |`Range → dvg:Sponsored`|
+  - An [Expense](#expense) has an optional **dvg:has_organization_sponsor** object property which links to a [OrganizationSponsor](#organizationsponsor) class and denotes the payment sender. |`Range → dvg:OrganizationSponsor`|
+  - [Expense](#expense) also has a number of data properties:
+    1. **dvg:contract_start** : used only in [Contract](#contract) decisions and denote the start of the contract. |`Range → xsd:date`|
+    2. **dvg:contract_end** : similar to **contract_start**. |`Range → xsd:date`|
+    3. **dvg:expense_amount** : Amount of money spent on the [Expense](#expense). |`Range → xsd:string`|
+    4. **dvg:expense_currency** : The currency of the *expense_amount*. |`Range → xsd:string`|
+
+    *Note* : The use of **dvg:has_organization_sponsor**, **dvg:has_sponsored** and **dvg:expense_amount/currency** is closely related to the decision type. For example, an [ExpenditureApproval](#expenditureapproval) must have all of these properties, whereas an [OwnershipTransferOfAssets](#ownershiptransferofassets) has only the **dvg:has_organization_sponsor** and **dvg:has_sponsored** object properties, because no money are exchanged.
 
 - - -
 
 #### ExpenseWithKae
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/ExpenseWithKae/{expense_with_kae_number}`
 
-  *Description* : `ExpenseWithKae` is a general entity which describes an expense including kae between two individuals and is used in various decision types which include economic exchanges (e.g. `DonationGrant`, `WorkAssignmentSupplyServicesStudies`, etc). The only decisions which can make use of that class are the `CommisionWarrant` and `Undertaking`.
+  *Description* : [ExpenseWithKae](#expensewithkae) is a general entity which describes an expense including kae between two individuals and is used in various decision types which include economic exchanges.
 
   *Properties*
-  - A `CommisionWarrant` or an `Undertaking` uses the `dvg:has_expense_with_kae` object property to connect the decision with its `ExpenseWithKae`.
-  - An `ExpenseWithKae` has the same object and datatype properties with `Expense` and in addition the following datatype properties:
-    1. **kae** : The kae number of expense (__Range__:**xsd:string**).
-    2. **kae_budget_remainder** : The budget remainder of expense (__Range__:**xsd:string**).
-    3. **kae_credit_remainder** : The credit remainder of expense (__Range__:**xsd:string**).
+  - A [CommisionWarrant](#commisionwarrant) or an [Undertaking](#undertaking) uses the **dvg:has_expense_with_kae** object property to connect the decision with its [ExpenseWithKae](#expensewithkae). |`Range → dvg:ExpenseWithKae`|
+  - An [ExpenseWithKae](#expensewithkae) has the same object and data properties with [Expense](#expense) and in addition the following data properties:
+    1. **kae** : The kae number of expense. |`Range → xsd:string`|
+    2. **kae_budget_remainder** : The budget remainder of expense. |`Range → xsd:string`|
+    3. **kae_credit_remainder** : The credit remainder of expense. |`Range → xsd:string`|
 
 - - -
 #### OrganizationSponsor
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/OrganizationSponsor/{organization_sponsor_number}`
 
-  *Description* : `OrganizationSponsor` is the organization that spends money on an `Expense` / `ExpenseWithKae`.
+  *Description* : [OrganizationSponsor](#organizationsponsor) is the organization that spends money on an [Expense](#expense) / [ExpenseWithKae](#expensewithkae).
 
   *Properties* :
-  - *afm* : The Tax Registration Number (TRN) (known as afm in Greece) (__Range__:**xsd:string**).
-  - *afm_type* : The type of *afm* (__Range__:One of {*"Εθνικό"@el , "Εκτός Ε.Ε."@el, "Νομικό Πρόσωπο στην Ε.Ε."@el , "Φυσικό Πρόσωπο στην Ε.Ε."@el*}).
-  - *name* : The name of the organization (__Range__:**xsd:string**).
+  - **afm** : The Tax Registration Number (TRN) (known as afm in Greece). |`Range → xsd:string`|
+  - **afm_type** : The type of *afm*. |`Range → OneOf{*"Εθνικό"@el , "Εκτός Ε.Ε."@el, "Νομικό Πρόσωπο στην Ε.Ε."@el , "Φυσικό Πρόσωπο στην Ε.Ε."@el*}`|
+  - **name** : The name of the organization. |`Range → xsd:string`|
 
 - - -
 #### Sponsored
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/Sponsored/{sponsored_number}`
 
-  *Description* : `Sponsored` is the individual / organization that receives the money of an `Expense` / `ExpenseWithKae`.
+  *Description* : [Sponsored](#sponsored) is the individual / organization that receives the money of an [Expense](#expense) / [ExpenseWithKae](#expensewithkae).
 
   *Properties* :
-    The same properties as `OrganizationSponsor`.
+    The same properties as [OrganizationSponsor](#organizationsponsor).
 
 - - -
 #### Verification
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/Verification/{verification_number}`
 
-  *Description* : `Verification` represents an individual which authorizes the decision.
+  *Description* : [Verification](#verification) represents an individual which authorizes the decision.
 
   For instance, [this undertaking](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/Undertaking/6%CE%A7%CE%99%CE%A5%CE%A9%CE%9A9-4%CE%91%CE%9F.n3) has been verified by "ΜΙΧΑΛΗΣ ΛΙΒΑΝΟΣ", which is the chief of the Financial Service of Monemvasia.
 
   *Properties* :
-  - A `Decision(LegalResource)` uses the `dvg:has_verified` object property to declare a `Verification`.
-  - A `Verification` is `dvg:verified_by` a `Signer`.
-  - `Verification` uses the  `dvg:has_text` datatype property to declare the text of the verification (__Range__:**xsd:string**).
+  - A `Decision(LegalResource)` uses the **dvg:has_verified** object property to declare a [Verification](#verification). |`Range → dvg:Verification`|
+  - A [Verification](#verification) is **dvg:verified_by** a [Signer](#signer). |`Range → dvg:Signer`|
+  - [Verification](#verification) uses the  **dvg:has_text** data property to declare the text of the verification. |`Range → xsd:string`|
 
 - - -
 
 #### Signer
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/Signer/{signer_number}`
 
-  *Description* : `Signer` is a person which verifies a part of decision (as a part of `Verifier`) or signs the whole decision.
+  *Description* : [Signer](#signer) is a person which verifies a part of decision (as a part of [Verification](#verification)) or signs the whole decision.
 
   *Properties* :
-  - A `Decision(LegalResource)` uses the `dvg:has_signer` object property to declare a `Signer`.
-  - A `Signer` has the following datatype properties:
-    1. `signer_id` : A unique identifier that identifies a signer in Diavgeia (__Range__:**xsd:string**).
-    2. `signer_job` : The job of the `Signer` (__Range__:**xsd:string**).
-    3. `signer_name` : The name of the `Signer` (__Range__:**xsd:string**).
+  - A `Decision(LegalResource)` uses the **dvg:has_signer** object property to declare a [Signer](#signer).
+  - A [Signer](#signer) has the following data properties:
+    1. **signer_id** : A unique identifier that identifies a signer in Diavgeia. |`Range → xsd:string`|
+    2. **signer_job** : The job of the [Signer](#signer). |`Range → xsd:string`|
+    3. **signer_name** : The name of the [Signer](#signer). |`Range → xsd:string`|
 
 - - -
 #### Present
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/Verification/{verification_number}`
 
-  *Description* : `Present` represents a person which was present when the decision was written (e.g. [this record](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/Records/%CE%A9%CE%A5%CE%9B%CE%A6%CE%9F%CE%A1%CE%A1%CE%95-%CE%97%CE%93%CE%98.n3)).
+  *Description* : [Present](#present) represents a person which was present when the decision was written (e.g. [this record](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/Records/%CE%A9%CE%A5%CE%9B%CE%A6%CE%9F%CE%A1%CE%A1%CE%95-%CE%97%CE%93%CE%98.n3)).
 
   *Properties* :
-  - A `Decision(LegalResource)` uses the `dvg:has_present` object property to declare a `Present`.
-  - A `Present` has the following datatype properties:
-    1. `present_name` : The name of the person (__Range__:**xsd:string**).
-    2. `present_title` : The role of the person (__Range__:**xsd:string**).
+  - A `Decision(LegalResource)` uses the **dvg:has_present** object property to declare a [Present](#present).
+  - A [Present](#present) has the following data properties:
+    1. **present_name** : The name of the person. |`Range → xsd:string`|
+    2. **present_title** : The role of the person. |`Range → xsd:string`|
 
-## Common Datatype Properties
+## Common Data Properties
 
 These properties have as subject a `Decision(LegalResource)` entity and thus we can say they are common for all the different decision types.
 
-1. **decision_call** : The text that is displayed between the considerations and decisions (__Range__: **xsd:string**).
-2. **government_institution_name** : The name of the government institution. This can be used as a standalone property to declare smaller government institutions or it can be combined with *government_institution_general_administration* and *government_institution_department* to declare government institutions which have subdivisions (e.g. Ministries) (__Range__:**xsd:string**).
-3. **government_institution_general_administration** : (__Range__:**xsd:string**).
-4. **government_institution_department** : (__Range__:**xsd:string**).
-5. **government_institution_email**: (__Range__:**xsd:string**).
-6. **government_institution_address**: (__Range__:**xsd:string**).
-7. **government_institution_phone**: (__Range__:**xsd:string**).
-8. **government_institution_fax**: (__Range__:**xsd:string**).
-9. **government_institution_postalcode**: (__Range__:**xsd:string**).
-10. **government_institution_website**: (__Range__:**xsd:string**).
-11. **government_institution_information** : The name of the person who is responsible for resolving issues related to this decision. (__Range__:**xsd:string**).
-12. **has_private_data** : Whether a decision contains sensitive data (__Range__:**xsd:boolean**).
-13. **iun** : The Internet Uploading Number (ADA) (__Range__:**xsd:string**).
-14. **version** : The version of the decision (__Range__:**xsd:string**).
-15. **protocol_number** : Every procedure that takes place in any greek public service takes a protocol number. (__Range__:**xsd:string**).
-16. **recipient_for_action** : Government institutions or individuals that should take action after read this decision (__Range__:**xsd:string**).
-17. **recipient_for_share** : Share this decision with other government institutions or individuals (__Range__:**xsd:string**).
-18. **recipient** : Send this decision to other government_institutions or individuals (__Range__:**xsd:string**).
-19. **internal_distribution** : Refers to bigger government institutions which want to internally distribute the decision (__Range__:**xsd:string**).
-20. **thematic_category** : Every decision should have at least one thematic category. (__Range__:**{"AgricultureForestryFishery" , "BusinessCompetition" , "CommunicationEducation" , "EconomicActivity" , "EconomicTradeExchanges" , "Employment" , "Energy" , "Environment" , "EuropeanUnion" , "Fiscals" , "Geography" , "Industry" , "InternationalOrganizations" , "InternationalRelations" , "Laws" , "ManufactureTechnologyResearch" , "NutritionAgriculturalProducts" , "PoliticalLife" , "PublicAdministration" , "Science" , "SocialIssues" , "Transport"}**)
-21. **unit_id** : Every decision should have at least one unit_id code, which is related to the units involved in signing the decision (__Range__:**xsd:string**).
-22. **organization_id** : Every decision should have exactly one organization_id which is in fact the government institution code (__Range__:**xsd:string**).
-23. **submission_timestamp** : Time of the upload, expressed in Unix Timestamp (Milliseconds from epoch) (__Range__:**xsd:string**).
+1. **decision_call** : The text that is displayed between the considerations and decisions. |`Range → xsd:string`|
+2. **government_institution_name** : The name of the government institution. This can be used as a standalone property to declare smaller government institutions or it can be combined with *government_institution_general_administration* and *government_institution_department* to declare government institutions which have subdivisions (e.g. Ministries). |`Range → xsd:string`|
+3. **government_institution_general_administration** : |`Range → xsd:string`|.
+4. **government_institution_department** : |`Range → xsd:string`|.
+5. **government_institution_email**: |`Range → xsd:string`|.
+6. **government_institution_address**: |`Range → xsd:string`|.
+7. **government_institution_phone**: |`Range → xsd:string`|.
+8. **government_institution_fax**: |`Range → xsd:string`|.
+9. **government_institution_postalcode**: |`Range → xsd:string`|.
+10. **government_institution_website**: |`Range → xsd:string`|.
+11. **government_institution_information** : The name of the person who is responsible for resolving issues related to this decision. |`Range → xsd:string`|
+12. **has_private_data** : Whether a decision contains sensitive data. |`Range → xsd:string`|
+13. **iun** : The Internet Uploading Number (ADA). |`Range → xsd:string`|
+14. **version** : The version of the decision. |`Range → xsd:string`|
+15. **protocol_number** : Every procedure that takes place in any greek public service takes a protocol number. |`Range → xsd:string`|
+16. **recipient_for_action** : Government institutions or individuals that should take action after read this decision. |`Range → xsd:string`|
+17. **recipient_for_share** : Share this decision with other government institutions or individuals. |`Range → xsd:string`|
+18. **recipient** : Send this decision to other government_institutions or individuals. |`Range → xsd:string`|
+19. **internal_distribution** : Refers to bigger government institutions which want to internally distribute the decision. |`Range → xsd:string`|
+20. **thematic_category** : Every decision should have at least one thematic category. |`Range → {OneOf{"AgricultureForestryFishery" , "BusinessCompetition" , "CommunicationEducation" , "EconomicActivity" , "EconomicTradeExchanges" , "Employment" , "Energy" , "Environment" , "EuropeanUnion" , "Fiscals" , "Geography" , "Industry" , "InternationalOrganizations" , "InternationalRelations" , "Laws" , "ManufactureTechnologyResearch" , "NutritionAgriculturalProducts" , "PoliticalLife" , "PublicAdministration" , "Science" , "SocialIssues" , "Transport"}}`|
+21. **unit_id** : Every decision should have at least one unit_id code, which is related to the units involved in signing the decision. |`Range → xsd:string`|
+22. **organization_id** : Every decision should have exactly one organization_id which is in fact the government institution code. |`Range → xsd:string`|
+23. **submission_timestamp** : Time of the upload, expressed in Unix Timestamp (Milliseconds from epoch). |`Range → xsd:string`|
 
-## Decision Specific Object and Datatype Properties
+## Decision Specific Object and Data Properties
 
-As it was previously mentioned, Diavgeia hosts 34 different decision types. This means that the rdf schema should include decision-specific object and datatype properties which are presented here.
+As it was previously mentioned, Diavgeia hosts 34 different decision types. This means that the rdf schema should include decision-specific object and data properties which are presented here.
 
 ### AffiliatedInvestments
 
 **Greek Translation** : ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ
 
-This type of decision does not have any specific object or datatype properties.
+This type of decision does not have any specific object or data properties.
 
 ### Appointment
 
 **Greek Translation** : ΔΙΟΡΙΣΜΟΣ
 
-**Datatype Properties**
-  - **appointment_employer_org** : The organization id of the government institution that is responsible for the appointment (__Range__:**xsd:string**).
-  - **fek_issue** : Relates the Appointment with the fek issue. (__Range__:**OneOf {"Α"@el , "Α.Α.Π."@el , "Α.Ε.Δ."@el , "Α.Π.Σ."@el , "Α.Σ.Ε.Π."@el , "Β"@el , "Γ"@el , "Δ"@el , "Δ.Δ.Σ."@el , "Ε.Β.Ι"@el , "Ν.Π.Δ.Δ."@el , "Ο.Π.Κ."@el , "ΠΑΡΑΡΤΗΜΑ"@el}**).
-  - **fek_number** : (__Range__:**xsd:string**).
-  - **fek_year** : (__Range__:**xsd:string**).
-  - **number_employees** : Number of employees of this appointment (__Range__:**xsd:integer**).
+**Data Properties**
+  - **appointment_employer_org** : The organization id of the government institution that is responsible for the appointment. |`Range → xsd:string`|
+  - **fek_issue** : Relates the Appointment with the fek issue. |`Range → OneOf {"Α"@el , "Α.Α.Π."@el , "Α.Ε.Δ."@el , "Α.Π.Σ."@el , "Α.Σ.Ε.Π."@el , "Β"@el , "Γ"@el , "Δ"@el , "Δ.Δ.Σ."@el , "Ε.Β.Ι"@el , "Ν.Π.Δ.Δ."@el , "Ο.Π.Κ."@el , "ΠΑΡΑΡΤΗΜΑ"@el}`|
+  - **fek_number** : |`Range → xsd:string`|
+  - **fek_year** : |`Range → xsd:string`|
+  - **number_employees** : Number of employees of the appointment. |`Range → xsd:string`|
 - - -
 ### Award
 
 **Greek Translation** : ΚΑΤΑΚΥΡΩΣΗ
 
 **Object Properties**
-  - **related_declaration_summary** : An optional object property which relates an `Award` with a `DeclarationSummary` (__Range__:**dvg:DeclarationSummary**).
+  - **has_related_declaration_summary** : An optional object property which relates an [Award](#award) with a [DeclarationSummary](#declarationsummary). |`Range → dvg:DeclarationSummary`|
 
 - - -
 ### BalanceAccount
 
 **Greek Translation** : ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ
 
-**Datatype Properties**
-  - **balance_account_type** : (__Range__:**OneOf{"Απολογισμός"@el , "Ισολογισμός"@el , "Ισολογισμός και Απολογισμός"@el}**).
-  - **balance_account_time_period** : (__Range__:**OneOf{"Έτος"@el , "Εξάμηνο"@el , "Τρίμηνο"@el}**).
-  - **financial_year** : (__Range__ :**xsd_string**).
-  - **has_related_institution** : (__Range__ :**xsd_string**).
-  - **is_balance_account_approval_for_org** : True if a third government institutuion should approve this balance account (__Range__ :**xsd_boolean**).
+**Data Properties**
+  - **balance_account_type** : |`Range → OneOf{"Απολογισμός"@el , "Ισολογισμός"@el , "Ισολογισμός και Απολογισμός"@el}`|
+  - **balance_account_time_period** : |`Range → OneOf{"Έτος"@el , "Εξάμηνο"@el , "Τρίμηνο"@el}`|
+  - **financial_year** : |`Range → xsd:string`|
+  - **has_related_institution** : |`Range → xsd:string`|
+  - **is_balance_account_approval_for_org** : True if a third government institutuion should approve this balance account. |`Range → xsd:boolean`|
+
 - - -
 ### BudgetApproval
 
 **Greek Translation** : ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ
 
-**Datatype Properties**
-  - **budget_type** : (__Range__:**OneOf{"Κρατικός"@el , "Φορέα"@el}**).
-  - **budget_category** : (__Range__:**OneOf{"Ίδια Έσοδα"@el , "Πρόγραμμα Δημοσίων Επενδύσεων"@el , "Τακτικός Προϋπολογισμός"@el}**).
+**Object Properties**
+  - **has_expense_with_kae** : expressing the expense as  [ExpenseWithKae](#expensewithkae) of the [BudgetApproval](#budgetapproval). |`Range → dvg:ExpenseWithKae`|
+**Data Properties**
+  - **budget_type** : |`Range → OneOf{"Κρατικός"@el, "Φορέα"@el}`|
+  - **budget_category** : |`Range → OneOf{"Ίδια Έσοδα"@el, "Πρόγραμμα Δημοσίων Επενδύσεων"@el, "Τακτικός Προϋπολογισμός"@el}`|
   - **is_budget_approval_for_org** : Similar to [BalanceAccount](#balanceaccount).
   - **financial_year** : Similar to [BalanceAccount](#balanceaccount).
   - **has_related_institution** : Similar to [BalanceAccount](#balanceaccount).
@@ -313,8 +338,8 @@ This type of decision does not have any specific object or datatype properties.
 
 **Greek Translation** : ΕΓΚΥΚΛΙΟΣ
 
-**Datatype Properties**
-  - **circular_number** : (__Range__:**xsd:string**).
+**Data Properties**
+  - **circular_number** : |`Range → xsd:string`|
 
 - - -
 
@@ -322,7 +347,7 @@ This type of decision does not have any specific object or datatype properties.
 
 **Greek Translation** : ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΣΥΛΛΟΓΙΚΟ ΟΡΓΑΝΟ - ΕΠΙΤΡΟΠΗ - ΟΜΑΔΑ ΕΡΓΑΣΙΑΣ - ΟΜΑΔΑ ΕΡΓΟΥ - ΜΕΛΗ ΣΥΛΛΟΓΙΚΟΥ ΟΡΓΑΝΟΥ
 
-**Datatype Properties**
+**Data Properties**
   - **collegial_body_decision_type** : (__Range__:**OneOf{"Αποδοχή Παραίτησης Μέλους"@el , "Καθορισμός Αμοιβής - Αποζημίωσης"@el , "Παύση - Αντικατάσταση μέλους"@el , "Συγκρότηση"@el}**).
   - **collegial_body_party_type** : (__Range__:**OneOf{"Όργανο Γνωμοδοτικής Αρμοδιότητας"@el , "Όργανο άλλης αρμοδιότητας"@el , "Επιτροπή"@el , "Ομάδα έργου"@el , "Ομάδα εργασίας"@el , "Συλλογικό όργανο Διοίκησης"@el}**).
   - **fek/fek_issue/fek_year** : Similar to [Appointment](#appointment).
@@ -332,8 +357,106 @@ This type of decision does not have any specific object or datatype properties.
 
 **Greek Translation** : ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ
 
-**Datatype Properties**
-  - **primary_officer** : (__Range__:**xsd:string**).
-  - **secondary_officer** : (__Range__:**xsd:string**).
+**Data Properties**
+  - **primary_officer** : |`Range → xsd:string`|
+  - **secondary_officer** : |`Range → xsd:string`|
   - **budget_category** : Similar to [BudgetApproval](#budgetapproval).
   - **financial_year** : Similar to [BalanceAccount](#balanceaccount).
+
+- - -
+
+### Contract
+
+**Greek Translation** : ΣΥΜΒΑΣΗ
+
+**Object Properties**
+  - **has_expense** : the [expense](#expense) of the [Contract](#contract). |`Range → dvg:Expense`|
+**Data Properties**
+  - **contract_decision_type** : |`Range → OneOf{"Σύμβαση Έργου"@el , "Σύμβαση Ιδιωτικού Δικαίου Αορίστου Χρόνου"@el , "Σύμβαση Ιδιωτικού Δικαίου Ορισμένου Χρόνου"@el}`|
+  - **number_employees** : Similar to [Appointment](#appointment)
+
+- - -
+
+### DeclarationSummary
+
+**Greek Translation** : ΠΕΡΙΛΗΨΗ ΔΙΑΚΗΡΥΞΗΣ
+
+**Object Properties**
+  - **has_related_undertaking** : relates a [DeclarationSummary](#declarationsummary) with an [Undertaking](#undertaking). |`Range → dvg:Undertaking`|
+  - **has_expense** : the [expense](#expense) of the [DeclarationSummary](#declarationsummary). |`Range → dvg:Expense`|
+
+**Data Properties**
+  - **contract_type** : |`Range → OneOf{"Έργα"@el , "Μελέτες"@el , "Προμήθειες"@el , "Υπηρεσίες"@el`|
+  - **selection_criterion** : |`Range → OneOf{"Συμφερότερη από οικονομικής άποψης"@el , "Χαμηλότερη Τιμή"@el}`|
+  - **tendering_procedure** : |`Range → OneOf{"Ανοικτός"@el , "Κλειστός"@el , "Πρόχειρος"@el}`|
+  - **government_institution_budget_code** : |`Range → OneOf{"Πρόγραμμα Δημοσίων Επενδύσεων"@el , "Συγχρηματοδοτούμενο Έργο"@el , "Τακτικός Προϋπολογισμός"@el}`|
+
+- - -
+
+### DevelopmentLawContract
+
+**Greek Translation** : ΣΥΜΒΑΣΗ - ΠΡΑΞΕΙΣ ΑΝΑΠΤΥΞΙΑΚΩΝ ΝΟΜΩΝ
+
+This type of decision does not have any specific object or data properties.
+
+- - -
+
+### DisciplinaryAcquitance
+
+**Greek Translation** : ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ
+
+This type of decision does not have any specific object or data properties.
+
+- - -
+
+### DonationGrant
+
+**Greek Translation** : ΔΩΡΕΑ - ΕΠΙΧΟΡΗΓΗΣΗ
+
+**Object Properties**
+  - **has_expense** : the [expense](#expense) of the [DonationGrant](#donationgrant). |`Range → dvg:Expense`|
+
+**Data Properties**
+  - **kae** : The kae number of [DonationGrant](#donationgrant). This is not related to [ExpenseWithKae](#expensewithkae). |`Range → xsd:string`|
+  - **donation_type** : |`Range → OneOf{"Αποδοχή Δωρεάς"@el , "Δωρεά(προς τρίτους)@el" , "Επιχορήγηση"@el , "Σύμβαση Πολιτιστικής Χορηγίας"@el}`|
+
+- - -
+
+### EvaluationReportOfLaw
+
+**Greek Translation** : ΕΚΘΕΣΗ ΑΠΟΤΙΜΗΣΗΣ ΓΙΑ ΤΗΝ ΚΑΤΑΣΤΑΣΗ ΤΗΣ ΥΦΙΣΤΑΜΕΝΗΣ ΝΟΜΟΘΕΣΙΑΣ
+
+This type of decision does not have any specific object or data properties.
+
+- - -
+
+### ExpenditureApproval
+
+**Greek Translation** : ΕΓΚΡΙΣΗ ΔΑΠΑΝΗΣ
+
+**Object Properties**
+  - **has_related_undertaking** :relates a [ExpenditureApproval](#expenditureapproval) with an [Undertaking](#undertaking). |`Range → dvg:Undertaking`|
+  - **has_expense** : the [expense](#expense) of the [DeclarationSummary](#declarationsummary). |`Range → dvg:Expense`|
+
+**Data Properties**
+  - **kae** :  The kae number of [ExpenditureApproval](#expenditureapproval). This is not related to [ExpenseWithKae](#expensewithkae). |`Range → xsd:string`|
+
+- - -
+
+### GeneralSpecialSecretaryMonocraticBody
+
+**Greek Translation** : ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΘΕΣΗ ΓΕΝΙΚΟΥ - ΕΙΔΙΚΟΥ ΓΡΑΜΜΑΤΕΑ - ΜΟΝΟΜΕΛΕΣ ΟΡΓΑΝΟ
+
+**Object Properties**
+  - **has_expense** : the [expense](#expense) of the [GeneralSpecialSecretaryMonocraticBody](#generalspecialsecretarymonocraticbody). |`Range → dvg:Expense`|
+
+**Data Properties**
+  - **position** : |`Range → OneOf{"Γενικός Γραμματέας Αποκεντρωμένης Διοίκησης"@el , "Γενικός Γραμματέας Υπουργείου"@el , "Ειδικός Γραμματέας Υπουργείου"@el , "Μονομελές Όργανο"@el}`|
+  - **position_org** : The government institution which the  position applies to. |`Range → xsd:string`|
+  - **position_decision_type** : |`Range → OneOf{"Αθωωτική Πειθαρχική Απόφαση"@el , "Αντικατάσταση"@el , "Αποδοχή Παραίτησης"@el , "Διορισμός"@el , "Καθορισμός Αμοιβής - Αποζημίωσης"@el , "Παύση"@el}`|
+
+- - -
+
+### InvestmentPlacing
+
+This type of decision does not have any specific object or data properties.

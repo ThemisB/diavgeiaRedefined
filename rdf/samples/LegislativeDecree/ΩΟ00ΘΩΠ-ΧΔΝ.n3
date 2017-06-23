@@ -62,7 +62,6 @@
 	<http://diavgeia.gov.gr/ontology/legislative_decree_number> "ΠΝΠ_07.10"@el;
 	<http://diavgeia.gov.gr/ontology/unit_id> "91380".
 
-
 <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Την παράγραφο 1 του άρθρου 44 του Συντάγματος."@el.
 
@@ -134,7 +133,7 @@
 	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2015/4327/article/30>.
 
 <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/8> a <http://diavgeia.gov.gr/ontology/Decision>;
-<http://diavgeia.gov.gr/ontology/has_text> "Η ισχύς της παρούσας, η οποία θα κυρωθεί νομοθετικά κατά το άρθρο 44 παράγραφος 1 του Συντάγματος, αρχίζει από τη δημοσίευσή της στην Εφημερίδα της Κυβερνήσεως, εκτός αν ορίζεται διαφορετικά στις επιμέρους διατάξεις. "@el.
+    <http://diavgeia.gov.gr/ontology/has_text> "Η ισχύς της παρούσας, η οποία θα κυρωθεί νομοθετικά κατά το άρθρο 44 παράγραφος 1 του Συντάγματος, αρχίζει από τη δημοσίευσή της στην Εφημερίδα της Κυβερνήσεως, εκτός αν ορίζεται διαφορετικά στις επιμέρους διατάξεις. "@el.
 
 <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
 	<http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΟΕΔΡΟΣ ΤΗΣ ΔΗΜΟΚΡΑΤΙΑΣ"@el;

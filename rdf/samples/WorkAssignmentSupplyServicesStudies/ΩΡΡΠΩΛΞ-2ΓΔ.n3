@@ -18,7 +18,6 @@
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/2>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/3>;
 	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Expense/1>>;
-	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Sponsored/1>;
 	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
 	<http://diavgeia.gov.gr/ontology/recipient_for_action> "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
 	<http://diavgeia.gov.gr/ontology/work_assignment_etc_category> "Προμήθειες"@el;

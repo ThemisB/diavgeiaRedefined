@@ -5,22 +5,22 @@
 	<http://data.europa.eu/eli/ontology#date_publication> "2016-03-03"^^<http://www.w3.org/2001/XMLSchema#date>;
 	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΚΟΙΝΩΦΕΛΗΣ ΔΗΜΟΤΙΚΗ ΕΠΙΧΕΙΡΗΣΗ ΠΟΛΙΤΙΣΤΙΚΗΣ ΟΙΚΟΝΟΜΙΚΗΣ ΤΟΥΡΙΣΤΙΚΗΣ & ΚΟΙΝΩΝΙΚΗΣ ΑΝΑΠΤΥΞΗΣ ΔΗΜΟΥ ΛΕΥΚΑΔΑΣ (Δ.Ε.Π.Ο.Κ.Α.Λ.)"@el;
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/Decision/1>;
+    <http://diavgeia.gov.gr/ontology/has_expense_with_kae> <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/ExpenseWithKae/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/Signer/1>;
-  <http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/Signer/2>;
+    <http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/Signer/2>;
 	<http://diavgeia.gov.gr/ontology/protocol_number> "ΧΕΠ 198/2016";
 	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
 	<http://diavgeia.gov.gr/ontology/has_private_data> false;
 	<http://diavgeia.gov.gr/ontology/organization_id> "50941";
-  <http://diavgeia.gov.gr/ontology/unit_id> "77026";
+    <http://diavgeia.gov.gr/ontology/unit_id> "77026";
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1452674356709";
-  <http://diavgeia.gov.gr/ontology/financial_year> "2016";
-  <http://diavgeia.gov.gr/ontology/budget_category> "Τακτικός Προϋπολογισμός"@el;
+    <http://diavgeia.gov.gr/ontology/financial_year> "2016";
+    <http://diavgeia.gov.gr/ontology/budget_category> "Τακτικός Προϋπολογισμός"@el;
 	<http://diavgeia.gov.gr/ontology/budget_type> "Φορέα"@el;
 	<http://diavgeia.gov.gr/ontology/is_budget_approval_for_org> false.
 
 <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-  <http://diavgeia.gov.gr/ontology/has_text> "Η Κοινωφελής Δημοτική Επιχείρηση Πολιτιστικής Οικονομικής Τουριστικής και Κοινωνικής Ανάπτυξης Δήμου Λευκάδας, δια του νομίμου εκπροσώπου της, Προέδρου Δ.Σ. αυτής, Αντιδημάρχου Λευκάδας κατέβαλε στον/ ην: ΣΤΑΜΑΤΕΛΟΥ ΣΠΥΡΙΔΟΥΛΑ. Ποσό € (ολογράφως): Εννιακόσια εβδομήντα εννιά €υρώ και ογδόντα οκτώ λεπτά. Για: Καταβολή μισθοδοσίας Φεβρουαρίου 2016, για παροχή υπηρεσιών Νοσηλεύτριας, στο Βοήθεια στο Σπίτι της Κοινωφελούς Δημοτικής Επιχείρησης ΔΕΠΟΚΑΛ Δήμου Λευκάδας. Φεβρουάριος 2016: 979,88€ Συνολικές Μικτές Αποδοχές: 1.231,00€ ΚΡΑΤΗΣΕΙΣ: ΙΚΑ: 190,81€, ΦΜΥ: 53,03€, Εισφορά Αλληλεγγύης 7,28€. Καθαρό: 979,88€"@el.
-
+    <http://diavgeia.gov.gr/ontology/has_text> "Η Κοινωφελής Δημοτική Επιχείρηση Πολιτιστικής Οικονομικής Τουριστικής και Κοινωνικής Ανάπτυξης Δήμου Λευκάδας, δια του νομίμου εκπροσώπου της, Προέδρου Δ.Σ. αυτής, Αντιδημάρχου Λευκάδας κατέβαλε στον/ ην: ΣΤΑΜΑΤΕΛΟΥ ΣΠΥΡΙΔΟΥΛΑ. Ποσό € (ολογράφως): Εννιακόσια εβδομήντα εννιά €υρώ και ογδόντα οκτώ λεπτά. Για: Καταβολή μισθοδοσίας Φεβρουαρίου 2016, για παροχή υπηρεσιών Νοσηλεύτριας, στο Βοήθεια στο Σπίτι της Κοινωφελούς Δημοτικής Επιχείρησης ΔΕΠΟΚΑΛ Δήμου Λευκάδας. Φεβρουάριος 2016: 979,88€ Συνολικές Μικτές Αποδοχές: 1.231,00€ ΚΡΑΤΗΣΕΙΣ: ΙΚΑ: 190,81€, ΦΜΥ: 53,03€, Εισφορά Αλληλεγγύης 7,28€. Καθαρό: 979,88€"@el.
 
 <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
 	<http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΟΕΔΡΟΣ Δ.Σ. ΔΕΠΟΚΑΛ"@el;
@@ -28,11 +28,11 @@
 	<http://diavgeia.gov.gr/ontology/signer_name> "ΠΕΡΔΙΚΑΡΗΣ ΑΘΑΝΑΣΙΟΣ"@el.
 
 <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/Signer/2> a <http://diavgeia.gov.gr/ontology/Signer>;
-  <http://diavgeia.gov.gr/ontology/signer_job> "ΑΡΜΟΔΙΑ ΥΠΑΛΛΗΛΟΣ"@el;
-  <http://diavgeia.gov.gr/ontology/signer_name> "ΑΓΓΕΛΟΥ ΟΛΓΑ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "100005700".
+    <http://diavgeia.gov.gr/ontology/signer_job> "ΑΡΜΟΔΙΑ ΥΠΑΛΛΗΛΟΣ"@el;
+    <http://diavgeia.gov.gr/ontology/signer_name> "ΑΓΓΕΛΟΥ ΟΛΓΑ"@el;
+    <http://diavgeia.gov.gr/ontology/signer_id> "100005700".
 
 <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/ExpenseWithKae/1> a <http://diavgeia.gov.gr/ontology/ExpenseWithKae>;
-  <http://diavgeia.gov.gr/ontology/expense_amount> "979.88";
-  <http://diavgeia.gov.gr/ontology/expense_amount_currency> "EUR";
-  <http://diavgeia.gov.gr/ontology/kae> "53.00".
+    <http://diavgeia.gov.gr/ontology/expense_amount> "979.88";
+    <http://diavgeia.gov.gr/ontology/expense_amount_currency> "EUR";
+    <http://diavgeia.gov.gr/ontology/kae> "53.00".

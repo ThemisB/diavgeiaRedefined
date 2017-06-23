@@ -110,7 +110,21 @@
     <!-- http://diavgeia.gov.gr/ontology/has_expense -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_expense">
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Award"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Contract"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
     </owl:ObjectProperty>
     
@@ -122,6 +136,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
                 </owl:unionOf>
@@ -135,16 +150,7 @@
     <!-- http://diavgeia.gov.gr/ontology/has_organization_sponsor -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_organization_sponsor">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
     </owl:ObjectProperty>
     
@@ -168,69 +174,27 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/has_related_expenditureapproval_undertaking -->
+    <!-- http://diavgeia.gov.gr/ontology/has_related_declaration_summary -->
 
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_related_expenditureapproval_undertaking">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/has_sponsored -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_sponsored">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/has_verified -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_verified">
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Verification"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/related_declaration_summary -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/related_declaration_summary">
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_related_declaration_summary">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Award"/>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/related_occupation_invitation -->
+    <!-- http://diavgeia.gov.gr/ontology/has_related_occupation_invitation -->
 
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/related_occupation_invitation">
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_related_occupation_invitation">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList"/>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/OccupationInvitation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/related_undertaking -->
+    <!-- http://diavgeia.gov.gr/ontology/has_related_undertaking -->
 
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/related_undertaking">
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_related_undertaking">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -245,27 +209,29 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_sponsored -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_sponsored">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/has_verified -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_verified">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Verification"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/signed_by -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/signed_by">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/sponsors -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/sponsors">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/OrganizationSponsor"/>
     </owl:ObjectProperty>
     
 

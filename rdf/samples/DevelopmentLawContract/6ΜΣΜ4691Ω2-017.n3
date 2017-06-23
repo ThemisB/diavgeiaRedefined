@@ -38,7 +38,6 @@
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473333552193";
 	<http://diavgeia.gov.gr/ontology/unit_id> "72341".
 
-
 <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν.2362/27-11-95 «Περί ∆ηµοσίου Λογιστικού, ελέγχου των δαπανών του Κράτους και άλλες διατάξεις» (Α΄247) και ειδικότερα του άρθρου 104."@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1995/2362>;

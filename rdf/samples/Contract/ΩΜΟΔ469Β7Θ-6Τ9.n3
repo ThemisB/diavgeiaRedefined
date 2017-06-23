@@ -20,7 +20,6 @@
 	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Decision/1>;
 	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Signer/1>;
 	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Expense/1>;
-	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Sponsored/1>;
 	<http://diavgeia.gov.gr/ontology/contract_decision_type> "Σύμβαση Έργου"@el;
 	<http://diavgeia.gov.gr/ontology/contract_decision_type> "Σύμβαση Έργου"@el;
 	<http://diavgeia.gov.gr/ontology/thematic_category> "PublicAdministration";

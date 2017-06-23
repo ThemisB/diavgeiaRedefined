@@ -32,7 +32,6 @@
 	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1452674845595";
 	<http://diavgeia.gov.gr/ontology/unit_id> "77472".
 
-
 <http://diavgeia.gov.gr/eli/decision/69Β8ΟΡ1Υ-ΖΩ0/b07f8acc-1558-4bb4-a138-d30dd71e39ec/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
 	<http://diavgeia.gov.gr/ontology/has_text> "Την § 3 του άρθρου 14 του Ν. 998/79 «Περί προστασίας δασών»."@el;
 	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1979/998/article/14/paragraph/3>.
