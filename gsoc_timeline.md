@@ -11,8 +11,10 @@ The timeline is the following:
  | Dates   |      Actions  |
 |----------|:-------------:|
 | 30 May - 27 June |  RDF Decisions Schema |
-| 28 June - 26 July | Sample RDF Dataset & on demand RDF to PDF Converter|
-| 27 July - 29 August | Bitcoin Blockchain Implementation |
-|30 August - ... | Repository maintenance|
+| 28 June - 26 July | Bitcoin Blockchain Implementation |
+| 27 July - 29 August | N3 Generator / Bitcoin Validator |
+|30 August - ... | Repository maintenance |
 
-Weekly Project Progress Report
+### Project Progress Report
+
+I keep weekly progress report logs, that you can find [here](https://github.com/eellak/gsoc17-diavgeia/blob/master/project_progress/progress.md).

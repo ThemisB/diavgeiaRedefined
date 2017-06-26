@@ -1,5 +1,18 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 3 (17 June - 23 June)**
+
+- Complete the rdf schema with the remaining decisions and create the relevant [samples](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples).
+- I wrote an extensive rdf documentation that can be found [here](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/README.md). The documentation explains in depth the following topics:
+  1. Current Diavgeia Issues
+  2. The RDF Schema
+  3. Decision Types and Samples
+  4. URIs - ELI
+  5. General Schema Classes
+  6. Common Data Properties
+  7. Decision specific Object and Data Properties
+  8. The impact of RDF usage on Diavgeia infrastructure (Conclusions)
+
 **Week 2 (9 June - 16 June)**
 
 - Extend the rdf schema, in order to support 24 out of 33 decision types.
