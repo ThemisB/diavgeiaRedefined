@@ -15,4 +15,4 @@ The timeline is the following:
 | 27 July - 29 August | Bitcoin Blockchain Implementation |
 |30 August - ... | Repository maintenance|
 
-
+Weekly Project Progress Report
