@@ -10,8 +10,10 @@ class Wallet {
   /**
    * Wallet
    * @constructor
-   * @param {String} Wallet
+   * @param {String} id - The wallet id
+   * @param {String} location - The path in which wallet will be stored
    */
+
   constructor (id=config.get('wallet_id'), location = Wallet._getWalletLocation()) {
     this.id = id;
     this.location = location;
@@ -53,6 +55,7 @@ class Wallet {
   /**
    * Path Normalization of the wallet_location, based on the user preference
    * of having enabled the home path option or not.
+   * @private
    * @returns {string}
    */
 
