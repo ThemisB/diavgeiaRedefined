@@ -1,169 +1,0 @@
-10
-
-dir
-106
-http://svn.imis.athena-innovation.gr/redmine/dioikitiki-metarithmisi/drasi1/vcl-bin/resources/xinha/plugins
-http://svn.imis.athena-innovation.gr/redmine/dioikitiki-metarithmisi
-
-
-
-2013-06-13T13:34:27.573704Z
-65
-zamani
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-d9ac7059-6bfd-4086-aa1d-81eb950cfe0b
-
-LangMarks
-dir
-
-ClientsideSpellcheck
-dir
-
-EditTag
-dir
-
-PasteText
-dir
-
-BackgroundImage
-dir
-
-SmartReplace
-dir
-
-InsertWords
-dir
-
-InsertMarquee
-dir
-
-Linker
-dir
-
-Filter
-dir
-
-Forms
-dir
-
-InsertSmiley
-dir
-
-CSS
-dir
-
-GenericPlugin
-dir
-
-NoteServer
-dir
-
-DynamicCSS
-dir
-
-HtmlTidy
-dir
-
-InsertPicture
-dir
-
-Abbreviation
-dir
-
-InsertSnippet
-dir
-
-QuickTag
-dir
-
-SetId
-dir
-
-Stylist
-dir
-
-Template
-dir
-
-FindReplace
-dir
-
-ImageManager
-dir
-
-CharCounter
-dir
-
-ListType
-dir
-
-DoubleClick
-dir
-
-HorizontalRule
-dir
-
-SaveSubmit
-dir
-
-DefinitionList
-dir
-
-Equation
-dir
-
-CharacterMap
-dir
-
-ExtendedFileManager
-dir
-
-TableOperations
-dir
-
-UnFormat
-dir
-
-InsertAnchor
-dir
-
-FullPage
-dir
-
-SuperClean
-dir
-
-PreserveScripts
-dir
-
-GetHtml
-dir
-
-SpellChecker
-dir
-
-InsertPagebreak
-dir
-
-FormOperations
-dir
-
-HtmlEntities
-dir
-
-ContextMenu
-dir
-

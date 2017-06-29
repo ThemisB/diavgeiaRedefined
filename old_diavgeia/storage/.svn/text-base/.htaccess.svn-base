@@ -1,7 +1,0 @@
-
-		RewriteEngine on
-		RewriteRule ^$ /index.html
-		RewriteRule ^/doc$ /index.html
-		RewriteRule ^/doc/$ /index.html
-		RewriteRule ^/doc/(.*) /get_doc.php?ada=$1&type=$1 [NE]
-		RewriteRule ^/doc_original/(.*) /get_doc_original.php?ada=$1&type=$1 [NE]

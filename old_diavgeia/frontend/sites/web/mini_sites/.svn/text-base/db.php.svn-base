@@ -1,7 +1,0 @@
-<?php
-$db[ 'host' ] = 'localhost:3307';
-$db[ 'username' ] = 'root';
-$db[ 'password' ] = 'athena@opengov';
-$db[ 'database' ] = 'apofaseis';
-
-?>
