@@ -1,5 +1,13 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 4 (24 June - 30 June)**
+
+- Meetup for first evaluations, discussion about project progress and second month-project planning.
+- We decided to give priority to the blockchain implementation during the second month coding period.
+- I will use [bcoin](http://bcoin.io/) as a node-js bitcoin library. This week i have:
+  1. Familiarize myself even more with bitcoin concepts and bcoin library.
+  2. Implemented Diavgeia's wallet and added some helpful functions regarding the configuration of application. You can find the code [here](https://github.com/eellak/gsoc17-diavgeia/tree/master/bitcoin)
+
 **Week 3 (17 June - 23 June)**
 
 - Complete the rdf schema with the remaining decisions and create the relevant [samples](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples).
