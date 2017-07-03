@@ -14,7 +14,7 @@ class Wallet {
    * @param {String} location - The path in which wallet will be stored
    */
 
-  constructor (id=config.get('wallet_id'), location = Wallet._getWalletLocation()) {
+  constructor (id=config.get('wallet_id'), location = Wallet.getWalletLocation()) {
     this.id = id;
     this.location = location;
   }
@@ -32,7 +32,9 @@ class Wallet {
       let walletdb = yield _wallet.getWalletDB();
       let existingWallet = yield walletdb.get(_wallet.id);
       if (existingWallet === undefined) {
-        yield walletdb.create({id:_wallet.id});
+        yield walletdb.create({
+          id:_wallet.id
+        });
       }
       yield walletdb.close();
     });
@@ -43,24 +45,26 @@ class Wallet {
    * @returns {Promise}
    */
 
-  async getWalletDB() {
+  getWalletDB() {
     var walletDB = new bcoin.walletdb({
       db : 'leveldb',
-      location : this.location + '/diavgeia-wallet'
+      location : this.location + '/diavgeia-wallet',
+      spv : true
     })
-    await walletDB.open();
-    await walletDB.connect();
-    return walletDB;
+    return co(function* () {
+      yield walletDB.open();
+      yield walletDB.connect();
+      return walletDB;
+    });
   }
 
   /**
    * Path Normalization of the wallet_location, based on the user preference
    * of having enabled the home path option or not.
-   * @private
    * @returns {string}
    */
 
-  static _getWalletLocation() {
+  static getWalletLocation() {
     let configWalletLocation = config.get('wallet_location');
     if (config.get('wallet_location_from_home'))
       return process.env.HOME + '/' + path.normalize(configWalletLocation);
