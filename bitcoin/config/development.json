@@ -1,6 +1,6 @@
 {
   "wallet_location_from_home" : true,
-  "wallet_location" : ".bcoin_diavgeia",
+  "wallet_location" : ".bcoin",
   "wallet_id" : "diavgeia",
   "network" : "testnet"
 }
