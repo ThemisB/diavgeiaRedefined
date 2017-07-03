@@ -7,6 +7,7 @@ const co = require('co');
 (co(function* () {
 
   var wallet = new Wallet();
+  var walletdb = yield wallet.getWalletDB();
   var dvgWallet = yield walletdb.get(config.get('wallet_id'));
   assert(dvgWallet != undefined, `No wallet '${config.get('wallet_id')}' found. You have to initialize it first.`)
 
@@ -20,20 +21,26 @@ const co = require('co');
   spv.ensure()
   .then(() => spv.open())
   .then(()=> {
+
     var address = dvgWallet.getAddress('base58');
+    var xpub = dvgWallet.master.key.toPublic().xpubkey();
     console.log('Wallet Address', address);
+    console.log('Xpub',xpub,'\n');
 
     spv.pool.watchAddress(dvgWallet.getAddress());
 
-    dvgWallet.getBalance().then(balance => {console.log('Your balance is', balance)})
+    dvgWallet.getBalance().then(balance => {
+      let btcConfirmed = bcoin.amount.btc(balance.confirmed);
+      console.log('Blockchain-secured wallet balance %s', btcConfirmed, 'BTC');
+    })
 
     dvgWallet.on('balance', (balance) => {
       var btc = bcoin.amount.btc(balance.unconfirmed);
-      console.log('Your wallet balance has been updated: %s', btc);
-      dvgWallet.getBalance().then(console.log);
+      console.log('Your wallet balance has been updated: %s', btc, 'BTC\n');
     });
 
     spv.on('tx', function(tx) {
+      console.log(tx);
       spv.walletdb.addTX(tx).then({
       });
     })
