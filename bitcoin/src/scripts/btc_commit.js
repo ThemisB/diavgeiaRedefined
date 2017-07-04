@@ -1,7 +1,9 @@
 const config = require('config');
 const bcoin = require('bcoin').set(config.get('network'));
 const assert = require('assert');
-const Wallet = require('./Wallet');
+const Wallet = require('../classes/Wallet');
+const BTCCommiter = require('../classes/BTCCommiter');
+const crypto = require('crypto');
 const co = require('co');
 
 (co(function* () {
@@ -9,7 +11,8 @@ const co = require('co');
   var wallet = new Wallet();
   var walletdb = yield wallet.getWalletDB();
   var dvgWallet = yield walletdb.get(config.get('wallet_id'));
-  assert(dvgWallet != undefined, `No wallet '${config.get('wallet_id')}' found. You have to initialize it first.`)
+  assert(dvgWallet != undefined, `No wallet '${config.get('wallet_id')}' found.
+  You have to initialize it first.`)
 
   var spv = new bcoin.spvnode({
     prefix : Wallet.getWalletLocation(),
@@ -40,9 +43,7 @@ const co = require('co');
     });
 
     spv.on('tx', function(tx) {
-      console.log(tx);
-      spv.walletdb.addTX(tx).then({
-      });
+      spv.walletdb.addTX(tx).then({});
     })
 
     spv.connect().then(function(){

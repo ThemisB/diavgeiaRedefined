@@ -4,7 +4,6 @@ const path = require('path');
 const co = require('co');
 const fs = require('fs');
 
-
 class Wallet {
 
   /**
@@ -14,7 +13,7 @@ class Wallet {
    * @param {String} location - The path in which wallet will be stored
    */
 
-  constructor (id=config.get('wallet_id'), location = Wallet.getWalletLocation()) {
+  constructor(id=config.get('wallet_id'), location = Wallet.getWalletLocation()) {
     this.id = id;
     this.location = location;
   }
