@@ -2,5 +2,6 @@
   "wallet_location_from_home" : true,
   "wallet_location" : ".bcoin",
   "wallet_id" : "diavgeia",
-  "network" : "testnet"
+  "network" : "testnet",
+  "hash_algorithm" : "sha256"
 }
