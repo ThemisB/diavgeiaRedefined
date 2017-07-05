@@ -17,12 +17,14 @@
   "author": "Themis Beris",
   "license": "MIT",
   "bugs": {
-    "url" : "https://github.com/eellak/gsoc17-diavgeia/issues"
+    "url": "https://github.com/eellak/gsoc17-diavgeia/issues"
   },
-  "homepage" : "https://github.com/eellak/gsoc17-diavgeia/bitcoin#readme",
+  "homepage": "https://github.com/eellak/gsoc17-diavgeia/bitcoin#readme",
   "dependencies": {
     "bcoin": "^1.0.0-beta.12",
     "co": "^4.6.0",
-    "config": "^1.26.1"
+    "co-fs": "^1.2.0",
+    "config": "^1.26.1",
+    "merkle-tree-gen": "^1.1.0"
   }
 }
