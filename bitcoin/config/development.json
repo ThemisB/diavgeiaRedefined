@@ -3,5 +3,6 @@
   "wallet_location" : ".bcoin",
   "wallet_id" : "diavgeia",
   "network" : "testnet",
-  "hash_algorithm" : "sha256"
+  "hash_algorithm" : "sha256",
+  "proof_of_burn_fee" : 20000
 }

@@ -29,14 +29,16 @@ class BTCCommiter {
    */
 
   /**
-   *  get the data of the files inside decisionsFolder
+   *  Get the data of the files inside decisionsFolder
+   *  @private
    *  @returns {Promise}
    *  @resolve {DecisionsData}
    */
 
-  getDecisionsData() {
+  _getDecisionsData() {
     var _btcCommiter = this;
-
+    console.log(__dirname)
+    console.log(_btcCommiter.decisionsFolder)
     return co(function* () {
       const filenames = yield fs.readdir(_btcCommiter.decisionsFolder);
       const readAllFiles = filename => co(function*(){
@@ -61,12 +63,13 @@ class BTCCommiter {
 
   /**
    * get the hash of decisions
+   * @private
    * @param {DecisionsData}
    * @returns {Promise}
    * @resolve {DecisionsHash}
    */
 
-  getDecisionsHash(decisionsData) {
+  _getDecisionsHash(decisionsData) {
     var _btcCommiter = this;
 
     return co(function* () {
@@ -106,11 +109,11 @@ class BTCCommiter {
 
   /**
    * Create the Merkle Tree
+   * @private
    * @param {DecisionsHash}
    * @returns {MerkleTree}
    */
-  constructMerkleTree(decisionsHash) {
-    var _btcCommiter = this;
+  _constructMerkleTree(decisionsHash) {
     const hashes = decisionsHash.map(decisionHash => decisionHash.hash);
     const merkleTreeArgs = {
       array: hashes,
@@ -129,6 +132,64 @@ class BTCCommiter {
     return tree;
   }
 
+  /**
+   * Creates and broadcasts a proof of burn tx.
+   * @private
+   * @param {string} root - The root of the Merkle Tree
+   * @param {Wallet} dvgWallet - The wallet of Diavgeia
+   * @param {SPVNode} spv
+   * @returns {string} The tx id that should be published on Diavgeia website
+   */
+
+   _broadcastMerkleTreeTransaction(root, dvgWallet, spv) {
+     return co(function* () {
+       var opcodes = bcoin.script.opcodes;
+       var script = new bcoin.script();
+       script.push(opcodes.OP_RETURN);
+       script.push(root);
+       script.compile();
+       var changeAddress = dvgWallet.getAddress();
+       var mtx = new bcoin.mtx();
+       mtx.addOutput({
+         script,
+         value: config.get('proof_of_burn_fee'),
+         address: null
+       });
+       var coins = yield dvgWallet.getCoins();
+       yield mtx.fund(coins, {changeAddress, confirmed: true});
+       yield dvgWallet.sign(mtx);
+       var tx = mtx.toTX();
+       yield dvgWallet.db.addTX(tx);
+       yield dvgWallet.db.send(tx);
+       const ret = yield spv.sendTX(tx);
+       const txId = tx.txid();
+       console.log('Proof of burn tx with hash ', txId , ' was broadcasted!');
+       return txId;
+     });
+   }
+
+   /**
+    * @typedef {Object} Published
+    * @property {MerkleTree} tree
+    * @property {string} txId
+    */
+
+   /**
+    * Reads decisions inside decisionsFolder, creates the Merkle Tree
+    * creates a tx and broadcasts it to the blockchain.
+    * @return {Published}
+    */
+
+    publishDecisionsToBTC(dvgWallet, spv) {
+      var _btcCommiter = this;
+      return co(function*(){
+        const data = yield _btcCommiter._getDecisionsData();
+        const hashes = yield _btcCommiter._getDecisionsHash(data);
+        const tree = _btcCommiter._constructMerkleTree(hashes);
+        const txId = yield _btcCommiter._broadcastMerkleTreeTransaction(tree.root, dvgWallet, spv);
+        return { tree, txId };
+      });
+    };
 }
 
 module.exports = BTCCommiter;
