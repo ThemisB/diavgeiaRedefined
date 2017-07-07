@@ -161,7 +161,7 @@ class BTCCommiter {
        var tx = mtx.toTX();
        yield dvgWallet.db.addTX(tx);
        yield dvgWallet.db.send(tx);
-       const ret = yield spv.sendTX(tx);
+       yield spv.sendTX(tx);
        const txId = tx.txid();
        console.log('Proof of burn tx with hash ', txId , ' was broadcasted!');
        return txId;
