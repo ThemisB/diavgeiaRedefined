@@ -54,13 +54,13 @@ const Helpers = require('../classes/Helpers');
   var wallet = new Wallet();
 
   if (args['init']) {
-    dvgWallet = yield wallet.initialize();
+    yield wallet.initialize();
     walletdb = yield wallet.getWalletDB();
   }
   else {
     walletdb = yield wallet.getWalletDB();
-    dvgWallet = yield walletdb.get(config.get('wallet_id'));
   }
+  dvgWallet = yield walletdb.get(config.get('wallet_id'));
 
   if (!args['spv'] && !args['commit'])
     return;
