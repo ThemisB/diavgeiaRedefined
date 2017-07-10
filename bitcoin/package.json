@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "NodeJS Application which is responsible for storing Diavgeia's decisions to the Bitcoin Network",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
+  "main": "src/scripts/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eellak/gsoc17-diavgeia.git"
@@ -21,10 +22,12 @@
   },
   "homepage": "https://github.com/eellak/gsoc17-diavgeia/bitcoin#readme",
   "dependencies": {
+    "argparse": "^1.0.9",
     "bcoin": "^1.0.0-beta.12",
     "co": "^4.6.0",
     "co-fs": "^1.2.0",
     "config": "^1.26.1",
     "merkle-tree-gen": "^1.1.0"
-  }
+  },
+  "devDependencies": {}
 }
