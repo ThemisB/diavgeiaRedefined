@@ -1,5 +1,12 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 5 (1 July - 7 July)**
+
+- Merkle Tree Construction based on Diavgeia's decisions
+- Implement methods to create Proof of Burn transactions.
+- Commit transactions to BTC network and state to Diavgeia what should be published to the website (Master Public Key, the Merkle Tree, Bitcoin transaction id).
+- Complete blockchain!
+
 **Week 4 (24 June - 30 June)**
 
 - Meetup for first evaluations, discussion about project progress and second month-project planning.
