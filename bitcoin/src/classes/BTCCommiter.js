@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const co = require('co');
 const merkle = require('merkle-tree-gen');
 const assert = require('assert');
+const path = require('path');
 
 class BTCCommiter {
 
@@ -42,7 +43,7 @@ class BTCCommiter {
     return co(function* () {
       const filenames = yield fs.readdir(_btcCommiter.decisionsFolder);
       const readAllFiles = filename => co(function*(){
-        let fullpath = _btcCommiter.decisionsFolder+filename;
+        let fullpath = path.normalize(_btcCommiter.decisionsFolder+'/'+filename);
         let data = yield fs.readFile(fullpath);
         return {filepath:fullpath,data};
       });
