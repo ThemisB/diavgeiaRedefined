@@ -1,0 +1,56 @@
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093> a <http://diavgeia.gov.gr/ontology/OtherDecisions>;
+	<http://diavgeia.gov.gr/ontology/version> "af622e94-52b1-455c-914e-249fbb444093";
+	<http://diavgeia.gov.gr/ontology/iun> "ΩΠΨ64653ΠΣ-5ΚΠ"@el;
+	<http://data.europa.eu/eli/ontology#title> "Αναγνώριση συνάφειας M.Τ.Σ. σε  εκπαιδευτικό"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-06-07"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ, ΕΡΕΥΝΑΣ ΚΑΙ ΘΡΗΣΚΕΥΜΑΤΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΠΕΡΙΦΕΡ. Δ/ΝΣΗ ΠΡΩΤ/ΘΜΙΑΣ & ΔΕΥΤ/ΘΜΙΑΣ ΕΚΠ/ΣΗΣ ΑΝΑΤ. ΜΑΚΕΔΟΝΙΑΣ & ΘΡΑΚΗΣ, Δ/ΝΣΗ ΔΕΥΤ/ΘΜΙΑΣ ΕΚΠΑΙΔΕΥΣΗΣ ΡΟΔΟΠΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΔΙΟΙΚΗΤΙΚΩΝ ΘΕΜΑΤΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_address> "Στ. Κυριακίδη 91"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "69100";
+	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2531083702";
+	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2531028469";
+	<http://diavgeia.gov.gr/ontology/recipients> "ΑΜΠΑΤΖΙΑΝΗΣ ΠΑΝΤΕΛΗΣ Καθ. κλ. ΠΕ04.01 Γ/ΣΙΟ Δ.Ε. ΣΑΠΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "Φ14.1/2991";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/3>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/4>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/5>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/6>;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΖΟΥΜΕ"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Π.Μ."@el;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "PublicAdministration";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "100015990";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1465363673192";
+	<http://diavgeia.gov.gr/ontology/unit_id> "71549".
+
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την αρ. 105657 / Δ1 / 16-10-2002 Υπουργική Απόφαση (ΦΕΚ 1340 τ. Β΄ / 16-10-2002 ) με θέμα: «Καθορισμός των ειδικότερων καθηκόντων και αρμοδιοτήτων των Προϊσταμένων των περιφερειακών υπηρεσιών Πρωτοβάθμιας και Δευτεροβάθμιας Εκπαίδευσης των Διευθυντών και Υποδιευθυντών των σχολικών μονάδων και Σ.Ε.Κ. και των συλλόγων διδασκόντων»."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του ν. 4354/2015 (ΦΕΚ 176/16-12-2015/τ.Α΄)"@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2015/4354>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το με αριθ.πρωτ.ΔΙΠΙΔΔ/Β10ΕΕ/202/24998/30-11-2012 έγγραφο του Υπ. Διοικητικής Μεταρρύθμισης και Ηλεκτρονικής Διακυβέρνησης με θέμα: «Αναγνώριση προϋπηρεσίας αναπληρωτών Εκπαιδευτικών που προσλαμβάνονται στο πλαίσιο υλοποίησης Πράξεων του ΕΣΠΑ»"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το με αριθ.πρωτ.9208/Δ2/ΕΞ.ΕΠΕΙΓΟΝ/22-1-2013 έγγραφο του Υπ. Παιδείας και Θρησκευμάτων, Πολιτισμού και Αθλητισμού με θέμα: «Διαβίβαση εγγράφου, σχετικά με την αναγνώριση συνάφειας διδακτορικών διπλωμάτων και μεταπτυχιακών τίτλων σπουδών»."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις αιτήσεις των ενδιαφερόμενων εκπαιδευτικών με τους σχετικούς τίτλους οι οποίοι πρέπει να έχουν συνάφεια με το αντικείμενο της υπηρεσίας τους."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την με αριθμ. 7/07-06-2016 Πράξη του ΠΥΣΔΕ Ροδόπης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Αναγνωρίζουμε ότι ο Μεταπτυχιακός τίτλος σπουδών του κ. Αμπατζιάνη Παντελή καθ. κλ. ΠΕ04.01, του Γ/σίου Δ.Ε. Σαπών, έχει συνάφεια με το αντικείμενο απασχόλησης από 02-12-2013, λόγω αναδρομικού διορισμού."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΠΨ64653ΠΣ-5ΚΠ/af622e94-52b1-455c-914e-249fbb444093/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Η ΔΙΕΥΘΥΝΤΡΙΑ Δ.Ε."@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΜΑΡΙΓΟΥΛΑ ΚΟΣΜΙΔΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "100018799".

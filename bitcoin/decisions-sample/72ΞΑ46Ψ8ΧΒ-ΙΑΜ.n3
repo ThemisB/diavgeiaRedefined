@@ -1,0 +1,98 @@
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e> a <http://diavgeia.gov.gr/ontology/OccupationInvitation>;
+	<http://diavgeia.gov.gr/ontology/version> "e1e27523-ab46-440f-ab28-d8f930435d1e";
+	<http://diavgeia.gov.gr/ontology/iun> "72ΞΑ46Ψ8ΧΒ-ΙΑΜ"@el;
+	<http://data.europa.eu/eli/ontology#title> "Προκήρυξη θέσης καθηγητή του Τμήματος Μη\nχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη βαθμίδα του καθηγητή πρώτης βαθμίδας, με γνωστικό αντικείμενο\n«Μέθοδοι παραγωγής και αξιολόγηση ιδιοτήτων μεταλλικών υλικών»."@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-06-01"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΑΡΙΣΤΟΤΕΛΕΙΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΟΝΙΚΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "14501";
+	<http://diavgeia.gov.gr/ontology/has_preconsideration> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Preconsideration>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/3>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/4>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/5>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/6>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/7>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/8>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/9>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/10>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/11>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/12>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/13>;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΣΕ"@el;
+	<http://diavgeia.gov.gr/ontology/vacancy_opening_type> "Προκήρυξη Πλήρωσης Θέσεων Διδακτικού Ερευνητικού Προσωπικού (ΔΕΠ) Πανεπιστημιακού τομέα"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "Public Administration";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "99202041";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1465284835474";
+	<http://diavgeia.gov.gr/ontology/unit_id> "72831".
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Preconsideration> a <http://diavgeia.gov.gr/ontology/PreConsideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Η Γενική Συνέλευση Ειδικής Σύνθεσης του Τμήματος Μηχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη συνεδρίαση της υπ’ αριθμ. 6/16.2.2016, λαμβάνοντας υπόψη"@el.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την από 29.1.2016 αίτηση εξέλιξης του αναπληρωτή καθηγητή"@el.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Των παρ. 3 του άρθρου 77 του Ν. 4009/2011(195 Α΄) και 4 του άρθρου 78 του Ν. 4009/2011(195 Α΄) όπως τροποποιήθηκε με την παρ. 6 του άρθρου 5 του Ν. 4076/2012 (159 Α΄) και αντικαταστάθηκε με το άρθρο 48 του Ν. 4115/2013 (24 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/77/paragraph/3>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/78/paragraph/4>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2012/4076/article/5/paragraph/6>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2013/4115/article/48>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Της παρ. 1 και 2 [όπως τροποποιήθηκε με την παρ. 15 του άρθρου 34 του Ν. 4115/2013 (24 Α΄)] του άρθρου 17 του Ν. 4009/2011 (195 Α΄) και της παρ.2 του άρθρου 18 του Ν. 4009/2011 (195 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/17/paragraph/1>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/17/paragraph/2>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2013/4115/article/34/paragraph/15>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/18/paragraph/2>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Της παρ. 5 του άρθρου 18 και της παρ.7 του άρθρου 77 του Ν. 4009/2011 (195 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/18/paragraph/5>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Της παρ. 22α του άρθρου 80 του Ν. 4009/2011 (195 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/18/paragraph/22>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Των άρθρων 21 και 23 του Ν. 3549/2007 (69 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2007/3549/article/21>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2007/3549/article/23>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/7> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Της παρ. 5 του άρθρου 14 του Ν. 1268/1982 (87 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1982/1268/article/14/paragraph/5>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/8> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "παρ. 5α του άρθρου 14 του Ν. 1268/1982 (87 Α΄), όπως αντικαταστάθηκε τελικώς με την παρ. 3 του άρθρου 4 του Ν. 2517/1997 (160 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1982/1268/article/14/paragraph/5>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1997/2517/article/4/paragraph/3>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/9> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Της περιπτ. iii της παρ. 5 του άρθρου 14 του Ν. 1268/1982, όπως αντικαταστάθηκε με το άρθρο 2 του Ν. 3282/2004 (208 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1982/1268/article/14/paragraph/5>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2004/3282/article/2>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/10> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Του Π.δ. 134/1999 (132 Α΄)."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/1999/134>.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/11> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Των ερμηνευτικών εγκυκλίων υπ’ αριθμ. Φ.122.1/350/141732/Β2/9-12-2011 (ανακοινοποιημένη στο ορθό στις 20-12-2011) και Φ.122.1/58/22996/Β2/5-3-2012 του Υπουργείου Παιδείας, Δια Βίου Μάθησης και Θρησκευμάτων"@el.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/12> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ’ αριθμ. Φ.122.1/1137/145793/Β2/9-10-2013 (2619 Β΄) κοινή υπουργική απόφαση με θέμα «Ανάπτυξη και λειτουργία ηλεκτρονικού συστήματος ολοκληρωμένης διαχείρισης διαδικασιών εκλογής και εξέλιξης καθηγητών καθώς και κατάρτισης και τήρησης μητρώων εσωτερικών και εξωτερικών μελών»."@el.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Consideration/13> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ’ αριθμ. Φ.11/196295/Ε5/20-12-2013 εγκύκλιο του Υπουργείου Παιδείας και Θρησκευμάτων σχετικά με την εφαρμογή του πληροφοριακού συστήματο«ΑΠΕΛΛΑ»"@el.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την προκήρυξη (ανοικτή προκήρυξη) για την πλήρωση μίας (1) θέσης καθηγητή, ως εξής: ΑΡΙΣΤΟΤΕΛΕΙΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΟΝΙΚΗΣ ΣΧΟΛΗ ΠΟΛΥΤΕΧΝΙΚΗ ΤΜΗΜΑ ΜΗΧΑΝΟΛΟΓΩΝ ΜΗΧΑΝΙΚΩΝ ΤΟΜΕΑΣ ΚΑΤΑΣΚΕΥΑΣΤΙΚΟΣ. Μία (1) θέση καθηγητή στη βαθμίδα του καθηγητή πρώτης βαθμίδας με γνωστικό αντικείμενο «Μέθοδοι παραγωγής και αξιολόγηση ιδιοτήτων μεταλλικών υλικών». Συνοπτική περιγραφή του γνωστικού αντικειμένου: Το παραπάνω γνωστικό αντικείμενο καλύπτει έναν πλήρη κλάδο της επιστήμης του Μηχανολόγου Μηχανικού. Ειδικότερα, η προκήρυξη της θέσης καλύπτει την περιοχή του Κατασκευαστικού Τομέα με ειδικότητα τις μεθόδους παραγωγής και την αξιολόγηση των ιδιοτήτων μεταλλικών υλικών που ενδιαφέρουν τον Μηχανολόγο Μηχανικό. Τα σύγχρονα βιομηχανικά προϊόντα χαρακτηρίζονται από υψηλές απαιτήσεις απόδοσης, γεγονός που επιτάσσει τη χρησιμοποίηση υλικών με προηγμένα χαρακτηριστικά και ιδιότητες όπως είναι τα πορώδη υλικά και οι επικαλύψεις. Οι μέθοδοι παραγωγής μεταλλικών υλικών καλούνται να αντεπεξέλθουν στην προαναφερθείσα πρόκληση, προσφέροντας ταυτόχρονα οικονομικές και οικολογικές λύσεις παραγωγής. Επίσης, προκειμένου να εκτιμηθεί η επιτυχία των μεθόδων παραγωγής και η απόδοση των υλικών αυτών, είναι απαραίτητη η αξιολόγηση των ιδιοτήτων τους, η οποία συνδυάζει τον έλεγχο της δομής και της αντοχής μέσω πειραματικών και υπολογιστικών μεθόδων με εργαλεία πεπερασμένων στοιχείων. Οι προηγουμένως αναφερθείσες επιστημονικές περιοχές εξελίσσονται συνεχώς και αποτελούν βασικές συνιστώσες του γνωστικού υπόβαθρου των Μηχανολόγων Μηχανικών. Καλούνται οι ενδιαφερόμενοι να υποβάλουν ηλεκτρονικά την αίτηση υποψηφιότητας μαζί με όλα τα αναγκαία για κρίση δικαιολογητικά στο Πληροφοριακό Σύστημα «ΑΠΕΛΛΑ» στη δίμηνη αποκλειστική προθεσμία, την έναρξη και τη λήξη της οποίας θα ορίσει ο υπεύθυνος του ιδρύματος ύστερα από τη δημοσίευση της σχετικής προκήρυξης στην ΕτΚ και την ανάρτησή της στο Πληροφοριακό Σύστημα και η οποία θα αναφέρεται στο έγγραφο της ανακοίνωσης της δημοσίευσης της Προκήρυξης αυτής στον Ημερήσιο Τύπο. Ειδικότερα: Οι ενδιαφερόμενοι που επιθυμούν να υποβάλουν αίτηση υποψηφιότητας σε θέση εκλογής, πρέπει να δημιουργήσουν λογαριασμό στο Πληροφοριακό Σύστημα «ΑΠΕΛΛΑ», συμπληρώνοντας τα στοιχεία του «προφίλ» τους καταχωρίζοντας στο Πληροφοριακό Σύστημα: Αντίγραφο δελτίου αστυνομικής ταυτότητας ή διαβατηρίου. Βεβαίωση στρατιωτικής θητείας ή υπεύθυνη δήλωση του Ν. 1599/1986 ότι δεσμεύονται ότι θα έχουν εκπληρώσει τις στρατιωτικές τους υποχρεώσεις ή θα έχουν απαλλαγεί νόμιμα από αυτές πριν την έκδοση της Πρυτανικής Πράξης διορισμού τους.Το κώλυμα της μη εκπλήρωσης των στρατιωτικών υποχρεώσεων δεν ισχύει για πολίτες κράτους μέλους της Ευρωπαϊκής Ένωσης, στο οποίο δεν προβλέπεται όμοιο κώλυμα διορισμού. Βεβαίωση συμμετοχής. Επιπλέον πρέπει να καταχωρίσουν: 1. Αντίγραφο των πτυχίων και των τίτλων σπουδών τους. Αν οι τίτλοι σπουδών έχουν χορηγηθεί από Α.Ε.Ι. εξωτερικού θα πρέπει να φέρουν τις νόμιμες θεωρήσεις και να συνοδεύονται από επίσημες μεταφράσεις, καθώς και από την απόφαση ισοτιμίας ή αντίγραφο της αίτησης για αναγνώριση της ισοτιμίας, η οποία θα πρέπει να έχει κατατεθεί πριν τη λήψη της σχετικής απόφασης εκλογής. 2. Βιογραφικό σημείωμα. 3. Αναλυτικό υπόμνημα για τα υποβαλλόμενα πρωτότυπα επιστημονικά δημοσιεύματα. 4. Διδακτορική Διατριβή και άλλα επιστημονικά δημοσιεύματα. Τα ανωτέρω των περιπτώσεων 2, 3, 4 υποβάλλονται και σε ένα (1) αντίτυπο σε έντυπη μορφή το οποίο θα βρίσκεται στη Γραμματεία του Τμήματος Μηχανολόγων Μηχανικών, στη διάθεση όλων των μελών της Επιτροπής Επιλογής ή Εξέλιξης και των Αξιολογητών του άρθρου 19 του Ν. 4009/2011. 5. Γνωματεύσεις (α) παθολόγου ή γενικού ιατρού και (β) ψυχιάτρου, είτε του δημοσίου είτε ιδιωτών, που να πιστοποιούν την υγεία των υποψηφίων προκειμένου να ασκήσουν τα καθήκοντα της αντίστοιχης θέσης. Θα κατατεθούν από τους υποψήφιους οι οποίοι θα εκλεγούν σε θέση καθηγητή πριν την έκδοση της Πρυτανικής Πράξης διορισμού τους. Οι ενδιαφερόμενοι που επιθυμούν να υποβάλουν αίτηση υποψηφιότητας σε θέση εξέλιξης, καταχωρίζουν τα αναγκαία για την κρίση δικαιολογητικά εξαιρουμένων όσων ήδη έχουν καταχωρίσει κατά την εγγραφή τους στο Γενικό Μητρώο του Πληροφοριακού Συστήματος καθώς και όσων δε χρήζουν επικαιροποίησης. Το Πιστοποιητικό γέννησης θα αναζητηθεί αυτεπαγγέλτως από την υπηρεσία που θα προβεί στην έκδοση της Πρυτανικής Πράξης διορισμού. Προκειμένου για πολίτες κρατών-μελών της Ευρωπαϊκής Ένωσης, υποβάλλεται πιστοποιητικό της αρμόδιας αρχής του κράτους την ιθαγένεια του οποίου έχει ο υποψήφιος. • Το αντίγραφο Ποινικού Μητρώου δικαστικής χρήσης θα αναζητηθεί αυτεπαγγέλτως από την υπηρεσία που θα προβεί στην έκδοση της Πρυτανικής Πράξης διορισμού. Οι πολίτες κράτους μέλους της Ευρωπαϊκής Ένωσης οφείλουν να υποβάλουν, εκτός των πιο πάνω δικαιολογητικών και πτυχίο ή μεταπτυχιακό τίτλο σπουδών Ελληνικού Α.Ε.Ι. ή απολυτήριο Ελληνικού Λυκείου ή εξατάξιου Γυμνασίου ή πιστοποιητικό ελληνομάθειας Γ1 επιπέδου από το Κέντρο Ελληνικής Γλώσσας, από το οποίο θα αποδεικνύεται η πλήρης γνώση και άνετη χρήση της Ελληνικής γλώσσας. Ο υποψήφιος που θα επιλεγεί για τη θέση, υποχρεούται να καταθέσει στη Γραμματεία του Τμήματος τα πρωτότυπα έγγραφα-δικαιολογητικά του φακέλου του. Η προκαλούμενη δαπάνη της οποίας το ύψος δεν μπορεί να προσδιοριστεί θα καλυφθεί από τις πιστώσεις του Υπουργείου Οικονομικών (ειδ. Φορέα 23-200 ΚΑΕ 5113). Η προκήρυξη αυτή να δημοσιευθεί στην Εφημερίδα της Κυβερνήσεως."@el.
+
+<http://diavgeia.gov.gr/eli/decision/72ΞΑ46Ψ8ΧΒ-ΙΑΜ/e1e27523-ab46-440f-ab28-d8f930435d1e/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Ο ΠΡΥΤΑΝΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΠΕΡΙΚΛΗΣ ΜΗΤΚΑΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "100001408".

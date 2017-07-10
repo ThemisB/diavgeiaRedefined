@@ -1,0 +1,50 @@
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b> a <http://diavgeia.gov.gr/ontology/AffiliatedInvestments>;
+	<http://diavgeia.gov.gr/ontology/version> "b4ae1411-f81d-437b-9c63-a8b7d4ed866b";
+	<http://diavgeia.gov.gr/ontology/iun> "60Β3ΩΡΙ-ΒΝ3"@el;
+	<http://data.europa.eu/eli/ontology#title> "353/2016 ΑΠΟΦΑΣΗ ΕΠΙΤΡΟΠΗΣ ΣΥΝΤΗΡΗΣΗΣ ΚΑΙ ΕΠΙΣΚΕΥΗΣ ΟΧΗΜΑΤΩΝ ΓΙΑ ΤΟ ΚΗΥ 9946"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-07-06"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΑΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΕΠΙΤΡΟΠΗ ΣΥΝΤΗΡΗΣΗΣ ΚΑΙ ΕΠΙΣΚΕΥΗΣ ΟΧΗΜΑΤΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "15331";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΖΕΙ"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Signer/2>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Signer/3>;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "6105";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473317717387";
+	<http://diavgeia.gov.gr/ontology/unit_id> "93302".
+
+
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθ. 3373/390/1975, ΦΕΚ 349 Τεύχος Β΄)απόφαση του Υπουργού Προεδρίας της Κυβερνήσεως, όπως τροποποιήθηκε με την Οικ.4993/745/24.4.1975 όμοια απόφαση (ΦΕΚ Β΄ 489)."@el.
+
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ’ αριθ. 105/2016 απόφαση του Δημάρχου με την οποία ορίστηκε η Επιτροπή Συντήρησης & Επισκευής Οχημάτων."@el.
+
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την εντολή επιθεώρησης αριθ.1365/30-06-2016."@el.
+
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθ. 9/2016 απόφαση της Ο.Ε. για την ψήφιση της πίστωσης."@el.
+
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την ανάθεση της προμήθειας ανταλλακτικών του με αρ. κυκλοφορίας KHY 9946, αξίας 130,00 € με ΦΠΑ, στο συνεργείο με την επωνυμία ΑΝΤΩΝΟΠΟΥΛΟΣ ΒΑΣ. ΔΗΜΗΤΡΙΟΣ.Η δαπάνη θα επιβαρύνει τον Κ.Α. 20.6263.001."@el.
+
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Κούτσικος Κων/νος"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "133110".
+
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Signer/2> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Βασιλείου Βασίλειος"@el.
+
+<http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/Signer/3> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Κουτσοκώστας Λάμπρος"@el.

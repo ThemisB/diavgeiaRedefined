@@ -1,0 +1,67 @@
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157> a <http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies>;
+	<http://diavgeia.gov.gr/ontology/version> "139c6b46-6b98-4aaa-89ee-5b704aa5b157";
+	<http://diavgeia.gov.gr/ontology/iun> "ΩΡΡΠΩΛΞ-2ΓΔ"@el;
+	<http://data.europa.eu/eli/ontology#title> "ΑΝΑΘΕΣΗ ΠΡΟΜΗΘΕΙΑΣ ΑΝΤΑΛΛΑΚΤΙΚΩΝ"@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2015-12-22"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΔΗΜΟΣ ΛΑΡΙΣΑΙΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΔΙΕΥΘΥΝΣΗ ΑΜΑΞΟΣΤΑΣΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΥΠΟΣΤΗΡΙΞΗΣ ΚΑΙ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "1158";
+	<http://diavgeia.gov.gr/ontology/has_preconsideration> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/PreConsideration>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/3>;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΣΑΝ"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Decision/2>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/2>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/3>;
+	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Expense/1>>;
+	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
+	<http://diavgeia.gov.gr/ontology/recipient_for_action> "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
+	<http://diavgeia.gov.gr/ontology/work_assignment_etc_category> "Προμήθειες"@el;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "100015969";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1496232550111";
+	<http://diavgeia.gov.gr/ontology/unit_id> "93244".
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/PreConsideration> a <http://diavgeia.gov.gr/ontology/PreConsideration>;
+<http://diavgeia.gov.gr/ontology/has_text> "Σήµερα 22/12/2015 συνήλθε η επιτροπή που συγκροτήθηκε µε τον αριθ. πρωτ. 166/04-02-2015 Απόφαση ∆ηµάρχου, σχετικά µε τη συντήρηση, επισκευή και προµήθεια ανταλλακτικών των πάσης φύσεως οχηµάτων και µηχανηµάτων του ∆ήµου αποτελούµενες από τους παρακάτω µόνιµους υπαλλήλους του ∆ήµου: 1. Βασιλείου Εµµανουηλία ΠΕ Μηχανολόγων Μηχανικών µε Β΄ βαθµό 2. Μάντζιο Νικόλαο ΤΕ Μηχανικών Βιοσυστηµάτων µε Ε΄ βαθµό 3. Μεσίρας ∆ηµήτριο ∆Ε Τεχνικών Μηχανοστασιαρχών µε Β΄ βαθµό "@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ΄ αριθ. 28/05-02-15, απόφαση ∆ηµ. Συµβουλίου «Έγκριση για τη διενέργεια προµηθειών του Οικ. Έτους 2015, για τις ανάγκες των διευθύνσεων του ∆. Λαρισαίων σε βάρος των αντίστοιχων Κ.Α. προϋπολογισµού εξόδων του ∆. Λαρισαίων Οικ. Έτους 2015»."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την από 22/12/2015 Εντολή Τεχνικής Επιθεώρησης και Επισκευής Οχήµατος."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το από 21/12/2015 ∆ελτίο Τεχνικής επιθεώρησης και επισκευής του µε αριθµό κυκλοφορίας ΚΗΗ1470 οχήµατος /µηχανήµατος"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την αγορά των παρακάτω ανταλλακτικών από το ελεύθερο εµπόριο με επωνυμία Α.ΣΑΡΡΟΣ & ΣΙΑ Ε.Ε. , με περιγραφή είδους ΦΙΛΤΡΟ ΥΔΡΑΥΛΙΚΟΥ, με αριθμο κυκλοφορίας ΚΗΗ1470 και αξία χωρίς ΦΠΑ 139.00 ΕΥΡΩ.Το κόστος της προµήθειας συµπεριλαµβανοµένου του Φ.Π.Α. ανέρχεται στο ποσό των 170,97 ΕΥΡΩ."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Sponsored/1> a <http://diavgeia.gov.gr/ontology/Sponsored>;
+	<http://diavgeia.gov.gr/ontology/afm> "082000463";
+	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
+	<http://diavgeia.gov.gr/ontology/name> "Α ΣΑΡΡΟΣ ΚΑΙ ΣΙΑ ΕΕ"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Expense/1> a <http://diavgeia.gov.gr/ontology/Expense>;
+	<http://diavgeia.gov.gr/ontology/expense_amount> "170.97";
+	<http://diavgeia.gov.gr/ontology/expense_currency> "EUR";
+	<http://diavgeia.gov.gr/ontology/cpv> "42913300-2";
+	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Sponsored/1>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Πρόεδρος Επιτροπής"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΒΑΣΙΛΕΙΟΥ ΕΜΜΑΝΟΥΗΛΙΑ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "100010971".
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/2> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Μέλος Επιτροπής"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΜΑΝΤΖΙΟΣ ΝΙΚΟΛΑΟΣ"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΡΡΠΩΛΞ-2ΓΔ/139c6b46-6b98-4aaa-89ee-5b704aa5b157/Signer/3> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Μέλος Επιτροπής"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΜΕΣΙΡΑΣ ΔΗΜΗΤΡΙΟΣ"@el.

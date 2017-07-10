@@ -1,0 +1,58 @@
+<http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569> a <http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup>;
+	<http://diavgeia.gov.gr/ontology/version> "e8c8d1df-a927-43a2-9b0e-1ce59ad92569";
+	<http://diavgeia.gov.gr/ontology/iun> "ΩΓΒΥ4653ΠΣ-ΘΣ7"@el;
+	<http://data.europa.eu/eli/ontology#title> "Διαπιστωτική Πράξη Διορισμού του Προέδρου του Ακαδημαϊκού Συμβουλίου της Ανώτατης Εκκλησιαστικής Ακαδημίας Θεσσαλονίκης."@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-07-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ, ΕΡΕΥΝΑΣ ΚΑΙ ΘΡΗΣΚΕΥΜΑΤΩΝ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΑΝΩΤΑΤΗΣ ΕΚΠΑΙΔΕΥΣΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΔΙΕΥΘΥΝΣΗ ΟΡΓΑΝΩΤΙΚΗΣ ΚΑΙ ΑΚΑΔΗΜΑΙΚΗ ΑΝΑΠΤΥΞΗΣ, ΤΜΗΜΑ Α' ΟΡΓΑΝΩΣΗΣ ΑΝΩΤΑΤΗΣ ΕΚΠΑΙΔΕΥΣΗΣ"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_address> "Α. Παπανδρέου 37"@el;
+	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "15180";
+	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2103442328";
+	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2103442331";
+	<http://diavgeia.gov.gr/ontology/government_institution_information> "Μ. Τουρλούπη";
+	<http://diavgeia.gov.gr/ontology/government_institution_email> "t01mso2@minedu.gov.gr";
+	<http://diavgeia.gov.gr/ontology/protocol_number> "126004/Ζ1";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Consideration/3>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Consideration/4>;
+	<http://diavgeia.gov.gr/ontology/decision_call> "ΔΙΑΠΙΣΤΩΝΟΥΜΕ"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/has_afterdecision> <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/AfterDecision>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/collegial_body_party_type> "Παύση - Αντικατάσταση μέλους"@el;
+	<http://diavgeia.gov.gr/ontology/collegial_body_decision_type> "Όργανο άλλης αρμοδιότητας"@el;
+	<http://diavgeia.gov.gr/ontology/fek_number> "429"@el;
+	<http://diavgeia.gov.gr/ontology/fek_issue> "Δ"@el;
+	<http://diavgeia.gov.gr/ontology/fek_year> "2016"@el;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "Science";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "100015990";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473252453013";
+	<http://diavgeia.gov.gr/ontology/unit_id> "100007927".
+
+<http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του άρθρου 7, παρ. 3 περ. α και παρ. 5 του ν. 3432/2006 «Δομή και λειτουργία της Εκκλησιαστικής Εκπαίδευσης» (Α΄ 14)"@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3432/article/7/paragraph/3>;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3432/article/7/paragraph/5>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "του άρθρου 1, σε συνδυασμό με το άρθρο 2, περ. στ υποπερ. ii της υπ’ αρ. Υ27/8-10-2015 απόφασης του Πρωθυπουργού «Ανάθεση αρμοδιοτήτων στην Αναπληρώτρια Υπουργό Παιδείας, Έρευνας και Θρησκευμάτων, Αθανασία Αναγνωστοπούλου» (Β΄ 2168), όπως τροποποιήθηκε με την υπ’ αρ. Υ99/28-12- 2015 απόφαση του Πρωθυπουργού «Τροποποίηση απόφασης ανάθεσης αρμοδιοτήτων στην Αναπληρώτρια Υπουργό Παιδείας, Έρευνας και Θρησκευμάτων, Αθανασία Αναγνωστοπούλου» (Β΄2869) και την υπ’ αρ. Υ134/15-3- 2016 όμοια απόφαση (Β΄711)."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το υπ’ αρ. 603/15-4-2016 έγγραφο της Ανώτατης Εκκλησιαστικής Ακαδημίας Θεσσαλονίκης."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το πρακτικό της υπ’ αρ. 2/7-7-2016 συνεδρίασης του Ανώτατου Επιστημονικού Συμβουλίου, ύστερα από έλεγχο νομιμότητας,"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το διορισμό του Σεβασμιώτατου Μητροπολίτη Κίτρους, Κατερίνης και Πλαταμώνος και Καθηγητή της Ανώτατης Εκκλησιαστικής Ακαδημίας Θεσσαλονίκης κ. Γεωργίου Χρυσοστόμου του Χαραλάμπους, κατόχου του υπ’ αρ. ΑΙ 358228 Α.Δ.Τ., ως Προέδρου του Ακαδημαϊκού Συμβουλίου της ανωτέρω Ακαδημίας, με τριετή θητεία, ήτοι από 1-9-2016 έως 31-8-2019."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/AfterDecision> a <http://diavgeia.gov.gr/ontology/AfterDecision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Η απόφαση αυτή να δημοσιευθεί στην Εφημερίδα της Κυβερνήσεως."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "Η ΑΝΑΠΛΗΡΩΤΡΙΑ ΥΠΟΥΡΓΟΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΑΘΑΝΑΣΙΑ ΑΝΑΓΝΩΣΤΟΠΟΥΛΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_id> "100015163".

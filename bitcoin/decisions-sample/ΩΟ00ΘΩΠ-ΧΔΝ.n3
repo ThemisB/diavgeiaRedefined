@@ -1,0 +1,248 @@
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb> a <http://diavgeia.gov.gr/ontology/LegislativeDecree>;
+	<http://diavgeia.gov.gr/ontology/version> "51c1bc5c-0eb8-4cb5-8204-3a48efef91bb";
+	<http://diavgeia.gov.gr/ontology/iun> "ΩΟ00ΘΩΠ-ΧΔΝ"@el;
+	<http://data.europa.eu/eli/ontology#title> "Ρύθμιση κατεπειγόντων θεμάτων των Υπουργείων Εργασίας, Κοινωνικής Ασφάλισης και Κοινωνικής Αλληλεγγύης, Οικονομίας, Ανάπτυξης και Τουρισμού, Εσωτερικών και Διοικητικής Ανασυγκρότησης, Υποδομών Μεταφορών και Δικτύων και  Παιδείας, Έρευνας και Θρησκευμάτων."@el;
+	<http://data.europa.eu/eli/ontology#date_publication> "2016-03-23"^^<http://www.w3.org/2001/XMLSchema#date>;
+	<http://diavgeia.gov.gr/ontology/protocol_number> "ΠΝΠ_07.10.2015";
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/1>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/2>;
+	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζουμε"@el;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/1>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/2>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/3>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/4>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/5>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/1>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/2>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/3>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/4>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/5>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/6>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/7/1>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/7/2>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/7/3>;
+	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/8>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/1>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/2>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/3>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/4>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/5>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/6>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/7>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/8>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/9>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/10>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/11>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/12>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/13>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/14>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/15>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/16>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/17>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/18>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/19>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/20>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/21>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/22>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/23>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/24>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/25>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/26>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/27>;
+	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/28>;
+	<http://diavgeia.gov.gr/ontology/thematic_category> "PublicAdministration";
+	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicActivity";
+	<http://diavgeia.gov.gr/ontology/has_private_data> false;
+	<http://diavgeia.gov.gr/ontology/organization_id> "23290";
+	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1458728268398";
+	<http://diavgeia.gov.gr/ontology/fek_number> "127"@el;
+	<http://diavgeia.gov.gr/ontology/fek_issue> "Α"@el;
+	<http://diavgeia.gov.gr/ontology/fek_year> "2015"@el;
+	<http://diavgeia.gov.gr/ontology/legislative_decree_number> "ΠΝΠ_07.10"@el;
+	<http://diavgeia.gov.gr/ontology/unit_id> "91380".
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την παράγραφο 1 του άρθρου 44 του Συντάγματος."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Την έκτακτη περίπτωση εξαιρετικά επείγουσας και απρόβλεπτης ανάγκης για την επίλυση ζητημάτων που αφορούν α) στην απρόσκοπτη συνέχιση του έργου των «Κοινωνικών Δομών Άμεσης Αντιμετώπισης της Φτώχειας», β) στην ένταξη έργων στα Επιχειρησιακά Προγράμματα της Προγραμματικής Περιόδου 2014 -2020, γ) τη διεξαγωγή του εισαγωγικού διαγωνισμού της Εθνικής Σχολής Δημόσιας Διοίκησης και Αυτοδιοίκησης (Ε.Σ.Δ.Δ.Α.), προκειμένου να διασφαλιστεί ο αξιοκρατικός χαρακτήρας της διαγωνιστικής διαδικασίας, καθώς και η επιλογή προσώπων ικανών να εκπαιδευτούν, ώστε να ενταχθούν στη διοίκηση ως στελέχη ταχείας ανέλιξης, δ) στην αδυναμία εξυπηρέτησης ιδιοκτητών εκπρόθεσμων σε τεχνικό έλεγχο οχημάτων από τα ΚΤΕΟ της Χώρας στην προθεσμία του άρθρου 18Α του ν. 3446/2006 (Α΄49), όπως ισχύει, και επίσης αποφυγής, κατά το δυνατό, προβλημάτων στην εύρυθμη λειτουργία των ΚΤΕΟ, λόγω υπερβολικά αυξημένης προσέλευσης οχημάτων, ε) στη δυνατότητα αποφοίτησης μαθητών της Δ’ τάξης εσπερινών ΕΠΑ.Λ., στ) στις διαδικασίες εκλογής οργάνων στα ΑΕΙ της χώρας και ζ) στην ολοκλήρωση των διαδικασιών κρίσης ερευνητών και συγκρότησης συλλογικών οργάνων."@el;
+	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3446/article/18>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τη σχετική πρόταση του Υπουργικού Συμβουλίου."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Οι «Κοινωνικές Δομές Άμεσης Αντιμετώπισης της Φτώχειας» μετά την ολοκλήρωση και λήξη των πράξεων στο πλαίσιο του ΕΠ «Ανάπτυξη Ανθρώπινου Δυναμικού» του ΕΣΠΑ 2007-2013 θα χρηματοδοτηθούν από το εθνικό σκέλος του Προγράμματος Δημοσίων Επενδύσεων του Υπουργείου Εργασίας, Κοινωνικής Ασφάλισης και Κοινωνικής Αλληλεγγύης. Η χρηματοδότηση αφορά υπηρεσίες που παρέχονται από τη λήξη των πράξεων μέχρι το αργότερο 31.12.2015 και υλοποιούνται μέσω προγραμματικών συμβάσεων χωρίς υποχρέωση υποβολής εγγυητικής επιστολής καλής εκτέλεσης. Για τις δαπάνες θα γίνει αναλογική εφαρμογή των όρων που προέβλεπαν οι σχετικές προσκλήσεις και αποφάσεις ένταξης στο πλαίσιο του ΕΠΑΝΑΔ 2007-2013. Φορέας υλοποίησης και παρακολούθησης των ως άνω συμβάσεων ορίζεται η Γενική Γραμματεία Πρόνοιας. Με απόφαση του Υπουργού Εργασίας, Κοινωνικής Ασφάλισης και Κοινωνικής Αλληλεγγύης δύναται να καθορίζεται κάθε αναγκαία λεπτομέρεια για την υλοποίηση της παρούσας. Η παρούσα διάταξη ισχύει από 1 Οκτωβρίου 2015."@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/2> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Στο τέλος της παρ. 3 του άρθρου 58 του ν. 4314/2014 (Α΄ 265) προστίθεται εδάφιο, ως εξής : «Μέχρι την έκδοση των ανωτέρω κοινών υπουργικών αποφάσεων για την κατάργηση ή αναδιάρθρωση των υφιστάμενων Επιτελικών Δομών, η οργάνωση και η λειτουργία τους διέπεται από τις ισχύουσες κοινές υπουργικές αποφάσεις σύστασης των οικείων Ειδικών Υπηρεσιών των ν. 2860/2000 (Α΄ 251) και ν.3614/2007 (Α΄ 267), οι οποίες μετονομάστηκαν ή συγχωνεύτηκαν με το άρθρο 18 του παρόντος νόμου. Κατά το ως άνω χρονικό διάστημα, οι ανωτέρω Επιτελικές Δομές ασκούν, εκτός από τις αρμοδιότητες των ως άνω αποφάσεων, και τις αρμοδιότητες του άρθρου 17 του παρόντος νόμου για τα ΕΠ του ΕΣΠΑ της περιόδου 2014 -2020.» Η παρούσα διάταξη ισχύει από 6 Οκτωβρίου 2015."@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2014/4314/article/58/paragraph/3>;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2000/2860>;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2007/3614>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/3> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Στο τέλος της παρ. 10 του άρθρου 17 του π.δ. 57/2007 (Α΄ 59) προστίθεται εδάφιο ως εξής: «Διατάξεις που ευνοούν ειδικές κατηγορίες υποψηφίων ή καθορίζουν ειδικές προσαυξήσεις της βαθμολογίας δεν έχουν εφαρμογή στον Εισαγωγικό Διαγωνισμό της Εθνικής Σχολής Δημόσιας Διοίκησης και Αυτοδιοίκησης (Ε.Σ.Δ.Δ.Α.)»"@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/pd/2007/57/article/17/paragraph/10>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/4> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "H περίπτ. α΄ της παρ. 2 του άρθρου 18 Α του ν.3446/2006 (Α΄ 49) αντικαθίσταται ως εξής: «α. Τα οχήματα για τα οποία το χρονικό διάστημα έξι (6) μηνών από την καταληκτική ημερομηνία εμπρόθεσμης διενέργειας περιοδικού τεχνικού ελέγχου παρήλθε έως τις 30.6.2014 προσκομίζονται έως και τις 20.10.2015.»"@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2006/3446/article/18/paragraph/2>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/5> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "«4. Μαθητές οι οποίοι το σχολικό έτος 2014−2015 ή και τα προηγούμενα έτη φοίτησαν στις ειδικότητες που λειτούργησαν στη Γ΄ τάξη ημερήσιου Επαγγελματικού Λυκείου (ν. 3475/2006) συμπεριλαμβανομένης και της ειδικότητας «Γραφικών Τεχνών» του «Τομέα Εφαρμοσμένων Τεχνών» καθώς και των τριών ειδικοτήτων του τομέα «Υγείας και Πρόνοιας» της Δ΄ τάξης Εσπερινού Επαγγελματικού Λυκείου (ν. 3475/2006) και έχουν απορριφθεί λόγω ανεπαρκούς φοίτησης, δύνανται να προσέρχονται σε ολική ή μερική, προφορική και γραπτή εξέταση τον Φεβρουάριο του 2016, Μάιο-Ιούνιο 2016, Σεπτέμβριο 2016.Μαθητές οι οποίοι κατά το σχολικό έτος 2014−2015 ή και τα προηγούμενα έτη φοίτησαν στις ειδικότητες που λειτούργησαν στη Γ’ τάξη εσπερινού Επαγγελματικού Λυκείου (ν.3475/2006) συμπεριλαμβανομένης και της ειδικότητας «Γραφικών Τεχνών» του «Τομέα Εφαρμοσμένων Τεχνών» και έχουν απορριφθεί λόγω ανεπαρκούς φοίτησης, δύνανται να προσέλθουν σε ολική προφορική και γραπτή εξέταση έως 15 Νοεμβρίου 2015 προκειμένου να προαχθούν στην επόμενη τάξη. Στην περίπτωση κατά την οποία οι μαθητές που αναφέρονται στο προηγούμενο εδάφιο, δεν επιθυμούν να προσέλθουν στις προαναφερόμενες προφορικές και γραπτές εξετάσεις, δύνανται να συνεχίσουν τη φοίτησή τους στη Β’ τάξη ημερησίου ή εσπερινού Επαγγελματικού Λυκείου (ν. 4186/2013). Με απόφαση του Υπουργού Παιδείας, Έρευνας και Θρησκευμάτων καθορίζονται όλες οι λεπτομέρειες που αφορούν στις εξετάσεις των μαθητών.»"@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2006/3475>;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2013/4186>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Η παρ. 15 του άρθρου 8 του ν. 4009/2011 (Α΄ 195) αντικαθίσταται ως εξής: «15. Ως πρύτανης εκλέγεται καθηγητής πρώτης βαθμίδας του οικείου Ιδρύματος.»"@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2011/4009>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/2> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Οι περίπτ. α΄, β΄, γ΄, δ΄ και ε΄ της παρ. 16 του άρθρου 8 του ν. 4009/2011, όπως τροποποιήθηκε με την παρ. 8 του άρθρου 2 του ν. 4076/2012 (Α΄ 159), αντικαθίστανται και προστίθεται περίπτ. στ’ ως εξής: «16. α) Ο Πρύτανης εκλέγεται από τους καθηγητές και τους υπηρετούντες λέκτορες του Ιδρύματος με άμεση, μυστική και καθολική ψηφοφορία και διορίζεται με απόφαση του Συμβουλίου που δημοσιεύεται στην Εφημερίδα της Κυβερνήσεως. Ο Υπουργός Παιδείας, ΄Ερευνας και Θρησκευμάτων εκδίδει διαπιστωτική πράξη για το διορισμό του Πρύτανη. Ο Πρύτανης δεν μπορεί να εκλεγεί για δεύτερη συνεχή θητεία στο ίδιο ίδρυμα. β) Η προκήρυξη των εκλογών γίνεται από το Συμβούλιο του Ιδρύματος, τρεις μήνες πριν από τη λήξη της θητείας του υπηρετούντος Πρύτανη. Στα Α.Ε.Ι. των οποίων η θητεία του Πρύτανη ολοκληρώνεται, σύμφωνα με την παρ. 1 του άρθρου 35 του ν. 4327/2015 (Α’ 50), στις 31-10-2015, η προκήρυξη των εκλογών γίνεται εντός ενός (1) μηνός από τη δημοσίευση της παρούσας. Στα ίδια Α.Ε.Ι. παρατείνεται η θητεία των υπηρετούντων σήμερα Πρυτάνεων μέχρι την έκδοση της προβλεπόμενης από την περίπτ. α’ διαπιστωτικής πράξης του Υπουργού Παιδείας, Έρευνας και Θρησκευμάτων για το διορισμό του Πρύτανη. Σε περίπτωση μη τήρησης των ως άνω κατά περίπτωση προθεσμιών η αρμοδιότητα της προκήρυξης περιέρχεται στη Σύγκλητο. Η διάταξη αυτή εφαρμόζεται και για την εκλογή των Κοσμητόρων. γ) Το Συμβούλιο ή η Σύγκλητος κατά περίπτωση, λαμβάνει τα αναγκαία μέτρα για τη μεγαλύτερη δυνατή δημοσιοποίηση της προκήρυξης. δ) Υποψηφιότητες για το αξίωμα του Πρύτανη υποβάλλονται, με αίτηση των ενδιαφερομένων, ενώπιον του Συμβουλίου ή της Συγκλήτου σε περίπτωση κατά την οποία, σύμφωνα με την περ. β΄, έχει περιέλθει σε αυτήν η αρμοδιότητα της προκήρυξης των εκλογών. Το ίδιο ισχύει και για την εκλογή των Κοσμητόρων. ε) Την ευθύνη διεξαγωγής της ψηφοφορίας έχει τριμελής Κεντρική Εφορευτική Επιτροπή, με ισάριθμα αναπληρωματικά μέλη, η οποία συγκροτείται µε απόφαση του Συμβουλίου τουλάχιστον δέκα (10) εργάσιμες ημέρες πριν από την ημέρα της ψηφοφορίας και αποτελείται από καθηγητές πρώτης βαθμίδας του οικείου Ιδρύματος. Αν παρέλθει άπρακτη η ανωτέρω προθεσμία, η Επιτροπή συγκροτείναι, εντός δέκα (10) ημερών, με απόφαση της Συγκλήτου. Η Κεντρική Εφορευτική Επιτροπή ανακηρύσσει τους υποψήφιους πρυτάνεις και κοσμήτορες μέσα σε δύο μέρες από την συγκρότησή της. στ) Αν κανείς από τους υποψηφίους δεν συγκεντρώσει την απόλυτη πλειοψηφία των έγκυρων ψήφων, η εκλογή επαναλαμβάνεται την επόμενη ημέρα μεταξύ των δύο πλειοψηφούντων υποψηφίων. Σε περίπτωση δύο (2) διαδοχικών άγονων εκλογικών διαδικασιών, η Κεντρική Εφορευτική Επιτροπή υποχρεούται στη διεξαγωγή της εκλογικής διαδικασίας µέσω επιστολικής ή ηλεκτρονικής ψήφου, το αργότερο εντός αποκλειστικής προθεσμίας επτά (7) ημερών από την τελευταία άγονη ψηφοφορία. Σε περίπτωση άγονης εκλογικής διαδικασίας µέσω επιστολικής ή ηλεκτρονικής ψήφου, επαναλαμβάνεται η όλη εκλογική διαδικασία, μεταξύ των δύο πλειοψηφούντων υποψηφίων»"@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/8/paragraph/16>;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2012/4076/article/2/paragraph/8>;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2015/4327/article/35/paragraph/1>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/3> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τα μονομελή όργανα διοίκησης των Πανεπιστημίων και των Τ.Ε.Ι. που δεν εμπίπτουν στις διατάξεις της παρούσας και η θητεία των οποίων σύμφωνα με την παρ. 1 του άρθρου 35 του ν. 4327/2015 λήγει στις 31- 10-2015, αναδεικνύονται σύμφωνα με τις ισχύουσες κατά το χρόνο δημοσίευσης της παρούσας διατάξεις."@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2015/4327/article/35/paragraph/1>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/4> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Τα συλλογικά όργανα διοίκησης των Πανεπιστημίων και των Τ.Ε.Ι. των οποίων η θητεία σύμφωνα με την παρ. 1 του άρθρου 35 του ν. 4327/2015 λήγει στις 31-10-2015, συγκροτούνται με το ισχύον κατά τη δημοσίευση της παρούσης νομικό καθεστώς."@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2015/4327/article/35/paragraph/1>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/5> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το πρώτο εδάφιο της περίπτ. β΄ της παρ. 2 του άρθρου 9 του ν. 4009/2011, όπως ισχύει, καταργείται."@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/9/paragraph/2>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/6/6> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το εδάφιο α΄ της περίπτ. γ΄ της παρ. 2 του άρθρου 9 του ν. 4009/2011 αντικαθίσταται ως εξής: «γ) Κοσμήτορας εκλέγεται ο υποψήφιος που συγκέντρωσε την απόλυτη πλειοψηφία των εγκύρων ψήφων»"@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/9/paragraph/2>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/7/1> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Η προθεσμία των έξι (6) μηνών της παραγράφου 1 του άρθρου 47 του ν.4310/2014 (Α΄ 258) παρατείνεται έως τις 31.5.2016."@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2014/4310/article/47/paragraph/1>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/7/2> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Οι διαδικασίες κρίσης που προβλέπονται στην παράγραφο 6 του άρθρου 47 του ν. 4310/2014 αναστέλλονται έως 31.12.2015."@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2014/4310/article/47/paragraph/6>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/7/3> a <http://diavgeia.gov.gr/ontology/Decision>;
+	<http://diavgeia.gov.gr/ontology/has_text> "Το δεύτερο εδάφιο της 4 του άρθρου 30 του ν. 4327/2015 αντικαθίσταται ως εξής: «Η ισχύς της διάταξης αυτής άρχεται από 8.3.2015 και λήγει στις 31.12.2015»."@el;
+	<http://diavgeia.gov.gr/ontology/decision_relates> <http://legislation.di.uoa.gr/eli/law/2015/4327/article/30>.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/8> a <http://diavgeia.gov.gr/ontology/Decision>;
+    <http://diavgeia.gov.gr/ontology/has_text> "Η ισχύς της παρούσας, η οποία θα κυρωθεί νομοθετικά κατά το άρθρο 44 παράγραφος 1 του Συντάγματος, αρχίζει από τη δημοσίευσή της στην Εφημερίδα της Κυβερνήσεως, εκτός αν ορίζεται διαφορετικά στις επιμέρους διατάξεις. "@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΟΕΔΡΟΣ ΤΗΣ ΔΗΜΟΚΡΑΤΙΑΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΠΡΟΚΟΠΙΟΣ Β. ΠΑΥΛΟΠΟΥΛΟΣ"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/2> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΩΘΥΠΟΥΡΓΟΣ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "ΑΛΕΞΙΟΣ Π. ΤΣΙΠΡΑΣ"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/3> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Ιωάννης Δραγασάκης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/4> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Παναγιώτης Κουρουμπλής"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/5> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Γεώργιος Σταθάκης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/6> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Παναγιώτης Καμμένος"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/7> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Νικόλαος Φίλης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/8> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Νικόλαος Παρασκευόπουλος"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/9> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Ανδρέας Ξανθός"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/10> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Αριστείδης – Νικόλαος – Δημήτριος Μπαλτάς"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/11> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Παναγιώτης Σκουρλέτης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/12> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Χρήστος Σπίρτζης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/13> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Θεόδωρος Δρίτσας"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/14> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Ευάγγελος Αποστόλου"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/15> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Νικόλαος Παππάς"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/16> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Αλέξανδρος Φλαμπουράρης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/17> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Χριστόφορος Βερναρδάκης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/18> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Νικόλαος Τόσκας"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/19> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Ιωάννης Μουζάλας"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/20> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Έλενα Κουντουρά"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/21> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Δημήτριος Βίτσας"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/22> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Αθανασία Αναγνωστοπούλου"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/23> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Κωνσταντίνος Φωτάκης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/24> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Νικόλαος Ξυδάκης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/25> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Δημήτριος Παπαγγελόπουλος"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/26> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Θεανώ Φωτίου"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/27> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Παύλος Πολάκης"@el.
+
+<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Signer/28> a <http://diavgeia.gov.gr/ontology/Signer>;
+	<http://diavgeia.gov.gr/ontology/signer_job> "ΜΕΛΟΣ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ"@el;
+	<http://diavgeia.gov.gr/ontology/signer_name> "Τρύφων Αλεξιάδης"@el.
