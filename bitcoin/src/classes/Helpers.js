@@ -4,7 +4,13 @@ const Wallet = require('./Wallet');
 const BTCCommiter = require('./BTCCommiter');
 const co = require('co');
 
+
+/**
+ * Helper functions organized in this class
+ */
+
 class Helpers {
+
 
   /**
    * Does the SPV Sync and finds Wallet Balance
