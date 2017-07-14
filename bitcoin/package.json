@@ -29,5 +29,7 @@
     "config": "^1.26.1",
     "merkle-tree-gen": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jsdoc": "^3.5.1"
+  }
 }
