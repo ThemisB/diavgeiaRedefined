@@ -1,61 +1,66 @@
-<http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501> a <http://diavgeia.gov.gr/ontology/Circular>;
-	<http://diavgeia.gov.gr/ontology/version> "5798f099-3abc-4ee1-bd1e-fc18ce18e501";
-	<http://diavgeia.gov.gr/ontology/iun> "71ΥΟ4653ΟΞ-89Ε"@el;
-	<http://data.europa.eu/eli/ontology#title> "Ανάρτηση Υπουργικής Απόφασης πιστοποίησης πραγµατογνωµόνων ADR"@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2016-09-14"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΥΠΟΔΟΜΩΝ, ΜΕΤΑΦΟΡΩΝ ΚΑΙ ΔΙΚΤΥΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΓΕΝΙΚΗ ΓΡΑΜΜΑΤΕΙΑ ΥΠΟΔΟΜΩΝ, ΜΕΤΑΦΟΡΩΝ ΚΑΙ ΔΙΚΤΥΩΝ - ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΟΔΙΚΗΣ ΑΣΦΑΛΕΙΑΣ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΟΔΙΚΗΣ ΑΣΦΑΛΕΙΑΣ ΜΕΤΑΦΟΡΩΝ ΕΠΙΚΙΝΔΥΝΩΝ ΕΜΠΟΡΕΥΜΑΤΩΝ ΚΑΙ ΕΥΠΑΘΩΝ ΤΡΟΦΙΜΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Αναστάσεως 2 & Τσιγάντε"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "15669";
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2106508174";
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2106508493";
-	<http://diavgeia.gov.gr/ontology/recipients> "Ελληνικός Νηογνώμονας"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "ΕΒΕΤΑΜ ΑΕ"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "ΕUROCERT";
-    <http://diavgeia.gov.gr/ontology/recipients> "Lloyd's Register";
-    <http://diavgeia.gov.gr/ontology/recipients> "ΓΕΤΕ ΕΠΕ"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "WPI Μ.Ε.Π.Ε."@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "TUV HELLAS ΕΠΕ"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "TAM HELLAS ΕΠΕ"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "AUTOVISION SAKAR ΑΕ"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "SGS GREECE SA";
-    <http://diavgeia.gov.gr/ontology/recipients> "INCERT ΕΠΕ"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "Δημόσια και Ιδιωτικά ΚΤΕΟ της χώρας"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "ΕΜΠ, Σχολή Μηχανολόγων Μηχανικών, Εργαστήριο Οχημάτων"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "ΑΠΘ, Πολυτεχνική Σχολή, Τμήμα Χημικών Μηχανικών, Εργαστήριο Γενικής Χημικής Τεχνολογίας"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "Παν. Πατρών, Τμήμα Μηχ/γων και Αεροναυπηγών Μηχανικών, Εργαστήριο Τεχνικής Μηχανικής και Ταλαντώσεων"@el;
-    <http://diavgeia.gov.gr/ontology/recipients> "Ρυθμιστική Αρχή Σιδηροδρόμων (ΡΑΣ)"@el;
-    <http://diavgeia.gov.gr/ontology/recipient_for_share> "Γραφείου Υπουργού (gram-ypourgou@yme.gov.gr)"@el;
-    <http://diavgeia.gov.gr/ontology/recipient_for_share> "Γραφείο Υφυπουργού (yfyp@yme.gov.gr)"@el;
-    <http://diavgeia.gov.gr/ontology/recipient_for_share> "Γραφείο Γεν. Γραµµατέα (gg-office@yme.gov.gr)"@el;
-    <http://diavgeia.gov.gr/ontology/recipient_for_share> "Γραφείο Γεν. ∆/ντη Οδικής Ασφάλειας (dok@yme.gov.gr)"@el;
-    <http://diavgeia.gov.gr/ontology/internal_distribution> "∆/νση Οδικής Κυκλοφορίας και Ασφάλειας Τµήµα Γ΄"@el;
-    <http://diavgeia.gov.gr/ontology/government_institution_information> "Η. Πάσιος"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_email> "h.pasios@yme.gov.gr";
-	<http://diavgeia.gov.gr/ontology/protocol_number> "Γ2/ 59954/ 7478";
-    <http://diavgeia.gov.gr/ontology/circular_number> "59954/ 7478";
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "Transport";
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "100016011";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473847008526";
-	<http://diavgeia.gov.gr/ontology/unit_id> "100007425".
+@prefix dec: <http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του N.3409/2005 <<Καταδύσεις αναψυχής και άλλες διατάξεις>> (ΦΕΚ 273 Α')."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2005/3409>.
+dec: a ont:Circular;
+	ont:version "5798f099-3abc-4ee1-bd1e-fc18ce18e501";
+	ont:iun "71ΥΟ4653ΟΞ-89Ε"@el;
+	eli:title "Ανάρτηση Υπουργικής Απόφασης πιστοποίησης πραγµατογνωµόνων ADR"@el;
+	eli:date_publication "2016-09-14"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "ΥΠΟΥΡΓΕΙΟ ΥΠΟΔΟΜΩΝ, ΜΕΤΑΦΟΡΩΝ ΚΑΙ ΔΙΚΤΥΩΝ"@el;
+	ont:government_institution_general_administration "ΓΕΝΙΚΗ ΓΡΑΜΜΑΤΕΙΑ ΥΠΟΔΟΜΩΝ, ΜΕΤΑΦΟΡΩΝ ΚΑΙ ΔΙΚΤΥΩΝ - ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΟΔΙΚΗΣ ΑΣΦΑΛΕΙΑΣ"@el;
+	ont:government_institution_department "ΤΜΗΜΑ ΟΔΙΚΗΣ ΑΣΦΑΛΕΙΑΣ ΜΕΤΑΦΟΡΩΝ ΕΠΙΚΙΝΔΥΝΩΝ ΕΜΠΟΡΕΥΜΑΤΩΝ ΚΑΙ ΕΥΠΑΘΩΝ ΤΡΟΦΙΜΩΝ"@el;
+	ont:government_institution_address "Αναστάσεως 2 & Τσιγάντε"@el;
+	ont:government_institution_postalcode "15669";
+	ont:government_institution_phone "2106508174";
+	ont:government_institution_fax "2106508493";
+	ont:recipients "Ελληνικός Νηογνώμονας"@el;
+  ont:recipients "ΕΒΕΤΑΜ ΑΕ"@el;
+  ont:recipients "ΕUROCERT";
+  ont:recipients "Lloyd's Register";
+  ont:recipients "ΓΕΤΕ ΕΠΕ"@el;
+  ont:recipients "WPI Μ.Ε.Π.Ε."@el;
+  ont:recipients "TUV HELLAS ΕΠΕ"@el;
+  ont:recipients "TAM HELLAS ΕΠΕ"@el;
+  ont:recipients "AUTOVISION SAKAR ΑΕ"@el;
+  ont:recipients "SGS GREECE SA";
+  ont:recipients "INCERT ΕΠΕ"@el;
+  ont:recipients "Δημόσια και Ιδιωτικά ΚΤΕΟ της χώρας"@el;
+  ont:recipients "ΕΜΠ, Σχολή Μηχανολόγων Μηχανικών, Εργαστήριο Οχημάτων"@el;
+  ont:recipients "ΑΠΘ, Πολυτεχνική Σχολή, Τμήμα Χημικών Μηχανικών, Εργαστήριο Γενικής Χημικής Τεχνολογίας"@el;
+  ont:recipients "Παν. Πατρών, Τμήμα Μηχ/γων και Αεροναυπηγών Μηχανικών, Εργαστήριο Τεχνικής Μηχανικής και Ταλαντώσεων"@el;
+  ont:recipients "Ρυθμιστική Αρχή Σιδηροδρόμων (ΡΑΣ)"@el;
+  ont:recipient_for_share "Γραφείου Υπουργού (gram-ypourgou@yme.gov.gr)"@el;
+  ont:recipient_for_share "Γραφείο Υφυπουργού (yfyp@yme.gov.gr)"@el;
+  ont:recipient_for_share "Γραφείο Γεν. Γραµµατέα (gg-office@yme.gov.gr)"@el;
+  ont:recipient_for_share "Γραφείο Γεν. ∆/ντη Οδικής Ασφάλειας (dok@yme.gov.gr)"@el;
+  ont:internal_distribution "∆/νση Οδικής Κυκλοφορίας και Ασφάλειας Τµήµα Γ΄"@el;
+  ont:government_institution_information "Η. Πάσιος"@el;
+	ont:government_institution_email "h.pasios@yme.gov.gr";
+	ont:protocol_number "Γ2/ 59954/ 7478";
+  ont:circular_number "59954/ 7478";
+	ont:has_decided dec:Decision\/1;
+	ont:signed_by dec:Signer\/1;
+	ont:thematic_category "Transport";
+	ont:has_private_data false;
+	ont:organization_id "100016011";
+	ont:submission_timestamp "1473847008526";
+	ont:unit_id "100007425".
 
-<http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του άρθρου 4 παρ. 2 της αριθ. 2123/02/28-03-2006 Υ.Α. (ΦΕΚ 449 Β)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/md/2006/Φ449Β/article/4/paragraph/2>.
+dec:Consideration\/1 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του N.3409/2005 <<Καταδύσεις αναψυχής και άλλες διατάξεις>> (ΦΕΚ 273 Α')."@el;
+	ont:considers eli:law\/2005\/3409.
 
-<http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Σας ενηµερώνουµε ότι αναρτήθηκε η υπ’ αρ. πρωτ. Γ2/53077/6453 (ΦΕΚ 2907/Β΄/2016) υπουργική απόφαση, Α∆Α: ΩΟ734653ΟΞ-ΦΜΗ, µε θέµα «Πιστοποίηση πραγµατογνωµόνων ADR για τη διενέργεια δοκιµών και ελέγχων σε εξοπλισµούς και οχήµατα µεταφοράς επικίνδυνων εµπορευµάτων»."@el;
-  <http://diavgeia.gov.gr/ontology/decision_relates> <http://diavgeia.gov.gr/eli/decision/ΩΟ734653ΟΞ-ΦΜΗ>.
+dec:Consideration\/2 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του άρθρου 4 παρ. 2 της αριθ. 2123/02/28-03-2006 Υ.Α. (ΦΕΚ 449 Β)."@el;
+	ont:considers eli:md\/2006\/Φ449Β\/article\/4\/paragraph\/2.
 
-<http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "Η ΠΡΟΪΣΤΑΜΕΝΗ ΔΙΕΥΘΥΝΣΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "Δ. ΔΑΓΛΑ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "100007427".
+dec:Decision\/1 a ont:Decision;
+	ont:has_text "Σας ενηµερώνουµε ότι αναρτήθηκε η υπ’ αρ. πρωτ. Γ2/53077/6453 (ΦΕΚ 2907/Β΄/2016) υπουργική απόφαση, Α∆Α: ΩΟ734653ΟΞ-ΦΜΗ, µε θέµα «Πιστοποίηση πραγµατογνωµόνων ADR για τη διενέργεια δοκιµών και ελέγχων σε εξοπλισµούς και οχήµατα µεταφοράς επικίνδυνων εµπορευµάτων»."@el;
+  ont:decision_relates <http://diavgeia.gov.gr/eli/decision/ΩΟ734653ΟΞ-ΦΜΗ>.
+
+dec:Signer\/1 a ont:Signer;
+	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΔΙΕΥΘΥΝΣΗΣ"@el;
+	ont:signer_name "Δ. ΔΑΓΛΑ"@el;
+	ont:signer_id "100007427".

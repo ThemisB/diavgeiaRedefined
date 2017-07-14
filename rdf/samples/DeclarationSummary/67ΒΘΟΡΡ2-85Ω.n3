@@ -1,63 +1,68 @@
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb> a <http://diavgeia.gov.gr/ontology/DeclarationSummary>;
-	<http://diavgeia.gov.gr/ontology/version> "d1adf316-f432-4726-bd03-b237cbf463cb";
-	<http://diavgeia.gov.gr/ontology/iun> "67ΒΘΟΡΡ2-85Ω"@el;
-	<http://data.europa.eu/eli/ontology#title> "Διενέργεια του 0516 πρόχειρου διαγωνισμού «Οδική Βοήθεια μεταφορικών μέσων ΕΛΤΑ (δικύκλων)»"@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2016-01-13"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "Ελληνικά Ταχυδρομεία Α.Ε."@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "Δ/νση Προμηθειών"@el;
-	<http://diavgeia.gov.gr/ontology/protocol_number> "1.2.2/183";
-	<http://diavgeia.gov.gr/ontology/has_preconsideration> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/PreConsideration>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/2>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/4>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/5>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζουμε"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Decision/2>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Expense/1>;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Δ/νση Οικονομικών - Τομέας Γενικής Λογιστικής / Πρωτόγραφο"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Δ/νση Οικονομικών - Τομέας Οικον. Σχεδιασμού & Πληροφόρησης (101 88) ΑΘΗΝΑ"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Γενικό Διευθυντή Υποστηρικτικών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Γενικό Διευθυντή Επιχειρησιακών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Δ/νση Ταχυδρομικών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Περ/κη Δ/νση Ταχυδρομικών Λειτουργιών Αττικής (101 10) ΑΘΗΝΑ / e-αποστολή"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Περ/κη Δ/νση Ταχυδρομικών Λειτουργιών Κεντρ. Μακεδονίας (560 00) ΘΕΣΣΑΛΟΝΙΚΗ / e-αποστολή"@el;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
-	<http://diavgeia.gov.gr/ontology/government_institution_budget_code> "Τακτικός Προϋπολογισμός"@el;
-	<http://diavgeia.gov.gr/ontology/selection_criterion> "Χαμηλότερη Τιμή"@el;
-	<http://diavgeia.gov.gr/ontology/tendering_procedure> "Πρόχειρος"@el;
-	<http://diavgeia.gov.gr/ontology/contract_type> "Υπηρεσίες"@el;
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "50039";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1452674041256";
-	<http://diavgeia.gov.gr/ontology/unit_id> "73442".
+@prefix dec: <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του θεσμικού και κανονιστικού πλαισίου λειτουργίας των ΕΛΤΑ που αφορούν στην άσκηση ή στη μεταβίβαση αρμοδιοτήτων, καθώς και τις διατάξεις του καταστατικού του."@el.
+dec: a ont:DeclarationSummary;
+	ont:version "d1adf316-f432-4726-bd03-b237cbf463cb";
+	ont:iun "67ΒΘΟΡΡ2-85Ω"@el;
+	eli:title "Διενέργεια του 0516 πρόχειρου διαγωνισμού «Οδική Βοήθεια μεταφορικών μέσων ΕΛΤΑ (δικύκλων)»"@el;
+	eli:date_publication "2016-01-13"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "Ελληνικά Ταχυδρομεία Α.Ε."@el;
+	ont:government_institution_general_administration "Δ/νση Προμηθειών"@el;
+	ont:protocol_number "1.2.2/183";
+	ont:has_preconsideration dec:PreConsideration;
+	ont:has_considered dec:Consideration\/1;
+	ont:has_considered dec:Consideration\/2;
+	ont:has_considered dec:Consideration\/3;
+	ont:has_considered dec:Consideration\/4;
+	ont:has_considered dec:Consideration\/5;
+	ont:decision_call "Αποφασίζουμε"@el;
+	ont:has_decided dec:Decision\/1;
+	ont:has_decided dec:Decision\/2;
+	ont:signed_by dec:Signer\/1;
+	ont:has_expense dec:Expense\/1;
+	ont:recipient_for_share "Δ/νση Οικονομικών - Τομέας Γενικής Λογιστικής / Πρωτόγραφο"@el;
+	ont:recipient_for_share "Δ/νση Οικονομικών - Τομέας Οικον. Σχεδιασμού & Πληροφόρησης (101 88) ΑΘΗΝΑ"@el;
+	ont:recipient_for_share "Γενικό Διευθυντή Υποστηρικτικών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;
+	ont:recipient_for_share "Γενικό Διευθυντή Επιχειρησιακών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;
+	ont:recipient_for_share "Δ/νση Ταχυδρομικών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;
+	ont:recipient_for_share "Περ/κη Δ/νση Ταχυδρομικών Λειτουργιών Αττικής (101 10) ΑΘΗΝΑ / e-αποστολή"@el;
+	ont:recipient_for_share "Περ/κη Δ/νση Ταχυδρομικών Λειτουργιών Κεντρ. Μακεδονίας (560 00) ΘΕΣΣΑΛΟΝΙΚΗ / e-αποστολή"@el;
+	ont:thematic_category "EconomicTradeExchanges";
+	ont:government_institution_budget_code "Τακτικός Προϋπολογισμός"@el;
+	ont:selection_criterion "Χαμηλότερη Τιμή"@el;
+	ont:tendering_procedure "Πρόχειρος"@el;
+	ont:contract_type "Υπηρεσίες"@el;
+	ont:has_private_data false;
+	ont:organization_id "50039";
+	ont:submission_timestamp "1452674041256";
+	ont:unit_id "73442".
 
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Κανονισμού Παροχής Υπηρεσιών ΕΛΤΑ (ΦΕΚ 1100/Β/22-8-01)"@el.
+dec:Consideration\/1 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του θεσμικού και κανονιστικού πλαισίου λειτουργίας των ΕΛΤΑ που αφορούν στην άσκηση ή στη μεταβίβαση αρμοδιοτήτων, καθώς και τις διατάξεις του καταστατικού του."@el.
 
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το γεγονός ότι η 6143/2015 σύμβαση που είχε υπογραφεί μεταξύ των ΕΛΤΑ και της ασφαλιστικής επιχείρησης A.G.A INTERNATIONAL SA (MONDIAL ASSISTANCE) για την παροχή οδικής βοήθειας σε μεταφορικά μέσα ιδιοκτησίας ΕΛΤΑ (μοτοποδήλατα & μοτοσικλέτες), λήγει την 31.01.2016."@el.
+dec:Consideration\/2 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Κανονισμού Παροχής Υπηρεσιών ΕΛΤΑ (ΦΕΚ 1100/Β/22-8-01)"@el.
 
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το 1.3.2/1406/29.12.2015 έγγραφο της Διεύθυνσης Ταχυδρομικών Λειτουργιών με το οποίο μας διαβίβασε πίνακα 823 δικύκλων, τις τεχνικές απαιτήσεις, το παραπάνω ενημερωτικό σημείωμα καθώς και όλα τα απαραίτητα στοιχεία προκειμένου να κινηθούν οι διαδικασίες διενέργειας του εν λόγω διαγωνισμού, χρονικής διάρκειας ενός (1) έτους."@el.
+dec:Consideration\/3 a ont:Consideration;
+	ont:has_text "Το γεγονός ότι η 6143/2015 σύμβαση που είχε υπογραφεί μεταξύ των ΕΛΤΑ και της ασφαλιστικής επιχείρησης A.G.A INTERNATIONAL SA (MONDIAL ASSISTANCE) για την παροχή οδικής βοήθειας σε μεταφορικά μέσα ιδιοκτησίας ΕΛΤΑ (μοτοποδήλατα & μοτοσικλέτες), λήγει την 31.01.2016."@el.
 
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το 1.3.2/1406/29.12.2015 έγγραφο της Διεύθυνσης Ταχυδρομικών Λειτουργιών με το οποίο μας διαβίβασε πίνακα 823 δικύκλων, τις τεχνικές απαιτήσεις, το παραπάνω ενημερωτικό σημείωμα καθώς και όλα τα απαραίτητα στοιχεία προκειμένου να κινηθούν οι διαδικασίες διενέργειας του εν λόγω διαγωνισμού, χρονικής διάρκειας ενός (1) έτους."@el.
+dec:Consideration\/4 a ont:Consideration;
+	ont:has_text "Το 1.3.2/1406/29.12.2015 έγγραφο της Διεύθυνσης Ταχυδρομικών Λειτουργιών με το οποίο μας διαβίβασε πίνακα 823 δικύκλων, τις τεχνικές απαιτήσεις, το παραπάνω ενημερωτικό σημείωμα καθώς και όλα τα απαραίτητα στοιχεία προκειμένου να κινηθούν οι διαδικασίες διενέργειας του εν λόγω διαγωνισμού, χρονικής διάρκειας ενός (1) έτους."@el.
 
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Εγκρίνουμε την διενέργεια του 0516 πρόχειρου διαγωνισμού, με κριτήριο κατακύρωσης τη χαμηλότερη τιμή, για την επιλογή αναδόχου, ο οποίος θα αναλάβει το έργο της παροχής οδικής βοήθειας, για όλο το 24ωρο, σε 823 μεταφορικά μέσα, (μοτοποδήλατα & μοτοσικλέτες από 50cc μέχρι 250cc), ιδιοκτησίας ΕΛΤΑ, για χρονικό διάστημα ενός έτους με έναρξη από 01/02/2016. Ο διαγωνισμός θα διενεργηθεί σύμφωνα με τους όρους και τις απαιτήσεις της επισυναπτόμενης διακήρυξης, η οποία αποτελεί αναπόσπαστο μέρος της παρούσας απόφασης.Η σχετική δαπάνη, για ένα (1) έτος, προβλέπεται να ανέλθει, στο ποσό των δεκαέξι χιλιάδων ΕΥΡΩ (16.000€) συμπεριλαμβανομένου του ΦΠΑ, θα βαρύνει τον ΚΑΔ 62.05.01.[Ασφάλιστρα Μεταφορικών Μέσων (Οδική Βοήθεια)] και κατανέμεται, ως εξής: Προϋπολογισμός Εκμετάλλευσης ΕΛΤΑ έτους 2016, Κ.Α.Δ 62 05 01.0100-1-00001 της Περ/κης Δ/νσης Ταχυδρομικών Λειτουργιών Αττικής κατά το ποσό των 13.563 ΕΥΡΩ με α.α:1. Κ.Α.Δ 62 05 01.0300-1-00003 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Κεντρικής Μακεδονίας κατά το ποσό των 1.100 ΕΥΡΩ με α.α:2. Προϋπολογισμός Εκμετάλλευσης ΕΛΤΑ έτους 2017, Κ.Α.Δ 62 05 01.0100-1-00001 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Αττικής κατά το ποσό των 1.237 ΕΥΡΩ, Κ.Α.Δ 62 05 01.0300-1-00003 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Κεντρικής Μακεδονίας κατά το ποσό των 100 ΕΥΡΩ. Oι Περιφερειακές Διευθύνσεις, να μεριμνήσουν για την ένταξη των παραπάνω ποσών στους αντίστοιχους Προϋπολογισμούς."@el.
+dec:Consideration\/5 a ont:Consideration;
+	ont:has_text "Το 1.3.2/1406/29.12.2015 έγγραφο της Διεύθυνσης Ταχυδρομικών Λειτουργιών με το οποίο μας διαβίβασε πίνακα 823 δικύκλων, τις τεχνικές απαιτήσεις, το παραπάνω ενημερωτικό σημείωμα καθώς και όλα τα απαραίτητα στοιχεία προκειμένου να κινηθούν οι διαδικασίες διενέργειας του εν λόγω διαγωνισμού, χρονικής διάρκειας ενός (1) έτους."@el.
 
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Expense/1> a <http://diavgeia.gov.gr/ontology/Expense>;
-	<http://diavgeia.gov.gr/ontology/expense_amount> "13008.13";
-	<http://diavgeia.gov.gr/ontology/expense_currency> "EUR";
-	<http://diavgeia.gov.gr/ontology/cpv> "66000000-0";.
+dec:Decision\/1 a ont:Decision;
+	ont:has_text "Εγκρίνουμε την διενέργεια του 0516 πρόχειρου διαγωνισμού, με κριτήριο κατακύρωσης τη χαμηλότερη τιμή, για την επιλογή αναδόχου, ο οποίος θα αναλάβει το έργο της παροχής οδικής βοήθειας, για όλο το 24ωρο, σε 823 μεταφορικά μέσα, (μοτοποδήλατα & μοτοσικλέτες από 50cc μέχρι 250cc), ιδιοκτησίας ΕΛΤΑ, για χρονικό διάστημα ενός έτους με έναρξη από 01/02/2016. Ο διαγωνισμός θα διενεργηθεί σύμφωνα με τους όρους και τις απαιτήσεις της επισυναπτόμενης διακήρυξης, η οποία αποτελεί αναπόσπαστο μέρος της παρούσας απόφασης.Η σχετική δαπάνη, για ένα (1) έτος, προβλέπεται να ανέλθει, στο ποσό των δεκαέξι χιλιάδων ΕΥΡΩ (16.000€) συμπεριλαμβανομένου του ΦΠΑ, θα βαρύνει τον ΚΑΔ 62.05.01.[Ασφάλιστρα Μεταφορικών Μέσων (Οδική Βοήθεια)] και κατανέμεται, ως εξής: Προϋπολογισμός Εκμετάλλευσης ΕΛΤΑ έτους 2016, Κ.Α.Δ 62 05 01.0100-1-00001 της Περ/κης Δ/νσης Ταχυδρομικών Λειτουργιών Αττικής κατά το ποσό των 13.563 ΕΥΡΩ με α.α:1. Κ.Α.Δ 62 05 01.0300-1-00003 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Κεντρικής Μακεδονίας κατά το ποσό των 1.100 ΕΥΡΩ με α.α:2. Προϋπολογισμός Εκμετάλλευσης ΕΛΤΑ έτους 2017, Κ.Α.Δ 62 05 01.0100-1-00001 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Αττικής κατά το ποσό των 1.237 ΕΥΡΩ, Κ.Α.Δ 62 05 01.0300-1-00003 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Κεντρικής Μακεδονίας κατά το ποσό των 100 ΕΥΡΩ. Oι Περιφερειακές Διευθύνσεις, να μεριμνήσουν για την ένταξη των παραπάνω ποσών στους αντίστοιχους Προϋπολογισμούς."@el.
 
-<http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "ΔΙΕΥΘΥΝΤΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "ΑΠΟΣΤΟΛΟΣ ΠΑΝΤΑΖΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "100014730".
+dec:Expense\/1 a ont:Expense;
+	ont:expense_amount "13008.13";
+	ont:expense_currency "EUR";
+	ont:cpv "66000000-0";.
+
+dec:Signer\/1 a ont:Signer;
+	ont:signer_job "ΔΙΕΥΘΥΝΤΗΣ"@el;
+	ont:signer_name "ΑΠΟΣΤΟΛΟΣ ΠΑΝΤΑΖΗΣ"@el;
+	ont:signer_id "100014730".

@@ -1,61 +1,65 @@
-<http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21> a <http://diavgeia.gov.gr/ontology/Contract>;
-	<http://diavgeia.gov.gr/ontology/version> "b3db8d62-c6b2-49f0-bc79-707b8e4a1c21";
-	<http://diavgeia.gov.gr/ontology/iun> "ΩΜΟΔ469Β7Θ-6Τ9"@el;
-	<http://data.europa.eu/eli/ontology#title> "ΣΥΜΒΑΣΗ ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΠΟ 20/6/13 ΕΩΣ 31/8/15"@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "Πανεπιστήμιο Πατρών"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "Γραμματεία Ειδικού Λογαριασμού Κονδυλίων Έρευνας"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΔΙΔΑΚΤΙΚΟΥ ΠΡΟΣΩΠΙΚΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Ηρώων Πολυτεχνείου 9, Πολυτεχνειούπολη Ζωγράφου"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "15780";
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2610969052";
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2610996677";
-	<http://diavgeia.gov.gr/ontology/government_institution_email> "kpapagian@upatras.gr";
-	<http://diavgeia.gov.gr/ontology/government_institution_information> "Κ. Λυκούδη - Παπαγιαννόπουλου";
-	<http://diavgeia.gov.gr/ontology/protocol_number> "44312/25-11-2015";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/2>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "Εγκρίνεται"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Expense/1>;
-	<http://diavgeia.gov.gr/ontology/contract_decision_type> "Σύμβαση Έργου"@el;
-	<http://diavgeia.gov.gr/ontology/contract_decision_type> "Σύμβαση Έργου"@el;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "PublicAdministration";
-	<http://diavgeia.gov.gr/ontology/number_employees> "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "99206920";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1452594644088";
-	<http://diavgeia.gov.gr/ontology/unit_id> "74045".
+@prefix dec: <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το Νομοθετικό Διάταγμα 4425/11-11-1964 (Περί ιδρύσεως Πανεπιστημίου Πατρών)"@el.
+dec: a ont:Contract;
+	ont:version "b3db8d62-c6b2-49f0-bc79-707b8e4a1c21";
+	ont:iun "ΩΜΟΔ469Β7Θ-6Τ9"@el;
+	eli:title "ΣΥΜΒΑΣΗ ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΠΟ 20/6/13 ΕΩΣ 31/8/15"@el;
+	eli:date_publication "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "Πανεπιστήμιο Πατρών"@el;
+	ont:government_institution_general_administration "Γραμματεία Ειδικού Λογαριασμού Κονδυλίων Έρευνας"@el;
+	ont:government_institution_department "ΤΜΗΜΑ ΔΙΔΑΚΤΙΚΟΥ ΠΡΟΣΩΠΙΚΟΥ"@el;
+	ont:government_institution_address "Ηρώων Πολυτεχνείου 9, Πολυτεχνειούπολη Ζωγράφου"@el;
+	ont:government_institution_postalcode "15780";
+	ont:government_institution_phone "2610969052";
+	ont:government_institution_fax "2610996677";
+	ont:government_institution_email "kpapagian@upatras.gr";
+	ont:government_institution_information "Κ. Λυκούδη - Παπαγιαννόπουλου";
+	ont:protocol_number "44312/25-11-2015";
+	ont:has_considered dec:Consideration\/1;
+	ont:has_considered dec:Consideration\/2;
+	ont:has_considered dec:Consideration\/3;
+	ont:decision_call "Εγκρίνεται"@el;
+	ont:has_decided dec:Decision\/1;
+	ont:signed_by dec:Signer\/1;
+	ont:has_expense dec:Expense\/1;
+	ont:contract_decision_type "Σύμβαση Έργου"@el;
+	ont:thematic_category "PublicAdministration";
+	ont:number_employees "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	ont:has_private_data false;
+	ont:organization_id "99206920";
+	ont:submission_timestamp "1452594644088";
+	ont:unit_id "74045".
 
-<http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ΄αριθμ. 679/96 ΚΥΑ (ΦΕΚ 826 Β), όπως κυρώθηκε με το άρθρο 36 του Νόμου 3794/2009 (ΦΕΚ 156 Α) και τροποποιήθηκε με το αρθρ. 36 Ν. 3848/2010"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2009/3794>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3848>.
+dec:Consideration\/1 a ont:Consideration;
+	ont:has_text "Το Νομοθετικό Διάταγμα 4425/11-11-1964 (Περί ιδρύσεως Πανεπιστημίου Πατρών)"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τον Οδηγό Χρηματοδότησης και Διαχείρισης Ερευνών που εγκρίθηκε με απόφαση της υπ΄αριθμ. 373/14-07-2004 και 17385/20-05-2014 συνεδριάσεις της Συγκλήτου"@el.
+dec:Consideration\/2 a ont:Consideration;
+	ont:has_text "Την υπ΄αριθμ. 679/96 ΚΥΑ (ΦΕΚ 826 Β), όπως κυρώθηκε με το άρθρο 36 του Νόμου 3794/2009 (ΦΕΚ 156 Α) και τροποποιήθηκε με το αρθρ. 36 Ν. 3848/2010"@el;
+	ont:considers <http://legislation.di.uoa.gr/eli/law/2009/3794>;
+	ont:considers <http://legislation.di.uoa.gr/eli/law/2010/3848>.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Με αριθμό συνεδρίασης 357/10-7-2013, την ΑΝΝΑ ΣΕΡΠΕΤΣΙΔΑΚΗ να αναλάβει το Πρόγραμμα \"Ε&Τ (ΕΛΛ.ΚΙΝΑ): Άμεση εκτίμηση σεισμικών ζημιών\", για το χρονικό διάστημα 20/6/2013 έως 31/8/2015. Η αμοιβή ανέρχεται στα 5500 ΕΥΡΩ, με δραστηριότητα ENGINEERING INTENSITY SCALE, SENSOR SPECIFICATIONS AND SELECTION QUICKER’S GIS PLATFORM"@el.
+dec:Consideration\/3 a ont:Consideration;
+	ont:has_text "Τον Οδηγό Χρηματοδότησης και Διαχείρισης Ερευνών που εγκρίθηκε με απόφαση της υπ΄αριθμ. 373/14-07-2004 και 17385/20-05-2014 συνεδριάσεις της Συγκλήτου"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Sponsored/1> a <http://diavgeia.gov.gr/ontology/Sponsored>;
-	<http://diavgeia.gov.gr/ontology/afm> "062343801";
-	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
-	<http://diavgeia.gov.gr/ontology/name> "ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΝΝΑ ΙΩΑΝΝΗΣ"@el.
+dec:Decision\/1 a ont:Decision;
+	ont:has_text "Με αριθμό συνεδρίασης 357/10-7-2013, την ΑΝΝΑ ΣΕΡΠΕΤΣΙΔΑΚΗ να αναλάβει το Πρόγραμμα \"Ε&Τ (ΕΛΛ.ΚΙΝΑ): Άμεση εκτίμηση σεισμικών ζημιών\", για το χρονικό διάστημα 20/6/2013 έως 31/8/2015. Η αμοιβή ανέρχεται στα 5500 ΕΥΡΩ, με δραστηριότητα ENGINEERING INTENSITY SCALE, SENSOR SPECIFICATIONS AND SELECTION QUICKER’S GIS PLATFORM"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Expense/1> a <http://diavgeia.gov.gr/ontology/Expense>;
-	<http://diavgeia.gov.gr/ontology/expense_amount> "5500";
-	<http://diavgeia.gov.gr/ontology/expense_currency> "EUR";
-	<http://diavgeia.gov.gr/ontology/contract_start> "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	<http://diavgeia.gov.gr/ontology/contract_end> "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Sponsored/1>.
+dec:Sponsored\/1 a ont:Sponsored;
+	ont:afm "062343801";
+	ont:afm_type "Εθνικό"@el;
+	ont:name "ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΝΝΑ ΙΩΑΝΝΗΣ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "Αναπληρωτής Πρυτάνεως Έρευνας & Ανάπτυξης"@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "Πολύζος κ. Δημοσθένης"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "131549".
+dec:Expense\/1 a ont:Expense;
+	ont:expense_amount "5500";
+	ont:expense_currency "EUR";
+	ont:contract_start "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:contract_end "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:has_sponsored dec:Sponsored\/1.
+
+dec:Signer\/1 a ont:Signer;
+	ont:signer_job "Αναπληρωτής Πρυτάνεως Έρευνας & Ανάπτυξης"@el;
+	ont:signer_name "Πολύζος κ. Δημοσθένης"@el;
+	ont:signer_id "131549".

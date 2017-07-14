@@ -1,73 +1,78 @@
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273> a <http://diavgeia.gov.gr/ontology/DevelopmentLawContract>;
-	<http://diavgeia.gov.gr/ontology/version> "4fd88d93-661b-4aa4-a564-0aa4e1cb1273";
-	<http://diavgeia.gov.gr/ontology/iun> "6ΜΣΜ4691Ω2-0Ι7"@el;
-	<http://data.europa.eu/eli/ontology#title> "ΑΠΟΦΑΣΗ ΑΝΑΚΤΗΣΗΣ ΑΧΡΕΩΣΤΗΤΩΣ ΚΑΤΑΒΛΗΘΕΝΤΟΣ ΠΟΣΟΥ"@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΕΡΓΑΣΙΑΣ, ΚΟΙΝΩΝΙΚΗΣ ΑΣΦΑΛΙΣΗΣ ΚΑΙ ΚΟΙΝΩΝΙΚΗ ΑΛΛΗΛΕΓΓΥΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΟΡΓΑΝΙΣΜΟΣ ΑΠΑΣΧΟΛΗΣΗΣ ΕΡΓΑΤΙΚΟΥ ΔΥΝΑΜΙΚΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΥΠΟΣΤΗΡΙΞΗΣ, ΔΙΕΥΘΥΝΣΗ ΟΙΚΟΝΟΜΙΚΩΝ ΥΠΗΡΕΣΙΩΝ (Β3)"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Εθν. Αντιστάσεως 8, Άλιµος"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "17456";
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2109989097";
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2109989489";
-	<http://diavgeia.gov.gr/ontology/recipients> "Αποδέκτες Πίνακα Διανομής"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_email> " b3@oaed.gr";
-	<http://diavgeia.gov.gr/ontology/protocol_number> "68666";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/2>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/4>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/5>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/6>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "ΑΠΟΦΑΣΙΖΟΥΜΕ"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/recipient> "ΝΑΥΤΙΛΙΑΚΗ ΕΤΑΙΡΕΙΑ ΘΑΣΟΥ Α.Ε. 64004 ΘΑΣΟΣ"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΑΣ, ΑΝΑΠΤΥΞΗΣ ΚΑΙ ΤΟΥΡΙΣΜΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΚΩΝ - ΓΕΝΙΚΟ ΛΟΓΙΣΤΗΡΙΟ ΤΟΥ ΚΡΑΤΟΥΣ - Γενική ∆ιεύθυνση ∆ιοίκησης και Ελέγχου Συγχρηµατοδοτούµενων Προγραµµάτων από την Ε.Ε."@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΚΩΝ - ΓΕΝΙΚΟ ΛΟΓΙΣΤΗΡΙΟ ΤΟΥ ΚΡΑΤΟΥΣ - Γενική ∆ιεύθυνση ∆ιοίκησης και ∆ηµοσιονοµικών Ελέγχων"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΓΕΝΙΚΟΣ ΕΠΙΘΕΩΡΗΤΗΣ ΔΗΜΟΣΙΑΣ ΔΙΟΙΚΗΣΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/internal_distribution> "Γραφείο κυρίας Διοικήτριας"@el;
-	<http://diavgeia.gov.gr/ontology/internal_distribution> "Διεύθυνση Επαγγελματικής Κατάρτισης Ενηλίκων (Α3) ΟΑΕΔ"@el;
-	<http://diavgeia.gov.gr/ontology/internal_distribution> "Υπηρεσία Διεθνών Σχέσεων ΟΑΕΔ"@el;
-	<http://diavgeia.gov.gr/ontology/internal_distribution> "Γραφείο Γεν. Δ/ντη Υποστήριξης"@el;
-	<http://diavgeia.gov.gr/ontology/internal_distribution> "Δ/νση Β3"@el;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "EuropeanUnion";
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "99219675";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473333552193";
-	<http://diavgeia.gov.gr/ontology/unit_id> "72341".
+@prefix dec: <http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν.2362/27-11-95 «Περί ∆ηµοσίου Λογιστικού, ελέγχου των δαπανών του Κράτους και άλλες διατάξεις» (Α΄247) και ειδικότερα του άρθρου 104."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1995/2362>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1995/2362/article/104>.
+dec: a ont:DevelopmentLawContract;
+	ont:version "4fd88d93-661b-4aa4-a564-0aa4e1cb1273";
+	ont:iun "6ΜΣΜ4691Ω2-0Ι7"@el;
+	eli:title "ΑΠΟΦΑΣΗ ΑΝΑΚΤΗΣΗΣ ΑΧΡΕΩΣΤΗΤΩΣ ΚΑΤΑΒΛΗΘΕΝΤΟΣ ΠΟΣΟΥ"@el;
+	eli:date_publication "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "ΥΠΟΥΡΓΕΙΟ ΕΡΓΑΣΙΑΣ, ΚΟΙΝΩΝΙΚΗΣ ΑΣΦΑΛΙΣΗΣ ΚΑΙ ΚΟΙΝΩΝΙΚΗ ΑΛΛΗΛΕΓΓΥΗΣ"@el;
+	ont:government_institution_general_administration "ΟΡΓΑΝΙΣΜΟΣ ΑΠΑΣΧΟΛΗΣΗΣ ΕΡΓΑΤΙΚΟΥ ΔΥΝΑΜΙΚΟΥ"@el;
+	ont:government_institution_department "ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΥΠΟΣΤΗΡΙΞΗΣ, ΔΙΕΥΘΥΝΣΗ ΟΙΚΟΝΟΜΙΚΩΝ ΥΠΗΡΕΣΙΩΝ (Β3)"@el;
+	ont:government_institution_address "Εθν. Αντιστάσεως 8, Άλιµος"@el;
+	ont:government_institution_postalcode "17456";
+	ont:government_institution_phone "2109989097";
+	ont:government_institution_fax "2109989489";
+	ont:recipients "Αποδέκτες Πίνακα Διανομής"@el;
+	ont:government_institution_email " b3@oaed.gr";
+	ont:protocol_number "68666";
+	ont:has_considered dec:Consideration\/1;
+	ont:has_considered dec:Consideration\/2;
+	ont:has_considered dec:Consideration\/3;
+	ont:has_considered dec:Consideration\/4;
+	ont:has_considered dec:Consideration\/5;
+	ont:has_considered dec:Consideration\/6;
+	ont:decision_call "ΑΠΟΦΑΣΙΖΟΥΜΕ"@el;
+	ont:has_decided dec:Decision\/1;
+	ont:signed_by dec:Signer\/1;
+	ont:recipient "ΝΑΥΤΙΛΙΑΚΗ ΕΤΑΙΡΕΙΑ ΘΑΣΟΥ Α.Ε. 64004 ΘΑΣΟΣ"@el;
+	ont:recipient_for_share "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΑΣ, ΑΝΑΠΤΥΞΗΣ ΚΑΙ ΤΟΥΡΙΣΜΟΥ"@el;
+	ont:recipient_for_share "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΚΩΝ - ΓΕΝΙΚΟ ΛΟΓΙΣΤΗΡΙΟ ΤΟΥ ΚΡΑΤΟΥΣ - Γενική ∆ιεύθυνση ∆ιοίκησης και Ελέγχου Συγχρηµατοδοτούµενων Προγραµµάτων από την Ε.Ε."@el;
+	ont:recipient_for_share "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΚΩΝ - ΓΕΝΙΚΟ ΛΟΓΙΣΤΗΡΙΟ ΤΟΥ ΚΡΑΤΟΥΣ - Γενική ∆ιεύθυνση ∆ιοίκησης και ∆ηµοσιονοµικών Ελέγχων"@el;
+	ont:recipient_for_share "ΓΕΝΙΚΟΣ ΕΠΙΘΕΩΡΗΤΗΣ ΔΗΜΟΣΙΑΣ ΔΙΟΙΚΗΣΗΣ"@el;
+	ont:internal_distribution "Γραφείο κυρίας Διοικήτριας"@el;
+	ont:internal_distribution "Διεύθυνση Επαγγελματικής Κατάρτισης Ενηλίκων (Α3) ΟΑΕΔ"@el;
+	ont:internal_distribution "Υπηρεσία Διεθνών Σχέσεων ΟΑΕΔ"@el;
+	ont:internal_distribution "Γραφείο Γεν. Δ/ντη Υποστήριξης"@el;
+	ont:internal_distribution "Δ/νση Β3"@el;
+	ont:thematic_category "EuropeanUnion";
+	ont:has_private_data false;
+	ont:organization_id "99219675";
+	ont:submission_timestamp "1473333552193";
+	ont:unit_id "72341".
 
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν.∆. 356/74 «Περί Κωδικός Εισπράξεως ∆ηµοσίων Εσόδων» όπως ισχύει σήµερα καθώς και τις διατάξεις του Π.∆. 16/1989 «Κανονισµός Λειτουργίας των ∆ΟΥ»."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/1989/16>.
+dec:Consideration\/1 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Ν.2362/27-11-95 «Περί ∆ηµοσίου Λογιστικού, ελέγχου των δαπανών του Κράτους και άλλες διατάξεις» (Α΄247) και ειδικότερα του άρθρου 104."@el;
+	ont:considers eli:law\/1995\/2362;
+	ont:considers eli:law\/1995\/2362\/article\/104.
 
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 3614/07 «∆ιαχείριση, έλεγχος και εφαρµογή αναπτυξιακών παρεµβάσεων για την προγραµµατική περίοδο 2007 -2013» και ειδικότερα των άρθρων 8, 13 και 26"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2007/3614>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2007/3614/article/8>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2007/3614/article/13>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2007/3614/article/26>.
+dec:Consideration\/2 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Ν.∆. 356/74 «Περί Κωδικός Εισπράξεως ∆ηµοσίων Εσόδων» όπως ισχύει σήµερα καθώς και τις διατάξεις του Π.∆. 16/1989 «Κανονισµός Λειτουργίας των ∆ΟΥ»."@el;
+	ont:considers eli:pd\/1989\/16.
 
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Της υπ. αριθµ. 14053/ΕΥΣ 1743/27-03-2008 Υπουργικής Απόφασης Συστήµατος ∆ιαχείρισης (ΦΕΚ 540/Β/27-03-08), όπως τροποποιήθηκε και ισχύει και ειδικότερα το ΚΕΦ. ∆., άρθρο 15 «Ανάκτηση αχρεωστήτως καταβληθέντων ποσών»."@el.
+dec:Consideration\/3 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Ν. 3614/07 «∆ιαχείριση, έλεγχος και εφαρµογή αναπτυξιακών παρεµβάσεων για την προγραµµατική περίοδο 2007 -2013» και ειδικότερα των άρθρων 8, 13 και 26."@el;
+	ont:considers eli:law\/2007\/3614;
+	ont:considers eli:law\/2007\/3614\/article\/8;
+	ont:considers eli:law\/2007\/3614\/article\/13;
+	ont:considers eli:law\/2007\/3614\/article\/26.
 
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ. αριθµ. 0.9723/οικ.6.1415/14-5-2010 (ΦΕΚ 714/Β’/26-05-2010)ΥΑ Εκχώρησης Αρµοδιοτήτων ∆ιαχείρισης για πράξεις του Επιχειρησιακού Προγράµµατος «Ανάπτυξη Ανθρώπινου ∆υναµικού» στον Ο.Α.Ε.∆., όπως τροποποιήθηκε και ισχύει."@el.
+dec:Consideration\/4 a ont:Consideration;
+	ont:has_text "Της υπ. αριθµ. 14053/ΕΥΣ 1743/27-03-2008 Υπουργικής Απόφασης Συστήµατος ∆ιαχείρισης (ΦΕΚ 540/Β/27-03-08), όπως τροποποιήθηκε και ισχύει και ειδικότερα το ΚΕΦ. ∆., άρθρο 15 «Ανάκτηση αχρεωστήτως καταβληθέντων ποσών»."@el.
 
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ. αριθµ. 58926/19-07-2016 (Α∆Α : ΩΓΠΓ4691Ω2-6Ο4) Απόφαση ∆ηµοσιονοµικής ∆ιόρθωσης της Προϊσταµένης της ∆ιεύθυνσης Επαγγελµατικής Κατάρτισης Ενηλίκων του ΟΑΕ∆, µε την οποία επιβάλλεται δηµοσιονοµική διόρθωση ύψους 42.792,00€, το οποίο αντιστοιχεί στην καταβολή της προκαταβολής προς τη δικαιούχο εταιρεία µη συµπεριλαµβανοµένων των τόκων και µε την οποία εισηγείται στον αρµόδιο διατάκτη (∆/νση Οικονοµικών Υπηρεσιών του ΟΑΕ∆) την ανάκτηση των αναλογούντων τόκων µέχρι την ηµέρα επιστροφής του ποσού της προκαταβολής. "@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/ΩΓΠΓ4691Ω2-6Ο4>.
+dec:Consideration\/5 a ont:Consideration;
+	ont:has_text "Την υπ. αριθµ. 0.9723/οικ.6.1415/14-5-2010 (ΦΕΚ 714/Β’/26-05-2010)ΥΑ Εκχώρησης Αρµοδιοτήτων ∆ιαχείρισης για πράξεις του Επιχειρησιακού Προγράµµατος «Ανάπτυξη Ανθρώπινου ∆υναµικού» στον Ο.Α.Ε.∆., όπως τροποποιήθηκε και ισχύει."@el.
 
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "την ανάκτηση ως αχρεωστήτως καταβληθέντος του ποσού των 567,77€ το οποίο αντιστοιχεί στην έντοκη προσαύξηση της προκαταβολής, σύµφωνα µε τα παρακάτω στοιχεία: Α) Η ανάκτηση του ποσού 567,77€ θα γίνει από τη δικαιούχο επιχείρηση : ΝΑΥΤΙΛΙΑΚΗ ΕΤΑΙΡΕΙΑ ΘΑΣΟΥ Α.Ε. µε ΑΦΜ 094102667 για το έργο µε αριθµό αίτησης 533 και MIS 371383. Το ανωτέρω ποσό των τόκων αντιστοιχεί στο χρονικό διάστηµα από 28/12/2011 που αφορά στην καταβολή της προκαταβολής των 42.792,00€ σύµφωνα µε το 251113/21-12-2011 αντίγραφο εντάλµατος πληρωµής της Εθνικής Τράπεζας Ελλάδος (αρ. εντολής Ε3237/4497/22-12-2011) µέχρι την επιστροφή της προκαταβολής στις 21-08-2012 µε βάση το υπ' αριθµ. 023467772-9 λογιστικό δελτίο της Εθνικής Τράπεζας Ελλάδος και τα οριζόµενα στο στοιχείο 2 του άρθρου 15 της υπ. αριθµ. 14053/ΕΥΣ 1743/27-03-2008 Υπουργικής Απόφασης Συστήµατος ∆ιαχείρισης, όπως τροποποιήθηκε µε την υπ’ αριθµ. 5058/ΕΥΘΥ 138/05-02-2013 (ΦΕΚ 292/Β/13-02-2013) όµοιά της. Β) Η Απόφαση Ανάκτησης αποτελεί νόµιµο τίτλο βεβαίωσης του χρέους και είναι αµέσως εκτελεστή. Γ) Η επιστροφή του ποσού πρέπει να γίνει εντός δέκα πέντε (15) ηµερολογιακών ηµερών από την έγγραφη κοινοποίηση της Απόφασης Ανάκτησης στη δικαιούχο εταιρεία σας, σε οποιαδήποτε ∆.Ο.Υ. στα έσοδα του Κρατικού Προϋπολογισµού και συγκεκριµένα στον ΚΑΕ 3941 «Έσοδα από καταλογισµούς σε φορείς που υλοποιούν προγράµµατα του Ευρωπαϊκού Κοινωνικού Ταµείου». Σε περίπτωση µη εµπρόθεσµης καταβολής, το χρέος θα αναζητηθεί µε βάση τις διατάξεις του Κώδικα Εισπράξεως ∆ηµοσίων Εσόδων (ΚΕ∆Ε) και τα οριζόµενα στο άρθ. 15 της Υ.Α. Συστήµατος ∆ιαχείρισης. Αντίγραφο της κατάθεσης του ποσού αποστέλλεται στον ΟΑΕ∆ / Υπηρεσία Οικονοµικών Υπηρεσιών (Β3). ∆) Η Απόφαση ανάκτησης αχρεωστήτως ή παρανόµως καταβληθέντος ποσού υπόκειται στα ένδικα µέσα που προβλέπονται από τις εκάστοτε ισχύουσες διατάξεις."@el.
+dec:Consideration\/6 a ont:Consideration;
+	ont:has_text "Την υπ. αριθµ. 58926/19-07-2016 (Α∆Α : ΩΓΠΓ4691Ω2-6Ο4) Απόφαση ∆ηµοσιονοµικής ∆ιόρθωσης της Προϊσταµένης της ∆ιεύθυνσης Επαγγελµατικής Κατάρτισης Ενηλίκων του ΟΑΕ∆, µε την οποία επιβάλλεται δηµοσιονοµική διόρθωση ύψους 42.792,00€, το οποίο αντιστοιχεί στην καταβολή της προκαταβολής προς τη δικαιούχο εταιρεία µη συµπεριλαµβανοµένων των τόκων και µε την οποία εισηγείται στον αρµόδιο διατάκτη (∆/νση Οικονοµικών Υπηρεσιών του ΟΑΕ∆) την ανάκτηση των αναλογούντων τόκων µέχρι την ηµέρα επιστροφής του ποσού της προκαταβολής."@el;
+	ont:considers <http://diavgeia.gov.gr/eli/decision/ΩΓΠΓ4691Ω2-6Ο4>.
 
-<http://diavgeia.gov.gr/eli/decision/6ΜΣΜ4691Ω2-0Ι7/4fd88d93-661b-4aa4-a564-0aa4e1cb1273/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "Η Προϊσταµένη της ∆ιεύθυνσης Οικονοµικών Υπηρεσιών (Β3) "@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "Ε. ΑΓΓΕΛΟΠΟΥΛΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "121880".
+dec:Decision\/1 a ont:Decision;
+	ont:has_text "την ανάκτηση ως αχρεωστήτως καταβληθέντος του ποσού των 567,77€ το οποίο αντιστοιχεί στην έντοκη προσαύξηση της προκαταβολής, σύµφωνα µε τα παρακάτω στοιχεία: Α) Η ανάκτηση του ποσού 567,77€ θα γίνει από τη δικαιούχο επιχείρηση : ΝΑΥΤΙΛΙΑΚΗ ΕΤΑΙΡΕΙΑ ΘΑΣΟΥ Α.Ε. µε ΑΦΜ 094102667 για το έργο µε αριθµό αίτησης 533 και MIS 371383. Το ανωτέρω ποσό των τόκων αντιστοιχεί στο χρονικό διάστηµα από 28/12/2011 που αφορά στην καταβολή της προκαταβολής των 42.792,00€ σύµφωνα µε το 251113/21-12-2011 αντίγραφο εντάλµατος πληρωµής της Εθνικής Τράπεζας Ελλάδος (αρ. εντολής Ε3237/4497/22-12-2011) µέχρι την επιστροφή της προκαταβολής στις 21-08-2012 µε βάση το υπ' αριθµ. 023467772-9 λογιστικό δελτίο της Εθνικής Τράπεζας Ελλάδος και τα οριζόµενα στο στοιχείο 2 του άρθρου 15 της υπ. αριθµ. 14053/ΕΥΣ 1743/27-03-2008 Υπουργικής Απόφασης Συστήµατος ∆ιαχείρισης, όπως τροποποιήθηκε µε την υπ’ αριθµ. 5058/ΕΥΘΥ 138/05-02-2013 (ΦΕΚ 292/Β/13-02-2013) όµοιά της. Β) Η Απόφαση Ανάκτησης αποτελεί νόµιµο τίτλο βεβαίωσης του χρέους και είναι αµέσως εκτελεστή. Γ) Η επιστροφή του ποσού πρέπει να γίνει εντός δέκα πέντε (15) ηµερολογιακών ηµερών από την έγγραφη κοινοποίηση της Απόφασης Ανάκτησης στη δικαιούχο εταιρεία σας, σε οποιαδήποτε ∆.Ο.Υ. στα έσοδα του Κρατικού Προϋπολογισµού και συγκεκριµένα στον ΚΑΕ 3941 «Έσοδα από καταλογισµούς σε φορείς που υλοποιούν προγράµµατα του Ευρωπαϊκού Κοινωνικού Ταµείου». Σε περίπτωση µη εµπρόθεσµης καταβολής, το χρέος θα αναζητηθεί µε βάση τις διατάξεις του Κώδικα Εισπράξεως ∆ηµοσίων Εσόδων (ΚΕ∆Ε) και τα οριζόµενα στο άρθ. 15 της Υ.Α. Συστήµατος ∆ιαχείρισης. Αντίγραφο της κατάθεσης του ποσού αποστέλλεται στον ΟΑΕ∆ / Υπηρεσία Οικονοµικών Υπηρεσιών (Β3). ∆) Η Απόφαση ανάκτησης αχρεωστήτως ή παρανόµως καταβληθέντος ποσού υπόκειται στα ένδικα µέσα που προβλέπονται από τις εκάστοτε ισχύουσες διατάξεις."@el.
+
+dec:Signer\/1 a ont:Signer;
+	ont:signer_job "Η Προϊσταµένη της ∆ιεύθυνσης Οικονοµικών Υπηρεσιών (Β3)"@el;
+	ont:signer_name "Ε. ΑΓΓΕΛΟΠΟΥΛΟΥ"@el;
+	ont:signer_id "121880".
