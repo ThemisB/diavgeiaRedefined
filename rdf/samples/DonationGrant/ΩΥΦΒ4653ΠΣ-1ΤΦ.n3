@@ -1,128 +1,132 @@
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1> a <http://diavgeia.gov.gr/ontology/DonationGrant>;
-	<http://diavgeia.gov.gr/ontology/version> "d217641b-5109-43a2-aa00-03801c8361f1";
-	<http://diavgeia.gov.gr/ontology/iun> "ΩΥΦΒ4653ΠΣ-1ΤΦ"@el;
-    <http://data.europa.eu/eli/ontology#repeals> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/2e006bdd-4021-4b06-8aa8-50b7a82f5af2>;
-	<http://data.europa.eu/eli/ontology#title> "ΑΠΟΦΑΣΗ - ΕΝΤΟΛΗ ΠΛΗΡΩΜΗΣ - ΕΘΝΙΚΟ ΣΚΕΛΟΣ ΠΔΕ"@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ, ΕΡΕΥΝΑΣ & ΘΡΗΣΚΕΥΜΑΤΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΟΙΚΟΝΟΜΙΚΩΝ ΥΠΗΡΕΣΙΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΔΙΕΥΘΥΝΣΗ ΟΙΚΟΝΟΜΙΚΗΣ ΔΙΑΧΕΙΡΙΣΗΣ, ΤΜΗΜΑ Γ' - ΕΚΤΕΛΕΣΗΣ Π.Δ.Ε.'"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Ανδρέα Παπανδρέου 37"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "15180";
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2103442111";
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2103443076";
-	<http://diavgeia.gov.gr/ontology/recipients> "Αποδέκτες Πίνακα Διανομής"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_email> "eiliopoulou@minedu.gov.gr";
-    <http://diavgeia.gov.gr/ontology/government_institution_information> "Ειρήνη Ηλιοπούλου"@el;
-    <http://diavgeia.gov.gr/ontology/government_institution_website> "http://www.minedu.gov.gr";
-	<http://diavgeia.gov.gr/ontology/protocol_number> "60516/Β3";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/1>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/2>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/3>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/4>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/5>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/6>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/7>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/8>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/9>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/10>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/11>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/12>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζουμε"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΑΣ, ΥΠΟΔΟΜΩΝ, ΑΝΑΠΤΥΞΗΣ ΚΑΙ ΤΟΥΡΙΣΜΟΥ Δ/ΝΣΗ Δ'- ΤΜΗΜΑ Ε-101 8- ΑΘΗΝΑ'"@el;
-    <http://diavgeia.gov.gr/ontology/internal_distribution> "Δ/ΝΣΗ ΟΙΚΟΝΟΜΙΚΗΣ ΔΙΑΧΕΙΡΙΣΗ - ΤΜΗΜΑ Γ'"@el;
-    <http://diavgeia.gov.gr/ontology/internal_distribution> "ΥΔΕ"@el;
-    <http://diavgeia.gov.gr/ontology/internal_distribution> "ΑΥΤΟΤΕΛΗΣ ΔΙΕΥΘΥΝΣΗ ΚΤΗΡΙΑΚΗΣ ΚΑΙ ΥΛΙΚΟΤΕΧΝΙΚΗΣ ΥΠΟΔΟΜΗΣ"@el;
-    <http://diavgeia.gov.gr/ontology/internal_distribution> "ΑΝΕΣΤΗΣ ΔΗΜΗΤΡΙΟΣ - Υπεύθυνος Λογιαριασμού Έργου (ΑΦΜ 053510357) (Υ.ΠΟ.ΠΑΙ.Θ- γραφείο 2124)'"@el;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "Fiscals";
-    <http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Expense/1>;
-    <http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Expense/2>;
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-    <http://diavgeia.gov.gr/ontology/donation_type> "Επιχορήγηση"@el;
-    <http://diavgeia.gov.gr/ontology/kae> "8299";
-	<http://diavgeia.gov.gr/ontology/organization_id> "100015990";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473244239140";
-	<http://diavgeia.gov.gr/ontology/unit_id> "100008312".
+@prefix dec: <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του N. 2362/1995 (ΦΕΚ 143/τ. Α΄), «περί Δημόσιου Λογιστικού , Ελέγχου των δαπανών του Κράτους και άλλες διατάξεις», όπως τροποποιήθηκε με τις διατάξεις του Ν. 4270/2014 (ΦΕΚ 143/τ. Α΄), «Αρχές Δημοσιονομικής Διαχείρισης Αρχές δημοσιονομικής διαχείρισης και εποπτείας (ενσωμάτωση της Οδηγίας 2011/85/ΕΕ) − δημόσιο λογιστικό και άλλες διατάξεις."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2014/4270>.
+dec: a ont:DonationGrant;
+	ont:version "d217641b-5109-43a2-aa00-03801c8361f1";
+	ont:iun "ΩΥΦΒ4653ΠΣ-1ΤΦ"@el;
+  eli:repeals <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/2e006bdd-4021-4b06-8aa8-50b7a82f5af2>;
+	eli:title "ΑΠΟΦΑΣΗ - ΕΝΤΟΛΗ ΠΛΗΡΩΜΗΣ - ΕΘΝΙΚΟ ΣΚΕΛΟΣ ΠΔΕ"@el;
+	eli:date_publication "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ, ΕΡΕΥΝΑΣ & ΘΡΗΣΚΕΥΜΑΤΩΝ"@el;
+	ont:government_institution_general_administration "ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΟΙΚΟΝΟΜΙΚΩΝ ΥΠΗΡΕΣΙΩΝ"@el;
+	ont:government_institution_department "ΔΙΕΥΘΥΝΣΗ ΟΙΚΟΝΟΜΙΚΗΣ ΔΙΑΧΕΙΡΙΣΗΣ, ΤΜΗΜΑ Γ' - ΕΚΤΕΛΕΣΗΣ Π.Δ.Ε.'"@el;
+	ont:government_institution_address "Ανδρέα Παπανδρέου 37"@el;
+	ont:government_institution_postalcode "15180";
+	ont:government_institution_phone "2103442111";
+	ont:government_institution_fax "2103443076";
+	ont:recipients "Αποδέκτες Πίνακα Διανομής"@el;
+	ont:government_institution_email "eiliopoulou@minedu.gov.gr";
+  ont:government_institution_information "Ειρήνη Ηλιοπούλου"@el;
+  ont:government_institution_website "http://www.minedu.gov.gr";
+	ont:protocol_number "60516/Β3";
+	ont:has_considered dec:Consideration\/1;
+  ont:has_considered dec:Consideration\/2;
+  ont:has_considered dec:Consideration\/3;
+  ont:has_considered dec:Consideration\/4;
+  ont:has_considered dec:Consideration\/5;
+  ont:has_considered dec:Consideration\/6;
+  ont:has_considered dec:Consideration\/7;
+  ont:has_considered dec:Consideration\/8;
+  ont:has_considered dec:Consideration\/9;
+  ont:has_considered dec:Consideration\/10;
+  ont:has_considered dec:Consideration\/11;
+  ont:has_considered dec:Consideration\/12;
+	ont:decision_call "Αποφασίζουμε"@el;
+	ont:has_decided dec:Decision\/1;
+	ont:signed_by dec:Signer\/1;
+	ont:recipient_for_share "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΑΣ, ΥΠΟΔΟΜΩΝ, ΑΝΑΠΤΥΞΗΣ ΚΑΙ ΤΟΥΡΙΣΜΟΥ Δ/ΝΣΗ Δ'- ΤΜΗΜΑ Ε-101 8- ΑΘΗΝΑ'"@el;
+  ont:internal_distribution "Δ/ΝΣΗ ΟΙΚΟΝΟΜΙΚΗΣ ΔΙΑΧΕΙΡΙΣΗ - ΤΜΗΜΑ Γ'"@el;
+  ont:internal_distribution "ΥΔΕ"@el;
+  ont:internal_distribution "ΑΥΤΟΤΕΛΗΣ ΔΙΕΥΘΥΝΣΗ ΚΤΗΡΙΑΚΗΣ ΚΑΙ ΥΛΙΚΟΤΕΧΝΙΚΗΣ ΥΠΟΔΟΜΗΣ"@el;
+  ont:internal_distribution "ΑΝΕΣΤΗΣ ΔΗΜΗΤΡΙΟΣ - Υπεύθυνος Λογιαριασμού Έργου (ΑΦΜ 053510357) (Υ.ΠΟ.ΠΑΙ.Θ- γραφείο 2124)'"@el;
+	ont:thematic_category "Fiscals";
+  ont:has_expense dec:Expense\/1;
+  ont:has_expense dec:Expense\/2;
+	ont:has_private_data false;
+  ont:donation_type "Επιχορήγηση"@el;
+  ont:kae "8299";
+	ont:organization_id "100015990";
+	ont:submission_timestamp "1473244239140";
+	ont:unit_id "100008312".
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 3861/2010 (ΦΕΚ 112/Α΄) «Ενίσχυση της διαφάνειας με την υποχρεωτική ανάρτηση νόμων και πράξεων των κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο διαδίκτυο «Πρόγραμμα Διαύγεια» και άλλες διατάξεις, όπως τροποποιήθηκε και ισχύει."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3861>.
+dec:Consideration\/1 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του N. 2362/1995 (ΦΕΚ 143/τ. Α΄), «περί Δημόσιου Λογιστικού , Ελέγχου των δαπανών του Κράτους και άλλες διατάξεις», όπως τροποποιήθηκε με τις διατάξεις του Ν. 4270/2014 (ΦΕΚ 143/τ. Α΄), «Αρχές Δημοσιονομικής Διαχείρισης Αρχές δημοσιονομικής διαχείρισης και εποπτείας (ενσωμάτωση της Οδηγίας 2011/85/ΕΕ) − δημόσιο λογιστικό και άλλες διατάξεις."@el;
+	ont:considers eli:law\/2014\/4270.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Π.Δ. 114/2014 (ΦΕΚ 181/τ.Α΄/) «Οργανισμός Υπουργείου Παιδείας και Θρησκευμάτων»."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2014/114>.
+dec:Consideration\/2 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Ν. 3861/2010 (ΦΕΚ 112/Α΄) «Ενίσχυση της διαφάνειας με την υποχρεωτική ανάρτηση νόμων και πράξεων των κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο διαδίκτυο «Πρόγραμμα Διαύγεια» και άλλες διατάξεις, όπως τροποποιήθηκε και ισχύει."@el;
+	ont:considers eli:law\/2010\/3861.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το Π.Δ. 70/2015 (ΦΕΚ 114/Α’/22-9-2015) με θέμα «Ανασύσταση των Υπουργείων Ανάπτυξης και Τουρισμού»."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2015/70>.
+dec:Consideration\/3 a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Π.Δ. 114/2014 (ΦΕΚ 181/τ.Α΄/) «Οργανισμός Υπουργείου Παιδείας και Θρησκευμάτων»."@el;
+	ont:considers eli:pd\/2014\/114.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το Π.Δ. 73/2015 (ΦΕΚ 116/Α’/23-9-2015) με θέμα «Διορισμός Αντιπροέδρου της Κυβέρνησης, Υπουργών, Αναπληρωτών Υπουργών και Υφυπουργών»."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2015/73>.
+dec:Consideration\/4 a ont:Consideration;
+	ont:has_text "Το Π.Δ. 70/2015 (ΦΕΚ 114/Α’/22-9-2015) με θέμα «Ανασύσταση των Υπουργείων Ανάπτυξης και Τουρισμού»."@el;
+	ont:considers eli:pd\/2015\/70.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ΄ αριθμ. 134453/2015 (ΦΕΚ 2857/τ. Β΄/ 28-12-2015 ΚΥΑ των Υπουργών Οικονομικών και Ανάπτυξης και Ανταγωνιστικότητας «Ρυθμίσεις για τις πληρωμές των δαπανών του ΠΔΕ – (Τροποποίηση και αντικατάσταση της ΚΥΑ 46274/26-9-2014 (ΦΕΚ 2573 Β΄)»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/md/2015/Φ2857_ΑΣ133785>.
+dec:Consideration\/5 a ont:Consideration;
+	ont:has_text "Το Π.Δ. 73/2015 (ΦΕΚ 116/Α’/23-9-2015) με θέμα «Διορισμός Αντιπροέδρου της Κυβέρνησης, Υπουργών, Αναπληρωτών Υπουργών και Υφυπουργών»."@el;
+	ont:considers eli:pd\/2015\/73.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/7> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την με αριθμ. πρωτ. 2370/Β3/10-2-2016 (ΑΔΑ: ΨΤ3Β4653ΠΣ-ΞΛΘ) Απόφαση «Ορισμός Υπευθύνου Λογαριασμών έργων Εθνικού Σκέλους του Προγράμματος Δημοσίων Επενδύσεων»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/ΨΤ3Β4653ΠΣ-ΞΛΘ>.
+dec:Consideration\/6 a ont:Consideration;
+	ont:has_text "Την υπ΄ αριθμ. 134453/2015 (ΦΕΚ 2857/τ. Β΄/ 28-12-2015 ΚΥΑ των Υπουργών Οικονομικών και Ανάπτυξης και Ανταγωνιστικότητας «Ρυθμίσεις για τις πληρωμές των δαπανών του ΠΔΕ – (Τροποποίηση και αντικατάσταση της ΚΥΑ 46274/26-9-2014 (ΦΕΚ 2573 Β΄)»"@el;
+	ont:considers eli:md\/2015\/Φ2857_ΑΣ133785.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/8> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Tην υπ΄ αριθμ. 134444-2015 (ΦΕΚ 2877/τ..Β/29-12-2015) ΚΥΑ των Υπουργών Οικονομικών, Ανάπτυξης και Τουρισμού «Τακτοποίηση πληρωμών Δημοσίων Επενδύσεων με τη λήξη του οικονομικού έτους, χρηματοδότηση του επομένου ΠΔΕ και ρύθμιση σχετικών θεμάτων.»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/md/2015/Φ4319_ΑΣ8001>.
+dec:Consideration\/7 a ont:Consideration;
+	ont:has_text "Την με αριθμ. πρωτ. 2370/Β3/10-2-2016 (ΑΔΑ: ΨΤ3Β4653ΠΣ-ΞΛΘ) Απόφαση «Ορισμός Υπευθύνου Λογαριασμών έργων Εθνικού Σκέλους του Προγράμματος Δημοσίων Επενδύσεων»"@el;
+	ont:considers <http://diavgeia.gov.gr/eli/decision/ΨΤ3Β4653ΠΣ-ΞΛΘ>.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/9> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την Συλλογική Απόφαση Έργου (Σ.Α.Ε.) 544 – έργο 2014ΣΕ54400016"@el.
+dec:Consideration\/8 a ont:Consideration;
+	ont:has_text "Tην υπ΄ αριθμ. 134444-2015 (ΦΕΚ 2877/τ..Β/29-12-2015) ΚΥΑ των Υπουργών Οικονομικών, Ανάπτυξης και Τουρισμού «Τακτοποίηση πληρωμών Δημοσίων Επενδύσεων με τη λήξη του οικονομικού έτους, χρηματοδότηση του επομένου ΠΔΕ και ρύθμιση σχετικών θεμάτων.»"@el;
+	ont:considers <http://legislation.di.uoa.gr/eli/md/2015/Φ4319_ΑΣ8001>.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/10> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το από 23-7-2012 Εργολαβικό Συμφωνητικό"@el.
+dec:Consideration\/9 a ont:Consideration;
+	ont:has_text "Την Συλλογική Απόφαση Έργου (Σ.Α.Ε.) 544 – έργο 2014ΣΕ54400016"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/11> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Tην υπ΄ αριθμ. 22814/B3/10-2-2016 (ΑΔΑ: 7Ψ0Β4653ΠΣ-ΤΗΝ) Απόφαση Χρηματοδότησης / Κατανομής "@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/7Ψ0Β4653ΠΣ-ΤΗΝ>.
+dec:Consideration\/10 a ont:Consideration;
+	ont:has_text "Το από 23-7-2012 Εργολαβικό Συμφωνητικό"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Consideration/12> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το αριθμ. πρωτ. 654/4-4-2016 έγγραφο της Αυτοτελής Διεύθυνσης Κτηριακής και Υλικοτεχνικής Υποδομής,"@el.
+dec:Consideration\/11 a ont:Consideration;
+	ont:has_text "Tην υπ΄ αριθμ. 22814/B3/10-2-2016 (ΑΔΑ: 7Ψ0Β4653ΠΣ-ΤΗΝ) Απόφαση Χρηματοδότησης / Κατανομής "@el;
+	ont:considers <http://diavgeia.gov.gr/eli/decision/7Ψ0Β4653ΠΣ-ΤΗΝ>.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-    <http://diavgeia.gov.gr/ontology/has_text> "Την καταβολή του ποσού των 1,043,70 € (χιλίων σαράντα τριών ευρώ και εβδομήντα λεπτών), ως πληρωμή βάσει Σύμβασης (σχετικό ν. 10) , από τον λογαριασμό του έργου στην Τράπεζα της Ελλάδος με ενάριθμο 2014ΣΕ54400016 GR5101000231314154400016015,Στον ανάδοχο «ΣΤΑΥΡΟ ΕΜΜ. ΚΑΖΑΣΙΔΗ (ΑΦΜ 023539721 Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ)» ποσό 1.017,68 € (χίλια δέκα επτά ευρώ και εξήντα οκτώ λεπτών ), - ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ - αριθμ. λογαριασμού ΙΒΑΝ GR15 0110 6630 0000 6342 2501 419 με δικαιούχο «ΣΤΑΥΡΟΣ ΕΜΜ. ΚΑΖΑΣΙΔΗ» και στην Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ - παρακράτηση Φόρου Εισοδήματος 3% : 26,02€ ( είκοσι έξι ευρώ και δύο λεπτών). Ο Υπεύθυνος Λογαριασμού του έργου παρακαλείται για την εκτέλεση της παρούσης εντός της προβλεπόμενης προθεσμίας από την ΚΥΑ 134444-2015 (ΦΕΚ 2877/τ..Β/29-12-2015) και την διαβίβαση του παραστατικού πληρωμής στο Τμήμα Γ΄ Εκτέλεσης ΠΔΕ της Διεύθυνσης Οικονομικής Διαχείρισης "@el.
+dec:Consideration\/12 a ont:Consideration;
+	ont:has_text "Το αριθμ. πρωτ. 654/4-4-2016 έγγραφο της Αυτοτελής Διεύθυνσης Κτηριακής και Υλικοτεχνικής Υποδομής,"@el.
 
+dec:Decision\/1 a ont:Decision;
+    ont:has_text "Την καταβολή του ποσού των 1,043,70 € (χιλίων σαράντα τριών ευρώ και εβδομήντα λεπτών), ως πληρωμή βάσει Σύμβασης (σχετικό ν. 10) , από τον λογαριασμό του έργου στην Τράπεζα της Ελλάδος με ενάριθμο 2014ΣΕ54400016 GR5101000231314154400016015,Στον ανάδοχο «ΣΤΑΥΡΟ ΕΜΜ. ΚΑΖΑΣΙΔΗ (ΑΦΜ 023539721 Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ)» ποσό 1.017,68 € (χίλια δέκα επτά ευρώ και εξήντα οκτώ λεπτών ), - ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ - αριθμ. λογαριασμού ΙΒΑΝ GR15 0110 6630 0000 6342 2501 419 με δικαιούχο «ΣΤΑΥΡΟΣ ΕΜΜ. ΚΑΖΑΣΙΔΗ» και στην Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ - παρακράτηση Φόρου Εισοδήματος 3% : 26,02€ ( είκοσι έξι ευρώ και δύο λεπτών). Ο Υπεύθυνος Λογαριασμού του έργου παρακαλείται για την εκτέλεση της παρούσης εντός της προβλεπόμενης προθεσμίας από την ΚΥΑ 134444-2015 (ΦΕΚ 2877/τ..Β/29-12-2015) και την διαβίβαση του παραστατικού πληρωμής στο Τμήμα Γ΄ Εκτέλεσης ΠΔΕ της Διεύθυνσης Οικονομικής Διαχείρισης "@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "Η ΠΡΟΪΣΤΑΜΕΝΗ ΤΟΥ ΤΜΗΜΑΤΟΣ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "ΕΙΡΗΝΗ ΗΛΙΟΠΟΥΛΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "100008317".
+dec:Signer\/1 a ont:Signer;
+	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΤΟΥ ΤΜΗΜΑΤΟΣ"@el;
+	ont:signer_name "ΕΙΡΗΝΗ ΗΛΙΟΠΟΥΛΟΥ"@el;
+	ont:signer_id "100008317".
 
-<http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/OrganizationSponsor/1> a <http://diavgeia.gov.gr/ontology/OrganizationSponsor>;
-	<http://diavgeia.gov.gr/ontology/afm> "090055799";
-	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
-	<http://diavgeia.gov.gr/ontology/name> "ΥΠΟΥΡΓΕΙΟ ΕΘΝΙΚΗΣ ΠΑΙΔΕΙΑΣ ΚΑΙ ΘΡΗΣΚΕΥΜΑΤΩΝ"@el.
+dec:OrganizationSponsor\/1 a ont:OrganizationSponsor;
+	ont:afm "090055799";
+	ont:afm_type "Εθνικό"@el;
+	ont:name "ΥΠΟΥΡΓΕΙΟ ΕΘΝΙΚΗΣ ΠΑΙΔΕΙΑΣ ΚΑΙ ΘΡΗΣΚΕΥΜΑΤΩΝ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d217641b-5109-43a2-aa00-03801c8361f1/Sponsored/1> a <http://diavgeia.gov.gr/ontology/Sponsored>;
-	<http://diavgeia.gov.gr/ontology/afm> "023539721";
-	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
-	<http://diavgeia.gov.gr/ontology/name> "ΣΤΑΥΡΟΣ ΕΜΜ. ΚΑΖΑΣΙΔΗΣ"@el.
+dec:Sponsored\/1 a ont:Sponsored;
+	ont:afm "023539721";
+	ont:afm_type "Εθνικό"@el;
+	ont:name "ΣΤΑΥΡΟΣ ΕΜΜ. ΚΑΖΑΣΙΔΗΣ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d217641b-5109-43a2-aa00-03801c8361f1/Sponsored/2> a <http://diavgeia.gov.gr/ontology/Sponsored>;
-	<http://diavgeia.gov.gr/ontology/afm> "090165560";
-	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
-	<http://diavgeia.gov.gr/ontology/name> "Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ"@el.
+dec:Sponsored\/2 a ont:Sponsored;
+	ont:afm "090165560";
+	ont:afm_type "Εθνικό"@el;
+	ont:name "Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d217641b-5109-43a2-aa00-03801c8361f1/Expense/1> a <http://diavgeia.gov.gr/ontology/Expense>;
-	<http://diavgeia.gov.gr/ontology/expense_amount> "1017.68";
-	<http://diavgeia.gov.gr/ontology/expense_currency> "EUR";
-	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d217641b-5109-43a2-aa00-03801c8361f1/Sponsored/1>;
-	<http://diavgeia.gov.gr/ontology/has_organization_sponsor> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d217641b-5109-43a2-aa00-03801c8361f1/OrganizationSponsor/1>.
+dec:Expense\/1 a ont:Expense;
+	ont:expense_amount "1017.68";
+	ont:expense_currency "EUR";
+	ont:has_sponsored dec:Sponsored\/1;
+	ont:has_organization_sponsor dec:OrganizationSponsor\/1.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d217641b-5109-43a2-aa00-03801c8361f1/Expense/2> a <http://diavgeia.gov.gr/ontology/Expense>;
-	<http://diavgeia.gov.gr/ontology/expense_amount> "26.02";
-	<http://diavgeia.gov.gr/ontology/expense_currency> "EUR";
-	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d217641b-5109-43a2-aa00-03801c8361f1/Sponsored/1>;
-	<http://diavgeia.gov.gr/ontology/has_organization_sponsor> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d217641b-5109-43a2-aa00-03801c8361f1/OrganizationSponsor/1>.
+dec:Expense\/2 a ont:Expense;
+	ont:expense_amount "26.02";
+	ont:expense_currency "EUR";
+	ont:has_sponsored dec:Sponsored\/1;
+	ont:has_organization_sponsor dec:OrganizationSponsor\/1.
