@@ -10,33 +10,33 @@ dec: a ont:BudgetApproval;
 	eli:date_publication "2016-12-01"^^<http://www.w3.org/2001/XMLSchema#date>;
 	ont:government_institution_name "ΓΕΝΙΚΟ ΝΟΣΟΚΟΜΕΙΟ ΑΘΗΝΩΝ «Η ΕΛΠΙΣ»"@el;
 	ont:has_considered dec:Consideration\/1;
-  ont:has_considered dec:Consideration\/2;
-  ont:has_considered dec:Consideration\/3;
-  ont:has_considered dec:Consideration\/4;
-  ont:has_considered dec:Consideration\/5;
-  ont:has_verified dec:Verification\/1;
+	ont:has_considered dec:Consideration\/2;
+	ont:has_considered dec:Consideration\/3;
+	ont:has_considered dec:Consideration\/4;
+	ont:has_considered dec:Consideration\/5;
+	ont:has_verified dec:Verification\/1;
 	ont:decision_call "Αποφασίζουμε"@el;
 	ont:has_decided dec:Decision\/1;
 	ont:signed_by dec:Signer\/1;
-  ont:signed_by dec:Signer\/2;
+	ont:signed_by dec:Signer\/2;
 	ont:protocol_number "97";
 	ont:commitment_number "70";
 	ont:recipient_for_share "Γρ. Διατροφής"@el;
 	ont:thematic_category "NutritionAgriculturalProducts";
-  ont:has_expense_with_kae dec:ExpenseWithKae\/1;
+	ont:has_expense_with_kae dec:ExpenseWithKae\/1;
 	ont:has_private_data false;
 	ont:organization_id "99221890";
   ont:unit_id "77026";
 	ont:submission_timestamp "1452674356709";
-  ont:financial_year "2016";
-  ont:budget_category "Τακτικός Προϋπολογισμός"@el;
+	ont:financial_year "2016";
+	ont:budget_category "Τακτικός Προϋπολογισμός"@el;
 	ont:budget_type "Φορέα"@el;
 	ont:is_budget_approval_for_org false.
 
 dec:Consideration\/1 a ont:Consideration;
 	ont:has_text "Τις διατάξεις των άρθρ. 21 και 22Α του Ν. 2362/95 «Περί Δημοσίου Λογιστικού κ.λπ.» (Α.247), όπως τροποποιήθηκε και συμπληρώθηκε με τα υπ΄ αρ. 21 και 23 άρθ. Του Ν. 3871/2010 (Α.141)."@el;
 	ont:considers eli:law\/2010\/3871\/article\/21;
-  ont:considers eli:law\/2010\/3871\/article\/23.
+	ont:considers eli:law\/2010\/3871\/article\/23.
 
 dec:Consideration\/2 a ont:Consideration;
 	ont:has_text "Το π.δ 113/2010 περί αναλήψεως υποχρεώσεων από τους Διατάκτες (Α.194)."@el;
@@ -52,11 +52,11 @@ dec:Consideration\/5 a ont:Consideration;
 	ont:has_text "Την ανάγκη δέσμευσης πίστωσης 2.500,00 € για την προμήθεια « φρούτων, λαχανικών και συναφών προϊόντων » για την κάλυψη αναγκών τριμήνου."@el.
 
 dec:Decision\/1 a ont:Decision;
-  ont:has_text "Εγκρίνουμε τη δέσμευση πίστωσης ύψους € 2.500,00 για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογισμού εξόδων οικονομικού έτους 2016, στον ΚΑΕ 1511 για την προμήθεια φρούτων, λαχανικών και συναφών προϊόντων"@el.
+	ont:has_text "Εγκρίνουμε τη δέσμευση πίστωσης ύψους € 2.500,00 για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογισμού εξόδων οικονομικού έτους 2016, στον ΚΑΕ 1511 για την προμήθεια φρούτων, λαχανικών και συναφών προϊόντων"@el.
 
 dec:Verification\/1 a ont:Verification;
-  ont:verified_by dec:Signer\/2;
-  ont:has_text "ΕΛΕΓΧΘΗΚΕ Και βεβαιώνεται ότι η ανωτέρω δαπάνη 2.500,00 είναι εντός του διαθέσιμου ποσοστού του ΦΟΡΕΑ 210 ΕΙΔ. ΦΟΡΕΑ 815 στον ΚΑΕ 1511 ΟΙΚ. ΕΤΟΣ 2016. ΚΑΤΑΧΩΡΗΘΗΚΕ με α/α 70 στο Βιβλίο Εγκρίσεων & Εντολών Πληρωμής της Υπηρεσίας μας. ΥΠΟΛΟΙΠΟ προς ανάληψη: € 86.600,00"@el.
+	ont:verified_by dec:Signer\/2;
+	ont:has_text "ΕΛΕΓΧΘΗΚΕ Και βεβαιώνεται ότι η ανωτέρω δαπάνη 2.500,00 είναι εντός του διαθέσιμου ποσοστού του ΦΟΡΕΑ 210 ΕΙΔ. ΦΟΡΕΑ 815 στον ΚΑΕ 1511 ΟΙΚ. ΕΤΟΣ 2016. ΚΑΤΑΧΩΡΗΘΗΚΕ με α/α 70 στο Βιβλίο Εγκρίσεων & Εντολών Πληρωμής της Υπηρεσίας μας. ΥΠΟΛΟΙΠΟ προς ανάληψη: € 86.600,00"@el.
 
 dec:Signer\/1 a ont:Signer;
 	ont:signer_job "Δ/ΝΤΗΣ ΙΑΤΡ. ΥΠΗΡΕΣΙΑΣ"@el;
@@ -64,12 +64,12 @@ dec:Signer\/1 a ont:Signer;
 	ont:signer_id "135487".
 
 dec:Signer\/2 a ont:Signer;
-  ont:signer_job "ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
-  ont:signer_name "Ηλ. Κοκκίνης"@el.
+	ont:signer_job "ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
+	ont:signer_name "Ηλ. Κοκκίνης"@el.
 
 dec:ExpenseWithKae\/1 a ont:ExpenseWithKae;
-  ont:expense_amount "1387.3";
-  ont:expense_amount_currency "EUR";
-  ont:kae "25-6263.013";
-  ont:kae_budget_remainder "7000";
-  ont:kae_credit_remainder "5337.59".
+	ont:expense_amount "1387.3";
+	ont:expense_amount_currency "EUR";
+	ont:kae "25-6263.013";
+	ont:kae_budget_remainder "7000";
+	ont:kae_credit_remainder "5337.59".

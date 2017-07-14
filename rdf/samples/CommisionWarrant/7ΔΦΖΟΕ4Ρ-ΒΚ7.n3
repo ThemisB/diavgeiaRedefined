@@ -10,17 +10,17 @@ dec: a ont:CommisionWarrant;
 	eli:date_publication "2016-03-03"^^<http://www.w3.org/2001/XMLSchema#date>;
 	ont:government_institution_name "ΚΟΙΝΩΦΕΛΗΣ ΔΗΜΟΤΙΚΗ ΕΠΙΧΕΙΡΗΣΗ ΠΟΛΙΤΙΣΤΙΚΗΣ ΟΙΚΟΝΟΜΙΚΗΣ ΤΟΥΡΙΣΤΙΚΗΣ & ΚΟΙΝΩΝΙΚΗΣ ΑΝΑΠΤΥΞΗΣ ΔΗΜΟΥ ΛΕΥΚΑΔΑΣ (Δ.Ε.Π.Ο.Κ.Α.Λ.)"@el;
 	ont:has_decided dec:Decision\/1;
-  ont:has_expense_with_kae dec:ExpenseWithKae\/1;
+	ont:has_expense_with_kae dec:ExpenseWithKae\/1;
 	ont:signed_by dec:Signer\/1;
-  ont:signed_by dec:Signer\/2;
+	ont:signed_by dec:Signer\/2;
 	ont:protocol_number "ΧΕΠ 198/2016";
 	ont:thematic_category "EconomicTradeExchanges";
 	ont:has_private_data false;
 	ont:organization_id "50941";
-  ont:unit_id "77026";
+	ont:unit_id "77026";
 	ont:submission_timestamp "1452674356709";
-  ont:financial_year "2016";
-  ont:budget_category "Τακτικός Προϋπολογισμός"@el;
+	ont:financial_year "2016";
+	ont:budget_category "Τακτικός Προϋπολογισμός"@el;
 	ont:budget_type "Φορέα"@el;
 	ont:is_budget_approval_for_org false.
 
