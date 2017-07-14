@@ -1,49 +1,54 @@
-<http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23> a <http://diavgeia.gov.gr/ontology/Appointment>;
-	<http://diavgeia.gov.gr/ontology/version> "a2481493-7f59-4f43-8799-3eb554c36d23";
-	<http://diavgeia.gov.gr/ontology/iun> "ΨΟΗΩ46ΨΖΣ4-Ι56"@el;
-	<http://data.europa.eu/eli/ontology#title> "Διορισμός του μόνιμου Αναπληρωτή Καθηγητή κ. Γεωργίου Κουτσούμπα  σε μόνιμη θέση Καθηγητή της βαθμίδας του Καθηγητή πρώτης βαθμίδας (εξέλιξη)."@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2016-09-08"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΕΘΝΙΚΟ ΜΕΤΣΟΒΙΟ ΠΟΛΥΤΕΧΝΕΙΟ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΔΙΟΙΚΗΤΙΚΗΣ ΣΤΗΡΙΞΗΣ ΚΑΙ ΣΠΟΥΔΩΝ, ΔΙΕΥΘΥΝΣΗ ΔΙΟΙΚΗΤΙΚΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΔΙΔΑΚΤΙΚΟΥ ΠΡΟΣΩΠΙΚΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Ηρώων Πολυτεχνείου 9, Πολυτεχνειούπολη Ζωγράφου"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "15780";
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2107221088";
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2107721948";
-	<http://diavgeia.gov.gr/ontology/government_institution_email> "apofiti@central.ntua.gr";
-	<http://diavgeia.gov.gr/ontology/government_institution_information> "Κ. Ποδάρα";
-	<http://diavgeia.gov.gr/ontology/protocol_number> "16054";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/has_afterdecision> <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/AfterDecision>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "Διορίζεται"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_action> "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "PublicAdministration";
-	<http://diavgeia.gov.gr/ontology/fek_number> "814"@el;
-	<http://diavgeia.gov.gr/ontology/fek_issue> "Γ"@el;
-	<http://diavgeia.gov.gr/ontology/fek_year> "2016"@el;
-	<http://diavgeia.gov.gr/ontology/number_employees> "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	<http://diavgeia.gov.gr/ontology/appointment_employer_org> "99203026";
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "99203026";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473328177091";
-	<http://diavgeia.gov.gr/ontology/unit_id> "73627".
+@prefix dec: <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Tην αριθµ. 16054/27-07-2016 Πράξη του Πρύτανη του Εθνικού Μετσόβιου Πολυτεχνείου που εκδόθηκε σύµφωνα µε τις διατάξεις του άρθρου 25 (παρ. 1) του N.3549/2007, του άρθρου 77 (παρ. 3) του Ν.4009/11 και του άρθρου 70 (παρ.4) του Ν. 4386/2016 δ"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2007/3549/article/25/paragraph/1>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009/article/77/paragraph/3>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2016/4386/article/70/paragraph/4>.
+dec: a ont:Appointment;
+	ont:version "a2481493-7f59-4f43-8799-3eb554c36d23";
+	ont:iun "ΨΟΗΩ46ΨΖΣ4-Ι56"@el;
+	eli:title "Διορισμός του μόνιμου Αναπληρωτή Καθηγητή κ. Γεωργίου Κουτσούμπα  σε μόνιμη θέση Καθηγητή της βαθμίδας του Καθηγητή πρώτης βαθμίδας (εξέλιξη)."@el;
+	eli:date_publication "2016-09-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "ΕΘΝΙΚΟ ΜΕΤΣΟΒΙΟ ΠΟΛΥΤΕΧΝΕΙΟ"@el;
+	ont:government_institution_general_administration "ΓΕΝΙΚΗ ΔΙΕΥΘΥΝΣΗ ΔΙΟΙΚΗΤΙΚΗΣ ΣΤΗΡΙΞΗΣ ΚΑΙ ΣΠΟΥΔΩΝ, ΔΙΕΥΘΥΝΣΗ ΔΙΟΙΚΗΤΙΚΟΥ"@el;
+	ont:government_institution_department "ΤΜΗΜΑ ΔΙΔΑΚΤΙΚΟΥ ΠΡΟΣΩΠΙΚΟΥ"@el;
+	ont:government_institution_address "Ηρώων Πολυτεχνείου 9, Πολυτεχνειούπολη Ζωγράφου"@el;
+	ont:government_institution_postalcode "15780";
+	ont:government_institution_phone "2107221088";
+	ont:government_institution_fax "2107721948";
+	ont:government_institution_email "apofiti@central.ntua.gr";
+	ont:government_institution_information "Κ. Ποδάρα";
+	ont:protocol_number "16054";
+	ont:has_considered dec:Consideration\/1;
+	ont:has_afterdecision dec:AfterDecision;
+	ont:decision_call "Διορίζεται"@el;
+	ont:has_decided dec:Decision\/1;
+	ont:signed_by dec:Signer\/1;
+	ont:recipient_for_share "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
+	ont:recipient_for_action "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
+	ont:thematic_category "PublicAdministration";
+	ont:fek_number "814"@el;
+	ont:fek_issue "Γ"@el;
+	ont:fek_year "2016"@el;
+	ont:number_employees "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	ont:appointment_employer_org "99203026";
+	ont:has_private_data false;
+	ont:organization_id "99203026";
+	ont:submission_timestamp "1473328177091";
+	ont:unit_id "73627".
 
-<http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Ο µόνιµος Αναπληρωτής Καθηγητής κ. Γεώργιος Κουτσούµπας του Ευθυµίου ύστερα από εξέλιξη σε µόνιµη θέση Καθηγητή της βαθµίδας του Καθηγητή πρώτης βαθµίδας στον Τοµέα Φυσικής της Σχολής Εφαρµοσµένων Μαθηµατικών και Φυσικών Επιστηµών του Ε.Μ.Πολυτεχνείου, µε γνωστικό αντικείµενο: «Θεωρητική Φυσική Στοιχειωδών Σωµατιδίων και Βαρύτητα», επειδή έχει τα νόµιµα προσόντα."@el.
+dec:Consideration\/1 a ont:Consideration;
+	ont:has_text "Tην αριθµ. 16054/27-07-2016 Πράξη του Πρύτανη του Εθνικού Μετσόβιου Πολυτεχνείου που εκδόθηκε σύµφωνα µε τις διατάξεις του άρθρου 25 (παρ. 1) του N.3549/2007, του άρθρου 77 (παρ. 3) του Ν.4009/11 και του άρθρου 70 (παρ.4) του Ν. 4386/2016 δ"@el;
+	ont:considers leg:law\/2007\/3549\/article\/25\/paragraph\/1;
+	ont:considers leg:law\/2011\/4009\/article\/77\/paragraph\/3;
+	ont:considers leg:law\/2016\/4386\/article\/70\/paragraph\/4.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/AfterDecision> a <http://diavgeia.gov.gr/ontology/AfterDecision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Η Προκήρυξη της θέσης στη βαθµίδα του Καθηγητή πρώτης βαθµίδας δηµοσιεύθηκε στο ΦΕΚ αριθµ. 1048/16-10-2015 τ. Γ'. (Αριθµός Βεβαίωσης Υ.∆.Ε. ΥΠΠΕΘ)"@el.
+dec:Decision\/1 a ont:Decision;
+	ont:has_text "Ο µόνιµος Αναπληρωτής Καθηγητής κ. Γεώργιος Κουτσούµπας του Ευθυµίου ύστερα από εξέλιξη σε µόνιµη θέση Καθηγητή της βαθµίδας του Καθηγητή πρώτης βαθµίδας στον Τοµέα Φυσικής της Σχολής Εφαρµοσµένων Μαθηµατικών και Φυσικών Επιστηµών του Ε.Μ.Πολυτεχνείου, µε γνωστικό αντικείµενο: «Θεωρητική Φυσική Στοιχειωδών Σωµατιδίων και Βαρύτητα», επειδή έχει τα νόµιµα προσόντα."@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "Ο ΠΡΥΤΑΝΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "ΙΩΑΝΝΗΣ ΚΩΝΣΤΑΝΤΙΝΟΥ ΓΚΟΛΙΑΣ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "100002980".
+dec:AfterDecision a ont:AfterDecision;
+	ont:has_text "Η Προκήρυξη της θέσης στη βαθµίδα του Καθηγητή πρώτης βαθµίδας δηµοσιεύθηκε στο ΦΕΚ αριθµ. 1048/16-10-2015 τ. Γ'. (Αριθµός Βεβαίωσης Υ.∆.Ε. ΥΠΠΕΘ)"@el.
+
+dec:Signer\/1 a ont:Signer;
+	ont:signer_job "Ο ΠΡΥΤΑΝΗΣ"@el;
+	ont:signer_name "ΙΩΑΝΝΗΣ ΚΩΝΣΤΑΝΤΙΝΟΥ ΓΚΟΛΙΑΣ"@el;
+	ont:signer_id "100002980".
