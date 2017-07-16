@@ -1,9 +1,9 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/>.
+@base <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/d217641b-5109-43a2-aa00-03801c8361f1/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:DonationGrant;
+<> a ont:DonationGrant;
 	ont:version "d217641b-5109-43a2-aa00-03801c8361f1";
 	ont:iun "ΩΥΦΒ4653ΠΣ-1ΤΦ"@el;
 	eli:repeals <http://diavgeia.gov.gr/eli/decision/ΩΥΦΒ4653ΠΣ-1ΤΦ/2e006bdd-4021-4b06-8aa8-50b7a82f5af2>;
@@ -21,29 +21,29 @@ dec: a ont:DonationGrant;
 	ont:government_institution_information "Ειρήνη Ηλιοπούλου"@el;
 	ont:government_institution_website "http://www.minedu.gov.gr";
 	ont:protocol_number "60516/Β3";
-	ont:has_considered dec:Consideration\/1;
-	ont:has_considered dec:Consideration\/2;
-	ont:has_considered dec:Consideration\/3;
-	ont:has_considered dec:Consideration\/4;
-	ont:has_considered dec:Consideration\/5;
-	ont:has_considered dec:Consideration\/6;
-	ont:has_considered dec:Consideration\/7;
-	ont:has_considered dec:Consideration\/8;
-	ont:has_considered dec:Consideration\/9;
-	ont:has_considered dec:Consideration\/10;
-	ont:has_considered dec:Consideration\/11;
-	ont:has_considered dec:Consideration\/12;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
+	ont:has_considered <Consideration/5>;
+	ont:has_considered <Consideration/6>;
+	ont:has_considered <Consideration/7>;
+	ont:has_considered <Consideration/8>;
+	ont:has_considered <Consideration/9>;
+	ont:has_considered <Consideration/10>;
+	ont:has_considered <Consideration/11>;
+	ont:has_considered <Consideration/12>;
 	ont:decision_call "Αποφασίζουμε"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:signed_by dec:Signer\/1;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
 	ont:recipient_for_share "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΑΣ, ΥΠΟΔΟΜΩΝ, ΑΝΑΠΤΥΞΗΣ ΚΑΙ ΤΟΥΡΙΣΜΟΥ Δ/ΝΣΗ Δ'- ΤΜΗΜΑ Ε-101 8- ΑΘΗΝΑ'"@el;
 	ont:internal_distribution "Δ/ΝΣΗ ΟΙΚΟΝΟΜΙΚΗΣ ΔΙΑΧΕΙΡΙΣΗ - ΤΜΗΜΑ Γ'"@el;
 	ont:internal_distribution "ΥΔΕ"@el;
 	ont:internal_distribution "ΑΥΤΟΤΕΛΗΣ ΔΙΕΥΘΥΝΣΗ ΚΤΗΡΙΑΚΗΣ ΚΑΙ ΥΛΙΚΟΤΕΧΝΙΚΗΣ ΥΠΟΔΟΜΗΣ"@el;
 	ont:internal_distribution "ΑΝΕΣΤΗΣ ΔΗΜΗΤΡΙΟΣ - Υπεύθυνος Λογιαριασμού Έργου (ΑΦΜ 053510357) (Υ.ΠΟ.ΠΑΙ.Θ- γραφείο 2124)'"@el;
 	ont:thematic_category "Fiscals";
-	ont:has_expense dec:Expense\/1;
-	ont:has_expense dec:Expense\/2;
+	ont:has_expense <Expense/1>;
+	ont:has_expense <Expense/2>;
 	ont:has_private_data false;
 	ont:donation_type "Επιχορήγηση"@el;
 	ont:kae "8299";
@@ -51,82 +51,82 @@ dec: a ont:DonationGrant;
 	ont:submission_timestamp "1473244239140";
 	ont:unit_id "100008312".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του N. 2362/1995 (ΦΕΚ 143/τ. Α΄), «περί Δημόσιου Λογιστικού , Ελέγχου των δαπανών του Κράτους και άλλες διατάξεις», όπως τροποποιήθηκε με τις διατάξεις του Ν. 4270/2014 (ΦΕΚ 143/τ. Α΄), «Αρχές Δημοσιονομικής Διαχείρισης Αρχές δημοσιονομικής διαχείρισης και εποπτείας (ενσωμάτωση της Οδηγίας 2011/85/ΕΕ) − δημόσιο λογιστικό και άλλες διατάξεις."@el;
 	ont:considers eli:law\/2014\/4270.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Ν. 3861/2010 (ΦΕΚ 112/Α΄) «Ενίσχυση της διαφάνειας με την υποχρεωτική ανάρτηση νόμων και πράξεων των κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο διαδίκτυο «Πρόγραμμα Διαύγεια» και άλλες διατάξεις, όπως τροποποιήθηκε και ισχύει."@el;
 	ont:considers eli:law\/2010\/3861.
 
-dec:Consideration\/3 a ont:Consideration;
+<Consideration/3> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Π.Δ. 114/2014 (ΦΕΚ 181/τ.Α΄/) «Οργανισμός Υπουργείου Παιδείας και Θρησκευμάτων»."@el;
 	ont:considers eli:pd\/2014\/114.
 
-dec:Consideration\/4 a ont:Consideration;
+<Consideration/4> a ont:Consideration;
 	ont:has_text "Το Π.Δ. 70/2015 (ΦΕΚ 114/Α’/22-9-2015) με θέμα «Ανασύσταση των Υπουργείων Ανάπτυξης και Τουρισμού»."@el;
 	ont:considers eli:pd\/2015\/70.
 
-dec:Consideration\/5 a ont:Consideration;
+<Consideration/5> a ont:Consideration;
 	ont:has_text "Το Π.Δ. 73/2015 (ΦΕΚ 116/Α’/23-9-2015) με θέμα «Διορισμός Αντιπροέδρου της Κυβέρνησης, Υπουργών, Αναπληρωτών Υπουργών και Υφυπουργών»."@el;
 	ont:considers eli:pd\/2015\/73.
 
-dec:Consideration\/6 a ont:Consideration;
+<Consideration/6> a ont:Consideration;
 	ont:has_text "Την υπ΄ αριθμ. 134453/2015 (ΦΕΚ 2857/τ. Β΄/ 28-12-2015 ΚΥΑ των Υπουργών Οικονομικών και Ανάπτυξης και Ανταγωνιστικότητας «Ρυθμίσεις για τις πληρωμές των δαπανών του ΠΔΕ – (Τροποποίηση και αντικατάσταση της ΚΥΑ 46274/26-9-2014 (ΦΕΚ 2573 Β΄)»"@el;
 	ont:considers eli:md\/2015\/Φ2857_ΑΣ133785.
 
-dec:Consideration\/7 a ont:Consideration;
+<Consideration/7> a ont:Consideration;
 	ont:has_text "Την με αριθμ. πρωτ. 2370/Β3/10-2-2016 (ΑΔΑ: ΨΤ3Β4653ΠΣ-ΞΛΘ) Απόφαση «Ορισμός Υπευθύνου Λογαριασμών έργων Εθνικού Σκέλους του Προγράμματος Δημοσίων Επενδύσεων»"@el;
 	ont:considers <http://diavgeia.gov.gr/eli/decision/ΨΤ3Β4653ΠΣ-ΞΛΘ>.
 
-dec:Consideration\/8 a ont:Consideration;
+<Consideration/8> a ont:Consideration;
 	ont:has_text "Tην υπ΄ αριθμ. 134444-2015 (ΦΕΚ 2877/τ..Β/29-12-2015) ΚΥΑ των Υπουργών Οικονομικών, Ανάπτυξης και Τουρισμού «Τακτοποίηση πληρωμών Δημοσίων Επενδύσεων με τη λήξη του οικονομικού έτους, χρηματοδότηση του επομένου ΠΔΕ και ρύθμιση σχετικών θεμάτων.»"@el;
 	ont:considers <http://legislation.di.uoa.gr/eli/md/2015/Φ4319_ΑΣ8001>.
 
-dec:Consideration\/9 a ont:Consideration;
+<Consideration/9> a ont:Consideration;
 	ont:has_text "Την Συλλογική Απόφαση Έργου (Σ.Α.Ε.) 544 – έργο 2014ΣΕ54400016"@el.
 
-dec:Consideration\/10 a ont:Consideration;
+<Consideration/10> a ont:Consideration;
 	ont:has_text "Το από 23-7-2012 Εργολαβικό Συμφωνητικό"@el.
 
-dec:Consideration\/11 a ont:Consideration;
+<Consideration/11> a ont:Consideration;
 	ont:has_text "Tην υπ΄ αριθμ. 22814/B3/10-2-2016 (ΑΔΑ: 7Ψ0Β4653ΠΣ-ΤΗΝ) Απόφαση Χρηματοδότησης / Κατανομής "@el;
 	ont:considers <http://diavgeia.gov.gr/eli/decision/7Ψ0Β4653ΠΣ-ΤΗΝ>.
 
-dec:Consideration\/12 a ont:Consideration;
+<Consideration/12> a ont:Consideration;
 	ont:has_text "Το αριθμ. πρωτ. 654/4-4-2016 έγγραφο της Αυτοτελής Διεύθυνσης Κτηριακής και Υλικοτεχνικής Υποδομής,"@el.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
     ont:has_text "Την καταβολή του ποσού των 1,043,70 € (χιλίων σαράντα τριών ευρώ και εβδομήντα λεπτών), ως πληρωμή βάσει Σύμβασης (σχετικό ν. 10) , από τον λογαριασμό του έργου στην Τράπεζα της Ελλάδος με ενάριθμο 2014ΣΕ54400016 GR5101000231314154400016015,Στον ανάδοχο «ΣΤΑΥΡΟ ΕΜΜ. ΚΑΖΑΣΙΔΗ (ΑΦΜ 023539721 Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ)» ποσό 1.017,68 € (χίλια δέκα επτά ευρώ και εξήντα οκτώ λεπτών ), - ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ - αριθμ. λογαριασμού ΙΒΑΝ GR15 0110 6630 0000 6342 2501 419 με δικαιούχο «ΣΤΑΥΡΟΣ ΕΜΜ. ΚΑΖΑΣΙΔΗ» και στην Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ - παρακράτηση Φόρου Εισοδήματος 3% : 26,02€ ( είκοσι έξι ευρώ και δύο λεπτών). Ο Υπεύθυνος Λογαριασμού του έργου παρακαλείται για την εκτέλεση της παρούσης εντός της προβλεπόμενης προθεσμίας από την ΚΥΑ 134444-2015 (ΦΕΚ 2877/τ..Β/29-12-2015) και την διαβίβαση του παραστατικού πληρωμής στο Τμήμα Γ΄ Εκτέλεσης ΠΔΕ της Διεύθυνσης Οικονομικής Διαχείρισης "@el.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΤΟΥ ΤΜΗΜΑΤΟΣ"@el;
 	ont:signer_name "ΕΙΡΗΝΗ ΗΛΙΟΠΟΥΛΟΥ"@el;
 	ont:signer_id "100008317".
 
-dec:OrganizationSponsor\/1 a ont:OrganizationSponsor;
+<OrganizationSponsor/1> a ont:OrganizationSponsor;
 	ont:afm "090055799";
 	ont:afm_type "Εθνικό"@el;
 	ont:name "ΥΠΟΥΡΓΕΙΟ ΕΘΝΙΚΗΣ ΠΑΙΔΕΙΑΣ ΚΑΙ ΘΡΗΣΚΕΥΜΑΤΩΝ"@el.
 
-dec:Sponsored\/1 a ont:Sponsored;
+<Sponsored/1> a ont:Sponsored;
 	ont:afm "023539721";
 	ont:afm_type "Εθνικό"@el;
 	ont:name "ΣΤΑΥΡΟΣ ΕΜΜ. ΚΑΖΑΣΙΔΗΣ"@el.
 
-dec:Sponsored\/2 a ont:Sponsored;
+<Sponsored/2> a ont:Sponsored;
 	ont:afm "090165560";
 	ont:afm_type "Εθνικό"@el;
 	ont:name "Δ.Ο.Υ. Π. ΦΑΛΗΡΟΥ"@el.
 
-dec:Expense\/1 a ont:Expense;
+<Expense/1> a ont:Expense;
 	ont:expense_amount "1017.68";
 	ont:expense_currency "EUR";
-	ont:has_sponsored dec:Sponsored\/1;
-	ont:has_organization_sponsor dec:OrganizationSponsor\/1.
+	ont:has_sponsored <Sponsored/1>;
+	ont:has_organization_sponsor <OrganizationSponsor/1>.
 
-dec:Expense\/2 a ont:Expense;
+<Expense/2> a ont:Expense;
 	ont:expense_amount "26.02";
 	ont:expense_currency "EUR";
-	ont:has_sponsored dec:Sponsored\/1;
-	ont:has_organization_sponsor dec:OrganizationSponsor\/1.
+	ont:has_sponsored <Sponsored/1>;
+	ont:has_organization_sponsor <OrganizationSponsor/1>.

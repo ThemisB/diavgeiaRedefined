@@ -1,37 +1,42 @@
-<http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb> a <http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody>;
-	<http://diavgeia.gov.gr/ontology/version> "837e73a6-a4b6-4912-9fb9-fb27c74fc2bb";
-	<http://diavgeia.gov.gr/ontology/iun> "7ΤΘ846ΨΧΕΔ-4Γ6"@el;
-	<http://data.europa.eu/eli/ontology#title> "ΑΠΟΖΗΜΙΩΣΗ Ν. 993/79 (ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ ΙΩΑΝΝΗΣ)"@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2016-03-08"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΟΡΓΑΝΙΣΜΟΣ ΣΙΔΗΡΟΔΡΟΜΩΝ ΕΛΛΑΔΑΣ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΟΡΓΑΝΩΣΗΣ & ΔΙΑΧΕΙΡΙΣΗΣ ΑΝΘΡΩΠΙΝΟΥ ΔΥΝΑΜΙΚΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΜΙΣΘΟΛΟΓΙΟΥ & ΠΑΡΟΧΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/protocol_number> "207699";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζει"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "PoliticalLife";
-	<http://diavgeia.gov.gr/ontology/position_decision_type> "Καθορισμός Αμοιβής - Αποζημίωσης"@el;
-	<http://diavgeia.gov.gr/ontology/position> "Μονομελές Όργανο"@el;
-	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Expense/1>;
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "99200192";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1457424900872";
-	<http://diavgeia.gov.gr/ontology/unit_id> "73175".
+@base <http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν.993/79"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1979/993>.
+<> a ont:GeneralSpecialSecretaryMonocraticBody;
+	ont:version "837e73a6-a4b6-4912-9fb9-fb27c74fc2bb";
+	ont:iun "7ΤΘ846ΨΧΕΔ-4Γ6"@el;
+	eli:title "ΑΠΟΖΗΜΙΩΣΗ Ν. 993/79 (ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ ΙΩΑΝΝΗΣ)"@el;
+	eli:date_publication "2016-03-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "ΟΡΓΑΝΙΣΜΟΣ ΣΙΔΗΡΟΔΡΟΜΩΝ ΕΛΛΑΔΑΣ"@el;
+	ont:government_institution_general_administration "ΟΡΓΑΝΩΣΗΣ & ΔΙΑΧΕΙΡΙΣΗΣ ΑΝΘΡΩΠΙΝΟΥ ΔΥΝΑΜΙΚΟΥ"@el;
+	ont:government_institution_department "ΤΜΗΜΑ ΜΙΣΘΟΛΟΓΙΟΥ & ΠΑΡΟΧΩΝ"@el;
+	ont:protocol_number "207699";
+	ont:has_considered <Consideration/1>;
+	ont:decision_call "Αποφασίζει"@el;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
+	ont:thematic_category "PoliticalLife";
+	ont:position_decision_type "Καθορισμός Αμοιβής - Αποζημίωσης"@el;
+	ont:position "Μονομελές Όργανο"@el;
+	ont:has_expense <Expense/1>;
+	ont:has_private_data false;
+	ont:organization_id "99200192";
+	ont:submission_timestamp "1457424900872";
+	ont:unit_id "73175".
 
-<http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την δέσμευση ποσού 9.370,08€, για καταβολή αποζημίωσης, σε αποχωρούν προσωπικό του ΟΣΕ."@el.
+<Consideration/1> a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Ν.993/79"@el;
+	ont:considers eli:law\/1979\/993.
 
-<http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΟΪΣΤΑΜΕΝΗ Δ/ΝΣΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "ΣΤΥΛΙΑΝΗ ΚΟΛΙΟΠΟΥΛΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "103167".
+<Decision/1> a ont:Decision;
+	ont:has_text "Την δέσμευση ποσού 9.370,08€, για καταβολή αποζημίωσης, σε αποχωρούν προσωπικό του ΟΣΕ."@el.
 
-<http://diavgeia.gov.gr/eli/decision/7ΤΘ846ΨΧΕΔ-4Γ6/837e73a6-a4b6-4912-9fb9-fb27c74fc2bb/Expense/1> a <http://diavgeia.gov.gr/ontology/Expense>;
-	<http://diavgeia.gov.gr/ontology/expense_amount> "9370.08";
-	<http://diavgeia.gov.gr/ontology/expense_currency> "EUR".
+<Signer/1> a ont:Signer;
+	ont:signer_job "ΠΡΟΪΣΤΑΜΕΝΗ Δ/ΝΣΗΣ"@el;
+	ont:signer_name "ΣΤΥΛΙΑΝΗ ΚΟΛΙΟΠΟΥΛΟΥ"@el;
+	ont:signer_id "103167".
+
+<Expense/1> a ont:Expense;
+	ont:expense_amount "9370.08";
+	ont:expense_currency "EUR".

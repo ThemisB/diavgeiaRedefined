@@ -1,8 +1,8 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/>.
+@base <http://diavgeia.gov.gr/eli/decision/60Β3ΩΡΙ-ΒΝ3/b4ae1411-f81d-437b-9c63-a8b7d4ed866b/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 
-dec: a ont:AffiliatedInvestments;
+<> a ont:AffiliatedInvestments;
 	ont:version "b4ae1411-f81d-437b-9c63-a8b7d4ed866b";
 	ont:iun "60Β3ΩΡΙ-ΒΝ3"@el;
 	eli:title "353/2016 ΑΠΟΦΑΣΗ ΕΠΙΤΡΟΠΗΣ ΣΥΝΤΗΡΗΣΗΣ ΚΑΙ ΕΠΙΣΚΕΥΗΣ ΟΧΗΜΑΤΩΝ ΓΙΑ ΤΟ ΚΗΥ 9946"@el;
@@ -10,45 +10,45 @@ dec: a ont:AffiliatedInvestments;
 	ont:government_institution_name "ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΑΣ"@el;
 	ont:government_institution_general_administration "ΕΠΙΤΡΟΠΗ ΣΥΝΤΗΡΗΣΗΣ ΚΑΙ ΕΠΙΣΚΕΥΗΣ ΟΧΗΜΑΤΩΝ"@el;
 	ont:protocol_number "15331";
-	ont:has_considered dec:Consideration\/1;
-	ont:has_considered dec:Consideration\/2;
-	ont:has_considered dec:Consideration\/3;
-	ont:has_considered dec:Consideration\/4;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
 	ont:decision_call "ΑΠΟΦΑΣΙΖΕΙ"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:signed_by dec:Signer\/1;
-	ont:signed_by dec:Signer\/2;
-	ont:signed_by dec:Signer\/3;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
+	ont:signed_by <Signer/2>;
+	ont:signed_by <Signer/3>;
 	ont:thematic_category "EconomicTradeExchanges";
 	ont:has_private_data false;
 	ont:organization_id "6105";
 	ont:submission_timestamp "1473317717387";
 	ont:unit_id "93302".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Την αριθ. 3373/390/1975, ΦΕΚ 349 Τεύχος Β΄)απόφαση του Υπουργού Προεδρίας της Κυβερνήσεως, όπως τροποποιήθηκε με την Οικ.4993/745/24.4.1975 όμοια απόφαση (ΦΕΚ Β΄ 489)."@el.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "Την υπ’ αριθ. 105/2016 απόφαση του Δημάρχου με την οποία ορίστηκε η Επιτροπή Συντήρησης & Επισκευής Οχημάτων."@el.
 
-dec:Consideration\/3 a ont:Consideration;
+<Consideration/3> a ont:Consideration;
 	ont:has_text "Την εντολή επιθεώρησης αριθ.1365/30-06-2016."@el.
 
-dec:Consideration\/4 a ont:Consideration;
+<Consideration/4> a ont:Consideration;
 	ont:has_text "Την αριθ. 9/2016 απόφαση της Ο.Ε. για την ψήφιση της πίστωσης."@el.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
 	ont:has_text "Την ανάθεση της προμήθειας ανταλλακτικών του με αρ. κυκλοφορίας KHY 9946, αξίας 130,00 € με ΦΠΑ, στο συνεργείο με την επωνυμία ΑΝΤΩΝΟΠΟΥΛΟΣ ΒΑΣ. ΔΗΜΗΤΡΙΟΣ.Η δαπάνη θα επιβαρύνει τον Κ.Α. 20.6263.001."@el.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ"@el;
 	ont:signer_name "Κούτσικος Κων/νος"@el;
 	ont:signer_id "133110".
 
-dec:Signer\/2 a ont:Signer;
+<Signer/2> a ont:Signer;
 	ont:signer_job "ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ"@el;
 	ont:signer_name "Βασιλείου Βασίλειος"@el.
 
-dec:Signer\/3 a ont:Signer;
+<Signer/3> a ont:Signer;
 	ont:signer_job "ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ"@el;
 	ont:signer_name "Κουτσοκώστας Λάμπρος"@el.

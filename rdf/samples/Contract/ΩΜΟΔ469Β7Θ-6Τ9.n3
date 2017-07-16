@@ -3,7 +3,7 @@
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:Contract;
+<> a ont:Contract;
 	ont:version "b3db8d62-c6b2-49f0-bc79-707b8e4a1c21";
 	ont:iun "ΩΜΟΔ469Β7Θ-6Τ9"@el;
 	eli:title "ΣΥΜΒΑΣΗ ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΠΟ 20/6/13 ΕΩΣ 31/8/15"@el;
@@ -18,13 +18,13 @@ dec: a ont:Contract;
 	ont:government_institution_email "kpapagian@upatras.gr";
 	ont:government_institution_information "Κ. Λυκούδη - Παπαγιαννόπουλου";
 	ont:protocol_number "44312/25-11-2015";
-	ont:has_considered dec:Consideration\/1;
-	ont:has_considered dec:Consideration\/2;
-	ont:has_considered dec:Consideration\/3;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
 	ont:decision_call "Εγκρίνεται"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:signed_by dec:Signer\/1;
-	ont:has_expense dec:Expense\/1;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
+	ont:has_expense <Expense/1>;
 	ont:contract_decision_type "Σύμβαση Έργου"@el;
 	ont:thematic_category "PublicAdministration";
 	ont:number_employees "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
@@ -33,33 +33,33 @@ dec: a ont:Contract;
 	ont:submission_timestamp "1452594644088";
 	ont:unit_id "74045".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Το Νομοθετικό Διάταγμα 4425/11-11-1964 (Περί ιδρύσεως Πανεπιστημίου Πατρών)"@el.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "Την υπ΄αριθμ. 679/96 ΚΥΑ (ΦΕΚ 826 Β), όπως κυρώθηκε με το άρθρο 36 του Νόμου 3794/2009 (ΦΕΚ 156 Α) και τροποποιήθηκε με το αρθρ. 36 Ν. 3848/2010"@el;
 	ont:considers <http://legislation.di.uoa.gr/eli/law/2009/3794>;
 	ont:considers <http://legislation.di.uoa.gr/eli/law/2010/3848>.
 
-dec:Consideration\/3 a ont:Consideration;
+<Consideration/3> a ont:Consideration;
 	ont:has_text "Τον Οδηγό Χρηματοδότησης και Διαχείρισης Ερευνών που εγκρίθηκε με απόφαση της υπ΄αριθμ. 373/14-07-2004 και 17385/20-05-2014 συνεδριάσεις της Συγκλήτου"@el.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
 	ont:has_text "Με αριθμό συνεδρίασης 357/10-7-2013, την ΑΝΝΑ ΣΕΡΠΕΤΣΙΔΑΚΗ να αναλάβει το Πρόγραμμα \"Ε&Τ (ΕΛΛ.ΚΙΝΑ): Άμεση εκτίμηση σεισμικών ζημιών\", για το χρονικό διάστημα 20/6/2013 έως 31/8/2015. Η αμοιβή ανέρχεται στα 5500 ΕΥΡΩ, με δραστηριότητα ENGINEERING INTENSITY SCALE, SENSOR SPECIFICATIONS AND SELECTION QUICKER’S GIS PLATFORM"@el.
 
-dec:Sponsored\/1 a ont:Sponsored;
+<Sponsored/1> a ont:Sponsored;
 	ont:afm "062343801";
 	ont:afm_type "Εθνικό"@el;
 	ont:name "ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΝΝΑ ΙΩΑΝΝΗΣ"@el.
 
-dec:Expense\/1 a ont:Expense;
+<Expense/1> a ont:Expense;
 	ont:expense_amount "5500";
 	ont:expense_currency "EUR";
 	ont:contract_start "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
 	ont:contract_end "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	ont:has_sponsored dec:Sponsored\/1.
+	ont:has_sponsored <Sponsored/1>.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "Αναπληρωτής Πρυτάνεως Έρευνας & Ανάπτυξης"@el;
 	ont:signer_name "Πολύζος κ. Δημοσθένης"@el;
 	ont:signer_id "131549".

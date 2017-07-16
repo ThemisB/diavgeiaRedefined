@@ -1,9 +1,9 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/>.
+@base <http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:Appointment;
+<> a ont:Appointment;
 	ont:version "a2481493-7f59-4f43-8799-3eb554c36d23";
 	ont:iun "ΨΟΗΩ46ΨΖΣ4-Ι56"@el;
 	eli:title "Διορισμός του μόνιμου Αναπληρωτή Καθηγητή κ. Γεωργίου Κουτσούμπα  σε μόνιμη θέση Καθηγητή της βαθμίδας του Καθηγητή πρώτης βαθμίδας (εξέλιξη)."@el;
@@ -18,11 +18,11 @@ dec: a ont:Appointment;
 	ont:government_institution_email "apofiti@central.ntua.gr";
 	ont:government_institution_information "Κ. Ποδάρα";
 	ont:protocol_number "16054";
-	ont:has_considered dec:Consideration\/1;
-	ont:has_afterdecision dec:AfterDecision;
+	ont:has_considered <Consideration/1>;
+	ont:has_afterdecision <AfterDecision>;
 	ont:decision_call "Διορίζεται"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:signed_by dec:Signer\/1;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
 	ont:recipient_for_share "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
 	ont:recipient_for_action "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
 	ont:thematic_category "PublicAdministration";
@@ -36,19 +36,19 @@ dec: a ont:Appointment;
 	ont:submission_timestamp "1473328177091";
 	ont:unit_id "73627".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Tην αριθµ. 16054/27-07-2016 Πράξη του Πρύτανη του Εθνικού Μετσόβιου Πολυτεχνείου που εκδόθηκε σύµφωνα µε τις διατάξεις του άρθρου 25 (παρ. 1) του N.3549/2007, του άρθρου 77 (παρ. 3) του Ν.4009/11 και του άρθρου 70 (παρ.4) του Ν. 4386/2016 δ"@el;
 	ont:considers leg:law\/2007\/3549\/article\/25\/paragraph\/1;
 	ont:considers leg:law\/2011\/4009\/article\/77\/paragraph\/3;
 	ont:considers leg:law\/2016\/4386\/article\/70\/paragraph\/4.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
 	ont:has_text "Ο µόνιµος Αναπληρωτής Καθηγητής κ. Γεώργιος Κουτσούµπας του Ευθυµίου ύστερα από εξέλιξη σε µόνιµη θέση Καθηγητή της βαθµίδας του Καθηγητή πρώτης βαθµίδας στον Τοµέα Φυσικής της Σχολής Εφαρµοσµένων Μαθηµατικών και Φυσικών Επιστηµών του Ε.Μ.Πολυτεχνείου, µε γνωστικό αντικείµενο: «Θεωρητική Φυσική Στοιχειωδών Σωµατιδίων και Βαρύτητα», επειδή έχει τα νόµιµα προσόντα."@el.
 
-dec:AfterDecision a ont:AfterDecision;
+<AfterDecision> a ont:AfterDecision;
 	ont:has_text "Η Προκήρυξη της θέσης στη βαθµίδα του Καθηγητή πρώτης βαθµίδας δηµοσιεύθηκε στο ΦΕΚ αριθµ. 1048/16-10-2015 τ. Γ'. (Αριθµός Βεβαίωσης Υ.∆.Ε. ΥΠΠΕΘ)"@el.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "Ο ΠΡΥΤΑΝΗΣ"@el;
 	ont:signer_name "ΙΩΑΝΝΗΣ ΚΩΝΣΤΑΝΤΙΝΟΥ ΓΚΟΛΙΑΣ"@el;
 	ont:signer_id "100002980".

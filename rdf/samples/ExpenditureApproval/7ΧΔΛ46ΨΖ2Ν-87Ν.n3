@@ -1,62 +1,67 @@
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a> a <http://diavgeia.gov.gr/ontology/ExpenditureApproval>;
-	<http://diavgeia.gov.gr/ontology/version> "d92a0b08-1f01-4658-84ee-38cb0e87a87a";
-	<http://diavgeia.gov.gr/ontology/iun> "7ΧΔΛ46ΨΖ2Ν-87Ν"@el;
-	<http://data.europa.eu/eli/ontology#title> "Έγκριση Δαπάνης βάσει Αρ. Πρωτ.  493692"@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2016-09-08"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "Εθνικόν και Καποδιστριακόν Πανεπιστήμιον Αθηνών"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΠΕΡΙΟΥΣΙΑΣ & ΟΙΚΟΝΟΜΙΚΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΟΙΚΟΝΟΜΙΚΩΝ ΥΠΗΡΕΣΙΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Χρήστου Λαδά 6"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2103689103";
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2103689108";
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2103689100";
-	<http://diavgeia.gov.gr/ontology/protocol_number> "493692";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/2>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "Δίνεται Εντολή Πληρωμής"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "CommunicationEducation";
-	<http://diavgeia.gov.gr/ontology/has_expense> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Expense/1>;
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "99203020";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1473327869593";
-	<http://diavgeia.gov.gr/ontology/unit_id> "73426".
+@base <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το Ν. 4009/2011, «Δομή, λειτουργία, διασφάλιση της ποιότητας των σπουδών και διεθνοποίηση των ανώτατων εκπαιδευτικών ιδρυμάτων»."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4009>.
+<> a ont:ExpenditureApproval;
+	ont:version "d92a0b08-1f01-4658-84ee-38cb0e87a87a";
+	ont:iun "7ΧΔΛ46ΨΖ2Ν-87Ν"@el;
+	eli:title "Έγκριση Δαπάνης βάσει Αρ. Πρωτ.  493692"@el;
+	eli:date_publication "2016-09-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "Εθνικόν και Καποδιστριακόν Πανεπιστήμιον Αθηνών"@el;
+	ont:government_institution_general_administration "ΠΕΡΙΟΥΣΙΑΣ & ΟΙΚΟΝΟΜΙΚΩΝ"@el;
+	ont:government_institution_department "ΟΙΚΟΝΟΜΙΚΩΝ ΥΠΗΡΕΣΙΩΝ"@el;
+	ont:government_institution_address "Χρήστου Λαδά 6"@el;
+	ont:government_institution_phone "2103689103";
+	ont:government_institution_phone "2103689108";
+	ont:government_institution_fax "2103689100";
+	ont:protocol_number "493692";
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:decision_call "Δίνεται Εντολή Πληρωμής"@el;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
+	ont:thematic_category "CommunicationEducation";
+	ont:has_expense <Expense/1>;
+	ont:has_private_data false;
+	ont:organization_id "99203020";
+	ont:submission_timestamp "1473327869593";
+	ont:unit_id "73426".
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το Ν.4270/2014-ΦΕΚ 143 Α/28-06-2014, «Αρχές δημοσιονομικής διαχείρισης και εποπτείας - δημόσιο λογιστικό και άλλες διατάξεις.»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2014/4270>.
+<Consideration/1> a ont:Consideration;
+	ont:has_text "Το Ν. 4009/2011, «Δομή, λειτουργία, διασφάλιση της ποιότητας των σπουδών και διεθνοποίηση των ανώτατων εκπαιδευτικών ιδρυμάτων»."@el;
+	ont:considers eli:law\/2011\/4009.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του άρθρου 6 παρ.1 του Ν. 3861/13¬7¬2010 (ΦΕΚ 112 τ. Α΄) «Ενίσχυση της διαφάνειας µε την υποχρεωτική ανάρτηση νόμων και πράξεων των Κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο διαδίκτυο “Πρόγραμμα Διαύγεια” και άλλες διατάξεις»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3861/article/6/paragraph/1>.
+<Consideration/2> a ont:Consideration;
+	ont:has_text "Το Ν.4270/2014-ΦΕΚ 143 Α/28-06-2014, «Αρχές δημοσιονομικής διαχείρισης και εποπτείας - δημόσιο λογιστικό και άλλες διατάξεις.»"@el;
+	ont:considers eli:law\/2014\/4270.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "στο όνομα ΚΟΝΕ ΑΝΩΝΥΜΗ ΤΕΧΝΙΚΗ ΕΤΑΙΡΕΙΑ ΑΝΕΛΚΥΣΤΗΡΩΝ με ΑΦΜ 099362767 , ποσού 1.123,44 από τον προϋπολογισμό του έτους 2016 Για την παροχή υπηρεσιών συντήρησης ανελκυστήρων ετήσιας διάρκειας & αποκατάσταση ελλείψεων απο κοινοποιημένο φορέα ελέγχου σύμφωνα με την απο 17-12-2015 σύμβαση ως τη συνημμένη συγκεντρωτική κατάσταση ΕΡΓΟ 2014ΣΕ54600019 "@el.
+<Consideration/3> a ont:Consideration;
+	ont:has_text "Τις διατάξεις του άρθρου 6 παρ.1 του Ν. 3861/13¬7¬2010 (ΦΕΚ 112 τ. Α΄) «Ενίσχυση της διαφάνειας µε την υποχρεωτική ανάρτηση νόμων και πράξεων των Κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο διαδίκτυο “Πρόγραμμα Διαύγεια” και άλλες διατάξεις»"@el;
+	ont:considers eli:law\/2010\/3861\/article\/6\/paragraph\/1.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "Ο Αναπληρωτής Πρύτανη Οικονομικών Υποθέσεων Καθηγ."@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "Νικόλαος Μυλωνάς"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "100005898".
+<Decision/1> a ont:Decision;
+	ont:has_text "στο όνομα ΚΟΝΕ ΑΝΩΝΥΜΗ ΤΕΧΝΙΚΗ ΕΤΑΙΡΕΙΑ ΑΝΕΛΚΥΣΤΗΡΩΝ με ΑΦΜ 099362767 , ποσού 1.123,44 από τον προϋπολογισμό του έτους 2016 Για την παροχή υπηρεσιών συντήρησης ανελκυστήρων ετήσιας διάρκειας & αποκατάσταση ελλείψεων απο κοινοποιημένο φορέα ελέγχου σύμφωνα με την απο 17-12-2015 σύμβαση ως τη συνημμένη συγκεντρωτική κατάσταση ΕΡΓΟ 2014ΣΕ54600019"@el.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/OrganizationSponsor/1> a <http://diavgeia.gov.gr/ontology/OrganizationSponsor>;
-	<http://diavgeia.gov.gr/ontology/afm> "090010689";
-	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
-	<http://diavgeia.gov.gr/ontology/name> "ΕΘΝΙΚΟ & ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ"@el.
+<Signer/1> a ont:Signer;
+	ont:signer_job "Ο Αναπληρωτής Πρύτανη Οικονομικών Υποθέσεων Καθηγ."@el;
+	ont:signer_name "Νικόλαος Μυλωνάς"@el;
+	ont:signer_id "100005898".
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Sponsored/1> a <http://diavgeia.gov.gr/ontology/Sponsored>;
-	<http://diavgeia.gov.gr/ontology/afm> "099362767";
-	<http://diavgeia.gov.gr/ontology/afm_type> "Εθνικό"@el;
-	<http://diavgeia.gov.gr/ontology/name> "ΚΟΝΕ ΑΝΩΝΥΜΗ ΤΕΧΝΙΚΗ ΕΤΑΙΡΙΑ ΑΝΕΛΚΥΣΤΗΡΩΝ"@el.
+<OrganizationSponsor/1> a ont:OrganizationSponsor;
+	ont:afm "090010689";
+	ont:afm_type "Εθνικό"@el;
+	ont:name "ΕΘΝΙΚΟ & ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Expense/1> a <http://diavgeia.gov.gr/ontology/Expense>;
-	<http://diavgeia.gov.gr/ontology/expense_amount> "1123.44";
-	<http://diavgeia.gov.gr/ontology/expense_currency> "EUR";
-	<http://diavgeia.gov.gr/ontology/cpv> "50000000-5";
-	<http://diavgeia.gov.gr/ontology/has_sponsored> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/Sponsored/1>;
-	<http://diavgeia.gov.gr/ontology/has_organization_sponsor> <http://diavgeia.gov.gr/eli/decision/7ΧΔΛ46ΨΖ2Ν-87Ν/d92a0b08-1f01-4658-84ee-38cb0e87a87a/OrganizationSponsor/1>.
+<Sponsored/1> a ont:Sponsored;
+	ont:afm "099362767";
+	ont:afm_type "Εθνικό"@el;
+	ont:name "ΚΟΝΕ ΑΝΩΝΥΜΗ ΤΕΧΝΙΚΗ ΕΤΑΙΡΙΑ ΑΝΕΛΚΥΣΤΗΡΩΝ"@el.
+
+<Expense/1> a ont:Expense;
+	ont:expense_amount "1123.44";
+	ont:expense_currency "EUR";
+	ont:cpv "50000000-5";
+	ont:has_sponsored <Sponsored/1>;
+	ont:has_organization_sponsor <OrganizationSponsor/1>.

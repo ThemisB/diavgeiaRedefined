@@ -1,9 +1,9 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/71Η8ΩΛΞ-2ΡΝ/173572b7-35c4-4ef4-b1b0-b2bbb6d61dff/>.
+@base <http://diavgeia.gov.gr/eli/decision/71Η8ΩΛΞ-2ΡΝ/173572b7-35c4-4ef4-b1b0-b2bbb6d61dff/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:BalanceAccount;
+<> a ont:BalanceAccount;
 	ont:version "11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6";
 	ont:iun "71Η8ΩΛΞ-2ΡΝ"@el;
 	eli:title "Έγκριση απολογισμού οικ.έτους 2015 του σωματείου Ελληνική Μέριμνα Λάρισας"@el;
@@ -19,15 +19,15 @@ dec: a ont:BalanceAccount;
 	ont:government_institution_email "pronia@larissa-dimos.gr";
 	ont:government_institution_information "ΔΟΝΤΑΣ Γ."@el;
 	ont:protocol_number "2285";
-	ont:has_considered dec:Consideration\/1;
-	ont:has_considered dec:Consideration\/2;
-	ont:has_considered dec:Consideration\/3;
-	ont:has_considered dec:Consideration\/4;
-	ont:has_considered dec:Consideration\/5;
-	ont:has_considered dec:Consideration\/6;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
+	ont:has_considered <Consideration/5>;
+	ont:has_considered <Consideration/6>;
 	ont:decision_call "Αποφασίζουμε"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:signed_by dec:Signer\/1;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
 	ont:recipient_for_share "Ελληνική Μέριμνα Λάρισας"@el;
 	ont:thematic_category "EconomicTradeExchanges";
 	ont:has_private_data false;
@@ -38,29 +38,29 @@ dec: a ont:BalanceAccount;
 	ont:is_balance_account_approval_for_org false;
 	ont:balance_account_time_period "Έτος"@el.
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Του Ν.3852/2010 (ΦΕΚ 87/2010 Τ.Α΄) «Νέα Αρχιτεκτονική της Αυτοδιοίκησης και της Αποκέντρωσης Διοίκησης-Πρόγραμμα Καλλικράτης»"@el;
 	ont:considers eli:law\/2010\/3852.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "Την αριθμ. 3287/29501/18-2-2014 (Φ.Ε.Κ.482/26-2-2014 Τ.Β!) απόφαση της γενικής γραμματέα Αποκεντρωμένης Διοίκησης Θεσσαλίας-Στερεάς Ελλάδας «Έγκριση Οργανισμού Εσωτερικής Υπηρεσίας Δήμου Λαρισαίων»."@el.
 
-dec:Consideration\/3 a ont:Consideration;
+<Consideration/3> a ont:Consideration;
 	ont:has_text "Την αριθμ. 1374/3-9-2014 απόφαση του Δημάρχου Λαρισαίων «Ορισμός Αντιδημάρχων και μεταβίβαση αρμοδιοτήτων»"@el.
 
-dec:Consideration\/4 a ont:Consideration;
+<Consideration/4> a ont:Consideration;
 	ont:has_text "Το Ν.Δ.1111/72 άρθρο 7 και 8 «περί φιλανθρωπικών σωματείων σε συνδυασμό με τις διατάξεις των άρθρων 17 και 26 του Ν.Δ.795/1970 «περί σωματείων και Ενώσεων»."@el.
 
-dec:Consideration\/5 a ont:Consideration;
+<Consideration/5> a ont:Consideration;
 	ont:has_text "Την αριθμ.939/2008 απόφαση του μονομελούς πρωτοδικείου Λάρισας «έγκριση τροποποίησης καταστατικού της ΕΛΛΗΝΙΚΗΣ ΜΕΡΙΜΝΑΣ»."@el.
 
-dec:Consideration\/6 a ont:Consideration;
+<Consideration/6> a ont:Consideration;
   	ont:has_text "Το αριθμ. 47/3-5-2016 έγγραφο του σωματείου «Ελληνική Μέριμνα Λάρισας», με το οποίο στάλθηκε ο απολογισμός οικ.έτους 2015."@el.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
     ont:has_text "Εγκρίνουμε τον απολογισμό οικ.έτους 2015, του σωματείου Ελληνική Μέριμνα Λάρισας όπως εγκρίθηκε από το Διοικητικό Συμβούλιο του σωματείου κατά την 261 η συνεδρίασή του, ο οποίος εμφανίζει έσοδα 247.093,91 ΕΥΡΩ, έξοδα 212.126,01 ΕΥΡΩ και πλεόνασμα 34.967,90 ΕΥΡΩ"@el.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "ΑΝΤΙΔΗΜΑΡΧΟΣ ΚΟΙΝΩΝΙΚΗΣ ΠΟΛΙΤΙΚΗΣ"@el;
 	ont:signer_name "ΔΕΛΗΓΙΑΝΝΗΣ ΔΗΜΗΤΡΙΟΣ"@el;
 	ont:signer_id "100002493".

@@ -1,66 +1,71 @@
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501> a <http://diavgeia.gov.gr/ontology/EvaluationReportOfLaw>;
-	<http://diavgeia.gov.gr/ontology/version> "5798f099-3abc-4ee1-bd1e-fc18ce18e501";
-	<http://diavgeia.gov.gr/ontology/iun> "ΩΖΝ04691Ω2-ΗΚ6"@el;
-	<http://data.europa.eu/eli/ontology#title> "ΕΠΙΧΟΡΗΓΗΣΕΙΣ ΝΕΕ & ΝΘΕ"@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2016-07-03"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΥΠΟΥΡΓΕΙΟ ΕΡΓΑΣΙΑΣ, ΚΟΙΝΩΝΙΚΗΣ ΑΣΦΑΛΙΣΗΣ ΚΑΙ ΚΟΙΝΩΝΙΚΗΣ ΑΛΛΗΛΕΓΓΥΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΟΡΓΑΝΙΣΜΟΣ ΑΠΑΣΧΟΛΗΣΕΩΣ ΕΡΓΑΤΙΚΟΥ ΔΥΝΑΜΙΚΟΥ Π.Δ. ΑΤΤΙΚΗΣ & ΝΗΣΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "ΓΟΥΝΑΡΗ 2 & Λ. ΒΟΥΛΙΑΓΜΕΝΗΣ 518"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "17456";
-	<http://diavgeia.gov.gr/ontology/recipients> "Αποδέκτες Πίνακα Διανομής"@el;
-	<http://diavgeia.gov.gr/ontology/protocol_number> "5649";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/2>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/3>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/4>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/5>;
-    <http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/6>;
-    <http://diavgeia.gov.gr/ontology/has_verified> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Verification/1>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζουμε"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Signer/1>;
-    <http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Signer/2>;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Ελεγκτικό Συνέδριο'"@el;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "99219675";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1457335841850";
-	<http://diavgeia.gov.gr/ontology/unit_id> "72345".
+@base <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του ν.2362/95 «Περί Δημόσιου Λογιστικού κ.τ.π.» (Α.247) όπως τροποποιήθηκε και συμπληρώθηκε με τα άρθ.21 και 23 του ν.3871/2010 (Α.141)"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/21>;
-    <http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/23>.
+<> a ont:EvaluationReportOfLaw;
+	ont:version "5798f099-3abc-4ee1-bd1e-fc18ce18e501";
+	ont:iun "ΩΖΝ04691Ω2-ΗΚ6"@el;
+	eli:title "ΕΠΙΧΟΡΗΓΗΣΕΙΣ ΝΕΕ & ΝΘΕ"@el;
+	eli:date_publication "2016-07-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "ΥΠΟΥΡΓΕΙΟ ΕΡΓΑΣΙΑΣ, ΚΟΙΝΩΝΙΚΗΣ ΑΣΦΑΛΙΣΗΣ ΚΑΙ ΚΟΙΝΩΝΙΚΗΣ ΑΛΛΗΛΕΓΓΥΗΣ"@el;
+	ont:government_institution_general_administration "ΟΡΓΑΝΙΣΜΟΣ ΑΠΑΣΧΟΛΗΣΕΩΣ ΕΡΓΑΤΙΚΟΥ ΔΥΝΑΜΙΚΟΥ Π.Δ. ΑΤΤΙΚΗΣ & ΝΗΣΩΝ"@el;
+	ont:government_institution_address "ΓΟΥΝΑΡΗ 2 & Λ. ΒΟΥΛΙΑΓΜΕΝΗΣ 518"@el;
+	ont:government_institution_postalcode "17456";
+	ont:recipients "Αποδέκτες Πίνακα Διανομής"@el;
+	ont:protocol_number "5649";
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
+	ont:has_considered <Consideration/5>;
+	ont:has_considered <Consideration/6>;
+	ont:has_verified <Verification/1>;
+	ont:decision_call "Αποφασίζουμε"@el;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
+	ont:signed_by <Signer/2>;
+	ont:recipient_for_share "Ελεγκτικό Συνέδριο'"@el;
+	ont:thematic_category "EconomicTradeExchanges";
+	ont:has_private_data false;
+	ont:organization_id "99219675";
+	ont:submission_timestamp "1457335841850";
+	ont:unit_id "72345".
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του π.δ. 113/2010 πέρι αναλήψεως υποχρεώσεων από τους Διατάκτες (Α.194)"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2010/113>.
+<Consideration/1> a ont:Consideration;
+	ont:has_text "Τις διατάξεις του ν.2362/95 «Περί Δημόσιου Λογιστικού κ.τ.π.» (Α.247) όπως τροποποιήθηκε και συμπληρώθηκε με τα άρθ.21 και 23 του ν.3871/2010 (Α.141)"@el;
+	ont:considers eli:law\/2010\/3871\/article\/21;
+	ont:considers eli:law\/2010\/3871\/article\/23.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ. απόφαση του ΔΣ ή Περιφερειακής του ΟΑΕΔ"@el.
+<Consideration/2> a ont:Consideration;
+	ont:has_text "Τις διατάξεις του π.δ. 113/2010 πέρι αναλήψεως υποχρεώσεων από τους Διατάκτες (Α.194)"@el;
+	ont:considers eli:pd\/2010\/113.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Tην ανάγκη εξόφλησης της υποχρέωσης ΕΠΙΧΟΡΗΓΗΣΕΙΣ ΝΕΕ & ΝΘΕ"@el.
+<Consideration/3> a ont:Consideration;
+	ont:has_text "Την αριθμ. απόφαση του ΔΣ ή Περιφερειακής του ΟΑΕΔ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Tο γεγονός ότι το ποσό της δεσμευόμενης, με την παρούσα, πίστωσης είναι εντός του εγκεκριμένου ποσοστού διάθεσης"@el.
+<Consideration/4> a ont:Consideration;
+	ont:has_text "Tην ανάγκη εξόφλησης της υποχρέωσης ΕΠΙΧΟΡΗΓΗΣΕΙΣ ΝΕΕ & ΝΘΕ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "ΕΠΙ/ΣΕΙΣ ΝΘΕ- ΝΕΕ ΚΠΑ 2 ΔΑΦΝΗΣ"@el.
+<Consideration/5> a ont:Consideration;
+	ont:has_text "Tο γεγονός ότι το ποσό της δεσμευόμενης, με την παρούσα, πίστωσης είναι εντός του εγκεκριμένου ποσοστού διάθεσης"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την έγκριση της δέσμευσης πίστωσης στον/στους ΚΑΕ 2493.00 ποσού 11,718.00 ευρώ για πληρωμή ισόποσης δαπάνης του προϋπολογισμού εξόδων του ΟΑΕΔ οικ.έτους 2016 για την εξόφληση της υποχρέωσης : ΕΠΙΧΟΡΗΓΗΣΕΙΣ ΝΕΕ & ΝΘΕ"@el.
+<Consideration/6> a ont:Consideration;
+	ont:has_text "ΕΠΙ/ΣΕΙΣ ΝΘΕ- ΝΕΕ ΚΠΑ 2 ΔΑΦΝΗΣ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Decision/2> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Να κοινοποιηθεί για εκτέλεση."@el.
+<Decision/1> a ont:Decision;
+	ont:has_text "Την έγκριση της δέσμευσης πίστωσης στον/στους ΚΑΕ 2493.00 ποσού 11,718.00 ευρώ για πληρωμή ισόποσης δαπάνης του προϋπολογισμού εξόδων του ΟΑΕΔ οικ.έτους 2016 για την εξόφληση της υποχρέωσης : ΕΠΙΧΟΡΗΓΗΣΕΙΣ ΝΕΕ & ΝΘΕ"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Verification/1> a <http://diavgeia.gov.gr/ontology/Verification>;
-    <http://diavgeia.gov.gr/ontology/verified_by> <http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Signer/2>;
-    <http://diavgeia.gov.gr/ontology/has_text> "ΕΛΕΓΧΘΗΚΕ και βεβαιώνεται ότι η ανωτέρω δαπάνη είναι εντός του διαθέσιμου ποσού πίστωσης του/των παρακάτω ΚΑΕ με υπόλοιπο προς ανάληψη 38,482,046.91 (ΚΑΕ 2493.00)"@el.
+<Decision/2> a ont:Decision;
+	ont:has_text "Να κοινοποιηθεί για εκτέλεση."@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "Η ΠΡΟΪΣΤΑΜΕΝΗ ΤΗΣ ΠΕΡΙΦ/ΚΗΣ ΔΝΣΗΣ."@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "100005898".
+<Verification/1> a ont:Verification;
+    ont:verified_by <Signer/2>;
+    ont:has_text "ΕΛΕΓΧΘΗΚΕ και βεβαιώνεται ότι η ανωτέρω δαπάνη είναι εντός του διαθέσιμου ποσού πίστωσης του/των παρακάτω ΚΑΕ με υπόλοιπο προς ανάληψη 38,482,046.91 (ΚΑΕ 2493.00)"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΩΖΝ04691Ω2-ΗΚ6/5798f099-3abc-4ee1-bd1e-fc18ce18e501/Signer/2> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "ΥΠΕΥΘΥΝΟΣ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ"@el.
+<Signer/1> a ont:Signer;
+	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΤΗΣ ΠΕΡΙΦ/ΚΗΣ ΔΝΣΗΣ."@el;
+	ont:signer_id "100005898".
+
+<Signer/2> a ont:Signer;
+	ont:signer_job "ΥΠΕΥΘΥΝΟΣ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ"@el.

@@ -1,9 +1,9 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/>.
+@base <http://diavgeia.gov.gr/eli/decision/71ΥΟ4653ΟΞ-89Ε/5798f099-3abc-4ee1-bd1e-fc18ce18e501/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:Circular;
+<> a ont:Circular;
 	ont:version "5798f099-3abc-4ee1-bd1e-fc18ce18e501";
 	ont:iun "71ΥΟ4653ΟΞ-89Ε"@el;
 	eli:title "Ανάρτηση Υπουργικής Απόφασης πιστοποίησης πραγµατογνωµόνων ADR"@el;
@@ -40,27 +40,29 @@ dec: a ont:Circular;
 	ont:government_institution_email "h.pasios@yme.gov.gr";
 	ont:protocol_number "Γ2/ 59954/ 7478";
 	ont:circular_number "59954/ 7478";
-	ont:has_decided dec:Decision\/1;
-	ont:signed_by dec:Signer\/1;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
 	ont:thematic_category "Transport";
 	ont:has_private_data false;
 	ont:organization_id "100016011";
 	ont:submission_timestamp "1473847008526";
 	ont:unit_id "100007425".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του N.3409/2005 <<Καταδύσεις αναψυχής και άλλες διατάξεις>> (ΦΕΚ 273 Α')."@el;
 	ont:considers eli:law\/2005\/3409.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του άρθρου 4 παρ. 2 της αριθ. 2123/02/28-03-2006 Υ.Α. (ΦΕΚ 449 Β)."@el;
 	ont:considers eli:md\/2006\/Φ449Β\/article\/4\/paragraph\/2.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
 	ont:has_text "Σας ενηµερώνουµε ότι αναρτήθηκε η υπ’ αρ. πρωτ. Γ2/53077/6453 (ΦΕΚ 2907/Β΄/2016) υπουργική απόφαση, Α∆Α: ΩΟ734653ΟΞ-ΦΜΗ, µε θέµα «Πιστοποίηση πραγµατογνωµόνων ADR για τη διενέργεια δοκιµών και ελέγχων σε εξοπλισµούς και οχήµατα µεταφοράς επικίνδυνων εµπορευµάτων»."@el;
 	ont:decision_relates <http://diavgeia.gov.gr/eli/decision/ΩΟ734653ΟΞ-ΦΜΗ>.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΔΙΕΥΘΥΝΣΗΣ"@el;
 	ont:signer_name "Δ. ΔΑΓΛΑ"@el;
 	ont:signer_id "100007427".

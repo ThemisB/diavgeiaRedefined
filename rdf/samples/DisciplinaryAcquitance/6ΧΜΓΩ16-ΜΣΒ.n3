@@ -1,9 +1,9 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/>.
+@base <http://diavgeia.gov.gr/eli/decision/6ΧΜΓΩ16-ΜΣΒ/3177abd8-4180-429a-b1c2-c665c08767ea/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:DisciplinaryAcquitance;
+<> a ont:DisciplinaryAcquitance;
 	ont:version "3177abd8-4180-429a-b1c2-c665c08767ea";
 	ont:iun "6ΧΜΓΩ16-ΜΣΒ"@el;
 	eli:title "ΑΠΟΦΑΣΗ ΔΗΜΑΡΧΟΥ ΥΠ. ΑΡΙΘΜΟΝ 136/2016 (ΠΕΡΙ ΑΠΑΛΛΑΓΗΣ ΥΠΑΛΛΗΛΟΥ ΤΟΥ ΔΗΜΟΥ ΑΠΟ ΤΗΝ ΚΑΤΗΓΟΡΙΑ ΤΗΣ ΤΕΛΕΣΗΣ ΠΕΙΘΑΡΧΙΚΟΥ ΠΑΡΑΠΤΩΜΑΤΟΣ ΛΟΓΩ ΕΛΛΕΙΨΗΣ ΣΤΟΙΧΕΙΩΝ)"@el;
@@ -16,13 +16,13 @@ dec: a ont:DisciplinaryAcquitance;
 	ont:government_institution_information "Γ. Μπαρκούρα";
 	ont:government_institution_email "gbarkoura@0164.syzefxis.gov.gr";
 	ont:protocol_number "136";
-	ont:has_considered dec:Consideration\/1;
-	ont:has_considered dec:Consideration\/2;
-	ont:has_considered dec:Consideration\/3;
-	ont:has_considered dec:Consideration\/4;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
 	ont:decision_call "ΑΠΟΦΑΣΙΖΕΙ"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:signed_by dec:Signer\/1;
+	ont:has_decided <Decision/1>;
+	ont:signed_by <Signer/1>;
 	ont:thematic_category "Employment";
 	ont:thematic_category "PublicAdministration";
 	ont:thematic_category "Laws";
@@ -31,24 +31,24 @@ dec: a ont:DisciplinaryAcquitance;
 	ont:submission_timestamp "1459937621791";
 	ont:unit_id "94725".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις των άρθρων 125 επομ. του Ν. 3528/2007."@el;
 	ont:considers eli:law\/2007\/3528\/article\/125.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του άρθρου πέντε του Ν.4057/2012."@el;
 	ont:considers eli:law\/2012\/4057\/article\/5.
 
-dec:Consideration\/3 a ont:Consideration;
+<Consideration/3> a ont:Consideration;
 	ont:has_text "Την υπ΄αριθμ. 16/18.01.2016 Απόφαση Δημάρχου περί ορισμού της υπαλλήλου Κλεισούρα Ελένης, Προϊσταμένης του Τμήματος Δημοτικής Κατάστασης, Ληξιαρχείου, Αλλοδαπών, Κλάδου ΠΕ Διοικητικού, με βαθμό Γ’, για τη διενέργεια Ένορκης Διοικητικής Εξέτασης για τη διαπίστωση της πιθανής τέλεσης πειθαρχικού παραπτώματος από την υπάλληλο αορίστου χρόνου, Ιακωβάκη Αναστασία, Κλάδου ΠΕ Διοικητικού, με Βαθμό Ε’."@el.
 
-dec:Consideration\/4 a ont:Consideration;
+<Consideration/4> a ont:Consideration;
 	ont:has_text "Την με αριθμ. πρωτ. ΠΕΑ 738/18.03.2016 Πορισματική Έκθεση και του σχετικού φακέλου της ΕΔΕ, που κατέθεσε η διενεργήσασα την ΕΔΕ στο Δήμαρχο Ραφήνας- Πικερμίου, με το υπ’ αριθμ. ΠΕΑ 739/18.03.2016 διαβιβαστικό έγγραφο."@el.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
 	ont:has_text "Απαλλάσσει την υπάλληλο αορίστου χρόνου, Ιακωβάκη Αναστασία, Κλάδου ΠΕ Διοικητικού, με Βαθμό Ε’, καθότι δεν προκύπτουν επαρκή στοιχεία που να τεκμηριώνουν την τέλεση πειθαρχικού παραπτώματος και θέτει στο αρχείο την υπόθεση, μαζί με την Πορισματική Έκθεση και όλα τα έγγραφα και τα λοιπά στοιχεία, που συγκεντρώθηκαν κατά τη διάρκεια της διενέργειας της Ένορκης Διοικητικής Εξέτασης."@el.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "Ο ΔΗΜΑΡΧΟΣ"@el;
 	ont:signer_name "ΒΑΣΙΛΕΙΟΣ ΠΙΣΤΙΚΙΔΗΣ"@el;
 	ont:signer_id "100002256".

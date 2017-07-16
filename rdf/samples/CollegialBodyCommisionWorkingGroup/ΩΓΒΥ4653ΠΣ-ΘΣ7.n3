@@ -1,9 +1,9 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/>.
+@base <http://diavgeia.gov.gr/eli/decision/ΩΓΒΥ4653ΠΣ-ΘΣ7/e8c8d1df-a927-43a2-9b0e-1ce59ad92569/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:CollegialBodyCommisionWorkingGroup;
+<> a ont:CollegialBodyCommisionWorkingGroup;
 	ont:version "e8c8d1df-a927-43a2-9b0e-1ce59ad92569";
 	ont:iun "ΩΓΒΥ4653ΠΣ-ΘΣ7"@el;
 	eli:title "Διαπιστωτική Πράξη Διορισμού του Προέδρου του Ακαδημαϊκού Συμβουλίου της Ανώτατης Εκκλησιαστικής Ακαδημίας Θεσσαλονίκης."@el;
@@ -18,14 +18,14 @@ dec: a ont:CollegialBodyCommisionWorkingGroup;
 	ont:government_institution_information "Μ. Τουρλούπη";
 	ont:government_institution_email "t01mso2@minedu.gov.gr";
 	ont:protocol_number "126004/Ζ1";
-	ont:has_considered dec:Consideration\/1;
-	ont:has_considered dec:Consideration\/2;
-	ont:has_considered dec:Consideration\/3;
-	ont:has_considered dec:Consideration\/4;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
 	ont:decision_call "ΔΙΑΠΙΣΤΩΝΟΥΜΕ"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:has_afterdecision dec:AfterDecision;
-	ont:signed_by dec:Signer\/1;
+	ont:has_decided <Decision/1>;
+	ont:has_afterdecision <AfterDecision>;
+	ont:signed_by <Signer/1>;
 	ont:collegial_body_party_type "Παύση - Αντικατάσταση μέλους"@el;
 	ont:collegial_body_decision_type "Όργανο άλλης αρμοδιότητας"@el;
 	ont:fek_number "429";
@@ -37,27 +37,27 @@ dec: a ont:CollegialBodyCommisionWorkingGroup;
 	ont:submission_timestamp "1473252453013";
 	ont:unit_id "100007927".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του άρθρου 7, παρ. 3 περ. α και παρ. 5 του ν. 3432/2006 «Δομή και λειτουργία της Εκκλησιαστικής Εκπαίδευσης» (Α΄ 14)"@el;
 	ont:considers eli:law\/2006\/3432\/article\/7\/paragraph\/3;
 	ont:considers eli:law\/2006\/3432\/article\/7\/paragraph\/5.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "του άρθρου 1, σε συνδυασμό με το άρθρο 2, περ. στ υποπερ. ii της υπ’ αρ. Υ27/8-10-2015 απόφασης του Πρωθυπουργού «Ανάθεση αρμοδιοτήτων στην Αναπληρώτρια Υπουργό Παιδείας, Έρευνας και Θρησκευμάτων, Αθανασία Αναγνωστοπούλου» (Β΄ 2168), όπως τροποποιήθηκε με την υπ’ αρ. Υ99/28-12- 2015 απόφαση του Πρωθυπουργού «Τροποποίηση απόφασης ανάθεσης αρμοδιοτήτων στην Αναπληρώτρια Υπουργό Παιδείας, Έρευνας και Θρησκευμάτων, Αθανασία Αναγνωστοπούλου» (Β΄2869) και την υπ’ αρ. Υ134/15-3- 2016 όμοια απόφαση (Β΄711)."@el.
 
-dec:Consideration\/3 a ont:Consideration;
+<Consideration/3> a ont:Consideration;
 	ont:has_text "Το υπ’ αρ. 603/15-4-2016 έγγραφο της Ανώτατης Εκκλησιαστικής Ακαδημίας Θεσσαλονίκης."@el.
 
-dec:Consideration\/4 a ont:Consideration;
+<Consideration/4> a ont:Consideration;
 	ont:has_text "Το πρακτικό της υπ’ αρ. 2/7-7-2016 συνεδρίασης του Ανώτατου Επιστημονικού Συμβουλίου, ύστερα από έλεγχο νομιμότητας,"@el.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
 	ont:has_text "Το διορισμό του Σεβασμιώτατου Μητροπολίτη Κίτρους, Κατερίνης και Πλαταμώνος και Καθηγητή της Ανώτατης Εκκλησιαστικής Ακαδημίας Θεσσαλονίκης κ. Γεωργίου Χρυσοστόμου του Χαραλάμπους, κατόχου του υπ’ αρ. ΑΙ 358228 Α.Δ.Τ., ως Προέδρου του Ακαδημαϊκού Συμβουλίου της ανωτέρω Ακαδημίας, με τριετή θητεία, ήτοι από 1-9-2016 έως 31-8-2019."@el.
 
-dec:AfterDecision a ont:AfterDecision;
+<AfterDecision> a ont:AfterDecision;
 	ont:has_text "Η απόφαση αυτή να δημοσιευθεί στην Εφημερίδα της Κυβερνήσεως."@el.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "Η ΑΝΑΠΛΗΡΩΤΡΙΑ ΥΠΟΥΡΓΟΣ"@el;
 	ont:signer_name "ΑΘΑΝΑΣΙΑ ΑΝΑΓΝΩΣΤΟΠΟΥΛΟΥ"@el;
 	ont:signer_id "100015163".

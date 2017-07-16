@@ -1,9 +1,9 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/64Μ44691ΩΓ-5ΨΑ/7076e4dc-7352-41ff-ae5f-8b7a5de23353/>.
+@base <http://diavgeia.gov.gr/eli/decision/64Μ44691ΩΓ-5ΨΑ/7076e4dc-7352-41ff-ae5f-8b7a5de23353/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:Award;
+<> a ont:Award;
 	ont:version "7076e4dc-7352-41ff-ae5f-8b7a5de23353";
 	ont:iun "64Μ44691ΩΓ-5ΨΑ"@el;
 	eli:title "ΑΠΟΦΑΣΗ ΚΑΤΑΚΥΡΩΣΗΣ ΕΡΓΟΥ ΣΥΝΤΗΡΗΣΗΣ ΑΝΕΛΚΥΣΤΗΡΩΝ"@el;
@@ -15,104 +15,104 @@ dec: a ont:Award;
 	ont:government_institution_fax "2102402441";
 	ont:government_institution_information "Δημήτριος Ζαγανάς"@el;
 	ont:protocol_number "438";
-	ont:has_considered dec:Consideration\/1;
-	ont:has_considered dec:Consideration\/2;
-	ont:has_considered dec:Consideration\/3;
-	ont:has_considered dec:Consideration\/4;
-	ont:has_considered dec:Consideration\/5;
-	ont:has_considered dec:Consideration\/6;
-	ont:has_considered dec:Consideration\/7;
-	ont:has_considered dec:Consideration\/8;
-	ont:has_considered dec:Consideration\/9;
-	ont:has_considered dec:Consideration\/10;
-	ont:has_considered dec:Consideration\/11;
-	ont:has_considered dec:Consideration\/12;
-	ont:has_considered dec:Consideration\/13;
-	ont:has_considered dec:Consideration\/14;
-	ont:has_considered dec:Consideration\/15;
-	ont:has_considered dec:Consideration\/16;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
+	ont:has_considered <Consideration/5>;
+	ont:has_considered <Consideration/6>;
+	ont:has_considered <Consideration/7>;
+	ont:has_considered <Consideration/8>;
+	ont:has_considered <Consideration/9>;
+	ont:has_considered <Consideration/10>;
+	ont:has_considered <Consideration/11>;
+	ont:has_considered <Consideration/12>;
+	ont:has_considered <Consideration/13>;
+	ont:has_considered <Consideration/14>;
+	ont:has_considered <Consideration/15>;
+	ont:has_considered <Consideration/16>;
 	ont:decision_call "ΑΠΟΦΑΣΙΖΕΙ"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:has_decided dec:Decision\/2;
-	ont:signed_by dec:Signer\/1;
-	ont:has_expense dec:Expense\/1;
+	ont:has_decided <Decision/1>;
+	ont:has_decided <Decision/2>;
+	ont:signed_by <Signer/1>;
+	ont:has_expense <Expense/1>;
 	ont:thematic_category "Employment";
 	ont:has_private_data false;
 	ont:organization_id "99219667";
 	ont:submission_timestamp "1452675672553";
 	ont:unit_id "76046".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Την υπ’ αριθμ. 090/20/22-12-03 (Φ.ΕΚ. 1957/τ.Β/31-12-03) Απόφαση του Διοικητή του ΙΚΑ περί εκχωρήσεως ορισμένων αρμοδιοτήτων του σε άλλα όργανα του Ιδρύματος."@el.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "Την υπ’ αριθμ. 7/2004 εγκύκλιο ΙΚΑ ΕΤΑΜ"@el.
 
-dec:Consideration\/3 a ont:Consideration;
+<Consideration/3> a ont:Consideration;
 	ont:has_text "Το Π.Δ. 266/89 «Οργανισμός του ΙΚΑ» (ΦΕΚ 127/τ.Α/22-05-89), όπως τροποποιήθηκε και ισχύει."@el;
 	ont:considers eli:pd\/1989\/266.
 
-dec:Consideration\/4 a ont:Consideration;
+<Consideration/4> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Ν. 2286/95 (ΦΕΚ 19/τ.Α/1-2-95) «Προμήθειες του Δημοσίου τομέα και ρυθμίσεις συναφών θεμάτων», όπως τροποποιήθηκε και ισχύει."@el;
 	ont:considers eli:law\/1995\/2286.
 
-dec:Consideration\/5 a ont:Consideration;
+<Consideration/5> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του άρθρου 83 παρ. 1 του Ν. 2362/95 (ΦΕΚ 247/τ.Α/27-10-95) «Περί Δημοσίου Λογιστικού ελέγχου των δαπανών του κράτους και άλλες διατάξεις», όπως τροποποιήθηκε και ισχύει."@el;
 	ont:considers eli:law\/1995\/2362\/article\/83\/paragraph\/1.
 
-dec:Consideration\/6 a ont:Consideration;
+<Consideration/6> a ont:Consideration;
 	ont:has_text "Την υπ’ αριθ. 35130/739/9-08-10 (ΦΕΚ 1291/τ.Β/11-08-10) Απόφαση του Υπουργού Οικονομικών με τίτλο: «Αύξηση των χρηματικών ποσών του άρθρου 83 παρ. 1 του Ν. 2362/95 για τη σύναψη δημοσίων συμβάσεων που αφορούν προμήθεια προϊόντων, παροχή υπηρεσιών ή εκτέλεση έργων» σχετικά με την αναπροσαρμογή της απευθείας ανάθεσης μέχρι του ποσού των 20.000,00 € πλέον ΦΠΑ."@el.
 
-dec:Consideration\/7 a ont:Consideration;
+<Consideration/7> a ont:Consideration;
 	ont:has_text "Την υπ’ αριθμ. οικ Φ.Α./9.2/ΟΙΚ. 28425/22-12-08 ΚΥΑ (ΦΕΚ 2604/τ.Β/22-12-08)"@el.
 
-dec:Consideration\/8 a ont:Consideration;
+<Consideration/8> a ont:Consideration;
 	ont:has_text "Αναλογικά τις διατάξεις του Π.Δ.118/07 (ΦΕΚ 150/τ.Α/10-7-07) «Κανονισμός Προμηθειών του Δημοσίου»."@el;
 	ont:considers eli:pd\/2007\/118.
 
-dec:Consideration\/9 a ont:Consideration;
+<Consideration/9> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Ν. 3861/2010 (ΦΕΚ 112/τ.Α/13-7-10) «Ενίσχυση της διαφάνειας με την υποχρεωτική ανάρτηση νόμων και πράξεων των κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο Διαδίκτυο “Πρόγραμμα Διαύγεια” και άλλες διατάξεις»."@el;
 	ont:considers eli:law\/2010\/3861.
 
-dec:Consideration\/10 a ont:Consideration;
+<Consideration/10> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Ν. 4013/2011 (ΦΕΚ 204/τ.Α/15-9-11) «Σύσταση Ενιαίας Ανεξάρτητης Αρχής Δημοσίων Συμβάσεων και Κεντρικού Ηλεκτρονικού Μητρώου Συμβάσεων»."@el;
 	ont:considers eli:law\/2011\/4013.
 
-dec:Consideration\/11 a ont:Consideration;
+<Consideration/11> a ont:Consideration;
 	ont:has_text "Το άρθρο 5 του Ν. 861/79 (ΦΕΚ 2/τ.Α/5-1-79)"@el;
 	ont:considers eli:law\/1979\/861\/article\/5.
 
-dec:Consideration\/12 a ont:Consideration;
+<Consideration/12> a ont:Consideration;
 	ont:has_text "Την υπ’ αριθμ. 11162/2013 απόφαση Διευθυντή του Υποκ/τος μας σχετικής με ορισμό επιτροπών συλλογής-αξιολόγησης και παραλαβής του είδους."@el.
 
-dec:Consideration\/13 a ont:Consideration;
+<Consideration/13> a ont:Consideration;
 	ont:has_text "Τις ανάγκες του Υποκ/τος"@el.
 
-dec:Consideration\/14 a ont:Consideration;
+<Consideration/14> a ont:Consideration;
 	ont:has_text "Το γεγονός ότι η δαπάνη δεν μπορεί να αντιμετωπισθεί από το μικρό ταμείο"@el.
 
-dec:Consideration\/15 a ont:Consideration;
+<Consideration/15> a ont:Consideration;
 	ont:has_text "Τις προσφορές των προμηθευτών"@el.
 
-dec:Consideration\/16 a ont:Consideration;
+<Consideration/16> a ont:Consideration;
 	ont:has_text "Το, από 12/1/2016, πρακτικό της επιτροπής συλλογής και αξιολόγησης των προσφορών"@el.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
 	ont:has_text "Την έγκριση του, από 12/1/2016, πρακτικού της επιτροπής ύστερα από τη συνοπτική διαγωνιστική διαδικασία της απευθείας ανάθεσης μετά από απλή συλλογή προσφορών."@el.
 
-dec:Decision\/2 a ont:Decision;
+<Decision/2> a ont:Decision;
 	ont:has_text "Κατακυρώνει, σύμφωνα με το ανωτέρω πρακτικό και με κριτήριο αξιολόγησης την χαμηλότερη τιμή, την απευθείας ανάθεση του έργου: «ΣΥΝΤΗΡΗΣΗ 3 ΑΝΕΛΚΥΣΤΗΡΩΝ ΙΚΑ ΕΤΑΜ Αχαρνών» στην τεχνική εταιρεία ανελκυστήρων με την επωνυμία ΘΕΟΔΩΡΟΣ ΑΡΒΑΝΙΤΗΣ & ΣΙΑ Ο.Ε  Το έργο ανατίθεται για ένα χρόνο, ήτοι για το χρονικό διάστημα από 1/1/2016 μέχρι 31/12/2016, με δικαίωμα μονομερούς ανανέωσης της σύμβασης εκ μέρους του Υποκ/τος για άλλους δώδεκα (12) μήνες με την ίδια μηνιαία αμοιβή, στην ετήσια τιμή των δύο χιλιάδων οκτακοσίων τεσσάρων ευρώ και σαράντα λεπτών (2.804,40) € συμπεριλαμβανομένου του Φ.Π.Α. 23%, και αναλυτικά: 233,70 € / μήνα Χ 12 μήνες = 2.804,40 € συμπεριλαμβανομένου Φ.Π.Α. 23%,  Οι τρεις ανελκυστήρες είναι εγκατεστημένοι στο μισθωμένο κτίριο επί των οδών Κύμης & Επταλόφου στο οποίο συστεγάζονται η Μονάδα Ασφάλισης ΙΚΑ ΕΤΑΜ Αχαρνών και η Μονάδα Υγείας ΠΕΔΥ Αχαρών. Το κτίριο είναι με μικτή χρήση και σύμφωνα με το Γ 31/ 2618/19-10-2015 έγγραφο της Γενικής Δ/νσης Οικ/τεχνικών Υπηρεσιών – Δ/νση Τεχνικής & Στέγασης που αφορά στην 6η επικαιροποίηση του πίνακα κατανομής δαπανών στα κτίρια με μικτή χρήση ΙΚΑ ΕΤΑΜ & ΠΕΔΥ, η δαπάνη αυτή ανήκει στην κατηγορία Α’ και το ποσοστό της δαπάνης για το ΙΚΑ ΕΤΑΜ είναι 45% και για το ΠΕΔΥ 55%, ήτοι: Α] για το ΙΚΑ ΕΤΑΜ (ΚΑΕ: 620720887902) η ετήσια δαπάνη είναι: 2.804,40 € Χ 0,45 = 1.262,04 € συμπεριλαμβανομένου του ΦΠΑ 23% (ήτοι: 85,50 Χ 23% Φ.Π.Α. = 105,17 € μηνιαίως) Β] για την Υγειονομική Μονάδα ΠΕΔΥ (ΚΑΕ: 339320887930) είναι: 2.804,40 € Χ 0,55 = 1.542,36 € συμπεριλαμβανομένου του ΦΠΑ 23% (ήτοι: 104,50 Χ 23% Φ.Π.Α. = 128,53 € μηνιαίως) Σημειώνεται ότι: 1] Σε περίπτωση που μετά από σχετική απόφαση της Διοίκησης του Φορέα ανασταλεί η λειτουργία μέρους ή ολόκληρης της Μονάδας θα διακοπεί η, μεταξύ των συμβαλλομένων, υπογραφείσα σύμβαση κατά το μέρος αυτό χωρίς ουδεμία απαίτηση εκ μέρους του Αναδόχου. Επιπλέον η Υπηρεσία διατηρεί το δικαίωμα μονομερούς διακοπής της σύμβασης, για οποιονδήποτε λόγο, χωρίς να οφείλει οποιαδήποτε αποζημίωση, ενημερώνοντας το τεχνικό γραφείο εγγράφως είκοσι (20) ημέρες πριν τη διακοπή της σύμβασης. 2] Ο ανάδοχος με την υπογραφή της σύμβασης ανάθεσης της συντήρησης υποχρεούται να καταθέσει αντίγραφο της άδειας συνεργείου συντήρησης από τη Διεύθυνση Ανάπτυξης της οικείας Νομαρχιακής Αυτοδιοίκησης, η οποία θα πρέπει να είναι σε ισχύ. Σε περίπτωση που δεν κατατεθεί η ανάθεση θα γίνει στον αμέσως επόμενο μειοδότη."@el.
 
-dec:Sponsored\/1 a ont:Sponsored;
+<Sponsored/1> a ont:Sponsored;
 	ont:afm "800579607";
 	ont:afm_type "Εθνικό"@el;
 	ont:name "Θ ΑΡΒΑΝΙΤΗΣ ΚΑΙ ΣΙΑ ΟΕ"@el.
 
-dec:Expense\/1 a ont:Expense;
+<Expense/1> a ont:Expense;
 	ont:expense_amount "2804.4";
 	ont:expense_currency "EUR";
-	ont:has_sponsored dec:Sponsored\/1.
+	ont:has_sponsored <Sponsored/1>.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "ΔΙΕΥΘΥΝΤΗΣ"@el;
 	ont:signer_id "132989".

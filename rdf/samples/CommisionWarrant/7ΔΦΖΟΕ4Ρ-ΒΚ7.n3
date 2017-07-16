@@ -1,18 +1,18 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/>.
+@base <http://diavgeia.gov.gr/eli/decision/7ΔΦΖΟΕ4Ρ-ΒΚ7/ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:CommisionWarrant;
+<> a ont:CommisionWarrant;
 	ont:version "ca7fb4e4-b69d-46a9-b8bb-9fd1b5dbdfec";
 	ont:iun "7ΔΦΖΟΕ4Ρ-ΒΚ7"@el;
 	eli:title "Καταβολή μισθοδοσίας Φεβρουαρίου 2016, για παροχή υπηρεσιών Νοσηλεύτριας, στο Βοήθεια στο Σπίτι της Κοινωφελούς Δημοτικής Επιχείρησης ΔΕΠΟΚΑΛ Δήμου Λευκάδας."@el;
 	eli:date_publication "2016-03-03"^^<http://www.w3.org/2001/XMLSchema#date>;
 	ont:government_institution_name "ΚΟΙΝΩΦΕΛΗΣ ΔΗΜΟΤΙΚΗ ΕΠΙΧΕΙΡΗΣΗ ΠΟΛΙΤΙΣΤΙΚΗΣ ΟΙΚΟΝΟΜΙΚΗΣ ΤΟΥΡΙΣΤΙΚΗΣ & ΚΟΙΝΩΝΙΚΗΣ ΑΝΑΠΤΥΞΗΣ ΔΗΜΟΥ ΛΕΥΚΑΔΑΣ (Δ.Ε.Π.Ο.Κ.Α.Λ.)"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:has_expense_with_kae dec:ExpenseWithKae\/1;
-	ont:signed_by dec:Signer\/1;
-	ont:signed_by dec:Signer\/2;
+	ont:has_decided <Decision/1>;
+	ont:has_expense_with_kae <ExpenseWithKae/1>;
+	ont:signed_by <Signer/1>;
+	ont:signed_by <Signer/2>;
 	ont:protocol_number "ΧΕΠ 198/2016";
 	ont:thematic_category "EconomicTradeExchanges";
 	ont:has_private_data false;
@@ -24,20 +24,20 @@ dec: a ont:CommisionWarrant;
 	ont:budget_type "Φορέα"@el;
 	ont:is_budget_approval_for_org false.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
     ont:has_text "Η Κοινωφελής Δημοτική Επιχείρηση Πολιτιστικής Οικονομικής Τουριστικής και Κοινωνικής Ανάπτυξης Δήμου Λευκάδας, δια του νομίμου εκπροσώπου της, Προέδρου Δ.Σ. αυτής, Αντιδημάρχου Λευκάδας κατέβαλε στον/ ην: ΣΤΑΜΑΤΕΛΟΥ ΣΠΥΡΙΔΟΥΛΑ. Ποσό € (ολογράφως): Εννιακόσια εβδομήντα εννιά €υρώ και ογδόντα οκτώ λεπτά. Για: Καταβολή μισθοδοσίας Φεβρουαρίου 2016, για παροχή υπηρεσιών Νοσηλεύτριας, στο Βοήθεια στο Σπίτι της Κοινωφελούς Δημοτικής Επιχείρησης ΔΕΠΟΚΑΛ Δήμου Λευκάδας. Φεβρουάριος 2016: 979,88€ Συνολικές Μικτές Αποδοχές: 1.231,00€ ΚΡΑΤΗΣΕΙΣ: ΙΚΑ: 190,81€, ΦΜΥ: 53,03€, Εισφορά Αλληλεγγύης 7,28€. Καθαρό: 979,88€"@el.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "ΠΡΟΕΔΡΟΣ Δ.Σ. ΔΕΠΟΚΑΛ"@el;
 	ont:signer_job "ΑΝΤΙΔΗΜΑΡΧΟΣ ΛΕΥΚΑΔΑΣ"@el;
 	ont:signer_name "ΠΕΡΔΙΚΑΡΗΣ ΑΘΑΝΑΣΙΟΣ"@el.
 
-dec:Signer\/2 a ont:Signer;
+<Signer/2> a ont:Signer;
     ont:signer_job "ΑΡΜΟΔΙΑ ΥΠΑΛΛΗΛΟΣ"@el;
     ont:signer_name "ΑΓΓΕΛΟΥ ΟΛΓΑ"@el;
     ont:signer_id "100005700".
 
-dec:ExpenseWithKae\/1 a ont:ExpenseWithKae;
+<ExpenseWithKae/1> a ont:ExpenseWithKae;
     ont:expense_amount "979.88";
     ont:expense_amount_currency "EUR";
     ont:kae "53.00".

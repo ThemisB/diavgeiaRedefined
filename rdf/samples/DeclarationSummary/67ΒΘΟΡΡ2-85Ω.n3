@@ -1,9 +1,9 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/>.
+@base <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-dec: a ont:DeclarationSummary;
+<> a ont:DeclarationSummary;
 	ont:version "d1adf316-f432-4726-bd03-b237cbf463cb";
 	ont:iun "67ΒΘΟΡΡ2-85Ω"@el;
 	eli:title "Διενέργεια του 0516 πρόχειρου διαγωνισμού «Οδική Βοήθεια μεταφορικών μέσων ΕΛΤΑ (δικύκλων)»"@el;
@@ -11,17 +11,17 @@ dec: a ont:DeclarationSummary;
 	ont:government_institution_name "Ελληνικά Ταχυδρομεία Α.Ε."@el;
 	ont:government_institution_general_administration "Δ/νση Προμηθειών"@el;
 	ont:protocol_number "1.2.2/183";
-	ont:has_preconsideration dec:PreConsideration;
-	ont:has_considered dec:Consideration\/1;
-	ont:has_considered dec:Consideration\/2;
-	ont:has_considered dec:Consideration\/3;
-	ont:has_considered dec:Consideration\/4;
-	ont:has_considered dec:Consideration\/5;
+	ont:has_preconsideration <PreConsideration>;
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
+	ont:has_considered <Consideration/5>;
 	ont:decision_call "Αποφασίζουμε"@el;
-	ont:has_decided dec:Decision\/1;
-	ont:has_decided dec:Decision\/2;
-	ont:signed_by dec:Signer\/1;
-	ont:has_expense dec:Expense\/1;
+	ont:has_decided <Decision/1>;
+	ont:has_decided <Decision/2>;
+	ont:signed_by <Signer/1>;
+	ont:has_expense <Expense/1>;
 	ont:recipient_for_share "Δ/νση Οικονομικών - Τομέας Γενικής Λογιστικής / Πρωτόγραφο"@el;
 	ont:recipient_for_share "Δ/νση Οικονομικών - Τομέας Οικον. Σχεδιασμού & Πληροφόρησης (101 88) ΑΘΗΝΑ"@el;
 	ont:recipient_for_share "Γενικό Διευθυντή Υποστηρικτικών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;
@@ -39,30 +39,30 @@ dec: a ont:DeclarationSummary;
 	ont:submission_timestamp "1452674041256";
 	ont:unit_id "73442".
 
-dec:Consideration\/1 a ont:Consideration;
+<Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του θεσμικού και κανονιστικού πλαισίου λειτουργίας των ΕΛΤΑ που αφορούν στην άσκηση ή στη μεταβίβαση αρμοδιοτήτων, καθώς και τις διατάξεις του καταστατικού του."@el.
 
-dec:Consideration\/2 a ont:Consideration;
+<Consideration/2> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Κανονισμού Παροχής Υπηρεσιών ΕΛΤΑ (ΦΕΚ 1100/Β/22-8-01)"@el.
 
-dec:Consideration\/3 a ont:Consideration;
+<Consideration/3> a ont:Consideration;
 	ont:has_text "Το γεγονός ότι η 6143/2015 σύμβαση που είχε υπογραφεί μεταξύ των ΕΛΤΑ και της ασφαλιστικής επιχείρησης A.G.A INTERNATIONAL SA (MONDIAL ASSISTANCE) για την παροχή οδικής βοήθειας σε μεταφορικά μέσα ιδιοκτησίας ΕΛΤΑ (μοτοποδήλατα & μοτοσικλέτες), λήγει την 31.01.2016."@el.
 
-dec:Consideration\/4 a ont:Consideration;
+<Consideration/4> a ont:Consideration;
 	ont:has_text "Το 1.3.2/1406/29.12.2015 έγγραφο της Διεύθυνσης Ταχυδρομικών Λειτουργιών με το οποίο μας διαβίβασε πίνακα 823 δικύκλων, τις τεχνικές απαιτήσεις, το παραπάνω ενημερωτικό σημείωμα καθώς και όλα τα απαραίτητα στοιχεία προκειμένου να κινηθούν οι διαδικασίες διενέργειας του εν λόγω διαγωνισμού, χρονικής διάρκειας ενός (1) έτους."@el.
 
-dec:Consideration\/5 a ont:Consideration;
+<Consideration/5> a ont:Consideration;
 	ont:has_text "Το 1.3.2/1406/29.12.2015 έγγραφο της Διεύθυνσης Ταχυδρομικών Λειτουργιών με το οποίο μας διαβίβασε πίνακα 823 δικύκλων, τις τεχνικές απαιτήσεις, το παραπάνω ενημερωτικό σημείωμα καθώς και όλα τα απαραίτητα στοιχεία προκειμένου να κινηθούν οι διαδικασίες διενέργειας του εν λόγω διαγωνισμού, χρονικής διάρκειας ενός (1) έτους."@el.
 
-dec:Decision\/1 a ont:Decision;
+<Decision/1> a ont:Decision;
 	ont:has_text "Εγκρίνουμε την διενέργεια του 0516 πρόχειρου διαγωνισμού, με κριτήριο κατακύρωσης τη χαμηλότερη τιμή, για την επιλογή αναδόχου, ο οποίος θα αναλάβει το έργο της παροχής οδικής βοήθειας, για όλο το 24ωρο, σε 823 μεταφορικά μέσα, (μοτοποδήλατα & μοτοσικλέτες από 50cc μέχρι 250cc), ιδιοκτησίας ΕΛΤΑ, για χρονικό διάστημα ενός έτους με έναρξη από 01/02/2016. Ο διαγωνισμός θα διενεργηθεί σύμφωνα με τους όρους και τις απαιτήσεις της επισυναπτόμενης διακήρυξης, η οποία αποτελεί αναπόσπαστο μέρος της παρούσας απόφασης.Η σχετική δαπάνη, για ένα (1) έτος, προβλέπεται να ανέλθει, στο ποσό των δεκαέξι χιλιάδων ΕΥΡΩ (16.000€) συμπεριλαμβανομένου του ΦΠΑ, θα βαρύνει τον ΚΑΔ 62.05.01.[Ασφάλιστρα Μεταφορικών Μέσων (Οδική Βοήθεια)] και κατανέμεται, ως εξής: Προϋπολογισμός Εκμετάλλευσης ΕΛΤΑ έτους 2016, Κ.Α.Δ 62 05 01.0100-1-00001 της Περ/κης Δ/νσης Ταχυδρομικών Λειτουργιών Αττικής κατά το ποσό των 13.563 ΕΥΡΩ με α.α:1. Κ.Α.Δ 62 05 01.0300-1-00003 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Κεντρικής Μακεδονίας κατά το ποσό των 1.100 ΕΥΡΩ με α.α:2. Προϋπολογισμός Εκμετάλλευσης ΕΛΤΑ έτους 2017, Κ.Α.Δ 62 05 01.0100-1-00001 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Αττικής κατά το ποσό των 1.237 ΕΥΡΩ, Κ.Α.Δ 62 05 01.0300-1-00003 της Περ/κής Δ/νσης Ταχυδρομικών Λειτουργιών Κεντρικής Μακεδονίας κατά το ποσό των 100 ΕΥΡΩ. Oι Περιφερειακές Διευθύνσεις, να μεριμνήσουν για την ένταξη των παραπάνω ποσών στους αντίστοιχους Προϋπολογισμούς."@el.
 
-dec:Expense\/1 a ont:Expense;
+<Expense/1> a ont:Expense;
 	ont:expense_amount "13008.13";
 	ont:expense_currency "EUR";
 	ont:cpv "66000000-0";.
 
-dec:Signer\/1 a ont:Signer;
+<Signer/1> a ont:Signer;
 	ont:signer_job "ΔΙΕΥΘΥΝΤΗΣ"@el;
 	ont:signer_name "ΑΠΟΣΤΟΛΟΣ ΠΑΝΤΑΖΗΣ"@el;
 	ont:signer_id "100014730".
