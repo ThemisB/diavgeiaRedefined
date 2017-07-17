@@ -1,5 +1,11 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 6 (8 July - 14 July)**
+
+- Document blockchain (what does blockchain technology offers, installation, configuration, usage, test and disclaimer). You can find the link [here](https://github.com/eellak/gsoc17-diavgeia/blob/master/bitcoin/README.md).
+- Generate JSDoc for the application. You can find the html generated documentation [here](https://github.com/eellak/gsoc17-diavgeia/tree/master/bitcoin/jsdoc).
+- Further RDF Disk space optimizations (applied to 16 out of 32 samples). These optimizations include the use of `@prefix` and `@base` in order to shorten big URIs. Moreover, decisions are now bzip2-compressed.
+
 **Week 5 (1 July - 7 July)**
 
 - Merkle Tree Construction based on Diavgeia's decisions
