@@ -27,7 +27,7 @@
 
 <Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Ν.993/79"@el;
-	ont:considers eli:law\/1979\/993.
+	ont:considers leg:law\/1979\/993.
 
 <Decision/1> a ont:Decision;
 	ont:has_text "Την δέσμευση ποσού 9.370,08€, για καταβολή αποζημίωσης, σε αποχωρούν προσωπικό του ΟΣΕ."@el.

@@ -1,7 +1,6 @@
 @base <http://diavgeia.gov.gr/eli/decision/67ΒΘΟΡΡ2-85Ω/d1adf316-f432-4726-bd03-b237cbf463cb/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
-@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
 <> a ont:DeclarationSummary;
 	ont:version "d1adf316-f432-4726-bd03-b237cbf463cb";

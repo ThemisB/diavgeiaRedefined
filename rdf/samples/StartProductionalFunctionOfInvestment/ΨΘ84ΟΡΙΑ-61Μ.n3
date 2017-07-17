@@ -1,170 +1,175 @@
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9> a <http://diavgeia.gov.gr/ontology/StartProductionalFunctionOfInvestment>;
-	<http://diavgeia.gov.gr/ontology/version> "4a507964-9a1e-451b-96d5-dea846bc97f9";
-	<http://diavgeia.gov.gr/ontology/iun> "ΨΘ84ΟΡΙΑ-61Μ"@el;
-	<http://data.europa.eu/eli/ontology#title> "Α. Έγκριση των Τεχνικών Προδιαγραφών για την εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των  ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017, αποτελούμενες από:1. Την Γενική – Ειδική Συγγραφή Υποχρεώσεων. 2. Την Τεχνική Έκθεση-Τεχνικές Περιγραφές.  3. Τον  Ενδεικτικό Προϋπολογισμό.4. Τον Προϋπολογισμό Προσφοράς, (για συμπλήρωση από τον  υποψήφιο προμηθευτή).5. Το  Τιμολόγιο Προσφοράς, (για συμπλήρωση από τον  υποψήφιο προμηθευτή).Τα ανωτέρω στοιχεία με αρίθμηση 1, 2, 4 & 5, αποτελούν τα συμβατικά στοιχεία της  εργασίας.\nB. Εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των  ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017, με την διαδικασία της απ’ ευθείας ανάθεσης, μετά από συλλογή σφραγισμένων προσφορών από το ελεύθερο εμπόριο και συμπλήρωση Προϋπολογισμού Προσφοράς και Τιμολογίου Προσφοράς και με κριτήριο κατακύρωσης την χαμηλότερη τιμή (χωρίς ΦΠΑ) για το σύνολο των εργασιών επί της τιμής του ενδεικτικού Προϋπολογισμού της Υπηρεσίας υπό την προϋπόθεση οι προσφερόμενες τιμές να ευρίσκονται εντός των τιμών του ενδεικτικού Προϋπολογισμού της Υπηρεσίας."@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2016-06-14"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "ΔΗΜΟΤΙΚΟ ΒΡΕΦΟΚΟΜΕΙΟ ΑΘΗΝΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_general_administration> "ΔΙΕΥΘΥΝΣΗ ΠΡΟΜΗΘΕΙΩΝ, ΔΙΑΧΕΙΡΙΣΗΣ ΥΛΙΚΩΝ ΚΑΙ ΕΣΤΙΑΣΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_department> "ΤΜΗΜΑ ΠΡΟΜΗΘΕΙΩΝ & ΔΗΜΟΠΡΑΣΙΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Ρόδου 181 & Σερήνου, Σεπόλια"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "10443";
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2105123524";
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2105123524";
-	<http://diavgeia.gov.gr/ontology/government_institution_email> "dbasup3@otenet.gr";
-	<http://diavgeia.gov.gr/ontology/protocol_number> "8656/3860/1805/14-06-2016";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/2>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/3>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/4>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/5>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/6>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/7>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/8>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/9>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/10>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/11>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/12>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/13>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/14>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/15>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/16>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/17>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/18>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/19>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/20>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/21>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/22>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/23>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/24>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/25>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/26>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "Αποφασίζει"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Decision/2>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/recipient> "ΤΜΗΜΑ ΠΡΟΜΗΘΕΙΩΝ & ΔΗΜΟΠΡΑΣΙΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "ΑΥΤΟΤΕΛΕΣ ΤΜΗΜΑ ΔΙΟΙΚΗΣΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/recipient_for_share> "Δ/ΝΣΗ ΠΡΟΜΗΘΕΙΩΝ, ΔΙΑΧΕΙΡΙΣΗΣ ΥΛΙΚΩΝ & ΕΣΤΙΑΣΗΣ"@el;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "50381";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1465905620397";
-	<http://diavgeia.gov.gr/ontology/unit_id> "82528".
+@base <http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις της παραγράφου 2 του άρθρου 209 και του άρθρου 273 του Ν. 3463/2006 «Κύρωση του Κώδικα Δήμων & Κοινοτήτων» (ΦΕΚ 114/Α΄/8-6-2006)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/209/paragraph/2>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/273/paragraph/2>.
+<> a ont:StartProductionalFunctionOfInvestment;
+	ont:version "4a507964-9a1e-451b-96d5-dea846bc97f9";
+	ont:iun "ΨΘ84ΟΡΙΑ-61Μ"@el;
+	eli:title "Α. Έγκριση των Τεχνικών Προδιαγραφών για την εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των  ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017, αποτελούμενες από:1. Την Γενική – Ειδική Συγγραφή Υποχρεώσεων. 2. Την Τεχνική Έκθεση-Τεχνικές Περιγραφές.  3. Τον  Ενδεικτικό Προϋπολογισμό.4. Τον Προϋπολογισμό Προσφοράς, (για συμπλήρωση από τον  υποψήφιο προμηθευτή).5. Το  Τιμολόγιο Προσφοράς, (για συμπλήρωση από τον  υποψήφιο προμηθευτή).Τα ανωτέρω στοιχεία με αρίθμηση 1, 2, 4 & 5, αποτελούν τα συμβατικά στοιχεία της  εργασίας.\nB. Εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των  ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017, με την διαδικασία της απ’ ευθείας ανάθεσης, μετά από συλλογή σφραγισμένων προσφορών από το ελεύθερο εμπόριο και συμπλήρωση Προϋπολογισμού Προσφοράς και Τιμολογίου Προσφοράς και με κριτήριο κατακύρωσης την χαμηλότερη τιμή (χωρίς ΦΠΑ) για το σύνολο των εργασιών επί της τιμής του ενδεικτικού Προϋπολογισμού της Υπηρεσίας υπό την προϋπόθεση οι προσφερόμενες τιμές να ευρίσκονται εντός των τιμών του ενδεικτικού Προϋπολογισμού της Υπηρεσίας."@el;
+	eli:date_publication "2016-06-14"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "ΔΗΜΟΤΙΚΟ ΒΡΕΦΟΚΟΜΕΙΟ ΑΘΗΝΩΝ"@el;
+	ont:government_institution_general_administration "ΔΙΕΥΘΥΝΣΗ ΠΡΟΜΗΘΕΙΩΝ, ΔΙΑΧΕΙΡΙΣΗΣ ΥΛΙΚΩΝ ΚΑΙ ΕΣΤΙΑΣΗΣ"@el;
+	ont:government_institution_department "ΤΜΗΜΑ ΠΡΟΜΗΘΕΙΩΝ & ΔΗΜΟΠΡΑΣΙΩΝ"@el;
+	ont:government_institution_address "Ρόδου 181 & Σερήνου, Σεπόλια"@el;
+	ont:government_institution_postalcode "10443";
+	ont:government_institution_phone "2105123524";
+	ont:government_institution_fax "2105123524";
+	ont:government_institution_email "dbasup3@otenet.gr";
+	ont:protocol_number "8656/3860/1805/14-06-2016";
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:has_considered <Consideration/3>;
+	ont:has_considered <Consideration/4>;
+	ont:has_considered <Consideration/5>;
+	ont:has_considered <Consideration/6>;
+	ont:has_considered <Consideration/7>;
+	ont:has_considered <Consideration/8>;
+	ont:has_considered <Consideration/9>;
+	ont:has_considered <Consideration/10>;
+	ont:has_considered <Consideration/11>;
+	ont:has_considered <Consideration/12>;
+	ont:has_considered <Consideration/13>;
+	ont:has_considered <Consideration/14>;
+	ont:has_considered <Consideration/15>;
+	ont:has_considered <Consideration/16>;
+	ont:has_considered <Consideration/17>;
+	ont:has_considered <Consideration/18>;
+	ont:has_considered <Consideration/19>;
+	ont:has_considered <Consideration/20>;
+	ont:has_considered <Consideration/21>;
+	ont:has_considered <Consideration/22>;
+	ont:has_considered <Consideration/23>;
+	ont:has_considered <Consideration/24>;
+	ont:has_considered <Consideration/25>;
+	ont:has_considered <Consideration/26>;
+	ont:decision_call "Αποφασίζει"@el;
+	ont:has_decided <Decision/1>;
+	ont:has_decided <Decision/2>;
+	ont:signed_by <Signer/1>;
+	ont:recipient "ΤΜΗΜΑ ΠΡΟΜΗΘΕΙΩΝ & ΔΗΜΟΠΡΑΣΙΩΝ"@el;
+	ont:recipient_for_share "ΑΥΤΟΤΕΛΕΣ ΤΜΗΜΑ ΔΙΟΙΚΗΣΗΣ"@el;
+	ont:recipient_for_share "Δ/ΝΣΗ ΠΡΟΜΗΘΕΙΩΝ, ΔΙΑΧΕΙΡΙΣΗΣ ΥΛΙΚΩΝ & ΕΣΤΙΑΣΗΣ"@el;
+	ont:thematic_category "EconomicTradeExchanges";
+	ont:has_private_data false;
+	ont:organization_id "50381";
+	ont:submission_timestamp "1465905620397";
+	ont:unit_id "82528".
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις της παραγράφου 13 του άρθρου 20, του Ν. 3731/2008 «Αναδιοργάνωση της Δημοτικής Αστυνομίας και ρυθμίσεις λοιπών θεμάτων αρμοδιότητος Υπουργείου Εσωτερικών» (ΦΕΚ 263/Α΄/23-12-2008) με την οποία προστίθενται οι παράγραφοι 9 και 10 στο άρθρο 209 του Ν. 3463/2006."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2008/3731/article/20/paragraph/13>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/209/paragraph/9>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/209/paragraph/10>.
+<Consideration/1> a ont:Consideration;
+	ont:has_text "Τις διατάξεις της παραγράφου 2 του άρθρου 209 και του άρθρου 273 του Ν. 3463/2006 «Κύρωση του Κώδικα Δήμων & Κοινοτήτων» (ΦΕΚ 114/Α΄/8-6-2006)."@el;
+	ont:considers leg:law\/2006\/3463\/article\/209\/paragraph\/2;
+	ont:considers leg:law\/2006\/3463\/article\/273\/paragraph\/2.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/3> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τον Ν. 3852/7-6-10 «Νέα αρχιτεκτονική της Αυτοδιοίκησης και της Αποκεντρωμένης Διοίκησης-Πρόγραμμα Καλλικράτης» (ΦΕΚ 87 /Α/7-6-2010)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3852>.
+<Consideration/2> a ont:Consideration;
+	ont:has_text "Τις διατάξεις της παραγράφου 13 του άρθρου 20, του Ν. 3731/2008 «Αναδιοργάνωση της Δημοτικής Αστυνομίας και ρυθμίσεις λοιπών θεμάτων αρμοδιότητος Υπουργείου Εσωτερικών» (ΦΕΚ 263/Α΄/23-12-2008) με την οποία προστίθενται οι παράγραφοι 9 και 10 στο άρθρο 209 του Ν. 3463/2006."@el;
+	ont:considers leg:law\/2008\/3731\/article\/20\/paragraph\/13;
+	ont:considers leg:law\/2006\/3463\/article\/209\/paragraph\/9;
+	ont:considers leg:law\/2006\/3463\/article\/209\/paragraph\/10.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/4> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το Π.Δ. 28/80 «Περί εκτελέσεως έργων και προμηθειών Οργανισμών Τοπικής Αυτοδιοίκησης» (Φ.Ε.Κ. 11/Α/15-1-1980)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/1980/28>.
+<Consideration/3> a ont:Consideration;
+	ont:has_text "Τον Ν. 3852/7-6-10 «Νέα αρχιτεκτονική της Αυτοδιοίκησης και της Αποκεντρωμένης Διοίκησης-Πρόγραμμα Καλλικράτης» (ΦΕΚ 87 /Α/7-6-2010)."@el;
+	ont:considers leg:law\/2010\/3852.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/5> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του άρθρου 83 του Ν. 2362/1995 «Περί Δημοσίου, έλεγχου των δαπανών του κράτους και άλλες διατάξεις» (ΦΕΚ 247/27-11-1995/ Α΄) και τις διατάξεις του άρθρου 21 του Ν. 2362/1995 «Περί Δημοσίου, έλεγχου των δαπανών του κράτους και άλλες διατάξεις» (ΦΕΚ 247/27-11-1995/Α΄), όπως αυτό αντικαταστάθηκε από το άρθρο 21 του Ν. 3871/2010 «Δημοσιονομική Διαχείριση και Ευθύνη» (ΦΕΚ 141/Α΄) και ισχύει."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1995/2362/article/83>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/1995/2362/article/21>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3871/article/21>.
+<Consideration/4> a ont:Consideration;
+	ont:has_text "Το Π.Δ. 28/80 «Περί εκτελέσεως έργων και προμηθειών Οργανισμών Τοπικής Αυτοδιοίκησης» (Φ.Ε.Κ. 11/Α/15-1-1980)."@el;
+	ont:considers leg:pd\/1980\/28.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/6> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ’αριθμ. 35130/739/09-08-2010 απόφαση Υπουργού Οικονομικών «Αύξηση των χρηματικών ορίων του άρθρου 83 παραγ. 1 του Ν. 2362/95» (ΦΕΚ 1291/ Β /11-08-2010)."@el.
+<Consideration/5> a ont:Consideration;
+	ont:has_text "Τις διατάξεις του άρθρου 83 του Ν. 2362/1995 «Περί Δημοσίου, έλεγχου των δαπανών του κράτους και άλλες διατάξεις» (ΦΕΚ 247/27-11-1995/ Α΄) και τις διατάξεις του άρθρου 21 του Ν. 2362/1995 «Περί Δημοσίου, έλεγχου των δαπανών του κράτους και άλλες διατάξεις» (ΦΕΚ 247/27-11-1995/Α΄), όπως αυτό αντικαταστάθηκε από το άρθρο 21 του Ν. 3871/2010 «Δημοσιονομική Διαχείριση και Ευθύνη» (ΦΕΚ 141/Α΄) και ισχύει."@el;
+	ont:considers leg:law\/1995\/2362\/article\/83;
+	ont:considers leg:law\/1995\/2362\/article\/21;
+	ont:considers leg:law\/2010\/3871\/article\/21.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/7> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις της υποπαρ. Ζ5 της παρ.Ζ του Ν. 4152/2013 «ΣΥΝΑΛΛΑΓΕΣ ΜΕΤΑΞΥ ΕΠΙΧΕΙΡΗΣΕΩΝ ΚΑΙ ΔΗΜΟΣΙΩΝ ΑΡΧΩΝ» (Άρθρο 4 Οδηγία 2011/7 ΕΕ ΤΟΥ ΕΥΡΩΠΑΪΚΟΥ ΚΟΙΝΟΒΟΥΛΙΟΥ ΚΑΙ ΤΟΥ ΣΥΜΒΟΥΛΙΟΥ της 16ης Φεβρουαρίου 2011, για την καταπολέμηση των καθυστερήσεων πληρωμών στις εμπορικές συναλλαγές"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2013/4152>.
+<Consideration/6> a ont:Consideration;
+	ont:has_text "Την υπ’αριθμ. 35130/739/09-08-2010 απόφαση Υπουργού Οικονομικών «Αύξηση των χρηματικών ορίων του άρθρου 83 παραγ. 1 του Ν. 2362/95» (ΦΕΚ 1291/ Β /11-08-2010)."@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/8> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το Π.Δ. 113/2010 «Ανάληψη υποχρεώσεων από τους διατάκτες» (ΦΕΚ 194/Α/22-11-2010)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2010/113>.
+<Consideration/7> a ont:Consideration;
+	ont:has_text "Τις διατάξεις της υποπαρ. Ζ5 της παρ.Ζ του Ν. 4152/2013 «ΣΥΝΑΛΛΑΓΕΣ ΜΕΤΑΞΥ ΕΠΙΧΕΙΡΗΣΕΩΝ ΚΑΙ ΔΗΜΟΣΙΩΝ ΑΡΧΩΝ» (Άρθρο 4 Οδηγία 2011/7 ΕΕ ΤΟΥ ΕΥΡΩΠΑΪΚΟΥ ΚΟΙΝΟΒΟΥΛΙΟΥ ΚΑΙ ΤΟΥ ΣΥΜΒΟΥΛΙΟΥ της 16ης Φεβρουαρίου 2011, για την καταπολέμηση των καθυστερήσεων πληρωμών στις εμπορικές συναλλαγές"@el;
+	ont:considers leg:law\/2013\/4152.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/9> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το Π.Δ. 136/11(ΦΕΚ. 267 Α΄) «Περί καθορισμού κατώτατου ύψους των δαπανών που ελέγχονται από το Ελεγκτικό Συνέδριο»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/2011/136>.
+<Consideration/8> a ont:Consideration;
+	ont:has_text "Το Π.Δ. 113/2010 «Ανάληψη υποχρεώσεων από τους διατάκτες» (ΦΕΚ 194/Α/22-11-2010)."@el;
+	ont:considers leg:pd\/2010\/113.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/10> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τον Ν. 3861/10(ΦΕΚ.112/Α΄/13-07-2010)«Ενίσχυση της διαφάνειας με την υποχρεωτικήανάρτηση νόμων και πράξεων των κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο διαδύκτιο (Πρόγραμμα ΔΙΑΥΓΕΙΑ)»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2010/3861>.
+<Consideration/9> a ont:Consideration;
+	ont:has_text "Το Π.Δ. 136/11(ΦΕΚ. 267 Α΄) «Περί καθορισμού κατώτατου ύψους των δαπανών που ελέγχονται από το Ελεγκτικό Συνέδριο»"@el;
+	ont:considers leg:pd\/2011\/136.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/11> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τον Ν. 4013/2011 «Σύσταση Ενιαίας Ανεξάρτητης Αρχής Δημοσίων Συμβάσεων» και την ΚΥΑ Π1/2380/18-12-12 (ΦΕΚ 3400/20-12-12,τ.Β΄) όπου ρυθμίζεται η λειτουργία και η διαχείριση του Κεντρικού Ηλεκτρονικού Μητρώου Δημοσίων Συμβάσεων."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2011/4013>.
+<Consideration/10> a ont:Consideration;
+	ont:has_text "Τον Ν. 3861/10(ΦΕΚ.112/Α΄/13-07-2010)«Ενίσχυση της διαφάνειας με την υποχρεωτικήανάρτηση νόμων και πράξεων των κυβερνητικών, διοικητικών και αυτοδιοικητικών οργάνων στο διαδύκτιο (Πρόγραμμα ΔΙΑΥΓΕΙΑ)»"@el;
+	ont:considers leg:law\/2010\/3861.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/12> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 4281/2014 (Φ.Ε.Κ. 160/Α΄/08-08-2014) «Μέτρα στήριξης και ανάπτυξης της ελληνικής οικονομίας, οργανωτικά θέματα Υπουργείου Οικονομικών και άλλες διατάξεις»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2014/4281>.
+<Consideration/11> a ont:Consideration;
+	ont:has_text "Τον Ν. 4013/2011 «Σύσταση Ενιαίας Ανεξάρτητης Αρχής Δημοσίων Συμβάσεων» και την ΚΥΑ Π1/2380/18-12-12 (ΦΕΚ 3400/20-12-12,τ.Β΄) όπου ρυθμίζεται η λειτουργία και η διαχείριση του Κεντρικού Ηλεκτρονικού Μητρώου Δημοσίων Συμβάσεων."@el;
+	ont:considers leg:law\/2011\/4013.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/13> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το άρθρο 37 του Ν. 4320/2015 (Φ.Ε.Κ. 29/Α΄/19-03-2015) «Ρυθμίσεις για την λήψη άμεσων μέτρων για την αντιμετώπιση της ανθρωπιστικής κρίσης, την οργάνωση των Κυβερνητικών οργάνων και λοιπές διατάξεις»"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2015/4320/article/37>.
+<Consideration/12> a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Ν. 4281/2014 (Φ.Ε.Κ. 160/Α΄/08-08-2014) «Μέτρα στήριξης και ανάπτυξης της ελληνικής οικονομίας, οργανωτικά θέματα Υπουργείου Οικονομικών και άλλες διατάξεις»"@el;
+	ont:considers leg:law\/2014\/4281.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/14> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τις διατάξεις του Ν. 4354/15 «Διαχείριση των μη εξυπηρετούμενων δανείων, μισθολογικές ρυθμίσεις και άλλες επείγουσες διατάξεις εφαρμογής της συμφωνίας δημοσιονομικών στόχων και διαρθρωτικών μεταρρυθμίσεων», (Φ.Ε.Κ. 176/Α΄/16-12-2015)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2015/4354>.
+<Consideration/13> a ont:Consideration;
+	ont:has_text "Το άρθρο 37 του Ν. 4320/2015 (Φ.Ε.Κ. 29/Α΄/19-03-2015) «Ρυθμίσεις για την λήψη άμεσων μέτρων για την αντιμετώπιση της ανθρωπιστικής κρίσης, την οργάνωση των Κυβερνητικών οργάνων και λοιπές διατάξεις»"@el;
+	ont:considers leg:law\/2015\/4320\/article\/37.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/15> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το άρθρο 93 του Ν. 4368/2016 «Μέτρα για την επιτάχυνση του κυβερνητικού έργου και άλλες διατάξεις» (Φ.Ε.Κ.21/Α΄/21-02-2016)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2016/4368/article/93>.
+<Consideration/14> a ont:Consideration;
+	ont:has_text "Τις διατάξεις του Ν. 4354/15 «Διαχείριση των μη εξυπηρετούμενων δανείων, μισθολογικές ρυθμίσεις και άλλες επείγουσες διατάξεις εφαρμογής της συμφωνίας δημοσιονομικών στόχων και διαρθρωτικών μεταρρυθμίσεων», (Φ.Ε.Κ. 176/Α΄/16-12-2015)."@el;
+	ont:considers leg:law\/2015\/4354.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/16> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το άρθρο 3 του N. 4380/2016 «Κύρωση της Συμφωνίας Κοινού Αεροπορικού Χώρου μεταξύ της Ευρωπαϊκής Ένωσης και των κρατών – μελών της και της Δημοκρατίας της Μολδαβίας και άλλες διατάξεις» (Φ.Ε.Κ. 66/Α΄/15/04/2016)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2016/4380/article/3>.
+<Consideration/15> a ont:Consideration;
+	ont:has_text "Το άρθρο 93 του Ν. 4368/2016 «Μέτρα για την επιτάχυνση του κυβερνητικού έργου και άλλες διατάξεις» (Φ.Ε.Κ.21/Α΄/21-02-2016)."@el;
+	ont:considers leg:law\/2016\/4368\/article\/93.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/17> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ. πρωτ. 406563/17-10-2014 (Α.Δ.Α: ΩΤ00Ω6Μ-ΥΡ8) Απόφαση Δημάρχου που έλαβε στο Δημοτικού Βρεφοκομείου Αθηνών αριθμ. πρωτ. 19777/20-10-2014"@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/ΩΤ00Ω6Μ-ΥΡ8>.
+<Consideration/16> a ont:Consideration;
+	ont:has_text "Το άρθρο 3 του N. 4380/2016 «Κύρωση της Συμφωνίας Κοινού Αεροπορικού Χώρου μεταξύ της Ευρωπαϊκής Ένωσης και των κρατών – μελών της και της Δημοκρατίας της Μολδαβίας και άλλες διατάξεις» (Φ.Ε.Κ. 66/Α΄/15/04/2016)."@el;
+	ont:considers leg:law\/2016\/4380\/article\/3.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/18> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ. 318/2015 (ΑΔΑ: 7ΣΨΘΟΡΙΑ-ΨΩΡ) Πράξη του Δ.Σ. του Δ.Β.Α., με την οποία ορίζεται ένα μέλος του Διοικητικού Συμβουλίου καθώς και το αναπληρωματικό του, ως μέλη επιτροπών για την βεβαίωση καλής εκτέλεσης των εργασιών και των μεταφορών (Π.Δ. 28/80) για το έτος 2016."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/7ΣΨΘΟΡΙΑ-ΨΩΡ>.
+<Consideration/17> a ont:Consideration;
+	ont:has_text "Την αριθμ. πρωτ. 406563/17-10-2014 (Α.Δ.Α: ΩΤ00Ω6Μ-ΥΡ8) Απόφαση Δημάρχου που έλαβε στο Δημοτικού Βρεφοκομείου Αθηνών αριθμ. πρωτ. 19777/20-10-2014"@el;
+	ont:considers <http://diavgeia.gov.gr/eli/decision/ΩΤ00Ω6Μ-ΥΡ8>.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/19> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ. 3543/2015 (ΑΔΑ: 6ΜΟΑΟΡΙΑ-ΦΑΩ) Απόφαση της Προέδρου του Δ.Σ. του Δ.Β.Α., με την οποία ορίσθηκαν κατόπιν κληρώσεως τα μέλη επιτροπών από υπαλλήλους του Ιδρύματος για τη βεβαίωση καλής εκτέλεσης των εργασιών και των μεταφορών που θα εκτελεσθούν με τις διατάξεις του Π.Δ. 28/80 «Περί εκτελέσεως έργων και προμηθειών Οργανισμών Τοπικής Αυτοδιοίκησης» (Φ.Ε.Κ. 11/Α/15-1-1980) για το έτος 2016, σε συνδυασμό με τις διατάξεις των άρθρων 209 παρ. 2, 273 παρ. 1, 227 του Ν. 3463/06 «Κύρωση του Κώδικα Δήμων και Κοινοτήτων» (Φ.Ε.Κ. 114/Α/8-6-2006)."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/6ΜΟΑΟΡΙΑ-ΦΑΩ>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/pd/1980/28>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/209/paragraph/2>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/273/paragraph/1>;
-	<http://diavgeia.gov.gr/ontology/considers> <http://legislation.di.uoa.gr/eli/law/2006/3463/article/227>.
+<Consideration/18> a ont:Consideration;
+	ont:has_text "Την αριθμ. 318/2015 (ΑΔΑ: 7ΣΨΘΟΡΙΑ-ΨΩΡ) Πράξη του Δ.Σ. του Δ.Β.Α., με την οποία ορίζεται ένα μέλος του Διοικητικού Συμβουλίου καθώς και το αναπληρωματικό του, ως μέλη επιτροπών για την βεβαίωση καλής εκτέλεσης των εργασιών και των μεταφορών (Π.Δ. 28/80) για το έτος 2016."@el;
+	ont:considers <http://diavgeia.gov.gr/eli/decision/7ΣΨΘΟΡΙΑ-ΨΩΡ>.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/20> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ. πρωτ. 96974/52152/13-01-2016 Απόφαση του Γενικού Γραμματέα της Αποκεντρωμένης Διοίκησης Αττικής, περί επικύρωσης του προϋπολογισμού του Δημοτικού Βρεφοκομείου Αθηνών οικονομικού έτους 2016, στον οποίο υπάρχει εγγεγραμμένη πίστωση ποσού #1.000,00#€ χιλίων ευρώ στον Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων»."@el.
+<Consideration/19> a ont:Consideration;
+	ont:has_text "Την αριθμ. 3543/2015 (ΑΔΑ: 6ΜΟΑΟΡΙΑ-ΦΑΩ) Απόφαση της Προέδρου του Δ.Σ. του Δ.Β.Α., με την οποία ορίσθηκαν κατόπιν κληρώσεως τα μέλη επιτροπών από υπαλλήλους του Ιδρύματος για τη βεβαίωση καλής εκτέλεσης των εργασιών και των μεταφορών που θα εκτελεσθούν με τις διατάξεις του Π.Δ. 28/80 «Περί εκτελέσεως έργων και προμηθειών Οργανισμών Τοπικής Αυτοδιοίκησης» (Φ.Ε.Κ. 11/Α/15-1-1980) για το έτος 2016, σε συνδυασμό με τις διατάξεις των άρθρων 209 παρ. 2, 273 παρ. 1, 227 του Ν. 3463/06 «Κύρωση του Κώδικα Δήμων και Κοινοτήτων» (Φ.Ε.Κ. 114/Α/8-6-2006)."@el;
+	ont:considers <http://diavgeia.gov.gr/eli/decision/6ΜΟΑΟΡΙΑ-ΦΑΩ>;
+	ont:considers leg:pd\/1980\/28;
+	ont:considers leg:law\/2006\/3463\/article\/209\/paragraph\/2;
+	ont:considers leg:law\/2006\/3463\/article\/273\/paragraph\/1;
+	ont:considers leg:law\/2006\/3463\/article\/227.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/21> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το αριθμ. πρωτ. 7140/16-05-2016 (ΑΔΑΜ: 16REQ004386230 2016-05-16) Πρωτογενές αίτημα του Τμήματος Συντήρησης & Αυτεπιστασίας της Δ/νσης Παιδικών Σταθμών."@el.
+<Consideration/20> a ont:Consideration;
+	ont:has_text "Την αριθμ. πρωτ. 96974/52152/13-01-2016 Απόφαση του Γενικού Γραμματέα της Αποκεντρωμένης Διοίκησης Αττικής, περί επικύρωσης του προϋπολογισμού του Δημοτικού Βρεφοκομείου Αθηνών οικονομικού έτους 2016, στον οποίο υπάρχει εγγεγραμμένη πίστωση ποσού #1.000,00#€ χιλίων ευρώ στον Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων»."@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/22> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την αρίθμ. 238/2016 (ΑΔΑ:Ω2ΧΗΟΡΙΑ-Φ6Ε) Πράξη της Εκτελεστικής Επιτροπής του Δ.Β.Α., με την οποία εγκρίθηκε α) δαπάνη και διάθεση πίστωσης ποσού #500,00#€ (πεντακοσίων ευρώ) σε βάρος του Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων» προϋπολογισμού οικονομικού έτους 2016, και β) πρόβλεψη και δέσμευση πίστωσης ποσού #373,30#€ τριακοσίων εβδομήντα τριών ευρώ και τριάντα λεπτών στον Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων» προϋπολογισμού οικονομικού έτους 2017, για την εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/Ω2ΧΗΟΡΙΑ-Φ6Ε>.
+<Consideration/21> a ont:Consideration;
+	ont:has_text "Το αριθμ. πρωτ. 7140/16-05-2016 (ΑΔΑΜ: 16REQ004386230 2016-05-16) Πρωτογενές αίτημα του Τμήματος Συντήρησης & Αυτεπιστασίας της Δ/νσης Παιδικών Σταθμών."@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/23> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το αριθμ. πρωτ. 7730/26-05-2016 (ΑΔΑΜ: 16REQ004465717 2016-05-26) Εγκεκριμένο αίτημα του Τμήματος Συντήρησης & Αυτεπιστασίας της Δ/νσης Παιδικών Σταθμών"@el.
+<Consideration/22> a ont:Consideration;
+	ont:has_text "Την αρίθμ. 238/2016 (ΑΔΑ:Ω2ΧΗΟΡΙΑ-Φ6Ε) Πράξη της Εκτελεστικής Επιτροπής του Δ.Β.Α., με την οποία εγκρίθηκε α) δαπάνη και διάθεση πίστωσης ποσού #500,00#€ (πεντακοσίων ευρώ) σε βάρος του Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων» προϋπολογισμού οικονομικού έτους 2016, και β) πρόβλεψη και δέσμευση πίστωσης ποσού #373,30#€ τριακοσίων εβδομήντα τριών ευρώ και τριάντα λεπτών στον Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων» προϋπολογισμού οικονομικού έτους 2017, για την εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017."@el;
+	ont:considers <http://diavgeia.gov.gr/eli/decision/Ω2ΧΗΟΡΙΑ-Φ6Ε>.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/24> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την αριθμ. 2/18993/ΔΠΔΣΜ/28-02-2014 Εγκύκλιο του Γενικού Λογιστηρίου του Κράτους του Υπουργείου Οικονομικών, Κεφ. Γ΄ περπτ. 10 «…Τέλος αν πρόκειται για απευθείας ανάθεση, η απαιτούμενη δέσμευση της σχετικής πίστωσης θα πρέπει να πραγματοποιείται σε κάθε περίπτωση πριν την υπογραφή της σύμβασης, με την οποία το Δημόσιο δεσμεύεται έναντι των τρίτων αντισυμβαλλόμενων (νομική και δημοσιονομική σύμβαση)."@el.
+<Consideration/23> a ont:Consideration;
+	ont:has_text "Το αριθμ. πρωτ. 7730/26-05-2016 (ΑΔΑΜ: 16REQ004465717 2016-05-26) Εγκεκριμένο αίτημα του Τμήματος Συντήρησης & Αυτεπιστασίας της Δ/νσης Παιδικών Σταθμών"@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/25> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την ΠΟΛ 1061/24-05-2016 (ΑΔΑ: 7ΘΨ9Η-ΜΞΘ) του Τμήματος Α΄ ΦΠΑ της Διεύθυνσης Εφαρμογής Έμμεσης Φορολογίας της Γενικής Διεύθυνσης Φορολογικής Διοίκησης της Γενικής Γραμματείας Δημοσίων Εσόδων του Υπουργείου Οικονομικών, με θέμα «Κοινοποίηση διατάξεων του νόμου “Επείγουσες διατάξεις για την εφαρμογή της συμφωνίας δημοσιονομικών στόχων και διαρθρωτικών μεταρρυθμίσεων και άλλες διατάξεις” για την αύξηση του συντελεστή ΦΠΑ σε 24% και την κατάργηση των μειωμένων συντελεστών στην δεύτερη ομάδα νησιών»."@el;
-	<http://diavgeia.gov.gr/ontology/considers> <http://diavgeia.gov.gr/eli/decision/7ΘΨ9Η-ΜΞΘ>.
+<Consideration/24> a ont:Consideration;
+	ont:has_text "Την αριθμ. 2/18993/ΔΠΔΣΜ/28-02-2014 Εγκύκλιο του Γενικού Λογιστηρίου του Κράτους του Υπουργείου Οικονομικών, Κεφ. Γ΄ περπτ. 10 «…Τέλος αν πρόκειται για απευθείας ανάθεση, η απαιτούμενη δέσμευση της σχετικής πίστωσης θα πρέπει να πραγματοποιείται σε κάθε περίπτωση πριν την υπογραφή της σύμβασης, με την οποία το Δημόσιο δεσμεύεται έναντι των τρίτων αντισυμβαλλόμενων (νομική και δημοσιονομική σύμβαση)."@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Consideration/26> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το γεγονός ότι από την 1η Ιουνίου 2016 ο κανονικός συντελεστής ΦΠΑ αυξάνεται κατά μία ποσοστιαία μονάδα, ήτοι από 23% σε 24% και η διαγωνιστική διαδικασία θα διενεργηθεί μετά την 1η Ιουνίου 2016, ο ΦΠΑ που αντιστοιχεί στην εν λόγω προμήθεια θα υπολογιστεί με τον νέο συντελεστή ΦΠΑ 24%."@el.
+<Consideration/25> a ont:Consideration;
+	ont:has_text "Την ΠΟΛ 1061/24-05-2016 (ΑΔΑ: 7ΘΨ9Η-ΜΞΘ) του Τμήματος Α΄ ΦΠΑ της Διεύθυνσης Εφαρμογής Έμμεσης Φορολογίας της Γενικής Διεύθυνσης Φορολογικής Διοίκησης της Γενικής Γραμματείας Δημοσίων Εσόδων του Υπουργείου Οικονομικών, με θέμα «Κοινοποίηση διατάξεων του νόμου “Επείγουσες διατάξεις για την εφαρμογή της συμφωνίας δημοσιονομικών στόχων και διαρθρωτικών μεταρρυθμίσεων και άλλες διατάξεις” για την αύξηση του συντελεστή ΦΠΑ σε 24% και την κατάργηση των μειωμένων συντελεστών στην δεύτερη ομάδα νησιών»."@el;
+	ont:considers <http://diavgeia.gov.gr/eli/decision/7ΘΨ9Η-ΜΞΘ>.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την έγκριση των Τεχνικών Προδιαγραφών για την εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017, αποτελούμενες από: 1. Την Γενική – Ειδική Συγγραφή Υποχρεώσεων. 2. Την Τεχνική Έκθεση-Τεχνικές Περιγραφές. 3. Τον Ενδεικτικό Προϋπολογισμό. 4. Τον Προϋπολογισμό Προσφοράς, (για συμπλήρωση από τον υποψήφιο προμηθευτή). 5. Το Τιμολόγιο Προσφοράς, (για συμπλήρωση από τον υποψήφιο προμηθευτή). Τα ανωτέρω στοιχεία με αρίθμηση 1, 2, 4 & 5, αποτελούν τα συμβατικά στοιχεία της εργασίας."@el.
+<Consideration/26> a ont:Consideration;
+	ont:has_text "Το γεγονός ότι από την 1η Ιουνίου 2016 ο κανονικός συντελεστής ΦΠΑ αυξάνεται κατά μία ποσοστιαία μονάδα, ήτοι από 23% σε 24% και η διαγωνιστική διαδικασία θα διενεργηθεί μετά την 1η Ιουνίου 2016, ο ΦΠΑ που αντιστοιχεί στην εν λόγω προμήθεια θα υπολογιστεί με τον νέο συντελεστή ΦΠΑ 24%."@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Decision/2> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017, με την διαδικασία της απ’ ευθείας ανάθεσης, μετά από συλλογή σφραγισμένων προσφορών από το ελεύθερο εμπόριο και συμπλήρωση Προϋπολογισμού Προσφοράς και Τιμολογίου Προσφοράς και με κριτήριο κατακύρωσης την χαμηλότερη τιμή (χωρίς ΦΠΑ) για το σύνολο των εργασιών επί της τιμής του ενδεικτικού Προϋπολογισμού της Υπηρεσίας υπό την προϋπόθεση οι προσφερόμενες τιμές να ευρίσκονται εντός των τιμών του ενδεικτικού Προϋπολογισμού της Υπηρεσίας.  Ο Ενδεικτικός Προϋπολογισμός για την εκτέλεση των ανωτέρω εργασιών, ανέρχεται στο ποσό των οκτακοσίων εβδομήντα τριών ευρώ και τριάντα λεπτών #873,30#€ συμπεριλαμβανομένου του αναλογούντος Φ.Π.Α. και θα βαρύνει τον Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων» προϋπολογισμών οικ. ετών 2016-2017, σύμφωνα με το αριθμ. πρωτ. 7140/16-05-2016 (ΑΔΑΜ: 16REQ004386230 2016-05-16) Πρωτογενές αίτημα του Τμήματος Συντήρησης & Αυτεπιστασίας της Δ/νσης Παιδικών Σταθμών.  Η δαπάνη ποσού #500,00#€ πεντακοσίων ευρώ θα βαρύνει τον Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων» προϋπολογισμού οικ. Έτους 2016, το υπόλοιπο ποσό θα βαρύνει τον αντίστοιχο Κ.Α. προϋπολογισμού οικ. Έτους 2017.  Οι ανωτέρω εργασίες θα είναι τμηματικές. Ως χρόνος ολοκλήρωσης των εν λόγω εργασιών ορίζεται το χρονικό διάστημα του ενός (1) έτους από την ημερομηνία κοινοποίησης της πρόσκλησης ανάθεσης.  Πρόσκληση Εκδήλωσης Ενδιαφέροντος και τα τεύχη της μελέτη της Υπηρεσίας για την εν λόγω εργασία, θα αναρτηθούν στην ιστοσελίδα του Δημοτικού Βρεφοκομείου Αθηνών http//www.dbda.gr. Μετά τα ανωτέρω καλούνται οι ενδιαφερόμενοι να καταθέσουν σε σφραγισμένο φάκελο την προσφορά τους από την 17/06/2016 ημέρα Παρασκευή μέχρι και την 27/06/2016 ημέρα Δεύτερα και ώρα 11.30 π.μ. (ώρα λήξης κατάθεσης προσφορών) στο Τμήμα Προμηθειών και Δημοπρασιών της Διεύθυνσης Προμηθειών, Διαχείρισης Υλικών και Εστίασης του Δ.Β.Α."@el.
+<Decision/1> a ont:Decision;
+	ont:has_text "Την έγκριση των Τεχνικών Προδιαγραφών για την εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017, αποτελούμενες από: 1. Την Γενική – Ειδική Συγγραφή Υποχρεώσεων. 2. Την Τεχνική Έκθεση-Τεχνικές Περιγραφές. 3. Τον Ενδεικτικό Προϋπολογισμό. 4. Τον Προϋπολογισμό Προσφοράς, (για συμπλήρωση από τον υποψήφιο προμηθευτή). 5. Το Τιμολόγιο Προσφοράς, (για συμπλήρωση από τον υποψήφιο προμηθευτή). Τα ανωτέρω στοιχεία με αρίθμηση 1, 2, 4 & 5, αποτελούν τα συμβατικά στοιχεία της εργασίας."@el.
 
-<http://diavgeia.gov.gr/eli/decision/ΨΘ84ΟΡΙΑ-61Μ/4a507964-9a1e-451b-96d5-dea846bc97f9/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "ΠΡΟΕΔΡΟΣ ΤΟΥ ΔΙΟΙΚΗΤΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ ΤΟΥ ΔΗΜΟΤΙΚΟΥ ΒΡΕΦΟΚΟΜΕΙΟΥ ΑΘΗΝΩΝ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_name> "ΚΑΛΛΙΟΠΗ ΓΙΑΝΝΟΠΟΥΛΟΥ"@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "100006823".
+<Decision/2> a ont:Decision;
+	ont:has_text "Την εκτέλεση τμηματικών εργασιών απόφραξης των αποχετευτικών εγκαταστάσεων των κτιρίων των Παιδικών Σταθμών, των Κεντρικών Υπηρεσιών Διοίκησης των χώρων των Μαγειρείων και όλων των ιδιόκτητων κτιρίων του Δημοτικού Βρεφοκομείου Αθηνών προϋπολογισμών οικονομικών ετών 2016-2017, με την διαδικασία της απ’ ευθείας ανάθεσης, μετά από συλλογή σφραγισμένων προσφορών από το ελεύθερο εμπόριο και συμπλήρωση Προϋπολογισμού Προσφοράς και Τιμολογίου Προσφοράς και με κριτήριο κατακύρωσης την χαμηλότερη τιμή (χωρίς ΦΠΑ) για το σύνολο των εργασιών επί της τιμής του ενδεικτικού Προϋπολογισμού της Υπηρεσίας υπό την προϋπόθεση οι προσφερόμενες τιμές να ευρίσκονται εντός των τιμών του ενδεικτικού Προϋπολογισμού της Υπηρεσίας.  Ο Ενδεικτικός Προϋπολογισμός για την εκτέλεση των ανωτέρω εργασιών, ανέρχεται στο ποσό των οκτακοσίων εβδομήντα τριών ευρώ και τριάντα λεπτών #873,30#€ συμπεριλαμβανομένου του αναλογούντος Φ.Π.Α. και θα βαρύνει τον Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων» προϋπολογισμών οικ. ετών 2016-2017, σύμφωνα με το αριθμ. πρωτ. 7140/16-05-2016 (ΑΔΑΜ: 16REQ004386230 2016-05-16) Πρωτογενές αίτημα του Τμήματος Συντήρησης & Αυτεπιστασίας της Δ/νσης Παιδικών Σταθμών.  Η δαπάνη ποσού #500,00#€ πεντακοσίων ευρώ θα βαρύνει τον Φ30-Δ15 Κ.Α.6262.002 «Συντήρηση και επισκευή αποχετευτικών εγκαταστάσεων» προϋπολογισμού οικ. Έτους 2016, το υπόλοιπο ποσό θα βαρύνει τον αντίστοιχο Κ.Α. προϋπολογισμού οικ. Έτους 2017.  Οι ανωτέρω εργασίες θα είναι τμηματικές. Ως χρόνος ολοκλήρωσης των εν λόγω εργασιών ορίζεται το χρονικό διάστημα του ενός (1) έτους από την ημερομηνία κοινοποίησης της πρόσκλησης ανάθεσης.  Πρόσκληση Εκδήλωσης Ενδιαφέροντος και τα τεύχη της μελέτη της Υπηρεσίας για την εν λόγω εργασία, θα αναρτηθούν στην ιστοσελίδα του Δημοτικού Βρεφοκομείου Αθηνών http//www.dbda.gr. Μετά τα ανωτέρω καλούνται οι ενδιαφερόμενοι να καταθέσουν σε σφραγισμένο φάκελο την προσφορά τους από την 17/06/2016 ημέρα Παρασκευή μέχρι και την 27/06/2016 ημέρα Δεύτερα και ώρα 11.30 π.μ. (ώρα λήξης κατάθεσης προσφορών) στο Τμήμα Προμηθειών και Δημοπρασιών της Διεύθυνσης Προμηθειών, Διαχείρισης Υλικών και Εστίασης του Δ.Β.Α."@el.
+
+<Signer/1> a ont:Signer;
+	ont:signer_job "ΠΡΟΕΔΡΟΣ ΤΟΥ ΔΙΟΙΚΗΤΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ ΤΟΥ ΔΗΜΟΤΙΚΟΥ ΒΡΕΦΟΚΟΜΕΙΟΥ ΑΘΗΝΩΝ"@el;
+	ont:signer_name "ΚΑΛΛΙΟΠΗ ΓΙΑΝΝΟΠΟΥΛΟΥ"@el;
+	ont:signer_id "100006823".

@@ -1,47 +1,52 @@
-<http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7> a <http://diavgeia.gov.gr/ontology/PublicPrototypeDocuments>;
-	<http://diavgeia.gov.gr/ontology/version> "b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7";
-	<http://diavgeia.gov.gr/ontology/iun> "784Ι46906Ψ-59Σ"@el;
-	<http://data.europa.eu/eli/ontology#title> "Υποβολή προς έγκριση του πρακτικού τεχνικής αξιολόγησης όπως αυτό υπεβλήθη από την αρμοδίως ορισθείσα επιτροπή διενέργειας του πρόχειρου διαγωνισμού για την ανάδειξη παρόχου του έργου του ελέγχου των οικονομικών καταστάσεων της οικονομικής χρήσης των ετών 2013 και 2014 (Α.Δ. 29-14)."@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
-	<http://diavgeia.gov.gr/ontology/government_institution_name> "Γ.Ν.ΝΙΚΑΙΑΣ-ΠΕΙΡΑΙΑ «ΑΓΙΟΣ ΠΑΝΤΕΛΕΗΜΩΝ»-Γ.Ν.Δ.Α. «ΑΓΙΑ ΒΑΡΒΑΡΑ»"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_address> "Δ.ΜΑΝΤΟΥΒΑΛΟΥ 3"@el;
-	<http://diavgeia.gov.gr/ontology/government_institution_postalcode> "18454";
-	<http://diavgeia.gov.gr/ontology/government_institution_phone> "2132076300";
-	<http://diavgeia.gov.gr/ontology/government_institution_fax> "2104916189";
-	<http://diavgeia.gov.gr/ontology/government_institution_email> "gramdioik@nikaia-hosp.gr";
-	<http://diavgeia.gov.gr/ontology/protocol_number> "25551";
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Consideration/1>;
-	<http://diavgeia.gov.gr/ontology/has_considered> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Consideration/2>;
-	<http://diavgeia.gov.gr/ontology/decision_call> "ΕΓΚΡΙΝΕΙ"@el;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/1>;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/2>;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/3>;
-	<http://diavgeia.gov.gr/ontology/has_decided> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/4>;
-	<http://diavgeia.gov.gr/ontology/signed_by> <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Signer/1>;
-	<http://diavgeia.gov.gr/ontology/thematic_category> "EconomicTradeExchanges";
-	<http://diavgeia.gov.gr/ontology/has_private_data> false;
-	<http://diavgeia.gov.gr/ontology/organization_id> "99222003";
-	<http://diavgeia.gov.gr/ontology/submission_timestamp> "1404193811006";
-	<http://diavgeia.gov.gr/ontology/unit_id> "75132".
+@base <http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Consideration/1> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την υπ’ αριθμ.πρωτ.25551/30-05-14 εισήγηση της Διευθύντριας Διοικητικής Υπηρεσίας του Νοσοκομείου, ως και τα σχετικά έγγραφα τα οποία επισυνάπτονται"@el.
+<> a ont:PublicPrototypeDocuments;
+	ont:version "b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7";
+	ont:iun "784Ι46906Ψ-59Σ"@el;
+	eli:title "Υποβολή προς έγκριση του πρακτικού τεχνικής αξιολόγησης όπως αυτό υπεβλήθη από την αρμοδίως ορισθείσα επιτροπή διενέργειας του πρόχειρου διαγωνισμού για την ανάδειξη παρόχου του έργου του ελέγχου των οικονομικών καταστάσεων της οικονομικής χρήσης των ετών 2013 και 2014 (Α.Δ. 29-14)."@el;
+	eli:date_publication "2017-05-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "Γ.Ν.ΝΙΚΑΙΑΣ-ΠΕΙΡΑΙΑ «ΑΓΙΟΣ ΠΑΝΤΕΛΕΗΜΩΝ»-Γ.Ν.Δ.Α. «ΑΓΙΑ ΒΑΡΒΑΡΑ»"@el;
+	ont:government_institution_address "Δ.ΜΑΝΤΟΥΒΑΛΟΥ 3"@el;
+	ont:government_institution_postalcode "18454";
+	ont:government_institution_phone "2132076300";
+	ont:government_institution_fax "2104916189";
+	ont:government_institution_email "gramdioik@nikaia-hosp.gr";
+	ont:protocol_number "25551";
+	ont:has_considered <Consideration/1>;
+	ont:has_considered <Consideration/2>;
+	ont:decision_call "ΕΓΚΡΙΝΕΙ"@el;
+	ont:has_decided <Decision/1>;
+	ont:has_decided <Decision/2>;
+	ont:has_decided <Decision/3>;
+	ont:has_decided <Decision/4>;
+	ont:signed_by <Signer/1>;
+	ont:thematic_category "EconomicTradeExchanges";
+	ont:has_private_data false;
+	ont:organization_id "99222003";
+	ont:submission_timestamp "1404193811006";
+	ont:unit_id "75132".
 
-<http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Consideration/2> a <http://diavgeia.gov.gr/ontology/Consideration>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την διαλογική συζήτηση"@el.
+<Consideration/1> a ont:Consideration;
+	ont:has_text "Την υπ’ αριθμ.πρωτ.25551/30-05-14 εισήγηση της Διευθύντριας Διοικητικής Υπηρεσίας του Νοσοκομείου, ως και τα σχετικά έγγραφα τα οποία επισυνάπτονται"@el.
 
-<http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/1> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Το υπ’ αριθ πρωτ 24664/26-5-2014 πρακτικό τεχνικής αξιολόγησης, όπως αυτό κατατέθηκε από την αρμόδια επιτροπή διενέργειας – αξιολόγησης προσφορών, σύμφωνα με το οποίο γίνονται αποδεκτές οι κατατεθειμένες προφορές των εταιρειών ΣΟΛ Ορκωτοί Λογιστές ΑΕ και Διεθνής Ελεγκτική ΑΕΟΕΛ και απορρίπτονται οι προσφορές των εταιρειών PKF Accountants and Business Advisers (Ευρωελεγκτική ΑΕ) και Baker Tilly Hellas AE"@el.
+<Consideration/2> a ont:Consideration;
+	ont:has_text "Την διαλογική συζήτηση"@el.
 
-<http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/2> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Τη συνέχιση του διαγωνισμού του θέματος με την αποσφράγιση των οικονομικών προσφορών των εταιρειών ΣΟΛ Ορκωτοί Λογιστές ΑΕ και Διεθνής Ελεγκτική ΑΕΟΕΛ, οι οποίες πληρούν τις ζητούμενες τεχνικές προδιαγραφές, εφόσον δεν κατατεθούν προσφυγές ή ενστάσεις επί της τεχνικής αξιολόγησης"@el.
+<Decision/1> a ont:Decision;
+	ont:has_text "Το υπ’ αριθ πρωτ 24664/26-5-2014 πρακτικό τεχνικής αξιολόγησης, όπως αυτό κατατέθηκε από την αρμόδια επιτροπή διενέργειας – αξιολόγησης προσφορών, σύμφωνα με το οποίο γίνονται αποδεκτές οι κατατεθειμένες προφορές των εταιρειών ΣΟΛ Ορκωτοί Λογιστές ΑΕ και Διεθνής Ελεγκτική ΑΕΟΕΛ και απορρίπτονται οι προσφορές των εταιρειών PKF Accountants and Business Advisers (Ευρωελεγκτική ΑΕ) και Baker Tilly Hellas AE"@el.
 
-<http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/3> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την ενημέρωση των συμμετεχουσών εταιρειών για τα αποτελέσματα της τεχνικής τους αξιολόγησης."@el.
+<Decision/2> a ont:Decision;
+	ont:has_text "Τη συνέχιση του διαγωνισμού του θέματος με την αποσφράγιση των οικονομικών προσφορών των εταιρειών ΣΟΛ Ορκωτοί Λογιστές ΑΕ και Διεθνής Ελεγκτική ΑΕΟΕΛ, οι οποίες πληρούν τις ζητούμενες τεχνικές προδιαγραφές, εφόσον δεν κατατεθούν προσφυγές ή ενστάσεις επί της τεχνικής αξιολόγησης"@el.
 
-<http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Decision/4> a <http://diavgeia.gov.gr/ontology/Decision>;
-	<http://diavgeia.gov.gr/ontology/has_text> "Την επικύρωση του θέματος αυθημερόν."@el.
+<Decision/3> a ont:Decision;
+	ont:has_text "Την ενημέρωση των συμμετεχουσών εταιρειών για τα αποτελέσματα της τεχνικής τους αξιολόγησης."@el.
 
-<http://diavgeia.gov.gr/eli/decision/784Ι46906Ψ-59Σ/b97e158a-84e4-4eb5-a0d7-acdf8ec28bb7/Signer/1> a <http://diavgeia.gov.gr/ontology/Signer>;
-	<http://diavgeia.gov.gr/ontology/signer_job> "Η Γραμματέας του Δ.Σ."@el;
-	<http://diavgeia.gov.gr/ontology/signer_id> "129341".
+<Decision/4> a ont:Decision;
+	ont:has_text "Την επικύρωση του θέματος αυθημερόν."@el.
+
+<Signer/1> a ont:Signer;
+	ont:signer_job "Η Γραμματέας του Δ.Σ."@el;
+	ont:signer_id "129341".

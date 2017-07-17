@@ -34,12 +34,12 @@
 
 <Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του ν.2362/95 «Περί Δημόσιου Λογιστικού κ.τ.π.» (Α.247) όπως τροποποιήθηκε και συμπληρώθηκε με τα άρθ.21 και 23 του ν.3871/2010 (Α.141)"@el;
-	ont:considers eli:law\/2010\/3871\/article\/21;
-	ont:considers eli:law\/2010\/3871\/article\/23.
+	ont:considers leg:law\/2010\/3871\/article\/21;
+	ont:considers leg:law\/2010\/3871\/article\/23.
 
 <Consideration/2> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του π.δ. 113/2010 πέρι αναλήψεως υποχρεώσεων από τους Διατάκτες (Α.194)"@el;
-	ont:considers eli:pd\/2010\/113.
+	ont:considers leg:pd\/2010\/113.
 
 <Consideration/3> a ont:Consideration;
 	ont:has_text "Την αριθμ. απόφαση του ΔΣ ή Περιφερειακής του ΟΑΕΔ"@el.

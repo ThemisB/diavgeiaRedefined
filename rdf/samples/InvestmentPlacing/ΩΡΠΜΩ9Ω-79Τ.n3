@@ -24,7 +24,7 @@
 
 <Consideration/1> a ont:Consideration;
 	ont:has_text "Το άρθρο 58 παρ. 2 του Ν. 3852/2010."@el;
-	ont:considers eli:law\/2010\/3852.
+	ont:considers leg:law\/2010\/3852.
 
 <Consideration/2> a ont:Consideration;
 	ont:has_text "Την πρόσκληση σποβολής αιτημάτων συμμετοχής στο Mayors Adapt city twinning - 2016 programme για το έτος 2016."@el.
@@ -34,7 +34,7 @@
 
 <Decision/1> a ont:Decision;
 	ont:has_text "Την υποβολή αιτήματος συμμετοχής του Δήμου Βόλβης στο Mayors Adapt city twinning - 2016 programme. Η απόφαση αυτή θα υποβληθεί για έγκριση στο Δημοτικό Συμβούλιο του Δήμου Βόλβης."@el;
-	ont:decision_relates eli:law\/2010\/3852\/article\/58\/paragraph\/2.
+	ont:decision_relates leg:law\/2010\/3852\/article\/58\/paragraph\/2.
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Δήμαρχος Βόλβης"@el;

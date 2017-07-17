@@ -6,8 +6,8 @@
 <> a ont:OccupationInvitation;
 	ont:version "e1e27523-ab46-440f-ab28-d8f930435d1e";
 	ont:iun "72ΞΑ46Ψ8ΧΒ-ΙΑΜ"@el;
-	<http://data.europa.eu/eli/ontology#title> "Προκήρυξη θέσης καθηγητή του Τμήματος Μη\nχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη βαθμίδα του καθηγητή πρώτης βαθμίδας, με γνωστικό αντικείμενο\n«Μέθοδοι παραγωγής και αξιολόγηση ιδιοτήτων μεταλλικών υλικών»."@el;
-	<http://data.europa.eu/eli/ontology#date_publication> "2016-06-01"^^<http://www.w3.org/2001/XMLSchema#date>;
+	eli:title "Προκήρυξη θέσης καθηγητή του Τμήματος Μη\nχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη βαθμίδα του καθηγητή πρώτης βαθμίδας, με γνωστικό αντικείμενο\n«Μέθοδοι παραγωγής και αξιολόγηση ιδιοτήτων μεταλλικών υλικών»."@el;
+	eli:date_publication "2016-06-01"^^<http://www.w3.org/2001/XMLSchema#date>;
 	ont:government_institution_name "ΑΡΙΣΤΟΤΕΛΕΙΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΟΝΙΚΗΣ"@el;
 	ont:protocol_number "14501";
 	ont:has_preconsideration <Preconsideration>;
@@ -42,48 +42,48 @@
 
 <Consideration/2> a ont:Consideration;
 	ont:has_text "Των παρ. 3 του άρθρου 77 του Ν. 4009/2011(195 Α΄) και 4 του άρθρου 78 του Ν. 4009/2011(195 Α΄) όπως τροποποιήθηκε με την παρ. 6 του άρθρου 5 του Ν. 4076/2012 (159 Α΄) και αντικαταστάθηκε με το άρθρο 48 του Ν. 4115/2013 (24 Α΄)."@el;
-	ont:considers eli:law\/2011\/4009\/article\/77\/paragraph\/3;
-	ont:considers eli:law\/2011\/4009\/article\/78\/paragraph\/4;
-	ont:considers eli:law\/2012\/4076\/article\/5\/paragraph\/6;
-	ont:considers eli:law\/2013\/4115\/article\/48.
+	ont:considers leg:law\/2011\/4009\/article\/77\/paragraph\/3;
+	ont:considers leg:law\/2011\/4009\/article\/78\/paragraph\/4;
+	ont:considers leg:law\/2012\/4076\/article\/5\/paragraph\/6;
+	ont:considers leg:law\/2013\/4115\/article\/48.
 
 <Consideration/3> a ont:Consideration;
 	ont:has_text "Της παρ. 1 και 2 [όπως τροποποιήθηκε με την παρ. 15 του άρθρου 34 του Ν. 4115/2013 (24 Α΄)] του άρθρου 17 του Ν. 4009/2011 (195 Α΄) και της παρ.2 του άρθρου 18 του Ν. 4009/2011 (195 Α΄)."@el;
-	ont:considers eli:law\/2011\/4009\/article\/17\/paragraph\/1;
-	ont:considers eli:law\/2011\/4009\/article\/17\/paragraph\/2;
-	ont:considers eli:law\/2013\/4115\/article\/34\/paragraph\/15;
-	ont:considers eli:law\/2011\/4009\/article\/18\/paragraph\/2.
+	ont:considers leg:law\/2011\/4009\/article\/17\/paragraph\/1;
+	ont:considers leg:law\/2011\/4009\/article\/17\/paragraph\/2;
+	ont:considers leg:law\/2013\/4115\/article\/34\/paragraph\/15;
+	ont:considers leg:law\/2011\/4009\/article\/18\/paragraph\/2.
 
 <Consideration/4> a ont:Consideration;
 	ont:has_text "Της παρ. 5 του άρθρου 18 και της παρ.7 του άρθρου 77 του Ν. 4009/2011 (195 Α΄)."@el;
-	ont:considers eli:law\/2011\/4009\/article\/18\/paragraph\/5.
+	ont:considers leg:law\/2011\/4009\/article\/18\/paragraph\/5.
 
 <Consideration/5> a ont:Consideration;
 	ont:has_text "Της παρ. 22α του άρθρου 80 του Ν. 4009/2011 (195 Α΄)."@el;
-	ont:considers eli:law\/2011\/4009\/article\/18\/paragraph\/22.
+	ont:considers leg:law\/2011\/4009\/article\/18\/paragraph\/22.
 
 <Consideration/6> a ont:Consideration;
 	ont:has_text "Των άρθρων 21 και 23 του Ν. 3549/2007 (69 Α΄)."@el;
-	ont:considers eli:law\/2007\/3549\/article\/21;
-	ont:considers eli:law\/2007\/3549\/article\/23.
+	ont:considers leg:law\/2007\/3549\/article\/21;
+	ont:considers leg:law\/2007\/3549\/article\/23.
 
 <Consideration/7> a ont:Consideration;
 	ont:has_text "Της παρ. 5 του άρθρου 14 του Ν. 1268/1982 (87 Α΄)."@el;
-	ont:considers eli:law\/1982\/1268\/article\/14\/paragraph\/5.
+	ont:considers leg:law\/1982\/1268\/article\/14\/paragraph\/5.
 
 <Consideration/8> a ont:Consideration;
 	ont:has_text "παρ. 5α του άρθρου 14 του Ν. 1268/1982 (87 Α΄), όπως αντικαταστάθηκε τελικώς με την παρ. 3 του άρθρου 4 του Ν. 2517/1997 (160 Α΄)."@el;
-	ont:considers eli:law\/1982\/1268\/article\/14\/paragraph\/5;
-	ont:considers eli:law\/1997\/2517\/article\/4\/paragraph\/3.
+	ont:considers leg:law\/1982\/1268\/article\/14\/paragraph\/5;
+	ont:considers leg:law\/1997\/2517\/article\/4\/paragraph\/3.
 
 <Consideration/9> a ont:Consideration;
 	ont:has_text "Της περιπτ. iii της παρ. 5 του άρθρου 14 του Ν. 1268/1982, όπως αντικαταστάθηκε με το άρθρο 2 του Ν. 3282/2004 (208 Α΄)."@el;
-	ont:considers eli:law\/1982\/1268\/article\/14\/paragraph\/5;
-	ont:considers eli:law\/2004\/3282\/article\/2.
+	ont:considers leg:law\/1982\/1268\/article\/14\/paragraph\/5;
+	ont:considers leg:law\/2004\/3282\/article\/2.
 
 <Consideration/10> a ont:Consideration;
 	ont:has_text "Του Π.δ. 134/1999 (132 Α΄)."@el;
-	ont:considers eli:pd\/1999\/134.
+	ont:considers leg:pd\/1999\/134.
 
 <Consideration/11> a ont:Consideration;
 	ont:has_text "Των ερμηνευτικών εγκυκλίων υπ’ αριθμ. Φ.122.1/350/141732/Β2/9-12-2011 (ανακοινοποιημένη στο ορθό στις 20-12-2011) και Φ.122.1/58/22996/Β2/5-3-2012 του Υπουργείου Παιδείας, Δια Βίου Μάθησης και Θρησκευμάτων"@el.

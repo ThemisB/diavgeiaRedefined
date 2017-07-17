@@ -38,8 +38,8 @@
 
 <Consideration/2> a ont:Consideration;
 	ont:has_text "Την υπ΄αριθμ. 679/96 ΚΥΑ (ΦΕΚ 826 Β), όπως κυρώθηκε με το άρθρο 36 του Νόμου 3794/2009 (ΦΕΚ 156 Α) και τροποποιήθηκε με το αρθρ. 36 Ν. 3848/2010"@el;
-	ont:considers <http://legislation.di.uoa.gr/eli/law/2009/3794>;
-	ont:considers <http://legislation.di.uoa.gr/eli/law/2010/3848>.
+	ont:considers leg:law\/2009\/3794;
+	ont:considers leg:law\/2010\/3848.
 
 <Consideration/3> a ont:Consideration;
 	ont:has_text "Τον Οδηγό Χρηματοδότησης και Διαχείρισης Ερευνών που εγκρίθηκε με απόφαση της υπ΄αριθμ. 373/14-07-2004 και 17385/20-05-2014 συνεδριάσεις της Συγκλήτου"@el.

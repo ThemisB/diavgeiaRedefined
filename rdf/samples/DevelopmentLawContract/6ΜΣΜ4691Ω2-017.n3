@@ -45,19 +45,19 @@
 
 <Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Ν.2362/27-11-95 «Περί ∆ηµοσίου Λογιστικού, ελέγχου των δαπανών του Κράτους και άλλες διατάξεις» (Α΄247) και ειδικότερα του άρθρου 104."@el;
-	ont:considers eli:law\/1995\/2362;
-	ont:considers eli:law\/1995\/2362\/article\/104.
+	ont:considers leg:law\/1995\/2362;
+	ont:considers leg:law\/1995\/2362\/article\/104.
 
 <Consideration/2> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Ν.∆. 356/74 «Περί Κωδικός Εισπράξεως ∆ηµοσίων Εσόδων» όπως ισχύει σήµερα καθώς και τις διατάξεις του Π.∆. 16/1989 «Κανονισµός Λειτουργίας των ∆ΟΥ»."@el;
-	ont:considers eli:pd\/1989\/16.
+	ont:considers leg:pd\/1989\/16.
 
 <Consideration/3> a ont:Consideration;
 	ont:has_text "Τις διατάξεις του Ν. 3614/07 «∆ιαχείριση, έλεγχος και εφαρµογή αναπτυξιακών παρεµβάσεων για την προγραµµατική περίοδο 2007 -2013» και ειδικότερα των άρθρων 8, 13 και 26."@el;
-	ont:considers eli:law\/2007\/3614;
-	ont:considers eli:law\/2007\/3614\/article\/8;
-	ont:considers eli:law\/2007\/3614\/article\/13;
-	ont:considers eli:law\/2007\/3614\/article\/26.
+	ont:considers leg:law\/2007\/3614;
+	ont:considers leg:law\/2007\/3614\/article\/8;
+	ont:considers leg:law\/2007\/3614\/article\/13;
+	ont:considers leg:law\/2007\/3614\/article\/26.
 
 <Consideration/4> a ont:Consideration;
 	ont:has_text "Της υπ. αριθµ. 14053/ΕΥΣ 1743/27-03-2008 Υπουργικής Απόφασης Συστήµατος ∆ιαχείρισης (ΦΕΚ 540/Β/27-03-08), όπως τροποποιήθηκε και ισχύει και ειδικότερα το ΚΕΦ. ∆., άρθρο 15 «Ανάκτηση αχρεωστήτως καταβληθέντων ποσών»."@el.
