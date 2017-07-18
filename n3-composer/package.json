@@ -1,0 +1,15 @@
+{
+  "name": "n3-composer",
+  "version": "1.0.0",
+  "description": "App that government institutions should use in order to compose their .n3 decisions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Themis Beris",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "jquery": "^3.2.1"
+  }
+}

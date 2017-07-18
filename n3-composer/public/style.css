@@ -1,0 +1,29 @@
+html, body, .container-fluid {
+  height: 100%;
+}
+
+body {
+  background-color: #eee;
+}
+
+.decisionCreation {
+  color: #237885;
+  padding-bottom: 0.5em;
+}
+
+.panel {
+  padding: 10px;
+}
+
+.row {
+  padding: 1em;
+}
+
+.control-label:after {
+  content:"*";
+  color:red;
+}
+
+.pickers {
+  display: inline !important;
+}
