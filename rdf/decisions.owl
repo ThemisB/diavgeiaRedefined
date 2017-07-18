@@ -2165,15 +2165,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/AffiliatedInvestments -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/AffiliatedInvestments">
-        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ&quot;</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/AfterDecision -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/AfterDecision">
@@ -2404,7 +2395,7 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΑΤΟΜΙΚΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
     </owl:Class>
     
 

@@ -21,38 +21,37 @@ Sections
     11. [Present](#present)
 6. [Common Data Properties](#common-data-properties)
 7. [Decision specific Object and Data Properties](#decision-specific-object-and-data-properties)
-    1. [AffiliatedInvestments](#affiliatedinvestments)
-    2. [Appointment](#appointment)
-    3. [Award](#award)
-    4. [BalanceAccount](#balanceaccount)
-    5. [BudgetApproval](#budgetapproval)
-    6. [Circular](#circular)
-    7. [CollegialBodyCommisionWorkingGroup](#collegialbodycommisionworkinggroup)
-    8. [CommisionWarrant](#commisionwarrant)
-    9. [Contract](#contract)
-    10. [DeclarationSummary](#declarationsummary)
-    11. [DevelopmentLawContract](#developmentlawcontract)
-    12. [DisciplinaryAcquitance](#disciplinaryacquitance)
-    13. [DonationGrant](#donationgrant)
-    14. [EvaluationReportOfLaw](#evaluationreportoflaw)
-    15. [ExpenditureApproval](#expenditureapproval)
-    16. [GeneralSpecialSecretaryMonocraticBody](#generalspecialsecretarymonocraticbody)
-    17. [InvestmentPlacing](#investmentplacing)
-    18. [LegislativeDecree](#legislativedecree)
-    19. [Normative](#normative)
-    20. [OccupationInvitation](#occupationinvitation)
-    21. [Opinion](#opinion)
-    22. [OtherDecisions](#otherdecisions)
-    23. [OtherDevelopmentLaw](#otherdevelopmentlaw)
-    24. [OwnershipTransferOfAssets](#ownershiptransferofassets)
-    25. [PublicPrototypeDocuments](#publicprototypedocuments)
-    26. [Records](#records)
-    27. [ServiceChange](#servicechange)
-    28. [SpatialPlanningDecisions](#spatialplanningdecisions)
-    29. [StartProductionalFunctionOfInvestment](#startproductionalfunctionofinvestment)
-    30. [SuccessfulAppointedRunnerUpList](#successfilappointedrunneruplist)
-    31. [Undertaking](#undertaking)
-    32. [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies)
+    1. [Appointment](#appointment)
+    2. [Award](#award)
+    3. [BalanceAccount](#balanceaccount)
+    4. [BudgetApproval](#budgetapproval)
+    5. [Circular](#circular)
+    6. [CollegialBodyCommisionWorkingGroup](#collegialbodycommisionworkinggroup)
+    7. [CommisionWarrant](#commisionwarrant)
+    8. [Contract](#contract)
+    9. [DeclarationSummary](#declarationsummary)
+    10. [DevelopmentLawContract](#developmentlawcontract)
+    11. [DisciplinaryAcquitance](#disciplinaryacquitance)
+    12. [DonationGrant](#donationgrant)
+    13. [EvaluationReportOfLaw](#evaluationreportoflaw)
+    14. [ExpenditureApproval](#expenditureapproval)
+    15. [GeneralSpecialSecretaryMonocraticBody](#generalspecialsecretarymonocraticbody)
+    16. [InvestmentPlacing](#investmentplacing)
+    17. [LegislativeDecree](#legislativedecree)
+    18. [Normative](#normative)
+    19. [OccupationInvitation](#occupationinvitation)
+    20. [Opinion](#opinion)
+    21. [OtherDecisions](#otherdecisions)
+    22. [OtherDevelopmentLaw](#otherdevelopmentlaw)
+    23. [OwnershipTransferOfAssets](#ownershiptransferofassets)
+    24. [PublicPrototypeDocuments](#publicprototypedocuments)
+    25. [Records](#records)
+    26. [ServiceChange](#servicechange)
+    27. [SpatialPlanningDecisions](#spatialplanningdecisions)
+    28. [StartProductionalFunctionOfInvestment](#startproductionalfunctionofinvestment)
+    29. [SuccessfulAppointedRunnerUpList](#successfilappointedrunneruplist)
+    30. [Undertaking](#undertaking)
+    31. [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies)
 8. [Conclusions](#conclusions)
 
 Diavgeia Issues
@@ -75,7 +74,6 @@ It follows a table which shows the match between the different types of decision
 
 | RDF Decision Classes      |     Greek Translation     |
 | --------------------------| :------------------------:|
-| [AffiliatedInvestments](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/AffiliatedInvestments)     | ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ |
 | [Appointment](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Appointment)              | ΔΙΟΡΙΣΜΟΣ                 |
 | [Award](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Award)                     | ΚΑΤΑΚΥΡΩΣΗ                |
 | [BalanceAccount](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/BalanceAccount)            | ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ |
@@ -298,12 +296,6 @@ These properties have as subject a `Decision(LegalResource)` entity and thus we 
 ## Decision Specific Object and Data Properties
 
 As it was previously mentioned, Diavgeia hosts 34 different decision types. This means that the rdf schema should include decision-specific object and data properties which are presented here.
-
-### AffiliatedInvestments
-
-**Greek Translation** : ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ
-
-This type of decision does not have any specific object or data properties.
 
 ### Appointment
 
@@ -646,6 +638,6 @@ This type of decision does not have any specific object or data properties.
 Conclusions
 -----------
 
-The proposed rdf schema solves all the aforementioned problems. As far as the disk space is concerned, `.pdf` [samples](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples) take up 7.1MB (without the extra metadata of `metadata.json` files), while `.n3` samples take up 432KB and include the information of `metadata.json` files.
+The proposed rdf schema solves all the aforementioned problems. As far as the disk space is concerned, `.pdf` [samples](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples) take up 7.1MB (without the extra metadata of `metadata.json` files), while the compressed `.n3` samples (that is `.n3.bz2` files) take up 72ΚΒ and include the information of `metadata.json` files.
 
 Moreover, we have linked the `decisions.owl` to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/) and by adopting ELI, we unified and linked our ontology with European legislation.
