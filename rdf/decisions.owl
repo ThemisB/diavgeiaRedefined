@@ -1966,7 +1966,7 @@
                                                                                                                         <rdf:rest>
                                                                                                                             <rdf:Description>
                                                                                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                                <rdf:first>InternationalRelationships</rdf:first>
+                                                                                                                                <rdf:first>InternationalRelations</rdf:first>
                                                                                                                                 <rdf:rest>
                                                                                                                                     <rdf:Description>
                                                                                                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
