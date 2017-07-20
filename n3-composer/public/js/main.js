@@ -9,4 +9,5 @@ $(function() {
   $("#government_institution_postalcode").on("keypress", function(e){
     return isNumber(e);
   });
+
 });

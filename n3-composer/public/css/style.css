@@ -2,6 +2,10 @@ html, body, .container-fluid {
   height: 100%;
 }
 
+.container-fluid {
+  margin-top: 1em;
+}
+
 body {
   background-color: #eee;
 }
@@ -19,7 +23,7 @@ body {
   padding: 1em;
 }
 
-.control-label:after {
+.form-control-label:after {
   content:"*";
   color:red;
 }
