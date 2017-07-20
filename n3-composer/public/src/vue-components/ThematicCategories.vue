@@ -10,7 +10,7 @@
 <script>
 
 module.exports = {
-  data: function() {
+  data: () => {
     return {
       thematicCategories: [
         {text: 'ΑΠΑΣΧΟΛΗΣΗ ΚΑΙ ΕΡΓΑΣΙΑ' , value:'Employment', keywords:'Απασχόληση Απασχοληση Εργασία Εργασια Και'},

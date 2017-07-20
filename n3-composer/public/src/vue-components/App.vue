@@ -14,7 +14,7 @@
 import GovernmentInstitutionInfo from './GovernmentInstitutionInfo.vue'
 import Decisions from './Decisions.vue'
 
-export default{
+export default {
   components: {GovernmentInstitutionInfo, Decisions}
 }
 

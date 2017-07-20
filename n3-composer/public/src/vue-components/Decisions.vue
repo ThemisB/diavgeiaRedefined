@@ -26,7 +26,7 @@ import ThematicCategories from './ThematicCategories.vue'
 
 module.exports = {
   components: {ThematicCategories},
-  data: function() {
+  data: () => {
     return {
       DecisionTypes: {
 
