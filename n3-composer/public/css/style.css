@@ -31,3 +31,15 @@ body {
 .pickers {
   display: inline !important;
 }
+
+.decisions-composer textarea {
+  resize: none;
+}
+
+.private-data {
+  margin-top:1.8em;
+}
+
+.badge{
+  font-size:1.1em;
+}

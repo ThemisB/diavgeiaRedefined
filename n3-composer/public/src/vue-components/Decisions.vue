@@ -5,9 +5,15 @@
           <label for="title" class="form-control-label">Τίτλος Απόφασης</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="π.χ. Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής">
         </div>
+        <div class="col-xs-2 col-xs-offset-1 private-data">
+          <label for="has_private_data" class="form-control-label" style="display:inline-block">
+            Προσωπικά Δεδομένα
+          </label>
+          <input id="" type="checkbox">
+        </div>
       </div>
       <div class="row">
-        <div class="col-xs-4 text-center col-xs-offset-1">
+        <div class="col-xs-4 text-center">
           <label for="decision_type" class="form-control-label">Είδος Απόφασης</label>
           <select class="pickers selectpicker" title="Επιλέξτε το είδος απόφασης" data-live-search="true" id="decision_type" name="decision_type" data-width="auto">
             <optgroup v-for="decisions in DecisionTypes" :label="decisions.label">
@@ -16,6 +22,31 @@
           </select>
         </div>
         <thematic-categories></thematic-categories>
+        <div class="col-xs-4 text-center">
+          <label for="protocol_number" class="form-control-label">Αριθμός Πρωτοκόλλου</label>
+          <input type="text" class="form-control" id="protocol_number" name="protocol_number">
+        </div>
+      </div>
+      <div class="decisions-composer">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <label for="preconsideration">Εισαγωγικό Κείμενο Απόφασης</label>
+            <textarea class="form-control" rows="2" id="preconsideration" name="preconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά ένα εισαγωγικό κείμενο της Απόφασης, χωρίς να λαμβάνετε υπόψην την ελληνική νομοθεσία"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <h3 class="text-center">Έχοντας λάβει υπόψην</h3>
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="row">
+              <div class="col-xs-8">
+                <label for="consideration-1"><span class="badge">#1</span></label>
+                <textarea class="form-control" rows="2" id="consideration-1" name="consideration-1" placeholder=""></textarea>
+              </div>
+              <div class="col-xs-4">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
   </div>
 </template>
@@ -23,6 +54,7 @@
 <script>
 
 import ThematicCategories from './ThematicCategories.vue'
+// import Consideration from './Consideration.vue'
 
 module.exports = {
   components: {ThematicCategories},

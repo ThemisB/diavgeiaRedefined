@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xs-4 text-center col-xs-offset-1">
+  <div class="col-xs-4 text-center">
     <label for="thematic_category" class="form-control-label">Θεματική Κατηγορία</label>
     <select class="selectpicker pickers" multiple title="Επιλογή 1 ή πολλών Θεμ. Κατηγοριών" data-live-search="true" id="thematic_category" name="thematic_category" data-width="auto">
       <option v-for="thematicCategory in thematicCategories" :data-tokens="thematicCategory.keywords" :value="thematicCategory.value">{{thematicCategory.text}}</option>

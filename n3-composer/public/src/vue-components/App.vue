@@ -13,9 +13,13 @@
 
 import GovernmentInstitutionInfo from './GovernmentInstitutionInfo.vue'
 import Decisions from './Decisions.vue'
+import autosize from 'autosize/dist/autosize.min.js';
 
-export default {
-  components: {GovernmentInstitutionInfo, Decisions}
+module.exports = {
+  components: {GovernmentInstitutionInfo, Decisions},
+  mounted: () => {
+    autosize($('textarea'));
+  }
 }
 
 </script>

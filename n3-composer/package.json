@@ -10,6 +10,7 @@
   "author": "Themis Beris",
   "license": "MIT",
   "dependencies": {
+    "autosize": "^4.0.0",
     "bootstrap-select": "^1.12.3",
     "express": "^4.15.3",
     "vue": "^2.4.1"
