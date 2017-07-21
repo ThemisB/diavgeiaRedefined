@@ -30,18 +30,33 @@
       <div class="decisions-composer">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1">
-            <h4 class="text-center">Εισαγωγικό Κείμενο Απόφασης</h4>
+            <h3 class="text-center"><u>Εισαγωγικό Κείμενο Απόφασης</u></h3>
             <textarea class="form-control" rows="2" id="preconsideration" name="preconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά ένα εισαγωγικό κείμενο της Απόφασης, χωρίς να λαμβάνετε υπόψην την ελληνική νομοθεσία"></textarea>
           </div>
         </div>
         <div class="row">
-          <h4 class="text-center">Έχοντας λάβει υπόψην</h4>
+          <h3 class="text-center"><u>Έχοντας λάβει υπόψην</u></h3>
           <div id="considerationsWrapper">
             <consideration v-for="consideration in considerationsArray" v-bind:number="consideration"></consideration>
           </div>
-          <div class="col-xs-12 text-center">
+          <div class="col-xs-12 text-center addConsiderationBtn">
             <button class="btn btn-default" v-on:click="incrementConsiderations">
               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Προσθήκη {{nextConsideration}}ου "έχοντας λάβει υπόψην"
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <h3 class="text-center"><u>Αποφάσεις</u></h3>
+          <div class="col-xs-4 col-xs-offset-4 text-center">
+            <label for="decision_call" class="form-control-label">Προσφώνηση Απόφασης</label>
+            <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, Αναθεωρούμε,..." class="form-control">
+          </div>
+          <div id="decisionsWrapper">
+            <decision v-for="decision in decisionsArray" v-bind:number="decision"></decision>
+          </div>
+          <div class="col-xs-12 text-center addDecisionsBtn">
+            <button class="btn btn-default" v-on:click="incrementDecisions">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Προσθήκη {{nextDecision}}ης Απόφασης
             </button>
           </div>
         </div>
@@ -53,13 +68,17 @@
 
 import ThematicCategories from './ThematicCategories.vue'
 import Consideration from './Consideration.vue'
+import Decision from './Decision.vue'
 
 module.exports = {
-  components: {ThematicCategories, Consideration},
+  components: {ThematicCategories, Consideration, Decision},
   mounted: function() {
     this.lastConsideration = 1;
     this.nextConsideration = 2;
     this.considerationsArray = [this.lastConsideration];
+    this.lastDecision = 1;
+    this.nextDecision = 2;
+    this.decisionsArray = [this.lastDecision];
   },
   data: function() {
     return {
@@ -141,14 +160,22 @@ module.exports = {
       },
       lastConsideration: 0,
       nextConsideration: 1,
-      considerationsArray: []
+      considerationsArray: [],
+      lastDecision: 0,
+      nextDecision: 1,
+      decisionsArray: []
     }
   },
   methods: {
-    incrementConsiderations: function (e) {
+    incrementConsiderations: function () {
       this.lastConsideration++;
       this.nextConsideration++;
       this.considerationsArray.push(this.lastConsideration);
+    },
+    incrementDecisions: function () {
+      this.lastDecision++;
+      this.nextDecision++;
+      this.decisionsArray.push(this.lastDecision);
     }
   }
 };

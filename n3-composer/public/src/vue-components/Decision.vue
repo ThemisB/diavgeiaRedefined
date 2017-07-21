@@ -1,14 +1,14 @@
 <template>
-  <div class="col-xs-12 consideration">
+  <div class="col-xs-12 decision">
     <div class="row">
       <div class="col-xs-7">
-        <label :for="getConsiderationLabel"><span class="badge">ΛΑΜΒΑΝΩ ΥΠΟΨΗΝ #{{number}}</span></label>
-        <textarea class="form-control" rows="2" :id="getConsiderationLabel" :name="getConsiderationLabel" :placeholder="getBadgePlaceholder"></textarea>
+        <label :for="getDecisionLabel"><span class="badge">ΑΠΟΦΑΣΗ #{{number}}</span></label>
+        <textarea class="form-control" rows="2" :id="getDecisionLabel" :name="getDecisionLabel" :placeholder="getBadgePlaceholder"></textarea>
       </div>
       <div class="col-xs-5">
         <div class="col-xs-3">
         <h5 class="text-center">Είδος Νομοθεσίας</h5>
-        <select class="pickers selectpicker" title="" :id="getConsiderationType" :name="getConsiderationType" data-width="auto">
+        <select class="pickers selectpicker" title="" :id="getDecisionType" :name="getDecisionType" data-width="auto">
           <option value="law">ΝΟΜΟΣ</option>
           <option value="pd">ΠΡΟΕΔΡΙΚΟ ΔΙΑΤΑΓΜΑ</option>
         </select>
@@ -40,23 +40,23 @@ module.exports = {
   props: ['number'],
   computed: {
     getBadgePlaceholder: function() {
-      return 'Το κείμενο της απόφασης για το '+this.number+'ο "έχοντας λάβει υπόψην".';
+      return 'Η '+this.number+'η Απόφαση του φορέα.';
     },
-    getConsiderationLabel: function() {
-      return 'consideration-'+this.number;
+    getDecisionLabel: function() {
+      return 'decision-'+this.number;
     },
-    getConsiderationType: function() {
-      return 'consideration-type-'+this.number;
+    getDecisionType: function() {
+      return 'decision-type-'+this.number;
     },
     getInputGroupId: function() {
-      return 'input-consideration-group-'+this.number;
+      return 'input-decision-group-'+this.number;
     }
   },
   mounted: function() {
     let _this = this;
     this.$nextTick(function() {
-      autosize($('#'+_this.getConsiderationLabel));
-      $('#'+_this.getConsiderationType).selectpicker();
+      autosize($('#'+_this.getDecisionLabel));
+      $('#'+_this.getDecisionType).selectpicker();
     });
     $("#"+_this.getInputGroupId+' input').on("keypress", function(e){
       return _this.isNumber(e);

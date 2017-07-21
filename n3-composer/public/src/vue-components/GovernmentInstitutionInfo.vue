@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="text-center">Στοιχεία Φορέα</h3>
+    <h2 class="text-center dvgColor">Στοιχεία Φορέα</h2>
       <div class="row">
         <div class="col-xs-4">
           <label for="government_institution_name" class="form-control-label">Όνομα Φορέα</label>

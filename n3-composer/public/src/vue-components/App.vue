@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
-    <h1 class="text-center decisionCreation">Δημιουργία Απόφασης Φορέα</h1>
+    <h1 class="text-center decisionCreation dvgColor">Δημιουργία Απόφασης Φορέα</h1>
     <form class="panel">
       <government-institution-info></government-institution-info>
-      <h3 class="text-center">Συγγραφή Απόφασης</h3>
-      <decisions></decisions>
+      <h2 class="text-center dvgColor">Συγγραφή Απόφασης</h2>
+      <decisions-composer></decisions-composer>
     </form>
   </div>
 </template>
@@ -12,10 +12,10 @@
 <script>
 
 import GovernmentInstitutionInfo from './GovernmentInstitutionInfo.vue'
-import Decisions from './Decisions.vue'
+import DecisionsComposer from './DecisionsComposer.vue'
 
 module.exports = {
-  components: {GovernmentInstitutionInfo, Decisions}
+  components: {GovernmentInstitutionInfo, DecisionsComposer}
 }
 
 </script>
