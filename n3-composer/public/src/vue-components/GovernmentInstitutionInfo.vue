@@ -53,19 +53,14 @@
 
 <script>
 
+import InputHandler from './mixins/InputHandler.js'
+
 module.exports = {
-  mounted: () => {
-
-    function isNumber(e) {
-      e = e ? e : window.event;
-      var charCode = (e.which) ? e.which : e.keyCode;
-      if ((charCode > 31 && charCode < 48) || charCode > 57)
-        return false;
-      return true;
-    }
-
+  mixins: [ InputHandler ],
+  mounted: function() {
+    var _this = this;
     $("#government_institution_postalcode").on("keypress", function(e){
-      return isNumber(e);
+      return _this.isNumber(e);
     });
   }
 }

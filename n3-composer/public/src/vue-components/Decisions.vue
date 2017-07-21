@@ -30,21 +30,19 @@
       <div class="decisions-composer">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1">
-            <label for="preconsideration">Εισαγωγικό Κείμενο Απόφασης</label>
+            <h4 class="text-center">Εισαγωγικό Κείμενο Απόφασης</h4>
             <textarea class="form-control" rows="2" id="preconsideration" name="preconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά ένα εισαγωγικό κείμενο της Απόφασης, χωρίς να λαμβάνετε υπόψην την ελληνική νομοθεσία"></textarea>
           </div>
         </div>
         <div class="row">
-          <h3 class="text-center">Έχοντας λάβει υπόψην</h3>
-          <div class="col-xs-10 col-xs-offset-1">
-            <div class="row">
-              <div class="col-xs-8">
-                <label for="consideration-1"><span class="badge">#1</span></label>
-                <textarea class="form-control" rows="2" id="consideration-1" name="consideration-1" placeholder=""></textarea>
-              </div>
-              <div class="col-xs-4">
-              </div>
-            </div>
+          <h4 class="text-center">Έχοντας λάβει υπόψην</h4>
+          <div id="considerationsWrapper">
+            <consideration v-for="consideration in considerationsArray" v-bind:number="consideration"></consideration>
+          </div>
+          <div class="col-xs-12 text-center">
+            <button class="btn btn-default" v-on:click="incrementConsiderations">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Προσθήκη {{nextConsideration}}ου "έχοντας λάβει υπόψην"
+            </button>
           </div>
         </div>
       </div>
@@ -54,11 +52,16 @@
 <script>
 
 import ThematicCategories from './ThematicCategories.vue'
-// import Consideration from './Consideration.vue'
+import Consideration from './Consideration.vue'
 
 module.exports = {
-  components: {ThematicCategories},
-  data: () => {
+  components: {ThematicCategories, Consideration},
+  mounted: function() {
+    this.lastConsideration = 1;
+    this.nextConsideration = 2;
+    this.considerationsArray = [this.lastConsideration];
+  },
+  data: function() {
     return {
       DecisionTypes: {
 
@@ -135,7 +138,17 @@ module.exports = {
           ],
           label: 'ΛΟΙΠΕΣ ΠΡΑΞΕΙΣ'
         }
-      }
+      },
+      lastConsideration: 0,
+      nextConsideration: 1,
+      considerationsArray: []
+    }
+  },
+  methods: {
+    incrementConsiderations: function (e) {
+      this.lastConsideration++;
+      this.nextConsideration++;
+      this.considerationsArray.push(this.lastConsideration);
     }
   }
 };

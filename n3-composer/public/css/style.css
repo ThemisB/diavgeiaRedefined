@@ -41,5 +41,9 @@ body {
 }
 
 .badge{
-  font-size:1.1em;
+  font-size:0.9em;
+}
+
+.legislationConsider {
+  display: inline-block;
 }
