@@ -31,7 +31,7 @@
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1">
             <h3 class="text-center"><u>Εισαγωγικό Κείμενο Απόφασης</u></h3>
-            <textarea class="form-control" rows="2" id="preconsideration" name="preconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά ένα εισαγωγικό κείμενο της Απόφασης, χωρίς να λαμβάνετε υπόψην την ελληνική νομοθεσία"></textarea>
+            <textarea class="form-control" rows="2" id="preconsideration" name="preconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά ένα εισαγωγικό κείμενο της απόφασης, χωρίς να λαμβάνετε υπόψην την ελληνική νομοθεσία"></textarea>
           </div>
         </div>
         <div class="row">
@@ -59,6 +59,39 @@
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Προσθήκη {{nextDecision}}ης Απόφασης
             </button>
           </div>
+          <div class="col-xs-10 col-xs-offset-1">
+            <h3 class="text-center"><u>Επίλογος Απόφασης</u></h3>
+            <textarea class="form-control" rows="2" id="afterconsideration" name="afterconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά τον επίλογο της απόφασης."></textarea>
+          </div>
+        </div>
+        <div class="row" id="allRecipients">
+          <div id="recipientsWrapper" class="col-xs-4">
+            <h4 class="text-center">Αποδέκτες Απόφασης</h4>
+            <recipient v-for="recipient in recipientsArray" v-bind:number="recipient"></recipient>
+            <div class="paddingRecipients text-center">
+              <button class="btn btn-default" v-on:click="incrementRecipients">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextRecipient}}ος αποδέκτης
+              </button>
+            </div>
+          </div>
+          <div id="recipientsShareWrapper" class="col-xs-4">
+            <h4 class="text-center">Αποδέκτες προς Κοινοποίηση</h4>
+            <recipient-for-share v-for="recipientshare in recipientForShareArray" v-bind:number="recipientshare"></recipient-for-share>
+            <div class="paddingRecipients text-center">
+              <button class="btn btn-default" v-on:click="incrementRecipientsForShare">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextRecipientForShare}}ος αποδέκτης
+              </button>
+            </div>
+          </div>
+          <div id="internalDistributionWrapper" class="col-xs-4">
+            <h4 class="text-center">Εσωτερική Διανομή</h4>
+            <internal-distribution v-for="internaldistr in internalDistributionArray" v-bind:number="internaldistr"></internal-distribution>
+            <div class="paddingRecipients text-center">
+              <button class="btn btn-default" v-on:click="incrementInternalDistribution">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextRecipientForShare}}ος αποδέκτης
+              </button>
+            </div>
+          </div>
         </div>
       </div>
   </div>
@@ -69,9 +102,13 @@
 import ThematicCategories from './ThematicCategories.vue'
 import Consideration from './Consideration.vue'
 import Decision from './Decision.vue'
+import Recipient from './Recipient.vue'
+import RecipientForShare from './RecipientForShare.vue'
+import InternalDistribution from './InternalDistribution.vue'
+import autosize from 'autosize/dist/autosize.min.js'
 
 module.exports = {
-  components: {ThematicCategories, Consideration, Decision},
+  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution},
   mounted: function() {
     this.lastConsideration = 1;
     this.nextConsideration = 2;
@@ -79,6 +116,18 @@ module.exports = {
     this.lastDecision = 1;
     this.nextDecision = 2;
     this.decisionsArray = [this.lastDecision];
+    this.lastRecipient = 1;
+    this.nextRecipient = 2;
+    this.recipientsArray = [this.lastRecipient];
+    this.lastRecipientForShare = 1;
+    this.nextRecipientForShare = 2;
+    this.recipientForShareArray = [this.lastRecipientForShare];
+    this.lastInternalDistribution = 1;
+    this.nextInternalDistribution = 2;
+    this.internalDistributionArray = [this.lastInternalDistribution];
+
+    autosize($('#afterconsideration'));
+    autosize($('#preconsideration'));
   },
   data: function() {
     return {
@@ -163,7 +212,16 @@ module.exports = {
       considerationsArray: [],
       lastDecision: 0,
       nextDecision: 1,
-      decisionsArray: []
+      decisionsArray: [],
+      lastRecipient: 0,
+      nextRecipient: 1,
+      recipientsArray: [],
+      lastRecipientForShare: 0,
+      nextRecipientForShare: 1,
+      recipientForShareArray: [],
+      lastInternalDistribution: 0,
+      nextInternalDistribution: 1,
+      internalDistributionArray: []
     }
   },
   methods: {
@@ -176,6 +234,21 @@ module.exports = {
       this.lastDecision++;
       this.nextDecision++;
       this.decisionsArray.push(this.lastDecision);
+    },
+    incrementRecipients: function() {
+      this.lastRecipient++;
+      this.nextRecipient++;
+      this.recipientsArray.push(this.lastRecipient);
+    },
+    incrementRecipientsForShare: function() {
+      this.lastRecipientForShare++;
+      this.nextRecipientForShare++;
+      this.recipientForShareArray.push(this.lastRecipientForShare);
+    },
+    incrementInternalDistribution: function() {
+      this.lastInternalDistribution++;
+      this.nextInternalDistribution++;
+      this.internalDistributionArray.push(this.lastInternalDistribution);
     }
   }
 };

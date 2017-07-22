@@ -39,7 +39,7 @@ body {
   margin-top:1.8em;
 }
 
-.badge{
+.badge {
   font-size:0.9em;
 }
 
@@ -49,4 +49,8 @@ body {
 
 .dvgColor {
   color: #237885;
+}
+
+.paddingRecipients {
+  padding-top:1em;
 }
