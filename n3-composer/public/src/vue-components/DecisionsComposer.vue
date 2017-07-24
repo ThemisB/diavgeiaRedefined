@@ -93,6 +93,17 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div id="signers">
+            <h4 class="text-center">Οι Υπογραφόντες</h4>
+            <signer v-for="signer in signersArray" v-bind:number="signer"></signer>
+            <div class="paddingRecipients text-center">
+              <button class="btn btn-default" v-on:click="incrementSigner">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextSigner}}ος υπογραφών
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
   </div>
 </template>
@@ -105,10 +116,11 @@ import Decision from './Decision.vue'
 import Recipient from './Recipient.vue'
 import RecipientForShare from './RecipientForShare.vue'
 import InternalDistribution from './InternalDistribution.vue'
+import Signer from './Signer.vue'
 import autosize from 'autosize/dist/autosize.min.js'
 
 module.exports = {
-  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution},
+  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer},
   mounted: function() {
     this.lastConsideration = 1;
     this.nextConsideration = 2;
@@ -125,6 +137,9 @@ module.exports = {
     this.lastInternalDistribution = 1;
     this.nextInternalDistribution = 2;
     this.internalDistributionArray = [this.lastInternalDistribution];
+    this.lastSigner = 1;
+    this.nextSigner = 2;
+    this.signersArray = [this.lastSigner];
 
     autosize($('#afterconsideration'));
     autosize($('#preconsideration'));
@@ -221,7 +236,10 @@ module.exports = {
       recipientForShareArray: [],
       lastInternalDistribution: 0,
       nextInternalDistribution: 1,
-      internalDistributionArray: []
+      internalDistributionArray: [],
+      lastSigner: 0,
+      nextSigner: 1,
+      signersArray: []
     }
   },
   methods: {
@@ -249,6 +267,11 @@ module.exports = {
       this.lastInternalDistribution++;
       this.nextInternalDistribution++;
       this.internalDistributionArray.push(this.lastInternalDistribution);
+    },
+    incrementSigner: function() {
+      this.lastSigner++;
+      this.nextSigner++;
+      this.signersArray.push(this.lastSigner);
     }
   }
 };
