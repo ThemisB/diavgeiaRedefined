@@ -1,5 +1,10 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 7 (15 July - 21 July)**
+
+- Finish `.n3` compression. I achieved a **100x** disk space reduction (PDF files: 7.1MB **vs** .n3 files: 72KB)!
+- Start implementation of [n3-composer](https://github.com/eellak/gsoc17-diavgeia/tree/master/n3-composer). N3-composer is a HTML form that government institutions will use in order to compose their decisions and generate `.n3` decisions. Thus, Diavgeia will be able to replace PDF files with the afformentioned generated `.n3` files.
+
 **Week 6 (8 July - 14 July)**
 
 - Document blockchain (what does blockchain technology offers, installation, configuration, usage, test and disclaimer). You can find the link [here](https://github.com/eellak/gsoc17-diavgeia/blob/master/bitcoin/README.md).
