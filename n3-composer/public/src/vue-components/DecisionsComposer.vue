@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-xs-4 col-xs-offset-4 text-center">
           <label for="title" class="form-control-label">Τίτλος Απόφασης</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="π.χ. Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής">
+            <input type="text" class="form-control" id="title" name="title" placeholder="π.χ. Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής" required="required">
         </div>
         <div class="col-xs-2 col-xs-offset-1 private-data">
           <label for="has_private_data" class="form-control-label" style="display:inline-block">
@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-xs-4 text-center">
           <label for="decision_type" class="form-control-label">Είδος Απόφασης</label>
-          <select class="pickers selectpicker" title="Επιλέξτε το είδος απόφασης" data-live-search="true" id="decision_type" name="decision_type" data-width="auto">
+          <select class="pickers selectpicker" title="Επιλέξτε το είδος απόφασης" data-live-search="true" id="decision_type" name="decision_type" data-width="auto" required="required">
             <optgroup v-for="decisions in DecisionTypes" :label="decisions.label">
               <option v-for="decision in decisions.data" :data-tokens="decision.keywords" :value="decision.value">{{decision.text}}</option>
             </optgroup>
@@ -24,7 +24,7 @@
         <thematic-categories></thematic-categories>
         <div class="col-xs-4 text-center">
           <label for="protocol_number" class="form-control-label">Αριθμός Πρωτοκόλλου</label>
-          <input type="text" class="form-control" id="protocol_number" name="protocol_number">
+          <input type="text" class="form-control" id="protocol_number" name="protocol_number" required="required">
         </div>
       </div>
       <div class="decisions-composer">
@@ -49,7 +49,7 @@
           <h3 class="text-center"><u>Αποφάσεις</u></h3>
           <div class="col-xs-4 col-xs-offset-4 text-center">
             <label for="decision_call" class="form-control-label">Προσφώνηση Απόφασης</label>
-            <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, Αναθεωρούμε,..." class="form-control">
+            <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, Αναθεωρούμε,..." class="form-control" required="required">
           </div>
           <div id="decisionsWrapper">
             <decision v-for="decision in decisionsArray" v-bind:number="decision"></decision>
