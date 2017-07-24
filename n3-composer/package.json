@@ -4,7 +4,8 @@
   "description": "App that government institutions should use in order to compose their .n3 decisions.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --hot",
+    "startDev": "webpack-dev-server --config ./webpack.config.development.js --inline --hot",
+    "startProduction": "webpack --config ./webpack.config.production.js && node index.js" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Themis Beris",
