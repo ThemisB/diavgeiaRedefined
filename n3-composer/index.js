@@ -9,6 +9,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname +'/index.html');
 });
 
-app.listen(3000, () => {
-  console.log('App runs on port 3000');
+app.listen(8082, () => {
+  console.log('Production app runs on port 8082');
 });
