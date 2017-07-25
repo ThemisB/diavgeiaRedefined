@@ -3,10 +3,10 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: __dirname+'/public/src/main.js',
+  entry: path.resolve(__dirname, '..','n3-composer/client/src/main.js'),
   output: {
-    path: path.resolve(__dirname, './public/dist'),
-    publicPath: '/public/dist/',
+    path: path.resolve(__dirname, '..','n3-composer/client/dist'),
+    publicPath: '/client/dist/',
     filename: 'build.js'
   },
   module: {

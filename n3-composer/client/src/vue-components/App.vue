@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <h1 class="text-center decisionCreation dvgColor">Δημιουργία Απόφασης Φορέα</h1>
-    <form class="panel">
+    <form class="panel" action="/createDecision" method="post">
       <government-institution-info></government-institution-info>
       <h2 class="text-center dvgColor">Συγγραφή Απόφασης</h2>
       <decisions-composer></decisions-composer>

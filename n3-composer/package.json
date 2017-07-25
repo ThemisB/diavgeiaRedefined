@@ -4,14 +4,15 @@
   "description": "App that government institutions should use in order to compose their .n3 decisions.",
   "main": "index.js",
   "scripts": {
-    "startDev": "webpack-dev-server --config ./webpack.config.development.js --inline --hot",
-    "startProduction": "webpack --config ./webpack.config.production.js && node index.js" ,
+    "startDev": "webpack-dev-server --config ./webpack.config.development.js --content-base client/ --inline --hot",
+    "startProduction": "webpack --config ./webpack.config.production.js && node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Themis Beris",
   "license": "MIT",
   "dependencies": {
     "autosize": "^4.0.0",
+    "body-parser": "^1.17.2",
     "bootstrap-select": "^1.12.3",
     "express": "^4.15.3",
     "vue": "^2.4.1"
