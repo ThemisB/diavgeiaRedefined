@@ -9,7 +9,7 @@
           <label for="has_private_data" class="form-control-label" style="display:inline-block">
             Προσωπικά Δεδομένα
           </label>
-          <input id="has_private_data" name="has_private_data" type="checkbox" checked="false">
+          <input id="has_private_data" name="has_private_data" type="checkbox">
         </div>
       </div>
       <div class="row">
