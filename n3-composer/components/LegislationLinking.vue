@@ -2,7 +2,7 @@
   <div class="col-xs-5">
     <div class="col-xs-3">
     <h5 class="text-center">Είδος Νομοθεσίας</h5>
-    <select class="pickers" :id="getType" :name="getType" data-width="auto" v-model="selected">
+    <select class="pickers" :name="getType" :id="getPicker" data-width="auto" v-model="selected">
       <option value="law">ΝΟΜΟΣ</option>
       <option value="pd">ΠΡΟΕΔΡΙΚΟ ΔΙΑΤΑΓΜΑ</option>
       <option value="dvg">ΑΠΟΦΑΣΗ ΔΙΑΥΓΕΙΑΣ</option>
@@ -11,7 +11,7 @@
     <div class="col-xs-9 text-center">
       <div v-if="selected != 'dvg'">
         <h5 class="text-center">Νομοθεσία</h5>
-        <div class="input-group" :id="getInputGroupId">
+        <div class="input-group">
           <input type="text" :name="getYear" placeholder="Χρονιά" maxlength="4" minlength="4" class="form-control"/>
           <span class="input-group-addon">/</span>
           <input type="text" :name="getNumber" placeholder="Αριθμός" class="form-control"/>
@@ -23,8 +23,9 @@
       </div>
       <div v-else>
         <h5>ΑΔΑ Απόφασης</h5>
-        <input type="text" :name="getADANumber" placeholder="Ο ΑΔΑ της απόφασης, όπως έχει αναρτηθεί στην Διαύγεια" class="form-control">
+        <input type="text" :name="getIUN" placeholder="Ο ΑΔΑ της απόφασης, όπως έχει αναρτηθεί στην Διαύγεια" class="form-control">
       </div>
+      <input type="hidden" :name="getLegislationIndex" :value="getLegislationLinkingNumberValue">
     </div>
   </div>
 </template>
@@ -35,61 +36,60 @@ import InputHandler from './mixins/InputHandler.js'
 import $ from 'jquery'
 
 export default {
-  props: ['number', 'type'],
+  props: ['decisionNumber', 'considerationNumber', 'type'],
   mixins: [ InputHandler ],
   computed: {
-    getADANumber: function () {
-      return 'leglink-dvg-' + this.number
-    },
     // Considerations
     getConsiderationType: function () {
-      return 'leglink-consideration-type-' + this.number
-    },
-    getConsiderationInputGroupId: function () {
-      return 'leglink-input-consideration-group-' + this.number
+      return 'considerations[' + this.considerationNumber + '][type]'
     },
     getConsiderationYear: function () {
-      return 'leglink-year-consideration-' + this.number
+      return 'considerations[' + this.considerationNumber + '][year]'
     },
     getConsiderationNumber: function () {
-      return 'leglink-number-consideration-' + this.number
+      return 'considerations[' + this.considerationNumber + '][number]'
     },
     getConsiderationArticle: function () {
-      return 'leglink-article-consideration-' + this.number
+      return 'considerations[' + this.considerationNumber + '][article]'
     },
     getConsiderationParagraph: function () {
-      return 'leglink-paragraph-consideration-' + this.number
+      return 'considerations[' + this.considerationNumber + '][paragraph]'
+    },
+    getConsiderationIUN: function () {
+      return 'considerations[' + this.considerationNumber + '][IUN]'
+    },
+    getConsiderationIndex: function () {
+      return 'considerations[' + this.considerationNumber + '][index]'
+    },
+    getConsiderationPicker: function () {
+      return 'considerationpicker_' + this.considerationNumber
     },
     // Decisions
-    getDecisionLabel: function () {
-      return 'leglink-decision-' + this.number
-    },
     getDecisionType: function () {
-      return 'leglink-decision-type-' + this.number
-    },
-    getDecisionInputGroupId: function () {
-      return 'leglink-input-decision-group-' + this.number
+      return 'decisions[' + this.decisionNumber + '][type]'
     },
     getDecisionYear: function () {
-      return 'leglink-year-decision-' + this.number
+      return 'decisions[' + this.decisionNumber + '][year]'
     },
     getDecisionNumber: function () {
-      return 'leglink-number-decision-' + this.number
+      return 'decisions[' + this.decisionNumber + '][number]'
     },
     getDecisionArticle: function () {
-      return 'leglink-article-decision-' + this.number
+      return 'decisions[' + this.decisionNumber + '][article]'
     },
     getDecisionParagraph: function () {
-      return 'leglink-paragraph-decision-' + this.number
+      return 'decisions[' + this.decisionNumber + '][paragraph]'
     },
-
+    getDecisionIUN: function () {
+      return 'decisions[' + this.decisionNumber + '][IUN]'
+    },
+    getDecisionIndex: function () {
+      return 'decisions[' + this.decisionNumber + '][index]'
+    },
+    getDecisionPicker: function () {
+      return 'leg_decisionpicker_' + this.decisionNumber
+    },
     // Getters
-    getLabel: function () {
-      return this.type === 'consideration' ? this.getConsiderationLabel : this.getDecisionLabel
-    },
-    getInputGroupId: function () {
-      return this.type === 'consideration' ? this.getConsiderationInputGroupId : this.getDecisionInputGroupId
-    },
     getType: function () {
       return this.type === 'consideration' ? this.getConsiderationType : this.getDecisionType
     },
@@ -104,6 +104,18 @@ export default {
     },
     getParagraph: function () {
       return this.type === 'consideration' ? this.getConsiderationParagraph : this.getDecisionParagraph
+    },
+    getIUN: function () {
+      return this.type === 'consideration' ? this.getConsiderationIUN : this.getDecisionIUN
+    },
+    getPicker: function () {
+      return this.type === 'consideration' ? this.getConsiderationPicker : this.getDecisionPicker
+    },
+    getLegislationIndex: function () {
+      return this.type === 'consideration' ? this.getConsiderationIndex : this.getDecisionIndex
+    },
+    getLegislationLinkingNumberValue: function () {
+      return this.type === 'consideration' ? this.considerationNumber : this.decisionNumber
     }
   },
   data: function () {
@@ -116,7 +128,7 @@ export default {
     $('#' + _this.getInputGroupId + ' input').on('keypress', function (e) {
       return _this.isNumber(e)
     })
-    $('#' + _this.getType).selectpicker()
+    $('#' + _this.getPicker).selectpicker()
   }
 }
 
