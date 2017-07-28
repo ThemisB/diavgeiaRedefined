@@ -2,10 +2,10 @@
   <div class="col-xs-12 consideration">
     <div class="row">
       <div class="col-xs-7">
-        <label :for="getConsiderationLabel"><span class="badge">ΛΑΜΒΑΝΩ ΥΠΟΨΗΝ #{{number}}</span></label>
-        <textarea class="form-control" rows="2" :id="getConsiderationLabel" :name="getConsiderationLabel" :placeholder="getBadgePlaceholder"></textarea>
+        <label :for="getConsiderationLabel"><span class="badge">ΛΑΜΒΑΝΩ ΥΠΟΨΗΝ #{{considerationNumber}}</span></label>
+        <textarea class="form-control" rows="2" :id="getConsiderationLabel" :name="getConsiderationName" :placeholder="getBadgePlaceholder"></textarea>
       </div>
-      <legislation-linking type="consideration" v-bind:number="number"></legislation-linking>
+      <legislation-linking type="consideration" v-bind:considerationNumber="considerationNumber"></legislation-linking>
     </div>
   </div>
 </template>
@@ -19,14 +19,17 @@ import autosize from 'autosize'
 
 export default {
   mixins: [ InputHandler ],
-  props: ['number'],
+  props: ['considerationNumber'],
   components: {LegislationLinking},
   computed: {
     getBadgePlaceholder: function () {
-      return 'Το κείμενο της απόφασης για το ' + this.number + 'ο "έχοντας λάβει υπόψην".'
+      return 'Το κείμενο της απόφασης για το ' + this.considerationNumber + 'ο "έχοντας λάβει υπόψην".'
     },
     getConsiderationLabel: function () {
-      return 'consideration-' + this.number
+      return 'consideration-' + this.considerationNumber
+    },
+    getConsiderationName: function () {
+      return 'considerations[' + this.considerationNumber + '][text]'
     }
   },
   mounted: function () {
