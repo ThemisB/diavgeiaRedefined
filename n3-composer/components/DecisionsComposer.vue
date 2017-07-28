@@ -37,7 +37,7 @@
         <div class="row">
           <h3 class="text-center"><u>Έχοντας λάβει υπόψην</u></h3>
           <div id="considerationsWrapper">
-            <consideration v-for="consideration in considerationsArray" v-bind:number="consideration" :key="consideration.id = consideration"></consideration>
+            <consideration v-for="consideration in considerationsArray" v-bind:considerationNumber="consideration" :key="consideration.id = consideration"></consideration>
           </div>
           <div class="col-xs-12 text-center addConsiderationBtn">
             <button class="btn btn-default" v-on:click="incrementConsiderations">
@@ -52,7 +52,7 @@
             <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, Αναθεωρούμε,..." class="form-control" required="required">
           </div>
           <div id="decisionsWrapper">
-            <decision v-for="decision in decisionsArray" v-bind:number="decision" :key="decision.id = decision"></decision>
+            <decision v-for="decision in decisionsArray" v-bind:decisionNumber="decision" :key="decision.id = decision"></decision>
           </div>
           <div class="col-xs-12 text-center addDecisionsBtn">
             <button class="btn btn-default" v-on:click="incrementDecisions">
