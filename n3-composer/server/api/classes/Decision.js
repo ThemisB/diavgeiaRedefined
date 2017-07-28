@@ -28,7 +28,7 @@ class Decision {
       str += '<'+propertyValue+'>'
     }
     if(lastTriplet)
-      return str+'.\n'
+      return str+'.\n\n'
     return str+';\n'
   }
 
