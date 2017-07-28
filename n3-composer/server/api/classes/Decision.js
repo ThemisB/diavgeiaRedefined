@@ -22,7 +22,7 @@ class Decision {
       str += '"'+propertyValue+'"@el'
     } else if (propertyRange === 'string') {
       str += '"'+propertyValue+'"'
-    } else if (propertyRange === 'number') {
+    } else if (propertyRange === 'number' || propertyRange === 'boolean') {
       str += propertyValue
     } else if (propertyRange === 'entity') {
       str += '<'+propertyValue+'>'
@@ -67,6 +67,7 @@ class Decision {
     this.decisionString += this._format_triplet('ont', 'version', this.fields.version, 'string', false)
     this.decisionString += this._format_triplet('ont', 'iun', this.fields.iun, 'string')
     this.decisionString += this._format_triplet('eli', 'title', this.fields.title, 'string')
+    this.decisionString += this._format_triplet('ont', 'has_private_data', Boolean(this.fields.has_private_data), 'boolean')
     this.decisionString += this._format_triplet('ont', 'government_institution_name', this.fields.government_institution_name, 'string')
     this.decisionString += this._format_triplet('ont', 'protocol_number', this.fields.protocol_number, 'string')
     this.decisionString += this._format_triplet('ont', 'decision_call', this.fields.decision_call, 'string')
