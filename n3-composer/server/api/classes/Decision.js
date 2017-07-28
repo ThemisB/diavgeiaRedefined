@@ -97,12 +97,68 @@ class Decision {
     var submission_timestamp = date.getTime()
     this.decisionString += this._format_triplet('ont', 'submission_timestamp', submission_timestamp, 'string', false)
     dateString = dateString.substring(0, dateString.indexOf('T'))
-    this.decisionString += '\teli:date_publication "'+dateString+'"^^<http://www.w3.org/2001/XMLSchema#date>.\n'
+    this.decisionString += '\teli:date_publication "'+dateString+'"^^<http://www.w3.org/2001/XMLSchema#date>.\n\n'
+  }
+
+  _format_linking(legislation) {
+    if (legislation.type === 'dvg') {
+      // TODO This is not a valid decision format, as we miss the version.
+      // The following approach should be followed:
+      // Combine the current Diavgeia api (https://diavgeia.gov.gr/luminapi/api/decisions/{{IUN}}) with the rdf store.
+      // This is the case, because IUN may refer to an old pdf decision or to a new .n3 decision.
+      let version = '';
+      let iun = legislation.IUN + '/' ;
+      return '\tont:considers <http://diavgeia.gov.gr/eli/decision/'+ iun + version + '>;\n'
+    }
+
+    let articleParagraph = ''
+    if (legislation.article) {
+      articleParagraph = '\\/' + legislation.article
+      if (legislation.paragraph)
+        articleParagraph += '\\/' + legislation.paragraph
+    }
+    return '\tont:considers leg:'+legislation.type + '\\/' + legislation.year + '\\/' + legislation.number + articleParagraph + ';\n'
+  }
+
+  _hasLegislationLinking(legislation) {
+    let validDvgLinking = legislation.type === 'dvg' && legislation.IUN
+    let validLegLinking = legislation.type && legislation.type != 'dvg' && legislation.year && legislation.number
+    return (validLegLinking || validDvgLinking)
+  }
+
+  _writeDecisionBody() {
+    // PreConsideration Body
+    if (this.fields.preconsideration) {
+      this.decisionString += '<PreConsideration> a ont:PreConsideration;\n'
+      this.decisionString += this._format_triplet('ont', 'has_text', this.fields.preconsideration, 'string', true, true)
+    }
+    // Considerations Body
+    this.fields.considerations.forEach( (legislation) => {
+      this.decisionString += '<Consideration/' + legislation.index + '> a ont:Consideration;\n'
+      if (this._hasLegislationLinking(legislation)) {
+        this.decisionString += this._format_linking(legislation)
+      }
+      this.decisionString += this._format_triplet('ont', 'has_text', legislation.text, 'string', true, true)
+    })
+    // Decisions Body
+    this.fields.decisions.forEach( (legislation) => {
+      this.decisionString += '<Decision/' + legislation.index + '> a ont:Decision;\n'
+      if (this._hasLegislationLinking(legislation)) {
+        this.decisionString += this._format_linking(legislation)
+      }
+      this.decisionString += this._format_triplet('ont', 'has_text', legislation.text, 'string', true, true)
+    })
+    // AfterConsideration Body
+    if(this.fields.afterconsideration) {
+      this.decisionString += '<AfterConsideration> a ont:AfterConsideration;\n'
+      this.decisionString += this._format_triplet('ont', 'has_text', this.fields.afterconsideration, 'string', true, true)
+    }
   }
 
   generateN3() {
     this._writePrefixes()
     this._writeGeneralInfo()
+    this._writeDecisionBody()
     console.log(this.decisionString)
     // fs.writeFileSync('testDecision.n3', this.decisionString, (err) => {
     //   if (err)
