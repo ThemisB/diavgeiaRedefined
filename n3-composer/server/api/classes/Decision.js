@@ -81,6 +81,14 @@ class Decision {
     if (this.fields.preconsideration)
       this.decisionString += this._format_triplet('ont','has_preconsideration', 'Preconsideration', 'entity')
 
+    this.fields.considerations.forEach( (_,i) => {
+      this.decisionString += this._format_triplet('ont', 'has_considered', 'Consideration/' + (i + 1) , 'entity')
+    })
+
+    this.fields.decisions.forEach( (_,i) => {
+      this.decisionString += this._format_triplet('ont', 'has_decided', 'Decision/' + (i + 1) , 'entity')
+    })
+
     if (this.fields.afterconsideration)
       this.decisionString += this._format_triplet('ont', 'has_afterdecision', 'AfterDecision', 'entity')
     // Dates
