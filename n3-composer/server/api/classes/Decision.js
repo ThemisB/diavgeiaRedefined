@@ -77,7 +77,7 @@ class Decision {
       this.decisionString += this._format_triplet('ont', 'unit_id', unitId, 'string', false)
     });
     this.decisionString += this._format_triplet('ont', 'organization_id', this.fields.organizationId, 'string', false)
-    // Preconsideration, Considerations, Decisions, AfterDecision
+    // Link Decision with its PreConsideration, Considerations, Decisions and AfterDecision
     if (this.fields.preconsideration)
       this.decisionString += this._format_triplet('ont','has_preconsideration', 'Preconsideration', 'entity')
 
