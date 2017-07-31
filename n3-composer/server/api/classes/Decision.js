@@ -105,6 +105,11 @@ class Decision {
     this.fields.recipient.forEach( (v, _) => {
       this.decisionString += this._format_triplet('ont', 'recipient', v.name, 'string')
     })
+
+    // Signers
+    this.fields.signer.forEach( (_, i) => {
+      this.decisionString += this._format_triplet('ont', 'signed_by', 'Signer/' + (i + 1), 'entity')
+    })
     // Dates
     var date = new Date()
     var dateString = date.toISOString()
@@ -169,10 +174,20 @@ class Decision {
     }
   }
 
+  _writeRestEntities() {
+    // Signers
+    this.fields.signer.forEach( (signer) => {
+      this.decisionString += '<Signer/' + signer.index + '> a ont:Signer;\n'
+      this.decisionString += this._format_triplet('ont', 'signer_name', signer.name, 'string')
+      this.decisionString += this._format_triplet('ont', 'signer_job', signer.job, 'string', true , true)
+    });
+  }
+
   generateN3() {
     this._writePrefixes()
     this._writeGeneralInfo()
     this._writeDecisionBody()
+    this._writeRestEntities()
     console.log(this.decisionString)
     // fs.writeFileSync('testDecision.n3', this.decisionString, (err) => {
     //   if (err)
