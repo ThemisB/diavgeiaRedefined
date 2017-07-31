@@ -92,6 +92,19 @@ class Decision {
 
     if (this.fields.afterconsideration)
       this.decisionString += this._format_triplet('ont', 'has_afterdecision', 'AfterDecision', 'entity')
+
+    // Recipients
+    this.fields.internal_distr.forEach( (v, _) => {
+      this.decisionString += this._format_triplet('ont', 'internal_distribution', v.name, 'string')
+    })
+
+    this.fields.recipient_for_share.forEach( (v, _) => {
+      this.decisionString += this._format_triplet('ont', 'recipient_for_share', v.name, 'string')
+    })
+
+    this.fields.recipient.forEach( (v, _) => {
+      this.decisionString += this._format_triplet('ont', 'recipient', v.name, 'string')
+    })
     // Dates
     var date = new Date()
     var dateString = date.toISOString()
