@@ -110,6 +110,11 @@ class Decision {
     this.fields.signer.forEach( (_, i) => {
       this.decisionString += this._format_triplet('ont', 'signed_by', 'Signer/' + (i + 1), 'entity')
     })
+
+    // Present
+    this.fields.present.forEach( (_, i) => {
+      this.decisionString += this._format_triplet('ont', 'has_present', 'Present/' + (i + 1), 'entity')
+    })
     // Dates
     var date = new Date()
     var dateString = date.toISOString()
@@ -181,6 +186,12 @@ class Decision {
       this.decisionString += this._format_triplet('ont', 'signer_name', signer.name, 'string')
       this.decisionString += this._format_triplet('ont', 'signer_job', signer.job, 'string', true , true)
     });
+    // Present
+    this.fields.present.forEach( (present) => {
+      this.decisionString += '<Present/' + present.index + '> a ont:Present;\n'
+      this.decisionString += this._format_triplet('ont', 'present_name', present.name, 'string')
+      this.decisionString += this._format_triplet('ont', 'present_title', present.role, 'string', true, true)
+    })
   }
 
   generateN3() {
