@@ -40,7 +40,7 @@
             <consideration v-for="consideration in considerationsArray" v-bind:considerationNumber="consideration" :key="consideration.id = consideration"></consideration>
           </div>
           <div class="col-xs-12 text-center addConsiderationBtn">
-            <button class="btn btn-default" v-on:click="incrementConsiderations">
+            <button class="btn btn-default" type="button" v-on:click="incrementConsiderations">
               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Προσθήκη {{nextConsideration}}ου "έχοντας λάβει υπόψην"
             </button>
           </div>
@@ -55,7 +55,7 @@
             <decision v-for="decision in decisionsArray" v-bind:decisionNumber="decision" :key="decision.id = decision"></decision>
           </div>
           <div class="col-xs-12 text-center addDecisionsBtn">
-            <button class="btn btn-default" v-on:click="incrementDecisions">
+            <button class="btn btn-default" type="button" v-on:click="incrementDecisions">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Προσθήκη {{nextDecision}}ης Απόφασης
             </button>
           </div>
@@ -65,11 +65,12 @@
           </div>
         </div>
         <div class="row" id="allRecipients">
+          <h2 class="text-center dvgColor">Αποδέκτες</h2>
           <div id="recipientsWrapper" class="col-xs-4">
             <h4 class="text-center">Αποδέκτες Απόφασης</h4>
             <recipient v-for="recipient in recipientsArray" v-bind:number="recipient" :key="recipient.id = recipient"></recipient>
             <div class="paddingRecipients text-center">
-              <button class="btn btn-default" v-on:click="incrementRecipients">
+              <button class="btn btn-default" type="button" v-on:click="incrementRecipients">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextRecipient}}ος αποδέκτης
               </button>
             </div>
@@ -78,7 +79,7 @@
             <h4 class="text-center">Αποδέκτες προς Κοινοποίηση</h4>
             <recipient-for-share v-for="recipientshare in recipientForShareArray" v-bind:number="recipientshare" :key="recipientshare.id = recipientshare"></recipient-for-share>
             <div class="paddingRecipients text-center">
-              <button class="btn btn-default" v-on:click="incrementRecipientsForShare">
+              <button class="btn btn-default" type="button" v-on:click="incrementRecipientsForShare">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextRecipientForShare}}ος αποδέκτης
               </button>
             </div>
@@ -87,24 +88,35 @@
             <h4 class="text-center">Εσωτερική Διανομή</h4>
             <internal-distribution v-for="internaldistr in internalDistributionArray" v-bind:number="internaldistr" :key="internaldistr.id = internaldistr"></internal-distribution>
             <div class="paddingRecipients text-center">
-              <button class="btn btn-default" v-on:click="incrementInternalDistribution">
+              <button class="btn btn-default" type="button" v-on:click="incrementInternalDistribution">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextRecipientForShare}}ος αποδέκτης
               </button>
             </div>
           </div>
         </div>
         <div class="row">
-          <div id="signers">
+          <h2 class="text-center dvgColor">Παρόντες &amp; Υπογραφόντες</h2>
+          <div id="signersWrapper" class="col-xs-6">
             <h4 class="text-center">Οι Υπογραφόντες</h4>
             <signer v-for="signer in signersArray" v-bind:number="signer" :key="signer.id = signer"></signer>
-            <div class="paddingRecipients text-center">
-              <button class="btn btn-default" v-on:click="incrementSigner">
+            <div class="text-center">
+              <button class="btn btn-default" type="button" v-on:click="incrementSigner">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextSigner}}ος υπογραφών
+              </button>
+            </div>
+          </div>
+          <div id="present" class="col-xs-6">
+            <h4 class="text-center">Ήταν παρόντες στην απόφαση</h4>
+            <present v-for="present in presentsArray" v-bind:number="present" :key="present.id = present"></present>
+            <div class="paddingRecipients text-center">
+              <button class="btn btn-default" type="button" v-on:click="incrementPresent">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{nextPresent}}ος παρόντας
               </button>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </template>
 
@@ -116,12 +128,13 @@ import Decision from './Decision.vue'
 import Recipient from './Recipient.vue'
 import RecipientForShare from './RecipientForShare.vue'
 import InternalDistribution from './InternalDistribution.vue'
+import Present from './Present.vue'
 import Signer from './Signer.vue'
 import $ from 'jquery'
 import autosize from 'autosize'
 
 export default {
-  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer},
+  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer, Present},
   mounted: function () {
     this.lastConsideration = 1
     this.nextConsideration = 2
@@ -141,6 +154,9 @@ export default {
     this.lastSigner = 1
     this.nextSigner = 2
     this.signersArray = [this.lastSigner]
+    this.lastPresent = 1
+    this.nextPresent = 2
+    this.presentsArray = [this.lastPresent]
     autosize($('#afterconsideration'))
     autosize($('#preconsideration'))
     $('#decision_type').selectpicker()
@@ -240,7 +256,10 @@ export default {
       internalDistributionArray: [],
       lastSigner: 0,
       nextSigner: 1,
-      signersArray: []
+      signersArray: [],
+      lastPresent: 0,
+      nextPresent: 1,
+      presentsArray: []
     }
   },
   methods: {
@@ -273,6 +292,11 @@ export default {
       this.lastSigner++
       this.nextSigner++
       this.signersArray.push(this.lastSigner)
+    },
+    incrementPresent: function () {
+      this.lastPresent++
+      this.nextPresent++
+      this.presentsArray.push(this.lastPresent)
     }
   }
 }
