@@ -1,5 +1,12 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 8 (22 July - 28 July)**
+- Complete [n3-composer](https://github.com/eellak/gsoc17-diavgeia/tree/master/n3-composer) basic implementation. n3-composer covers almost all of the general properties that a decision may have.
+- Provide [deployment scripts for development and production](https://github.com/eellak/gsoc17-diavgeia/blob/master/n3-composer/README.md).
+- Test the blockchain implementation on the bitcoin mainnet.
+
+The following week, i will add support for more decision-specific rdf properties.
+
 **Week 7 (15 July - 21 July)**
 
 - Finish `.n3` compression. I achieved a **100x** disk space reduction (PDF files: 7.1MB **vs** .n3 files: 72KB)!
