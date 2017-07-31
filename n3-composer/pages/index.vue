@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <h1 class="text-center decisionCreation dvgColor">Δημιουργία Απόφασης Φορέα</h1>
     <form class="panel" action="/api/createDecision" method="post">
       <government-institution-info></government-institution-info>
