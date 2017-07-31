@@ -1,9 +1,5 @@
-html, body, .container-fluid {
+html, body{
   height: 100%;
-}
-
-.container-fluid {
-  margin-top: 1em;
 }
 
 body {
@@ -16,6 +12,9 @@ body {
 
 .panel {
   padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  background: white;
+  border-radius: 2px;
 }
 
 .row {
@@ -52,5 +51,5 @@ body {
 }
 
 .paddingRecipients {
-  padding-top:1em;
+  padding-top: 1em;
 }
