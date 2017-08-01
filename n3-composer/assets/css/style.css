@@ -53,3 +53,7 @@ body {
 .paddingRecipients {
   padding-top: 1em;
 }
+
+.noPadding {
+  padding: 0em !important;
+}
