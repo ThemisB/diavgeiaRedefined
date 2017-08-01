@@ -69,6 +69,10 @@ class Decision {
           this.decisionString += this._format_triplet('ont', 'normative_number', this.fields.normative_number, 'string', false)
         this._writeFek()
         break
+      case 'Circular':
+        if (this.fields.circular_number)
+          this.decisionString += this._format_triplet('ont', 'circular_number', this.fields.circular_number, 'string', false)
+        break
     }
   }
 
