@@ -17,19 +17,21 @@ class Decision {
   }
 
   _format_triplet(ontology, propertyName, propertyValue, propertyRange, stringGreek=true, lastTriplet=false) {
-    var str = '\t'+ontology+':'+propertyName+' '
+    var str = '\t' + ontology + ':' + propertyName + ' '
     if (propertyRange === 'string' && stringGreek) {
-      str += '"'+propertyValue+'"@el'
+      str += '"' + propertyValue + '"@el'
     } else if (propertyRange === 'string') {
-      str += '"'+propertyValue+'"'
+      str += '"' + propertyValue + '"'
     } else if (propertyRange === 'number' || propertyRange === 'boolean') {
       str += propertyValue
     } else if (propertyRange === 'entity') {
-      str += '<'+propertyValue+'>'
+      str += '<' + propertyValue + '>'
+    } else if (propertyRange === 'integer') {
+      str += '"' + propertyValue + '"^^<http://www.w3.org/2001/XMLSchema#integer>'
     }
     if(lastTriplet)
-      return str+'.\n\n'
-    return str+';\n'
+      return str + '.\n\n'
+    return str + ';\n'
   }
 
   _writePrefixes() {
@@ -72,6 +74,13 @@ class Decision {
       case 'Circular':
         if (this.fields.circular_number)
           this.decisionString += this._format_triplet('ont', 'circular_number', this.fields.circular_number, 'string', false)
+        break
+      case 'Appointment':
+        if (this.fields.number_employees)
+          this.decisionString += this._format_triplet('ont', 'number_employees', this.fields.number_employees, 'integer')
+        if (this.fields.appointment_employer_org)
+          this.decisionString += this._format_triplet('ont', 'appointment_employer_org', this.fields.appointment_employer_org, 'string', false)
+        this._writeFek()
         break
     }
   }
