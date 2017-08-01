@@ -8,6 +8,7 @@
 <script>
 
 import Normative from './specific-decision-fields/Normative.vue'
+import Circular from './specific-decision-fields/Circular.vue'
 
 export default {
   props: ['selected'],
@@ -51,6 +52,6 @@ export default {
       currentView: this.selected
     }
   },
-  components: {Normative}
+  components: {Normative, Circular}
 }
 </script>
