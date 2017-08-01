@@ -106,38 +106,45 @@ class Decision {
     if (this.fields.preconsideration)
       this.decisionString += this._format_triplet('ont','has_preconsideration', 'Preconsideration', 'entity')
 
-    this.fields.considerations.forEach( (_,i) => {
-      this.decisionString += this._format_triplet('ont', 'has_considered', 'Consideration/' + (i + 1) , 'entity')
+    this.fields.considerations.forEach( (v, i) => {
+      if (v.text)
+        this.decisionString += this._format_triplet('ont', 'has_considered', 'Consideration/' + (i + 1) , 'entity')
     })
 
-    this.fields.decisions.forEach( (_,i) => {
-      this.decisionString += this._format_triplet('ont', 'has_decided', 'Decision/' + (i + 1) , 'entity')
+    this.fields.decisions.forEach( (v, i) => {
+      if (v.text)
+        this.decisionString += this._format_triplet('ont', 'has_decided', 'Decision/' + (i + 1) , 'entity')
     })
 
     if (this.fields.afterconsideration)
       this.decisionString += this._format_triplet('ont', 'has_afterdecision', 'AfterDecision', 'entity')
 
     // Recipients
-    this.fields.internal_distr.forEach( (v, _) => {
-      this.decisionString += this._format_triplet('ont', 'internal_distribution', v.name, 'string')
+    this.fields.internal_distr.forEach( (v, i) => {
+      if (v.text)
+        this.decisionString += this._format_triplet('ont', 'internal_distribution', v.name, 'string')
     })
 
-    this.fields.recipient_for_share.forEach( (v, _) => {
-      this.decisionString += this._format_triplet('ont', 'recipient_for_share', v.name, 'string')
+    this.fields.recipient_for_share.forEach( (v, i) => {
+      if (v.text)
+        this.decisionString += this._format_triplet('ont', 'recipient_for_share', v.name, 'string')
     })
 
-    this.fields.recipient.forEach( (v, _) => {
-      this.decisionString += this._format_triplet('ont', 'recipient', v.name, 'string')
+    this.fields.recipient.forEach( (v, i) => {
+      if (v.text)
+        this.decisionString += this._format_triplet('ont', 'recipient', v.name, 'string')
     })
 
     // Signers
-    this.fields.signer.forEach( (_, i) => {
-      this.decisionString += this._format_triplet('ont', 'signed_by', 'Signer/' + (i + 1), 'entity')
+    this.fields.signer.forEach( (v, i) => {
+      if (v.text)
+        this.decisionString += this._format_triplet('ont', 'signed_by', 'Signer/' + (i + 1), 'entity')
     })
 
     // Present
-    this.fields.present.forEach( (_, i) => {
-      this.decisionString += this._format_triplet('ont', 'has_present', 'Present/' + (i + 1), 'entity')
+    this.fields.present.forEach( (v, i) => {
+      if (v.text)
+        this.decisionString += this._format_triplet('ont', 'has_present', 'Present/' + (i + 1), 'entity')
     })
 
     this._writeSpecialProperties()
@@ -185,19 +192,23 @@ class Decision {
     }
     // Considerations Body
     this.fields.considerations.forEach( (legislation) => {
-      this.decisionString += '<Consideration/' + legislation.index + '> a ont:Consideration;\n'
-      if (this._hasLegislationLinking(legislation)) {
-        this.decisionString += this._format_linking(legislation)
+      if (legislation.text) {
+        this.decisionString += '<Consideration/' + legislation.index + '> a ont:Consideration;\n'
+        if (this._hasLegislationLinking(legislation)) {
+          this.decisionString += this._format_linking(legislation)
+        }
+        this.decisionString += this._format_triplet('ont', 'has_text', legislation.text, 'string', true, true)
       }
-      this.decisionString += this._format_triplet('ont', 'has_text', legislation.text, 'string', true, true)
     })
     // Decisions Body
     this.fields.decisions.forEach( (legislation) => {
-      this.decisionString += '<Decision/' + legislation.index + '> a ont:Decision;\n'
-      if (this._hasLegislationLinking(legislation)) {
-        this.decisionString += this._format_linking(legislation)
+      if (legislation.text) {
+        this.decisionString += '<Decision/' + legislation.index + '> a ont:Decision;\n'
+        if (this._hasLegislationLinking(legislation)) {
+          this.decisionString += this._format_linking(legislation)
+        }
+        this.decisionString += this._format_triplet('ont', 'has_text', legislation.text, 'string', true, true)
       }
-      this.decisionString += this._format_triplet('ont', 'has_text', legislation.text, 'string', true, true)
     })
     // AfterConsideration Body
     if(this.fields.afterconsideration) {
@@ -209,15 +220,19 @@ class Decision {
   _writeRestEntities() {
     // Signers
     this.fields.signer.forEach( (signer) => {
-      this.decisionString += '<Signer/' + signer.index + '> a ont:Signer;\n'
-      this.decisionString += this._format_triplet('ont', 'signer_name', signer.name, 'string')
-      this.decisionString += this._format_triplet('ont', 'signer_job', signer.job, 'string', true , true)
+      if (signer.name) {
+        this.decisionString += '<Signer/' + signer.index + '> a ont:Signer;\n'
+        this.decisionString += this._format_triplet('ont', 'signer_name', signer.name, 'string')
+        this.decisionString += this._format_triplet('ont', 'signer_job', signer.job, 'string', true , true)
+      }
     });
     // Present
     this.fields.present.forEach( (present) => {
-      this.decisionString += '<Present/' + present.index + '> a ont:Present;\n'
-      this.decisionString += this._format_triplet('ont', 'present_name', present.name, 'string')
-      this.decisionString += this._format_triplet('ont', 'present_title', present.role, 'string', true, true)
+      if (present.name) {
+        this.decisionString += '<Present/' + present.index + '> a ont:Present;\n'
+        this.decisionString += this._format_triplet('ont', 'present_name', present.name, 'string')
+        this.decisionString += this._format_triplet('ont', 'present_title', present.role, 'string', true, true)
+      }
     })
   }
 
