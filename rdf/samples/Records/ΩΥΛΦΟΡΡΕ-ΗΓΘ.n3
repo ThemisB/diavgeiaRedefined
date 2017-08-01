@@ -41,6 +41,6 @@
 	ont:present_title "Εισηγήτρια"@el.
 
 <Signer/1> a ont:Signer>;
-	ont:signer_job> "Αντιπρόεδρος Ν.Σ.Κ."@el;
-	ont:signer_name> "ΑΛΕΞΑΝΔΡΟΣ Γ. ΚΑΡΑΓΙΑΝΝΗΣ"@el;
-	ont:signer_id> "103135".
+	ont:signer_job "Αντιπρόεδρος Ν.Σ.Κ."@el;
+	ont:signer_name "ΑΛΕΞΑΝΔΡΟΣ Γ. ΚΑΡΑΓΙΑΝΝΗΣ"@el;
+	ont:signer_id "103135".
