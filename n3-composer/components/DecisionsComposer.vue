@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-xs-4 text-center">
           <label for="decision_type" class="form-control-label">Είδος Απόφασης</label>
-          <select class="pickers selectpicker" title="Επιλέξτε το είδος απόφασης" data-live-search="true" id="decision_type" name="decision_type" data-width="auto" required="required">
+          <select class="pickers selectpicker" title="Επιλέξτε το είδος απόφασης" data-live-search="true" id="decision_type" name="decision_type" data-width="auto" required="required" v-model="selected">
             <optgroup v-for="decisions in DecisionTypes" :label="decisions.label">
               <option v-for="decision in decisions.data" :data-tokens="decision.keywords" :value="decision.value">{{decision.text}}</option>
             </optgroup>
@@ -63,6 +63,9 @@
             <h3 class="text-center"><u>Επίλογος Απόφασης</u></h3>
             <textarea class="form-control" rows="2" id="afterconsideration" name="afterconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά τον επίλογο της απόφασης."></textarea>
           </div>
+        </div>
+        <div v-if="!ifInGeneralDecisionsArray(selected)" class="row">
+          <decision-specific-fields v-bind:selected="selected"></decision-specific-fields>
         </div>
         <div class="row" id="allRecipients">
           <h2 class="text-center dvgColor">Αποδέκτες</h2>
@@ -130,11 +133,12 @@ import RecipientForShare from './RecipientForShare.vue'
 import InternalDistribution from './InternalDistribution.vue'
 import Present from './Present.vue'
 import Signer from './Signer.vue'
+import DecisionSpecificFields from './DecisionSpecificFields.vue'
 import $ from 'jquery'
 import autosize from 'autosize'
 
 export default {
-  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer, Present},
+  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer, Present, DecisionSpecificFields},
   mounted: function () {
     this.lastConsideration = 1
     this.nextConsideration = 2
@@ -163,6 +167,8 @@ export default {
   },
   data: function () {
     return {
+      selected: '',
+      generalDecisions: ['InvestmentPlacing', 'DevelopmentLawContract', 'DisciplinaryAcquitance', 'EvaluationReportOfLaw', 'PublicPrototypeDocuments', 'StartProductionalFunctionOfInvestment'],
       DecisionTypes: {
 
         Laws: {
@@ -201,7 +207,7 @@ export default {
             {text: 'ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ', value: 'OccupationInvitation', keywords: 'Προκήρυξη Προκηρυξη Πλήρωσης Πληρωσης Θέσεων Θεσεων'},
             {text: 'ΣΥΜΒΑΣΗ', value: 'Contract', keywords: 'Σύμβαση Συμβαση'},
             {text: 'ΥΠΗΡΕΣΙΑΚΗ ΜΕΤΑΒΟΛΗ', value: 'ServiceChange', keywords: 'Υπηρεσιακή Υπηρεασιακη Μεταβολή Μεταβολη'},
-            {text: 'ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ', value: 'DesciplinaryAcquitance', keywords: 'Αθωωτική Αθωωτικη Πειθαρχική Πειθαρχικη Απόφαση Αποφαση'}
+            {text: 'ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ', value: 'DisciplinaryAcquitance', keywords: 'Αθωωτική Αθωωτικη Πειθαρχική Πειθαρχικη Απόφαση Αποφαση'}
           ],
           label: 'ΠΡΑΞΕΙΣ ΟΡΓΑΝΩΤΙΚΟΥ ΚΑΙ ΔΙΟΙΚΗΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ'
         },
@@ -297,6 +303,9 @@ export default {
       this.lastPresent++
       this.nextPresent++
       this.presentsArray.push(this.lastPresent)
+    },
+    ifInGeneralDecisionsArray: function (value) {
+      return this.generalDecisions.includes(value) || value === ''
     }
   }
 }
