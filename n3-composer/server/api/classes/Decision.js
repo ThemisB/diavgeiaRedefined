@@ -61,6 +61,30 @@ class Decision {
       this.decisionString += this._format_triplet('ont', 'government_institution_information', this.fields.government_institution_information, 'string')
   }
 
+  _writeSpecialProperties() {
+    switch (this.fields.decision_type) {
+      case 'Normative':
+        this._writeNormativeType()
+        if (this.fields.normative_number)
+          this.decisionString += this._format_triplet('ont', 'normative_number', this.fields.normative_number, 'string', false)
+        this._writeFek()
+        break
+    }
+  }
+
+  _writeFek() {
+    if (this.fields.fek_number && this.fields.fek_issue && this.fields.fek_year) {
+      this.decisionString += this._format_triplet('ont', 'fek_number', this.fields.fek_number, 'string', false)
+      this.decisionString += this._format_triplet('ont', 'fek_issue', this.fields.fek_issue, 'string')
+      this.decisionString += this._format_triplet('ont', 'fek_year', this.fields.fek_year, 'string', false)
+    }
+  }
+
+  _writeNormativeType() {
+    if (this.fields.normative_number)
+      this.decisionString += this._format_triplet('ont', 'normative_type', this.fields.normative_type, 'string')
+  }
+
   _writeGeneralInfo() {
     // General Information
     this.decisionString += '<> a ont:'+this.fields.decision_type+';\n'
@@ -115,6 +139,9 @@ class Decision {
     this.fields.present.forEach( (_, i) => {
       this.decisionString += this._format_triplet('ont', 'has_present', 'Present/' + (i + 1), 'entity')
     })
+
+    this._writeSpecialProperties()
+
     // Dates
     var date = new Date()
     var dateString = date.toISOString()
