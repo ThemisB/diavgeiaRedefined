@@ -16,6 +16,9 @@
   <div v-else-if="selected === 'LegislativeDecree'">
     <legislative-decree></legislative-decree>
   </div>
+  <div v-else-if="selected === 'OtherDecisions' || selected === 'OtherDevelopmentLaw'">
+    <other-decisions-general></other-decisions-general>
+  </div>
 </div>
 </template>
 
@@ -26,6 +29,7 @@ import Circular from './specific-decision-fields/Circular.vue'
 import Appointment from './specific-decision-fields/Appointment.vue'
 import Award from './specific-decision-fields/Award.vue'
 import LegislativeDecree from './specific-decision-fields/LegislativeDecree.vue'
+import OtherDecisionsGeneral from './specific-decision-fields/OtherDecisionsGeneral.vue'
 
 export default {
   props: ['selected'],
@@ -64,6 +68,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral}
 }
 </script>
