@@ -1,7 +1,18 @@
 <template>
 <div>
   <h3 class="text-center"><u>Ειδικά πεδία {{ selected | getSpecialFieldsTranslator}}</u></h3>
-  <component v-bind:is="currentView"></component>
+  <div v-if="selected === 'Normative'">
+    <normative></normative>
+  </div>
+  <div v-else-if="selected === 'Circular'">
+    <circular></circular>
+  </div>
+  <div v-else-if="selected === 'Appointment'">
+    <appointment></appointment>
+  </div>
+  <div v-else-if="selected === 'Award'">
+    <award></award>
+  </div>
 </div>
 </template>
 
