@@ -101,6 +101,14 @@ class Decision {
             this.decisionString += this._format_triplet('ont', 'legislative_decree_number', this.fields.legislative_decree_number, 'string', false)
           this._writeFek()
         break
+        case 'OtherDecisions':
+        case 'OtherDevelopmentLaw':
+          this._writeNormativeType()
+          if (this.fields.publish_via)
+            this.decisionString += this._format_triplet('ont', 'publish_via', this.fields.publish_via, 'string')
+          if (this.fields.publish_via === 'Στο ΦΕΚ')
+            this._writeFek()
+        break
     }
   }
 
