@@ -1,7 +1,7 @@
 <template>
   <div class="row noPadding">
     <div class="col-xs-4">
-      <label for="fek_number">Αρ.ΦΕΚ</label>
+      <label for="fek_number">Αρ. ΦΕΚ</label>
       <input name="fek_number" type="text" class="form-control">
     </div>
     <div class="col-xs-4">
