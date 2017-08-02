@@ -96,6 +96,11 @@ class Decision {
           this.decisionString += '\tont:has_related_declaration_summary <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
         }
         break
+        case 'LegislativeDecree':
+          if (this.fields.legislative_decree_number)
+            this.decisionString += this._format_triplet('ont', 'legislative_decree_number', this.fields.legislative_decree_number, 'string', false)
+          this._writeFek()
+        break
     }
   }
 
