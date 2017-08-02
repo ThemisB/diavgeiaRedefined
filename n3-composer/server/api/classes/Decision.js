@@ -114,6 +114,19 @@ class Decision {
             this.decisionString += this._format_triplet('ont', 'service_change_decision_type', this.fields.service_change_decision_type, 'string')
           this._writeFek()
         break
+        case 'OccupationInvitation':
+          if (this.fields.vacancy_opening_type)
+            this.decisionString += this._format_triplet('ont', 'vacancy_opening_type', this.fields.vacancy_opening_type, 'string')
+          if (this.fields.has_related_undertaking) {
+            // TODO This is not a valid decision format, as we miss the version.
+            // The following approach should be followed:
+            // Combine the current Diavgeia api (https://diavgeia.gov.gr/luminapi/api/decisions/{{IUN}}) with the rdf store.
+            // This is the case, because IUN may refer to an old pdf decision or to a new .n3 decision.
+            let version = ''
+            let iun = this.fields.has_related_undertaking + '/'
+            this.decisionString += '\tont:has_related_undertaking <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
+          }
+        break
     }
   }
 
