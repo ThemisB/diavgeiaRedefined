@@ -57,3 +57,7 @@ body {
 .noPadding {
   padding: 0em !important;
 }
+
+.expensesTable td, .expensesTable th {
+   text-align: center;
+}
