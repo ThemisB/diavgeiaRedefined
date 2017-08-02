@@ -82,6 +82,20 @@ class Decision {
           this.decisionString += this._format_triplet('ont', 'appointment_employer_org', this.fields.appointment_employer_org, 'string', false)
         this._writeFek()
         break
+      case 'Award':
+        if (this.fields.expense_amount && this.fields.expense[0].afm) {
+          this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
+        }
+        if (this.fields.has_related_declaration_summary) {
+          // TODO This is not a valid decision format, as we miss the version.
+          // The following approach should be followed:
+          // Combine the current Diavgeia api (https://diavgeia.gov.gr/luminapi/api/decisions/{{IUN}}) with the rdf store.
+          // This is the case, because IUN may refer to an old pdf decision or to a new .n3 decision.
+          let version = ''
+          let iun = this.fields.has_related_declaration_summary + '/'
+          this.decisionString += '\tont:has_related_declaration_summary <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
+        }
+        break
     }
   }
 
@@ -247,6 +261,29 @@ class Decision {
         this.decisionString += this._format_triplet('ont', 'present_title', present.role, 'string', true, true)
       }
     })
+    // Expenses
+    switch (this.fields.decision_type) {
+      case 'Award':
+        if (this.fields.expense_amount && this.fields.expense[0].afm) {
+          this.decisionString += '<Expense/1> a ont:Expense;\n'
+          this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
+          this.fields.expense.forEach((expense, i) => {
+            if (expense.afm) {
+              this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
+            }
+          })
+          this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+
+          //Sponsored
+          this.fields.expense.forEach((expense) => {
+            this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+            this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
+            this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
+            this.decisionString += this._format_triplet('ont', 'name', expense.name, 'string', true, true)
+          })
+        }
+        break;
+    }
   }
 
   generateN3() {
