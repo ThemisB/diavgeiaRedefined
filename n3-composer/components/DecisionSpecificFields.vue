@@ -25,6 +25,9 @@
   <div v-else-if="selected === 'OccupationInvitation'">
     <occupation-invitation></occupation-invitation>
   </div>
+  <div v-else-if="selected === 'Records'">
+    <records></records>
+  </div>
 </div>
 </template>
 
@@ -38,6 +41,7 @@ import LegislativeDecree from './specific-decision-fields/LegislativeDecree.vue'
 import OtherDecisionsGeneral from './specific-decision-fields/OtherDecisionsGeneral.vue'
 import ServiceChange from './specific-decision-fields/ServiceChange.vue'
 import OccupationInvitation from './specific-decision-fields/OccupationInvitation.vue'
+import Records from './specific-decision-fields/Records.vue'
 
 export default {
   props: ['selected'],
@@ -76,6 +80,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records}
 }
 </script>
