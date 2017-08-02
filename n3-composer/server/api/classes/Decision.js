@@ -109,6 +109,11 @@ class Decision {
           if (this.fields.publish_via === 'Στο ΦΕΚ')
             this._writeFek()
         break
+        case 'ServiceChange':
+          if (this.fields.service_change_decision_type)
+            this.decisionString += this._format_triplet('ont', 'service_change_decision_type', this.fields.service_change_decision_type, 'string')
+          this._writeFek()
+        break
     }
   }
 
