@@ -127,6 +127,12 @@ class Decision {
             this.decisionString += '\tont:has_related_undertaking <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
           }
         break
+        case 'Records':
+          if (this.fields.record_subject)
+            this.decisionString += this._format_triplet('ont', 'record_subject', this.fields.record_subject, 'string')
+          if (this.fields.record_number)
+            this.decisionString += this._format_triplet('ont', 'record_number', this.fields.record_number, 'string', false)
+        break
     }
   }
 
