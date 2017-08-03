@@ -1,7 +1,7 @@
 <template>
   <div>
-    <label for="expense_currency">Συνάλλαγμα ποσού</label>
-    <select class="selectpicker pickers" title="Συνάλλαγμα" data-live-search="true" id="currency_selector" name="expense_currency" data-width="auto" style="width:auto">
+    <label :for="getExpenseCurrencyName">Συνάλλαγμα ποσού</label>
+    <select class="selectpicker pickers currency_selector" title="Συνάλλαγμα" data-live-search="true" :name="getExpenseCurrencyName" data-width="auto" style="width:auto">
       <option v-for="expense_currency in currencies" :data-tokens="expense_currency" :value="expense_currency">{{expense_currency}}</option>
     </select>
   </div>
@@ -12,6 +12,7 @@
 import $ from 'jquery'
 
 export default {
+  props: ['number'],
   data: () => {
     return {
       currencies: [
@@ -20,7 +21,15 @@ export default {
     }
   },
   mounted: function () {
-    $('#currency_selector').selectpicker()
+    $('.currency_selector').selectpicker()
+  },
+  computed: {
+    getExpenseCurrencyName: function () {
+      if (this.number !== undefined) {
+        return 'expense[' + this.number + '][expense_currency]'
+      }
+      return 'expense_currency'
+    }
   }
 }
 </script>
