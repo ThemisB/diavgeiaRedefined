@@ -37,6 +37,9 @@
   <div v-else-if="selected === 'CollegialBodyCommisionWorkingGroup'">
     <collegial-body-commision-working-group></collegial-body-commision-working-group>
   </div>
+  <div v-else-if="selected === 'CommisionWarrant'">
+    <commision-warrant></commision-warrant>
+  </div>
 </div>
 </template>
 
@@ -54,6 +57,7 @@ import Records from './specific-decision-fields/Records.vue'
 import BalanceAccount from './specific-decision-fields/BalanceAccount.vue'
 import BudgetApproval from './specific-decision-fields/BudgetApproval.vue'
 import CollegialBodyCommisionWorkingGroup from './specific-decision-fields/CollegialBodyCommisionWorkingGroup.vue'
+import CommisionWarrant from './specific-decision-fields/CommisionWarrant.vue'
 
 export default {
   props: ['selected'],
@@ -92,6 +96,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant}
 }
 </script>
