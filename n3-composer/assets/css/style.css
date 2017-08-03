@@ -70,3 +70,7 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+.expensesWithKae td {
+  vertical-align: middle !important;
+}
