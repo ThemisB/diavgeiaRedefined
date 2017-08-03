@@ -192,6 +192,26 @@ class Decision {
         if (this.fields.financial_year)
           this.decisionString += this._format_triplet('ont', 'financial_year', this.fields.financial_year, 'string', false)
         break
+      case 'Contract':
+        var contract_decision_type = this.fields.contract_decision_type
+        if (contract_decision_type) {
+          this.decisionString += this._format_triplet('ont', 'contract_decision_type', contract_decision_type, 'string')
+          if (this.fields.number_employees)
+            this.decisionString += this._format_triplet('ont', 'number_employees', this.fields.number_employees, 'integer')
+          if (contract_decision_type !== 'Σύμβαση Ιδιωτικού Δικαίου Αορίστου Χρόνου') {
+            if (this.fields.contract_is_co_funded)
+              this.decisionString += this._format_triplet('ont', 'contract_is_co_funded', Boolean(this.fields.contract_is_co_funded), 'boolean')
+
+            if (contract_decision_type === 'Σύμβαση Έργου') {
+              if (this.fields.expense_amount && this.fields.expense[0].afm) {
+                this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
+              }
+              this.decisionString += '\tont:contract_start "'+this.fields.contract_start+'"^^<http://www.w3.org/2001/XMLSchema#date>;\n'
+              this.decisionString += '\tont:contract_end "'+this.fields.contract_end+'"^^<http://www.w3.org/2001/XMLSchema#date>;\n'
+            }
+          }
+        }
+      break
     }
   }
 
@@ -372,10 +392,12 @@ class Decision {
 
           //Sponsored
           this.fields.expense.forEach((expense) => {
-            this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
-            this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
-            this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
-            this.decisionString += this._format_triplet('ont', 'name', expense.name, 'string', true, true)
+            if (expense.afm && expense.afm_type && expense.name && expense.index) {
+              this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+              this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
+              this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
+              this.decisionString += this._format_triplet('ont', 'name', expense.name, 'string', true, true)
+            }
           })
         }
       break
@@ -388,6 +410,28 @@ class Decision {
             this.decisionString += this._format_triplet('ont', 'kae', expense.kae, 'string', false, true)
           }
         })
+      break
+      case 'Contract':
+        if (this.fields.expense_amount && this.fields.expense[0].afm) {
+          this.decisionString += '<Expense/1> a ont:Expense;\n'
+          this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
+          this.fields.expense.forEach((expense, i) => {
+            if (expense.afm) {
+              this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
+            }
+          })
+          this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+
+          //Sponsored
+          this.fields.expense.forEach((expense) => {
+            if (expense.afm && expense.afm_type && expense.name && expense.index) {
+              this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+              this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
+              this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
+              this.decisionString += this._format_triplet('ont', 'name', expense.name, 'string', true, true)
+            }
+          })
+        }
       break
     }
   }
