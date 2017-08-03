@@ -28,6 +28,9 @@
   <div v-else-if="selected === 'Records'">
     <records></records>
   </div>
+  <div v-else-if="selected === 'BalanceAccount'">
+    <balance-account></balance-account>
+  </div>
 </div>
 </template>
 
@@ -42,6 +45,7 @@ import OtherDecisionsGeneral from './specific-decision-fields/OtherDecisionsGene
 import ServiceChange from './specific-decision-fields/ServiceChange.vue'
 import OccupationInvitation from './specific-decision-fields/OccupationInvitation.vue'
 import Records from './specific-decision-fields/Records.vue'
+import BalanceAccount from './specific-decision-fields/BalanceAccount.vue'
 
 export default {
   props: ['selected'],
@@ -80,6 +84,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount}
 }
 </script>
