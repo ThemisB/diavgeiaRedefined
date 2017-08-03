@@ -28,6 +28,9 @@
 	ont:contract_decision_type "Σύμβαση Έργου"@el;
 	ont:thematic_category "PublicAdministration";
 	ont:number_employees "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	ont:contract_start "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:contract_end "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:contract_is_co_funded true;
 	ont:has_private_data false;
 	ont:organization_id "99206920";
 	ont:submission_timestamp "1452594644088";
@@ -55,8 +58,6 @@
 <Expense/1> a ont:Expense;
 	ont:expense_amount "5500";
 	ont:expense_currency "EUR";
-	ont:contract_start "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	ont:contract_end "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
 	ont:has_sponsored <Sponsored/1>.
 
 <Signer/1> a ont:Signer;
