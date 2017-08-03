@@ -128,7 +128,6 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
                 </owl:unionOf>

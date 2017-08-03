@@ -181,7 +181,7 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
   *Description* : `Expense` is a general entity which describes an expense between two individuals and is used in various decision types which include economic exchanges.
 
   *Properties*
-  - An [Award](#award), [Contract](#contract), [DeclarationSummary](#declarationsummary), [DonationGrant](#donationgrant), [ExpenditureApproval](#expenditureapproval), [GeneralSpecialSecretaryMonocraticBody][#generalspecialsecretarymonocraticbody], [Undertaking](#undertaking),  [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies), [OwnershipTransferOfAssets](#ownershiptransferofassets) may use the **dvg:has_expense** object property to connect the decision entity with its [Expense](#expense). |`Range → dvg:Expense`|
+  - An [Award](#award), [Contract](#contract), [DeclarationSummary](#declarationsummary), [DonationGrant](#donationgrant), [ExpenditureApproval](#expenditureapproval), [GeneralSpecialSecretaryMonocraticBody](#generalspecialsecretarymonocraticbody), [Undertaking](#undertaking),  [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies), [OwnershipTransferOfAssets](#ownershiptransferofassets) may use the **dvg:has_expense** object property to connect the decision entity with its [Expense](#expense). |`Range → dvg:Expense`|
   - An [Expense](#expense) has an optional **dvg:has_sponsored** object property which links to a [Sponsored](#sponsored) class and denotes the payment recipient. |`Range → dvg:Sponsored`|
   - An [Expense](#expense) has an optional **dvg:has_organization_sponsor** object property which links to a [OrganizationSponsor](#organizationsponsor) class and denotes the payment sender. |`Range → dvg:OrganizationSponsor`|
   - [Expense](#expense) also has a number of data properties:
@@ -332,8 +332,6 @@ As it was previously mentioned, Diavgeia hosts 34 different decision types. This
 
 **Greek Translation** : ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ
 
-**Object Properties**
-  - **has_expense_with_kae** : expressing the expense as  [ExpenseWithKae](#expensewithkae) of the [BudgetApproval](#budgetapproval). |`Range → dvg:ExpenseWithKae`|
 **Data Properties**
   - **budget_type** : |`Range → OneOf{"Κρατικός"@el, "Φορέα"@el}`|
   - **budget_category** : |`Range → OneOf{"Ίδια Έσοδα"@el, "Πρόγραμμα Δημοσίων Επενδύσεων"@el, "Τακτικός Προϋπολογισμός"@el}`|
