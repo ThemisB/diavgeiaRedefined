@@ -66,9 +66,9 @@ body {
   padding-top: 6em;
 }
 
-#is_balance_account_approval_for_org, #is_budget_approval_for_org {
-  display: block;
-  margin: 0 auto;
+#is_balance_account_approval_for_org, #is_budget_approval_for_org, .contract_is_co_funded{
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 .expensesWithKae td {
