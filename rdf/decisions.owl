@@ -595,8 +595,17 @@
     <!-- http://diavgeia.gov.gr/ontology/contract_end -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_end">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/contract_is_co_funded -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_is_co_funded">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -604,7 +613,7 @@
     <!-- http://diavgeia.gov.gr/ontology/contract_start -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_start">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
     </owl:DatatypeProperty>
     

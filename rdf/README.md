@@ -185,10 +185,8 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
   - An [Expense](#expense) has an optional **dvg:has_sponsored** object property which links to a [Sponsored](#sponsored) class and denotes the payment recipient. |`Range → dvg:Sponsored`|
   - An [Expense](#expense) has an optional **dvg:has_organization_sponsor** object property which links to a [OrganizationSponsor](#organizationsponsor) class and denotes the payment sender. |`Range → dvg:OrganizationSponsor`|
   - [Expense](#expense) also has a number of data properties:
-    1. **dvg:contract_start** : used only in [Contract](#contract) decisions and denote the start of the contract. |`Range → xsd:date`|
-    2. **dvg:contract_end** : similar to **contract_start**. |`Range → xsd:date`|
-    3. **dvg:expense_amount** : Amount of money spent on the [Expense](#expense). |`Range → xsd:string`|
-    4. **dvg:expense_currency** : The currency of the *expense_amount*. |`Range → xsd:string`|
+    1. **dvg:expense_amount** : Amount of money spent on the [Expense](#expense). |`Range → xsd:string`|
+    2. **dvg:expense_currency** : The currency of the *expense_amount*. |`Range → xsd:string`|
 
     *Note* : The use of **dvg:has_organization_sponsor**, **dvg:has_sponsored** and **dvg:expense_amount/currency** is closely related to the decision type. For example, an [ExpenditureApproval](#expenditureapproval) must have all of these properties, whereas an [OwnershipTransferOfAssets](#ownershiptransferofassets) has only the **dvg:has_organization_sponsor** and **dvg:has_sponsored** object properties, because no money are exchanged.
 
@@ -377,9 +375,13 @@ As it was previously mentioned, Diavgeia hosts 34 different decision types. This
 
 **Object Properties**
   - **has_expense** : the [expense](#expense) of the [Contract](#contract). |`Range → dvg:Expense`|
+
 **Data Properties**
   - **contract_decision_type** : |`Range → OneOf{"Σύμβαση Έργου"@el , "Σύμβαση Ιδιωτικού Δικαίου Αορίστου Χρόνου"@el , "Σύμβαση Ιδιωτικού Δικαίου Ορισμένου Χρόνου"@el}`|
   - **number_employees** : Similar to [Appointment](#appointment)
+  - **contract_start** : Start of the Contract |`Range → xsd:date`|
+  - **contract_end** : End of the Contract |`Range → xsd:date`|
+  - **contract_is_co_funded** : True if the contact is co-funded |`Range → xsd:boolean`|
 
 - - -
 
