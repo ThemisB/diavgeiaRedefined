@@ -164,7 +164,18 @@ class Decision {
             this.decisionString += this._format_triplet('ont', 'is_balance_account_approval_for_org', false, 'boolean')
           }
         break
-
+        case 'CollegialBodyCommisionWorkingGroup':
+          if (this.fields.collegial_body_party_type)
+            this.decisionString += this._format_triplet('ont', 'collegial_body_party_type', this.fields.collegial_body_party_type, 'string')
+          var decisionType = this.fields.collegial_body_decision_type
+          if (decisionType) {
+            this.decisionString += this._format_triplet('ont', 'collegial_body_decision_type', decisionType, 'string')
+            if (this.fields.collegial_body_refund && this.fields.expense_currency) {
+              this.decisionString += this._format_triplet('ont', 'collegial_body_refund', this.fields.collegial_body_refund, 'string', false)
+              this.decisionString += this._format_triplet('ont', 'collegial_body_currency', this.fields.expense_currency, 'string')
+            }
+          }
+          this._writeFek()
         break
     }
   }
