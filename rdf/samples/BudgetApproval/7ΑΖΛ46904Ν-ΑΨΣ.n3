@@ -23,7 +23,6 @@
 	ont:commitment_number "70";
 	ont:recipient_for_share "Γρ. Διατροφής"@el;
 	ont:thematic_category "NutritionAgriculturalProducts";
-	ont:has_expense_with_kae <ExpenseWithKae/1>;
 	ont:has_private_data false;
 	ont:organization_id "99221890";
   ont:unit_id "77026";
@@ -66,10 +65,3 @@
 <Signer/2> a ont:Signer;
 	ont:signer_job "ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
 	ont:signer_name "Ηλ. Κοκκίνης"@el.
-
-<ExpenseWithKae/1> a ont:ExpenseWithKae;
-	ont:expense_amount "1387.3";
-	ont:expense_amount_currency "EUR";
-	ont:kae "25-6263.013";
-	ont:kae_budget_remainder "7000";
-	ont:kae_credit_remainder "5337.59".
