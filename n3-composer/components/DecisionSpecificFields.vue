@@ -31,6 +31,9 @@
   <div v-else-if="selected === 'BalanceAccount'">
     <balance-account></balance-account>
   </div>
+  <div v-else-if="selected === 'BudgetApproval'">
+    <budget-approval></budget-approval>
+  </div>
 </div>
 </template>
 
@@ -46,6 +49,7 @@ import ServiceChange from './specific-decision-fields/ServiceChange.vue'
 import OccupationInvitation from './specific-decision-fields/OccupationInvitation.vue'
 import Records from './specific-decision-fields/Records.vue'
 import BalanceAccount from './specific-decision-fields/BalanceAccount.vue'
+import BudgetApproval from './specific-decision-fields/BudgetApproval.vue'
 
 export default {
   props: ['selected'],
@@ -84,6 +88,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval}
 }
 </script>
