@@ -457,6 +457,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/collegial_body_currency -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/collegial_body_currency">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/collegial_body_decision_type -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/collegial_body_decision_type">
@@ -539,6 +548,15 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/collegial_body_refund -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/collegial_body_refund">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
