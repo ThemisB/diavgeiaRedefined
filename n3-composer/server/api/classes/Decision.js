@@ -177,6 +177,21 @@ class Decision {
           }
           this._writeFek()
         break
+        case 'CommisionWarrant':
+        this.fields.expense.forEach((expense, i) => {
+          if (expense.kae && expense.expense_amount && expense.expense_currency && expense.index) {
+            this.decisionString += this._format_triplet('ont', 'has_expense_with_kae', 'ExpenseWithKae/' + (i + 1), 'entity')
+          }
+        })
+        if (this.fields.primary_officer)
+          this.decisionString += this._format_triplet('ont', 'primary_officer', this.fields.primary_officer, 'string')
+        if (this.fields.secondary_officer)
+          this.decisionString += this._format_triplet('ont', 'secondary_officer', this.fields.secondary_officer, 'string')
+        if (this.fields.budget_category)
+          this.decisionString += this._format_triplet('ont', 'budget_category', this.fields.budget_category, 'string')
+        if (this.fields.financial_year)
+          this.decisionString += this._format_triplet('ont', 'financial_year', this.fields.financial_year, 'string', false)
+        break
     }
   }
 
@@ -363,7 +378,17 @@ class Decision {
             this.decisionString += this._format_triplet('ont', 'name', expense.name, 'string', true, true)
           })
         }
-        break;
+      break
+      case 'CommisionWarrant':
+        this.fields.expense.forEach((expense) => {
+          if (expense.kae && expense.expense_amount && expense.expense_currency && expense.index) {
+            this.decisionString += '<ExpenseWithKae/' + expense.index + '> a ont:ExpenseWithKae;\n'
+            this.decisionString += this._format_triplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
+            this.decisionString += this._format_triplet('ont', 'expense_amount_currency', expense.expense_currency, 'string', true)
+            this.decisionString += this._format_triplet('ont', 'kae', expense.kae, 'string', false, true)
+          }
+        })
+      break
     }
   }
 
