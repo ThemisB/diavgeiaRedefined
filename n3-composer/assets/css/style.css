@@ -61,3 +61,12 @@ body {
 .expensesTable td, .expensesTable th {
    text-align: center;
 }
+
+.balanceAccountPadding {
+  padding-top: 6em;
+}
+
+#is_balance_account_approval_for_org {
+  display: block;
+  margin: 0 auto;
+}
