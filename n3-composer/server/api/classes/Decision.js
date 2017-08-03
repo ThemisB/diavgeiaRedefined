@@ -133,6 +133,23 @@ class Decision {
           if (this.fields.record_number)
             this.decisionString += this._format_triplet('ont', 'record_number', this.fields.record_number, 'string', false)
         break
+        case 'BalanceAccount':
+          if (this.fields.balance_account_type)
+              this.decisionString += this._format_triplet('ont', 'balance_account_type', this.fields.balance_account_type, 'string')
+          if (this.fields.balance_account_time_period)
+            this.decisionString += this._format_triplet('ont', 'balance_account_time_period', this.fields.balance_account_time_period, 'string')
+          if (this.fields.financial_year)
+            this.decisionString += this._format_triplet('ont', 'financial_year', this.fields.financial_year, 'string', false)
+          var is_balance_account_approval_for_org = this.fields.is_balance_account_approval_for_org && Boolean(this.fields.is_balance_account_approval_for_org)
+          if (is_balance_account_approval_for_org){
+            this.decisionString += this._format_triplet('ont', 'is_balance_account_approval_for_org', is_balance_account_approval_for_org, 'boolean')
+            // TODO this should be the UnitID, not the name and this can be found by the current production code of Diavgeia
+            this.decisionString += this._format_triplet('ont', 'has_related_institution', this.fields.has_related_institution, 'string', false)
+          } else {
+            this.decisionString += this._format_triplet('ont', 'is_balance_account_approval_for_org', false, 'boolean')
+          }
+
+        break
     }
   }
 
