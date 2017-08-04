@@ -43,6 +43,9 @@
   <div v-else-if="selected === 'Contract'">
     <contract></contract>
   </div>
+  <div v-else-if="selected === 'DeclarationSummary'">
+    <declaration-summary></declaration-summary>
+  </div>
 </div>
 </template>
 
@@ -62,6 +65,7 @@ import BudgetApproval from './specific-decision-fields/BudgetApproval.vue'
 import CollegialBodyCommisionWorkingGroup from './specific-decision-fields/CollegialBodyCommisionWorkingGroup.vue'
 import CommisionWarrant from './specific-decision-fields/CommisionWarrant.vue'
 import Contract from './specific-decision-fields/Contract.vue'
+import DeclarationSummary from './specific-decision-fields/DeclarationSummary.vue'
 
 export default {
   props: ['selected'],
@@ -100,6 +104,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary}
 }
 </script>
