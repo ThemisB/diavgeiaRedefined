@@ -224,6 +224,14 @@ class Decision {
         if (this.fields.government_institution_budget_code)
           this.decisionString += this._format_triplet('ont', 'government_institution_budget_code', this.fields.government_institution_budget_code, 'string')
       break
+      case 'DonationGrant':
+        if (this.fields.donation_type)
+          this.decisionString += this._format_triplet('ont', 'donation_type', this.fields.donation_type, 'string')
+        if (this.fields.kae)
+          this.decisionString += this._format_triplet('ont', 'kae', this.fields.kae, 'string', false)
+        if (this.fields.expense_amount && this.fields.expense_currency)
+          this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
+      break
     }
   }
 
@@ -404,11 +412,11 @@ class Decision {
 
           //Sponsored
           this.fields.expense.forEach((expense) => {
-            if (expense.afm && expense.afm_type && expense.name && expense.index) {
+            if (expense.afm && expense.afm_type && expense.sponsored && expense.index) {
               this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
               this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
               this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
-              this.decisionString += this._format_triplet('ont', 'name', expense.name, 'string', true, true)
+              this.decisionString += this._format_triplet('ont', 'name', expense.sponsored, 'string', true, true)
             }
           })
         }
@@ -453,6 +461,38 @@ class Decision {
         this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
         this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
       }
+      break
+      case 'DonationGrant':
+        // TODO why Diavgeia supports only 1 amount of money for all expenses??
+        this.decisionString += '<Expense/1> a ont:Expense;\n'
+        this.fields.expense.forEach((expense, i) => {
+          if (expense.afm){
+            this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
+          }
+        })
+        this.decisionString += this._format_triplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity')
+        this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
+        this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+
+        //OrganizationSponsor
+        this.decisionString += '<OrganizationSponsor/1> a ont:OrganizationSponsor;\n'
+        this.decisionString += this._format_triplet('ont', 'afm_type', this.fields.sponsor_afm_type, 'string')
+        var afm = this.fields.sponsor_afm
+        if (afm) {
+          // Organization without afm
+          this.decisionString += this._format_triplet('ont', 'afm', this.fields.sponsor_afm, 'string', false)
+        }
+        this.decisionString += this._format_triplet('ont', 'name', this.fields.sponsor_name, 'string', true, true)
+
+        // Sponsored
+        this.fields.expense.forEach((expense, i) => {
+          if (expense.afm && expense.sponsored && expense.index){
+            this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+            this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
+            this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
+            this.decisionString += this._format_triplet('ont', 'name', expense.sponsored, 'string', true, true)
+          }
+        })
       break
     }
   }
