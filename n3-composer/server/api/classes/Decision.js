@@ -232,6 +232,12 @@ class Decision {
         if (this.fields.expense_amount && this.fields.expense_currency)
           this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
       break
+      case 'SpatialPlanningDecisions':
+        if (this.fields.municipality)
+          this.decisionString += this._format_triplet('ont', 'municipality', this.fields.municipality, 'string')
+        if (this.fields.spatial_planning_decision_type)
+          this.decisionString += this._format_triplet('ont', 'spatial_planning_decision_type', this.fields.spatial_planning_decision_type, 'string')
+      break
     }
   }
 
