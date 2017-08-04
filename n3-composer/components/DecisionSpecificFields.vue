@@ -49,6 +49,9 @@
   <div v-else-if="selected === 'DonationGrant'">
     <donation-grant></donation-grant>
   </div>
+  <div v-else-if="selected === 'SpatialPlanningDecisions'">
+    <spatial-planning-decisions></spatial-planning-decisions>
+  </div>
 </div>
 </template>
 
@@ -70,6 +73,7 @@ import CommisionWarrant from './specific-decision-fields/CommisionWarrant.vue'
 import Contract from './specific-decision-fields/Contract.vue'
 import DeclarationSummary from './specific-decision-fields/DeclarationSummary.vue'
 import DonationGrant from './specific-decision-fields/DonationGrant.vue'
+import SpatialPlanningDecisions from './specific-decision-fields/SpatialPlanningDecisions.vue'
 
 export default {
   props: ['selected'],
@@ -103,11 +107,12 @@ export default {
         'WorkAssignmentSupplyServicesStudies': 'Ανάθεσης Έργων / Προμηθειών / Υπηρεσιών / Μελετών',
         'Award': 'Κατακύρωσης',
         'DeclarationSummary': 'Περίληψης Διακήρυξης',
+        'SpatialPlanningDecisions': 'Πράξεων Χωροταξικού - Πολεοδομικού Περιεχομένου',
         'OtherDecisions': 'Λοιπών Ατομικών Διοικητικών Πράξεων'
       }
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions}
 }
 </script>
