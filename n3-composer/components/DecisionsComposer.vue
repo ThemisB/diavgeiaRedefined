@@ -243,6 +243,12 @@ export default {
             {text: 'ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ', value: 'PublicPrototypeDocuments', keywords: 'Δημόσια Δημοσια Πρότυπα Προτυπα Έγγραφα Εγγραφα'}
           ],
           label: 'ΛΟΙΠΕΣ ΠΡΑΞΕΙΣ'
+        },
+        SpatialPlanningDecisions: {
+          data: [
+            {text: 'ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ', value: 'SpatialPlanningDecisions', keywords: 'Πράξεις Πραξεις Χωροταξικού Χωροταξικου Πολεοδομικού Πολεοδομικού Περιεχομένου Περιεχομενου'}
+          ],
+          label: 'ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ'
         }
       },
       lastConsideration: 0,
