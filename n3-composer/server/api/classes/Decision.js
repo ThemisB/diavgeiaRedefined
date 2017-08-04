@@ -212,6 +212,18 @@ class Decision {
           }
         }
       break
+      case 'DeclarationSummary':
+        if (this.fields.expense_amount && this.fields.expense_currency)
+          this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
+        if (this.fields.tendering_procedure)
+          this.decisionString += this._format_triplet('ont', 'tendering_procedure', this.fields.tendering_procedure, 'string')
+        if (this.fields.selection_criterion)
+          this.decisionString += this._format_triplet('ont', 'selection_criterion', this.fields.selection_criterion, 'string')
+        if (this.fields.contract_decision_type)
+          this.decisionString += this._format_triplet('ont', 'contract_decision_type', this.fields.contract_decision_type, 'string')
+        if (this.fields.government_institution_budget_code)
+          this.decisionString += this._format_triplet('ont', 'government_institution_budget_code', this.fields.government_institution_budget_code, 'string')
+      break
     }
   }
 
@@ -432,6 +444,15 @@ class Decision {
             }
           })
         }
+      break
+      case 'DeclarationSummary':
+      if (this.fields.expense_amount && this.fields.expense_currency) {
+        this.decisionString += '<Expense/1> a ont:Expense;\n'
+        if (this.fields.cpv)
+          this.decisionString += this._format_triplet('ont', 'cpv', this.fields.cpv, 'string', false)
+        this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
+        this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+      }
       break
     }
   }
