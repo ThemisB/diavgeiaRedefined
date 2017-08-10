@@ -1,5 +1,10 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 9 (29 July - 4 August)**
+- Support n3 generation of 24 out of 32 decision types.
+
+The following week, i will add support for the remaining decision types.
+
 **Week 8 (22 July - 28 July)**
 - Complete [n3-composer](https://github.com/eellak/gsoc17-diavgeia/tree/master/n3-composer) basic implementation. n3-composer covers almost all of the general properties that a decision may have.
 - Provide [deployment scripts for development and production](https://github.com/eellak/gsoc17-diavgeia/blob/master/n3-composer/README.md).
