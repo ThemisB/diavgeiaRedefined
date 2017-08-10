@@ -71,10 +71,16 @@ body {
   margin: 0 auto !important;
 }
 
-.expensesWithKae td, .expensesDonation td {
+.expensesWithKae td, .expensesDonation td, .expensesExpenditureApproval td {
   vertical-align: middle !important;
 }
 
 .afmTypeContainer {
   overflow : visible !important;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
