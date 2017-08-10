@@ -69,5 +69,5 @@
 	ont:name "ΠΑΣ ΠΡΩΤΕΑΣ"@el.
 
 <Expense/1> a ont:Expense;
-	<has_sponsored> <Sponsored/1>;
-	<has_organization_sponsor> <OrganizationSponsor/1>.
+	ont:has_sponsored <Sponsored/1>;
+	ont:has_organization_sponsor <OrganizationSponsor/1>.
