@@ -55,6 +55,9 @@
   <div v-else-if="selected === 'ExpenditureApproval'">
     <expenditure-approval></expenditure-approval>
   </div>
+  <div v-else-if="selected === 'GeneralSpecialSecretaryMonocraticBody'">
+    <general-special-secretary-monocratic-body></general-special-secretary-monocratic-body>
+  </div>
 </div>
 </template>
 
@@ -78,6 +81,7 @@ import DeclarationSummary from './specific-decision-fields/DeclarationSummary.vu
 import DonationGrant from './specific-decision-fields/DonationGrant.vue'
 import SpatialPlanningDecisions from './specific-decision-fields/SpatialPlanningDecisions.vue'
 import ExpenditureApproval from './specific-decision-fields/ExpenditureApproval.vue'
+import GeneralSpecialSecretaryMonocraticBody from './specific-decision-fields/GeneralSpecialSecretaryMonocraticBody.vue'
 
 export default {
   props: ['selected'],
@@ -117,6 +121,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions, ExpenditureApproval}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions, ExpenditureApproval, GeneralSpecialSecretaryMonocraticBody}
 }
 </script>
