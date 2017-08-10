@@ -551,6 +551,9 @@ This type of decision does not have any specific object or data properties.
 **Object Properties**
   - **has_expense** : expressing the transfer as  [expense](#expense) of the [OwnershipTransferOfAssets](#ownershiptransferofassets). |`Range → dvg:Expense`|
 
+**Data Properties**
+  - **asset_name** : The name of the asset that will be transferred.
+
 - - -
 
 ### PublicPrototypeDocuments
