@@ -52,6 +52,9 @@
   <div v-else-if="selected === 'SpatialPlanningDecisions'">
     <spatial-planning-decisions></spatial-planning-decisions>
   </div>
+  <div v-else-if="selected === 'ExpenditureApproval'">
+    <expenditure-approval></expenditure-approval>
+  </div>
 </div>
 </template>
 
@@ -74,6 +77,7 @@ import Contract from './specific-decision-fields/Contract.vue'
 import DeclarationSummary from './specific-decision-fields/DeclarationSummary.vue'
 import DonationGrant from './specific-decision-fields/DonationGrant.vue'
 import SpatialPlanningDecisions from './specific-decision-fields/SpatialPlanningDecisions.vue'
+import ExpenditureApproval from './specific-decision-fields/ExpenditureApproval.vue'
 
 export default {
   props: ['selected'],
@@ -113,6 +117,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions, ExpenditureApproval}
 }
 </script>
