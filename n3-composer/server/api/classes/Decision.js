@@ -238,6 +238,22 @@ class Decision {
         if (this.fields.spatial_planning_decision_type)
           this.decisionString += this._format_triplet('ont', 'spatial_planning_decision_type', this.fields.spatial_planning_decision_type, 'string')
       break
+      case 'ExpenditureApproval':
+      this.fields.expense.forEach((expense, i) => {
+        if (expense.afm && expense.expense_amount && expense.expense_currency && expense.index && expense.sponsored) {
+          this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/' + (i + 1), 'entity')
+        }
+      })
+      if (this.fields.has_related_undertaking) {
+        // TODO This is not a valid decision format, as we miss the version.
+        // The following approach should be followed:
+        // Combine the current Diavgeia api (https://diavgeia.gov.gr/luminapi/api/decisions/{{IUN}}) with the rdf store.
+        // This is the case, because IUN may refer to an old pdf decision or to a new .n3 decision.
+        let version = ''
+        let iun = this.fields.has_related_undertaking + '/'
+        this.decisionString += '\tont:has_related_undertaking <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
+      }
+      break
     }
   }
 
@@ -491,7 +507,7 @@ class Decision {
         this.decisionString += this._format_triplet('ont', 'name', this.fields.sponsor_name, 'string', true, true)
 
         // Sponsored
-        this.fields.expense.forEach((expense, i) => {
+        this.fields.expense.forEach((expense) => {
           if (expense.afm && expense.sponsored && expense.index){
             this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
             this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
@@ -499,6 +515,35 @@ class Decision {
             this.decisionString += this._format_triplet('ont', 'name', expense.sponsored, 'string', true, true)
           }
         })
+      break
+      case 'ExpenditureApproval':
+      this.fields.expense.forEach((expense) => {
+        if (expense.afm && expense.expense_amount && expense.expense_currency && expense.index && expense.sponsored) {
+          this.decisionString += '<Expense/' + expense.index + '> a ont:Expense;\n'
+          this.decisionString += this._format_triplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
+          this.decisionString += this._format_triplet('ont', 'expense_currency', expense.expense_currency, 'string', true)
+          if (expense.kae)
+            this.decisionString += this._format_triplet('ont', 'kae', expense.kae, 'string', false)
+          if (expense.cpv)
+            this.decisionString += this._format_triplet('ont', 'cpv', expense.cpv, 'string')
+          this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + expense.index, 'entity')
+          this.decisionString += this._format_triplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity', true, true)
+          // Sponsored
+          this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+          this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
+          this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
+          this.decisionString += this._format_triplet('ont', 'name', expense.sponsored, 'string', true, true)
+        }
+      })
+      //OrganizationSponsor
+      this.decisionString += '<OrganizationSponsor/1> a ont:OrganizationSponsor;\n'
+      this.decisionString += this._format_triplet('ont', 'afm_type', this.fields.sponsor_afm_type, 'string')
+      var afm = this.fields.sponsor_afm
+      if (afm) {
+        // Organization without afm
+        this.decisionString += this._format_triplet('ont', 'afm', this.fields.sponsor_afm, 'string', false)
+      }
+      this.decisionString += this._format_triplet('ont', 'name', this.fields.sponsor_name, 'string', true, true)
       break
     }
   }
