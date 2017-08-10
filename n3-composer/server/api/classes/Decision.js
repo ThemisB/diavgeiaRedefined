@@ -254,6 +254,16 @@ class Decision {
         this.decisionString += '\tont:has_related_undertaking <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
       }
       break
+      case 'GeneralSpecialSecretaryMonocraticBody':
+        if (this.fields.expense_amount && this.fields.expense_currency)
+          this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
+        if (this.fields.position)
+          this.decisionString += this._format_triplet('ont', 'position', this.fields.position, 'string')
+        if (this.fields.position_decision_type)
+          this.decisionString += this._format_triplet('ont', 'position_decision_type', this.fields.position_decision_type, 'string')
+        if (this.fields.position_org)
+          this.decisionString += this._format_triplet('ont', 'position_org', this.fields.position_org, 'string')
+      break
     }
   }
 
@@ -517,33 +527,40 @@ class Decision {
         })
       break
       case 'ExpenditureApproval':
-      this.fields.expense.forEach((expense) => {
-        if (expense.afm && expense.expense_amount && expense.expense_currency && expense.index && expense.sponsored) {
-          this.decisionString += '<Expense/' + expense.index + '> a ont:Expense;\n'
-          this.decisionString += this._format_triplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
-          this.decisionString += this._format_triplet('ont', 'expense_currency', expense.expense_currency, 'string', true)
-          if (expense.kae)
-            this.decisionString += this._format_triplet('ont', 'kae', expense.kae, 'string', false)
-          if (expense.cpv)
-            this.decisionString += this._format_triplet('ont', 'cpv', expense.cpv, 'string')
-          this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + expense.index, 'entity')
-          this.decisionString += this._format_triplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity', true, true)
-          // Sponsored
-          this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
-          this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
-          this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
-          this.decisionString += this._format_triplet('ont', 'name', expense.sponsored, 'string', true, true)
+        this.fields.expense.forEach((expense) => {
+          if (expense.afm && expense.expense_amount && expense.expense_currency && expense.index && expense.sponsored) {
+            this.decisionString += '<Expense/' + expense.index + '> a ont:Expense;\n'
+            this.decisionString += this._format_triplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
+            this.decisionString += this._format_triplet('ont', 'expense_currency', expense.expense_currency, 'string', true)
+            if (expense.kae)
+              this.decisionString += this._format_triplet('ont', 'kae', expense.kae, 'string', false)
+            if (expense.cpv)
+              this.decisionString += this._format_triplet('ont', 'cpv', expense.cpv, 'string')
+            this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + expense.index, 'entity')
+            this.decisionString += this._format_triplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity', true, true)
+            // Sponsored
+            this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+            this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
+            this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
+            this.decisionString += this._format_triplet('ont', 'name', expense.sponsored, 'string', true, true)
+          }
+        })
+        //OrganizationSponsor
+        this.decisionString += '<OrganizationSponsor/1> a ont:OrganizationSponsor;\n'
+        this.decisionString += this._format_triplet('ont', 'afm_type', this.fields.sponsor_afm_type, 'string')
+        var afm = this.fields.sponsor_afm
+        if (afm) {
+          // Organization without afm
+          this.decisionString += this._format_triplet('ont', 'afm', this.fields.sponsor_afm, 'string', false)
         }
-      })
-      //OrganizationSponsor
-      this.decisionString += '<OrganizationSponsor/1> a ont:OrganizationSponsor;\n'
-      this.decisionString += this._format_triplet('ont', 'afm_type', this.fields.sponsor_afm_type, 'string')
-      var afm = this.fields.sponsor_afm
-      if (afm) {
-        // Organization without afm
-        this.decisionString += this._format_triplet('ont', 'afm', this.fields.sponsor_afm, 'string', false)
-      }
-      this.decisionString += this._format_triplet('ont', 'name', this.fields.sponsor_name, 'string', true, true)
+        this.decisionString += this._format_triplet('ont', 'name', this.fields.sponsor_name, 'string', true, true)
+      break
+      case 'GeneralSpecialSecretaryMonocraticBody':
+        if (this.fields.expense_amount && this.fields.expense_currency) {
+          this.decisionString += '<Expense/1> a ont:Expense;\n'
+          this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string')
+          this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+        }
       break
     }
   }
