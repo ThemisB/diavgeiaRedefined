@@ -328,6 +328,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/asset_name -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/asset_name">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/balance_account_time_period -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/balance_account_time_period">
