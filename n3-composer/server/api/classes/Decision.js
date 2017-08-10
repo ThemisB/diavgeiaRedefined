@@ -264,6 +264,14 @@ class Decision {
         if (this.fields.position_org)
           this.decisionString += this._format_triplet('ont', 'position_org', this.fields.position_org, 'string')
       break
+      case 'OwnershipTransferOfAssets':
+        let sponsorFieldsSet = this.fields.sponsor_afm && this.fields.sponsor_name && this.fields.sponsor_afm_type
+        let atLeastOneSponsored = this.fields.expense[0].afm && this.fields.expense[0].afm_type && this.fields.expense[0].index
+        if (sponsorFieldsSet && atLeastOneSponsored && this.fields.asset_name) {
+          this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
+          this.decisionString += this._format_triplet('ont', 'asset_name', this.fields.asset_name, 'string')
+        }
+      break
     }
   }
 
@@ -560,6 +568,36 @@ class Decision {
           this.decisionString += '<Expense/1> a ont:Expense;\n'
           this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string')
           this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+        }
+      break
+      case 'OwnershipTransferOfAssets':
+        let sponsorFieldsSet = this.fields.sponsor_afm && this.fields.sponsor_name && this.fields.sponsor_afm_type
+        let atLeastOneSponsored = this.fields.expense[0].afm && this.fields.expense[0].afm_type && this.fields.expense[0].index
+        if (sponsorFieldsSet && atLeastOneSponsored && this.fields.asset_name) {
+          this.decisionString += '<Expense/1> a ont:Expense;\n'
+          this.fields.expense.forEach((expense, i) => {
+            if (expense.afm && expense.afm_type && expense.sponsored)
+              this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
+          })
+          this.decisionString += this._format_triplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity', true, true)
+          //OrganizationSponsor
+          this.decisionString += '<OrganizationSponsor/1> a ont:OrganizationSponsor;\n'
+          this.decisionString += this._format_triplet('ont', 'afm_type', this.fields.sponsor_afm_type, 'string')
+          var afm = this.fields.sponsor_afm
+          if (afm) {
+            // Organization without afm
+            this.decisionString += this._format_triplet('ont', 'afm', this.fields.sponsor_afm, 'string', false)
+          }
+          this.decisionString += this._format_triplet('ont', 'name', this.fields.sponsor_name, 'string', true, true)
+          // Sponsored
+          this.fields.expense.forEach((expense) => {
+            if (expense.afm && expense.afm_type && expense.sponsored) {
+              this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+              this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
+              this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
+              this.decisionString += this._format_triplet('ont', 'name', expense.sponsored, 'string', true, true)
+            }
+          })
         }
       break
     }
