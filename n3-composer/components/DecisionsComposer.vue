@@ -46,18 +46,20 @@
           </div>
         </div>
         <div class="row">
-          <h3 class="text-center"><u>Αποφάσεις</u></h3>
-          <div class="col-xs-4 col-xs-offset-4 text-center">
-            <label for="decision_call" class="form-control-label">Προσφώνηση Απόφασης</label>
-            <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, Αναθεωρούμε,..." class="form-control" required="required">
-          </div>
-          <div id="decisionsWrapper">
-            <decision v-for="decision in decisionsArray" v-bind:decisionNumber="decision" :key="decision.id = decision"></decision>
-          </div>
-          <div class="col-xs-12 text-center addDecisionsBtn">
-            <button class="btn btn-default" type="button" v-on:click="incrementDecisions">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Προσθήκη {{nextDecision}}ης Απόφασης
-            </button>
+          <div v-if="selected !== 'Opinion'">
+            <h3 class="text-center"><u>Αποφάσεις</u></h3>
+            <div class="col-xs-4 col-xs-offset-4 text-center">
+              <label for="decision_call" class="form-control-label">Προσφώνηση Απόφασης</label>
+              <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, Αναθεωρούμε,..." class="form-control" required="required">
+            </div>
+            <div id="decisionsWrapper">
+              <decision v-for="decision in decisionsArray" v-bind:decisionNumber="decision" :key="decision.id = decision"></decision>
+            </div>
+            <div class="col-xs-12 text-center addDecisionsBtn">
+              <button class="btn btn-default" type="button" v-on:click="incrementDecisions">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Προσθήκη {{nextDecision}}ης Απόφασης
+              </button>
+            </div>
           </div>
           <div class="col-xs-10 col-xs-offset-1">
             <h3 class="text-center"><u>Επίλογος Απόφασης</u></h3>
