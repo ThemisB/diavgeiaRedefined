@@ -316,6 +316,20 @@ class Decision {
           this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
         }
       break
+      case 'Opinion':
+        if (this.fields.opinion_question_number)
+          this.decisionString += this._format_triplet('ont', 'opinion_question_number', this.fields.opinion_question_number, 'string')
+        if (this.fields.opinion_summary)
+          this.decisionString += this._format_triplet('ont', 'opinion_summary', this.fields.opinion_summary, 'string')
+        if (this.fields.opinion_history)
+          this.decisionString += this._format_triplet('ont', 'opinion_history', this.fields.opinion_history, 'string')
+        if (this.fields.opinion_analysis)
+          this.decisionString += this._format_triplet('ont', 'opinion_analysis', this.fields.opinion_analysis, 'string')
+        if (this.fields.opinion_conclusion)
+          this.decisionString += this._format_triplet('ont', 'opinion_conclusion', this.fields.opinion_conclusion, 'string')
+        if (this.fields.opinion_government_institution_type)
+          this.decisionString += this._format_triplet('ont', 'opinion_government_institution_type', this.fields.opinion_government_institution_type, 'string')
+      break
     }
   }
 
@@ -358,10 +372,14 @@ class Decision {
         this.decisionString += this._format_triplet('ont', 'has_considered', 'Consideration/' + (i + 1) , 'entity')
     })
 
-    this.fields.decisions.forEach( (v, i) => {
-      if (v.text)
-        this.decisionString += this._format_triplet('ont', 'has_decided', 'Decision/' + (i + 1) , 'entity')
-    })
+    if (this.fields.decisions) {
+      // Because Opinions do not have decisions
+      this.fields.decisions.forEach( (v, i) => {
+        if (v.text)
+          this.decisionString += this._format_triplet('ont', 'has_decided', 'Decision/' + (i + 1) , 'entity')
+      })
+    }
+
 
     if (this.fields.afterconsideration)
       this.decisionString += this._format_triplet('ont', 'has_afterdecision', 'AfterDecision', 'entity')
@@ -448,15 +466,18 @@ class Decision {
       }
     })
     // Decisions Body
-    this.fields.decisions.forEach( (legislation) => {
-      if (legislation.text) {
-        this.decisionString += '<Decision/' + legislation.index + '> a ont:Decision;\n'
-        if (this._hasLegislationLinking(legislation)) {
-          this.decisionString += this._format_linking(legislation)
+    if (this.fields.decisions) {
+      // Because Opinions do not have decisions
+      this.fields.decisions.forEach( (legislation) => {
+        if (legislation.text) {
+          this.decisionString += '<Decision/' + legislation.index + '> a ont:Decision;\n'
+          if (this._hasLegislationLinking(legislation)) {
+            this.decisionString += this._format_linking(legislation)
+          }
+          this.decisionString += this._format_triplet('ont', 'has_text', legislation.text, 'string', true, true)
         }
-        this.decisionString += this._format_triplet('ont', 'has_text', legislation.text, 'string', true, true)
-      }
-    })
+      })
+    }
     // AfterConsideration Body
     if(this.fields.afterconsideration) {
       this.decisionString += '<AfterConsideration> a ont:AfterConsideration;\n'
