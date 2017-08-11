@@ -182,6 +182,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_related_partial -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_related_partial">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/has_related_undertaking -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_related_undertaking">
