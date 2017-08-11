@@ -70,6 +70,9 @@
   <div v-else-if="selected === 'WorkAssignmentSupplyServicesStudies'">
     <work-assignment-supply-services-studies></work-assignment-supply-services-studies>
   </div>
+  <div v-else-if="selected === 'Opinion'">
+    <opinion></opinion>
+  </div>
 </div>
 </template>
 
@@ -98,6 +101,7 @@ import OwnershipTransferOfAssets from './specific-decision-fields/OwnershipTrans
 import SuccessfulAppointedRunnerUpList from './specific-decision-fields/SuccessfulAppointedRunnerUpList.vue'
 import Undertaking from './specific-decision-fields/Undertaking.vue'
 import WorkAssignmentSupplyServicesStudies from './specific-decision-fields/WorkAssignmentSupplyServicesStudies.vue'
+import Opinion from './specific-decision-fields/Opinion.vue'
 
 export default {
   props: ['selected'],
@@ -137,6 +141,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions, ExpenditureApproval, GeneralSpecialSecretaryMonocraticBody, OwnershipTransferOfAssets, SuccessfulAppointedRunnerUpList, Undertaking, WorkAssignmentSupplyServicesStudies}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions, ExpenditureApproval, GeneralSpecialSecretaryMonocraticBody, OwnershipTransferOfAssets, SuccessfulAppointedRunnerUpList, Undertaking, WorkAssignmentSupplyServicesStudies, Opinion}
 }
 </script>
