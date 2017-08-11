@@ -61,6 +61,9 @@
   <div v-else-if="selected === 'OwnershipTransferOfAssets'">
     <ownership-transfer-of-assets></ownership-transfer-of-assets>
   </div>
+  <div v-else-if="selected === 'SuccessfulAppointedRunnerUpList'">
+    <successful-appointed-runner-up-list></successful-appointed-runner-up-list>
+  </div>
 </div>
 </template>
 
@@ -86,6 +89,7 @@ import SpatialPlanningDecisions from './specific-decision-fields/SpatialPlanning
 import ExpenditureApproval from './specific-decision-fields/ExpenditureApproval.vue'
 import GeneralSpecialSecretaryMonocraticBody from './specific-decision-fields/GeneralSpecialSecretaryMonocraticBody.vue'
 import OwnershipTransferOfAssets from './specific-decision-fields/OwnershipTransferOfAssets.vue'
+import SuccessfulAppointedRunnerUpList from './specific-decision-fields/SuccessfulAppointedRunnerUpList.vue'
 
 export default {
   props: ['selected'],
@@ -125,6 +129,6 @@ export default {
       return translations[value]
     }
   },
-  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions, ExpenditureApproval, GeneralSpecialSecretaryMonocraticBody, OwnershipTransferOfAssets}
+  components: {Normative, Circular, Appointment, Award, LegislativeDecree, OtherDecisionsGeneral, ServiceChange, OccupationInvitation, Records, BalanceAccount, BudgetApproval, CollegialBodyCommisionWorkingGroup, CommisionWarrant, Contract, DeclarationSummary, DonationGrant, SpatialPlanningDecisions, ExpenditureApproval, GeneralSpecialSecretaryMonocraticBody, OwnershipTransferOfAssets, SuccessfulAppointedRunnerUpList}
 }
 </script>
