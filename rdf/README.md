@@ -634,6 +634,7 @@ This type of decision does not have any specific object or data properties.
 
 **Object Properties**
   - **has_expense** : expressing the expense as [Expense](#expense). |`Range → dvg:Expense`|
+  - **has_related_undertaking** : relates a [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies) with an [Undertaking](#undertaking). |`Range → dvg:Undertaking`|
 
 **Data Properties**
   - **work_assignment_etc_category** : |`Range → OneOf{"Έργα"@el , "Μελέτες"@el , "Προμήθειες"@el , "Υπηρεσίες"@el}`|
