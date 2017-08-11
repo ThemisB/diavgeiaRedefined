@@ -617,7 +617,7 @@ This type of decision does not have any specific object or data properties.
 
 **Object Properties**
   - **has_expense_with_kae** : expressing the expense as  [ExpenseWithKae](#expensewithkae) |`Range → dvg:ExpenseWithKae`|
-  - **has_expense** : expressing the expense as [Expense](#expense). |`Range → dvg:Expense`|
+  - **has_related_partial** : Relates Undertaking with the initial partial decision |`Range → dvg:LegalResource`|
 
 **Data Properties**
   - **partialead** : True if this is a partial undertaking. |`Range → xsd:boolean`|
