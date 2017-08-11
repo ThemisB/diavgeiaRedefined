@@ -284,6 +284,21 @@ class Decision {
         this.decisionString += '\tont:has_related_occupation_invitation <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
       }
       break
+      case 'Undertaking':
+        if (this.fields.financial_year)
+          this.decisionString += this._format_triplet('ont', 'financial_year', this.fields.financial_year, 'string', false)
+        if (this.fields.budget_category)
+          this.decisionString += this._format_triplet('ont', 'budget_category', this.fields.budget_category, 'string')
+        if (this.fields.entry_number)
+          this.decisionString += this._format_triplet('ont', 'entry_number', this.fields.entry_number, 'string', false)
+        this.decisionString += this._format_triplet('ont', 'partialead', Boolean(this.fields.partialead), 'boolean')
+        this.decisionString += this._format_triplet('ont', 'recalled_expense', Boolean(this.fields.recalled_expense), 'boolean')
+        this.fields.expense.forEach((expense, i) => {
+          if (expense.afm && expense.kae && expense.expense_amount && expense.expense_currency && expense.kae_budget_remainder && expense.kae_credit_remainder && expense.index && expense.afm_type && expense.sponsored) {
+            this.decisionString += this._format_triplet('ont', 'has_expense_with_kae', 'ExpenseWithKae/' + (i + 1), 'entity')
+          }
+        })
+      break
     }
   }
 
@@ -460,7 +475,7 @@ class Decision {
               this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
             }
           })
-          this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+          this.decisionString += this._format_triplet('ont', 'expense_amount_currency', this.fields.expense_currency, 'string', true, true)
 
           //Sponsored
           this.fields.expense.forEach((expense) => {
@@ -492,7 +507,7 @@ class Decision {
               this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
             }
           })
-          this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+          this.decisionString += this._format_triplet('ont', 'expense_amount_currency', this.fields.expense_currency, 'string', true, true)
 
           //Sponsored
           this.fields.expense.forEach((expense) => {
@@ -511,7 +526,7 @@ class Decision {
         if (this.fields.cpv)
           this.decisionString += this._format_triplet('ont', 'cpv', this.fields.cpv, 'string', false)
         this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
-        this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+        this.decisionString += this._format_triplet('ont', 'expense_amount_currency', this.fields.expense_currency, 'string', true, true)
       }
       break
       case 'DonationGrant':
@@ -524,7 +539,7 @@ class Decision {
         })
         this.decisionString += this._format_triplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity')
         this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
-        this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+        this.decisionString += this._format_triplet('ont', 'expense_amount_currency', this.fields.expense_currency, 'string', true, true)
 
         //OrganizationSponsor
         this.decisionString += '<OrganizationSponsor/1> a ont:OrganizationSponsor;\n'
@@ -551,7 +566,7 @@ class Decision {
           if (expense.afm && expense.expense_amount && expense.expense_currency && expense.index && expense.sponsored) {
             this.decisionString += '<Expense/' + expense.index + '> a ont:Expense;\n'
             this.decisionString += this._format_triplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
-            this.decisionString += this._format_triplet('ont', 'expense_currency', expense.expense_currency, 'string', true)
+            this.decisionString += this._format_triplet('ont', 'expense_amount_currency', expense.expense_currency, 'string', true)
             if (expense.kae)
               this.decisionString += this._format_triplet('ont', 'kae', expense.kae, 'string', false)
             if (expense.cpv)
@@ -579,7 +594,7 @@ class Decision {
         if (this.fields.expense_amount && this.fields.expense_currency) {
           this.decisionString += '<Expense/1> a ont:Expense;\n'
           this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string')
-          this.decisionString += this._format_triplet('ont', 'expense_currency', this.fields.expense_currency, 'string', true, true)
+          this.decisionString += this._format_triplet('ont', 'expense_amount_currency', this.fields.expense_currency, 'string', true, true)
         }
       break
       case 'OwnershipTransferOfAssets':
@@ -611,6 +626,18 @@ class Decision {
             }
           })
         }
+      break
+      case 'Undertaking':
+      this.fields.expense.forEach((expense, i) => {
+        if (expense.afm && expense.kae && expense.expense_amount && expense.expense_currency && expense.kae_budget_remainder && expense.kae_credit_remainder && expense.index && expense.afm_type && expense.sponsored) {
+          this.decisionString += '<ExpenseWithKae/' + expense.index + '> a ont:ExpenseWithKae;\n'
+          this.decisionString += this._format_triplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
+          this.decisionString += this._format_triplet('ont', 'expense_amount_currency', expense.expense_currency, 'string')
+          this.decisionString += this._format_triplet('ont', 'kae', expense.kae, 'string', false)
+          this.decisionString += this._format_triplet('ont', 'kae_budget_remainder', expense.kae_budget_remainder, 'string', false)
+          this.decisionString += this._format_triplet('ont', 'kae_credit_remainder', expense.kae_credit_remainder, 'string', false, true)
+        }
+      })
       break
     }
   }
