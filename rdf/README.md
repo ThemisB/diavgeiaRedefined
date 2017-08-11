@@ -49,7 +49,7 @@ Sections
     26. [ServiceChange](#servicechange)
     27. [SpatialPlanningDecisions](#spatialplanningdecisions)
     28. [StartProductionalFunctionOfInvestment](#startproductionalfunctionofinvestment)
-    29. [SuccessfulAppointedRunnerUpList](#successfilappointedrunneruplist)
+    29. [SuccessfulAppointedRunnerUpList](#successfulappointedrunneruplist)
     30. [Undertaking](#undertaking)
     31. [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies)
 8. [Conclusions](#conclusions)
@@ -607,7 +607,7 @@ This type of decision does not have any specific object or data properties.
 **Greek Translation** : ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ & ΕΠΙΛΑΧΟΝΤΩΝ
 
 **Object Properties**
-  - **has_related_occupation_invitation** : An optional object property which relates a [SuccessfulAppointedRunnerUpList](#successfilappointedrunneruplist) with an [OccupationInvitation](#occupationinvitation). |`Range → dvg:OccupationInvitation`|
+  - **has_related_occupation_invitation** : An optional object property which relates a [SuccessfulAppointedRunnerUpList](#successfulappointedrunneruplist) with an [OccupationInvitation](#occupationinvitation). |`Range → dvg:OccupationInvitation`|
 
 - - -
 
