@@ -200,6 +200,7 @@
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OccupationInvitation"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
