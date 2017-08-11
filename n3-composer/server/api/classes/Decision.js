@@ -272,6 +272,18 @@ class Decision {
           this.decisionString += this._format_triplet('ont', 'asset_name', this.fields.asset_name, 'string')
         }
       break
+      case 'SuccessfulAppointedRunnerUpList':
+      // TODO This is not a valid decision format, as we miss the version.
+      // The following approach should be followed:
+      // Combine the current Diavgeia api (https://diavgeia.gov.gr/luminapi/api/decisions/{{IUN}}) with the rdf store.
+      // This is the case, because IUN may refer to an old pdf decision or to a new .n3 decision.
+      // Moreover you should check that decision is an OccupationInvitation
+      if (this.fields.has_related_occupation_invitation) {
+        let version = ''
+        let iun = this.fields.has_related_occupation_invitation + '/'
+        this.decisionString += '\tont:has_related_occupation_invitation <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
+      }
+      break
     }
   }
 
