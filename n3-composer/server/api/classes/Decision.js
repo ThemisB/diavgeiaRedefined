@@ -299,6 +299,23 @@ class Decision {
           }
         })
       break
+      case 'WorkAssignmentSupplyServicesStudies':
+        if (this.fields.work_assignment_etc_category)
+          this.decisionString += this._format_triplet('ont', 'work_assignment_etc_category', this.fields.work_assignment_etc_category, 'string')
+        if (this.fields.has_related_undertaking) {
+          // TODO This is not a valid decision format, as we miss the version.
+          // The following approach should be followed:
+          // Combine the current Diavgeia api (https://diavgeia.gov.gr/luminapi/api/decisions/{{IUN}}) with the rdf store.
+          // This is the case, because IUN may refer to an old pdf decision or to a new .n3 decision.
+          // Moreover you should check that decision is an Undertaking
+          let version = ''
+          let iun = this.fields.has_related_undertaking + '/'
+          this.decisionString += '\tont:has_related_undertaking <http://diavgeia.gov.gr/eli/decision/' + iun + version + '>;\n'
+        }
+        if (this.fields.expense[0].afm && this.fields.expense[0].sponsored && this.fields.expense[0].index && this.fields.expense[0].afm_type && this.fields.expense_amount && this.fields.expense_currency) {
+          this.decisionString += this._format_triplet('ont', 'has_expense', 'Expense/1', 'entity')
+        }
+      break
     }
   }
 
@@ -638,6 +655,29 @@ class Decision {
           this.decisionString += this._format_triplet('ont', 'kae_credit_remainder', expense.kae_credit_remainder, 'string', false, true)
         }
       })
+      break
+      case 'WorkAssignmentSupplyServicesStudies':
+        if (this.fields.expense[0].afm && this.fields.expense[0].sponsored && this.fields.expense[0].index && this.fields.expense[0].afm_type && this.fields.expense_amount && this.fields.expense_currency) {
+          this.decisionString += '<Expense/1> a ont:Expense;\n'
+          // All expenses have the same CPV
+          if (this.fields.cpv) {
+            this.decisionString += this._format_triplet('ont', 'cpv', this.fields.cpv, 'string', false)
+          }
+          this.fields.expense.forEach((expense, i) => {
+            if (expense.afm && expense.sponsored && expense.index && expense.afm_type)
+              this.decisionString += this._format_triplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
+          })
+          this.decisionString += this._format_triplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
+          this.decisionString += this._format_triplet('ont', 'expense_amount_currency', this.fields.expense_currency, 'string', true, true)
+          this.fields.expense.forEach((expense, i) => {
+            if (expense.afm && expense.sponsored && expense.index && expense.afm_type) {
+              this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+              this.decisionString += this._format_triplet('ont', 'afm', expense.afm, 'string', false)
+              this.decisionString += this._format_triplet('ont', 'afm_type', expense.afm_type, 'string')
+              this.decisionString += this._format_triplet('ont', 'name', expense.sponsored, 'string', true, true)
+            }
+          })
+        }
       break
     }
   }
