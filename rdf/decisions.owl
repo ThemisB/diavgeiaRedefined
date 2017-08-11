@@ -112,7 +112,6 @@
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/GeneralSpecialSecretaryMonocraticBody"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Undertaking"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies"/>
                 </owl:unionOf>
             </owl:Class>
