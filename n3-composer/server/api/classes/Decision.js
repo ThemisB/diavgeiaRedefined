@@ -705,17 +705,33 @@ class Decision {
     }
   }
 
+  _getN3DecisionsLocation() {
+    var decisionN3StoreLocation = config.get('decisionsSaveDir');
+    if (config.get('isDecisionsSaveDirHome') === true)
+      return process.env.HOME + '/' + path.normalize(decisionN3StoreLocation)
+    else
+      return path.normalize(decisionN3StoreLocation);
+  }
+
   generateN3() {
     this._writePrefixes()
     this._writeGeneralInfo()
     this._writeDecisionBody()
     this._writeRestEntities()
-    console.log(this.decisionString)
-    // fs.writeFileSync('testDecision.n3', this.decisionString, (err) => {
-    //   if (err)
-    //     return console.log(err);
-    //   console.log('The decision was created');
-    // });
+    // Store the file to the fs
+    var storageDirectory = this._getN3DecisionsLocation()
+    var _this = this
+    mkdirp(storageDirectory, function(err){
+      if (err)
+        return console.log(err)
+
+      let fullpath = storageDirectory + '/' + _this.fields.iun + '_' + _this.fields.version + '.n3'
+      fs.writeFileSync(fullpath, _this.decisionString, (err) => {
+        if (err)
+          return console.log(err);
+        console.log('The decision was created');
+      });
+    })
   }
 }
 
