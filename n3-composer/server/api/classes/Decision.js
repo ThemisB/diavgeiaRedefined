@@ -1,9 +1,11 @@
-const fs = require('fs');
+const fs = require('fs')
+const config = require('config')
+const path = require('path')
+const mkdirp = require('mkdirp')
 
-
-const ONT = '<http://diavgeia.gov.gr/ontology/>';
-const ELI = '<http://data.europa.eu/eli/ontology#>';
-const LEG = '<http://legislation.di.uoa.gr/eli/>';
+const ONT = '<http://diavgeia.gov.gr/ontology/>'
+const ELI = '<http://data.europa.eu/eli/ontology#>'
+const LEG = '<http://legislation.di.uoa.gr/eli/>'
 
 class Decision {
 
