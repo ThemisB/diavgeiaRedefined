@@ -1,7 +1,14 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 10 (5 August - 11 August)**
+- Complete n3 generation! [n3-composer](https://github.com/eellak/gsoc17-diavgeia/tree/master/n3-composer) covers all the different decision types of Diavgeia that are expressed in the rdf schema.
+
+That means that all the deliverables have been implemented and are ready for the final project submission.
+
+But we still have two weeks until the final project submission. Thus, i will try to import the n3 decisions to a RDF Store (most possibly Apache Jena), create some sample "interesting" queries that examine the transparency of Diavgeia and if time permits, i will make a visualization for some decision types.
+
 **Week 9 (29 July - 4 August)**
-- Support n3 generation of 24 out of 32 decision types.
+- Support n3 generation of 24 out of 31 decision types.
 
 The following week, i will add support for the remaining decision types.
 
