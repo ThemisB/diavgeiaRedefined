@@ -1,7 +1,9 @@
-const fs = require('fs')
+const fs = require('fs-extra')
 const config = require('config')
 const path = require('path')
 const mkdirp = require('mkdirp')
+const {spawn} = require('child_process');
+const co = require('co')
 
 const ONT = '<http://diavgeia.gov.gr/ontology/>'
 const ELI = '<http://data.europa.eu/eli/ontology#>'
@@ -718,19 +720,27 @@ class Decision {
     this._writeGeneralInfo()
     this._writeDecisionBody()
     this._writeRestEntities()
-    // Store the file to the fs
-    var storageDirectory = this._getN3DecisionsLocation()
-    var _this = this
-    mkdirp(storageDirectory, function(err){
-      if (err)
-        return console.log(err)
 
-      let fullpath = storageDirectory + '/' + _this.fields.iun + '_' + _this.fields.version + '.n3'
-      fs.writeFileSync(fullpath, _this.decisionString, (err) => {
-        if (err)
-          return console.log(err);
-        console.log('The decision was created');
-      });
+    var _this = this
+    const storageDirectory = this._getN3DecisionsLocation()
+    fs.ensureDir(storageDirectory)
+    .then(() => {
+      // Store the file to fs
+      const filePath = storageDirectory + '/' + _this.fields.iun + '_' + _this.fields.version + '.n3'
+      fs.outputFile(filePath, this.decisionString)
+      return filePath
+    }).then((filePath) => {
+      // Store decision to SPARQL endpoint (fuseki)
+      /* TODO
+       * In order to insert a decision to the sparql endpoint, fuseki should run as deamon with --update option enabled.
+       * You should also make sure that the user is authorized to upload decisions. Of course, the same applies to the
+       * case of storing n3 decisions.
+       *
+       * Node.js (that is this script) should make a SOH request (https://jena.apache.org/documentation/fuseki2/soh.html)
+       * in order for the decision to be stored in the rdf store.
+       */
+       const resolvedPath = path.resolve(config.get('SOH_put_executable'))
+       const SOH = spawn(resolvedPath, [config.get('sparqlEndpointUrl') + '/' + config.get('dataset'), 'default', filePath])
     })
   }
 }
