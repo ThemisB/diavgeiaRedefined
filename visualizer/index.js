@@ -68,7 +68,7 @@ class GeneralPropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'version', predicatePair)
         this._findPredicateValue(subject, 'ont', 'protocol_number', predicatePair)
         this._findPredicateValue(subject, 'ont', 'thematic_category', predicatePair)
-        // findPredicateValue(subject, 'rdfs', 'type', predicatePair)
+        this._findPredicateValue(subject, 'rdfs', 'type', predicatePair)
         // Government Institution Details
         this._findPredicateValue(subject, 'ont', 'government_institution_name', predicatePair)
         this._findPredicateValue(subject, 'ont', 'government_institution_general_administration', predicatePair)
@@ -134,14 +134,57 @@ class GeneralPropertiesFormatter {
           PoliticalLife: 'ΠΟΛΙΤΙΚΗ ΖΩΗ',
           PublicAdministration: 'ΔΗΜΟΣΙΑ ΔΙΟΙΚΗΣΗ'
         }
-        if (!this.generalProperties[predicateSearch]) {
+        if (!this.generalProperties[predicateSearch])
           this.generalProperties[predicateSearch] = [thematicCategoriesTranslation[N3Util.getLiteralValue(value)]]
-        }
         else
           this.generalProperties[predicateSearch].push(thematicCategoriesTranslation[N3Util.getLiteralValue(value)])
+      } else if (predicateSearch === 'type') {
+          let decisionType = this._findDecisionType(value)
+          if (decisionType)
+            this.generalProperties['decision_type'] = decisionType
+        // if (value === )
+        console.log(value)
       } else {
         this.generalProperties[predicateSearch] = N3Util.getLiteralValue(value)
       }
     }
+  }
+  _findDecisionType(value) {
+    const ONT = 'http://diavgeia.gov.gr/ontology/'
+    var translations = {}
+    translations[ONT + 'Law'] = 'Νόμος'
+    translations[ONT + 'LegislativeDecree'] = 'Πράξη Νομοθετικού Περιεχομένου'
+    translations[ONT + 'Normative'] = 'Κανονιστική Πράξη'
+    translations[ONT + 'Circular'] = 'Εγκύκλιος'
+    translations[ONT + 'Records'] = 'Πρακτικά'
+    translations[ONT + 'EvaluationReportOfLaw'] = 'Έκθεση Αποτίμησης για την κατάσταση της υφιστάμενης νομοθεσίας'
+    translations[ONT + 'Opinion'] = 'Γνωμοδότηση'
+    translations[ONT + 'BudgetApproval'] = 'Έγκριση Προϋπολογισμού'
+    translations[ONT + 'Undertaking'] = 'Ανάληψη Υποχρέωσης'
+    translations[ONT + 'ExpenditureApproval'] = 'Έγκριση Δαπάνης'
+    translations[ONT + 'PaymentFinalisation'] = 'Οριστικοποίηση Πληρωμής'
+    translations[ONT + 'CommisionWarrant'] = 'Επιτροπικό Ένταλμα'
+    translations[ONT + 'BalanceAccount'] = 'Ισολογισμός - Απολογισμός'
+    translations[ONT + 'DonationGrant'] = 'Δωρεά - Επιχορήγηση'
+    translations[ONT + 'OwnershipTransferOfAssets'] = 'Παραχώρηση Χρήσης Περιουσιακών Στοιχείων'
+    translations[ONT + 'Appointment'] = 'Διορισμός'
+    translations[ONT + 'SuccessfulAppointedRunnerUpList'] = 'Πίνακες Επιτυχόντων, Διοριστέων & Επιλαχόντων'
+    translations[ONT + 'GeneralSpecialSecretaryMonocraticBody'] = 'Πράξη που αφορά σε θέση γενικού - ειδικού γραμματέα - μονομελές όργανο'
+    translations[ONT + 'CollegialBodyCommisionWorkingGroup'] = 'Πράξη που αφορά σε συλλογικό όργανο - επιτροπή - ομάδα εργασίας - ομάδα έργου - μέλη συλλογικού οργάνου'
+    translations[ONT + 'OccupationInvitation'] = 'Προκήρυξη Πλήρωσης Θέσεων'
+    translations[ONT + 'Contract'] = 'Σύμβαση'
+    translations[ONT + 'ServiceChange'] = 'Υπηρεσιακή Μεταβολή'
+    translations[ONT + 'DisciplinaryAcquitance'] = 'Αθωωτικη Πειθαρχική Απόφαση'
+    translations[ONT + 'StartProductionalFunctionOfInvestment'] = 'Απόφαση Έναρξης Παραγωγικής Λειτουργίας Επένδυσης'
+    translations[ONT + 'InvestmentPlacing'] = 'Πράξη Υπαγωγής Επενδύσεων'
+    translations[ONT + 'DevelopmentLawContract'] = 'Σύμβαση - Πράξεις Αναπτυξιακών Νόμων'
+    translations[ONT + 'OtherDevelopmentLaw'] = 'Άλλη πράξη αναπτυξιακού νόμου'
+    translations[ONT + 'WorkAssignmentSupplyServicesStudies'] = 'Ανάθεση Έργων / Προμηθειών / Υπηρεσιών / Μελετών'
+    translations[ONT + 'Award'] = 'Κατακύρωση'
+    translations[ONT + 'DeclarationSummary'] = 'Περίληψη Διακήρυξης'
+    translations[ONT + 'OtherDecisions'] = 'Λοιπές Ατομικές Διοικητικές Πράξεις'
+    translations[ONT + 'PublicPrototypeDocuments'] = 'Δημόσια Πρότυπα Έγγραφα'
+    translations[ONT + 'SpatialPlanningDecisions'] = 'Πράξεις Χωροταξικού - Πολεοδομικού Περιεχομένου'
+    return translations[value]
   }
 }
