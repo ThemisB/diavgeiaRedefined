@@ -19,6 +19,7 @@ export default {
         {text: 'BIOMHXANIA', value: 'Industry', keywords: 'Βιομηχανία Βιομηχανια'},
         {text: 'ΓΕΩΡΓΙΑ, ΔΑΣΟΚΟΜΙΑ ΚΑΙ ΑΛΙΕΙΑ', value: 'AgricultureForestryFishery', keywords: 'Γεωργία Γεωργια Δασοκομία Δασοκομια Αλιεία Και'},
         {text: 'ΓΕΩΓΡΑΦΙΑ', value: 'Geography', keywords: 'Γεωγραφία Γεωγραφια'},
+        {text: 'ΔΗΜΟΣΙΑ ΔΙΟΙΚΗΣΗ', value: 'PublicAdministration', keywords: 'Δημόσια Δημοσια Διοίκηση Διοικηση'},
         {text: 'ΔΗΜΟΣΙΟΝΟΜΙΚΑ', value: 'Fiscals', keywords: 'Δημοσιονομικά Δημοσιονομικα'},
         {text: 'ΔΙΑΤΡΟΦΗ ΚΑΙ ΓΕΩΡΓΙΚΑ ΠΡΟΪΟΝΤΑ', value: 'NutritionAgriculturalProducts', keywords: 'Διατροφή Διατροφη Γεωργικά Γεωργικα Προϊόντα Προϊοντα Προιοντα Προϊοντα Και'},
         {text: 'ΔΙΕΘΝΕΙΣ ΟΡΓΑΝΙΣΜΟΙ', value: 'InternationalOrganizations', keywords: 'Διεθνείς Διεθνεις Οργανισμοί Οργανισμοι'},
