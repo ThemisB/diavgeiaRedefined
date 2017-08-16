@@ -1,0 +1,28 @@
+{
+  "name": "visualizer",
+  "version": "1.0.0",
+  "description": "A human readable (HTML) representation of n3 decisions",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eellak/gsoc17-diavgeia.git"
+  },
+  "keywords": [
+    "diavgeia",
+    "visualizer",
+    "n3",
+    "html"
+  ],
+  "author": "Themis Beris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eellak/gsoc17-diavgeia/issues"
+  },
+  "homepage": "https://github.com/eellak/gsoc17-diavgeia/visualizer#readme",
+  "dependencies": {
+    "bulma": "^0.5.1",
+    "express": "^4.15.4",
+    "n3": "^0.11.1",
+    "pug": "^2.0.0-rc.3"
+  }
+}
