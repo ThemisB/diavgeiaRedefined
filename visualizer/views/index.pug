@@ -1,0 +1,68 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='theme-color', content='#ffffff')
+    title Διαύγεια - Οπτικοποίηση Αποφάσεων
+    link(rel='apple-touch-icon', sizes='180x180', href='assets/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='assets/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='assets/favicon-16x16.png')
+    link(rel='manifest', href='assets/manifest.json')
+    link(rel='mask-icon', href='assets/safari-pinned-tab.svg', color='#5bbad5')
+    style
+      include ../node_modules/bulma/css/bulma.css
+      include ../public/css/main.css
+  body
+      //- Header
+      section(class='hero is-primary')
+        div(class='hero-body')
+          div(class='container')
+            div(class='columns is-vcentered')
+              div(class='column')
+                h1(class='title') Οπτικοποίηση Αποφάσεων
+                h2(class='subtitle') Οπτικοποίηση των <span class="tag is-white">.n3</span> αποφάσεων σε <span class="tag is-white">HTML</span>
+              div(class='column is-narrow')
+                div(class='box')
+                  article(class='media')
+                    div(class='media-left')
+                      figure(class='image is-64x64')
+                        img(src='assets/national_emblem_64.png')
+                    div(class='media-content')
+                      div(class='content')
+                        p <strong style="font-size:1.2em">Διαύγεια</strong> <br> Διαφάνεια στο κράτος
+                        //- Decision
+      section(class='section is-fullheight')
+        div(class='container')
+          h4(class='title is-4 has-text-centered') #{title} <hr>
+          div(class='columns')
+            //- Government Institution Details
+            div(class='column is-two-thirds')
+              article(class='notification governmentNotification')
+                p(class='subtitle has-text-centered') Στοιχεία Φορέα
+                p(class='governmentInfo') <strong>Όνομα Φορέα:</strong> <span>#{government_institution_name}</span>
+                p(class='governmentInfo') <strong>Γενική Διεύθυνση:</strong> <span>#{government_institution_general_administration}</span>
+                p(class='governmentInfo') <strong>Τμήμα:</strong> <span>#{government_institution_department}</span>
+                <hr>
+                p(class='has-text-centered contact') Επικοινωνία
+                div(class='columns')
+                  div(class='column is-two-thirds')
+                    if government_institution_address
+                      p(class='governmentInfo') <strong>Διεύθυνση:</strong> <span>#{government_institution_address}</span>
+                    if government_institution_phone
+                      p(class='governmentInfo') <strong>Τηλέφωνο:</strong> <span>#{government_institution_phone}</span>
+                    if government_institution_email
+                      p(class='governmentInfo') <strong>Email:</strong> <span><a href="mailto:#{government_institution_email}">#{government_institution_email}</a></span>
+                  div(class='column')
+                    if government_institution_postalcode
+                      p(class='governmentInfo') <strong>T.K.:</strong> <span>#{government_institution_postalcode}</span>
+                    if government_institution_fax
+                      p(class='governmentInfo') <strong>Fax:</strong> <span>#{government_institution_fax}</span>
+                    if government_institution_website
+                      p(class='governmentInfo') <strong>Website:</strong> <span>#{government_institution_website}</span>
+                if government_institution_information
+                  p(class='governmentInfo has-text-centered') <strong>Υπεύθυνος για Πληροφορίες:</strong> <span>#{government_institution_information}</span>
+            div(class='column')
+              article(class='notification is-primary generalInfo')
+                p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
+                p(class='governmentInfo has-text-centered') <strong>ΑΔΑ:</strong> <span>#{iun}</span>
+                p(class='governmentInfo has-text-centered') <strong>Έκδοση:</strong> <span>#{version}</span>
+                p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
