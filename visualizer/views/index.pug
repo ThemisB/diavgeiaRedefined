@@ -65,4 +65,8 @@ html
                 p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
                 p(class='governmentInfo has-text-centered') <strong>ΑΔΑ:</strong> <span>#{iun}</span>
                 p(class='governmentInfo has-text-centered') <strong>Έκδοση:</strong> <span>#{version}</span>
+                p(class='governmentInfo has-text-centered') <strong>Ημερομηνία Ανάρτησης:</strong> <span>#{date_publication}</span>
                 p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
+                p(class='governmentInfo has-text-centered') <strong>Θεματικές Κατηγορίες:</strong>
+                  each val in thematic_category
+                    span(class='tag is-white thematicCategory')= val
