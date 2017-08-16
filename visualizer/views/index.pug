@@ -32,7 +32,7 @@ html
                         //- Decision
       section(class='section is-fullheight')
         div(class='container')
-          h4(class='title is-4 has-text-centered') #{title} <hr>
+          h4(class='title is-4 has-text-centered') #{title} <span class="tag is-rounded is-success">#{decision_type}</span> <hr>
           div(class='columns')
             //- Government Institution Details
             div(class='column is-two-thirds')
@@ -65,8 +65,10 @@ html
                 p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
                 p(class='governmentInfo has-text-centered') <strong>ΑΔΑ:</strong> <span>#{iun}</span>
                 p(class='governmentInfo has-text-centered') <strong>Έκδοση:</strong> <span>#{version}</span>
+                p(class='governmentInfo has-text-centered') <strong>Είδος Απόφασης:</strong> <span>#{decision_type}</span>
                 p(class='governmentInfo has-text-centered') <strong>Ημερομηνία Ανάρτησης:</strong> <span>#{date_publication}</span>
                 p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
-                p(class='governmentInfo has-text-centered') <strong>Θεματικές Κατηγορίες:</strong>
+                p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
+                div(class='tags')
                   each val in thematic_category
                     span(class='tag is-white thematicCategory')= val
