@@ -28,7 +28,7 @@
 	ont:vacancy_opening_type "Προκήρυξη Πλήρωσης Θέσεων Διδακτικού Ερευνητικού Προσωπικού (ΔΕΠ) Πανεπιστημιακού τομέα"@el;
 	ont:has_decided <Decision/1>;
 	ont:signed_by <Signer/1>;
-	ont:thematic_category "Public Administration";
+	ont:thematic_category "PublicAdministration";
 	ont:has_private_data false;
 	ont:organization_id "99202041";
 	ont:submission_timestamp "1465284835474";
