@@ -99,9 +99,14 @@ class GeneralPropertiesFormatter {
      */
     var decisionPrefix = DVG_ELI + decisionIunVersion['iun'] + '/' + decisionIunVersion['version'] + '/'
     for (var subject in array) {
+      console.log(subject, 'VS', decisionPrefix + 'PreConsideration')
       if (subject === (decisionPrefix + 'AfterDecision')) {
         array[subject].forEach(predicatePair => {
           this._findPredicateValue('AfterDecision', 'ont', 'has_text', predicatePair)
+        })
+      } else if (subject === (decisionPrefix + 'PreConsideration')) {
+        array[subject].forEach(predicatePair => {
+          this._findPredicateValue('PreConsideration', 'ont', 'has_text', predicatePair)
         })
       }
     }
@@ -127,6 +132,8 @@ class GeneralPropertiesFormatter {
     if(fullPredicate === predicate) {
       if (subject === 'AfterDecision') {
         this.generalProperties['AfterDecision'] = N3Util.getLiteralValue(value)
+      } else if (subject === 'PreConsideration') {
+        this.generalProperties['PreConsideration'] = N3Util.getLiteralValue(value)
       }
       else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
