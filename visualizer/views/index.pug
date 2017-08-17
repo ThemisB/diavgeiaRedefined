@@ -14,28 +14,28 @@ html
   body
       //- Header
       section(class='hero is-primary')
-        div(class='hero-body')
-          div(class='container')
-            div(class='columns is-vcentered')
-              div(class='column')
+        .hero-body
+          .container
+            .columns.is-vcentered
+              .column
                 h1(class='title') Οπτικοποίηση Αποφάσεων
                 h2(class='subtitle') Οπτικοποίηση των <span class="tag is-white">.n3</span> αποφάσεων σε <span class="tag is-white">HTML</span>
-              div(class='column is-narrow')
-                div(class='box')
+              .column.is-narrow
+                .box
                   article(class='media')
-                    div(class='media-left')
+                    .media-left
                       figure(class='image is-64x64')
                         img(src='assets/national_emblem_64.png')
-                    div(class='media-content')
-                      div(class='content')
+                    .media-content
+                      .content
                         p <strong style="font-size:1.2em">Διαύγεια</strong> <br> Διαφάνεια στο κράτος
                         //- Decision
       section(class='section is-fullheight')
-        div(class='container')
+        .container
           h4(class='title is-4 has-text-centered') #{title} <span class="tag is-rounded is-success">#{decision_type}</span> <hr>
-          div(class='columns')
+          .columns
             //- Government Institution Details
-            div(class='column is-two-thirds')
+            .column.is-two-thirds
               article(class='notification governmentNotification')
                 p(class='subtitle has-text-centered') Στοιχεία Φορέα
                 p(class='governmentInfo') <strong>Όνομα Φορέα:</strong> <span>#{government_institution_name}</span>
@@ -43,15 +43,15 @@ html
                 p(class='governmentInfo') <strong>Τμήμα:</strong> <span>#{government_institution_department}</span>
                 <hr>
                 p(class='has-text-centered contact') Επικοινωνία
-                div(class='columns')
-                  div(class='column is-two-thirds')
+                .columns
+                  .column.is-two-thirds
                     if government_institution_address
                       p(class='governmentInfo') <strong>Διεύθυνση:</strong> <span>#{government_institution_address}</span>
                     if government_institution_phone
                       p(class='governmentInfo') <strong>Τηλέφωνο:</strong> <span>#{government_institution_phone}</span>
                     if government_institution_email
                       p(class='governmentInfo') <strong>Email:</strong> <span><a href="mailto:#{government_institution_email}">#{government_institution_email}</a></span>
-                  div(class='column')
+                  .column
                     if government_institution_postalcode
                       p(class='governmentInfo') <strong>T.K.:</strong> <span>#{government_institution_postalcode}</span>
                     if government_institution_fax
@@ -60,7 +60,7 @@ html
                       p(class='governmentInfo') <strong>Website:</strong> <span>#{government_institution_website}</span>
                 if government_institution_information
                   p(class='governmentInfo has-text-centered') <strong>Υπεύθυνος για Πληροφορίες:</strong> <span>#{government_institution_information}</span>
-            div(class='column')
+            .column
               article(class='notification is-primary generalInfo')
                 p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
                 p(class='governmentInfo has-text-centered') <strong>ΑΔΑ:</strong> <span>#{iun}</span>
@@ -69,6 +69,11 @@ html
                 p(class='governmentInfo has-text-centered') <strong>Ημερομηνία Ανάρτησης:</strong> <span>#{date_publication}</span>
                 p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
                 p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
-                div(class='tags')
+                .tags
                   each val in thematic_category
                     span(class='tag is-white thematicCategory')= val
+                p(class='governmentInfo has-text-centered') Η απόφαση
+                  if (has_private_data=='true')
+                    <strong> περιέχει </strong> προσωπικά δεδομένα
+                  else
+                    <strong> δεν περιέχει</strong> προσωπικά δεδομένα
