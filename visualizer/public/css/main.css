@@ -29,6 +29,11 @@
   font-weight: 600;
 }
 
+.thematicCategory {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .thematicCategoriesWrap {
   padding-top: 0.25em;
 }
