@@ -68,6 +68,7 @@ class GeneralPropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'version', predicatePair)
         this._findPredicateValue(subject, 'ont', 'protocol_number', predicatePair)
         this._findPredicateValue(subject, 'ont', 'thematic_category', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'has_private_data', predicatePair)
         this._findPredicateValue(subject, 'rdfs', 'type', predicatePair)
         // Government Institution Details
         this._findPredicateValue(subject, 'ont', 'government_institution_name', predicatePair)
@@ -142,8 +143,6 @@ class GeneralPropertiesFormatter {
           let decisionType = this._findDecisionType(value)
           if (decisionType)
             this.generalProperties['decision_type'] = decisionType
-        // if (value === )
-        console.log(value)
       } else {
         this.generalProperties[predicateSearch] = N3Util.getLiteralValue(value)
       }
