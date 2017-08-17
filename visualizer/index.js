@@ -66,12 +66,17 @@ class GeneralPropertiesFormatter {
   }
 
   formatGeneralProperties(array) {
+    var decisionIunVersion = {}
     for (var subject in array) {
       array[subject].forEach(predicatePair => {
         this._findPredicateValue(subject, 'eli', 'title', predicatePair)
         this._findPredicateValue(subject, 'eli', 'date_publication', predicatePair)
-        this._findPredicateValue(subject, 'ont', 'iun', predicatePair)
-        this._findPredicateValue(subject, 'ont', 'version', predicatePair)
+        let iun = this._findPredicateValue(subject, 'ont', 'iun', predicatePair)
+        if (iun)
+          decisionIunVersion['iun'] = iun
+        let version = this._findPredicateValue(subject, 'ont', 'version', predicatePair)
+        if (version)
+          decisionIunVersion['version'] = version
         this._findPredicateValue(subject, 'ont', 'protocol_number', predicatePair)
         this._findPredicateValue(subject, 'ont', 'thematic_category', predicatePair)
         this._findPredicateValue(subject, 'ont', 'has_private_data', predicatePair)
