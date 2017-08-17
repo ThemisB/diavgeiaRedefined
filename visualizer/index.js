@@ -125,7 +125,10 @@ class GeneralPropertiesFormatter {
     }
     fullPredicate += predicateSearch
     if(fullPredicate === predicate) {
-      if (predicateSearch === 'date_publication') {
+      if (subject === 'AfterDecision') {
+        this.generalProperties['AfterDecision'] = N3Util.getLiteralValue(value)
+      }
+      else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
         dateLiteral = dateLiteral.split('-')
         dateLiteral = dateLiteral[2] + '/' + dateLiteral[1] + '/' +dateLiteral[0]
@@ -163,13 +166,17 @@ class GeneralPropertiesFormatter {
           let decisionType = this._findDecisionType(value)
           if (decisionType)
             this.generalProperties['decision_type'] = decisionType
+          return decisionType
       } else {
-        this.generalProperties[predicateSearch] = N3Util.getLiteralValue(value)
+        let literalValue = N3Util.getLiteralValue(value)
+        this.generalProperties[predicateSearch] = literalValue
+        return literalValue
       }
+      return null
     }
   }
+
   _findDecisionType(value) {
-    const ONT = 'http://diavgeia.gov.gr/ontology/'
     var translations = {}
     translations[ONT + 'Law'] = 'Νόμος'
     translations[ONT + 'LegislativeDecree'] = 'Πράξη Νομοθετικού Περιεχομένου'
