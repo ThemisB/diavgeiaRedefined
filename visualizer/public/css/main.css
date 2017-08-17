@@ -32,3 +32,7 @@
 .thematicCategoriesWrap {
   padding-top: 0.25em;
 }
+
+.decisionText {
+  word-wrap: break-word;
+}
