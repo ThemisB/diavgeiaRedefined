@@ -7,18 +7,24 @@ const app = express()
 const path = require('path')
 
 const DECISIONS_DIRECTORY = path.resolve('../rdf/samples')
+
+const RDFS = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+const ELI = 'http://data.europa.eu/eli/ontology#'
+const ONT = 'http://diavgeia.gov.gr/ontology/'
+const DVG_ELI = 'http://diavgeia.gov.gr/eli/decision/'
+
 app.use(express.static('public'))
 app.set('views', './views')
 app.set('view engine', 'pug')
 
 app.get('/vizualize', function (req, res) {
-  if (req.query.decisionFolder && req.query.decisionName) {
+  if (req.query.decisionFolder && req.query.iun) {
     var decisionFolder = path.normalize(req.query.decisionFolder).replace(/^(\.\.[\/\\])+/, '')
-    var decisionName = path.normalize(req.query.decisionName).replace(/^(\.\.[\/\\])+/, '')
+    var iun = path.normalize(req.query.iun).replace(/^(\.\.[\/\\])+/, '')
     var rdfStream = undefined
-    rdfStream = fs.createReadStream(DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + decisionName + '.n3')
+    rdfStream = fs.createReadStream(DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3')
     rdfStream.on('error', () => {
-      console.error('N3 file ' + DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + decisionName + '.n3' + ' does not exist')
+      console.error('N3 file ' + DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3' + ' does not exist')
       res.status(404).send('Not found');
     })
 
