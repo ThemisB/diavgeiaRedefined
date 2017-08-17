@@ -108,9 +108,6 @@ class GeneralPropertiesFormatter {
   }
 
   _findPredicateValue(subject, ontology, predicateSearch, predicatePair) {
-    const RDFS = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
-    const ELI = 'http://data.europa.eu/eli/ontology#'
-    const ONT = 'http://diavgeia.gov.gr/ontology/'
     var predicate = predicatePair[0]
     var value = predicatePair[1]
 
