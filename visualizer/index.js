@@ -99,7 +99,6 @@ class GeneralPropertiesFormatter {
      */
     var decisionPrefix = DVG_ELI + decisionIunVersion['iun'] + '/' + decisionIunVersion['version'] + '/'
     for (var subject in array) {
-      console.log(subject, 'VS', decisionPrefix + 'PreConsideration')
       if (subject === (decisionPrefix + 'AfterDecision')) {
         array[subject].forEach(predicatePair => {
           this._findPredicateValue('AfterDecision', 'ont', 'has_text', predicatePair)
