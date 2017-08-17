@@ -81,8 +81,19 @@ html
                   else
                     <strong> δεν περιέχει</strong> προσωπικά δεδομένα
           .container
-            h5(class='title has-text-centered is-5') Κείμενο Απόφασης
+            h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
-              p(class='decision_text') #{PreConsideration}
+              p(class='decisionText') #{PreConsideration}
+            h5(class='title has-text-centered is-5') Έχοντας λάβει υπόψη
+            if considerations
+              ol(class='decisionText')
+                each consideration in considerations
+                  li.consideration=consideration['has_text']
+                  if consideration.links
+                    .tags
+                      each linking, index in consideration.links
+                        span(class='linking')
+                          - let nextIndex = index + 1
+                          a(href=linking, target='_blank', class='tag is-primary') Σύνδεσμος #{nextIndex}
             if AfterDecision
-              p(class='decision_text') #{AfterDecision}
+              p(class='decisionText') #{AfterDecision}
