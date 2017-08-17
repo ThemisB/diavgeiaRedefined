@@ -39,27 +39,30 @@ html
               article(class='notification governmentNotification')
                 p(class='subtitle has-text-centered') Στοιχεία Φορέα
                 p(class='governmentInfo') <strong>Όνομα Φορέα:</strong> <span>#{government_institution_name}</span>
-                p(class='governmentInfo') <strong>Γενική Διεύθυνση:</strong> <span>#{government_institution_general_administration}</span>
-                p(class='governmentInfo') <strong>Τμήμα:</strong> <span>#{government_institution_department}</span>
-                <hr>
-                p(class='has-text-centered contact') Επικοινωνία
-                .columns
-                  .column.is-two-thirds
-                    if government_institution_address
-                      p(class='governmentInfo') <strong>Διεύθυνση:</strong> <span>#{government_institution_address}</span>
-                    if government_institution_phone
-                      p(class='governmentInfo') <strong>Τηλέφωνο:</strong> <span>#{government_institution_phone}</span>
-                    if government_institution_email
-                      p(class='governmentInfo') <strong>Email:</strong> <span><a href="mailto:#{government_institution_email}">#{government_institution_email}</a></span>
-                  .column
-                    if government_institution_postalcode
-                      p(class='governmentInfo') <strong>T.K.:</strong> <span>#{government_institution_postalcode}</span>
-                    if government_institution_fax
-                      p(class='governmentInfo') <strong>Fax:</strong> <span>#{government_institution_fax}</span>
-                    if government_institution_website
-                      p(class='governmentInfo') <strong>Website:</strong> <span>#{government_institution_website}</span>
-                if government_institution_information
-                  p(class='governmentInfo has-text-centered') <strong>Υπεύθυνος για Πληροφορίες:</strong> <span>#{government_institution_information}</span>
+                if (government_institution_general_administration)
+                  p(class='governmentInfo') <strong>Γενική Διεύθυνση:</strong> <span>#{government_institution_general_administration}</span>
+                if (government_institution_department)
+                  p(class='governmentInfo') <strong>Τμήμα:</strong> <span>#{government_institution_department}</span>
+                if government_institution_address || government_institution_phone || government_institution_email || government_institution_postalcode || government_institution_fax || government_institution_website || government_institution_information
+                  <hr>
+                  p(class='has-text-centered contact') Επικοινωνία
+                  .columns
+                    .column.is-two-thirds
+                      if government_institution_address
+                        p(class='governmentInfo') <strong>Διεύθυνση:</strong> <span>#{government_institution_address}</span>
+                      if government_institution_phone
+                        p(class='governmentInfo') <strong>Τηλέφωνο:</strong> <span>#{government_institution_phone}</span>
+                      if government_institution_email
+                        p(class='governmentInfo') <strong>Email:</strong> <span><a href="mailto:#{government_institution_email}">#{government_institution_email}</a></span>
+                    .column
+                      if government_institution_postalcode
+                        p(class='governmentInfo') <strong>T.K.:</strong> <span>#{government_institution_postalcode}</span>
+                      if government_institution_fax
+                        p(class='governmentInfo') <strong>Fax:</strong> <span>#{government_institution_fax}</span>
+                      if government_institution_website
+                        p(class='governmentInfo') <strong>Website:</strong> <span>#{government_institution_website}</span>
+                  if government_institution_information
+                    p(class='governmentInfo has-text-centered') <strong>Υπεύθυνος για Πληροφορίες:</strong> <span>#{government_institution_information}</span>
             .column
               article(class='notification is-primary generalInfo')
                 p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
@@ -71,7 +74,7 @@ html
                 p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
                 .tags
                   each val in thematic_category
-                    span(class='tag is-white thematicCategory')= val
+                    .tag.is-white.thematicCategory= val
                 p(class='governmentInfo has-text-centered') Η απόφαση
                   if (has_private_data=='true')
                     <strong> περιέχει </strong> προσωπικά δεδομένα
@@ -79,4 +82,7 @@ html
                     <strong> δεν περιέχει</strong> προσωπικά δεδομένα
           .container
             h5(class='title has-text-centered is-5') Κείμενο Απόφασης
-            p(class='decision_text') #{AfterDecision}
+            if PreConsideration
+              p(class='decision_text') #{PreConsideration}
+            if AfterDecision
+              p(class='decision_text') #{AfterDecision}
