@@ -44,6 +44,7 @@ app.get('/vizualize', function (req, res) {
     rdfStream.on('end', function() {
       const generalPropertiesFormatter = new GeneralPropertiesFormatter()
       generalPropertiesFormatter.formatGeneralProperties(array)
+      generalPropertiesFormatter.addConsiderationsToGeneralProperties()
       res.render('index', generalPropertiesFormatter.properties)
     })
   } else {
@@ -59,10 +60,15 @@ class GeneralPropertiesFormatter {
 
   constructor() {
     this.generalProperties = {}
+    this.considerations = []
   }
 
   get properties() {
     return this.generalProperties
+  }
+
+  addConsiderationsToGeneralProperties() {
+    this.generalProperties['considerations'] = this.considerations
   }
 
   formatGeneralProperties(array) {
@@ -98,6 +104,7 @@ class GeneralPropertiesFormatter {
      * that we have found iun and version in order to recognize the rest entities.
      */
     var decisionPrefix = DVG_ELI + decisionIunVersion['iun'] + '/' + decisionIunVersion['version'] + '/'
+    var a;
     for (var subject in array) {
       if (subject === (decisionPrefix + 'AfterDecision')) {
         array[subject].forEach(predicatePair => {
@@ -107,11 +114,18 @@ class GeneralPropertiesFormatter {
         array[subject].forEach(predicatePair => {
           this._findPredicateValue('PreConsideration', 'ont', 'has_text', predicatePair)
         })
+      } else if (subject.indexOf(decisionPrefix + 'Consideration/') > -1 ) {
+        let considerationSplitArray = subject.split('/')
+        let considerationNumber = considerationSplitArray[considerationSplitArray.length - 1]
+        array[subject].forEach(predicatePair => {
+          this._findPredicateValue('Consideration', 'ont', 'has_text', predicatePair, considerationNumber)
+          this._findPredicateValue('Consideration', 'ont', 'considers', predicatePair, considerationNumber)
+        })
       }
     }
   }
 
-  _findPredicateValue(subject, ontology, predicateSearch, predicatePair) {
+  _findPredicateValue(subject, ontology, predicateSearch, predicatePair, entityIndex) {
     var predicate = predicatePair[0]
     var value = predicatePair[1]
 
@@ -133,8 +147,22 @@ class GeneralPropertiesFormatter {
         this.generalProperties['AfterDecision'] = N3Util.getLiteralValue(value)
       } else if (subject === 'PreConsideration') {
         this.generalProperties['PreConsideration'] = N3Util.getLiteralValue(value)
-      }
-      else if (predicateSearch === 'date_publication') {
+      } else if (subject === 'Consideration') {
+        if (predicateSearch === 'has_text') {
+          if (!this.considerations[entityIndex - 1]) {
+            this.considerations[entityIndex - 1] = {}
+          }
+          this.considerations[entityIndex - 1]['has_text'] = N3Util.getLiteralValue(predicatePair[1])
+        } else if (predicateSearch === 'considers') {
+          if (!this.considerations[entityIndex - 1]) {
+            this.considerations[entityIndex - 1] = {}
+          }
+          if (!this.considerations[entityIndex - 1]['links']) {
+            this.considerations[entityIndex - 1]['links'] = []
+          }
+          this.considerations[entityIndex - 1]['links'].push(predicatePair[1])
+        }
+      } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
         dateLiteral = dateLiteral.split('-')
         dateLiteral = dateLiteral[2] + '/' + dateLiteral[1] + '/' +dateLiteral[0]
