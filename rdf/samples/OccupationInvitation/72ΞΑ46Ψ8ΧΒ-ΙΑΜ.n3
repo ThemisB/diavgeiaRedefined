@@ -6,11 +6,11 @@
 <> a ont:OccupationInvitation;
 	ont:version "e1e27523-ab46-440f-ab28-d8f930435d1e";
 	ont:iun "72ΞΑ46Ψ8ΧΒ-ΙΑΜ"@el;
-	eli:title "Προκήρυξη θέσης καθηγητή του Τμήματος Μη\nχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη βαθμίδα του καθηγητή πρώτης βαθμίδας, με γνωστικό αντικείμενο\n«Μέθοδοι παραγωγής και αξιολόγηση ιδιοτήτων μεταλλικών υλικών»."@el;
+	eli:title "Προκήρυξη θέσης καθηγητή του Τμήματος Μηχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη βαθμίδα του καθηγητή πρώτης βαθμίδας, με γνωστικό αντικείμενο «Μέθοδοι παραγωγής και αξιολόγηση ιδιοτήτων μεταλλικών υλικών»."@el;
 	eli:date_publication "2016-06-01"^^<http://www.w3.org/2001/XMLSchema#date>;
 	ont:government_institution_name "ΑΡΙΣΤΟΤΕΛΕΙΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΟΝΙΚΗΣ"@el;
 	ont:protocol_number "14501";
-	ont:has_preconsideration <Preconsideration>;
+	ont:has_preconsideration <PreConsideration>;
 	ont:has_considered <Consideration/1>;
 	ont:has_considered <Consideration/2>;
 	ont:has_considered <Consideration/3>;
@@ -34,8 +34,8 @@
 	ont:submission_timestamp "1465284835474";
 	ont:unit_id "72831".
 
-<Preconsideration> a ont:PreConsideration;
-	ont:has_text "Η Γενική Συνέλευση Ειδικής Σύνθεσης του Τμήματος Μηχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη συνεδρίαση της υπ’ αριθμ. 6/16.2.2016, λαμβάνοντας υπόψη"@el.
+<PreConsideration> a ont:PreConsideration;
+	ont:has_text "Η Γενική Συνέλευση Ειδικής Σύνθεσης του Τμήματος Μηχανολόγων Μηχανικών του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης στη συνεδρίαση της υπ’ αριθμ. 6/16.2.2016"@el.
 
 <Consideration/1> a ont:Consideration;
 	ont:has_text "Την από 29.1.2016 αίτηση εξέλιξης του αναπληρωτή καθηγητή"@el.
