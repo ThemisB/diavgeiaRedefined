@@ -93,6 +93,18 @@ class GeneralPropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'government_institution_information', predicatePair)
       })
     }
+    /* A second iteration is necessary here, because in the future n3 generator may change
+     * (e.g. Considerations and Decisions entities may be parsed first). Thus we should guarantee
+     * that we have found iun and version in order to recognize the rest entities.
+     */
+    var decisionPrefix = DVG_ELI + decisionIunVersion['iun'] + '/' + decisionIunVersion['version'] + '/'
+    for (var subject in array) {
+      if (subject === (decisionPrefix + 'AfterDecision')) {
+        array[subject].forEach(predicatePair => {
+          this._findPredicateValue('AfterDecision', 'ont', 'has_text', predicatePair)
+        })
+      }
+    }
   }
 
   _findPredicateValue(subject, ontology, predicateSearch, predicatePair) {
