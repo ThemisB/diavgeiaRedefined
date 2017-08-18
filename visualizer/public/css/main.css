@@ -48,7 +48,7 @@ ol {
   counter-reset: item;
 }
 
-ol > .consideration {
+ol > .consideration, ol > .decision {
   margin: 0;
   padding: 0 0 0 2em;
   text-indent: -2em;
@@ -56,7 +56,7 @@ ol > .consideration {
   counter-increment: item;
 }
 
-ol > .consideration:before {
+ol > .consideration:before, ol > .decision:before {
   display: inline-block;
   width: 1em;
   padding-right: 0.5em;
@@ -72,4 +72,8 @@ ol > .consideration:before {
 .tags .linking .tag {
   margin-left: 0.3em;
   margin-right: 0.3em;
+}
+
+.afterDecision {
+  margin-top:3em;
 }
