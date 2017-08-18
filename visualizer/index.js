@@ -19,18 +19,21 @@ app.set('view engine', 'pug')
 
 app.get('/vizualize', function (req, res) {
   if (req.query.decisionFolder && req.query.iun) {
-    var decisionFolder = path.normalize(req.query.decisionFolder).replace(/^(\.\.[\/\\])+/, '')
-    var iun = path.normalize(req.query.iun).replace(/^(\.\.[\/\\])+/, '')
-    var rdfStream = undefined
+    var decisionFolder = path.normalize(req.query.decisionFolder).replace(/^(\.\.[/\\])+/, '')
+    var iun = path.normalize(req.query.iun).replace(/^(\.\.[/\\])+/, '')
+    let rdfStream
     rdfStream = fs.createReadStream(DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3')
     rdfStream.on('error', () => {
       console.error('N3 file ' + DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3' + ' does not exist')
-      res.status(404).send('Not found');
+      res.status(404).send('Not found')
     })
 
     var array = {}
     rdfStream.on('open', () => {
       parser.parse(rdfStream, (err, triple, prefixes) => {
+        if (err) {
+          res.status(500).send('Internal Error')
+        }
         if (triple) {
           var predicateAndObject = [triple.predicate, triple.object]
           if (!array[triple.subject]) {
@@ -41,14 +44,14 @@ app.get('/vizualize', function (req, res) {
         }
       })
     })
-    rdfStream.on('end', function() {
+    rdfStream.on('end', function () {
       const generalPropertiesFormatter = new GeneralPropertiesFormatter()
       generalPropertiesFormatter.formatGeneralProperties(array)
       generalPropertiesFormatter.addConsiderationsToGeneralProperties()
       res.render('index', generalPropertiesFormatter.properties)
     })
   } else {
-    res.status(404).send('Not found');
+    res.status(404).send('Not found')
   }
 })
 
@@ -57,32 +60,33 @@ app.listen(3333, function () {
 })
 
 class GeneralPropertiesFormatter {
-
-  constructor() {
+  constructor () {
     this.generalProperties = {}
     this.considerations = []
   }
 
-  get properties() {
+  get properties () {
     return this.generalProperties
   }
 
-  addConsiderationsToGeneralProperties() {
+  addConsiderationsToGeneralProperties () {
     this.generalProperties['considerations'] = this.considerations
   }
 
-  formatGeneralProperties(array) {
+  formatGeneralProperties (array) {
     var decisionIunVersion = {}
     for (var subject in array) {
       array[subject].forEach(predicatePair => {
         this._findPredicateValue(subject, 'eli', 'title', predicatePair)
         this._findPredicateValue(subject, 'eli', 'date_publication', predicatePair)
         let iun = this._findPredicateValue(subject, 'ont', 'iun', predicatePair)
-        if (iun)
+        if (iun) {
           decisionIunVersion['iun'] = iun
+        }
         let version = this._findPredicateValue(subject, 'ont', 'version', predicatePair)
-        if (version)
+        if (version) {
           decisionIunVersion['version'] = version
+        }
         this._findPredicateValue(subject, 'ont', 'protocol_number', predicatePair)
         this._findPredicateValue(subject, 'ont', 'thematic_category', predicatePair)
         this._findPredicateValue(subject, 'ont', 'has_private_data', predicatePair)
@@ -106,8 +110,7 @@ class GeneralPropertiesFormatter {
      * that we have found iun and version in order to recognize the rest entities.
      */
     var decisionPrefix = DVG_ELI + decisionIunVersion['iun'] + '/' + decisionIunVersion['version'] + '/'
-    var a;
-    for (var subject in array) {
+    for (subject in array) {
       if (subject === (decisionPrefix + 'AfterDecision')) {
         array[subject].forEach(predicatePair => {
           this._findPredicateValue('AfterDecision', 'ont', 'has_text', predicatePair)
@@ -116,7 +119,7 @@ class GeneralPropertiesFormatter {
         array[subject].forEach(predicatePair => {
           this._findPredicateValue('PreConsideration', 'ont', 'has_text', predicatePair)
         })
-      } else if (subject.indexOf(decisionPrefix + 'Consideration/') > -1 ) {
+      } else if (subject.indexOf(decisionPrefix + 'Consideration/') > -1) {
         let considerationSplitArray = subject.split('/')
         let considerationNumber = considerationSplitArray[considerationSplitArray.length - 1]
         array[subject].forEach(predicatePair => {
@@ -127,24 +130,24 @@ class GeneralPropertiesFormatter {
     }
   }
 
-  _findPredicateValue(subject, ontology, predicateSearch, predicatePair, entityIndex) {
+  _findPredicateValue (subject, ontology, predicateSearch, predicatePair, entityIndex) {
     var predicate = predicatePair[0]
     var value = predicatePair[1]
 
-    var fullPredicate = undefined
+    var fullPredicate
     switch (ontology) {
       case 'ont':
         fullPredicate = ONT
-      break
+        break
       case 'eli':
         fullPredicate = ELI
-      break
+        break
       case 'rdfs':
         fullPredicate = RDFS
-      break
+        break
     }
     fullPredicate += predicateSearch
-    if(fullPredicate === predicate) {
+    if (fullPredicate === predicate) {
       if (subject === 'AfterDecision') {
         this.generalProperties['AfterDecision'] = N3Util.getLiteralValue(value)
       } else if (subject === 'PreConsideration') {
@@ -167,7 +170,7 @@ class GeneralPropertiesFormatter {
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
         dateLiteral = dateLiteral.split('-')
-        dateLiteral = dateLiteral[2] + '/' + dateLiteral[1] + '/' +dateLiteral[0]
+        dateLiteral = dateLiteral[2] + '/' + dateLiteral[1] + '/' + dateLiteral[0]
         this.generalProperties[predicateSearch] = dateLiteral
       } else if (predicateSearch === 'thematic_category') {
         const thematicCategoriesTranslation = {
@@ -194,15 +197,17 @@ class GeneralPropertiesFormatter {
           PoliticalLife: 'ΠΟΛΙΤΙΚΗ ΖΩΗ',
           PublicAdministration: 'ΔΗΜΟΣΙΑ ΔΙΟΙΚΗΣΗ'
         }
-        if (!this.generalProperties[predicateSearch])
+        if (!this.generalProperties[predicateSearch]) {
           this.generalProperties[predicateSearch] = [thematicCategoriesTranslation[N3Util.getLiteralValue(value)]]
-        else
+        } else {
           this.generalProperties[predicateSearch].push(thematicCategoriesTranslation[N3Util.getLiteralValue(value)])
+        }
       } else if (predicateSearch === 'type') {
-          let decisionType = this._findDecisionType(value)
-          if (decisionType)
-            this.generalProperties['decision_type'] = decisionType
-          return decisionType
+        let decisionType = this._findDecisionType(value)
+        if (decisionType) {
+          this.generalProperties['decision_type'] = decisionType
+        }
+        return decisionType
       } else {
         let literalValue = N3Util.getLiteralValue(value)
         this.generalProperties[predicateSearch] = literalValue
@@ -212,7 +217,7 @@ class GeneralPropertiesFormatter {
     }
   }
 
-  _findDecisionType(value) {
+  _findDecisionType (value) {
     var translations = {}
     translations[ONT + 'Law'] = 'Νόμος'
     translations[ONT + 'LegislativeDecree'] = 'Πράξη Νομοθετικού Περιεχομένου'
