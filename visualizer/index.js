@@ -97,6 +97,8 @@ class GeneralPropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'government_institution_fax', predicatePair)
         this._findPredicateValue(subject, 'ont', 'government_institution_email', predicatePair)
         this._findPredicateValue(subject, 'ont', 'government_institution_information', predicatePair)
+        // Rest General Properties
+        this._findPredicateValue(subject, 'ont', 'decision_call', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
