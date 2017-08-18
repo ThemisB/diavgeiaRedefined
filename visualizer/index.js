@@ -48,6 +48,7 @@ app.get('/vizualize', function (req, res) {
       generalPropertiesFormatter.formatGeneralProperties(array)
       generalPropertiesFormatter.addConsiderationsToGeneralProperties()
       generalPropertiesFormatter.addDecisionsToGeneralProperties()
+      generalPropertiesFormatter.addSignersToGeneralProperties()
       res.render('index', generalPropertiesFormatter.properties)
     })
   } else {
@@ -64,6 +65,7 @@ class GeneralPropertiesFormatter {
     this.generalProperties = {}
     this.considerations = []
     this.decisions = []
+    this.signers = []
   }
 
   get properties () {
@@ -76,6 +78,10 @@ class GeneralPropertiesFormatter {
 
   addDecisionsToGeneralProperties () {
     this.generalProperties['decisions'] = this.decisions
+  }
+
+  addSignersToGeneralProperties () {
+    this.generalProperties['signers'] = this.signers
   }
 
   formatGeneralProperties (array) {
@@ -138,6 +144,15 @@ class GeneralPropertiesFormatter {
           this._findPredicateValue('Decision', 'ont', 'has_text', predicatePair, decisionNumber)
           this._findPredicateValue('Decision', 'ont', 'considers', predicatePair, decisionNumber)
         })
+      } else if (subject.indexOf(decisionPrefix + 'Signer/') > -1) {
+        let signersArray = subject.split('/')
+        let signerNumber = signersArray[signersArray.length - 1]
+        array[subject].forEach(predicatePair => {
+          this._findPredicateValue('Signer', 'ont', 'signer_job', predicatePair, signerNumber)
+          this._findPredicateValue('Signer', 'ont', 'signer_name', predicatePair, signerNumber)
+          // TODO Maybe Diavgeia can link to the Signer on its website
+          // this._findPredicateValue('Signer', 'ont', 'signer_name', predicatePair, signerNumber)
+        })
       }
     }
   }
@@ -193,6 +208,18 @@ class GeneralPropertiesFormatter {
             this.decisions[entityIndex - 1]['links'] = []
           }
           this.decisions[entityIndex - 1]['links'].push(predicatePair[1])
+        }
+      } else if (subject === 'Signer') {
+        if (predicateSearch === 'signer_job') {
+          if (!this.signers[entityIndex - 1]) {
+            this.signers[entityIndex - 1] = {}
+          }
+          this.signers[entityIndex - 1]['signer_job'] = N3Util.getLiteralValue(predicatePair[1])
+        } else if (predicateSearch === 'signer_name') {
+          if (!this.signers[entityIndex - 1]) {
+            this.signers[entityIndex - 1] = {}
+          }
+          this.signers[entityIndex - 1]['signer_name'] = N3Util.getLiteralValue(predicatePair[1])
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
