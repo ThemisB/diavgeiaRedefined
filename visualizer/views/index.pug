@@ -95,5 +95,7 @@ html
                         span(class='linking')
                           - let nextIndex = index + 1
                           a(href=linking, target='_blank', class='tag is-primary') Σύνδεσμος #{nextIndex}
+            if decision_call
+              h5(class='title has-text-centered is-5') #{decision_call}
             if AfterDecision
               p(class='decisionText') #{AfterDecision}
