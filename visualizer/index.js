@@ -21,8 +21,7 @@ app.get('/vizualize', function (req, res) {
   if (req.query.decisionFolder && req.query.iun) {
     var decisionFolder = path.normalize(req.query.decisionFolder).replace(/^(\.\.[/\\])+/, '')
     var iun = path.normalize(req.query.iun).replace(/^(\.\.[/\\])+/, '')
-    let rdfStream
-    rdfStream = fs.createReadStream(DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3')
+    let rdfStream = fs.createReadStream(DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3')
     rdfStream.on('error', () => {
       console.error('N3 file ' + DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3' + ' does not exist')
       res.status(404).send('Not found')
@@ -48,6 +47,7 @@ app.get('/vizualize', function (req, res) {
       const generalPropertiesFormatter = new GeneralPropertiesFormatter()
       generalPropertiesFormatter.formatGeneralProperties(array)
       generalPropertiesFormatter.addConsiderationsToGeneralProperties()
+      generalPropertiesFormatter.addDecisionsToGeneralProperties()
       res.render('index', generalPropertiesFormatter.properties)
     })
   } else {
@@ -63,6 +63,7 @@ class GeneralPropertiesFormatter {
   constructor () {
     this.generalProperties = {}
     this.considerations = []
+    this.decisions = []
   }
 
   get properties () {
@@ -71,6 +72,10 @@ class GeneralPropertiesFormatter {
 
   addConsiderationsToGeneralProperties () {
     this.generalProperties['considerations'] = this.considerations
+  }
+
+  addDecisionsToGeneralProperties () {
+    this.generalProperties['decisions'] = this.decisions
   }
 
   formatGeneralProperties (array) {
@@ -126,6 +131,13 @@ class GeneralPropertiesFormatter {
           this._findPredicateValue('Consideration', 'ont', 'has_text', predicatePair, considerationNumber)
           this._findPredicateValue('Consideration', 'ont', 'considers', predicatePair, considerationNumber)
         })
+      } else if (subject.indexOf(decisionPrefix + 'Decision/') > -1) {
+        let decisionSplitArray = subject.split('/')
+        let decisionNumber = decisionSplitArray[decisionSplitArray.length - 1]
+        array[subject].forEach(predicatePair => {
+          this._findPredicateValue('Decision', 'ont', 'has_text', predicatePair, decisionNumber)
+          this._findPredicateValue('Decision', 'ont', 'considers', predicatePair, decisionNumber)
+        })
       }
     }
   }
@@ -166,6 +178,21 @@ class GeneralPropertiesFormatter {
             this.considerations[entityIndex - 1]['links'] = []
           }
           this.considerations[entityIndex - 1]['links'].push(predicatePair[1])
+        }
+      } else if (subject === 'Decision') {
+        if (predicateSearch === 'has_text') {
+          if (!this.decisions[entityIndex - 1]) {
+            this.decisions[entityIndex - 1] = {}
+          }
+          this.decisions[entityIndex - 1]['has_text'] = N3Util.getLiteralValue(predicatePair[1])
+        } else if (predicateSearch === 'considers') {
+          if (!this.decisions[entityIndex - 1]) {
+            this.decisions[entityIndex - 1] = {}
+          }
+          if (!this.decisions[entityIndex - 1]['links']) {
+            this.decisions[entityIndex - 1]['links'] = []
+          }
+          this.decisions[entityIndex - 1]['links'].push(predicatePair[1])
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
