@@ -97,5 +97,15 @@ html
                           a(href=linking, target='_blank', class='tag is-primary') Σύνδεσμος #{nextIndex}
             if decision_call
               h5(class='title has-text-centered is-5') #{decision_call}
+            if decisions
+              ol(class='decisionText')
+                each decision in decisions
+                  li.decision=decision['has_text']
+                  if decision.links
+                    .tags
+                      each linking, index in decision.links
+                        span(class='linking')
+                          - let nextIndex = index + 1
+                          a(href=linking, target='_blank', class='tag is-primary') Σύνδεσμος #{nextIndex}
             if AfterDecision
-              p(class='decisionText') #{AfterDecision}
+              p(class='decisionText afterDecision') #{AfterDecision}
