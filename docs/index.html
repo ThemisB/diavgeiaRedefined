@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diavgeia Redefined (GSoC 2017 Project)</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  </head>
+  <body>
+  <headerbar></headerbar>
+  <section class="section">
+    <div class="container">
+      <article class="message is-dark">
+        <div class="message-header">
+          <p>As stated in <a href="https://diavgeia.gov.gr/en">Diavgeia's website</a>:</p>
+        </div>
+        <div class="message-body">
+          Beginning October 1st, 2010, all government institutions are obliged to upload their acts and decisions on the Internet with special attention to issues of national security and sensitive personal data. Each document is digitally signed and assigned a unique Internet Uploading Number (IUN) certifying that the decision has been uploaded at the <i>Transparency Portal</i>. Following the latest legislative initiative (Law 4210/2013) of the Ministry of Administrative Reform and e-Governance, <b>administrative acts and decisions are not valid unless published online.</b> <br><br>
+
+          The main objectives of the Program concern:
+          <ul style="list-style:disc" class="container is-fluid">
+            <li>Safeguarding transparency of government actions.</li>
+            <li>Eliminating corruption by exposing it more easily when it takes place.</li>
+            <li>Observing legality and good administration.</li>
+            <li>Reinforcing citizens’ constitutional rights, such as the participation in the Information Society.</li>
+            <li>Enhancing and modernizing existing publication systems of administrative acts and decisions.</li>
+            <li> Making of all administrative acts available in formats that are easy to access, navigate and comprehend, regardless of the citizen’s knowledge level of the inner processes of the administration.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="container">
+      <h1 class="title has-text-centered" style="padding-top:0.5em;">So, what's wrong?</h1>
+      <div class="container">
+        <p>Diavgeia is indeed a great effort to promote transparency of government actions, as all government institutions are obliged to upload their decisions to the <a href="https://diavgeia.gov.gr/">Transparency Portal</a>. However, there are <b>5</b> serious problems that are in contradiction with Diavgeia's fundamental goals:
+        <ol class="container is-fluid">
+          <li>Government institutions upload their decisions, as <span class="tag is-light">.pdf</span> files that follow no specific document structure. Moreover, Diavgeia currently hosts over <a href="https://diavgeia.gov.gr/stats" target="_blank">25.2 million decisions</a> and that makes it obvious that citizens have no way to observe legality or good administration in an automated manner.</li>
+          <li>In the current implementation of Diavgeia, each decision has metadata information that can be accessed through <a href="https://diavgeia.gov.gr/api/help" target="_blank">Diavgeia's OpenData API</a>. The metadata information is filled by the government institutions and often contain important data (<i>i.e.</i> financial transactions). However, there is no guarantee of consistency between the decision's pdf text and its corresponding metadata. That means, a decision may contain 5 financial transactions in the pdf text, but the government institution may have filled only 2 financial transactions in the metadata. That means, that Diavgeia's OpenData API can not be used by the citizens in a reliable way to examine the transparency of the government.</li>
+          <li>The vast amount of pdf decisions, leads to disk space scalability issues.</li>
+          <li>The majority of decisions, follow the model of <i>taking into consideration the law X - we decide</i>. We want to make sure, that these laws exist and link each decision with the laws that has taken into consideration.</li>
+          <li>Diavgeia offers no guarantee that decisions will remain immutable over time. Government may modify or completely remove a decision from Diavgeia and thus citizens and government institutions that have not downloaded this specific decision on their personal computers, have no way to prove its existence. A mechanism to ensure decisions' integrity and immutability over time, will introduce new levels of transparency among citizens, government and government institutions.</li>
+        </ol>
+        </p>
+      </div>
+      <div class="container">
+        <h4 class="subtitle has-text-centered" style="padding-top:0.4em;"><span class="dvgRedefined"><a href="/diavgeiaRedefined.html">Diavgeia Redefined</a></span> to the rescue!</h4>
+      </div>
+    </div>
+  </section>
+  <!-- Scripts and Riot tags-->
+  <script type="riot/tag" src="tags/headerbar.tag"></script>
+  <script src="js/riot+compiler.min.js"></script>
+  <script>riot.mount('headerbar', {page:"overview", subpage: 'whatisdiavgeia'})</script>
+  </body>
+</html>
