@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diavgeia Redefined (GSoC 2017 Project)</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  </head>
+  <body>
+  <headerbar></headerbar>
+  <section class="section">
+    <div class="container">
+      <p>The full documentation of the rdf schema is hosted on <a href="https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf">this Github link</a>.</p>
+    </div>
+  </section>
+  <!-- Scripts and Riot tags-->
+  <script type="riot/tag" src="tags/headerbar.tag"></script>
+  <script src="js/riot+compiler.min.js"></script>
+  <script>riot.mount('headerbar', {page:"rdf", subpage: 'rdfschema'})</script>
+  </body>
+</html>
