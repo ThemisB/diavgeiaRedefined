@@ -1,0 +1,80 @@
+.dvgRedefined {
+  font-family: 'Pacifico', cursive;
+}
+
+.logo {
+  font-size: 32px;
+}
+
+.dvgTab {
+  padding-left: 0.2em;
+}
+
+.noDecoration {
+  border-bottom-color: transparent !important;
+}
+
+hr {
+  background: url('../images/zigzag.svg');
+  height: 10px;
+}
+
+.solutions {
+  margin-top: 1em;
+}
+
+.px21{
+  font-size: 21px;
+}
+
+.px17{
+  font-size: 17px;
+}
+
+.isflex {
+  display: flex !important;
+}
+
+.blockchainProcedure {
+  border: 1px solid #ffdd57;
+  border-top-right-radius: 3px;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem;
+  position: relative;
+  margin-top: 2em;
+}
+
+.blockchainProcedure:before {
+  background: #ffdd57;
+  border-radius: 3px 3px 0 0;
+  bottom: 100%;
+  content: "Procedure for commiting decisions to Blockchain";
+  display: inline-block;
+  font-size: 7px;
+  font-weight: bold;
+  left: -1px;
+  letter-spacing: 1px;
+  padding: 3px 5px;
+  position: absolute;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.bitcoinLast{
+  padding-top: 1em;
+}
+
+.futureworklist {
+  font-size: 17px;
+  margin-top: 1em;
+}
+
+.todo {
+  font-size: 17px;
+  text-decoration-style: wavy;
+  text-decoration-line: underline;
+}
+
+.todo-ol li {
+  margin-bottom: 0.7em;
+}
