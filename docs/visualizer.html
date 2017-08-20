@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diavgeia Redefined (GSoC 2017 Project)</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  </head>
+  <body>
+  <headerbar></headerbar>
+  <section class="section">
+    <div class="container">
+      <p>Visualizer is a Node.js application that citizens or government institutions can use, in order to visualize <span class="tag is-light">.n3</span> decisions in their web browsers.</p>
+      <div class="container is-fluid">
+        <div class="columns" style="padding-top:1em;">
+            <div class="column n3decisionSample isflex">
+              <div class="box">
+              @base &lt;http://diavgeia.gov.gr/eli/decision/ΨΟΗΩ46ΨΖΣ4-Ι56/a2481493-7f59-4f43-8799-3eb554c36d23/>. <br>
+              @prefix ont: &lt;http://diavgeia.gov.gr/ontology/>.<br>
+              @prefix eli: &lt;http://data.europa.eu/eli/ontology#>.<br>
+              @prefix leg: &lt;http://legislation.di.uoa.gr/eli/>.<br><br>
+              &lt;> a ont:Appointment;<br>
+              	ont:version "a2481493-7f59-4f43-8799-3eb554c36d23";<br>
+              	ont:iun "ΨΟΗΩ46ΨΖΣ4-Ι56"@el;<br>
+              	eli:title "Διορισμός του μόνιμου Αναπληρωτή Καθηγητή κ. Γεωργίου Κουτσούμπα  σε μόνιμη θέση Καθηγητή της βαθμίδας του Καθηγητή πρώτης βαθμίδας (εξέλιξη)."@el;<br>
+                <hr>
+                <p class="has-text-centered">.n3 appointment decision (see the full decision <a href="https://raw.githubusercontent.com/eellak/gsoc17-diavgeia/master/rdf/samples/Appointment/%CE%A8%CE%9F%CE%97%CE%A946%CE%A8%CE%96%CE%A34-%CE%9956.n3" target="_blank">here</a>)</p>
+              </div>
+            </div>
+            <div class="column isflex">
+              <figure class="image box">
+                <img src="images/visualization.png">
+                <p class="has-text-centered" style="padding-top:0.2em">Visualization of the appointment</p>
+              </figure>
+            </div>
+        </div>
+      </div>
+      <p style="padding-top:1em;">For installation instructions, see this <a href="https://github.com/eellak/gsoc17-diavgeia/tree/master/visualizer">Github link</a>.</p>
+    </div>
+  </section>
+  <!-- Scripts and Riot tags-->
+  <script type="riot/tag" src="tags/headerbar.tag"></script>
+  <script src="js/riot+compiler.min.js"></script>
+  <script>riot.mount('headerbar', {page:"rdf", subpage: 'visualizer'})</script>
+  </body>
+</html>
