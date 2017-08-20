@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diavgeia Redefined (GSoC 2017 Project)</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  </head>
+  <body>
+  <headerbar></headerbar>
+  <section class="section">
+    <div class="container">
+      <p>
+        There is still a lot work that may be done on <span class="dvgRedefined px17">Diavgeia Redefined</span>, in order to promote even more the transparency of Diavgeia! Please, feel free to pick an open issue from the future work list below and make a pull request to our <a href="https://github.com/eellak/gsoc17-diavgeia">repository</a>.
+      </p>
+      <div class="columns">
+        <div class="column">
+          <h3 class="title has-text-centered"><span class="tag is-primary futureworklist">Future Work List</span></h3>
+          <ol class="todo-ol">
+            <li><span class="todo"><b>Bitcoin-Website Validator</b></span>: Create a tool which ensures that all proof of burn blockchain transactions of Diavgeia are consistent with the merkle trees uploaded on Diavgeia's website.</li>
+            <li><span class="todo"><b>Bitcoin-SPARQL Validator</b></span>: Find an efficient way to prove that all decisions that have been commited to blockchain are also available from the SPARQL endpoint.</li>
+            <li><span class="todo"><b>Improve Visualizer</b></span>: Visualizer does not visualize rdf properties for each different decision type.</li>
+            <li><span class="todo"><b>Study scalability of SPARQL endpoint</b></span>: As it was stated, Diavgeia hosts millions of decisions. A benchmark of the scalability of the Apache Jena and Fuseki is crucial.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scripts and Riot tags-->
+  <script type="riot/tag" src="tags/headerbar.tag"></script>
+  <script src="js/riot+compiler.min.js"></script>
+  <script>riot.mount('headerbar', {page:"futurework", subpage: "futurework"})</script>
+  </body>
+</html>
