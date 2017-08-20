@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diavgeia Redefined (GSoC 2017 Project)</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  </head>
+  <body>
+  <headerbar></headerbar>
+  <section class="section">
+    <div class="container">
+      <p>
+      In order to limit the time span in which a document can be altered (modified or removed), Diavgeia will be forced to store a log in the Bitcoin Network, at predefined time intervals. It is obvious that smaller time intervals imply more transparency, as the government keeps more logs. That said, let’s assume Diavgeia is forced to keep a log each day. The following procedure takes place:
+      <div class="blockchainProcedure">
+        <div class="content">
+          <ol>
+            <li>Diavgeia gathers all <span class="tag is-light">.n3</span> decisions that have not been included in the last log. These documents are organized into a Merkle Tree.</li>
+            <li>Diavgeia gets the root of the Merkle tree and signs it. Diavgeia commits the signed root of the Merkle Tree as <a href="https://en.bitcoin.it/wiki/Proof_of_burn" target="_blank">proof of burn</a> transaction to the Bitcoin Network.</li>
+            <li>After the confirmation of the transaction, it publishes:
+              <ul>
+                <li>The merkle tree (that is the order of the documents). This is crucial, because citizens should be able to verify that the root of the merkle tree is valid.</li>
+                <li>The Bitcoin Address / transaction.</li>
+              </ul>
+            </li>
+          </ol>
+          <p>Then, citizens and government institutions can verify their acts and be sure that their decisions will remain immutable over time.</p>
+          <p class="hdWallet">
+            <div>
+              <figure class="image is-32x32" style="display:inline-block;margin:0">
+                <img style="vertical-align:middle" src="./images/light_bulb.svg">
+              </figure>
+              <span class="dvgRedefined px17">Diavgeia Redefined</span> implements a <a href="https://en.bitcoin.it/wiki/Deterministic_wallet#Type_2_hierarchical_deterministic_wallet">Hierarchical Deterministic wallet</a> and that means that for each proof of burn transaction, a new public address will be generated. Thus, Diavgeia should also publish once its Master Public Key in its website, as citizens should be able to track every single transaction that is made.
+            </div>
+          </p>
+        </div>
+      </div>
+    </p>
+    <p class="bitcoinLast">
+      For installation instructions and more information, see this <a href="https://github.com/eellak/gsoc17-diavgeia/tree/master/bitcoin">github link</a>.
+    </p>
+    </div>
+  </section>
+  <!-- Scripts and Riot tags-->
+  <script type="riot/tag" src="tags/headerbar.tag"></script>
+  <script src="js/riot+compiler.min.js"></script>
+  <script>riot.mount('headerbar', {page:"blockchain", subpage: 'bitcoin'})</script>
+  </body>
+</html>
