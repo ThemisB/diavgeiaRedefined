@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diavgeia Redefined (GSoC 2017 Project)</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  </head>
+  <body>
+  <headerbar></headerbar>
+  <section class="section">
+    <div class="container">
+      <span class="dvgRedefined px21">Diavgeia Redefined</span> is a <a href="https://developers.google.com/open-source/gsoc/">Google Summer of Code (GSoC)</a> project which aims to solve the <a href="/index.html">existing problems of Diavgeia</a>.
+      <h3 class="title has-text-centered solutions">Solutions</h3>
+    </div>
+    <div class="container">
+      <p>
+        <h4 class="subtitle has-text-centered" style="padding-top:0.4em;">Observe legality and good administration in an automated manner</h4>
+        <u>Problem</u>: Government institutions upload their decisions, as <span class="tag is-light">.pdf</span> files that follow no specific document structure. Moreover, Diavgeia currently hosts over <a href="https://diavgeia.gov.gr/stats" target="_blank">25.2 million decisions</a> and that makes it obvious that citizens have no way to observe legality or good administration in a automated manner. Diavgeia applies some unreliable <a href="https://en.wikipedia.org/wiki/Optical_character_recognition" target="_blank">OCR techniques</a>, relying solely on the honesty of government institutions to upload decisions in a machine readable format (but that is not always the case).<br/><br/>
+        <u>Solution</u>: <span class="dvgRedefined px17">Diavgeia Redefined</span> implements a <a href="https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf">RDF Schema</a>, which covers almost every possible decision type. That said, Diavgeia should stop supporting the upload of <span class="tag is-light">.pdf</span> files and introduce a new decision-format, compliant to the RDF schema. In this project, we adopted the Notation3 (N3) syntax and please feel free to browse the <a href="https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples">RDF samples</a>. Through these samples, you can explore and understand the RDF schema easily and realise that the .pdf decisions of Diavgeia can be equivalently expressed as <span class="tag is-light">.n3</span> files.<br/><br/>
+
+        As a result, these decisions can be stored to a <a href="https://en.wikipedia.org/wiki/Triplestore" target="_blank">triplestore</a> and thus citizens can examine government's transparency, by making interesting <a href="https://en.wikipedia.org/wiki/SPARQL" target="_blank">SPARQL queries</a>.
+      </p>
+      <hr>
+      <p>
+        <h4 class="subtitle has-text-centered" style="padding-top:0.4em;">Unifying decision with its metadata</h4>
+        <u>Problem</u>: In the current implementation of Diavgeia, each decision has metadata information that can be accessed through <a href="https://diavgeia.gov.gr/api/help" target="_blank">Diavgeia's OpenData API</a>. The metadata information is filled by the government institutions and often contain important data (<i>i.e.</i> financial transactions). However, there is no guarantee of consistency between the decision's pdf text and its corresponding metadata. That means, a decision may contain 5 financial transactions in the pdf text, but the government institution may have filled only 2 financial transactions in the metadata. That means, that Diavgeia's OpenData API can not be used by the citizens in a reliable way to examine the transparency of the government. <br/><br/>
+        <u>Solution</u>: By adopting the RDF, the concept of metadata does not exist anymore. Each <span class="tag is-light">.n3</span> decision has unified the decision body with its metadata.
+      </p>
+      <hr>
+      <p>
+        <h4 class="subtitle has-text-centered" style="padding-top:0.4em;">Linking to greek legislation</h4>
+        <u>Problem</u>: The majority of decisions, follow the model of <i>taking into consideration the law X - we decide</i>. We want to make sure, that these laws exist and link each decision with the laws that has taken into consideration. <br/><br/>
+        <u>Solution</u>: <span class="dvgRedefined px17">Diavgeia Redefined</span> uses <a href="http://legislation.di.uoa.gr/" target="_blank">ΝΟΜΟΘΕΣΙ@</a>. ΝΟΜΟΘΕΣΙ@ is a project which has expressed the greek legislation as RDF Data. Thus, government institutions can link their decisions to the greek legislation or to prior decisions of Diavgeia. Government institutions are provided with the option to not link their decision with other entities, as there are decisions which have not yet been expressed as rdf.
+      </p>
+      <hr>
+      <p>
+        <h4 class="subtitle has-text-centered" style="padding-top:0.4em;">Saving Disk Space</h4>
+        <u>Problem</u>: The vast amount of pdf decisions, leads to disk space scalability issues.<br/><br/>
+        <u>Solution</u>: By adopting the RDF, Diavgeia stores only small text files instead of the corresponding PDFs. Using some simple <span class="tag is-light">@prefix</span> and <span class="tag is-light">@base</span> techniques, as well as a <a href="https://en.wikipedia.org/wiki/Bzip2" target="_blank">bzip2 compression</a>, a <strong>x100</strong> disk space reduction <a href="https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf#conclusions" target="_blank">was achieved</a>.
+      </p>
+      <hr>
+      <p>
+        <h4 class="subtitle has-text-centered" style="padding-top:0.4em;">Immutability of decisions over time</h4>
+        <u>Problem</u>: Diavgeia offers no guarantee that decisions will remain immutable over time. Government may modify or completely remove a decision from Diavgeia and thus citizens and government institutions that have not downloaded this specific decision on their personal computers, have no way to prove its existence. A mechanism to ensure decisions' integrity and immutability over time, will introduce new levels of transparency among citizens, government and government institutions.<br/><br/>
+        <u>Solution</u>: This is achieved by commiting decisions as Proof of Burn transactions to the Bitcoin Network. For further details, please read the <a href="/blockchain.html">Blockchain section</a>.
+      </p>
+    </div>
+  </section>
+  <!-- Scripts and Riot tags-->
+  <script type="riot/tag" src="tags/headerbar.tag"></script>
+  <script src="js/riot+compiler.min.js"></script>
+  <script>riot.mount('headerbar', {page:"overview", subpage: 'diavgeiaRedefined'})</script>
+  </body>
+</html>
