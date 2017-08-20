@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diavgeia Redefined (GSoC 2017 Project)</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  </head>
+  <body>
+  <headerbar></headerbar>
+  <section class="section">
+    <div class="container">
+      <p>N3-Composer is a Node.js application that greek government institutions can use, in order to compose their decisions in a HTML form. The submission of the form results to the creation of a <span class="tag is-light">.n3</span> decision compliant to the rdf schema, as well as to its storage to the <a href="/sparql-endpoint.html">SPARQL endpoint</a>.</p>
+      <p style="padding-top:1em;">For installation instructions, see this <a href="https://github.com/eellak/gsoc17-diavgeia/tree/master/n3-composer">Github link</a>.</p>
+    </div>
+  </section>
+  <!-- Scripts and Riot tags-->
+  <script type="riot/tag" src="tags/headerbar.tag"></script>
+  <script src="js/riot+compiler.min.js"></script>
+  <script>riot.mount('headerbar', {page:"rdf", subpage: 'n3-composer'})</script>
+  </body>
+</html>
