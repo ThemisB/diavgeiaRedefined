@@ -85,11 +85,11 @@ An overview of this procedure can be visualized as following:
 GSoC Deliverables
 ------------
 
-1. The RDF Schema of decisions [link](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/decisions.owl).
-2. A set of existing decisions, expressed in Notation3 [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples).
-3. A standalone nodejs application, which commits the RDF-data to the Bitcoin Blockchain Network [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/bitcoin).
-4. Visualizer: Application that visualizes .n3 decisions in the web browser [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/visualizer).
-5. RDF Store and Sparql Endpoint: Use of Jena Apache as RDF Store and Fuseki Sparql Server in order to provide citizens a User Interface to pose SPARQL queries [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/sparql_endpoint).
+1. The RDF Schema of decisions [[link](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/decisions.owl)].
+2. A set of existing decisions, expressed in Notation3 [[link](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples)].
+3. A standalone nodejs application, which commits the RDF-data to the Bitcoin Blockchain Network [[link](https://github.com/eellak/gsoc17-diavgeia/tree/master/bitcoin)].
+4. Visualizer: Application that visualizes .n3 decisions in the web browser [[link](https://github.com/eellak/gsoc17-diavgeia/tree/master/visualizer)].
+5. RDF Store and Sparql Endpoint: Use of Jena Apache as RDF Store and Fuseki Sparql Server in order to provide citizens a User Interface to pose SPARQL queries [[link](https://github.com/eellak/gsoc17-diavgeia/tree/master/sparql_endpoint)].
 
 Future Work
 ------------
