@@ -5,6 +5,8 @@ gsoc17-diavgeia
 
 You can see the detailed timeline [here](https://github.com/eellak/gsoc17-diavgeia/blob/master/gsoc_timeline.md).
 
+Please pay a visit to the [project page](https://eellak.github.io/gsoc17-diavgeia/).
+
 Synopsis
 --------
 Beginning October 1st, 2010, all government institutions are obliged to upload their acts and decisions on the Internet with special attention to issues of national security and sensitive personal data. Each document is digitally signed and assigned a unique Internet Uploading Number (IUN), certifying that the decision has been uploaded at the “Transparency Portal”. Following the latest legislative initiative (Law 4210/2013) of the Ministry of Administrative Reform and e-Governance, **administrative acts and decisions are not valid unless published online**.
@@ -42,7 +44,7 @@ Problems
 
 ### Diavgeia does not ensure that decisions remain immutable over time
 
-As we said before, Diavgeia digitally signs the decisions and beggining 1st July 2017, all government institutions will be forced to digitally sign these decisions too. However, Diavgeia does not guarantee that decisions will remain immutable over time. Government may modify or completely remove a decision from Diavgeia and thus citizens and government institutions that have not downloaded this specific decision on their personal computers, have no way to prove its existence.
+As we said before, Diavgeia digitally signs the decisions and beginning 1st July 2017, all government institutions will be forced to digitally sign these decisions too. However, Diavgeia does not guarantee that decisions will remain immutable over time. Government may modify or completely remove a decision from Diavgeia and thus citizens and government institutions that have not downloaded this specific decision on their personal computers, have no way to prove its existence.
 
 Solutions
 --------
@@ -53,11 +55,13 @@ Solutions
 
 2. In order to solve the problem of linking the decision with the greek laws which it considers, we will use [ΝΟΜΟΘΕΣΙ@](http://legislation.di.uoa.gr/). This is a project which has expressed  the greek legislation as RDF Data. Thus, government institutions can link their decisions to the greek legislation or to prior decisions of Diavgeia. Moreover, government institutions will be provided with the option to not link the decision with other open data, as there are decisions which have not yet been expressed as rdf.
 
-This is an example which summarizes  1. , 2. :
+This is a decision sample appointment, as uploaded on Diavgeia, which summarizes  1. , 2.:
 
-![Equivalence of RDF-PDF](https://image.ibb.co/fqJ3iF/Example_Decision.png)
+![Equivalence of RDF-PDF](http://image.ibb.co/mPffU5/appointment_sample.png
 
-Almost all red letters denote the predicates of our ontology that can be used to correspond to the original PDF file. This figure also demonstrates the use of the rdf legislation dataset via the refers_to predicate.  Of course this is a simplified version of the rdf schema, as decisions can become a lot more complicated.
+You can find the full rdf decision (with its metadata) [here](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/Appointment/ΨΟΗΩ46ΨΖΣ4-Ι56.n3).
+
+Almost all red letters denote the predicates of our ontology that can be used to correspond to the original PDF file. This figure also demonstrates the use of the rdf legislation dataset via the *considers* predicate, denoted with green letters.  Of course this is a simplified version of the rdf schema, as decisions can become a lot more complicated.
 
 ### Immutability of decisions based on the use of the Bitcoin Blockchain
 
@@ -77,21 +81,34 @@ An overview of this procedure can be visualized as following:
 
 ![Commit to Bitcoin Blockchain procedure](https://image.ibb.co/fH0Nca/Drawing_2.jpg)
 
-Deliverables
+
+GSoC Deliverables
 ------------
 
-1. The RDF Schema of decisions.
-2. A set of existing decisions, expressed as RDF triplets (sample RDF-Dataset).
-3. A service that converts on demand a RDF decision to a PDF document (once again, no pdf files will be stored on Diavgeia).
-4. A standalone nodejs application, which commits the RDF-data to the Bitcoin Blockchain Network.
+1. The RDF Schema of decisions [link](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/decisions.owl).
+2. A set of existing decisions, expressed in Notation3 [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples).
+3. A standalone nodejs application, which commits the RDF-data to the Bitcoin Blockchain Network [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/bitcoin).
+4. Visualizer: Application that visualizes .n3 decisions in the web browser [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/visualizer).
+5. RDF Store and Sparql Endpoint: Use of Jena Apache as RDF Store and Fuseki Sparql Server in order to provide citizens a User Interface to pose SPARQL queries [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/sparql_endpoint).
+
+Future Work
+------------
+
+There is still a lot work that may be done, in order to promote even more the transparency of Diavgeia! Please, feel free to pick an open issue and make a pull request to our repository. Some open issues are:
+
+
+1. Bitcoin-Website Validator: Create a tool which ensures that all proof of burn blockchain transactions of Diavgeia are consistent with the merkle trees uploaded on Diavgeia's website.
+2. Bitcoin-SPARQL Validator: Find an efficient way to prove that all decisions that have been commited to blockchain are also available from the SPARQL endpoint.
+3. Improve Visualizer: Visualizer does not visualize rdf properties for each different decision type.
+4. Study scalability of SPARQL endpoint: As it was stated, Diavgeia hosts millions of decisions. A benchmark of the scalability of the Apache Jena and Fuseki is crucial.
+
+### Student
+* Themis Beris
 
 ### GSoC Mentors
 
 * Panagiotis Kranidiotis
 * Theodoros Karounos
 * Dionysis Zindros
-
-### Student
-* Themis Beris
 
 ### Organization :  [Open Technologies Alliance - GFOSS](https://summerofcode.withgoogle.com/organizations/4825634544025600/)
