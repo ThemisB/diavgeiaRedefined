@@ -1,5 +1,14 @@
 ### GSoC 2017:  Project Progress Report
 
+**Week 11 (12 August - 21 August)**
+
+- Adopt Jena Apache and Fuseki Server as rdf store and SPARQL Endpoint Server respectively. [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/sparql_endpoint)
+- Complete visualizer for general decision properties. [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/visualizer)
+- Create project website! [link](https://eellak.github.io/gsoc17-diavgeia/)
+- Rewrite documentation and add some installation instructions (Future Work, Production Ready tools, etc).
+
+The repo is now ready for the final submission.
+
 **Week 10 (5 August - 11 August)**
 - Complete n3 generation! [n3-composer](https://github.com/eellak/gsoc17-diavgeia/tree/master/n3-composer) covers all the different decision types of Diavgeia that are expressed in the rdf schema.
 
