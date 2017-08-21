@@ -32,7 +32,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-select": "^1.12.4",
     "config": "^1.26.2",
-    "cross-env": "^5.0.0",
+    "cross-env": "^5.0.5",
     "express": "^4.15.3",
     "fs-extra": "^4.0.1",
     "jquery": "^3.2.1",
