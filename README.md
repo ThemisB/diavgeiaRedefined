@@ -96,11 +96,18 @@ Future Work
 
 There is still a lot work that may be done, in order to promote even more the transparency of Diavgeia! Please, feel free to pick an open issue and make a pull request to our repository. Some open issues are:
 
-
 1. Bitcoin-Website Validator: Create a tool which ensures that all proof of burn blockchain transactions of Diavgeia are consistent with the merkle trees uploaded on Diavgeia's website.
 2. Bitcoin-SPARQL Validator: Find an efficient way to prove that all decisions that have been commited to blockchain are also available from the SPARQL endpoint.
 3. Improve Visualizer: Visualizer does not visualize rdf properties for each different decision type.
 4. Study scalability of SPARQL endpoint: As it was stated, Diavgeia hosts millions of decisions. A benchmark of the scalability of the Apache Jena and Fuseki is crucial.
+
+Production Ready tools
+----------------------
+1. Bitcoin Application.
+2. RDF Schema (with the exception of the two decision types that have not been included (Law and PaymentFinalisation))
+3. N3-Composer.
+4. Visualizer (but it needs further improvement to visualize the specific decision properties, as stated in Future Work).
+5. SPARQL Endpoint.
 
 ### Student
 * Themis Beris
