@@ -13,7 +13,7 @@ $ npm run build
 $ npm start
 ```
 
-*Important*: In order for your decisions to be saved to your SPARQL endpoint, you should have [Fuseki server running first.](https://github.com/eellak/gsoc17-diavgeia/tree/master/sparql_endpoint).
+*Important*: In order for your decisions to be saved to your SPARQL endpoint, you should have [Fuseki server running first](https://github.com/eellak/gsoc17-diavgeia/tree/master/sparql_endpoint).
 
 *Important*: N3-composer uses [node-config](https://github.com/lorenwest/node-config). Before running the application in production mode, you should edit [this configuration file](https://github.com/eellak/gsoc17-diavgeia/tree/master/n3-composer/config/production.json). This file has the following values that you should edit according to your needs:
 
