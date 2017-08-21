@@ -1,0 +1,7 @@
+{
+  "decisionsSaveDir": "diavgeiaN3Decisions",
+  "isDecisionsSaveDirHome": true,
+  "sparqlEndpointUrl": "http://localhost:3030",
+  "dataset": "decisions",
+  "SOH_put_executable": "../sparql_endpoint/fuseki/bin/s-put"
+}
