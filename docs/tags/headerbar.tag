@@ -43,16 +43,16 @@
         <nav class="tabs is-boxed">
           <ul>
             <li class={opts.page === 'overview' ? 'is-active' : '' }>
-              <a href="/index.html">Overview</a>
+              <a href="/gsoc17-diavgeia/index.html">Overview</a>
             </li>
             <li class={opts.page === 'rdf' ? 'is-active' : '' }>
-              <a href="/n3-composer.html">RDF</a>
+              <a href="/gsoc17-diavgeia/n3-composer.html">RDF</a>
             </li>
             <li class={opts.page === 'blockchain' ? 'is-active' : '' }>
-              <a href="/blockchain.html">Blockchain</a>
+              <a href="/gsoc17-diavgeia/blockchain.html">Blockchain</a>
             </li>
             <li class={opts.page === 'futurework' ? 'is-active' : '' }>
-              <a href="/futurework.html">Future Work</a>
+              <a href="/gsoc17-diavgeia/futurework.html">Future Work</a>
             </li>
           </ul>
         </nav>
@@ -62,20 +62,20 @@
   <nav class="navbar has-shadow">
     <div class="container">
       <div class="navbar-brand" if={opts.page === 'overview'}>
-        <a class="navbar-item is-tab {opts.subpage === 'whatisdiavgeia' ? 'is-active' : '' }" href="/index.html">What is Diavgeia?</a>
-        <a class="navbar-item is-tab {opts.subpage === 'diavgeiaRedefined' ? 'is-active' : '' }" href="/diavgeiaRedefined.html">What is <span class="dvgRedefined dvgTab">Diavgeia Redefined</span>&nbsp;?</a>
+        <a class="navbar-item is-tab {opts.subpage === 'whatisdiavgeia' ? 'is-active' : '' }" href="/gsoc17-diavgeia/index.html">What is Diavgeia?</a>
+        <a class="navbar-item is-tab {opts.subpage === 'diavgeiaRedefined' ? 'is-active' : '' }" href="/gsoc17-diavgeia/diavgeiaRedefined.html">What is <span class="dvgRedefined dvgTab">Diavgeia Redefined</span>&nbsp;?</a>
       </div>
       <div class="navbar-brand" if={opts.page === 'rdf'}>
-        <a class="navbar-item is-tab {opts.subpage === 'n3-composer' ? 'is-active' : '' }" href="/n3-composer.html">N3-Composer</a>
-        <a class="navbar-item is-tab {opts.subpage === 'visualizer' ? 'is-active' : '' }" href="/visualizer.html">Visualizer</a>
-        <a class="navbar-item is-tab {opts.subpage === 'sparql-endpoint' ? 'is-active' : '' }" href="/sparql-endpoint.html">SPARQL Endpoint</a>
-        <a class="navbar-item is-tab {opts.subpage === 'rdfschema' ? 'is-active' : '' }" href="/rdf-schema.html">RDF Schema</a>
+        <a class="navbar-item is-tab {opts.subpage === 'n3-composer' ? 'is-active' : '' }" href="/gsoc17-diavgeia/n3-composer.html">N3-Composer</a>
+        <a class="navbar-item is-tab {opts.subpage === 'visualizer' ? 'is-active' : '' }" href="/gsoc17-diavgeia/visualizer.html">Visualizer</a>
+        <a class="navbar-item is-tab {opts.subpage === 'sparql-endpoint' ? 'is-active' : '' }" href="/gsoc17-diavgeia/sparql-endpoint.html">SPARQL Endpoint</a>
+        <a class="navbar-item is-tab {opts.subpage === 'rdfschema' ? 'is-active' : '' }" href="/gsoc17-diavgeia/rdf-schema.html">RDF Schema</a>
       </div>
       <div class="navbar-brand" if={opts.page === 'blockchain'}>
-        <a class="navbar-item is-tab {opts.subpage === 'bitcoin' ? 'is-active' : '' }" href="/blockchain.html">Bitcoin</a>
+        <a class="navbar-item is-tab {opts.subpage === 'bitcoin' ? 'is-active' : '' }" href="/gsoc17-diavgeia/blockchain.html">Bitcoin</a>
       </div>
       <div class="navbar-brand" if={opts.page === 'futurework'}>
-        <a class="navbar-item is-tab {opts.subpage === 'futurework' ? 'is-active' : '' }" href="/futurework.html">Future Work</a>
+        <a class="navbar-item is-tab {opts.subpage === 'futurework' ? 'is-active' : '' }" href="/gsoc17-diavgeia/futurework.html">Future Work</a>
       </div>
     </div>
   </nav>
