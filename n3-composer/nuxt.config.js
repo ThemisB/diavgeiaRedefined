@@ -17,11 +17,11 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'},
       { rel: 'icon', type: 'image/png', size: '16x16', href: '/favicon-16x16.png'},
       { rel: 'manifest', href: '/manifest.json'},
-      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5'}
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5'},
+      { type: 'text/css', rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'}
     ]
   },
   css: [
-    'bootstrap/dist/css/bootstrap.min.css',
     '~assets/css/style.css',
     'bootstrap-select/dist/css/bootstrap-select.min.css'
   ],
@@ -43,16 +43,6 @@ module.exports = {
         $: 'jquery',
         jquery: 'jquery'
       })
-    ],
-    extend (config, ctx) {
-      if (ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
+    ]
   }
 }
