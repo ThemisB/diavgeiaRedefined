@@ -1,6 +1,6 @@
 ### GSoC 2017:  Project Progress Report
 
-**Week 11 (12 August - 21 August)**
+**Week 11/12 (12 August - 21 August)**
 
 - Adopt Jena Apache and Fuseki Server as rdf store and SPARQL Endpoint Server respectively. [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/sparql_endpoint)
 - Complete visualizer for general decision properties. [link](https://github.com/eellak/gsoc17-diavgeia/tree/master/visualizer)
