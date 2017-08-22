@@ -57,7 +57,7 @@ Solutions
 
 This is a decision sample appointment, as uploaded on Diavgeia, which summarizes  1. , 2.:
 
-![Equivalence of RDF-PDF](http://image.ibb.co/mPffU5/appointment_sample.png
+![Equivalence of RDF-PDF](http://image.ibb.co/mPffU5/appointment_sample.png)
 
 You can find the full rdf decision (with its metadata) [here](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/Appointment/ΨΟΗΩ46ΨΖΣ4-Ι56.n3).
 
