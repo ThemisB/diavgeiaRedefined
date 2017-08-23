@@ -5,7 +5,13 @@ gsoc17-diavgeia
 
 You can see the detailed timeline [here](https://github.com/eellak/gsoc17-diavgeia/blob/master/gsoc_timeline.md).
 
+Project page
+------------
 Please pay a visit to the [project page](https://eellak.github.io/gsoc17-diavgeia/).
+
+Final Report
+------------
+You can visit this [gist](https://gist.github.com/ThemisB/f4d246066e92173363c9e75cff8dae71) that summarizes in a few words, the work which was done during the Google Summer of Code working period.
 
 Synopsis
 --------
