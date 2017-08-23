@@ -3,7 +3,7 @@
 The development of Diavgeia will be splitted up into three parts:
 
 1. RDF Decisions Schema.
-2. Sample RDF Dataset & on demand RDF to PDF Converter
+2. N3 Generator / Visualizer / SPARQL endpoint
 3. Bitcoin Blockchain Implementation
 
 The timeline is the following:
@@ -12,7 +12,7 @@ The timeline is the following:
 |----------|:-------------:|
 | 30 May - 27 June |  RDF Decisions Schema |
 | 28 June - 26 July | Bitcoin Blockchain Implementation |
-| 27 July - 29 August | N3 Generator / Bitcoin Validator |
+| 27 July - 29 August | N3 Generator / Visualizer / SPARQL endpoint |
 |30 August - ... | Repository maintenance |
 
 ### Project Progress Report
