@@ -117,6 +117,7 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'fek_year', predicatePair)
         this._findPredicateValue(subject, 'ont', 'fek_issue', predicatePair)
         this._findPredicateValue(subject, 'ont', 'fek_number', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'number_employees', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
