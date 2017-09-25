@@ -17,7 +17,7 @@ app.use(express.static('public'))
 app.set('views', './views')
 app.set('view engine', 'pug')
 
-app.get('/vizualize', function (req, res) {
+app.get('/visualize', function (req, res) {
   if (req.query.decisionFolder && req.query.iun) {
     var decisionFolder = path.normalize(req.query.decisionFolder).replace(/^(\.\.[/\\])+/, '')
     var iun = path.normalize(req.query.iun).replace(/^(\.\.[/\\])+/, '')
@@ -44,8 +44,8 @@ app.get('/vizualize', function (req, res) {
       })
     })
     rdfStream.on('end', function () {
-      const generalPropertiesFormatter = new GeneralPropertiesFormatter()
-      generalPropertiesFormatter.formatGeneralProperties(array)
+      const generalPropertiesFormatter = new PropertiesFormatter()
+      generalPropertiesFormatter.formatProperties(array)
       generalPropertiesFormatter.addConsiderationsToGeneralProperties()
       generalPropertiesFormatter.addDecisionsToGeneralProperties()
       generalPropertiesFormatter.addSignersToGeneralProperties()
@@ -60,31 +60,27 @@ app.listen(3333, function () {
   console.log('Visualizer listening on port 3333!')
 })
 
-class GeneralPropertiesFormatter {
+class PropertiesFormatter {
   constructor () {
-    this.generalProperties = {}
+    this.properties = {}
     this.considerations = []
     this.decisions = []
     this.signers = []
   }
 
-  get properties () {
-    return this.generalProperties
-  }
-
   addConsiderationsToGeneralProperties () {
-    this.generalProperties['considerations'] = this.considerations
+    this.properties['considerations'] = this.considerations
   }
 
   addDecisionsToGeneralProperties () {
-    this.generalProperties['decisions'] = this.decisions
+    this.properties['decisions'] = this.decisions
   }
 
   addSignersToGeneralProperties () {
-    this.generalProperties['signers'] = this.signers
+    this.properties['signers'] = this.signers
   }
 
-  formatGeneralProperties (array) {
+  formatProperties (array) {
     var decisionIunVersion = {}
     for (var subject in array) {
       array[subject].forEach(predicatePair => {
@@ -114,6 +110,13 @@ class GeneralPropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'government_institution_information', predicatePair)
         // Rest General Properties
         this._findPredicateValue(subject, 'ont', 'decision_call', predicatePair)
+
+        // Special Properties
+
+        // Fek
+        this._findPredicateValue(subject, 'ont', 'fek_year', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'fek_issue', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'fek_number', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -176,9 +179,9 @@ class GeneralPropertiesFormatter {
     fullPredicate += predicateSearch
     if (fullPredicate === predicate) {
       if (subject === 'AfterDecision') {
-        this.generalProperties['AfterDecision'] = N3Util.getLiteralValue(value)
+        this.properties['AfterDecision'] = N3Util.getLiteralValue(value)
       } else if (subject === 'PreConsideration') {
-        this.generalProperties['PreConsideration'] = N3Util.getLiteralValue(value)
+        this.properties['PreConsideration'] = N3Util.getLiteralValue(value)
       } else if (subject === 'Consideration') {
         if (predicateSearch === 'has_text') {
           if (!this.considerations[entityIndex - 1]) {
@@ -225,7 +228,7 @@ class GeneralPropertiesFormatter {
         var dateLiteral = N3Util.getLiteralValue(value)
         dateLiteral = dateLiteral.split('-')
         dateLiteral = dateLiteral[2] + '/' + dateLiteral[1] + '/' + dateLiteral[0]
-        this.generalProperties[predicateSearch] = dateLiteral
+        this.properties[predicateSearch] = dateLiteral
       } else if (predicateSearch === 'thematic_category') {
         const thematicCategoriesTranslation = {
           Employment: 'ΑΠΑΣΧΟΛΗΣΗ ΚΑΙ ΕΡΓΑΣΙΑ',
@@ -251,20 +254,20 @@ class GeneralPropertiesFormatter {
           PoliticalLife: 'ΠΟΛΙΤΙΚΗ ΖΩΗ',
           PublicAdministration: 'ΔΗΜΟΣΙΑ ΔΙΟΙΚΗΣΗ'
         }
-        if (!this.generalProperties[predicateSearch]) {
-          this.generalProperties[predicateSearch] = [thematicCategoriesTranslation[N3Util.getLiteralValue(value)]]
+        if (!this.properties[predicateSearch]) {
+          this.properties[predicateSearch] = [thematicCategoriesTranslation[N3Util.getLiteralValue(value)]]
         } else {
-          this.generalProperties[predicateSearch].push(thematicCategoriesTranslation[N3Util.getLiteralValue(value)])
+          this.properties[predicateSearch].push(thematicCategoriesTranslation[N3Util.getLiteralValue(value)])
         }
       } else if (predicateSearch === 'type') {
         let decisionType = this._findDecisionType(value)
         if (decisionType) {
-          this.generalProperties['decision_type'] = decisionType
+          this.properties['decision_type'] = decisionType
         }
         return decisionType
       } else {
         let literalValue = N3Util.getLiteralValue(value)
-        this.generalProperties[predicateSearch] = literalValue
+        this.properties[predicateSearch] = literalValue
         return literalValue
       }
       return null
