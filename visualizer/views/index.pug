@@ -71,6 +71,8 @@ html
                 p(class='governmentInfo has-text-centered') <strong>Είδος Απόφασης:</strong> <span>#{decision_type}</span>
                 p(class='governmentInfo has-text-centered') <strong>Ημερομηνία Ανάρτησης:</strong> <span>#{date_publication}</span>
                 p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
+                if number_employees
+                  p(class='governmentInfo has-text-centered') <strong>Αριθμός Φυσικών προσώπων:</strong> <span>#{number_employees}</span>
                 p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
                 .tags
                   each val in thematic_category
