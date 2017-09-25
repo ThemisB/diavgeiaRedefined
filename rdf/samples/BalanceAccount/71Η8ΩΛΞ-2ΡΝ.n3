@@ -4,7 +4,7 @@
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
 <> a ont:BalanceAccount;
-	ont:version "11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6";
+	ont:version "173572b7-35c4-4ef4-b1b0-b2bbb6d61dff";
 	ont:iun "71Η8ΩΛΞ-2ΡΝ"@el;
 	eli:title "Έγκριση απολογισμού οικ.έτους 2015 του σωματείου Ελληνική Μέριμνα Λάρισας"@el;
 	eli:date_publication "2016-06-06"^^<http://www.w3.org/2001/XMLSchema#date>;
