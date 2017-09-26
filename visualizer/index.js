@@ -68,6 +68,7 @@ class PropertiesFormatter {
     this.decisions = []
     this.signers = []
     this.awardExpenses = []
+    this.commisionWarrantExpenses = []
     this.sponsors = []
   }
 
@@ -85,6 +86,7 @@ class PropertiesFormatter {
 
   addExpensesToGeneralProperties () {
     this.properties['awardExpenses'] = this.awardExpenses
+    this.properties['commisionWarrantExpenses'] = this.commisionWarrantExpenses
     this.properties['sponsors'] = this.sponsors
   }
 
@@ -148,6 +150,9 @@ class PropertiesFormatter {
         // CollegialBodyCommisionWorkingGroup
         this._findPredicateValue(subject, 'ont', 'collegial_body_decision_type', predicatePair)
         this._findPredicateValue(subject, 'ont', 'collegial_body_party_type', predicatePair)
+        // CommisionWarrant
+        this._findPredicateValue(subject, 'ont', 'primary_officer', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'secondary_officer', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -209,6 +214,20 @@ class PropertiesFormatter {
                 })
               }
             }
+          })
+        }
+      } else if (subject.indexOf(decisionPrefix + 'ExpenseWithKae') > -1) {
+        if (this.properties['decision_type_english'] === 'CommisionWarrant') {
+          /* n ExpenseWithKae
+           * Each ExpenseWithKae has kae, expense_amount and currency
+           * there are no senders, receivers
+           */
+          let expensesWithKaeArray = subject.split('/')
+          let expenseWithKaeNumber = expensesWithKaeArray[expensesWithKaeArray.length - 1]
+          array[subject].forEach(predicatePair => {
+            this._findPredicateValue('CommisionWarrantExpense', 'ont', 'expense_amount', predicatePair, expenseWithKaeNumber)
+            this._findPredicateValue('CommisionWarrantExpense', 'ont', 'expense_amount_currency', predicatePair, expenseWithKaeNumber)
+            this._findPredicateValue('CommisionWarrantExpense', 'ont', 'kae', predicatePair, expenseWithKaeNumber)
           })
         }
       }
@@ -277,6 +296,10 @@ class PropertiesFormatter {
           this.awardExpenses[predicateSearch] = N3Util.getLiteralValue(predicatePair[1])
         } else if (predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name') {
           this._formatObjectProperty(this.sponsors, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'CommisionWarrantExpense') {
+        if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency' || predicateSearch === 'kae') {
+          this._formatObjectProperty(this.commisionWarrantExpenses, predicateSearch, predicatePair, entityIndex)
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
