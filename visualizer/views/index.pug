@@ -133,12 +133,26 @@ html
                     p(class='governmentInfo has-text-centered')  <strong>Είδος Πράξης:</strong> #{collegial_body_decision_type}
                   if collegial_body_party_type
                     p(class='governmentInfo has-text-centered')  <strong>Τύπος Οργάνου:</strong> #{collegial_body_party_type}
+          //- CommisionWarrant
+          else if decision_type_english === 'CommisionWarrant'
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Επιτροπικού Εντάλματος
+                  if primary_officer
+                    p(class='governmentInfo has-text-centered')  <strong>Πρωτεύων Διατάκτης:</strong> #{primary_officer}
+                  if secondary_officer
+                    p(class='governmentInfo has-text-centered')  <strong>Δευτερεύων Διατάκτης:</strong> #{secondary_officer}
+                  if financial_year
+                    p(class='governmentInfo has-text-centered')  <strong>Οικονομικό Έτος:</strong> #{financial_year}
+                  if budget_category
+                    p(class='governemntInfo has-text-centered') <strong>Κατηγορία Προϋπολογισμού:</strong> #{budget_category}
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
               p(class='decisionText') #{PreConsideration}
-            h5(class='title has-text-centered is-5') Έχοντας λάβει υπόψη
-            if considerations
+            if considerations.length > 0
+              h5(class='title has-text-centered is-5') Έχοντας λάβει υπόψη
               ol(class='decisionText')
                 each consideration in considerations
                   li.consideration=consideration['has_text']
@@ -150,7 +164,7 @@ html
                           a(href=linking, target='_blank', class='tag is-primary') Σύνδεσμος #{nextIndex}
             if decision_call
               h5(class='title has-text-centered is-5') #{decision_call}
-            if decisions
+            if decisions.length > 0
               ol(class='decisionText')
                 each decision in decisions
                   li.decision=decision['has_text']
@@ -173,6 +187,7 @@ html
                       if signer.signer_name
                         <span> #{signer.signer_name}</span>
             //- Expenses
+            //- Award Expense
             if decision_type_english === 'Award'
               p(class='subtitle has-text-centered') Αποδέκτες Κατακύρωσης
               p(class='has-text-centered') <b>Ποσό Έργου</b>: #{awardExpenses.expense_amount} #{awardExpenses.expense_currency}
@@ -189,5 +204,19 @@ html
                         td #{sponsor.afm}
                         td #{sponsor.name}
                         td #{sponsor.afm_type}
+            //- CommisionWarrant Expense
+            if decision_type_english === 'CommisionWarrant'
+              p(class='subtitle has-text-centered') Ποσά με ΦΠΑ και ΚΑΕ
+              .expenses-table.has-text-centered
+                table(class='table is-striped is-bordered')
+                  thead
+                    tr
+                      th Αριθμός ΚΑΕ
+                      th Ποσό με ΦΠΑ
+                  tbody
+                    each commisionWarrantExpense in commisionWarrantExpenses
+                      tr
+                        td #{commisionWarrantExpense.kae}
+                        td #{commisionWarrantExpense.expense_amount} #{commisionWarrantExpense.expense_currency}
             if fek_year && fek_issue && fek_number
               p(class='has-text-centered subtitle fek') Η απόφαση έχει δημοσιευθεί στο ΦΕΚ <b>#{fek_number}/#{fek_year}, τεύχος #{fek_issue}<b/>.
