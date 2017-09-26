@@ -15,7 +15,7 @@
 	ont:government_institution_postalcode "15180";
 	ont:government_institution_phone "2103442328";
 	ont:government_institution_fax "2103442331";
-	ont:government_institution_information "Μ. Τουρλούπη";
+	ont:government_institution_information "Μ. Τουρλούπη"@el;
 	ont:government_institution_email "t01mso2@minedu.gov.gr";
 	ont:protocol_number "126004/Ζ1";
 	ont:has_considered <Consideration/1>;
@@ -26,8 +26,8 @@
 	ont:has_decided <Decision/1>;
 	ont:has_afterdecision <AfterDecision>;
 	ont:signed_by <Signer/1>;
-	ont:collegial_body_party_type "Παύση - Αντικατάσταση μέλους"@el;
-	ont:collegial_body_decision_type "Όργανο άλλης αρμοδιότητας"@el;
+	ont:collegial_body_party_type "Όργανο άλλης αρμοδιότητας"@el;
+	ont:collegial_body_decision_type "Παύση - Αντικατάσταση μέλους"@el;
 	ont:fek_number "429";
 	ont:fek_issue "Δ"@el;
 	ont:fek_year "2016";
