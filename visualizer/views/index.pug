@@ -73,6 +73,11 @@ html
                 p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
                 if number_employees
                   p(class='governmentInfo has-text-centered') <strong>Αριθμός Φυσικών προσώπων:</strong> <span>#{number_employees}</span>
+                //- TODO replace with organization name from database
+                if appointment_employer_org
+                  p(class='governmentInfo has-text-centered') <strong><a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{appointment_employer_org}"' target="_blank">Φορέας Δορισμού</a></strong>
+                if has_related_declaration_summary
+                  p(class='governmentInfo has-text-centered') <strong><a href="/visualize?iun=#{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
                 p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
                 .tags
                   each val in thematic_category
@@ -111,9 +116,32 @@ html
                           a(href=linking, target='_blank', class='tag is-primary') Σύνδεσμος #{nextIndex}
             if AfterDecision
               p(class='decisionText afterDecision') #{AfterDecision}
-              if signers
-                  .decisionText.has-text-right <span>Την απόφαση την έχει υπογράψει:</span>
-                    each signer in signers
-                      div(class='signer') <b>#{signer.signer_job}</b>, #{signer.signer_name}
+            if signers
+              .decisionText.has-text-right <span>Την απόφαση την έχει υπογράψει:</span>
+                  each signer in signers
+                    div(class='signer')
+                      if signer.signer_job
+                        <b>#{signer.signer_job}</b>
+                      if signer.signer_job && signer.signer_name
+                        <span>,</span>
+                      if signer.signer_name
+                        <span> #{signer.signer_name}</span>
+            //- Expenses
+            if decision_type_english === 'Award'
+              p(class='subtitle has-text-centered') Αποδέκτες Κατακύρωσης
+              p(class='has-text-centered') <b>Ποσό Έργου</b>: #{awardExpenses.expense_amount} #{awardExpenses.expense_currency}
+              .expenses-table.has-text-centered
+                table(class='table is-striped is-bordered')
+                  thead
+                    tr
+                      th ΑΦΜ
+                      th Όνομα
+                      th Είδος ΑΦΜ
+                  tbody
+                    each sponsor in sponsors
+                      tr
+                        td #{sponsor.afm}
+                        td #{sponsor.name}
+                        td #{sponsor.afm_type}
             if fek_year && fek_issue && fek_number
               p(class='has-text-centered subtitle fek') Η απόφαση έχει δημοσιευθεί στο ΦΕΚ <b>#{fek_number}/#{fek_year}, τεύχος #{fek_issue}<b/>.
