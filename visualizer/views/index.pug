@@ -76,6 +76,8 @@ html
                 //- TODO replace with organization name from database
                 if appointment_employer_org
                   p(class='governmentInfo has-text-centered') <strong><a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{appointment_employer_org}"' target="_blank">Φορέας Δορισμού</a></strong>
+                if circular_number
+                  p(class='governmentInfo has-text-centered') <strong>Αριθμός Εγκυκλίου:</strong> #{circular_number}
                 if has_related_declaration_summary
                   p(class='governmentInfo has-text-centered') <strong><a href="/visualize/{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
                 p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
@@ -121,6 +123,16 @@ html
                       <strong> έχει έγκριση</strong> από τρίτο <a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{has_related_institution}"' target="_blank">φορέα</a>
                     else
                       <strong> δεν έχει έγκριση</strong> τρίτου Φορέα
+          //- CollegialBodyCommisionWorkingGroup
+          else if decision_type_english === 'CollegialBodyCommisionWorkingGroup'
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Πράξης
+                  if collegial_body_decision_type
+                    p(class='governmentInfo has-text-centered')  <strong>Είδος Πράξης:</strong> #{collegial_body_decision_type}
+                  if collegial_body_party_type
+                    p(class='governmentInfo has-text-centered')  <strong>Τύπος Οργάνου:</strong> #{collegial_body_party_type}
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
