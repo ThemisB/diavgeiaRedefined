@@ -49,6 +49,7 @@ app.get('/visualize', function (req, res) {
       generalPropertiesFormatter.addConsiderationsToGeneralProperties()
       generalPropertiesFormatter.addDecisionsToGeneralProperties()
       generalPropertiesFormatter.addSignersToGeneralProperties()
+      generalPropertiesFormatter.addExpensesToGeneralProperties()
       res.render('index', generalPropertiesFormatter.properties)
     })
   } else {
@@ -66,6 +67,8 @@ class PropertiesFormatter {
     this.considerations = []
     this.decisions = []
     this.signers = []
+    this.awardExpenses = []
+    this.sponsors = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -78,6 +81,11 @@ class PropertiesFormatter {
 
   addSignersToGeneralProperties () {
     this.properties['signers'] = this.signers
+  }
+
+  addExpensesToGeneralProperties () {
+    this.properties['awardExpenses'] = this.awardExpenses
+    this.properties['sponsors'] = this.sponsors
   }
 
   formatProperties (array) {
@@ -113,11 +121,18 @@ class PropertiesFormatter {
 
         // Special Properties
 
+        // Appointment
+
         // Fek
         this._findPredicateValue(subject, 'ont', 'fek_year', predicatePair)
         this._findPredicateValue(subject, 'ont', 'fek_issue', predicatePair)
         this._findPredicateValue(subject, 'ont', 'fek_number', predicatePair)
+
         this._findPredicateValue(subject, 'ont', 'number_employees', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'appointment_employer_org', predicatePair)
+
+        // Award
+        this._findPredicateValue(subject, 'ont', 'has_related_declaration_summary', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -157,8 +172,39 @@ class PropertiesFormatter {
           // TODO Maybe Diavgeia can link to the Signer on its website
           // this._findPredicateValue('Signer', 'ont', 'signer_name', predicatePair, signerNumber)
         })
+      } else if (subject.indexOf(decisionPrefix + 'Expense/') > -1) {
+        if (this.properties['decision_type_english'] === 'Award') {
+          /* 1 has_expense
+           * 1 expense_amount
+           * n has_sponsored and n Sponsored entitites
+           * Sponsors have afm, afm_type and name
+           */
+          array[subject].forEach(predicatePair => {
+            this._findPredicateValue('AwardExpense', 'ont', 'expense_amount', predicatePair)
+            this._findPredicateValue('AwardExpense', 'ont', 'expense_currency', predicatePair)
+            var sponsored
+            for (sponsored in array) {
+              if (sponsored.indexOf(decisionPrefix + 'Sponsored/') > -1) {
+                let sponsoredArray = sponsored.split('/')
+                let sponsoredNumber = sponsoredArray[sponsoredArray.length - 1]
+                array[sponsored].forEach(predicatePairSponsored => {
+                  this._findPredicateValue('AwardExpense', 'ont', 'afm', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue('AwardExpense', 'ont', 'afm_type', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue('AwardExpense', 'ont', 'name', predicatePairSponsored, sponsoredNumber)
+                })
+              }
+            }
+          })
+        }
       }
     }
+  }
+
+  _formatObjectProperty (obj, predicate, predicatePair, entityIndex) {
+    if (!obj[entityIndex - 1]) {
+      obj[entityIndex - 1] = {}
+    }
+    obj[entityIndex - 1][predicate] = N3Util.getLiteralValue(predicatePair[1])
   }
 
   _findPredicateValue (subject, ontology, predicateSearch, predicatePair, entityIndex) {
@@ -185,10 +231,7 @@ class PropertiesFormatter {
         this.properties['PreConsideration'] = N3Util.getLiteralValue(value)
       } else if (subject === 'Consideration') {
         if (predicateSearch === 'has_text') {
-          if (!this.considerations[entityIndex - 1]) {
-            this.considerations[entityIndex - 1] = {}
-          }
-          this.considerations[entityIndex - 1]['has_text'] = N3Util.getLiteralValue(predicatePair[1])
+          this._formatObjectProperty(this.considerations, 'has_text', predicatePair, entityIndex)
         } else if (predicateSearch === 'considers') {
           if (!this.considerations[entityIndex - 1]) {
             this.considerations[entityIndex - 1] = {}
@@ -200,10 +243,7 @@ class PropertiesFormatter {
         }
       } else if (subject === 'Decision') {
         if (predicateSearch === 'has_text') {
-          if (!this.decisions[entityIndex - 1]) {
-            this.decisions[entityIndex - 1] = {}
-          }
-          this.decisions[entityIndex - 1]['has_text'] = N3Util.getLiteralValue(predicatePair[1])
+          this._formatObjectProperty(this.decisions, 'has_text', predicatePair, entityIndex)
         } else if (predicateSearch === 'considers') {
           if (!this.decisions[entityIndex - 1]) {
             this.decisions[entityIndex - 1] = {}
@@ -214,16 +254,14 @@ class PropertiesFormatter {
           this.decisions[entityIndex - 1]['links'].push(predicatePair[1])
         }
       } else if (subject === 'Signer') {
-        if (predicateSearch === 'signer_job') {
-          if (!this.signers[entityIndex - 1]) {
-            this.signers[entityIndex - 1] = {}
-          }
-          this.signers[entityIndex - 1]['signer_job'] = N3Util.getLiteralValue(predicatePair[1])
-        } else if (predicateSearch === 'signer_name') {
-          if (!this.signers[entityIndex - 1]) {
-            this.signers[entityIndex - 1] = {}
-          }
-          this.signers[entityIndex - 1]['signer_name'] = N3Util.getLiteralValue(predicatePair[1])
+        if (predicateSearch === 'signer_job' || predicateSearch === 'signer_name') {
+          this._formatObjectProperty(this.signers, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'AwardExpense') {
+        if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency') {
+          this.awardExpenses[predicateSearch] = N3Util.getLiteralValue(predicatePair[1])
+        } else if (predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name') {
+          this._formatObjectProperty(this.sponsors, predicateSearch, predicatePair, entityIndex)
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
@@ -264,6 +302,7 @@ class PropertiesFormatter {
         let decisionType = this._findDecisionType(value)
         if (decisionType) {
           this.properties['decision_type'] = decisionType
+          this.properties['decision_type_english'] = value.replace(ONT, '')
         }
         return decisionType
       } else {
