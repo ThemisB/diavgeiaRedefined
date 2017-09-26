@@ -77,7 +77,7 @@ html
                 if appointment_employer_org
                   p(class='governmentInfo has-text-centered') <strong><a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{appointment_employer_org}"' target="_blank">Φορέας Δορισμού</a></strong>
                 if has_related_declaration_summary
-                  p(class='governmentInfo has-text-centered') <strong><a href="/visualize?iun=#{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
+                  p(class='governmentInfo has-text-centered') <strong><a href="/visualize/{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
                 p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
                 .tags
                   each val in thematic_category
@@ -87,6 +87,22 @@ html
                     <strong> περιέχει </strong> προσωπικά δεδομένα
                   else
                     <strong> δεν περιέχει</strong> προσωπικά δεδομένα
+          if decision_type_english === 'BalanceAccount'
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Ισολογισμού - Υπολογισμού
+                  if financial_year
+                    p(class='governmentInfo has-text-centered')  <strong>Οικονομικό έτος:</strong> #{financial_year}
+                  if balance_account_time_period
+                    p(class='governmentInfo has-text-centered')  <strong>Χρονική Περίοδος:</strong> #{balance_account_time_period}
+                  if balance_account_type
+                    p(class='governmentInfo has-text-centered')  <strong>Οικονομικό έτος:</strong> #{balance_account_type}
+                  p(class='governmentInfo has-text-centered') Ο Ισολογισμός - Απολογισμός
+                    if (is_balance_account_approval_for_org=='true')
+                      <strong> έχει έγκριση</strong> από τρίτο <a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{has_related_institution}"'>φορέα</a>
+                    else
+                      <strong> δεν έχει έγκριση</strong> τρίτου Φορέα
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
