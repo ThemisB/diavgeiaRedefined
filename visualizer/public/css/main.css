@@ -82,3 +82,16 @@ ol > .consideration:before, ol > .decision:before {
 .fek {
   margin-top:1em;
 }
+
+.expenses-table th {
+  text-align: center;
+}
+
+.expenses-table td {
+  text-align: center;
+}
+
+.expenses-table table {
+  margin: 0 auto;
+  margin-top: 1em;
+}
