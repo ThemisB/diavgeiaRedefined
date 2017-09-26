@@ -87,6 +87,7 @@ html
                     <strong> περιέχει </strong> προσωπικά δεδομένα
                   else
                     <strong> δεν περιέχει</strong> προσωπικά δεδομένα
+          //- BalanceAccount
           if decision_type_english === 'BalanceAccount'
             .columns.is-centered
               .column.is-half
@@ -100,7 +101,24 @@ html
                     p(class='governmentInfo has-text-centered')  <strong>Οικονομικό έτος:</strong> #{balance_account_type}
                   p(class='governmentInfo has-text-centered') Ο Ισολογισμός - Απολογισμός
                     if (is_balance_account_approval_for_org=='true')
-                      <strong> έχει έγκριση</strong> από τρίτο <a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{has_related_institution}"'>φορέα</a>
+                      <strong> έχει έγκριση</strong> από τρίτο <a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{has_related_institution}"' target="_blank">φορέα</a>
+                    else
+                      <strong> δεν έχει έγκριση</strong> τρίτου Φορέα
+          //- BudgetApproval
+          else if decision_type_english === 'BudgetApproval'
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Έγκρισης Προϋπολογισμού
+                  if financial_year
+                    p(class='governmentInfo has-text-centered')  <strong>Οικονομικό έτος:</strong> #{financial_year}
+                  if budget_category
+                    p(class='governmentInfo has-text-centered')  <strong>Κατηγορία Προϋπολογισμού:</strong> #{budget_category}
+                  if budget_type
+                    p(class='governmentInfo has-text-centered')  <strong>Είδος Προϋπολογισμού:</strong> #{budget_type}
+                  p(class='governmentInfo has-text-centered') Η Έγκριση Προϋπολογισμού
+                    if (is_budget_approval_for_org=='true')
+                      <strong> έχει έγκριση</strong> από τρίτο <a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{has_related_institution}"' target="_blank">φορέα</a>
                     else
                       <strong> δεν έχει έγκριση</strong> τρίτου Φορέα
           .container
