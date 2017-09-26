@@ -139,6 +139,10 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'balance_account_time_period', predicatePair)
         this._findPredicateValue(subject, 'ont', 'has_related_institution', predicatePair)
         this._findPredicateValue(subject, 'ont', 'is_balance_account_approval_for_org', predicatePair)
+        // BudgetApproval
+        this._findPredicateValue(subject, 'ont', 'is_budget_approval_for_org', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'budget_type', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'budget_category', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
