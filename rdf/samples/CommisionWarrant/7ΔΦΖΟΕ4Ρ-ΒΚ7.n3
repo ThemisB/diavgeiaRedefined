@@ -9,6 +9,7 @@
 	eli:title "Καταβολή μισθοδοσίας Φεβρουαρίου 2016, για παροχή υπηρεσιών Νοσηλεύτριας, στο Βοήθεια στο Σπίτι της Κοινωφελούς Δημοτικής Επιχείρησης ΔΕΠΟΚΑΛ Δήμου Λευκάδας."@el;
 	eli:date_publication "2016-03-03"^^<http://www.w3.org/2001/XMLSchema#date>;
 	ont:government_institution_name "ΚΟΙΝΩΦΕΛΗΣ ΔΗΜΟΤΙΚΗ ΕΠΙΧΕΙΡΗΣΗ ΠΟΛΙΤΙΣΤΙΚΗΣ ΟΙΚΟΝΟΜΙΚΗΣ ΤΟΥΡΙΣΤΙΚΗΣ & ΚΟΙΝΩΝΙΚΗΣ ΑΝΑΠΤΥΞΗΣ ΔΗΜΟΥ ΛΕΥΚΑΔΑΣ (Δ.Ε.Π.Ο.Κ.Α.Λ.)"@el;
+	ont:decision_call "Αποφασίζουμε";
 	ont:has_decided <Decision/1>;
 	ont:has_expense_with_kae <ExpenseWithKae/1>;
 	ont:signed_by <Signer/1>;
@@ -21,7 +22,6 @@
 	ont:submission_timestamp "1452674356709";
 	ont:financial_year "2016";
 	ont:budget_category "Τακτικός Προϋπολογισμός"@el;
-	ont:budget_type "Φορέα"@el;
 	ont:is_budget_approval_for_org false.
 
 <Decision/1> a ont:Decision;
