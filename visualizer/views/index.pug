@@ -165,6 +165,17 @@ html
                     p(class='governemntInfo has-text-centered') <strong>CPV:</strong> #{declarationSummaryExpenses[0].cpv}
                   if has_related_undertaking
                     p(class='governemntInfo has-text-centered') Η απόφαση έχει <a href="visualize/#{has_related_undertaking}">σχετική ανάληψη υποχρέωσης</a>
+          //- DonationGrant
+          else if decision_type_english === 'DonationGrant'
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Δωρεάς - Επιχορήγησης
+                  if kae
+                    p(class='governmentInfo has-text-centered')  <strong>Αριθμός ΚΑΕ:</strong> #{kae}
+                  if donation_type
+                    p(class='governmentInfo has-text-centered')  <strong>Είδος Πράξης:</strong> #{donation_type}
+
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
