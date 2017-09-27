@@ -147,6 +147,24 @@ html
                     p(class='governmentInfo has-text-centered')  <strong>Οικονομικό Έτος:</strong> #{financial_year}
                   if budget_category
                     p(class='governemntInfo has-text-centered') <strong>Κατηγορία Προϋπολογισμού:</strong> #{budget_category}
+          //- DeclarationSummary
+          else if decision_type_english === 'DeclarationSummary'
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Περίληψης Διακήρυξης
+                  if tendering_procedure
+                    p(class='governmentInfo has-text-centered')  <strong>Διαδικασία Διαγωνισμού:</strong> #{tendering_procedure}
+                  if selection_criterion
+                    p(class='governmentInfo has-text-centered')  <strong>Κριτήριο Επιλογής:</strong> #{selection_criterion}
+                  if contract_type
+                    p(class='governmentInfo has-text-centered')  <strong>Τύπος Σύμβασης:</strong> #{contract_type}
+                  if government_institution_budget_code
+                    p(class='governemntInfo has-text-centered') <strong>Κωδικός Προϋπολογισμού Φορέα:</strong> #{government_institution_budget_code}
+                  if declarationSummaryExpenses[0].cpv
+                    p(class='governemntInfo has-text-centered') <strong>CPV:</strong> #{declarationSummaryExpenses[0].cpv}
+                  if has_related_undertaking
+                    p(class='governemntInfo has-text-centered') Η απόφαση έχει <a href="visualize/#{has_related_undertaking}">σχετική ανάληψη υποχρέωσης</a>
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
@@ -205,7 +223,7 @@ html
                         td #{sponsor.name}
                         td #{sponsor.afm_type}
             //- CommisionWarrant Expense
-            if decision_type_english === 'CommisionWarrant'
+            else if decision_type_english === 'CommisionWarrant'
               p(class='subtitle has-text-centered') Ποσά με ΦΠΑ και ΚΑΕ
               .expenses-table.has-text-centered
                 table(class='table is-striped is-bordered')
@@ -218,7 +236,8 @@ html
                       tr
                         td #{commisionWarrantExpense.kae}
                         td #{commisionWarrantExpense.expense_amount} #{commisionWarrantExpense.expense_currency}
-            if decision_type_english === 'Contract'
+            //- Contract Expense
+            else if decision_type_english === 'Contract'
               p(class='subtitle has-text-centered') Συμβάσεις
               .expenses-table.has-text-centered
                 table(class='table is-striped is-bordered')
@@ -247,6 +266,18 @@ html
                         else if (contractExpense.contract_is_co_funded=='false')
                           td ΟΧΙ
                         else
-                          td 
+                          td
+            //- DeclarationSummary Expense
+            else if decision_type_english === 'DeclarationSummary'
+              p(class='subtitle has-text-centered') Χρηματικά ποσά Περίληψης Διακήρυξης
+              .expenses-table.has-text-centered
+                table(class='table is-striped is-bordered')
+                  thead
+                    tr
+                      th Ποσό
+                  tbody
+                    each declarationSummaryExpense in declarationSummaryExpenses
+                      tr
+                        td #{declarationSummaryExpense.expense_amount} #{declarationSummaryExpense.expense_currency}
             if fek_year && fek_issue && fek_number
               p(class='has-text-centered subtitle fek') Η απόφαση έχει δημοσιευθεί στο ΦΕΚ <b>#{fek_number}/#{fek_year}, τεύχος #{fek_issue}<b/>.
