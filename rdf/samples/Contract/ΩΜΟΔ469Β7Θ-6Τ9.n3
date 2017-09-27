@@ -1,4 +1,4 @@
-@prefix dec: <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/>.
+@base <http://diavgeia.gov.gr/eli/decision/ΩΜΟΔ469Β7Θ-6Τ9/b3db8d62-c6b2-49f0-bc79-707b8e4a1c21/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
@@ -25,12 +25,8 @@
 	ont:has_decided <Decision/1>;
 	ont:signed_by <Signer/1>;
 	ont:has_expense <Expense/1>;
-	ont:contract_decision_type "Σύμβαση Έργου"@el;
 	ont:thematic_category "PublicAdministration";
 	ont:number_employees "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	ont:contract_start "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	ont:contract_end "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	ont:contract_is_co_funded true;
 	ont:has_private_data false;
 	ont:organization_id "99206920";
 	ont:submission_timestamp "1452594644088";
@@ -53,6 +49,11 @@
 <Sponsored/1> a ont:Sponsored;
 	ont:afm "062343801";
 	ont:afm_type "Εθνικό"@el;
+	ont:contract_start "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:contract_end "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:contract_type "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:contract_decision_type "Σύμβαση Έργου"@el;
+	ont:contract_is_co_funded true;
 	ont:name "ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΝΝΑ ΙΩΑΝΝΗΣ"@el.
 
 <Expense/1> a ont:Expense;
