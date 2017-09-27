@@ -71,6 +71,7 @@ class PropertiesFormatter {
     this.commisionWarrantExpenses = []
     this.contractExpenses = []
     this.contractExpensesAmount = []
+    this.declarationSummaryExpenses = []
     this.sponsors = []
   }
 
@@ -91,7 +92,7 @@ class PropertiesFormatter {
     this.properties['commisionWarrantExpenses'] = this.commisionWarrantExpenses
     this.properties['contractExpenses'] = this.contractExpenses
     this.properties['contractExpensesAmount'] = this.contractExpensesAmount
-    console.log(this.contractExpensesAmount)
+    this.properties['declarationSummaryExpenses'] = this.declarationSummaryExpenses
     this.properties['sponsors'] = this.sponsors
   }
 
@@ -159,6 +160,12 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'primary_officer', predicatePair)
         this._findPredicateValue(subject, 'ont', 'secondary_officer', predicatePair)
         // Contract
+        // DeclarationSummary
+        this._findPredicateValue(subject, 'ont', 'contract_type', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'selection_criterion', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'tendering_procedure', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'government_institution_budget_code', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'has_related_undertaking', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -248,6 +255,17 @@ class PropertiesFormatter {
                 })
               }
             }
+          })
+        } else if (this.properties['decision_type_english'] === 'DeclarationSummary') {
+          /*
+           * 1 has_expense
+           * No sponsors
+           * Each expense has cpv, expense_amount and expense_currency
+           */
+          array[subject].forEach(predicatePair => {
+            this._findPredicateValue('DeclarationSummaryExpense', 'ont', 'expense_amount', predicatePair, expenseNumber)
+            this._findPredicateValue('DeclarationSummaryExpense', 'ont', 'expense_currency', predicatePair, expenseNumber)
+            this._findPredicateValue('DeclarationSummaryExpense', 'ont', 'cpv', predicatePair, expenseNumber)
           })
         }
       } else if (subject.indexOf(decisionPrefix + 'ExpenseWithKae') > -1) {
@@ -343,6 +361,10 @@ class PropertiesFormatter {
             predicatePair[1] = predicatePair[1].toString()
           }
           this._formatObjectProperty(this.contractExpenses, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'DeclarationSummaryExpense') {
+        if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency' || predicateSearch === 'cpv') {
+          this._formatObjectProperty(this.declarationSummaryExpenses, predicateSearch, predicatePair, entityIndex)
         }
       } else if (subject === 'ContractExpenseAmount') {
         let expensesCondition = predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency'
