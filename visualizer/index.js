@@ -179,6 +179,11 @@ class PropertiesFormatter {
         // DonationGrant
         this._findPredicateValue(subject, 'ont', 'kae', predicatePair)
         this._findPredicateValue(subject, 'ont', 'donation_type', predicatePair)
+        // EvaluationReportOfLaw, ExpenditureApproval
+        // GeneralSpecialSecretaryMonocraticBody
+        this._findPredicateValue(subject, 'ont', 'position', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'position_org', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'position_decision_type', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -291,6 +296,8 @@ class PropertiesFormatter {
           array[subject].forEach(predicatePair => {
             this._findPredicateValue('DonationGrantExpenses', 'ont', 'expense_amount', predicatePair, expenseNumber)
             this._findPredicateValue('DonationGrantExpenses', 'ont', 'expense_currency', predicatePair, expenseNumber)
+            this._findPredicateValue('DonationGrantExpenses', 'ont', 'cpv', predicatePair, expenseNumber)
+            this._findPredicateValue('DonationGrantExpenses', 'ont', 'kae', predicatePair, expenseNumber)
             var entities
             for (entities in array) {
               if (entities.indexOf(decisionPrefix + 'Sponsored/') > -1) {
@@ -417,7 +424,7 @@ class PropertiesFormatter {
           this._formatObjectProperty(this.contractExpensesAmount, predicateSearch, predicatePair, entityIndex)
         }
       } else if (subject === 'DonationGrantExpenses') {
-        let expensesCondition = predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency' || predicateSearch === 'name'
+        let expensesCondition = predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency' || predicateSearch === 'name' || predicateSearch === 'cpv' || predicateSearch === 'kae'
         if (expensesCondition) {
           this._formatObjectProperty(this.donationGrantExpenses, predicateSearch, predicatePair, entityIndex)
         }
