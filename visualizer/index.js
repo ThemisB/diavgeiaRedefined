@@ -118,6 +118,9 @@ class PropertiesFormatter {
         }
         this._findPredicateValue(subject, 'ont', 'protocol_number', predicatePair)
         this._findPredicateValue(subject, 'ont', 'thematic_category', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'recipients', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'recipient_for_share', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'internal_distribution', predicatePair)
         this._findPredicateValue(subject, 'ont', 'has_private_data', predicatePair)
         this._findPredicateValue(subject, 'rdfs', 'type', predicatePair)
         // Government Institution Details
@@ -461,6 +464,12 @@ class PropertiesFormatter {
           this.properties[predicateSearch] = [thematicCategoriesTranslation[N3Util.getLiteralValue(value)]]
         } else {
           this.properties[predicateSearch].push(thematicCategoriesTranslation[N3Util.getLiteralValue(value)])
+        }
+      } else if (predicateSearch === 'internal_distribution' || predicateSearch === 'recipient_for_share' || predicateSearch === 'recipients') {
+        if (!this.properties[predicateSearch]) {
+          this.properties[predicateSearch] = [N3Util.getLiteralValue(value)]
+        } else {
+          this.properties[predicateSearch].push([N3Util.getLiteralValue(value)])
         }
       } else if (predicateSearch === 'type') {
         let decisionType = this._findDecisionType(value)
