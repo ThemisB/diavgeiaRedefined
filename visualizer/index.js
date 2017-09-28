@@ -280,7 +280,8 @@ class PropertiesFormatter {
             this._findPredicateValue('DeclarationSummaryExpense', 'ont', 'expense_currency', predicatePair, expenseNumber)
             this._findPredicateValue('DeclarationSummaryExpense', 'ont', 'cpv', predicatePair, expenseNumber)
           })
-        } else if (this.properties['decision_type_english'] === 'DonationGrant') {
+        } else if (this.properties['decision_type_english'] === 'DonationGrant' || this.properties['decision_type_english'] === 'ExpenditureApproval') {
+          //  DonationGrant and ExpenditureApproval share the same Entities and properties
           /*
            * N expenses
            * All expenses share the same OrganizationSponsor (has_organization_sponsor property)
