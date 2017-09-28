@@ -290,5 +290,30 @@ html
                     each declarationSummaryExpense in declarationSummaryExpenses
                       tr
                         td #{declarationSummaryExpense.expense_amount} #{declarationSummaryExpense.expense_currency}
+            //- DonationGrant
+            else if decision_type_english === 'DonationGrant'
+              p(class='subtitle has-text-centered') Χρηματικά ποσά Δωρεάς - Επιχορήγησης
+              .expenses-table.has-text-centered
+                table(class='table is-striped is-bordered')
+                  thead
+                    tr
+                      th Ποσό Δωρεάς-Επιχορήγησης
+                      th ΑΦΜ αποδέκτη δωρέας
+                      th Όνομα αποδέκτη δωρέας
+                      th Είδος ΑΦΜ αποδέκτη δωρεάς
+                      th ΑΦΜ αποστολέα δωρεάς
+                      th Όνομα αποστολέα δωρεάς
+                      th Είδος ΑΦΜ αποστολέα δωρεάς
+                  tbody
+                    each donationGrant, index in donationGrantSponsored
+                      tr
+                        td #{donationGrantExpenses[index].expense_amount} #{donationGrantExpenses[index].expense_currency}
+                        td #{donationGrantSponsored[index].afm}
+                        td #{donationGrantSponsored[index].name}
+                        td #{donationGrantSponsored[index].afm_type}
+                        //- Only 1 OrganizationSponsor
+                        td #{donationGrantOrganizationSponsor[0].afm}
+                        td #{donationGrantOrganizationSponsor[0].name}
+                        td #{donationGrantOrganizationSponsor[0].afm_type}
             if fek_year && fek_issue && fek_number
               p(class='has-text-centered subtitle fek') Η απόφαση έχει δημοσιευθεί στο ΦΕΚ <b>#{fek_number}/#{fek_year}, τεύχος #{fek_issue}<b/>.
