@@ -79,7 +79,7 @@ html
                 if circular_number
                   p(class='governmentInfo has-text-centered') <strong>Αριθμός Εγκυκλίου:</strong> #{circular_number}
                 if has_related_declaration_summary
-                  p(class='governmentInfo has-text-centered') <strong><a href="/visualize/{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
+                  p(class='governmentInfo has-text-centered') <strong><a href="/visualize/#{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
                 p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
                 .tags
                   each val in thematic_category
@@ -291,19 +291,28 @@ html
                       tr
                         td #{declarationSummaryExpense.expense_amount} #{declarationSummaryExpense.expense_currency}
             //- DonationGrant
-            else if decision_type_english === 'DonationGrant'
+            else if decision_type_english === 'DonationGrant' || decision_type_english === 'ExpenditureApproval'
               p(class='subtitle has-text-centered') Χρηματικά ποσά Δωρεάς - Επιχορήγησης
               .expenses-table.has-text-centered
                 table(class='table is-striped is-bordered')
                   thead
                     tr
-                      th Ποσό Δωρεάς-Επιχορήγησης
-                      th ΑΦΜ αποδέκτη δωρέας
-                      th Όνομα αποδέκτη δωρέας
-                      th Είδος ΑΦΜ αποδέκτη δωρεάς
-                      th ΑΦΜ αποστολέα δωρεάς
-                      th Όνομα αποστολέα δωρεάς
-                      th Είδος ΑΦΜ αποστολέα δωρεάς
+                      if decision_type_english === 'DonationGrant'
+                        th Ποσό Δωρεάς-Επιχορήγησης
+                        th ΑΦΜ αποδέκτη δωρέας
+                        th Όνομα αποδέκτη δωρέας
+                        th Είδος ΑΦΜ αποδέκτη δωρεάς
+                        th ΑΦΜ αποστολέα δωρεάς
+                        th Όνομα αποστολέα δωρεάς
+                        th Είδος ΑΦΜ αποστολέα δωρεάς
+                      else
+                        th Ποσό Δαπάνης
+                        th ΑΦΜ αποδέκτη δαπάνης
+                        th Όνομα αποδέκτη δαπάνης
+                        th Είδος ΑΦΜ αποδέκτη δαπάνης
+                        th ΑΦΜ αποστολέα δαπάνης
+                        th Όνομα αποστολέα δαπάνης
+                        th Είδος ΑΦΜ αποστολέα δαπάνης
                   tbody
                     each donationGrant, index in donationGrantSponsored
                       tr
