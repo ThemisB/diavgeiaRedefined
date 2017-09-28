@@ -315,5 +315,43 @@ html
                         td #{donationGrantOrganizationSponsor[0].afm}
                         td #{donationGrantOrganizationSponsor[0].name}
                         td #{donationGrantOrganizationSponsor[0].afm_type}
+            //- Recipients, Recipients for share and Internal Distribution Tables
+            if (recipient_for_share || recipients || internal_distribution)
+              p(class='subtitle has-text-centered recipientsWrapper') Φυσικά πρόσωπα προς ενημέρωση
+              .columns.is-centered
+                if (recipient_for_share)
+                  .column
+                     .recipients-table.has-text-centered
+                       table(class='table is-striped is-bordered is-fullwidth')
+                         thead
+                           tr
+                             th Αποδέκτες προς κοινοποίηση
+                         tbody
+                           each recipient in recipient_for_share
+                             tr
+                               td #{recipient}
+                if (recipients)
+                  .column
+                     .recipients-table.has-text-centered
+                       table(class='table is-striped is-bordered is-fullwidth')
+                         thead
+                           tr
+                             th Αποδέκτες
+                         tbody
+                           each recipient in recipients
+                             tr
+                               td #{recipient}
+                if (internal_distribution)
+                  .column
+                     .recipients-table.has-text-centered
+                       table(class='table is-striped is-bordered is-fullwidth')
+                         thead
+                           tr
+                             th Εσωτερική Διανομή
+                         tbody
+                           each recipient in internal_distribution
+                             tr
+                               td #{recipient}
+            //- Decision published in FEK
             if fek_year && fek_issue && fek_number
               p(class='has-text-centered subtitle fek') Η απόφαση έχει δημοσιευθεί στο ΦΕΚ <b>#{fek_number}/#{fek_year}, τεύχος #{fek_issue}<b/>.
