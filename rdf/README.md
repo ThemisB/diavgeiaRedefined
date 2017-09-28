@@ -446,9 +446,6 @@ This type of decision does not have any specific object or data properties.
   - **has_related_undertaking** :relates a [ExpenditureApproval](#expenditureapproval) with an [Undertaking](#undertaking). |`Range → dvg:Undertaking`|
   - **has_expense** : the [expense](#expense) of the [DeclarationSummary](#declarationsummary). |`Range → dvg:Expense`|
 
-**Data Properties**
-  - **kae** :  The kae number of [ExpenditureApproval](#expenditureapproval). This is not related to [ExpenseWithKae](#expensewithkae). |`Range → xsd:string`|
-
 - - -
 
 ### GeneralSpecialSecretaryMonocraticBody
