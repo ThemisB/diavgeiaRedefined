@@ -19,6 +19,7 @@
 	ont:has_considered <Consideration/1>;
 	ont:has_considered <Consideration/2>;
 	ont:has_considered <Consideration/3>;
+	ont:has_related_declaration_summary "ΑΔΑ-1231";
 	ont:decision_call "Δίνεται Εντολή Πληρωμής"@el;
 	ont:has_decided <Decision/1>;
 	ont:signed_by <Signer/1>;
