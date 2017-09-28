@@ -128,5 +128,5 @@
 <Expense/2> a ont:Expense;
 	ont:expense_amount "26.02";
 	ont:expense_currency "EUR";
-	ont:has_sponsored <Sponsored/1>;
+	ont:has_sponsored <Sponsored/2>;
 	ont:has_organization_sponsor <OrganizationSponsor/1>.
