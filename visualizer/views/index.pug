@@ -307,6 +307,8 @@ html
                         th Είδος ΑΦΜ αποστολέα δωρεάς
                       else
                         th Ποσό Δαπάνης
+                        th CPV
+                        th Αριθμός ΚΑΕ
                         th ΑΦΜ αποδέκτη δαπάνης
                         th Όνομα αποδέκτη δαπάνης
                         th Είδος ΑΦΜ αποδέκτη δαπάνης
@@ -317,6 +319,9 @@ html
                     each donationGrant, index in donationGrantSponsored
                       tr
                         td #{donationGrantExpenses[index].expense_amount} #{donationGrantExpenses[index].expense_currency}
+                        if decision_type_english === 'ExpenditureApproval'
+                          td #{donationGrantExpenses[index].cpv}
+                          td #{donationGrantExpenses[index].kae}
                         td #{donationGrantSponsored[index].afm}
                         td #{donationGrantSponsored[index].name}
                         td #{donationGrantSponsored[index].afm_type}
