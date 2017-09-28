@@ -73,6 +73,9 @@ class PropertiesFormatter {
     this.contractExpensesAmount = []
     this.declarationSummaryExpenses = []
     this.sponsors = []
+    this.donationGrantExpenses = []
+    this.donationGrantSponsored = []
+    this.donationGrantOrganizationSponsor = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -94,6 +97,9 @@ class PropertiesFormatter {
     this.properties['contractExpensesAmount'] = this.contractExpensesAmount
     this.properties['declarationSummaryExpenses'] = this.declarationSummaryExpenses
     this.properties['sponsors'] = this.sponsors
+    this.properties['donationGrantExpenses'] = this.donationGrantExpenses
+    this.properties['donationGrantSponsored'] = this.donationGrantSponsored
+    this.properties['donationGrantOrganizationSponsor'] = this.donationGrantOrganizationSponsor
   }
 
   formatProperties (array) {
@@ -271,6 +277,37 @@ class PropertiesFormatter {
             this._findPredicateValue('DeclarationSummaryExpense', 'ont', 'expense_currency', predicatePair, expenseNumber)
             this._findPredicateValue('DeclarationSummaryExpense', 'ont', 'cpv', predicatePair, expenseNumber)
           })
+        } else if (this.properties['decision_type_english'] === 'DonationGrant') {
+          /*
+           * N expenses
+           * All expenses share the same OrganizationSponsor (has_organization_sponsor property)
+           * Each expense has 1 sponsored
+           * OrganizationSponsor and Sponsored have the same properties (afm, afm_type, name)
+           */
+          array[subject].forEach(predicatePair => {
+            this._findPredicateValue('DonationGrantExpenses', 'ont', 'expense_amount', predicatePair, expenseNumber)
+            this._findPredicateValue('DonationGrantExpenses', 'ont', 'expense_currency', predicatePair, expenseNumber)
+            var entities
+            for (entities in array) {
+              if (entities.indexOf(decisionPrefix + 'Sponsored/') > -1) {
+                let sponsoredArray = entities.split('/')
+                let sponsoredNumber = sponsoredArray[sponsoredArray.length - 1]
+                array[entities].forEach(predicatePairSponsored => {
+                  this._findPredicateValue('DonationGrantSponsored', 'ont', 'afm', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue('DonationGrantSponsored', 'ont', 'afm_type', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue('DonationGrantSponsored', 'ont', 'name', predicatePairSponsored, sponsoredNumber)
+                })
+              } else if (entities.indexOf(decisionPrefix + 'OrganizationSponsor/') > -1) {
+                let organizationSponsorArray = entities.split('/')
+                let organizationNumber = organizationSponsorArray[organizationSponsorArray.length - 1]
+                array[entities].forEach(predicatePairOrganizationSponsor => {
+                  this._findPredicateValue('DonationGrantOrganizationSponsor', 'ont', 'afm', predicatePairOrganizationSponsor, organizationNumber)
+                  this._findPredicateValue('DonationGrantOrganizationSponsor', 'ont', 'afm_type', predicatePairOrganizationSponsor, organizationNumber)
+                  this._findPredicateValue('DonationGrantOrganizationSponsor', 'ont', 'name', predicatePairOrganizationSponsor, organizationNumber)
+                })
+              }
+            }
+          })
         }
       } else if (subject.indexOf(decisionPrefix + 'ExpenseWithKae') > -1) {
         if (this.properties['decision_type_english'] === 'CommisionWarrant') {
@@ -374,6 +411,21 @@ class PropertiesFormatter {
         let expensesCondition = predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency'
         if (expensesCondition) {
           this._formatObjectProperty(this.contractExpensesAmount, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'DonationGrantExpenses') {
+        let expensesCondition = predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency' || predicateSearch === 'name'
+        if (expensesCondition) {
+          this._formatObjectProperty(this.donationGrantExpenses, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'DonationGrantSponsored') {
+        let sponsoredCondition = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
+        if (sponsoredCondition) {
+          this._formatObjectProperty(this.donationGrantSponsored, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'DonationGrantOrganizationSponsor') {
+        let sponsoredCondition = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
+        if (sponsoredCondition) {
+          this._formatObjectProperty(this.donationGrantOrganizationSponsor, predicateSearch, predicatePair, entityIndex)
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
