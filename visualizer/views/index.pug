@@ -33,96 +33,96 @@ html
       section(class='section is-fullheight')
         .container
           h4(class='title is-4 has-text-centered') #{title} <span class="tag is-rounded is-success">#{decision_type}</span> <hr>
-          if decision_type_english !== 'LegislativeDecree'
-            .columns
-          else
-            .columns.is-centered
-              //- Government Institution Details
-              if decision_type_english !== 'LegislativeDecree'
-                .column.is-two-thirds
-                  article(class='notification governmentNotification')
-                    p(class='subtitle has-text-centered') Στοιχεία Φορέα
-                    p(class='governmentInfo') <strong>Όνομα Φορέα:</strong> <span>#{government_institution_name}</span>
-                    if (government_institution_general_administration)
-                      p(class='governmentInfo') <strong>Γενική Διεύθυνση:</strong> <span>#{government_institution_general_administration}</span>
-                    if (government_institution_department)
-                      p(class='governmentInfo') <strong>Τμήμα:</strong> <span>#{government_institution_department}</span>
-                    if government_institution_address || government_institution_phone || government_institution_email || government_institution_postalcode || government_institution_fax || government_institution_website || government_institution_information
-                      <hr>
-                      p(class='has-text-centered contact') Επικοινωνία
-                      .columns
-                        .column.is-two-thirds
-                          if government_institution_address
-                            p(class='governmentInfo') <strong>Διεύθυνση:</strong> <span>#{government_institution_address}</span>
-                          if government_institution_phone
-                            p(class='governmentInfo') <strong>Τηλέφωνο:</strong> <span>#{government_institution_phone}</span>
-                          if government_institution_email
-                            p(class='governmentInfo') <strong>Email:</strong> <span><a href="mailto:#{government_institution_email}">#{government_institution_email}</a></span>
-                        .column
-                          if government_institution_postalcode
-                            p(class='governmentInfo') <strong>T.K.:</strong> <span>#{government_institution_postalcode}</span>
-                          if government_institution_fax
-                            p(class='governmentInfo') <strong>Fax:</strong> <span>#{government_institution_fax}</span>
-                          if government_institution_website
-                            p(class='governmentInfo') <strong>Website:</strong> <span>#{government_institution_website}</span>
-                      if government_institution_information
-                        p(class='governmentInfo has-text-centered') <strong>Υπεύθυνος για Πληροφορίες:</strong> <span>#{government_institution_information}</span>
-                .column
-                  article(class='notification is-primary generalInfo')
-                    p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
-                    p(class='governmentInfo has-text-centered') <strong>ΑΔΑ:</strong> <span>#{iun}</span>
-                    p(class='governmentInfo has-text-centered') <strong>Έκδοση:</strong> <span>#{version}</span>
-                    p(class='governmentInfo has-text-centered') <strong>Είδος Απόφασης:</strong> <span>#{decision_type}</span>
-                    p(class='governmentInfo has-text-centered') <strong>Ημερομηνία Ανάρτησης:</strong> <span>#{date_publication}</span>
-                    p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
-                    if number_employees
-                      p(class='governmentInfo has-text-centered') <strong>Αριθμός Φυσικών προσώπων:</strong> <span>#{number_employees}</span>
-                    //- TODO replace with organization name from database
-                    if appointment_employer_org
-                      p(class='governmentInfo has-text-centered') <strong><a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{appointment_employer_org}"' target="_blank">Φορέας Δορισμού</a></strong>
-                    if circular_number
-                      p(class='governmentInfo has-text-centered') <strong>Αριθμός Εγκυκλίου:</strong> #{circular_number}
-                    if has_related_declaration_summary
-                      p(class='governmentInfo has-text-centered') <strong><a href="/visualize/#{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
-                    p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
-                    .tags
-                      each val in thematic_category
-                        .tag.is-white.thematicCategory= val
-                    p(class='governmentInfo has-text-centered') Η απόφαση
-                      if (has_private_data=='true')
-                        <strong> περιέχει </strong> προσωπικά δεδομένα
-                      else
-                        <strong> δεν περιέχει</strong> προσωπικά δεδομένα
-              //- LegislativeDecree has no governemnt Institution
-              else
-                .column.is-half
-                  article(class='notification is-primary generalInfo')
-                    p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
-                    p(class='governmentInfo has-text-centered') <strong>ΑΔΑ:</strong> <span>#{iun}</span>
-                    p(class='governmentInfo has-text-centered') <strong>Έκδοση:</strong> <span>#{version}</span>
-                    p(class='governmentInfo has-text-centered') <strong>Είδος Απόφασης:</strong> <span>#{decision_type}</span>
-                    p(class='governmentInfo has-text-centered') <strong>Ημερομηνία Ανάρτησης:</strong> <span>#{date_publication}</span>
-                    p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
-                    if number_employees
-                      p(class='governmentInfo has-text-centered') <strong>Αριθμός Φυσικών προσώπων:</strong> <span>#{number_employees}</span>
-                    //- TODO replace with organization name from database
-                    if appointment_employer_org
-                      p(class='governmentInfo has-text-centered') <strong><a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{appointment_employer_org}"' target="_blank">Φορέας Δορισμού</a></strong>
-                    if circular_number
-                      p(class='governmentInfo has-text-centered') <strong>Αριθμός Εγκυκλίου:</strong> #{circular_number}
-                    if has_related_declaration_summary
-                      p(class='governmentInfo has-text-centered') <strong><a href="/visualize/#{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
-                    p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
-                    .tags
-                      each val in thematic_category
-                        .tag.is-white.thematicCategory= val
-                    p(class='governmentInfo has-text-centered') Η απόφαση
-                      if (has_private_data=='true')
-                        <strong> περιέχει </strong> προσωπικά δεδομένα
-                      else
-                        <strong> δεν περιέχει</strong> προσωπικά δεδομένα
-                    if legislative_decree_number
-                      p(class='governmentInfo has-text-centered') <strong>Αριθμός Πράξης:</strong> #{legislative_decree_number}
+          - let columnsClasses = (decision_type_english !== 'LegislativeDecree' ? 'columns': 'columns is-centered')
+          div(class=columnsClasses)
+            //- Government Institution Details
+            if decision_type_english !== 'LegislativeDecree'
+              .column.is-two-thirds
+                article(class='notification governmentNotification')
+                  p(class='subtitle has-text-centered') Στοιχεία Φορέα
+                  p(class='governmentInfo') <strong>Όνομα Φορέα:</strong> <span>#{government_institution_name}</span>
+                  if (government_institution_general_administration)
+                    p(class='governmentInfo') <strong>Γενική Διεύθυνση:</strong> <span>#{government_institution_general_administration}</span>
+                  if (government_institution_department)
+                    p(class='governmentInfo') <strong>Τμήμα:</strong> <span>#{government_institution_department}</span>
+                  if government_institution_address || government_institution_phone || government_institution_email || government_institution_postalcode || government_institution_fax || government_institution_website || government_institution_information
+                    <hr>
+                    p(class='has-text-centered contact') Επικοινωνία
+                    .columns
+                      .column.is-two-thirds
+                        if government_institution_address
+                          p(class='governmentInfo') <strong>Διεύθυνση:</strong> <span>#{government_institution_address}</span>
+                        if government_institution_phone
+                          p(class='governmentInfo') <strong>Τηλέφωνο:</strong> <span>#{government_institution_phone}</span>
+                        if government_institution_email
+                          p(class='governmentInfo') <strong>Email:</strong> <span><a href="mailto:#{government_institution_email}">#{government_institution_email}</a></span>
+                      .column
+                        if government_institution_postalcode
+                          p(class='governmentInfo') <strong>T.K.:</strong> <span>#{government_institution_postalcode}</span>
+                        if government_institution_fax
+                          p(class='governmentInfo') <strong>Fax:</strong> <span>#{government_institution_fax}</span>
+                        if government_institution_website
+                          p(class='governmentInfo') <strong>Website:</strong> <span>#{government_institution_website}</span>
+                    if government_institution_information
+                      p(class='governmentInfo has-text-centered') <strong>Υπεύθυνος για Πληροφορίες:</strong> <span>#{government_institution_information}</span>
+              .column
+                article(class='notification is-primary generalInfo')
+                  p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
+                  p(class='governmentInfo has-text-centered') <strong>ΑΔΑ:</strong> <span>#{iun}</span>
+                  p(class='governmentInfo has-text-centered') <strong>Έκδοση:</strong> <span>#{version}</span>
+                  p(class='governmentInfo has-text-centered') <strong>Είδος Απόφασης:</strong> <span>#{decision_type}</span>
+                  p(class='governmentInfo has-text-centered') <strong>Ημερομηνία Ανάρτησης:</strong> <span>#{date_publication}</span>
+                  p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
+                  if number_employees
+                    p(class='governmentInfo has-text-centered') <strong>Αριθμός Φυσικών προσώπων:</strong> <span>#{number_employees}</span>
+                  //- TODO replace with organization name from database
+                  if appointment_employer_org
+                    p(class='governmentInfo has-text-centered') <strong><a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{appointment_employer_org}"' target="_blank">Φορέας Δορισμού</a></strong>
+                  if opinion_government_institution_type
+                    p(class='governmentInfo has-text-centered') <strong>Είδος Φορέα:</strong> #{opinion_government_institution_type}
+                  if circular_number
+                    p(class='governmentInfo has-text-centered') <strong>Αριθμός Εγκυκλίου:</strong> #{circular_number}
+                  if has_related_declaration_summary
+                    p(class='governmentInfo has-text-centered') <strong><a href="/visualize/#{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
+                  p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
+                  .tags
+                    each val in thematic_category
+                      .tag.is-white.thematicCategory= val
+                  p(class='governmentInfo has-text-centered') Η απόφαση
+                    if (has_private_data=='true')
+                      <strong> περιέχει </strong> προσωπικά δεδομένα
+                    else
+                      <strong> δεν περιέχει</strong> προσωπικά δεδομένα
+            //- LegislativeDecree has no governemnt Institution
+            else
+              .column.is-half
+                article(class='notification is-primary generalInfo')
+                  p(class='subtitle has-text-centered') Γενικά Στοιχεία Απόφασης
+                  p(class='governmentInfo has-text-centered') <strong>ΑΔΑ:</strong> <span>#{iun}</span>
+                  p(class='governmentInfo has-text-centered') <strong>Έκδοση:</strong> <span>#{version}</span>
+                  p(class='governmentInfo has-text-centered') <strong>Είδος Απόφασης:</strong> <span>#{decision_type}</span>
+                  p(class='governmentInfo has-text-centered') <strong>Ημερομηνία Ανάρτησης:</strong> <span>#{date_publication}</span>
+                  p(class='governmentInfo has-text-centered') <strong>Αριθμός Πρωτοκόλλου:</strong> <span>#{protocol_number}</span>
+                  if number_employees
+                    p(class='governmentInfo has-text-centered') <strong>Αριθμός Φυσικών προσώπων:</strong> <span>#{number_employees}</span>
+                  //- TODO replace with organization name from database
+                  if appointment_employer_org
+                    p(class='governmentInfo has-text-centered') <strong><a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{appointment_employer_org}"' target="_blank">Φορέας Διορισμού</a></strong>
+                  if circular_number
+                    p(class='governmentInfo has-text-centered') <strong>Αριθμός Εγκυκλίου:</strong> #{circular_number}
+                  if has_related_declaration_summary
+                    p(class='governmentInfo has-text-centered') <strong><a href="/visualize/#{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
+                  p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
+                  .tags
+                    each val in thematic_category
+                      .tag.is-white.thematicCategory= val
+                  p(class='governmentInfo has-text-centered') Η απόφαση
+                    if (has_private_data=='true')
+                      <strong> περιέχει </strong> προσωπικά δεδομένα
+                    else
+                      <strong> δεν περιέχει</strong> προσωπικά δεδομένα
+                  if legislative_decree_number
+                    p(class='governmentInfo has-text-centered') <strong>Αριθμός Πράξης:</strong> #{legislative_decree_number}
           //- BalanceAccount
           if decision_type_english === 'BalanceAccount'
             .columns.is-centered
@@ -245,6 +245,14 @@ html
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
               p(class='decisionText') #{PreConsideration}
+            //- Opinion has several specific properties
+            if decision_type_english === 'Opinion'
+              if opinion_question_number
+                p(class='decisionText topMargin') <u><b>Αριθμός Ερωτήματος</b></u>: #{opinion_question_number}
+              if opinion_question_summary
+                p(class='decisionText topMargin') <u><b>Περίληψη Ερωτήματος</b></u>: #{opinion_question_summary}
+              if opinion_history
+                p(class='decisionText topMargin') <u><b>Σύντομο Ιστορικό</b></u>: #{opinion_history}
             if considerations.length > 0
               h5(class='title has-text-centered is-5') Έχοντας λάβει υπόψη
               ol(class='decisionText')
@@ -256,6 +264,12 @@ html
                         span(class='linking')
                           - let nextIndex = index + 1
                           a(href=linking, target='_blank', class='tag is-primary') Σύνδεσμος #{nextIndex}
+            //- Opinion has several specific properties
+            if decision_type_english === 'Opinion'
+              if opinion_analysis
+                p(class='decisionText topMargin') <u><b>Ανάλυση</b></u>: #{opinion_analysis}
+              if opinion_conclusion
+                  p(class='decisionText topMargin') <u><b>Συμπέρασμα - Απάντηση</b></u>: #{opinion_conclusion}
             if decision_call
               h5(class='title has-text-centered is-5') #{decision_call}
             if decisions.length > 0
