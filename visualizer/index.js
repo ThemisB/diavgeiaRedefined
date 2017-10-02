@@ -76,6 +76,7 @@ class PropertiesFormatter {
     this.donationGrantExpenses = []
     this.donationGrantSponsored = []
     this.donationGrantOrganizationSponsor = []
+    this.generalSpecialSecretaryMonocraticBodyExpense = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -100,6 +101,7 @@ class PropertiesFormatter {
     this.properties['donationGrantExpenses'] = this.donationGrantExpenses
     this.properties['donationGrantSponsored'] = this.donationGrantSponsored
     this.properties['donationGrantOrganizationSponsor'] = this.donationGrantOrganizationSponsor
+    this.properties['generalSpecialSecretaryMonocraticBodyExpense'] = this.generalSpecialSecretaryMonocraticBodyExpense
   }
 
   formatProperties (array) {
@@ -319,6 +321,14 @@ class PropertiesFormatter {
               }
             }
           })
+        } else if (this.properties['decision_type_english'] === 'GeneralSpecialSecretaryMonocraticBody') {
+          /*
+           * 1 Expense with just expense_amount and expense_currency
+           */
+          array[subject].forEach(predicatePair => {
+            this._findPredicateValue('GeneralSpecialSecretaryMonocraticBodyExpense', 'ont', 'expense_amount', predicatePair, expenseNumber)
+            this._findPredicateValue('GeneralSpecialSecretaryMonocraticBodyExpense', 'ont', 'expense_currency', predicatePair, expenseNumber)
+          })
         }
       } else if (subject.indexOf(decisionPrefix + 'ExpenseWithKae') > -1) {
         if (this.properties['decision_type_english'] === 'CommisionWarrant') {
@@ -437,6 +447,10 @@ class PropertiesFormatter {
         let sponsoredCondition = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
         if (sponsoredCondition) {
           this._formatObjectProperty(this.donationGrantOrganizationSponsor, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'GeneralSpecialSecretaryMonocraticBodyExpense') {
+        if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency') {
+          this._formatObjectProperty(this.generalSpecialSecretaryMonocraticBodyExpense, predicateSearch, predicatePair, entityIndex)
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
