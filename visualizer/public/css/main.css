@@ -99,3 +99,7 @@ ol > .consideration:before, ol > .decision:before {
 .recipientsWrapper {
   margin-top: 1.4em;
 }
+
+.topMargin {
+  margin-top: 1.5em;
+}
