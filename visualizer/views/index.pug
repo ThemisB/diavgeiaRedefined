@@ -231,6 +231,16 @@ html
                     p(class='governmentInfo has-text-centered') <strong>Αριθμός Πράξης:</strong> #{normative_number}
                   if normative_type
                     p(class='governmentInfo has-text-centered') <strong>Τύπος Πράξης:</strong> #{normative_type}
+          //- OccupationInvitation
+          else if decision_type_english === 'OccupationInvitation'
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Προκήρυξης Πλήρωσης Θέσεων
+                  if vacancy_opening_type
+                    p(class='governmentInfo has-text-centered') <strong>Είδος Πράξης:</strong> #{vacancy_opening_type}
+                  if has_related_undertaking
+                    p(class='governemntInfo has-text-centered') Η απόφαση έχει <a href="visualize/#{has_related_undertaking}">σχετική ανάληψη υποχρέωσης</a>
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
