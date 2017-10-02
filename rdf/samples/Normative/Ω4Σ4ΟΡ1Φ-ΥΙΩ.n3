@@ -1,9 +1,9 @@
-@base <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/a8654657-ffbc-45d1-ba93-dd6f018a50e6/>.
+@base <http://diavgeia.gov.gr/eli/decision/Ω4Σ4ΟΡ1Φ-ΥΙΩ/11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6/>.
 @prefix ont: <http://diavgeia.gov.gr/ontology/>.
 @prefix eli: <http://data.europa.eu/eli/ontology#>.
 @prefix leg: <http://legislation.di.uoa.gr/eli/>.
 
-<> a ont:BalanceAccount;
+<> a ont:Normative;
 	ont:version "11bfd223-bdf8-4767-bb6b-4ebdc6f4afa6";
 	ont:iun "Ω4Σ4ΟΡ1Φ-ΥΙΩ"@el;
 	eli:title "Περί επανακαθορισμού των ορίων παραλίας στην περιοχή βορείως εκβολής χειμάρρου «Βυρού», εκτός οικισμού Καρδαμύλης Τ.Κ Καρδαμύλης Δήμου Δυτικής Μάνης Ν.Μεσσηνίας"@el;
