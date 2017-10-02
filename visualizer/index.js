@@ -189,6 +189,9 @@ class PropertiesFormatter {
         // InvestmentPlacing
         // LegislativeDecree
         this._findPredicateValue(subject, 'ont', 'legislative_decree_number', predicatePair)
+        // Normative
+        this._findPredicateValue(subject, 'ont', 'normative_number', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'normative_type', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
