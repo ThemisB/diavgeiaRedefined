@@ -221,6 +221,16 @@ html
                     p(class='governmentInfo has-text-centered')  <strong>Θέση:</strong> #{position}
                   if position_org
                     p(class='governmentInfo has-text-centered')  <strong><a href='https://diavgeia.gov.gr/search?advanced=true&query=organizationUid:"#{position_org}"' target="_blank">Φορέας</a> που υφίσταται η θέση</strong>
+          //- Normative
+          else if decision_type_english === 'Normative'
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Κανονιστικής Πράξης
+                  if normative_number
+                    p(class='governmentInfo has-text-centered') <strong>Αριθμός Πράξης:</strong> #{normative_number}
+                  if normative_type
+                    p(class='governmentInfo has-text-centered') <strong>Τύπος Πράξης:</strong> #{normative_type}
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
@@ -377,7 +387,6 @@ html
             //- GeneralSpecialSecretaryMonocraticBody Expense
             else if decision_type_english === 'GeneralSpecialSecretaryMonocraticBody' && position_decision_type === 'Καθορισμός Αμοιβής - Αποζημίωσης'
               p(class='subtitle has-text-centered topMargin') Έξοδα Καθορισμού Αμοιβής-Αποζημίωσης: #{generalSpecialSecretaryMonocraticBodyExpense[0].expense_amount} <b>#{generalSpecialSecretaryMonocraticBodyExpense[0].expense_currency}</b>
-              
             //- Recipients, Recipients for share and Internal Distribution Tables
             if (recipient_for_share || recipients || internal_distribution)
               p(class='subtitle has-text-centered recipientsWrapper') Φυσικά πρόσωπα προς ενημέρωση
