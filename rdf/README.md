@@ -567,7 +567,6 @@ This type of decision does not have any specific object or data properties.
 
 **Data Properties**
   - **record_number** : |`Range → xsd:string`|
-  - **record_subject** : |`Range → xsd:string`|
 
 - - -
 
