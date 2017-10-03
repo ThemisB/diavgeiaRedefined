@@ -88,6 +88,8 @@ html
                     p(class="governemntInfo has-text-centered") <strong>Αριθμός Πρακτικού:</strong> #{record_number}
                   if service_change_decision_type
                     p(class="governmentInfo has-text-centered") <strong>Είδος Πράξης:</strong> #{service_change_decision_type}
+                    if has_related_declaration_summary
+                      p(class='governmentInfo has-text-centered') <strong><a href="/visualize/#{has_related_declaration_summary}" target="_blank">Σχετική Προκήρυξη πλήρωσης θέσεων</a></strong>
                   p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
                   .tags
                     each val in thematic_category
