@@ -201,6 +201,8 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'opinion_analysis', predicatePair)
         this._findPredicateValue(subject, 'ont', 'opinion_conclusion', predicatePair)
         this._findPredicateValue(subject, 'ont', 'opinion_government_institution_type', predicatePair)
+        // OtherDecisions, OtherDevelopmentLaw
+        this._findPredicateValue(subject, 'ont', 'publish_via', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
