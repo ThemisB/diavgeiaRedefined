@@ -83,15 +83,15 @@ ol > .consideration:before, ol > .decision:before {
   margin-top:1em;
 }
 
-.expenses-table th, .recipients-table th {
+.expenses-table th, .recipients-table th, .present-table th {
   text-align: center;
 }
 
-.expenses-table td, .recipients-table td {
+.expenses-table td, .recipients-table td, .present-table td {
   text-align: center;
 }
 
-.expenses-table table, .recipients-table td {
+.expenses-table table, .recipients-table td, .present-table td {
   margin: 0 auto;
   margin-top: 1em;
 }
