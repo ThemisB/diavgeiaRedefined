@@ -84,6 +84,8 @@ html
                     p(class='governmentInfo has-text-centered') <strong>Αριθμός Εγκυκλίου:</strong> #{circular_number}
                   if has_related_declaration_summary
                     p(class='governmentInfo has-text-centered') <strong><a href="/visualize/#{has_related_declaration_summary}" target="_blank">Σχετική Περίληψη Διακήρυξης</a></strong>
+                  if record_number
+                    p(class="governemntInfo has-text-centered") <strong>Αριθμός Πρακτικού:</strong> #{record_number}
                   p(class='governmentInfo has-text-centered thematicCategoriesWrap') <strong>Θεματικές Κατηγορίες</strong>
                   .tags
                     each val in thematic_category
@@ -263,6 +265,21 @@ html
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
               p(class='decisionText') #{PreConsideration}
+            if presentArray.length > 0
+              h5(class='title has-text-centered is-5') Παρόντες απόφασεις
+              .columns.is-centered
+                .column.is-half
+                  .present-table
+                    table(class='table is-striped is-bordered')
+                      thead
+                        tr
+                          th Όνομα Παρόντα
+                          th Ρόλος Παρόντα
+                      tbody
+                        each present in presentArray
+                          tr
+                            td #{present.present_name}
+                            td #{present.present_title}
             //- Opinion has several specific properties
             if decision_type_english === 'Opinion'
               if opinion_question_number
