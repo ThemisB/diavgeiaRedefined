@@ -263,6 +263,16 @@ html
                   p(class='subtitle has-text-centered') Επιμέρους στοιχεία Παραχώρησης Περιουσιακών Στοιχείων
                   if asset_name
                     p(class="governemntInfo has-text-centered") <strong>Αντικείμενο Παραχώρησης:</strong> #{asset_name}
+          //- SpatialPlanningDecisions
+          else if (decision_type_english === 'SpatialPlanningDecisions')
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία πράξης Χωροταξικού - Πολεοδομικού Περιεχομένου
+                  if municipality
+                    p(class="governemntInfo has-text-centered") <strong>Γεωγραφική Περιοχή:</strong> #{municipality}
+                  if spatial_planning_decision_type
+                    p(class="governemntInfo has-text-centered") <strong>Τύπος Πράξης:</strong> #{spatial_planning_decision_type}
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
