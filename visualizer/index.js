@@ -222,6 +222,8 @@ class PropertiesFormatter {
         // SpatialPlanningDecisions
         this._findPredicateValue(subject, 'ont', 'municipality', predicatePair)
         this._findPredicateValue(subject, 'ont', 'spatial_planning_decision_type', predicatePair)
+        // StartProductionalFunctionOfInvestment, SuccessfulAppointedRunnerUpList
+        this._findPredicateValue(subject, 'ont', 'has_related_occupation_invitation', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
