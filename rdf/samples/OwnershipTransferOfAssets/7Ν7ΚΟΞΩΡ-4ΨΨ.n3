@@ -28,6 +28,7 @@
 	ont:has_private_data false;
 	ont:has_expense <Expense/1>;
 	ont:organization_id "54511";
+	ont:asset_name "Γήπεδο"@el;
 	ont:submission_timestamp "1457341365897";
 	ont:unit_id "92904".
 
