@@ -50,6 +50,7 @@ app.get('/visualize', function (req, res) {
       generalPropertiesFormatter.addDecisionsToGeneralProperties()
       generalPropertiesFormatter.addSignersToGeneralProperties()
       generalPropertiesFormatter.addExpensesToGeneralProperties()
+      generalPropertiesFormatter.addPresentArrayToGeneralProperties()
       res.render('index', generalPropertiesFormatter.properties)
     })
   } else {
@@ -79,6 +80,7 @@ class PropertiesFormatter {
     this.generalSpecialSecretaryMonocraticBodyExpense = []
     this.ownershipTransferOfAssetsOrganizationSponsor = []
     this.ownershipTransferOfAssetsSponsored = []
+    this.presentArray = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -91,6 +93,10 @@ class PropertiesFormatter {
 
   addSignersToGeneralProperties () {
     this.properties['signers'] = this.signers
+  }
+
+  addPresentArrayToGeneralProperties () {
+    this.properties['presentArray'] = this.presentArray
   }
 
   addExpensesToGeneralProperties () {
@@ -209,6 +215,8 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'publish_via', predicatePair)
         // OwnershipTransferOfAssets
         this._findPredicateValue(subject, 'ont', 'asset_name', predicatePair)
+        // Records
+        this._findPredicateValue(subject, 'ont', 'record_number', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -391,6 +399,13 @@ class PropertiesFormatter {
             this._findPredicateValue('CommisionWarrantExpense', 'ont', 'kae', predicatePair, expenseWithKaeNumber)
           })
         }
+      } else if (subject.indexOf(decisionPrefix + 'Present/') > -1) {
+        let presentArray = subject.split('/')
+        let presentNumber = presentArray[presentArray.length - 1]
+        array[subject].forEach(predicatePair => {
+          this._findPredicateValue('Present', 'ont', 'present_name', predicatePair, presentNumber)
+          this._findPredicateValue('Present', 'ont', 'present_title', predicatePair, presentNumber)
+        })
       }
     }
   }
@@ -451,6 +466,10 @@ class PropertiesFormatter {
       } else if (subject === 'Signer') {
         if (predicateSearch === 'signer_job' || predicateSearch === 'signer_name') {
           this._formatObjectProperty(this.signers, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'Present') {
+        if (predicateSearch === 'present_name' || predicateSearch === 'present_title') {
+          this._formatObjectProperty(this.presentArray, predicateSearch, predicatePair, entityIndex)
         }
       } else if (subject === 'AwardExpense') {
         if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency') {
