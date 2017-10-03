@@ -588,7 +588,7 @@
     <!-- http://diavgeia.gov.gr/ontology/contract_decision_type -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_decision_type">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -619,7 +619,7 @@
     <!-- http://diavgeia.gov.gr/ontology/contract_end -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_end">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
     </owl:DatatypeProperty>
     
@@ -637,7 +637,7 @@
     <!-- http://diavgeia.gov.gr/ontology/contract_start -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_start">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
     </owl:DatatypeProperty>
     
@@ -1680,15 +1680,6 @@
     <!-- http://diavgeia.gov.gr/ontology/record_number -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/record_number">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Records"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/record_subject -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/record_subject">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Records"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
