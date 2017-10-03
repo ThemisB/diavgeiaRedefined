@@ -71,6 +71,5 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Αναπληρωτής Δ/ντης Δασών Χαλκιδικής"@el;
-	ont:signer_job "Δασολόγος"@el;
 	ont:signer_id "112320"@el;
 	ont:signer_name "Γεώργιος Καψάλης"@el.
