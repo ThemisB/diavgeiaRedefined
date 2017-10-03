@@ -77,6 +77,8 @@ class PropertiesFormatter {
     this.donationGrantSponsored = []
     this.donationGrantOrganizationSponsor = []
     this.generalSpecialSecretaryMonocraticBodyExpense = []
+    this.ownershipTransferOfAssetsOrganizationSponsor = []
+    this.ownershipTransferOfAssetsSponsored = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -102,6 +104,8 @@ class PropertiesFormatter {
     this.properties['donationGrantSponsored'] = this.donationGrantSponsored
     this.properties['donationGrantOrganizationSponsor'] = this.donationGrantOrganizationSponsor
     this.properties['generalSpecialSecretaryMonocraticBodyExpense'] = this.generalSpecialSecretaryMonocraticBodyExpense
+    this.properties['ownershipTransferOfAssetsOrganizationSponsor'] = this.ownershipTransferOfAssetsOrganizationSponsor
+    this.properties['ownershipTransferOfAssetsSponsored'] = this.ownershipTransferOfAssetsSponsored
   }
 
   formatProperties (array) {
@@ -203,6 +207,8 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'opinion_government_institution_type', predicatePair)
         // OtherDecisions, OtherDevelopmentLaw
         this._findPredicateValue(subject, 'ont', 'publish_via', predicatePair)
+        // OwnershipTransferOfAssets
+        this._findPredicateValue(subject, 'ont', 'asset_name', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -346,6 +352,30 @@ class PropertiesFormatter {
             this._findPredicateValue('GeneralSpecialSecretaryMonocraticBodyExpense', 'ont', 'expense_amount', predicatePair, expenseNumber)
             this._findPredicateValue('GeneralSpecialSecretaryMonocraticBodyExpense', 'ont', 'expense_currency', predicatePair, expenseNumber)
           })
+        } else if (this.properties['decision_type_english'] === 'OwnershipTransferOfAssets') {
+          /*
+           * 1 Expense with 1 OrganizationSponsor and N Sponsored
+           */
+          var entities
+          for (entities in array) {
+            if (entities.indexOf(decisionPrefix + 'Sponsored/') > -1) {
+              let sponsoredArray = entities.split('/')
+              let sponsoredNumber = sponsoredArray[sponsoredArray.length - 1]
+              array[entities].forEach(predicatePairSponsored => {
+                this._findPredicateValue('OwnershipTransferOfAssetsSponsored', 'ont', 'afm', predicatePairSponsored, sponsoredNumber)
+                this._findPredicateValue('OwnershipTransferOfAssetsSponsored', 'ont', 'afm_type', predicatePairSponsored, sponsoredNumber)
+                this._findPredicateValue('OwnershipTransferOfAssetsSponsored', 'ont', 'name', predicatePairSponsored, sponsoredNumber)
+              })
+            } else if (entities.indexOf(decisionPrefix + 'OrganizationSponsor/') > -1) {
+              let organizationSponsorArray = entities.split('/')
+              let organizationNumber = organizationSponsorArray[organizationSponsorArray.length - 1]
+              array[entities].forEach(predicatePairOrganizationSponsor => {
+                this._findPredicateValue('OwnershipTransferOfAssetsOrganizationSponsor', 'ont', 'afm', predicatePairOrganizationSponsor, organizationNumber)
+                this._findPredicateValue('OwnershipTransferOfAssetsOrganizationSponsor', 'ont', 'afm_type', predicatePairOrganizationSponsor, organizationNumber)
+                this._findPredicateValue('OwnershipTransferOfAssetsOrganizationSponsor', 'ont', 'name', predicatePairOrganizationSponsor, organizationNumber)
+              })
+            }
+          }
         }
       } else if (subject.indexOf(decisionPrefix + 'ExpenseWithKae') > -1) {
         if (this.properties['decision_type_english'] === 'CommisionWarrant') {
@@ -468,6 +498,16 @@ class PropertiesFormatter {
       } else if (subject === 'GeneralSpecialSecretaryMonocraticBodyExpense') {
         if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency') {
           this._formatObjectProperty(this.generalSpecialSecretaryMonocraticBodyExpense, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'OwnershipTransferOfAssetsSponsored') {
+        let sponsoredCondition = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
+        if (sponsoredCondition) {
+          this._formatObjectProperty(this.ownershipTransferOfAssetsSponsored, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'OwnershipTransferOfAssetsOrganizationSponsor') {
+        let sponsoredCondition = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
+        if (sponsoredCondition) {
+          this._formatObjectProperty(this.ownershipTransferOfAssetsOrganizationSponsor, predicateSearch, predicatePair, entityIndex)
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
