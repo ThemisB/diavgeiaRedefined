@@ -81,6 +81,7 @@ class PropertiesFormatter {
     this.ownershipTransferOfAssetsOrganizationSponsor = []
     this.ownershipTransferOfAssetsSponsored = []
     this.presentArray = []
+    this.undertakingExpenses = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -112,6 +113,7 @@ class PropertiesFormatter {
     this.properties['generalSpecialSecretaryMonocraticBodyExpense'] = this.generalSpecialSecretaryMonocraticBodyExpense
     this.properties['ownershipTransferOfAssetsOrganizationSponsor'] = this.ownershipTransferOfAssetsOrganizationSponsor
     this.properties['ownershipTransferOfAssetsSponsored'] = this.ownershipTransferOfAssetsSponsored
+    this.properties['undertakingExpenses'] = this.undertakingExpenses
   }
 
   formatProperties (array) {
@@ -224,6 +226,10 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'spatial_planning_decision_type', predicatePair)
         // StartProductionalFunctionOfInvestment, SuccessfulAppointedRunnerUpList
         this._findPredicateValue(subject, 'ont', 'has_related_occupation_invitation', predicatePair)
+        // Undertaking
+        this._findPredicateValue(subject, 'ont', 'partialead', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'entry_number', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'recalled_expense', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -394,16 +400,26 @@ class PropertiesFormatter {
         }
       } else if (subject.indexOf(decisionPrefix + 'ExpenseWithKae') > -1) {
         if (this.properties['decision_type_english'] === 'CommisionWarrant') {
-          /* n ExpenseWithKae
-           * Each ExpenseWithKae has kae, expense_amount and currency
-           * there are no senders, receivers
-           */
           let expensesWithKaeArray = subject.split('/')
           let expenseWithKaeNumber = expensesWithKaeArray[expensesWithKaeArray.length - 1]
           array[subject].forEach(predicatePair => {
             this._findPredicateValue('CommisionWarrantExpense', 'ont', 'expense_amount', predicatePair, expenseWithKaeNumber)
             this._findPredicateValue('CommisionWarrantExpense', 'ont', 'expense_amount_currency', predicatePair, expenseWithKaeNumber)
             this._findPredicateValue('CommisionWarrantExpense', 'ont', 'kae', predicatePair, expenseWithKaeNumber)
+          })
+        } else if (this.properties['decision_type_english'] === 'Undertaking') {
+          /*
+           * n ExpenseWithKae
+           * Each ExpenseWithKae has kae, kae_budget_remainder, kae_credit_remainder, expense_amount and expense_amount_currency
+           */
+          let expensesWithKaeArray = subject.split('/')
+          let expenseWithKaeNumber = expensesWithKaeArray[expensesWithKaeArray.length - 1]
+          array[subject].forEach(predicatePair => {
+            this._findPredicateValue('UndertakingExpense', 'ont', 'expense_amount', predicatePair, expenseWithKaeNumber)
+            this._findPredicateValue('UndertakingExpense', 'ont', 'expense_amount_currency', predicatePair, expenseWithKaeNumber)
+            this._findPredicateValue('UndertakingExpense', 'ont', 'kae', predicatePair, expenseWithKaeNumber)
+            this._findPredicateValue('UndertakingExpense', 'ont', 'kae_budget_remainder', predicatePair, expenseWithKaeNumber)
+            this._findPredicateValue('UndertakingExpense', 'ont', 'kae_credit_remainder', predicatePair, expenseWithKaeNumber)
           })
         }
       } else if (subject.indexOf(decisionPrefix + 'Present/') > -1) {
@@ -534,6 +550,11 @@ class PropertiesFormatter {
         let sponsoredCondition = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
         if (sponsoredCondition) {
           this._formatObjectProperty(this.ownershipTransferOfAssetsOrganizationSponsor, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'UndertakingExpense') {
+        let undertakingCondition = predicateSearch === 'expense_amount' || predicateSearch === 'expense_amount_currency' || predicateSearch === 'kae' || predicateSearch === 'kae_budget_remainder' || predicateSearch === 'kae_credit_remainder'
+        if (undertakingCondition) {
+          this._formatObjectProperty(this.undertakingExpenses, predicateSearch, predicatePair, entityIndex)
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
