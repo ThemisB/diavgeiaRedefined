@@ -275,6 +275,7 @@ html
                     p(class="governemntInfo has-text-centered") <strong>Γεωγραφική Περιοχή:</strong> #{municipality}
                   if spatial_planning_decision_type
                     p(class="governemntInfo has-text-centered") <strong>Τύπος Πράξης:</strong> #{spatial_planning_decision_type}
+          //- Undertaking
           else if (decision_type_english === 'Undertaking')
             .columns.is-centered
               .column.is-half
@@ -296,10 +297,20 @@ html
                     p(class='governmentInfo has-text-centered')  <strong>Οικονομικό έτος:</strong> #{financial_year}
                   if budget_category
                     p(class='governmentInfo has-text-centered')  <strong>Κατηγορία Προϋπολογισμού:</strong> #{budget_category}
+          //- WorkAssignmentSupplyServicesStudies
+          else if (decision_type_english === 'WorkAssignmentSupplyServicesStudies')
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Ανάθεσης Έργων / Προμηθειών / Υπηρεσιών / Μελετών
+                  if work_assignment_etc_category
+                    p(class="governemntInfo has-text-centered") <strong>Κατηγορία:</strong> #{work_assignment_etc_category}
+                  if has_related_undertaking
+                    p(class='governemntInfo has-text-centered') Η απόφαση έχει <a href="visualize/#{has_related_undertaking}">σχετική ανάληψη υποχρέωσης</a>
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
-              p(class='decisionText') #{PreConsideration}
+              p(class='decisionText PreConsideration') #{PreConsideration}
             if presentArray.length > 0
               h5(class='title has-text-centered is-5') Παρόντες απόφασεις
               .columns.is-centered
@@ -354,8 +365,22 @@ html
                           a(href=linking, target='_blank', class='tag is-primary') Σύνδεσμος #{nextIndex}
             if AfterDecision
               p(class='decisionText afterDecision') #{AfterDecision}
+            if verifiers
+              .decisionText.has-text-left.verifiersSigners
+                  each verifier in verifiers
+                    - let signer = signers[verifier.signer_index - 1]
+                      div(class='signer')
+                        if verifier.has_text
+                          .notification #{verifier.has_text}
+                            <div><br/>Την απόφαση την ελέγχουν ως προς την εγκυρότητα:</div>
+                              if signer.signer_job
+                                <b>#{signer.signer_job}</b>
+                              if signer.signer_job && signer.signer_name
+                                <span>,</span>
+                              if signer.signer_name
+                                <span> #{signer.signer_name}</span>
             if signers
-              .decisionText.has-text-right <span>Την απόφαση την έχει υπογράψει:</span>
+              .decisionText.has-text-right.verifiersSigners <span>Την απόφαση την έχει υπογράψει:</span>
                   each signer in signers
                     div(class='signer')
                       if signer.signer_job
@@ -520,6 +545,23 @@ html
                         td #{undertakingExpense.expense_amount} #{undertakingExpense.expense_currency}
                         td #{undertakingExpense.kae_credit_remainder}
                         td #{undertakingExpense.kae_budget_remainder}
+            //- WorkAssignmentSupplyServicesStudies Expenses
+            else if decision_type_english === 'WorkAssignmentSupplyServicesStudies'
+              p(class='subtitle has-text-centered') Αποδέκτες Ανάθεσης Έργων / Προμηθειών / Υπηρεσιών / Μελετών
+              p(class='has-text-centered') <b>Ποσό Έργου</b>: #{workAssignmentSupplyServicesStudiesExpenses.expense_amount} #{workAssignmentSupplyServicesStudiesExpenses.expense_currency}
+              .expenses-table.has-text-centered
+                table(class='table is-striped is-bordered')
+                  thead
+                    tr
+                      th ΑΦΜ
+                      th Όνομα
+                      th Είδος ΑΦΜ
+                  tbody
+                    each workAssignmentSupplyServicesStudiesSponsor in workAssignmentSupplyServicesStudiesSponsors
+                      tr
+                        td #{workAssignmentSupplyServicesStudiesSponsor.afm}
+                        td #{workAssignmentSupplyServicesStudiesSponsor.name}
+                        td #{workAssignmentSupplyServicesStudiesSponsor.afm_type}
             //- Recipients, Recipients for share and Internal Distribution Tables
             if (recipient_for_share || recipients || internal_distribution)
               p(class='subtitle has-text-centered recipientsWrapper') Φυσικά πρόσωπα προς ενημέρωση
