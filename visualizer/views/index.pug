@@ -275,6 +275,27 @@ html
                     p(class="governemntInfo has-text-centered") <strong>Γεωγραφική Περιοχή:</strong> #{municipality}
                   if spatial_planning_decision_type
                     p(class="governemntInfo has-text-centered") <strong>Τύπος Πράξης:</strong> #{spatial_planning_decision_type}
+          else if (decision_type_english === 'Undertaking')
+            .columns.is-centered
+              .column.is-half
+                article(class='notification is-info')
+                  p(class='subtitle has-text-centered') Επιμέρους στοιχεία Ανάληψης Υποχρέωσης
+                  if entry_number
+                    p(class="governemntInfo has-text-centered") <strong>Αριθμός Καταχώρησης:</strong> #{entry_number}
+
+                  if partialead
+                    p(class="governemntInfo has-text-centered") Η απόφαση είναι τμηματική ανάληψη και έχει <strong><a href="/visualize/#{has_related_partial}" target="_blank">την εξής αρχική μερική απόφαση</a></strong>
+                  else
+                    p(class="governemntInfo has-text-centered") Η απόφαση <b>δεν</b> είναι τμηματική ανάληψη
+
+                  if recalled_expense
+                    p(class="governemntInfo has-text-centered") Η απόφαση είναι ανακλητική ανάληψη
+                  else
+                    p(class="governemntInfo has-text-centered") Η απόφαση <b>δεν</b> είναι ανακλητική ανάληψη
+                  if financial_year
+                    p(class='governmentInfo has-text-centered')  <strong>Οικονομικό έτος:</strong> #{financial_year}
+                  if budget_category
+                    p(class='governmentInfo has-text-centered')  <strong>Κατηγορία Προϋπολογισμού:</strong> #{budget_category}
           .container
             h4(class='title has-text-centered is-4') Κείμενο Απόφασης
             if PreConsideration
@@ -476,6 +497,29 @@ html
                         td #{sponsored.afm}
                         td #{sponsored.name}
                         td #{sponsored.afm_type}
+            //- Undertaking Expenses
+            else if decision_type_english === 'Undertaking'
+              p(class='subtitle has-text-centered topMargin') Ποσά Ανάληψης Υποχρέωσης
+              .expenses-table.has-text-centered
+                table(class='table is-striped is-bordered')
+                  thead
+                    tr
+                        th ΑΦΜ / Επωνυμία / Τύπος
+                        th Αριθμός ΚΑΕ
+                        th Ποσό με ΦΠΑ
+                        th Υπόλοιπο διαθέσιμης πίστωσης
+                        th Υπόλοιπο ΚΑΕ
+                  tbody
+                    each undertakingExpense in undertakingExpenses
+                      tr
+                        if undertakingExpense.afm && undertakingExpense.name && undertakingExpense.afm_type
+                          td #{undertakingExpense.afm} / #{undertakingExpense.name} / #{undertakingExpense.afm_type}
+                        else
+                          td
+                        td #{undertakingExpense.kae}
+                        td #{undertakingExpense.expense_amount} #{undertakingExpense.expense_currency}
+                        td #{undertakingExpense.kae_credit_remainder}
+                        td #{undertakingExpense.kae_budget_remainder}
             //- Recipients, Recipients for share and Internal Distribution Tables
             if (recipient_for_share || recipients || internal_distribution)
               p(class='subtitle has-text-centered recipientsWrapper') Φυσικά πρόσωπα προς ενημέρωση
