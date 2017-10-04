@@ -51,6 +51,7 @@ app.get('/visualize', function (req, res) {
       generalPropertiesFormatter.addSignersToGeneralProperties()
       generalPropertiesFormatter.addExpensesToGeneralProperties()
       generalPropertiesFormatter.addPresentArrayToGeneralProperties()
+      generalPropertiesFormatter.addVerifiersToGeneralProperties()
       res.render('index', generalPropertiesFormatter.properties)
     })
   } else {
@@ -82,6 +83,9 @@ class PropertiesFormatter {
     this.ownershipTransferOfAssetsSponsored = []
     this.presentArray = []
     this.undertakingExpenses = []
+    this.verifiers = []
+    this.workAssignmentSupplyServicesStudiesExpenses = []
+    this.workAssignmentSupplyServicesStudiesSponsors = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -100,6 +104,10 @@ class PropertiesFormatter {
     this.properties['presentArray'] = this.presentArray
   }
 
+  addVerifiersToGeneralProperties () {
+    this.properties['verifiers'] = this.verifiers
+  }
+
   addExpensesToGeneralProperties () {
     this.properties['awardExpenses'] = this.awardExpenses
     this.properties['commisionWarrantExpenses'] = this.commisionWarrantExpenses
@@ -114,6 +122,8 @@ class PropertiesFormatter {
     this.properties['ownershipTransferOfAssetsOrganizationSponsor'] = this.ownershipTransferOfAssetsOrganizationSponsor
     this.properties['ownershipTransferOfAssetsSponsored'] = this.ownershipTransferOfAssetsSponsored
     this.properties['undertakingExpenses'] = this.undertakingExpenses
+    this.properties['workAssignmentSupplyServicesStudiesExpenses'] = this.workAssignmentSupplyServicesStudiesExpenses
+    this.properties['workAssignmentSupplyServicesStudiesSponsors'] = this.workAssignmentSupplyServicesStudiesSponsors
   }
 
   formatProperties (array) {
@@ -230,6 +240,8 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'partialead', predicatePair)
         this._findPredicateValue(subject, 'ont', 'entry_number', predicatePair)
         this._findPredicateValue(subject, 'ont', 'recalled_expense', predicatePair)
+        // WorkAssignmentSupplyServicesStudies
+        this._findPredicateValue(subject, 'ont', 'work_assignment_etc_category', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -272,24 +284,26 @@ class PropertiesFormatter {
       } else if (subject.indexOf(decisionPrefix + 'Expense/') > -1) {
         var expenseArray = subject.split('/')
         var expenseNumber = expenseArray[expenseArray.length - 1]
-        if (this.properties['decision_type_english'] === 'Award') {
+        if (this.properties['decision_type_english'] === 'Award' || this.properties['decision_type_english'] === 'WorkAssignmentSupplyServicesStudies') {
           /* 1 has_expense
            * 1 expense_amount
            * n has_sponsored and n Sponsored entitites
            * Sponsors have afm, afm_type and name
            */
           array[subject].forEach(predicatePair => {
-            this._findPredicateValue('AwardExpense', 'ont', 'expense_amount', predicatePair)
-            this._findPredicateValue('AwardExpense', 'ont', 'expense_currency', predicatePair)
+            this._findPredicateValue(this.properties['decision_type_english'] + 'Expense', 'ont', 'expense_amount', predicatePair)
+            this._findPredicateValue(this.properties['decision_type_english'] + 'Expense', 'ont', 'expense_currency', predicatePair)
+            this._findPredicateValue(this.properties['decision_type_english'] + 'Expense', 'ont', 'cpv', predicatePair)
+
             var sponsored
             for (sponsored in array) {
               if (sponsored.indexOf(decisionPrefix + 'Sponsored/') > -1) {
                 let sponsoredArray = sponsored.split('/')
                 let sponsoredNumber = sponsoredArray[sponsoredArray.length - 1]
                 array[sponsored].forEach(predicatePairSponsored => {
-                  this._findPredicateValue('AwardExpense', 'ont', 'afm', predicatePairSponsored, sponsoredNumber)
-                  this._findPredicateValue('AwardExpense', 'ont', 'afm_type', predicatePairSponsored, sponsoredNumber)
-                  this._findPredicateValue('AwardExpense', 'ont', 'name', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue(this.properties['decision_type_english'] + 'Expense', 'ont', 'afm', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue(this.properties['decision_type_english'] + 'Expense', 'ont', 'afm_type', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue(this.properties['decision_type_english'] + 'Expense', 'ont', 'name', predicatePairSponsored, sponsoredNumber)
                 })
               }
             }
@@ -429,6 +443,13 @@ class PropertiesFormatter {
           this._findPredicateValue('Present', 'ont', 'present_name', predicatePair, presentNumber)
           this._findPredicateValue('Present', 'ont', 'present_title', predicatePair, presentNumber)
         })
+      } else if (subject.indexOf(decisionPrefix + 'Verification/') > -1) {
+        let verificationArray = subject.split('/')
+        let verificationNumber = verificationArray[verificationArray.length - 1]
+        array[subject].forEach(predicatePair => {
+          this._findPredicateValue('Verification', 'ont', 'has_text', predicatePair, verificationNumber)
+          this._findPredicateValue('Verification', 'ont', 'verified_by', predicatePair, verificationNumber)
+        })
       }
     }
   }
@@ -494,11 +515,25 @@ class PropertiesFormatter {
         if (predicateSearch === 'present_name' || predicateSearch === 'present_title') {
           this._formatObjectProperty(this.presentArray, predicateSearch, predicatePair, entityIndex)
         }
+      } else if (subject === 'Verification') {
+        if (predicateSearch === 'verified_by') {
+          let signerIndexSplit = predicatePair[1].split('/')
+          let signerIndex = signerIndexSplit[signerIndexSplit.length - 1]
+          this._formatObjectProperty(this.verifiers, 'signer_index', ['', '"' + signerIndex + '"'], entityIndex)
+        } else if (predicateSearch === 'has_text') {
+          this._formatObjectProperty(this.verifiers, predicateSearch, predicatePair, entityIndex)
+        }
       } else if (subject === 'AwardExpense') {
         if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency') {
           this.awardExpenses[predicateSearch] = N3Util.getLiteralValue(predicatePair[1])
         } else if (predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name') {
           this._formatObjectProperty(this.sponsors, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'WorkAssignmentSupplyServicesStudiesExpense') {
+        if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency' || predicateSearch === 'cpv') {
+          this.workAssignmentSupplyServicesStudiesExpenses[predicateSearch] = N3Util.getLiteralValue(predicatePair[1])
+        } else if (predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name') {
+          this._formatObjectProperty(this.workAssignmentSupplyServicesStudiesSponsors, predicateSearch, predicatePair, entityIndex)
         }
       } else if (subject === 'CommisionWarrantExpense') {
         if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency' || predicateSearch === 'kae') {
