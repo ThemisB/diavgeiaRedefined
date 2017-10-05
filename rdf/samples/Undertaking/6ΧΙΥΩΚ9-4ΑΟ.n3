@@ -17,7 +17,6 @@
 	ont:has_verified <Verification/1>;
 	ont:decision_call "Προτείνουμε"@el;
 	ont:has_decided <Decision/1>;
-	ont:has_decided <Verification/1>;
 	ont:signed_by <Signer/1>;
 	ont:signed_by <Signer/2>;
 	ont:has_expense_with_kae <ExpenseWithKae/1>;
