@@ -1,0 +1,66 @@
+@base <http://diavgeia.gov.gr/eli/decision/Ω97ΤΩΞΧ-8ΚΛ/3a6d5a4f-e137-4b29-9b3a-2f297b9d4827/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
+
+<> a ont:PaymentFinalisation;
+	ont:version "3a6d5a4f-e137-4b29-9b3a-2f297b9d4827";
+	ont:iun "Ω97ΤΩΞΧ-8ΚΛ"@el;
+	eli:title "ΧΕΠ.147Α/2016"@el;
+	eli:date_publication "2016-03-07"^^<http://www.w3.org/2001/XMLSchema#date>;
+	ont:government_institution_name "ΔΗΜΟΣ ΠΡΕΒΕΖΑΣ"@el;
+  ont:payment_reason "ΕΞΟΦΛΗΣΗ 31ης ΠΙΣΤΟΠΟΙΗΣΗΣ ΤΟΥ ΕΡΓΟΥ ΚΑΤΑΣΚΕΥΗ ΔΙΚΤΥΟΥ ΑΠΟΧΕΤΕΥΣΗΣ ΑΚΑΘΑΡΤΩΝ ΣΤΑ Δ.Δ. ΩΡΟΠΟΥ, ΛΟΥΡΟΥ, ΣΤΕΦΑΝΗΣ ΤΟΥ ΔΗΜΟΥ ΛΟΥΡΟΥ ΚΙ ΕΓΚΑΤΑΣΤΑΣΗ ΕΠΕΞΕΡΓΑΣΙΑΣ ΛΥΜΑΤΩΝ ΛΟΥΡΟΥ ΚΑΙ ΘΕΣΠΡΩΤΙΚΟΥ"@el;
+  ont:has_document "ΕΑΔ. 123/2016"@el;
+  ont:has_document "ΑΟΕ.88/2016-Α∆Α.ΩΖΝ4ΩΞΧ-ΩΙΧ"@el;
+  ont:has_document "ΒΕΒΑΙΩΣΗ ΦΟΡΟΥ"@el;
+  ont:has_document "31η ΠΙΣΤΟΠΟΙΗΣΗ"@el;
+  ont:has_document "ΚΑΤΑΣΤΑΣΗ ΠΛΗΡΩΜΗΣ"@el;
+  ont:has_document "Αρ.Παρ.: ΤΙΜ-ΕΡΓΩΝ33 (∆ΣΕ: 688)"@el;
+  ont:has_document "ΒΕΒΑΙΩΣΗ ΕΜΠΡΟΘΕΣΜΗΣ ΠΕΡΑΙΩΣΗΣ"@el;
+  ont:has_document "ΤΣΜΕ∆Ε-ΤΕΕ-ΕΜΠ-6ο/οο-ΒΕΒ.ΦΠΑ"@el;
+  ont:has_document "ΑΠΟΦΑΣΕΙΣ-ΠΡΑΚΤΙΚΑ-ΕΓΓΥΗΤΙΚΗ-ΜΕΛΕΤΗ"@el;
+  ont:has_document "ΑΝΑΚΟΙΝΩΣΗ ΕΤΑΙΡΙΚΗΣ ΜΕΤΑΒΟΛΗΣ"@el;
+  ont:has_document "ΕΙ∆ΙΚΟ ΠΛΗΡΕΞΟΥΣΙΟ"@el;
+  ont:has_document "Α∆Σ.529/2015-Α∆Α.7ΟΗΟΩΞΧ-ΝΚ2"@el;
+  ont:has_document "ΑΡΙΘ.ΠΡΩΤ.12443/21-9-2015 ΕΓΓΡΑΦΟ ΕΥ∆ ΕΠΥΜΕΠΕΡΑΑ"@el;
+  ont:payment_number "0147Α";
+  ont:payment_account "ΕΚΤΑΚΤΑ ΕΙΔΙΚΕΥΜΕΝΑ"@el;
+  ont:payment_sponsor "ΕΣΠΑ"@el;
+  ont:signed_by <Signer/1>;
+	ont:signed_by <Signer/2>;
+	ont:signed_by <Signer/3>;
+	ont:thematic_category "EconomicActivity";
+	ont:has_private_data false;
+	ont:organization_id "6253";
+  ont:protocol_number "5448/2016";
+	ont:unit_id "81651";
+	ont:submission_timestamp "1457342877531";
+	ont:financial_year "2016".
+
+<Signer/1> a ont:Signer;
+	ont:signer_job "Ο ΔΗΜΑΡΧΟΣ"@el.
+
+<Signer/2> a ont:Signer;
+	ont:signer_job "Ο ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el.
+
+<Signer/3> a ont:Signer;
+	ont:signer_job "Ο ΕΚΔΟΤΗΣ"@el.
+
+<WithHolding/1> a ont:WithHolding;
+  ont:witholding_expense "3847.43";
+  ont:witholding_expense_currency "EUR";
+  ont:withholding_text "ΦΟΡΟΣ 3% ΕΡΓΟΛΑΒΩΝ"@el.
+
+<Sponsored/1> a ont:Sponsored;
+  ont:afm "997752429";
+  ont:afm_type "Εθνικό"@el;
+  ont:name "Κ/Ξ ΘΑΛΗΣ ΠΕΡΙΒΑΛΛΟΝΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ Α.Ε. - ΕΓΝΩΝ Α.Τ.Ε."@el.
+
+<Expense/1> a ont:Expense;
+	ont:expense_amount "128247.69";
+	ont:expense_amount_currency "EUR";
+  ont:has_sponsored <Sponsored/1>;
+  ont:has_withholding <WithHolding/1>;
+  ont:payment_with_withholdings "124400.26";
+  ont:payment_with_withholdings_currency "EUR";
+	ont:kae "25-6263.013".

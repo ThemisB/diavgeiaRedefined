@@ -1,0 +1,55 @@
+{
+  "protocolNumber": "5448/2016",
+  "subject": "ΧΕΠ.147Α/2016",
+  "issueDate": 1457308800000,
+  "organizationId": "6253",
+  "signerIds": [
+    "114297"
+  ],
+  "unitIds": [
+    "81651"
+  ],
+  "decisionTypeId": "Β.2.2",
+  "thematicCategoryIds": [
+    "16"
+  ],
+  "extraFieldValues": {
+    "org": {
+      "afm": "997861879",
+      "afmType": "EL",
+      "enterName": false,
+      "name": "ΔΗΜΟΣ ΠΡΕΒΕΖΑΣ"
+    },
+    "skipVatReason": null,
+    "sponsor": [
+      {
+        "sponsorAFMName": {
+          "afm": "997752429",
+          "afmType": "EL",
+          "afmCountry": "EL",
+          "enterName": false,
+          "name": "ΚΟΙΝΟΠΡΑΞΙΑ ΘΑΛΗΣ ΠΕΡΙΒΑΛΛΟΝΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΑΕ ΕΓΝΩΝ ΑΤΕ"
+        },
+        "expenseAmount": {
+          "amount": 128247.69,
+          "currency": "EUR"
+        }
+      }
+    ],
+    "relatedEkgrisiDapanis": [],
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "Ω97ΤΩΞΧ-8ΚΛ",
+  "publishTimestamp": 1457342877531,
+  "submissionTimestamp": 1457342877531,
+  "versionId": "3a6d5a4f-e137-4b29-9b3a-2f297b9d4827",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/Ω97ΤΩΞΧ-8ΚΛ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/Ω97ΤΩΞΧ-8ΚΛ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}
