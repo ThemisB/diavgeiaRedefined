@@ -308,7 +308,10 @@ html
                   if has_related_undertaking
                     p(class='governemntInfo has-text-centered') Η απόφαση έχει <a href="visualize/#{has_related_undertaking}">σχετική ανάληψη υποχρέωσης</a>
           .container
-            h4(class='title has-text-centered is-4') Κείμενο Απόφασης
+            if decision_type_english !== 'PaymentFinalisation'
+              h4(class='title has-text-centered is-4') Κείμενο Απόφασης
+            else
+              h4(class='title has-text-centered is-4') Χρηματικό Ένταλμα Πληρωμής
             if PreConsideration
               p(class='decisionText PreConsideration') #{PreConsideration}
             if presentArray.length > 0
@@ -326,7 +329,7 @@ html
                           tr
                             td #{present.present_name}
                             td #{present.present_title}
-            //- Opinion has several specific properties
+            //- Opinion and PaymentFinalisation have several specific properties
             if decision_type_english === 'Opinion'
               if opinion_question_number
                 p(class='decisionText topMargin') <u><b>Αριθμός Ερωτήματος</b></u>: #{opinion_question_number}
@@ -334,6 +337,58 @@ html
                 p(class='decisionText topMargin') <u><b>Περίληψη Ερωτήματος</b></u>: #{opinion_question_summary}
               if opinion_history
                 p(class='decisionText topMargin') <u><b>Σύντομο Ιστορικό</b></u>: #{opinion_history}
+            else if decision_type_english === 'PaymentFinalisation'
+              .notification
+                p(class='decisionText paymentFinalisationMargin') <b>Αριθμός Πληρωμής</b>: #{payment_number}
+                if reason_multiple_afm_ignorance
+                  p(class='decisionText paymentFinalisationMargin') <b>Αιτία Παράληψης πολλαπλών ΑΦΜ</b>: #{reason_multiple_afm_ignorance}
+                .columns.is-centered
+                  .column
+                    .paymentFinalisationTable.topMargin
+                      table(class='table is-striped is-bordered is-fullwidth')
+                        thead
+                          tr
+                            th Δικαιούχος
+                            th Αιτία Πληρωμής
+                            th Ποσό Πληρωμής
+                            th Κρατήσεις
+                            th Καθαρό Ποσό Πληρωμής
+                            th Φορέας Πληρωμής
+                            th CPV
+                            th ΚΑΕ
+                        tbody
+                          each paymentFinalisationExpense, index in paymentFinalisationExpenses
+                            tr
+                              td #{paymentFinalisationSponsored[index].name}, με ΑΦΜ <b>#{paymentFinalisationSponsored[index].afm} (#{paymentFinalisationSponsored[index].afm_type})</b>
+                              td #{paymentFinalisationExpense.payment_reason}
+                              td <b>#{paymentFinalisationExpense.expense_amount} #{paymentFinalisationExpense.expense_amount_currency}</b>
+                              td
+                                <ul>
+                                  each withholding_index, ai_index in paymentFinalisationExpense.withholding_index
+                                    - let next_ai_index = ai_index + 1
+                                    li <b>#{next_ai_index}.</b> #{paymentFinalisationWithHoldings[withholding_index].withholding_text}, σύνολο <b>#{paymentFinalisationWithHoldings[withholding_index].withholding_expense} #{paymentFinalisationWithHoldings[withholding_index].withholding_expense_currency}</b>
+                                </ul>
+                              td <b>#{paymentFinalisationExpense.payment_with_withholdings} #{paymentFinalisationExpense.payment_with_withholdings_currency}</b>
+                              td #{paymentFinalisationOrganizationSponsors[0].name}, με ΑΦΜ <b>#{paymentFinalisationOrganizationSponsors[0].afm} (#{paymentFinalisationOrganizationSponsors[0].afm_type})</b>
+                              if paymentFinalisationExpense.cpv
+                                td #{paymentFinalisationExpense.cpv}
+                              else
+                                td ------
+                              if paymentFinalisationExpense.kae
+                                td #{paymentFinalisationExpense.kae}
+                              else
+                                td ------
+                //- .columns.is-centered
+                //-   .column.is-half.topMargin
+                //-      .recipients-table.has-text-centered
+                //-        table(class='table is-striped is-bordered is-fullwidth')
+                //-          thead
+                //-            tr
+                //-              th ΔΙΚΑΙΟΛΟΓΗΤΙΚΑ
+                //-          tbody
+                //-            each document in has_document
+                //-              tr
+                //-                td #{document}
             if considerations.length > 0
               h5(class='title has-text-centered is-5') Έχοντας λάβει υπόψη
               ol(class='decisionText')
@@ -380,7 +435,9 @@ html
                               if signer.signer_name
                                 <span> #{signer.signer_name}</span>
             if signers
-              .decisionText.has-text-right.verifiersSigners <span>Την απόφαση την έχει υπογράψει:</span>
+              - let haveOrHas = signers.length > 1 ? 'έχουν' : 'έχει'
+              if signers.length
+              .decisionText.has-text-right.verifiersSigners <span>Την απόφαση την #{haveOrHas} υπογράψει:</span>
                   each signer in signers
                     div(class='signer')
                       if signer.signer_job
