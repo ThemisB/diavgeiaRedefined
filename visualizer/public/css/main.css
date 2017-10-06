@@ -83,15 +83,17 @@ ol > .consideration:before, ol > .decision:before {
   margin-top:1em;
 }
 
-.expenses-table th, .recipients-table th, .present-table th {
+.expenses-table th, .recipients-table th, .present-table th, .paymentFinalisationTable th{
   text-align: center;
+  vertical-align: middle;
 }
 
-.expenses-table td, .recipients-table td, .present-table td {
+.expenses-table td, .recipients-table td, .present-table td, .paymentFinalisationTable td{
   text-align: center;
+  vertical-align: middle;
 }
 
-.expenses-table table, .recipients-table td, .present-table td {
+.expenses-table table, .recipients-table table, .present-table table, .paymentFinalisationTable table{
   margin: 0 auto;
   margin-top: 1em;
 }
@@ -110,4 +112,12 @@ ol > .consideration:before, ol > .decision:before {
 
 .verifiersSigners {
   padding: 1em;
+}
+
+.paymentFinalisationMargin {
+  margin-top: 0.7em;
+}
+
+.paymentFinalisationTable td {
+  font-size: 0.8em;
 }
