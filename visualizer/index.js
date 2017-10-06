@@ -86,6 +86,10 @@ class PropertiesFormatter {
     this.verifiers = []
     this.workAssignmentSupplyServicesStudiesExpenses = []
     this.workAssignmentSupplyServicesStudiesSponsors = []
+    this.paymentFinalisationSponsored = []
+    this.paymentFinalisationExpenses = []
+    this.paymentFinalisationOrganizationSponsors = []
+    this.paymentFinalisationWithHoldings = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -124,6 +128,10 @@ class PropertiesFormatter {
     this.properties['undertakingExpenses'] = this.undertakingExpenses
     this.properties['workAssignmentSupplyServicesStudiesExpenses'] = this.workAssignmentSupplyServicesStudiesExpenses
     this.properties['workAssignmentSupplyServicesStudiesSponsors'] = this.workAssignmentSupplyServicesStudiesSponsors
+    this.properties['paymentFinalisationExpenses'] = this.paymentFinalisationExpenses
+    this.properties['paymentFinalisationSponsored'] = this.paymentFinalisationSponsored
+    this.properties['paymentFinalisationOrganizationSponsors'] = this.paymentFinalisationOrganizationSponsors
+    this.properties['paymentFinalisationWithHoldings'] = this.paymentFinalisationWithHoldings
   }
 
   formatProperties (array) {
@@ -242,6 +250,9 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'recalled_expense', predicatePair)
         // WorkAssignmentSupplyServicesStudies
         this._findPredicateValue(subject, 'ont', 'work_assignment_etc_category', predicatePair)
+        // PaymentFinalisation
+        this._findPredicateValue(subject, 'ont', 'reason_multiple_afm_ignorance', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'payment_number', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
@@ -411,6 +422,52 @@ class PropertiesFormatter {
               })
             }
           }
+        } else if (this.properties['decision_type_english'] === 'PaymentFinalisation') {
+          /*
+           * N expenses
+           * For the time being, all expenses share the same OrganizationSponsor
+           * Each expense has M has_documents, 1 payment_reason, L WithHolding entitites, 1 Sponsored, 1 payment_with_withholdings and 1 payment_with_withholdings_currency, 1 cpv, 1 kae, 1 expense_amount and 1 expense_amount_currency.
+           * Government institutions should explicit fill payment_with_withholdings and payment_with_withholdings_currency, because
+           * in the case of multiple currencies we will not be able to subtract withholdings from expense_amount.
+           */
+          array[subject].forEach(predicatePair => {
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'expense_amount', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'expense_amount_currency', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'cpv', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'kae', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'payment_with_withholdings', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'payment_with_withholdings_currency', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'payment_reason', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'has_withholding', predicatePair, expenseNumber)
+            var entities
+            for (entities in array) {
+              if (entities.indexOf(decisionPrefix + 'Sponsored/') > -1) {
+                let sponsoredArray = entities.split('/')
+                let sponsoredNumber = sponsoredArray[sponsoredArray.length - 1]
+                array[entities].forEach(predicatePairSponsored => {
+                  this._findPredicateValue('PaymentFinalisationSponsored', 'ont', 'afm', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue('PaymentFinalisationSponsored', 'ont', 'afm_type', predicatePairSponsored, sponsoredNumber)
+                  this._findPredicateValue('PaymentFinalisationSponsored', 'ont', 'name', predicatePairSponsored, sponsoredNumber)
+                })
+              } else if (entities.indexOf(decisionPrefix + 'OrganizationSponsor/') > -1) {
+                let organizationSponsorArray = entities.split('/')
+                let organizationNumber = organizationSponsorArray[organizationSponsorArray.length - 1]
+                array[entities].forEach(predicatePairOrganizationSponsor => {
+                  this._findPredicateValue('PaymentFinalisationOrganizationSponsor', 'ont', 'afm', predicatePairOrganizationSponsor, organizationNumber)
+                  this._findPredicateValue('PaymentFinalisationOrganizationSponsor', 'ont', 'afm_type', predicatePairOrganizationSponsor, organizationNumber)
+                  this._findPredicateValue('PaymentFinalisationOrganizationSponsor', 'ont', 'name', predicatePairOrganizationSponsor, organizationNumber)
+                })
+              } else if (entities.indexOf(decisionPrefix + 'WithHolding/') > -1) {
+                let withHoldingsArray = entities.split('/')
+                let withHoldingNumber = withHoldingsArray[withHoldingsArray.length - 1]
+                array[entities].forEach(predicatePairWithHolding => {
+                  this._findPredicateValue('PaymentFinalisationWithHolding', 'ont', 'withholding_expense', predicatePairWithHolding, withHoldingNumber)
+                  this._findPredicateValue('PaymentFinalisationWithHolding', 'ont', 'withholding_expense_currency', predicatePairWithHolding, withHoldingNumber)
+                  this._findPredicateValue('PaymentFinalisationWithHolding', 'ont', 'withholding_text', predicatePairWithHolding, withHoldingNumber)
+                })
+              }
+            }
+          })
         }
       } else if (subject.indexOf(decisionPrefix + 'ExpenseWithKae') > -1) {
         if (this.properties['decision_type_english'] === 'CommisionWarrant') {
@@ -454,17 +511,25 @@ class PropertiesFormatter {
     }
   }
 
-  _formatObjectProperty (obj, predicate, predicatePair, entityIndex) {
+  _formatObjectProperty (obj, predicate, predicatePair, entityIndex, pushToArray = false) {
     if (!obj[entityIndex - 1]) {
       obj[entityIndex - 1] = {}
     }
-    obj[entityIndex - 1][predicate] = N3Util.getLiteralValue(predicatePair[1])
+    if (pushToArray) {
+      if (obj[entityIndex - 1][predicate] !== undefined) {
+        obj[entityIndex - 1][predicate].push(N3Util.getLiteralValue(predicatePair[1]))
+      } else {
+        obj[entityIndex - 1][predicate] = []
+        obj[entityIndex - 1][predicate].push(N3Util.getLiteralValue(predicatePair[1]))
+      }
+    } else {
+      obj[entityIndex - 1][predicate] = N3Util.getLiteralValue(predicatePair[1])
+    }
   }
 
-  _findPredicateValue (subject, ontology, predicateSearch, predicatePair, entityIndex) {
+  _findPredicateValue (subject, ontology, predicateSearch, predicatePair, entityIndex, mapToOtherEntityIndex) {
     var predicate = predicatePair[0]
     var value = predicatePair[1]
-
     var fullPredicate
     switch (ontology) {
       case 'ont':
@@ -590,6 +655,32 @@ class PropertiesFormatter {
         let undertakingCondition = predicateSearch === 'expense_amount' || predicateSearch === 'expense_amount_currency' || predicateSearch === 'kae' || predicateSearch === 'kae_budget_remainder' || predicateSearch === 'kae_credit_remainder'
         if (undertakingCondition) {
           this._formatObjectProperty(this.undertakingExpenses, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'PaymentFinalisationExpenses') {
+        let cond = predicateSearch === 'expense_amount' || predicateSearch === 'expense_amount_currency' || predicateSearch === 'cpv'
+        cond = cond || predicateSearch === 'kae' || predicateSearch === 'payment_with_withholdings' || predicateSearch === 'payment_with_withholdings_currency'
+        cond = cond || predicateSearch === 'payment_reason'
+        if (cond) {
+          this._formatObjectProperty(this.paymentFinalisationExpenses, predicateSearch, predicatePair, entityIndex)
+        } else if (predicateSearch === 'has_withholding') {
+          let withholdingIndexArray = predicatePair[1].split('/')
+          let withholdingIndex = withholdingIndexArray[withholdingIndexArray.length - 1]
+          this._formatObjectProperty(this.paymentFinalisationExpenses, 'withholding_index', ['', '"' + (withholdingIndex - 1) + '"'], entityIndex, true)
+        }
+      } else if (subject === 'PaymentFinalisationSponsored') {
+        let cond = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
+        if (cond) {
+          this._formatObjectProperty(this.paymentFinalisationSponsored, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'PaymentFinalisationOrganizationSponsor') {
+        let cond = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
+        if (cond) {
+          this._formatObjectProperty(this.paymentFinalisationOrganizationSponsors, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'PaymentFinalisationWithHolding') {
+        let cond = predicateSearch === 'withholding_expense' || predicateSearch === 'withholding_expense_currency' || predicateSearch === 'withholding_text' || predicateSearch === 'has_withholding'
+        if (cond) {
+          this._formatObjectProperty(this.paymentFinalisationWithHoldings, predicateSearch, predicatePair, entityIndex)
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
