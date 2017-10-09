@@ -359,36 +359,39 @@ html
                         tbody
                           each paymentFinalisationExpense, index in paymentFinalisationExpenses
                             tr
-                              td #{paymentFinalisationSponsored[index].name}, με ΑΦΜ <b>#{paymentFinalisationSponsored[index].afm} (#{paymentFinalisationSponsored[index].afm_type})</b>
+                              if paymentFinalisationSponsored[index].afm
+                                td #{paymentFinalisationSponsored[index].name}, με ΑΦΜ <b>#{paymentFinalisationSponsored[index].afm} (#{paymentFinalisationSponsored[index].afm_type})</b>
+                              else
+                                td #{paymentFinalisationSponsored[index].name}
                               td #{paymentFinalisationExpense.payment_reason}
                               td <b>#{paymentFinalisationExpense.expense_amount} #{paymentFinalisationExpense.expense_amount_currency}</b>
-                              td
-                                <ul>
-                                  each withholding_index, ai_index in paymentFinalisationExpense.withholding_index
-                                    - let next_ai_index = ai_index + 1
-                                    li <b>#{next_ai_index}.</b> #{paymentFinalisationWithHoldings[withholding_index].withholding_text}, σύνολο <b>#{paymentFinalisationWithHoldings[withholding_index].withholding_expense} #{paymentFinalisationWithHoldings[withholding_index].withholding_expense_currency}</b>
-                                </ul>
-                              td <b>#{paymentFinalisationExpense.payment_with_withholdings} #{paymentFinalisationExpense.payment_with_withholdings_currency}</b>
+                              if paymentFinalisationExpense.withholding_index > 0
+                                td
+                                  <ul>
+                                    each withholding_index, ai_index in paymentFinalisationExpense.withholding_index
+                                      - let next_ai_index = ai_index + 1
+                                      li <b>#{next_ai_index}.</b> #{paymentFinalisationWithHoldings[withholding_index].withholding_text}, σύνολο <b>#{paymentFinalisationWithHoldings[withholding_index].withholding_expense} #{paymentFinalisationWithHoldings[withholding_index].withholding_expense_currency}</b>
+                                  </ul>
+                              else
+                                td Δεν υπάρχουν κρατήσεις.
+                              if paymentFinalisationExpense.withholding_index
+                                td <b>#{paymentFinalisationExpense.payment_with_withholdings} #{paymentFinalisationExpense.payment_with_withholdings_currency}</b>
+                              else
+                                td <b>#{paymentFinalisationExpense.expense_amount} #{paymentFinalisationExpense.expense_amount_currency}</b>
                               td #{paymentFinalisationOrganizationSponsors[0].name}, με ΑΦΜ <b>#{paymentFinalisationOrganizationSponsors[0].afm} (#{paymentFinalisationOrganizationSponsors[0].afm_type})</b>
                               if paymentFinalisationExpense.cpv
                                 td #{paymentFinalisationExpense.cpv}
                               else
                                 td ------
-                              if paymentFinalisationExpense.kae
-                                td #{paymentFinalisationExpense.kae}
+                              if paymentFinalisationKaeWithSubExpenses.length > 0
+                                td
+                                  <ul>
+                                    each paymentFinalisationKaeWithSubExpense, pfk_index in paymentFinalisationKaeWithSubExpenses
+                                      - let next_pfk_index = pfk_index + 1
+                                        li(class='smallMargin') <b>#{next_pfk_index}.</b> #{paymentFinalisationKaeWithSubExpense.kae}, <b>#{paymentFinalisationKaeWithSubExpense.expense_amount} #{paymentFinalisationKaeWithSubExpense.expense_amount_currency}</b>
+                                  </ul>
                               else
                                 td ------
-                //- .columns.is-centered
-                //-   .column.is-half.topMargin
-                //-      .recipients-table.has-text-centered
-                //-        table(class='table is-striped is-bordered is-fullwidth')
-                //-          thead
-                //-            tr
-                //-              th ΔΙΚΑΙΟΛΟΓΗΤΙΚΑ
-                //-          tbody
-                //-            each document in has_document
-                //-              tr
-                //-                td #{document}
             if considerations.length > 0
               h5(class='title has-text-centered is-5') Έχοντας λάβει υπόψη
               ol(class='decisionText')
