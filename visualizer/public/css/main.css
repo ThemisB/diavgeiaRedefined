@@ -121,3 +121,7 @@ ol > .consideration:before, ol > .decision:before {
 .paymentFinalisationTable td {
   font-size: 0.8em;
 }
+
+.smallMargin {
+  padding-bottom:0.8em;
+}
