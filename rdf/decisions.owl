@@ -236,6 +236,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_withkaesubexpense -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_withkaesubexpense">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/KaeWithSubExpense"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/signed_by -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/signed_by">
@@ -761,6 +770,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/KaeWithSubExpense"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -777,6 +787,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Expense"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/KaeWithSubExpense"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1169,6 +1180,7 @@
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/DonationGrant"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/KaeWithSubExpense"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1481,6 +1493,15 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/partialead">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/payment_finalisation_no_afm_name -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/payment_finalisation_no_afm_name">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -2485,6 +2506,14 @@
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/InvestmentPlacing">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/KaeWithSubExpense -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/KaeWithSubExpense">
+        <rdfs:comment>Used by PaymentFinalisation Expenses when government institutions want to split their expense_amount to subexpenses and create a (KAE, subexpense) association</rdfs:comment>
     </owl:Class>
     
 
