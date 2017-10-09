@@ -90,6 +90,7 @@ class PropertiesFormatter {
     this.paymentFinalisationExpenses = []
     this.paymentFinalisationOrganizationSponsors = []
     this.paymentFinalisationWithHoldings = []
+    this.paymentFinalisationKaeWithSubExpenses = []
   }
 
   addConsiderationsToGeneralProperties () {
@@ -132,6 +133,7 @@ class PropertiesFormatter {
     this.properties['paymentFinalisationSponsored'] = this.paymentFinalisationSponsored
     this.properties['paymentFinalisationOrganizationSponsors'] = this.paymentFinalisationOrganizationSponsors
     this.properties['paymentFinalisationWithHoldings'] = this.paymentFinalisationWithHoldings
+    this.properties['paymentFinalisationKaeWithSubExpenses'] = this.paymentFinalisationKaeWithSubExpenses
   }
 
   formatProperties (array) {
@@ -439,6 +441,7 @@ class PropertiesFormatter {
             this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'payment_with_withholdings_currency', predicatePair, expenseNumber)
             this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'payment_reason', predicatePair, expenseNumber)
             this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'has_withholding', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'has_withkaesubexpense', predicatePair, expenseNumber)
             var entities
             for (entities in array) {
               if (entities.indexOf(decisionPrefix + 'Sponsored/') > -1) {
@@ -464,6 +467,14 @@ class PropertiesFormatter {
                   this._findPredicateValue('PaymentFinalisationWithHolding', 'ont', 'withholding_expense', predicatePairWithHolding, withHoldingNumber)
                   this._findPredicateValue('PaymentFinalisationWithHolding', 'ont', 'withholding_expense_currency', predicatePairWithHolding, withHoldingNumber)
                   this._findPredicateValue('PaymentFinalisationWithHolding', 'ont', 'withholding_text', predicatePairWithHolding, withHoldingNumber)
+                })
+              } else if (entities.indexOf(decisionPrefix + 'WithKaeSubExpense/') > -1) {
+                let WithKaeSubExpenseArray = entities.split('/')
+                let withKaeSubExpenseNumber = WithKaeSubExpenseArray[WithKaeSubExpenseArray.length - 1]
+                array[entities].forEach(predicatePairWithHolding => {
+                  this._findPredicateValue('PaymentFinalisationKaeWithSubExpenses', 'ont', 'expense_amount', predicatePairWithHolding, withKaeSubExpenseNumber)
+                  this._findPredicateValue('PaymentFinalisationKaeWithSubExpenses', 'ont', 'expense_amount_currency', predicatePairWithHolding, withKaeSubExpenseNumber)
+                  this._findPredicateValue('PaymentFinalisationKaeWithSubExpenses', 'ont', 'kae', predicatePairWithHolding, withKaeSubExpenseNumber)
                 })
               }
             }
@@ -666,6 +677,10 @@ class PropertiesFormatter {
           let withholdingIndexArray = predicatePair[1].split('/')
           let withholdingIndex = withholdingIndexArray[withholdingIndexArray.length - 1]
           this._formatObjectProperty(this.paymentFinalisationExpenses, 'withholding_index', ['', '"' + (withholdingIndex - 1) + '"'], entityIndex, true)
+        } else if (predicateSearch === 'has_withkaesubexpense') {
+          let kaewithsubexpenseArray = predicatePair[1].split('/')
+          let kaewithsubexpenseIndex = kaewithsubexpenseArray[kaewithsubexpenseArray.length - 1]
+          this._formatObjectProperty(this.paymentFinalisationExpenses, 'kaesubexpense', ['', '"' + (kaewithsubexpenseIndex - 1) + '"'], entityIndex, true)
         }
       } else if (subject === 'PaymentFinalisationSponsored') {
         let cond = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
@@ -678,9 +693,14 @@ class PropertiesFormatter {
           this._formatObjectProperty(this.paymentFinalisationOrganizationSponsors, predicateSearch, predicatePair, entityIndex)
         }
       } else if (subject === 'PaymentFinalisationWithHolding') {
-        let cond = predicateSearch === 'withholding_expense' || predicateSearch === 'withholding_expense_currency' || predicateSearch === 'withholding_text' || predicateSearch === 'has_withholding'
+        let cond = predicateSearch === 'withholding_expense' || predicateSearch === 'withholding_expense_currency' || predicateSearch === 'withholding_text'
         if (cond) {
           this._formatObjectProperty(this.paymentFinalisationWithHoldings, predicateSearch, predicatePair, entityIndex)
+        }
+      } else if (subject === 'PaymentFinalisationKaeWithSubExpenses') {
+        let cond = predicateSearch === 'expense_amount' || predicateSearch === 'expense_amount_currency' || predicateSearch === 'kae'
+        if (cond) {
+          this._formatObjectProperty(this.paymentFinalisationKaeWithSubExpenses, predicateSearch, predicatePair, entityIndex)
         }
       } else if (predicateSearch === 'date_publication') {
         var dateLiteral = N3Util.getLiteralValue(value)
