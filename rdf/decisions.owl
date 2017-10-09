@@ -1485,15 +1485,6 @@
     
 
 
-    <!-- http://diavgeia.gov.gr/ontology/payment_account -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/payment_account">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/PaymentFinalisation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://diavgeia.gov.gr/ontology/payment_number -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/payment_number">
@@ -1507,14 +1498,6 @@
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/payment_reason">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/payment_sponsor -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/payment_sponsor">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2268,24 +2251,6 @@
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/withholding_expense_currency">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/WithHolding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/withholding_sum -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/withholding_sum">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/PaymentFinalisation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/withholding_sum_currency -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/withholding_sum_currency">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/PaymentFinalisation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
