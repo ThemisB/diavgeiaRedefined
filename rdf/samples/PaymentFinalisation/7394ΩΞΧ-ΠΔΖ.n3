@@ -1,0 +1,106 @@
+@base <http://diavgeia.gov.gr/eli/decision/7394ΩΞΧ-ΠΔΖ/f92fdce9-77f7-460c-8e86-b801f41e65c3/>.
+@prefix ont: <http://diavgeia.gov.gr/ontology/>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix leg: <http://legislation.di.uoa.gr/eli/>.
+
+<> a ont:PaymentFinalisation;
+  ont:version "f92fdce9-77f7-460c-8e86-b801f41e65c3";
+  ont:iun "7394ΩΞΧ-ΠΔΖ"@el;
+  eli:title "ΧΕΠ.147Α/2016"@el;
+  eli:date_publication "2016-03-07"^^<http://www.w3.org/2001/XMLSchema#date>;
+  ont:government_institution_name "ΔΗΜΟΣ ΠΡΕΒΕΖΑΣ"@el;
+  ont:payment_number "0148Α";
+  ont:signed_by <Signer/1>;
+  ont:signed_by <Signer/2>;
+  ont:signed_by <Signer/3>;
+  ont:thematic_category "EconomicActivity";
+  ont:has_private_data false;
+  ont:organization_id "6253";
+  ont:protocol_number "5448/2016";
+  ont:reason_multiple_afm_ignorance "Μισθοδοσία"@el;
+  ont:unit_id "81651";
+  ont:submission_timestamp "1457342877531";
+  ont:financial_year "2016".
+
+<Signer/1> a ont:Signer;
+  ont:signer_job "Ο ΔΗΜΑΡΧΟΣ"@el.
+
+<Signer/2> a ont:Signer;
+  ont:signer_job "Ο ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el.
+
+<Signer/3> a ont:Signer;
+  ont:signer_job "Ο ΕΚΔΟΤΗΣ"@el.
+
+<Sponsored/1> a ont:Sponsored;
+  ont:name "ΑΠΟΔΟΧΕΣ ΜΟΝΙΜΩΝ ΥΠΑΛΛΗΛΩΝ"@el.
+
+<OrganizationSponsor/1> a ont:OrganizationSponsor;
+  ont:afm "997861879";
+  ont:afm_type "Εθνικό"@el;
+  ont:name "ΔΗΜΟΣ ΠΡΕΒΕΖΑΣ"@el.
+
+<WithKaeSubExpense/1> a ont:WithKaeSubExpense;
+  ont:kae "10.6011";
+  ont:expense_amount "24678.07";
+  ont:expense_amount_currency "EUR".
+
+<WithKaeSubExpense/2> a ont:WithKaeSubExpense;
+  ont:kae "15.6011";
+  ont:expense_amount "17367.27";
+  ont:expense_amount_currency "EUR".
+
+<WithKaeSubExpense/3> a ont:WithKaeSubExpense;
+  ont:kae "20.6011";
+  ont:expense_amount "24388.49";
+  ont:expense_amount_currency "EUR".
+
+<WithKaeSubExpense/4> a ont:WithKaeSubExpense;
+  ont:kae "25.6011";
+  ont:expense_amount "1400.97";
+  ont:expense_amount_currency "EUR".
+
+<WithKaeSubExpense/5> a ont:WithKaeSubExpense;
+  ont:kae "30.6011";
+  ont:expense_amount "8343.62";
+  ont:expense_amount_currency "EUR".
+
+<WithKaeSubExpense/6> a ont:WithKaeSubExpense;
+  ont:kae "35.6011";
+  ont:expense_amount "3939.91";
+  ont:expense_amount_currency "EUR".
+
+<WithKaeSubExpense/7> a ont:WithKaeSubExpense;
+  ont:kae "40.6011";
+  ont:expense_amount "4939.20";
+  ont:expense_amount_currency "EUR".
+
+<WithKaeSubExpense/8> a ont:WithKaeSubExpense;
+  ont:kae "45.6011";
+  ont:expense_amount "552.68";
+  ont:expense_amount_currency "EUR".
+
+<WithKaeSubExpense/9> a ont:WithKaeSubExpense;
+  ont:kae "50.6011";
+  ont:expense_amount "3148.97";
+  ont:expense_amount_currency "EUR".
+
+<Expense/1> a ont:Expense;
+  ont:expense_amount "88759.18";
+  ont:expense_amount_currency "EUR";
+  ont:has_sponsored <Sponsored/1>;
+  ont:has_organization_sponsor <OrganizationSponsor/1>;
+  ont:payment_reason "ΑΠΟΔΟΧΕΣ ΜΟΝΙΜΩΝ ΥΠΑΛΛΗΛΩΝ - Β' 15/ΜΕΡΟ ΜΑΡΤΙΟΥ ΕΤΟΣ 2016"@el;
+  ont:has_document "ΕΑΔ 1/2016 ΣΤΟ ΧΕΠ"@el;
+  ont:has_document "ΛΟΙΠΑ ΔΙΚΑΙΟΛΟΓΗΤΙΚΑ ΣΤΟ ΧΕΠ Α1/2016"@el;
+  ont:has_document "ΚΑΤΑΣΤΑΣΕΙΣ ΜΙΣΘΟΔΟΣΙΑΣ"@el;
+  ont:has_document "ΚΑΤΑΣΤΑΣΗ ΠΛΗΡΩΜΗΣ"@el;
+  ont:has_document "Αρ.Παρ: ΜΙΣΘ15 (ΔΣΕ: 689)"@el;
+  ont:has_withkaesubexpense <WithKaeSubExpense/1>;
+  ont:has_withkaesubexpense <WithKaeSubExpense/2>;
+  ont:has_withkaesubexpense <WithKaeSubExpense/3>;
+  ont:has_withkaesubexpense <WithKaeSubExpense/4>;
+  ont:has_withkaesubexpense <WithKaeSubExpense/5>;
+  ont:has_withkaesubexpense <WithKaeSubExpense/6>;
+  ont:has_withkaesubexpense <WithKaeSubExpense/7>;
+  ont:has_withkaesubexpense <WithKaeSubExpense/8>;
+  ont:has_withkaesubexpense <WithKaeSubExpense/9>.

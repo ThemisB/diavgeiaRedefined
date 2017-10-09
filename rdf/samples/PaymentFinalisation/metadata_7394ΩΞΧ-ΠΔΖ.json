@@ -1,0 +1,41 @@
+{
+  "protocolNumber": "5449/2016",
+  "subject": "ΧΕΠ.148Α/2016",
+  "issueDate": 1457308800000,
+  "organizationId": "6253",
+  "signerIds": [
+    "114297"
+  ],
+  "unitIds": [
+    "81651"
+  ],
+  "decisionTypeId": "Β.2.2",
+  "thematicCategoryIds": [
+    "16"
+  ],
+  "extraFieldValues": {
+    "org": {
+      "afm": "997861879",
+      "afmType": "EL",
+      "enterName": false,
+      "name": "ΔΗΜΟΣ ΠΡΕΒΕΖΑΣ"
+    },
+    "skipVatReason": "SKIP_VAT_REASON_1",
+    "sponsor": [],
+    "relatedEkgrisiDapanis": [],
+    "relatedDecisions": [],
+    "documentType": "ΠΡΑΞΗ"
+  },
+  "privateData": false,
+  "ada": "7394ΩΞΧ-ΠΔΖ",
+  "publishTimestamp": 1457342901016,
+  "submissionTimestamp": 1457342901016,
+  "versionId": "f92fdce9-77f7-460c-8e86-b801f41e65c3",
+  "status": "PUBLISHED",
+  "url": "https://diavgeia.gov.gr/luminapi/api/decisions/7394ΩΞΧ-ΠΔΖ",
+  "documentUrl": "https://diavgeia.gov.gr/doc/7394ΩΞΧ-ΠΔΖ",
+  "documentChecksum": null,
+  "attachments": [],
+  "warnings": null,
+  "correctedVersionId": null
+}

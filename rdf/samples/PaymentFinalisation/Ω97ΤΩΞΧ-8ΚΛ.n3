@@ -45,6 +45,11 @@
   ont:afm_type "Εθνικό"@el;
   ont:name "ΔΗΜΟΣ ΠΡΕΒΕΖΑΣ"@el.
 
+<WithKaeSubExpense/1> a ont:WithKaeSubExpense;
+  ont:kae "25-6263.013";
+  ont:expense_amount "128247.69";
+  ont:expense_amount_currency "EUR".
+
 <Expense/1> a ont:Expense;
   ont:expense_amount "128247.69";
   ont:expense_amount_currency "EUR";
@@ -68,4 +73,4 @@
   ont:has_document "Α∆Σ.529/2015-Α∆Α.7ΟΗΟΩΞΧ-ΝΚ2"@el;
   ont:has_document "ΑΡΙΘ.ΠΡΩΤ.12443/21-9-2015 ΕΓΓΡΑΦΟ ΕΥ∆ ΕΠΥΜΕΠΕΡΑΑ"@el;
   ont:payment_sponsor "ΕΣΠΑ"@el;
-  ont:kae "25-6263.013".
+  ont:has_withkaesubexpense <WithKaeSubExpense/1>.
