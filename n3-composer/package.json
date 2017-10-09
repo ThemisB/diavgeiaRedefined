@@ -36,7 +36,7 @@
     "express": "^4.15.3",
     "fs-extra": "^4.0.1",
     "jquery": "^3.2.1",
-    "nuxt": "^1.0.0-alpha.5",
+    "nuxt": "^1.0.0-rc11",
     "source-map-support": "^0.4.15"
   },
   "devDependencies": {

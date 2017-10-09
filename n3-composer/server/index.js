@@ -1,4 +1,4 @@
-import Nuxt from 'nuxt'
+import {Nuxt, Builder} from 'nuxt'
 import express from 'express'
 
 import api from './api'
@@ -19,7 +19,11 @@ async function start() {
   // Instanciate nuxt.js
   const nuxt = new Nuxt(config)
   // Add nuxt.js middleware
-
+  // Build only in dev mode
+  if (config.dev) {
+    const builder = new Builder(nuxt)
+    builder.build()
+  }
   app.use(nuxt.render)
 
   // Listen the server
