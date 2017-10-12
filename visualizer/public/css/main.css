@@ -125,3 +125,7 @@ ol > .consideration:before, ol > .decision:before {
 .smallMargin {
   padding-bottom:0.8em;
 }
+
+.bottomSmallMargin {
+  padding-bottom: 0.7em;
+}
