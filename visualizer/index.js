@@ -228,7 +228,7 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'vacancy_opening_type', predicatePair)
         // Opinion
         this._findPredicateValue(subject, 'ont', 'opinion_question_number', predicatePair)
-        this._findPredicateValue(subject, 'ont', 'opinion_summary', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'opinion_question_summary', predicatePair)
         this._findPredicateValue(subject, 'ont', 'opinion_history', predicatePair)
         this._findPredicateValue(subject, 'ont', 'opinion_analysis', predicatePair)
         this._findPredicateValue(subject, 'ont', 'opinion_conclusion', predicatePair)
