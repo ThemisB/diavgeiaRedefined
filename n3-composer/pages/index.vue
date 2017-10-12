@@ -1,22 +1,53 @@
 <template>
-  <div class="container">
-    <div class="alert alert-success alert-dismissible successfulSubmission" role="alert" v-if="success">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      Η απόφαση έχει αναρτηθεί στην Διαύγεια και στο SPARQL endpoint
-    </div>
-
-    <h1 class="text-center decisionCreation dvgColor">Δημιουργία Απόφασης Φορέα</h1>
-    <form class="panel" action="/api/createDecision" method="post">
-      <government-institution-info></government-institution-info>
-      <h2 class="text-center dvgColor">Συγγραφή Απόφασης</h2>
-      <decisions-composer></decisions-composer>
-      <div class="row">
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary btn-md">Ανεβάστε την Απόφαση</button>
+  <div>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <h1 class="title" style="display:inline-block">Συγγραφή Αποφάσεων</h1>
+              <h2 class="subtitle">Δημιουργία RDF Αποφάσεων σε text editor</h2>
+            </div>
+            <div class="column is-narrow">
+              <div class="box">
+                <article class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="../assets/national_emblem_64.png">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p><strong style="font-size:1.2em">Διαύγεια</strong> <br> Διαφάνεια στο κράτος</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </form>
-  </div>
+    </section>
+  <section class="section is-fullheight">
+    <div class="container">
+      <div class="alert alert-success alert-dismissible successfulSubmission" role="alert" v-if="success">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Η απόφαση έχει αναρτηθεί στην Διαύγεια και στο SPARQL endpoint
+      </div>
+
+      <form action="/api/createDecision" method="post">
+        <government-institution-info></government-institution-info>
+        <h2 class="has-text-centered title dvgColor" style="margin-top:0.7em;">Συγγραφή Απόφασης</h2>
+        <decisions-composer></decisions-composer>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <button type="submit" class="button is-primary">Ανεβάστε την Απόφαση</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
 </template>
 
 <script>
