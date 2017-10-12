@@ -1,31 +1,30 @@
 <template>
-  <div class="col-xs-5">
-    <div class="col-xs-3">
-    <h5 class="text-center">Είδος Νομοθεσίας</h5>
-    <select class="pickers" :name="getType" :id="getPicker" data-width="auto" v-model="selected">
-      <option value="law">ΝΟΜΟΣ</option>
-      <option value="pd">ΠΡΟΕΔΡΙΚΟ ΔΙΑΤΑΓΜΑ</option>
-      <option value="dvg">ΑΠΟΦΑΣΗ ΔΙΑΥΓΕΙΑΣ</option>
-    </select>
-    </div>
-    <div class="col-xs-9 text-center">
-      <div v-if="selected != 'dvg'">
-        <h5 class="text-center">Νομοθεσία</h5>
-        <div class="input-group">
-          <input type="text" :name="getYear" placeholder="Χρονιά" maxlength="4" minlength="4" class="form-control"/>
-          <span class="input-group-addon">/</span>
-          <input type="text" :name="getNumber" placeholder="Αριθμός" class="form-control"/>
-          <span class="input-group-addon">/</span>
-          <input type="text" :name="getArticle" placeholder="Άρθρο" class="form-control"/>
-          <span class="input-group-addon">/</span>
-          <input type="text" :name="getParagraph" placeholder="Παράγραφος" class="form-control"/>
+  <div class="column is-one-third">
+    <div class="columns">
+      <div class="column">
+      <h5 class="has-text-centered">Είδος Νομοθεσίας</h5>
+      <multiselect title="Επιλέξτε το είδος απόφασης" :id="getPicker" required="required" v-model="selected" :options="options" track-by="label" label="label" placeholder="Επιλογή νομοθεσίας" select-label="Πατήστε enter για επιλογή" selected-label="Επιλεγμένο" deselect-label="Πατήστε enter για αφαίρεση">
+      <span slot="noResult">Δεν βρέθηκε νομοθεσία</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" :name="getType" :value="selected.value">
+        <div v-if="selected.value != 'dvg'">
+          <h5 class="has-text-centered">Νομοθεσία</h5>
+          <div class="field is-grouped">
+            <input type="text" :name="getYear" placeholder="Χρονιά" maxlength="4" minlength="4" class="input"/>
+            <input type="text" :name="getNumber" placeholder="Αριθμός" class="input"/>
+            <input type="text" :name="getArticle" placeholder="Άρθρο" class="input"/>
+            <input type="text" :name="getParagraph" placeholder="Παράγραφος" class="input"/>
+          </div>
         </div>
+        <div v-else>
+          <h5 class="has-text-centered">ΑΔΑ Απόφασης</h5>
+          <div class="field is-grouped">
+            <input type="text" :name="getIUN" placeholder="Ο ΑΔΑ της απόφασης" class="input">
+          </div>
+        </div>
+        <input type="hidden" :name="getLegislationIndex" :value="getLegislationLinkingNumberValue">
       </div>
-      <div v-else>
-        <h5>ΑΔΑ Απόφασης</h5>
-        <input type="text" :name="getIUN" placeholder="Ο ΑΔΑ της απόφασης, όπως έχει αναρτηθεί στην Διαύγεια" class="form-control">
-      </div>
-      <input type="hidden" :name="getLegislationIndex" :value="getLegislationLinkingNumberValue">
     </div>
   </div>
 </template>
@@ -34,10 +33,11 @@
 
 import InputHandler from './mixins/InputHandler.js'
 import $ from 'jquery'
-
+import Multiselect from 'vue-multiselect'
 export default {
   props: ['decisionNumber', 'considerationNumber', 'type'],
   mixins: [ InputHandler ],
+  components: {Multiselect},
   computed: {
     // Considerations
     getConsiderationType: function () {
@@ -120,7 +120,12 @@ export default {
   },
   data: function () {
     return {
-      selected: 'law'
+      selected: 'law',
+      options: [
+        {label:'ΝΟΜΟΣ', value:'law'},
+        {label:'ΠΡΟΕΔΡΙΚΟ ΔΙΑΤΑΓΜΑ', value:'pd'},
+        {label:'ΑΠΟΦΑΣΗ ΔΙΑΥΓΕΙΑΣ', value:'dvg'}
+      ]
     }
   },
   mounted: function () {
@@ -128,7 +133,7 @@ export default {
     $('#' + _this.getInputGroupId + ' input').on('keypress', function (e) {
       return _this.isNumber(e)
     })
-    $('#' + _this.getPicker).selectpicker()
+    // $('#' + _this.getPicker).selectpicker()
   }
 }
 
