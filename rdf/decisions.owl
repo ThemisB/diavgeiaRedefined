@@ -13,6 +13,11 @@
      xmlns:ontology="http://data.europa.eu/eli/ontology#">
     <owl:Ontology rdf:about="http://diavgeia.gov.gr/ontology/">
         <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
+        <terms:contributor>Themis Beris</terms:contributor>
+        <terms:creator>Themis Beris</terms:creator>
+        <rdfs:comment>The &quot;decisions&quot; ontology describes decisions uploaded on Diavgeia&apos;s website (https://diavgeia.gov.gr/). The ontology links to other well-known greek ontologies (such as the greek legislation ontology (legislation.di.uoa.gr) and ELI (eli.fr))</rdfs:comment>
+        <vann:preferredNamespacePrefix>dvg</vann:preferredNamespacePrefix>
+        <terms:title>decisions.owl - An ontology describing decisions uploaded on Diavgeia</terms:title>
     </owl:Ontology>
     
 
@@ -1413,6 +1418,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/opinion_analysis">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Opinion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Ανάλυση</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1422,6 +1428,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/opinion_conclusion">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Opinion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Συμπεράσμα - Απάντηση</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1447,6 +1454,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Είδος φορέα για γνωμοδότηση</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1456,6 +1464,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/opinion_history">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Opinion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Σύντομο Ιστορικό</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1465,6 +1474,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/opinion_question_number">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Opinion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Αριθμός Ερωτήματος</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1474,6 +1484,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/opinion_question_summary">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Opinion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Η περίληψη του ερωτήματος</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2557,7 +2568,14 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Opinion">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΓΝΩΜΟΔΟΤΗΣΗ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΓΝΩΜΟΔΟΤΗΣΗ&quot;. 
+
+Opinions differentiate from other decisions, as they have very specific decision parts.
+
+You can pay a visit to this pdf opinion: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Opinion/6%CE%93%CE%96%CE%9A%CE%9F%CE%A1%CE%A1%CE%95-%CE%96%CE%9E%CE%9A.pdf
+
+
+For more opinions that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%93%CE%9D%CE%A9%CE%9C%CE%9F%CE%94%CE%9F%CE%A4%CE%97%CE%A3%CE%97%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
