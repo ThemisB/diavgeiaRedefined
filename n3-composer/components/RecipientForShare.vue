@@ -1,7 +1,7 @@
 <template>
   <div>
-    <label :for="getRecipientForShareLabel">{{number}}ος Αποδέκτης προς Κοινοποίηση</span></label>
-    <textarea class="form-control" rows="2" :id="getRecipientForShareLabel" :name="getRecipientForShare" :placeholder="getRecipientForSharePlaceholder"></textarea>
+    <label :for="getRecipientForShareLabel" class="label has-text-centered recipientsLabel">{{number}}ος Αποδέκτης προς Κοινοποίηση</span></label>
+    <textarea class="textarea" rows="2" :id="getRecipientForShareLabel" :name="getRecipientForShare" :placeholder="getRecipientForSharePlaceholder"></textarea>
     <input type="hidden" :name="getRecipientForShareIndex" :value="number">
   </div>
 </template>
