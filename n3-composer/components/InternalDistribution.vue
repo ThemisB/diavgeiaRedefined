@@ -1,7 +1,7 @@
 <template>
   <div>
-    <label :for="getInternalDistributionLabel">{{number}}ος Αποδέκτης προς Εσωτερική Διανομή</span></label>
-    <textarea class="form-control" rows="2" :id="getInternalDistributionLabel" :name="getInternalDistribution" :placeholder="getInternalDistributionPlaceholder"></textarea>
+    <label :for="getInternalDistributionLabel" class="label has-text-centered recipientsLabel">{{number}}ος Αποδέκτης προς Εσωτερική Διανομή</span></label>
+    <textarea class="textarea" rows="2" :id="getInternalDistributionLabel" :name="getInternalDistribution" :placeholder="getInternalDistributionPlaceholder"></textarea>
     <input type="hidden" :name="getInternalDistributionIndex" :value="number">
   </div>
 </template>
