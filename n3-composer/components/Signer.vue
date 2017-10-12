@@ -1,15 +1,17 @@
 <template>
-  <div class="row">
-    <h5 class="text-center">Στοιχεία {{number}}ου υπογραφών</h5>
-    <div class="col-xs-6">
-      <label :for="getSignerNameLabel">Όνομα και επώνυμο</span></label>
-      <input type="text" class="form-control" :id="getSignerNameLabel" :name="getSignerName">
+  <div>
+    <h5 class="has-text-centered">Στοιχεία {{number}}ου υπογραφών</h5>
+    <div class="columns">
+      <div class="column">
+        <label :for="getSignerNameLabel" class="label recipientsLabel has-text-centered">Όνομα και επώνυμο</span></label>
+        <input type="text" class="input" :id="getSignerNameLabel" :name="getSignerName">
+      </div>
+      <div class="column">
+        <label :for="getSignerJobLabel" class="label recipientsLabel has-text-centered">Τίτλος Εργασίας</span></label>
+        <input type="text" class="input" :id="getSignerJobLabel" :name="getSignerJob" placeholder="π.χ. ΑΝΤΙΔΗΜΑΡΧΟΣ ΠΕΙΡΑΙΑ">
+      </div>
+      <input type="hidden" :name="getSignerIndex" :value="number">
     </div>
-    <div class="col-xs-6">
-      <label :for="getSignerJobLabel">Τίτλος Εργασίας</span></label>
-      <input type="text" class="form-control" :id="getSignerJobLabel" :name="getSignerJob" placeholder="π.χ. ΑΝΤΙΔΗΜΑΡΧΟΣ ΠΕΙΡΑΙΑ">
-    </div>
-    <input type="hidden" :name="getSignerIndex" :value="number">
   </div>
 </template>
 
