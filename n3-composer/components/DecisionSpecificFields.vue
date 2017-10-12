@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h3 class="text-center"><u>Ειδικά πεδία {{ selected | getSpecialFieldsTranslator}}</u></h3>
+  <h3 class="has-text-centered subtitle is-4">Ειδικά πεδία {{ selected | getSpecialFieldsTranslator}}</h3>
   <div v-if="selected === 'Normative'">
     <normative></normative>
   </div>
@@ -69,9 +69,6 @@
   </div>
   <div v-else-if="selected === 'WorkAssignmentSupplyServicesStudies'">
     <work-assignment-supply-services-studies></work-assignment-supply-services-studies>
-  </div>
-  <div v-else-if="selected === 'Opinion'">
-    <opinion></opinion>
   </div>
 </div>
 </template>
