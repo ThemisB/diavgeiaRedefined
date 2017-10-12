@@ -1,47 +1,54 @@
 <template>
-  <div class="col-xs-4 text-center">
-    <label for="thematic_category" class="form-control-label">Θεματική Κατηγορία</label>
-    <select class="selectpicker pickers" multiple title="Επιλογή 1 ή πολλών Θεμ. Κατηγοριών" data-live-search="true" id="thematic_category" name="thematic_category" data-width="auto" required="required">
-      <option v-for="thematicCategory in thematicCategories" :data-tokens="thematicCategory.keywords" :value="thematicCategory.value">{{thematicCategory.text}}</option>
-    </select>
+  <div class="column is-half">
+      <label for="thematic_category" class="label">Θεματικές Κατηγορίες</label>
+      <multiselect title="Επιλέξτε το είδος απόφασης" id="thematic_category" data-width="auto" required="required" :options="thematicCategoriesValues" :custom-label="formatLabel" placeholder="Επιλογή πολλών θεματικών κατηγοριών" select-label="Πατήστε enter για επιλογή" selected-label="Επιλεγμένο" deselect-label="Πατήστε enter για αφαίρεση" :multiple="true" v-model="value">
+      <span slot="noResult">Δεν βρέθηκε θεματική κατηγορία</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="thematic_category[]" v-for="val in value" :value="val">
   </div>
 </template>
 
 <script>
 
-import $ from 'jquery'
+import Multiselect from 'vue-multiselect'
 
 export default {
+  components: {Multiselect},
   data: () => {
     return {
-      thematicCategories: [
-        {text: 'ΑΠΑΣΧΟΛΗΣΗ ΚΑΙ ΕΡΓΑΣΙΑ', value: 'Employment', keywords: 'Απασχόληση Απασχοληση Εργασία Εργασια Και'},
-        {text: 'BIOMHXANIA', value: 'Industry', keywords: 'Βιομηχανία Βιομηχανια'},
-        {text: 'ΓΕΩΡΓΙΑ, ΔΑΣΟΚΟΜΙΑ ΚΑΙ ΑΛΙΕΙΑ', value: 'AgricultureForestryFishery', keywords: 'Γεωργία Γεωργια Δασοκομία Δασοκομια Αλιεία Και'},
-        {text: 'ΓΕΩΓΡΑΦΙΑ', value: 'Geography', keywords: 'Γεωγραφία Γεωγραφια'},
-        {text: 'ΔΗΜΟΣΙΑ ΔΙΟΙΚΗΣΗ', value: 'PublicAdministration', keywords: 'Δημόσια Δημοσια Διοίκηση Διοικηση'},
-        {text: 'ΔΗΜΟΣΙΟΝΟΜΙΚΑ', value: 'Fiscals', keywords: 'Δημοσιονομικά Δημοσιονομικα'},
-        {text: 'ΔΙΑΤΡΟΦΗ ΚΑΙ ΓΕΩΡΓΙΚΑ ΠΡΟΪΟΝΤΑ', value: 'NutritionAgriculturalProducts', keywords: 'Διατροφή Διατροφη Γεωργικά Γεωργικα Προϊόντα Προϊοντα Προιοντα Προϊοντα Και'},
-        {text: 'ΔΙΕΘΝΕΙΣ ΟΡΓΑΝΙΣΜΟΙ', value: 'InternationalOrganizations', keywords: 'Διεθνείς Διεθνεις Οργανισμοί Οργανισμοι'},
-        {text: 'ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ', value: 'InternationalRelations', keywords: 'Διεθνείς Διεθνεις Σχέσεις Σχεσεις'},
-        {text: 'ΔΙΚΑΙΟ', value: 'Laws', keywords: 'Δίκαιο Δικαιο'},
-        {text: 'ΕΝΕΡΓΕΙΑ', value: 'Energy', keywords: 'Ενέργεια Ενεργεια'},
-        {text: 'ΕΠΙΚΟΙΝΩΝΙΑ ΚΑΙ ΜΟΡΦΩΣΗ', value: 'CommunicationEducation', keywords: 'Επικοινωνία Επικοινωνια Μόρφωση Μορφωση Και'},
-        {text: 'ΕΠΙΣΤΗΜΕΣ', value: 'Science', keywords: 'Επιστήμες Επιστημες'},
-        {text: 'ΕΠΙΧΕΙΡΗΣΕΙΣ ΚΑΙ ΑΝΤΑΓΩΝΙΣΜΟΣ', value: 'BusinessCompetition', keywords: 'Επιχειρήσεις Επιχειρησεις Ανταγωνισμός Ανταγωνισμος Και'},
-        {text: 'ΕΥΡΩΠΑΪΚΗ ΕΝΩΣΗ', value: 'EuropeanUnion', keywords: 'Ευρωπαϊκή Ευρωπαϊκη Ευρωπαικη Ευρωπαική Ένωση Ενωση'},
-        {text: 'ΚΟΙΝΩΝΙΚΑ ΘΕΜΑΤΑ', value: 'SocialIssues', keywords: 'Κοινωνικά Κοινωνικα Θέματα Θεματα'},
-        {text: 'ΜΕΤΑΦΟΡΕΣ', value: 'Transport', keywords: 'Μεταφορές Μεταφορες'},
-        {text: 'ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΙ ΕΜΠΟΡΙΚΕΣ ΣΥΝΑΛΛΑΓΕΣ', value: 'EconomicTradeExchanges', keywords: 'Οικονομικές Οικονομικες Εμπορικές Εμπορικες Συναλλαγές Συναλλαγες Και'},
-        {text: 'ΟΙΚΟΝΟΜΙΚΗ ΖΩΗ', value: 'EconomicActivity', keywords: 'Οικονομική Οικονομικη Ζωή Ζωη'},
-        {text: 'ΠΑΡΑΓΩΓΗ, ΤΕΧΝΟΛΟΓΙΑ ΚΑΙ ΕΡΕΥΝΑ', value: 'ManufactureTechnologyResearch', keywords: 'Παραγωγή Παραγωγη Τεχνολογία Τεχνολογια Έρευνα Ερευνα Και'},
-        {text: 'ΠΕΡΙΒΑΛΛΟΝ', value: 'Environment', keywords: 'Περιβάλλον Περιβαλλον'},
-        {text: 'ΠΟΛΙΤΙΚΗ ΖΩΗ', value: 'PoliticalLife', keywords: 'Πολιτική Πολιτικη Ζωή Ζωη'}
-      ]
+      value: '',
+      thematicCategoriesValues: ['Employment', 'Industry', 'AgricultureForestryFishery', 'Geography', 'PublicAdministration', 'Fiscals', 'NutritionAgriculturalProducts', 'InternationalOrganizations', 'InternationalRelations', 'Laws', 'Energy', 'CommunicationEducation', 'Science', 'BusinessCompetition', 'EuropeanUnion', 'SocialIssues', 'Transport', 'EconomicTradeExchanges', 'EconomicActivity', 'ManufactureTechnologyResearch', 'Environment', 'PoliticalLife'],
+      thematicCategories: {
+        'Employment': 'ΑΠΑΣΧΟΛΗΣΗ ΚΑΙ ΕΡΓΑΣΙΑ',
+        'Industry': 'BIOMHXANIA',
+        'AgricultureForestryFishery': 'ΓΕΩΡΓΙΑ, ΔΑΣΟΚΟΜΙΑ ΚΑΙ ΑΛΙΕΙΑ',
+        'Geography': 'ΓΕΩΓΡΑΦΙΑ',
+        'PublicAdministration': 'ΔΗΜΟΣΙΑ ΔΙΟΙΚΗΣΗ',
+        'Fiscals': 'ΔΗΜΟΣΙΟΝΟΜΙΚΑ',
+        'NutritionAgriculturalProducts': 'ΔΙΑΤΡΟΦΗ ΚΑΙ ΓΕΩΡΓΙΚΑ ΠΡΟΪΟΝΤΑ',
+        'InternationalOrganizations': 'ΔΙΕΘΝΕΙΣ ΟΡΓΑΝΙΣΜΟΙ',
+        'InternationalRelations': 'ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ',
+        'Laws': 'ΔΙΚΑΙΟ',
+        'Energy': 'ΕΝΕΡΓΕΙΑ',
+        'CommunicationEducation': 'ΕΠΙΚΟΙΝΩΝΙΑ ΚΑΙ ΜΟΡΦΩΣΗ',
+        'Science': 'ΕΠΙΣΤΗΜΕΣ',
+        'BusinessCompetition': 'ΕΠΙΧΕΙΡΗΣΕΙΣ ΚΑΙ ΑΝΤΑΓΩΝΙΣΜΟΣ',
+        'EuropeanUnion': 'ΕΥΡΩΠΑΪΚΗ ΕΝΩΣΗ',
+        'SocialIssues': 'ΚΟΙΝΩΝΙΚΑ ΘΕΜΑΤΑ',
+        'Transport': 'ΜΕΤΑΦΟΡΕΣ',
+        'EconomicTradeExchanges': 'ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΙ ΕΜΠΟΡΙΚΕΣ ΣΥΝΑΛΛΑΓΕΣ',
+        'EconomicActivity': 'ΟΙΚΟΝΟΜΙΚΗ ΖΩΗ',
+        'ManufactureTechnologyResearch': 'ΠΑΡΑΓΩΓΗ, ΤΕΧΝΟΛΟΓΙΑ ΚΑΙ ΕΡΕΥΝΑ',
+        'Environment': 'ΠΕΡΙΒΑΛΛΟΝ',
+        'PoliticalLife': 'ΠΟΛΙΤΙΚΗ ΖΩΗ'
+      }
     }
   },
-  mounted: function () {
-    $('#thematic_category').selectpicker()
+  methods: {
+    formatLabel: function(value) {
+      return this.thematicCategories[value]
+    }
   }
 }
 
