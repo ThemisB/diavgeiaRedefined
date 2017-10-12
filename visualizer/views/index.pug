@@ -332,11 +332,11 @@ html
             //- Opinion and PaymentFinalisation have several specific properties
             if decision_type_english === 'Opinion'
               if opinion_question_number
-                p(class='decisionText topMargin') <u><b>Αριθμός Ερωτήματος</b></u>: #{opinion_question_number}
+                p(class='decisionText topMargin bottomSmallMargin') <u><b>Αριθμός Ερωτήματος</b></u>: #{opinion_question_number}
               if opinion_question_summary
-                p(class='decisionText topMargin') <u><b>Περίληψη Ερωτήματος</b></u>: #{opinion_question_summary}
+                p(class='decisionText topMargin bottomSmallMargin') <u><b>Περίληψη Ερωτήματος</b></u>: #{opinion_question_summary}
               if opinion_history
-                p(class='decisionText topMargin') <u><b>Σύντομο Ιστορικό</b></u>: #{opinion_history}
+                p(class='decisionText topMargin bottomSmallMargin') <u><b>Σύντομο Ιστορικό</b></u>: #{opinion_history}
             else if decision_type_english === 'PaymentFinalisation'
               .notification
                 p(class='decisionText paymentFinalisationMargin') <b>Αριθμός Πληρωμής</b>: #{payment_number}
