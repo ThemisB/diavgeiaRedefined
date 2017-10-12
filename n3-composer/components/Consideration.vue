@@ -1,9 +1,9 @@
 <template>
-  <div class="col-xs-12 consideration">
-    <div class="row">
-      <div class="col-xs-7">
-        <label :for="getConsiderationLabel"><span class="badge">ΛΑΜΒΑΝΩ ΥΠΟΨΗΝ #{{considerationNumber}}</span></label>
-        <textarea class="form-control" rows="2" :id="getConsiderationLabel" :name="getConsiderationName" :placeholder="getBadgePlaceholder"></textarea>
+  <div class="column">
+    <div class="columns">
+      <div class="column is-two-thirds">
+        <label :for="getConsiderationLabel"><span class="tag is-light">ΛΑΜΒΑΝΩ ΥΠΟΨΗΝ #{{considerationNumber}}</span></label>
+        <textarea class="textarea" :id="getConsiderationLabel" :name="getConsiderationName" :placeholder="getBadgePlaceholder"></textarea>
       </div>
       <legislation-linking type="consideration" v-bind:considerationNumber="considerationNumber"></legislation-linking>
     </div>
