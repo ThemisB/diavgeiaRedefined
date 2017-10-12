@@ -7,14 +7,7 @@ body {
 }
 
 .decisionCreation {
-  padding-bottom: 0.5em;
-}
-
-.panel {
-  padding: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  background: white;
-  border-radius: 2px;
+  padding-top: 0.5em;
 }
 
 .row {
@@ -47,7 +40,7 @@ body {
 }
 
 .dvgColor {
-  color: #237885;
+  color: #363636;
 }
 
 .paddingRecipients {
@@ -83,4 +76,14 @@ body {
     display: inline-block;
     vertical-align: middle;
     float: none;
+}
+
+.is-fullheight {
+    min-height: 100vh;
+    background-color: white;
+    border: 10px solid #00d1b2;
+}
+
+.recipientsLabel {
+  font-size: 0.9em;
 }
