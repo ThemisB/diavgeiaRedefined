@@ -1,15 +1,17 @@
 <template>
-  <div class="row">
-    <h5 class="text-center">Στοιχεία {{number}}ου παρόντα</h5>
-    <div class="col-xs-6">
-      <label :for="getPresentNameLabel">Όνομα και επώνυμο</span></label>
-      <input type="text" class="form-control" :id="getPresentNameLabel" :name="getPresentName">
+  <div>
+    <h5 class="has-text-centered">Στοιχεία {{number}}ου παρόντα</h5>
+    <div class="columns">
+      <div class="column">
+        <label :for="getPresentNameLabel" class="label has-text-centered recipientsLabel">Όνομα και επώνυμο</span></label>
+        <input type="text" class="input" :id="getPresentNameLabel" :name="getPresentName">
+      </div>
+      <div class="column">
+        <label :for="getPresentRoleLabel" class="label has-text-centered recipientsLabel">Ρόλος Παρόντα</span></label>
+        <input type="text" class="input" :id="getPresentRoleLabel" :name="getPresentRole" placeholder="π.χ. ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ">
+      </div>
+      <input type="hidden" :name="getPresentIndex" :value="number">
     </div>
-    <div class="col-xs-6">
-      <label :for="getPresentRoleLabel">Ρόλος Παρόντα</span></label>
-      <input type="text" class="form-control" :id="getPresentRoleLabel" :name="getPresentRole" placeholder="π.χ. ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ">
-    </div>
-    <input type="hidden" :name="getPresentIndex" :value="number">
   </div>
 </template>
 
