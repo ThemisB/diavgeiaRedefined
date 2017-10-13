@@ -2396,7 +2396,11 @@ For more appointments that are uploaded on Diavgeia: https://diavgeia.gov.gr/sea
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Award">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;.
+
+Please pay a visit to this pdf appointment: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Award/64%CE%9C44691%CE%A9%CE%93-5%CE%A8%CE%91.pdf
+
+For more awards that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%9A%CE%91%CE%A4%CE%91%CE%9A%CE%A5%CE%A1%CE%A9%CE%A3%CE%97%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
