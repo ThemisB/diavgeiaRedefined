@@ -21,7 +21,6 @@
 
 <script>
 
-import $ from 'jquery'
 import InputHandler from '../../mixins/InputHandler.js'
 import Multiselect from 'vue-multiselect'
 
