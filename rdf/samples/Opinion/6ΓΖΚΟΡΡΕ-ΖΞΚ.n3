@@ -18,6 +18,7 @@
 	ont:has_private_data false;
 	ont:organization_id "50024";
 	ont:submission_timestamp "1465905726603";
+	ont:uploader_id "104073";
 	ont:unit_id "72922";
 	ont:signed_by <Signer/1>;
 	ont:opinion_government_institution_type "ΝΣΚ"@el;
@@ -59,5 +60,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Νομικός Σύμβουλος Ν.Σ.Κ."@el;
-	ont:signer_name "Παναγιώτης Ιωαν. Σπανός"@el;
-	ont:signer_id "104073".
+	ont:signer_name "Παναγιώτης Ιωαν. Σπανός"@el.
