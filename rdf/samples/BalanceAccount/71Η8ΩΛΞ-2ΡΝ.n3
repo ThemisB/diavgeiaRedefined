@@ -30,6 +30,8 @@
 	ont:signed_by <Signer/1>;
 	ont:recipient_for_share "Ελληνική Μέριμνα Λάρισας"@el;
 	ont:thematic_category "EconomicTradeExchanges";
+	ont:balance_account_type "Ισολογισμός"@el;
+	ont:uploader_id "100002493";
 	ont:has_private_data false;
 	ont:organization_id "6167";
 	ont:unit_id "88337";
@@ -62,6 +64,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΑΝΤΙΔΗΜΑΡΧΟΣ ΚΟΙΝΩΝΙΚΗΣ ΠΟΛΙΤΙΚΗΣ"@el;
-	ont:signer_name "ΔΕΛΗΓΙΑΝΝΗΣ ΔΗΜΗΤΡΙΟΣ"@el;
-	ont:signer_id "100002493".
-	
+	ont:signer_name "ΔΕΛΗΓΙΑΝΝΗΣ ΔΗΜΗΤΡΙΟΣ"@el.
