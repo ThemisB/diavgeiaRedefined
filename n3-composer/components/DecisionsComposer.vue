@@ -5,7 +5,7 @@
             <div class="field">
               <label for="title" class="label">Τίτλος Απόφασης</label>
                 <div class="control">
-                  <input type="text" class="input" id="title" name="title" placeholder="π.χ. Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής" required="required">
+                  <textarea class="textarea" id="title" rows="1" name="title" placeholder="π.χ. Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής" required="required"></textarea>
                 </div>
             </div>
           </div>
@@ -219,6 +219,7 @@ export default {
     this.presentsArray = [this.lastPresent]
     autosize($('#afterconsideration'))
     autosize($('#preconsideration'))
+    autosize($('#title'))
   },
   data: function () {
     return {
