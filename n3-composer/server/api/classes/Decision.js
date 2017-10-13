@@ -792,7 +792,6 @@ class Decision {
     this._writeGeneralInfo()
     this._writeDecisionBody()
     this._writeRestEntities()
-    console.log(this.decisionString)
     var _this = this
     const storageDirectory = this._getN3DecisionsLocation()
     fs.ensureDir(storageDirectory)
