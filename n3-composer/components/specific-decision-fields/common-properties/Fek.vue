@@ -1,18 +1,20 @@
 <template>
-  <div class="row noPadding">
-    <div class="col-xs-4">
+  <div class="columns noPadding">
+    <div class="column">
       <label for="fek_number">Αρ. ΦΕΚ</label>
-      <input name="fek_number" type="text" class="form-control">
+      <input name="fek_number" type="text" class="input">
     </div>
-    <div class="col-xs-4">
+    <div class="column">
       <label for="fek_issue">Τεύχος ΦΕΚ</label>
-      <select class="selectpicker pickers" title="Τεύχος ΦΕΚ" data-live-search="true" id="fek_issue" name="fek_issue" data-width="auto">
-        <option v-for="issue in issues" :data-tokens="issue.keywords" :value="issue.text">{{issue.text}}</option>
-      </select>
+      <multiselect id="fek_issue" v-model="selected" :options="issues" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε τεύχος</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="fek_issue" :value="selected">
     </div>
-    <div class="col-xs-4">
+    <div class="column">
       <label for="fek_year">Έτος ΦΕΚ</label>
-      <input type="text" name="fek_year" id="fek_year" maxlength="4" minlength="4" class="form-control">
+      <input name="fek_year" id="fek_year" maxlength="4" minlength="4" class="input" type="number">
     </div>
   </div>
 </template>
@@ -21,34 +23,16 @@
 
 import $ from 'jquery'
 import InputHandler from '../../mixins/InputHandler.js'
+import Multiselect from 'vue-multiselect'
 
 export default {
   mixins: [InputHandler],
+  components: {Multiselect},
   data: () => {
     return {
-      issues: [
-        {text: 'Α', keywords: 'Α'},
-        {text: 'Β', keywords: 'Β'},
-        {text: 'Γ', keywords: 'Γ'},
-        {text: 'Δ', keywords: 'Δ'},
-        {text: 'Α.Α.Π.', keywords: 'Α.Α.Π. ΑΑΠ'},
-        {text: 'Ε.Β.Ι.', keywords: 'Ε.Β.Ι. ΕΒΙ'},
-        {text: 'Α.Σ.Ε.Π.', keywords: 'Α.Σ.Ε.Π ΑΣΕΠ'},
-        {text: 'Δ.Δ.Σ.', keywords: 'Δ.Δ.Σ. ΔΔΣ'},
-        {text: 'Α.Ε.Δ.', keywords: 'Α.Ε.Δ. ΑΕΔ'},
-        {text: 'Ο.Π.Κ.', keywords: 'Ο.Π.Κ. ΟΠΚ'},
-        {text: 'Ν.Π.Δ.Δ.', keywords: 'Ν.Π.Δ.Δ. ΝΠΔΔ'},
-        {text: 'Α.Π.Σ.', keywords: 'Α.Π.Σ. ΑΠΣ'},
-        {text: 'ΠΑΡΑΡΤΗΜΑ', keywords: 'Παράρτημα Παραρτημα'}
-      ]
+      issues: ['Α', 'Β', 'Γ', 'Δ', 'Α.Α.Π.', 'Ε.Β.Ι.', 'Α.Σ.Ε.Π.', 'Δ.Δ.Σ.', 'Α.Ε.Δ.', 'Ο.Π.Κ.', 'Ν.Π.Δ.Δ.', 'Α.Π.Σ.', 'ΠΑΡΑΡΤΗΜΑ'],
+      selected: ''
     }
-  },
-  mounted: function () {
-    var _this = this
-    $('#fek_issue').selectpicker()
-    $('#fek_year').on('keypress', function (e) {
-      return _this.isNumber(e)
-    })
   }
 }
 
