@@ -1,28 +1,35 @@
 <template>
-  <div class="decisionSpecificFields row">
-    <div class="col-xs-4">
+  <div class="columns">
+    <div class="column">
       <label for="balance_account_type">Είδος Πράξης</label>
-      <select class="selectpicker pickers" title="Είδος Πράξης" data-live-search="true" id="balance_account_type" name="balance_account_type" data-width="auto">
-        <option v-for="accountType in accountTypes" :data-tokens="accountType.keywords" :value="accountType.text">{{accountType.text}}</option>
-      </select>
+      <multiselect id="balance_account_type" v-model="selectedAccountType" :options="accountTypes" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε είδος πράξης</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="balance_account_type" :value="selectedAccountType">
     </div>
-    <div class="col-xs-4">
+    <div class="column">
       <label for="balance_account_time_period">Χρονική Περίοδος</label>
-      <select class="selectpicker pickers" title="Χρονική Περίοδος" data-live-search="true" id="balance_account_time_period" name="balance_account_time_period" data-width="auto">
-        <option v-for="accountTimePeriod in accountTimePeriods" :data-tokens="accountTimePeriod.keywords" :value="accountTimePeriod.text">{{accountTimePeriod.text}}</option>
-      </select>
+      <multiselect id="balance_account_time_period" v-model="selectedTimePeriod" :options="accountTimePeriods" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε χρονική περίοδος</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="balance_account_time_period" :value="selectedTimePeriod">
     </div>
-    <div class="col-xs-4">
+    <div class="column">
       <financial-year></financial-year>
     </div>
-    <div class="row balanceAccountPadding">
-      <div class="col-xs-4 col-xs-offset-1">
-        <label for="is_balance_account_approval_for_org">Έγκριση Ισολογισμού/Απολογισμού τρίτου Φορέα</label>
-        <input type="checkbox" name="is_balance_account_approval_for_org" id="is_balance_account_approval_for_org" v-model="checked">
-      </div>
-      <div v-if="checked" class="col-xs-4 col-xs-offset-1">
-        <label for="has_related_institution">Φορέας που αφορά</label>
-        <input name="has_related_institution" class="form-control">
+    <div class="column">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <div class="field">
+            <label for="is_balance_account_approval_for_org">Έγκριση Ισολογισμού/Απολογισμού τρίτου Φορέα<input type="checkbox" name="is_balance_account_approval_for_org" id="is_balance_account_approval_for_org" v-model="checked"></label>
+          </div>
+        </div>
+        <div v-if="checked" class="column is-one-third">
+          <label for="has_related_institution">Φορέας που αφορά</label>
+          <input name="has_related_institution" class="input">
+        </div>
       </div>
     </div>
   </div>
@@ -30,29 +37,19 @@
 
 <script>
 
-import $ from 'jquery'
+import Multiselect from 'vue-multiselect'
 import FinancialYear from './common-properties/FinancialYear.vue'
 
 export default {
   data: () => {
     return {
-      accountTypes: [
-        {text: 'Απολογισμός', keywords: 'Απολογισμός Απολογισμος'},
-        {text: 'Ισολογισμός', keywords: 'Ισολογισμός Ισολογισμος'},
-        {text: 'Ισολογισμός και Απολογισμός', keywords: 'Ισολογισμός Ισολογισμος Απολογισμός Απολογισμος Και'}
-      ],
-      accountTimePeriods: [
-        {text: 'Έτος', keywords: 'Έτος Ετος'},
-        {text: 'Εξάμηνο', keywords: 'Εξάμηνο Εξαμηνο'},
-        {text: 'Τρίμηνο', keywords: 'Τρίμηνο Τριμηνο'}
-      ],
-      checked: ''
+      accountTypes: ['Απολογισμός', 'Ισολογισμός', 'Ισολογισμός και Απολογισμός'],
+      accountTimePeriods: ['Έτος','Εξάμηνο','Τρίμηνο'],
+      checked: '',
+      selectedAccountType: '',
+      selectedTimePeriod: ''
     }
   },
-  mounted: function () {
-    $('#balance_account_type').selectpicker()
-    $('#balance_account_time_period').selectpicker()
-  },
-  components: {FinancialYear}
+  components: {FinancialYear, Multiselect}
 }
 </script>
