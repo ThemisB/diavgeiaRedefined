@@ -397,6 +397,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="el">Η χρονική περίοδος του Ισολογισμού - Απολογισμού</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -428,6 +429,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="el">Το είδος απόφασης του Ισολογισμού - Απολογισμού (Ισολογισμός ή Απολογισμός)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -965,6 +967,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Το οικονομικό έτος της απόφασης</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1131,6 +1134,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Ο φορέας που αφορά ένας Ισολογισμός-Απολογισμός ή μια Έγκριση Προϋπολογισμού</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1169,6 +1173,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/is_balance_account_approval_for_org">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/BalanceAccount"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="el">Εάν η απόφαση είναι έγκριση Ισολογισμού-Απολογισμού τρίτου φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2396,11 +2401,7 @@ For more appointments that are uploaded on Diavgeia: https://diavgeia.gov.gr/sea
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Award">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;.
-
-Please pay a visit to this pdf appointment: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Award/64%CE%9C44691%CE%A9%CE%93-5%CE%A8%CE%91.pdf
-
-For more awards that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%9A%CE%91%CE%A4%CE%91%CE%9A%CE%A5%CE%A1%CE%A9%CE%A3%CE%97%22&amp;page=0</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -2409,7 +2410,11 @@ For more awards that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?ad
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/BalanceAccount">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ&quot;
+
+Please pay a visit to this pdf balanceaccount: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/BalanceAccount/71%CE%978%CE%A9%CE%9B%CE%9E-2%CE%A1%CE%9D.pdf
+
+For more awards that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%99%CE%A3%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A3%20%E2%80%93%20%CE%91%CE%A0%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
