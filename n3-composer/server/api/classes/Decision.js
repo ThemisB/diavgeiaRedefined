@@ -588,11 +588,12 @@ class Decision {
 
           // Sponsored
           this.fields.expense.forEach((expense) => {
-            if (expense.afm && expense.afm_type && expense.sponsored && expense.index) {
+            console.log(expense)
+            if (expense.afm && expense.afm_type && expense.name && expense.index) {
               this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
               this.decisionString += this._formatTriplet('ont', 'afm', expense.afm, 'string', false)
               this.decisionString += this._formatTriplet('ont', 'afm_type', expense.afm_type, 'string')
-              this.decisionString += this._formatTriplet('ont', 'name', expense.sponsored, 'string', true, true)
+              this.decisionString += this._formatTriplet('ont', 'name', expense.name, 'string', true, true)
             }
           })
         }
