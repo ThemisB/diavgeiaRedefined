@@ -1,41 +1,46 @@
 <template>
-<div class="text-center">
-  <table class="expensesTable table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th>ΑΦΜ</th>
-        <th>ΕΠΩΝΥΜΙΑ</th>
-        <th>ΠΡΟΣΘΗΚΗ</th>
-      </tr>
-    </thead>
-    <tbody class="text-center">
-      <tr v-for="expense in expensesArray" :key="expense.id = expense">
-        <td><input type="text" :name="getAFM(expense)" class="form-control"></td>
-        <!--
-          TODO
-          Company and afm_type should be found by a web service like
-          GSIS when the user types the afm
-        -->
-        <td><input type="text" :name="getCompany(expense)" value="ΕΤΑΙΡΕΙΑ Χ" readonly="readonly"></td>
-        <input type="hidden" :name="getAFMType(expense)" value="Εθνικό">
-        <input type="hidden" :value="expense" :name="getExpenseIndex(expense)">
-        <td v-if="expense === 1"><button type="button" class="btn btn-default" v-on:click="incrementExpenses"><span>Προσθήκη {{nextExpense}}ου ΑΦΜ</span></button></td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="row">
-    <div class="col-xs-4">
-      <label for="expense_amount">Ποσό</label>
-      <input name="expense_amount" type="number" class="form-control">
+<div>
+    <div class="columns">
+      <div class="column">
+        <table class="table is-striped is-bordered has-text-centered" style="margin:0 auto;">
+          <thead>
+            <tr>
+              <th>ΑΦΜ</th>
+              <th>Όνομα</th>
+              <th>Είδος ΑΦΜ</th>
+              <th>ΠΡΟΣΘΗΚΗ</th>
+            </tr>
+          </thead>
+          <tbody class="has-text-centered">
+            <tr v-for="expense in expensesArray" :key="getKey('expense', expense)">
+              <td><input type="text" :name="getAFM(expense)" class="input"></td>
+              <!--
+                TODO
+                Company and afm_type should be found by a web service like
+                GSIS when the user types the afm
+              -->
+              <td><input type="text" :name="getCompany(expense)" value="ΕΤΑΙΡΕΙΑ Χ" readonly class="input"></td>
+              <td><input :name="getAFMType(expense)" value="Εθνικό" readonly class="input"></td>
+              <input type="hidden" :value="expense" :name="getExpenseIndex(expense)">
+              <td v-if="expense === 1"><button type="button" class="button is-info is-outlined" v-on:click="incrementExpenses"><span>Προσθήκη {{nextExpense}}ου ΑΦΜ</span></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="col-xs-4">
-      <currencies></currencies>
+    <div class="columns">
+      <div class="column">
+        <label for="expense_amount">Ποσό</label>
+        <input name="expense_amount" type="number" step="0.01" class="input">
+      </div>
+      <div class="column">
+        <currencies></currencies>
+      </div>
+      <div class="column">
+        <label for="has_related_declaration_summary">ΑΔΑ Σχετικής Περίληψης Διακήρυξης</label>
+        <input name="has_related_declaration_summary" class="input">
+      </div>
     </div>
-    <div class="col-xs-4">
-      <label for="has_related_declaration_summary">ΑΔΑ Σχετικής Περίληψης Διακήρυξης</label>
-      <input name="has_related_declaration_summary" class="form-control">
-    </div>
-  </div>
 </div>
 </template>
 
@@ -69,6 +74,9 @@ export default {
     },
     getAFMType: function (expenseNumber) {
       return 'expense[' + expenseNumber + '][afm_type]'
+    },
+    getKey: function (keyName, index) {
+      return keyName + '_' + index
     }
   },
   data: function () {
