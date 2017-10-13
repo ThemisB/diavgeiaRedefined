@@ -506,9 +506,9 @@ class Decision {
 
     let articleParagraph = ''
     if (legislation.article) {
-      articleParagraph = '\\/' + legislation.article
+      articleParagraph = '\\/article/\\' + legislation.article
       if (legislation.paragraph) {
-        articleParagraph += '\\/' + legislation.paragraph
+        articleParagraph += '\\/paragraph/\\' + legislation.paragraph
       }
     }
     return '\tont:considers leg:' + legislation.type + '\\/' + legislation.year + '\\/' + legislation.number + articleParagraph + ';\n'
