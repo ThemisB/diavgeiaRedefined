@@ -356,6 +356,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/appointment_employer_org">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Appointment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Το id του φορέα που γίνεται ο διορισμός.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -900,6 +901,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Τεύχος ΦΕΚ</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -921,6 +923,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Αριθμός ΦΕΚ</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -942,6 +945,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Έτος ΦΕΚ</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -970,6 +974,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_address">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Η διεύθυνση του φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1010,6 +1015,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_department">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Τμήμα φορέα. Σε περίπτωση που χρειάζεται επιπλεόν υποδιαίρεση της γενικής διεύθυνσης (:governemnt_insitution_general_administration), αυτό το πεδίο αποτελεί την τελευταία υποδιαίρεση του φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1019,6 +1025,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_email">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Email φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1028,6 +1035,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_fax">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Fax φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1037,6 +1045,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_general_administration">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Γενική Διεύθυνση του φορέα. Χρησιμοποιείται όταν ο φορέας είναι μεγάλος (π.χ. Υπουργείο Αγροτικής Ανάπτυξης &amp; Τροφίμων) και έχει υποδιαιρέσεις σε Γενικές Διευθύνσεις.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1046,6 +1055,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_information">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Φυσικό Πρόσωπο του φορέα που είναι υπεύθυνο για να δώσει πληροφορίες σχετικά με την απόφαση</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1055,6 +1065,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_name">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Όνομα φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1064,6 +1075,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_phone">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Τηλέφωνο επικοινωνίας με τον φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1073,6 +1085,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_postalcode">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Τ.Κ. φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1082,6 +1095,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_website">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Website φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1100,7 +1114,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/has_private_data">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment>Indicates whether a decision contains private data.</rdfs:comment>
+        <rdfs:comment>Σε περίπτωση που η απόφαση φέρει προσωπικά δεδομένα, το property έχει τιμή true, αλλιώς false.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1136,6 +1150,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">Αποτελεί property όλων των Entities, όπου ο φορέας χρειαστεί να γράψει κείμενο για την απόφαση (:AfterDecision, :Consideration, :Decision, :PreConsideration, :Verification)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1172,6 +1187,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/iun">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="el">IUN (Internet Uploading Number) ή αλλιώς ΑΔΑ απόφασης. Κάθε απόφαση της Διαύγειας λαμβάνει έναν μοναδικό αναγνωριστικό κωδικό. Σε περίπτωση τροποποίησης της απόφασης, ο ΑΔΑ παραμένει αλλά αλλάζει το :version της απόφασης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1409,6 +1425,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Αριθμός Φυσικών Προσώπων που αφορά ένας Διορισμός(:Appointment) ή μια Σύμβαση (:Contract)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2366,7 +2383,11 @@
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Appointment">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΔΙΟΡΙΣΜΟΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΔΙΟΡΙΣΜΟΣ&quot;.
+
+Please pay a visit to this pdf appointment: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Appointment/%CE%A8%CE%9F%CE%97%CE%A946%CE%A8%CE%96%CE%A34-%CE%9956.pdf
+
+For more appointments that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%94%CE%99%CE%9F%CE%A1%CE%99%CE%A3%CE%9C%CE%9F%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
