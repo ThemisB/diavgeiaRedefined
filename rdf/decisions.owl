@@ -2212,6 +2212,15 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/uploader_id -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/uploader_id">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/vacancy_opening_type -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/vacancy_opening_type">
