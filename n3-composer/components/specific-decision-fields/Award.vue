@@ -1,8 +1,7 @@
 <template>
-  <div class="decisionSpecificFields row">
-    <div class="col-xs-10 col-xs-offset-1">
+  <div>
      <expense-award></expense-award>
-    </div>
+  </div>
   </div>
 </template>
 
