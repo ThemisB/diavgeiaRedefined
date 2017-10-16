@@ -18,14 +18,13 @@
 	ont:decision_call "Αποφασίζουμε"@el;
 	ont:has_decided <Decision/1>;
 	ont:signed_by <Signer/1>;
-	ont:signed_by <Signer/2>;
 	ont:protocol_number "97";
 	ont:commitment_number "70";
 	ont:recipient_for_share "Γρ. Διατροφής"@el;
 	ont:thematic_category "NutritionAgriculturalProducts";
 	ont:has_private_data false;
 	ont:organization_id "99221890";
-  ont:unit_id "77026";
+	ont:unit_id "77026";
 	ont:submission_timestamp "1452674356709";
 	ont:financial_year "2016";
 	ont:budget_category "Τακτικός Προϋπολογισμός"@el;
@@ -54,7 +53,7 @@
 	ont:has_text "Εγκρίνουμε τη δέσμευση πίστωσης ύψους € 2.500,00 για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογισμού εξόδων οικονομικού έτους 2016, στον ΚΑΕ 1511 για την προμήθεια φρούτων, λαχανικών και συναφών προϊόντων"@el.
 
 <Verification/1> a ont:Verification;
-	ont:verified_by <Signer/2>;
+	ont:verified_by <Verifier/1>;
 	ont:has_text "ΕΛΕΓΧΘΗΚΕ Και βεβαιώνεται ότι η ανωτέρω δαπάνη 2.500,00 είναι εντός του διαθέσιμου ποσοστού του ΦΟΡΕΑ 210 ΕΙΔ. ΦΟΡΕΑ 815 στον ΚΑΕ 1511 ΟΙΚ. ΕΤΟΣ 2016. ΚΑΤΑΧΩΡΗΘΗΚΕ με α/α 70 στο Βιβλίο Εγκρίσεων & Εντολών Πληρωμής της Υπηρεσίας μας. ΥΠΟΛΟΙΠΟ προς ανάληψη: € 86.600,00"@el.
 
 <Signer/1> a ont:Signer;
@@ -62,6 +61,6 @@
 	ont:signer_name "Σωτήριος Καρβέλας"@el;
 	ont:signer_id "135487".
 
-<Signer/2> a ont:Signer;
-	ont:signer_job "ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
-	ont:signer_name "Ηλ. Κοκκίνης"@el.
+<Verifier/1> a ont:Verifier;
+	ont:verifier_job "ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
+	ont:verifier_name "Ηλ. Κοκκίνης"@el.
