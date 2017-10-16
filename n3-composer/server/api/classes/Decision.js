@@ -15,6 +15,7 @@ class Decision {
     this.fields.unitIds = unitIds
     this.fields.organizationId = organizationId
     this.decisionString = ''
+    this.verifierCounter = 1
   }
 
   _formatTriplet (ontology, propertyName, propertyValue, propertyRange, stringGreek = true, lastTriplet = false) {
@@ -482,6 +483,28 @@ class Decision {
       }
     })
 
+    // Verification
+    this.fields.verification.forEach((v, i) => {
+      if (!v.has_text || !v.index) {
+        return
+      }
+      let signerIndexes = []
+      // Find Signer Indexes
+      console.log(v)
+      Object.keys(v).map(key => {
+        if (!isNaN(parseInt(key, 10))) {
+          signerIndexes.push(key)
+        }
+      })
+      for (let i = 0; i < signerIndexes.length; i++) {
+        let signerIndex = signerIndexes[i]
+        if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
+          this.decisionString += this._formatTriplet('ont', 'has_verified', 'Verification/' + v.index, 'entity')
+          break
+        }
+      }
+    })
+
     this._writeSpecialProperties()
 
     // Dates
@@ -573,6 +596,36 @@ class Decision {
         this.decisionString += this._formatTriplet('ont', 'present_title', present.role, 'string', true, true)
       }
     })
+    // Verifier
+    this.fields.verification.forEach((v, i) => {
+      var perSignerIndex = {}
+      if (!v.has_text || !v.index) {
+        return
+      }
+      let signerIndexes = []
+      // Find Signer Indexes
+      Object.keys(v).map(key => {
+        if (!isNaN(parseInt(key, 10))) {
+          signerIndexes.push(key)
+        }
+      })
+      this.decisionString += '<Verification/' + (parseInt(i) + 1) + '> a ont:Verification;\n'
+      signerIndexes.map(signerIndex => {
+        if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
+          this.decisionString += this._formatTriplet('ont', 'verified_by', 'Verifier/' + this.verifierCounter, 'entity')
+          perSignerIndex[signerIndex] = this.verifierCounter
+          this.verifierCounter ++
+        }
+      })
+      this.decisionString += this._formatTriplet('ont', 'has_text', v.has_text, 'string', true, true)
+      signerIndexes.map((signerIndex, _index) => {
+        if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
+          this.decisionString += '<Verifier/' + perSignerIndex[signerIndex] + '> a ont:Verifier;\n'
+          this.decisionString += this._formatTriplet('ont', 'verifier_job', v[signerIndex].signer_job, 'string')
+          this.decisionString += this._formatTriplet('ont', 'verifier_name', v[signerIndex].signer_name, 'string', true, true)
+        }
+      })
+    })
     // Expenses
     switch (this.fields.decision_type) {
       case 'Award':
@@ -588,7 +641,6 @@ class Decision {
 
           // Sponsored
           this.fields.expense.forEach((expense) => {
-            console.log(expense)
             if (expense.afm && expense.afm_type && expense.name && expense.index) {
               this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
               this.decisionString += this._formatTriplet('ont', 'afm', expense.afm, 'string', false)
