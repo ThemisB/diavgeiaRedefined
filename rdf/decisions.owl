@@ -263,7 +263,7 @@
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/verified_by">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Verification"/>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Signer"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Verifier"/>
     </owl:ObjectProperty>
     
 
@@ -291,6 +291,9 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Afm number
+
+Ο αριθμός ΑΦΜ</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -469,6 +472,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="el">Η κατηγορία του προϋπολογισμού</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -494,6 +498,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="el">Το είδος του προϋπολογισμού (Κρατικός προϋπολογισμός ή προϋπολογισμός Φορέα)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1183,6 +1188,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/is_budget_approval_for_org">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="el">Εάν η απόφαση αφορά έγκριση προϋπολογισμού τρίτου φορέα</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2292,6 +2298,30 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/verifier_job -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/verifier_job">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Verifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Job or Role of a :Verifier
+
+Τίτλος εργασίας ή ρόλος ενός :Verifier</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/verifier_name -->
+
+    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/verifier_name">
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Verifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Fullname of the :Verifier
+
+Το πλήρες όνομα ενός :Verifer</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/version -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/version">
@@ -2401,7 +2431,11 @@ For more appointments that are uploaded on Diavgeia: https://diavgeia.gov.gr/sea
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Award">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΚΑΤΑΚΥΡΩΣΗ&quot;.
+
+Please pay a visit to this pdf award: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Award/64%CE%9C44691%CE%A9%CE%93-5%CE%A8%CE%91.pdf
+
+For more balance accounts that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%9A%CE%91%CE%A4%CE%91%CE%9A%CE%A5%CE%A1%CE%A9%CE%A3%CE%97%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
@@ -2412,9 +2446,9 @@ For more appointments that are uploaded on Diavgeia: https://diavgeia.gov.gr/sea
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ&quot;
 
-Please pay a visit to this pdf balanceaccount: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/BalanceAccount/71%CE%978%CE%A9%CE%9B%CE%9E-2%CE%A1%CE%9D.pdf
+Please pay a visit to this pdf balance account: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/BalanceAccount/71%CE%978%CE%A9%CE%9B%CE%9E-2%CE%A1%CE%9D.pdf
 
-For more awards that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%99%CE%A3%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A3%20%E2%80%93%20%CE%91%CE%A0%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A3%22&amp;page=0</rdfs:comment>
+For more balance accounts that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%99%CE%A3%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A3%20%E2%80%93%20%CE%91%CE%A0%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
@@ -2423,7 +2457,11 @@ For more awards that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?ad
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/BudgetApproval">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΙΣΜΟΥ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΙΣΜΟΥ&quot;.
+
+Please pay a visit to this pdf balance account: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/BudgetApproval/7%CE%91%CE%96%CE%9B46904%CE%9D-%CE%91%CE%A8%CE%A3.pdf
+
+For more balance accounts that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%95%CE%93%CE%9A%CE%A1%CE%99%CE%A3%CE%97%20%CE%A0%CE%A1%CE%9F%CE%A5%CE%A0%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A5%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
@@ -2753,7 +2791,19 @@ For more opinions that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?
     <!-- http://diavgeia.gov.gr/ontology/Verification -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Verification">
-        <rdfs:comment>Decisions are very often verified by other services and is useful to store this information (both for metadata and text format) as a separate special entity (not in decision_text)</rdfs:comment>
+        <rdfs:comment>Decisions are very often verified by other services. Each :Verification has at least one :Verifier and exactly one :has_text data property.
+
+Οι αποφάσεις της Διαύγειας, συχνά απαιτούν τον έλεγχο από άλλες αρχές. Κάθε :Verification έχει τουλάχιστον έναν :Verifier και ακριβώς ένα :has_text data property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/Verifier -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Verifier">
+        <rdfs:comment>A person who has verified a decision for its validity. A lot of decisions require a verification by a special authority (e.g. Financial Audit) whether its statements are stated in accordance with specified criteria.
+
+Ένας Verifier, ελέγχει μια απόφαση ως προς την εγκυρότητά της. Πολλές αποφάσεις της Διαύγειας απαιτούν έλεγχο από συγκεκριμένες αρχές (π.χ. Ελεγκτικό Σώμα) και επικυρώνουν την απόφαση ως ορθή.</rdfs:comment>
     </owl:Class>
     
 
