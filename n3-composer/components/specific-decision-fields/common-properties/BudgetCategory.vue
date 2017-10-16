@@ -1,28 +1,25 @@
 <template>
   <div>
     <label for="budget_category">Κατηγορία Προϋπολογισμού</label>
-    <select class="selectpicker pickers" title="Κατηγορία Προϋπολογισμού" data-live-search="true" id="budget_category" name="budget_category" data-width="auto">
-      <option v-for="category in categories" :data-tokens="category.keywords" :value="category.text">{{category.text}}</option>
-    </select>
+    <multiselect id="budget_category" v-model="selected" :options="categories" select-label="" selected-label="" deselect-label="" placeholder="">
+    <span slot="noResult">Δεν βρέθηκε κατηγορία προϋπολογισμού</span>
+    </multiselect>
+    <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+    <input type="hidden" name="budget_category" :value="selected">
   </div>
 </template>
 
 <script>
 
-import $ from 'jquery'
+import Multiselect from 'vue-multiselect'
 
 export default {
   data: () => {
     return {
-      categories: [
-        {text: 'Ίδια Έσοδα', keywords: 'Ίδια Ιδια Έσοδα Εσοδα'},
-        {text: 'Πρόγραμμα Δημοσίων', keywords: 'Πρόγραμμα Προγραμμα Δημοσίων Δημοσιων'},
-        {text: 'Τακτικός Προϋπολογισμός', keywords: 'Τακτικός Τακτικος Προϋπολογισμός Προϋπολογισμος Προυπολογισμος'}
-      ]
+      categories: ['Ίδια Έσοδα', 'Πρόγραμμα Δημοσίων', 'Τακτικός Προϋπολογισμός'],
+      selected: ''
     }
   },
-  mounted: function () {
-    $('#budget_category').selectpicker()
-  }
+  components: {Multiselect}
 }
 </script>
