@@ -45,7 +45,7 @@
           <div class="columns">
             <div class="column">
               <h3 class="subtitle has-text-centered">Έχοντας λάβει υπόψην</h3>
-              <div id="considerationsWrapper columns">
+              <div id="considerationsWrapper">
                 <consideration v-for="consideration in considerationsArray" v-bind:considerationNumber="consideration" :key="getKey('consideration', consideration)"></consideration>
               </div>
               <div class="column has-text-centered addConsiderationBtn">
@@ -172,6 +172,23 @@
             </div>
           </div>
         </div>
+        <div class="columns">
+          <div class="column">
+            <h4 class="has-text-centered subtitle">Η απόφαση ελέγχθηκε από:</h4>
+            <verification v-for="verification in verificationsArray" v-bind:number="verification" :key="getKey('verification', verification)"></verification>
+            <div class="paddingRecipients has-text-centered">
+              <div class="field">
+                <a class="button is-info is-outlined" type="button" v-on:click="incrementVerifications">
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-plus"></i>
+                  </span>
+                  <span>{{nextVerification}}ος έλεγχος</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -192,13 +209,17 @@ import $ from 'jquery'
 import autosize from 'autosize'
 import Multiselect from 'vue-multiselect'
 import Opinion from './specific-decision-fields/Opinion.vue'
+import Verification from './Verification.vue'
 
 export default {
-  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer, Present, DecisionSpecificFields, Multiselect, Opinion},
+  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer, Present, DecisionSpecificFields, Multiselect, Opinion, Verification},
   mounted: function () {
     this.lastConsideration = 1
     this.nextConsideration = 2
     this.considerationsArray = [this.lastConsideration]
+    this.lastVerification = 1
+    this.nextVerification = 2
+    this.verificationsArray = [this.lastVerification]
     this.lastDecision = 1
     this.nextDecision = 2
     this.decisionsArray = [this.lastDecision]
@@ -309,6 +330,9 @@ export default {
       lastConsideration: 0,
       nextConsideration: 1,
       considerationsArray: [],
+      lastVerification: 0,
+      nextVerification: 1,
+      verificationsArray: [],
       lastDecision: 0,
       nextDecision: 1,
       decisionsArray: [],
@@ -364,6 +388,11 @@ export default {
       this.lastPresent++
       this.nextPresent++
       this.presentsArray.push(this.lastPresent)
+    },
+    incrementVerifications: function () {
+      this.lastVerification++
+      this.nextVerification++
+      this.verificationsArray.push(this.lastVerification)
     },
     ifInGeneralDecisionsArray: function (value) {
       return this.generalDecisions.includes(value) || value === ''
