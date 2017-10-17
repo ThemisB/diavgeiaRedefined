@@ -40,23 +40,14 @@
 	ont:government_institution_email "h.pasios@yme.gov.gr";
 	ont:protocol_number "Γ2/ 59954/ 7478";
 	ont:circular_number "59954/ 7478";
-	ont:has_considered <Consideration/1>;
-	ont:has_considered <Consideration/2>;
 	ont:has_decided <Decision/1>;
 	ont:signed_by <Signer/1>;
 	ont:thematic_category "Transport";
 	ont:has_private_data false;
 	ont:organization_id "100016011";
 	ont:submission_timestamp "1473847008526";
-	ont:unit_id "100007425".
-
-<Consideration/1> a ont:Consideration;
-	ont:has_text "Τις διατάξεις του N.3409/2005 <<Καταδύσεις αναψυχής και άλλες διατάξεις>> (ΦΕΚ 273 Α')."@el;
-	ont:considers leg:law\/2005\/3409.
-
-<Consideration/2> a ont:Consideration;
-	ont:has_text "Τις διατάξεις του άρθρου 4 παρ. 2 της αριθ. 2123/02/28-03-2006 Υ.Α. (ΦΕΚ 449 Β)."@el;
-	ont:considers leg:md\/2006\/Φ449Β\/article\/4\/paragraph\/2.
+	ont:unit_id "100007425";
+	ont:uploader_id "100007427".
 
 <Decision/1> a ont:Decision;
 	ont:has_text "Σας ενηµερώνουµε ότι αναρτήθηκε η υπ’ αρ. πρωτ. Γ2/53077/6453 (ΦΕΚ 2907/Β΄/2016) υπουργική απόφαση, Α∆Α: ΩΟ734653ΟΞ-ΦΜΗ, µε θέµα «Πιστοποίηση πραγµατογνωµόνων ADR για τη διενέργεια δοκιµών και ελέγχων σε εξοπλισµούς και οχήµατα µεταφοράς επικίνδυνων εµπορευµάτων»."@el;
@@ -64,5 +55,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΔΙΕΥΘΥΝΣΗΣ"@el;
-	ont:signer_name "Δ. ΔΑΓΛΑ"@el;
-	ont:signer_id "100007427".
+	ont:signer_name "Δ. ΔΑΓΛΑ"@el.
