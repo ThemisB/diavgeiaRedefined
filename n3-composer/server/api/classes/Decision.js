@@ -452,19 +452,19 @@ class Decision {
 
     // Recipients
     this.fields.internal_distr.forEach((v, i) => {
-      if (v.text) {
+      if (v.name) {
         this.decisionString += this._formatTriplet('ont', 'internal_distribution', v.name, 'string')
       }
     })
 
     this.fields.recipient_for_share.forEach((v, i) => {
-      if (v.text) {
+      if (v.name) {
         this.decisionString += this._formatTriplet('ont', 'recipient_for_share', v.name, 'string')
       }
     })
 
     this.fields.recipient.forEach((v, i) => {
-      if (v.text) {
+      if (v.name) {
         this.decisionString += this._formatTriplet('ont', 'recipient', v.name, 'string')
       }
     })
