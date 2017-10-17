@@ -53,26 +53,18 @@
     <!-- http://diavgeia.gov.gr/ontology/considers -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/considers">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Consideration"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Consideration"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Decision"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-    </owl:ObjectProperty>
-    
+        <rdfs:comment>:considers links a :Consideration or a :Decision with another decision of Diavgeia or with the greek legislation ontology.
 
-
-    <!-- http://diavgeia.gov.gr/ontology/decides -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/decides">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
-        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/decision_relates -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/decision_relates">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
-        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+Το :considers χρησιμοποιείται για το linking ενός :Consideration ή ενός :Decision με μία άλλη απόφαση της Διαύγειας ή με την οντολογία της ελληνικής νομοθεσίας.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -508,6 +500,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/circular_number">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Circular"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Αριθμός Εγκυκλίου</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2459,9 +2452,9 @@ For more balance accounts that are uploaded on Diavgeia: https://diavgeia.gov.gr
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΙΣΜΟΥ&quot;.
 
-Please pay a visit to this pdf balance account: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/BudgetApproval/7%CE%91%CE%96%CE%9B46904%CE%9D-%CE%91%CE%A8%CE%A3.pdf
+Please pay a visit to this pdf budget approvals: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/BudgetApproval/7%CE%91%CE%96%CE%9B46904%CE%9D-%CE%91%CE%A8%CE%A3.pdf
 
-For more balance accounts that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%95%CE%93%CE%9A%CE%A1%CE%99%CE%A3%CE%97%20%CE%A0%CE%A1%CE%9F%CE%A5%CE%A0%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A5%22&amp;page=0</rdfs:comment>
+For more budget approvals that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%95%CE%93%CE%9A%CE%A1%CE%99%CE%A3%CE%97%20%CE%A0%CE%A1%CE%9F%CE%A5%CE%A0%CE%9F%CE%9B%CE%9F%CE%93%CE%99%CE%A3%CE%9C%CE%9F%CE%A5%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
@@ -2470,7 +2463,11 @@ For more balance accounts that are uploaded on Diavgeia: https://diavgeia.gov.gr
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Circular">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΕΓΚΥΚΛΙΟΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΥΚΛΙΟΣ&quot;.
+
+Please pay a visit to this pdf circular: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Circular/71%CE%A5%CE%9F4653%CE%9F%CE%9E-89%CE%95.pdf
+
+For more circulars that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%95%CE%93%CE%9A%CE%A5%CE%9A%CE%9B%CE%99%CE%9F%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
