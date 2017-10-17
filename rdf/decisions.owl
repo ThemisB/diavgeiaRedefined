@@ -510,6 +510,9 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/collegial_body_currency">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>If :collegial_body_decision_type is &apos;Καθορισμός Αμοιβής - Αποζημίωσης&apos;, government_institution must declare the currency of the amount of the refund.
+
+Εάν το :collegial_body_decision_type είναι &apos;Καθορισμός Αμοιβής - Αποζημίωσης&apos;, ο φορέας πρέπει να ορίσει το συνάλλαγμα του ποσού της αποζημίωσης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -547,6 +550,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Τύπος πράξης του :CollegialBodyCommisionWorkingGroup</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -596,6 +600,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Τύπος Οργάνου</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -605,6 +610,9 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/collegial_body_refund">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>If :collegial_body_decision_type is &apos;Καθορισμός Αμοιβής - Αποζημίωσης&apos;, government_institution must declare the amount of the refund.
+
+Εάν το :collegial_body_decision_type είναι &apos;Καθορισμός Αμοιβής - Αποζημίωσης&apos;, ο φορέας πρέπει να ορίσει το ποσό της αποζημίωσης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2476,7 +2484,11 @@ For more circulars that are uploaded on Diavgeia: https://diavgeia.gov.gr/search
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/CollegialBodyCommisionWorkingGroup">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΣΥΛΛΟΓΙΚΟ ΟΡΓΑΝΟ - ΕΠΙΤΡΟΠΗ - ΟΜΑΔΑ ΕΡΓΑΣΙΑΣ - ΟΜΑΔΑ ΕΡΓΟΥ - ΜΕΛΗ ΣΥΛΛΟΓΙΚΟΥ ΟΡΓΑΝΟΥ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΣΥΛΛΟΓΙΚΟ ΟΡΓΑΝΟ - ΕΠΙΤΡΟΠΗ - ΟΜΑΔΑ ΕΡΓΑΣΙΑΣ - ΟΜΑΔΑ ΕΡΓΟΥ - ΜΕΛΗ ΣΥΛΛΟΓΙΚΟΥ ΟΡΓΑΝΟΥ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/CollegialBodyCommisionWorkingGroup/%CE%A9%CE%93%CE%92%CE%A54653%CE%A0%CE%A3-%CE%98%CE%A37.pdf
+
+For more collegial body commision working group decision types that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A0%CE%A1%CE%91%CE%9E%CE%97%20%CE%A0%CE%9F%CE%A5%20%CE%91%CE%A6%CE%9F%CE%A1%CE%91%20%CE%A3%CE%95%20%CE%A3%CE%A5%CE%9B%CE%9B%CE%9F%CE%93%CE%99%CE%9A%CE%9F%20%CE%9F%CE%A1%CE%93%CE%91%CE%9D%CE%9F%20-%20%CE%95%CE%A0%CE%99%CE%A4%CE%A1%CE%9F%CE%A0%CE%97%20-%20%CE%9F%CE%9C%CE%91%CE%94%CE%91%20%CE%95%CE%A1%CE%93%CE%91%CE%A3%CE%99%CE%91%CE%A3%20-%20%CE%9F%CE%9C%CE%91%CE%94%CE%91%20%CE%95%CE%A1%CE%93%CE%9F%CE%A5%20-%20%CE%9C%CE%95%CE%9B%CE%97%20%CE%A3%CE%A5%CE%9B%CE%9B%CE%9F%CE%93%CE%99%CE%9A%CE%9F%CE%A5%20%CE%9F%CE%A1%CE%93%CE%91%CE%9D%CE%9F%CE%A5%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
