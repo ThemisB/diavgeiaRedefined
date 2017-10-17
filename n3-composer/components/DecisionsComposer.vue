@@ -65,7 +65,7 @@
                 <h3 class="subtitle has-text-centered">Αποφάσεις</h3>
                 <div class="field">
                   <label for="decision_call" class="label has-text-centered">Προσφώνηση Απόφασης</label>
-                  <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, ..." class="input" required="required">
+                  <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, ..." class="input">
                 </div>
               </div>
             </div>
