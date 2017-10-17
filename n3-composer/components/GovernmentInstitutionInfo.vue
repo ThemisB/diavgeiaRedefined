@@ -30,7 +30,7 @@
          <div class="field">
            <label for="government_institution_address" class="label">Διεύθυνση</label>
            <div class="control has-icons-left">
-             <input type="text" class="input" id="government_institution_address" name="government_institution_address" placeholder="π.χ. Ανδρέα Παπανδρέου 37" required="required">
+             <input type="text" class="input" id="government_institution_address" name="government_institution_address" placeholder="π.χ. Ανδρέα Παπανδρέου 37">
              <span class="icon is-small is-left">
                  <i class="fa fa-map-marker"></i>
              </span>
@@ -47,7 +47,7 @@
         <div class="field">
           <label for="government_institution_phone" class="label">Τηλέφωνο</label>
           <div class="control has-icons-left">
-          <input type="text" class="input" id="government_institution_phone" name="government_institution_phone" required="required">
+          <input type="text" class="input" id="government_institution_phone" name="government_institution_phone">
             <span class="icon is-small is-left">
               <i class="fa fa-phone"></i>
             </span>
