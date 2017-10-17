@@ -14,7 +14,7 @@
     <div class="columns">
       <div class="column">
         <label :for="getVerificationText" class="label">Κείμενο Ελέγχου</label>
-        <textarea class="textarea" rows="2" placeholder="Κείμενο για τον έλεγχο που πραγματοποιήθηκε." :name="getVerificationText"></textarea>
+        <textarea :class="getVerificationTextareaClass" rows="2" placeholder="Κείμενο για τον έλεγχο που πραγματοποιήθηκε." :name="getVerificationText"></textarea>
       </div>
     </div>
     <div class="columns has-text-centered">
@@ -37,7 +37,10 @@
 
 <script>
 
-module.exports = {
+import $ from 'jquery'
+import autosize from 'autosize'
+
+export default {
   props: ['number'],
   computed: {
     getVerificationNumber: function () {
@@ -45,13 +48,16 @@ module.exports = {
     },
     getVerificationText: function () {
       return 'verification[' + this.number + '][has_text]'
+    },
+    getVerificationTextareaClass: function () {
+      return 'textarea has-text-verification-' + this.number
     }
   },
   data: function(){
     return {
       verifiers: [],
       lastVerifier: 0,
-      nextVerifier: 1
+      nextVerifier: 1,
     }
   },
   methods: {
@@ -74,6 +80,8 @@ module.exports = {
     this.lastVerifier = 1
     this.nextVerifier = 2
     this.verifiers = [this.verifiers]
+    let _this = this
+    autosize($('.has-text-verification-' + _this.number))
   }
 }
 </script>
