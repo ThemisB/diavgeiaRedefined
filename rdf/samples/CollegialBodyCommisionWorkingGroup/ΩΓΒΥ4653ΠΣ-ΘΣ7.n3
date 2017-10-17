@@ -35,6 +35,7 @@
 	ont:has_private_data false;
 	ont:organization_id "100015990";
 	ont:submission_timestamp "1473252453013";
+	ont:uploader_id "100015163";
 	ont:unit_id "100007927".
 
 <Consideration/1> a ont:Consideration;
@@ -59,5 +60,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Η ΑΝΑΠΛΗΡΩΤΡΙΑ ΥΠΟΥΡΓΟΣ"@el;
-	ont:signer_name "ΑΘΑΝΑΣΙΑ ΑΝΑΓΝΩΣΤΟΠΟΥΛΟΥ"@el;
-	ont:signer_id "100015163".
+	ont:signer_name "ΑΘΑΝΑΣΙΑ ΑΝΑΓΝΩΣΤΟΠΟΥΛΟΥ"@el.
