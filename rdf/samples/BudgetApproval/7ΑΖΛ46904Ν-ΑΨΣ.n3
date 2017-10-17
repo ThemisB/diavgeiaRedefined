@@ -19,7 +19,6 @@
 	ont:has_decided <Decision/1>;
 	ont:signed_by <Signer/1>;
 	ont:protocol_number "97";
-	ont:commitment_number "70";
 	ont:recipient_for_share "Γρ. Διατροφής"@el;
 	ont:thematic_category "NutritionAgriculturalProducts";
 	ont:has_private_data false;
@@ -29,19 +28,19 @@
 	ont:financial_year "2016";
 	ont:budget_category "Τακτικός Προϋπολογισμός"@el;
 	ont:budget_type "Φορέα"@el;
+	ont:uploader_id "135487";
 	ont:is_budget_approval_for_org false.
 
 <Consideration/1> a ont:Consideration;
 	ont:has_text "Τις διατάξεις των άρθρ. 21 και 22Α του Ν. 2362/95 «Περί Δημοσίου Λογιστικού κ.λπ.» (Α.247), όπως τροποποιήθηκε και συμπληρώθηκε με τα υπ΄ αρ. 21 και 23 άρθ. Του Ν. 3871/2010 (Α.141)."@el;
-	ont:considers leg:law\/2010\/3871\/article\/21;
-	ont:considers leg:law\/2010\/3871\/article\/23.
+	ont:considers leg:law\/2010\/3871\/article\/21.
 
 <Consideration/2> a ont:Consideration;
 	ont:has_text "Το π.δ 113/2010 περί αναλήψεως υποχρεώσεων από τους Διατάκτες (Α.194)."@el;
 	ont:considers leg:pd\/2010\/113.
 
 <Consideration/3> a ont:Consideration;
-	ont:has_text " Την υπ΄ αρ. 452/2015 Απόφαση Δ.Σ. του Νοσοκομείου περί εξουσιοδότησης υπογραφής από τον Διατάκτη"@el.
+	ont:has_text "Την υπ΄ αρ. 452/2015 Απόφαση Δ.Σ. του Νοσοκομείου περί εξουσιοδότησης υπογραφής από τον Διατάκτη"@el.
 
 <Consideration/4> a ont:Consideration;
 	ont:has_text "Την κατακύρωση του ενιαίου επαναληπτικού διαγωνισμού του ΠΠΥΥ 2011, προμήθειας « φρούτων, λαχανικών και συναφών προϊόντων », που διεξήγαγε το Νοσοκομείο Παίδων Πεντέλης."@el.
@@ -58,8 +57,7 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Δ/ΝΤΗΣ ΙΑΤΡ. ΥΠΗΡΕΣΙΑΣ"@el;
-	ont:signer_name "Σωτήριος Καρβέλας"@el;
-	ont:signer_id "135487".
+	ont:signer_name "Σωτήριος Καρβέλας"@el.
 
 <Verifier/1> a ont:Verifier;
 	ont:verifier_job "ΠΡΟΪΣΤΑΜΕΝΟΣ ΟΙΚΟΝΟΜΙΚΩΝ"@el;
