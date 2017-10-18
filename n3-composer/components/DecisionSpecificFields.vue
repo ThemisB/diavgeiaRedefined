@@ -115,7 +115,7 @@ export default {
         'Undertaking': 'Ανάληψης Υποχρέωσης',
         'ExpenditureApproval': 'Έγκρισης Δαπάνης',
         'PaymentFinalisation': 'Οριστικοποίησης Πληρωμής',
-        'CommisionWarrant': 'Επιτροπικό Ένταλμα',
+        'CommisionWarrant': 'Επιτροπικού Εντάλματος',
         'BalanceAccount': 'Ισολογισμού - Απολογισμού',
         'DonationGrant': 'Δωρεάς - Επιχορήγησης',
         'OwnershipTransferOfAssets': 'Παραχώρησης χρήσης περιουσιακών στοιχείων',
