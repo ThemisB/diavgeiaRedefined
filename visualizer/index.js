@@ -203,6 +203,10 @@ class PropertiesFormatter {
         this._findPredicateValue(subject, 'ont', 'primary_officer', predicatePair)
         this._findPredicateValue(subject, 'ont', 'secondary_officer', predicatePair)
         // Contract
+        this._findPredicateValue(subject, 'ont', 'contract_start', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'contract_end', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'contract_decision_type', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'contract_is_co_funded', predicatePair)
         // DeclarationSummary
         this._findPredicateValue(subject, 'ont', 'contract_type', predicatePair)
         this._findPredicateValue(subject, 'ont', 'selection_criterion', predicatePair)
@@ -324,8 +328,7 @@ class PropertiesFormatter {
         } else if (this.properties['decision_type_english'] === 'Contract') {
           /*
            * n has_expense
-           * Each expense has only 1 sponsor
-           * Each sponsor has contract_start, contract_end, contract_is_co_funded, contract_decision_type
+           * Each expense has n sponsors
            */
           array[subject].forEach(predicatePair => {
             this._findPredicateValue('ContractExpenseAmount', 'ont', 'expense_amount', predicatePair, expenseNumber)
@@ -339,10 +342,6 @@ class PropertiesFormatter {
                   this._findPredicateValue('ContractExpense', 'ont', 'afm', predicatePairSponsored, sponsoredNumber)
                   this._findPredicateValue('ContractExpense', 'ont', 'afm_type', predicatePairSponsored, sponsoredNumber)
                   this._findPredicateValue('ContractExpense', 'ont', 'name', predicatePairSponsored, sponsoredNumber)
-                  this._findPredicateValue('ContractExpense', 'ont', 'contract_start', predicatePairSponsored, sponsoredNumber)
-                  this._findPredicateValue('ContractExpense', 'ont', 'contract_end', predicatePairSponsored, sponsoredNumber)
-                  this._findPredicateValue('ContractExpense', 'ont', 'contract_decision_type', predicatePairSponsored, sponsoredNumber)
-                  this._findPredicateValue('ContractExpense', 'ont', 'contract_is_co_funded', predicatePairSponsored, sponsoredNumber)
                 })
               }
             }
@@ -615,13 +614,9 @@ class PropertiesFormatter {
         if (predicateSearch === 'expense_amount' || predicateSearch === 'expense_currency' || predicateSearch === 'kae') {
           this._formatObjectProperty(this.commisionWarrantExpenses, predicateSearch, predicatePair, entityIndex)
         }
-      } else if (subject === 'ContractExpense' || subject === '') {
-        let sponsoredCondition = predicateSearch === 'contract_start' || predicateSearch === 'contract_end' || predicateSearch === 'contract_decision_type' || predicateSearch === 'contract_is_co_funded'
+      } else if (subject === 'ContractExpense') {
         let afmCondition = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
-        if (sponsoredCondition || afmCondition) {
-          if (predicateSearch === 'contract_is_co_funded') {
-            predicatePair[1] = predicatePair[1].toString()
-          }
+        if (afmCondition) {
           this._formatObjectProperty(this.contractExpenses, predicateSearch, predicatePair, entityIndex)
         }
       } else if (subject === 'DeclarationSummaryExpense') {
