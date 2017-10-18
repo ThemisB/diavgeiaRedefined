@@ -283,9 +283,9 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Afm number
+        <rdfs:comment>Afm number.
 
-Ο αριθμός ΑΦΜ</rdfs:comment>
+Ο αριθμός ΑΦΜ.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -392,7 +392,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment xml:lang="el">Η χρονική περίοδος του Ισολογισμού - Απολογισμού</rdfs:comment>
+        <rdfs:comment xml:lang="el">Η χρονική περίοδος του Ισολογισμού - Απολογισμού.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -424,7 +424,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment xml:lang="el">Το είδος απόφασης του Ισολογισμού - Απολογισμού (Ισολογισμός ή Απολογισμός)</rdfs:comment>
+        <rdfs:comment xml:lang="el">Το είδος απόφασης του Ισολογισμού - Απολογισμού (Ισολογισμός ή Απολογισμός).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -464,7 +464,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment xml:lang="el">Η κατηγορία του προϋπολογισμού</rdfs:comment>
+        <rdfs:comment xml:lang="el">Η κατηγορία του προϋπολογισμού.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -490,7 +490,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment xml:lang="el">Το είδος του προϋπολογισμού (Κρατικός προϋπολογισμός ή προϋπολογισμός Φορέα)</rdfs:comment>
+        <rdfs:comment xml:lang="el">Το είδος του προϋπολογισμού (Κρατικός προϋπολογισμός ή προϋπολογισμός Φορέα).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -500,7 +500,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/circular_number">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Circular"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Αριθμός Εγκυκλίου</rdfs:comment>
+        <rdfs:comment>Αριθμός Εγκυκλίου.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -550,7 +550,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment>Τύπος πράξης του :CollegialBodyCommisionWorkingGroup</rdfs:comment>
+        <rdfs:comment>Τύπος πράξης του :CollegialBodyCommisionWorkingGroup.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -600,7 +600,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment>Τύπος Οργάνου</rdfs:comment>
+        <rdfs:comment>Τύπος Οργάνου.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -620,7 +620,7 @@
     <!-- http://diavgeia.gov.gr/ontology/contract_decision_type -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_decision_type">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -644,6 +644,9 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>:contract_decision_type specifies the type of the contract. In the case of &quot;Σύμβαση Έργου&quot;@el, contract has exactly 1 :Expense with multiple contract :Sponsored.
+
+Το είδος πράξης της σύμβασης. Στην περίπτωση της &quot;Σύμβαση Έργου&quot;@el, η σύμβαση έχει ακριβώς 1 :Expense, με πολλαπλούς αποδεκτές σύμβασης :Sponsored.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -651,8 +654,9 @@
     <!-- http://diavgeia.gov.gr/ontology/contract_end -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_end">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Το τέλος της σύμβασης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -662,6 +666,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_is_co_funded">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Συγχρηματοδοτούμενο έργο.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -669,8 +674,9 @@
     <!-- http://diavgeia.gov.gr/ontology/contract_start -->
 
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/contract_start">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Sponsored"/>
+        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Contract"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Η αρχή της σύμβασης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -726,6 +732,9 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/decision_call">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>:decision_call defines is the linking keyword between the last :Consideration and first :Decision. Common values are &quot;We decide, We recall, etc&quot;.
+
+Το :decision_call αποτελεί την συνδετική λέξη, μεταξύ του τελευταίου :Consideration και του πρώτου :Decision. Συχνές τιμές τιμές είναι &quot;Αποφασίζουμε, Ανακαλούμε, κλπ&quot;.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1833,7 +1842,6 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/secondary_officer">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Δευτερεύων Διατάκτης</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2518,7 +2526,11 @@ For more commision warrants that are uploaded on Diavgeia: https://diavgeia.gov.
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Contract">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΣΥΜΒΑΣΗ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΣΥΜΒΑΣΗ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Contract/%CE%A9%CE%9C%CE%9F%CE%94469%CE%927%CE%98-6%CE%A49.pdf
+
+For more contracts that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A3%CE%A5%CE%9C%CE%92%CE%91%CE%A3%CE%97%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
