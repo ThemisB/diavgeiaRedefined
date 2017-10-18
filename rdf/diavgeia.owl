@@ -15,9 +15,9 @@
         <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
         <terms:contributor>Themis Beris</terms:contributor>
         <terms:creator>Themis Beris</terms:creator>
-        <rdfs:comment>The &quot;decisions&quot; ontology describes decisions uploaded on Diavgeia&apos;s website (https://diavgeia.gov.gr/). The ontology links to other well-known greek ontologies (such as the greek legislation ontology (legislation.di.uoa.gr) and ELI (eli.fr))</rdfs:comment>
         <vann:preferredNamespacePrefix>dvg</vann:preferredNamespacePrefix>
-        <terms:title>decisions.owl - An ontology describing decisions uploaded on Diavgeia</terms:title>
+        <terms:title>diavgeia.owl - An ontology describing decisions uploaded on Diavgeia</terms:title>
+        <rdfs:comment>The &quot;diavgeia&quot; ontology describes decisions uploaded on Diavgeia&apos;s website (https://diavgeia.gov.gr/). The ontology links to other well-known greek ontologies (such as the greek legislation ontology (legislation.di.uoa.gr) and ELI (eli.fr))</rdfs:comment>
     </owl:Ontology>
     
 
