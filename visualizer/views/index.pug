@@ -483,35 +483,38 @@ html
                         td #{commisionWarrantExpense.expense_amount} #{commisionWarrantExpense.expense_currency}
             //- Contract Expense
             else if decision_type_english === 'Contract'
-              p(class='subtitle has-text-centered') Συμβάσεις
+              p(class='subtitle has-text-centered') Στοιχεία Σύμβασης
+              .notification
+                if contract_decision_type
+                    p(class='decisionText topMargin') <u><b>Είδος Σύμβασης</b></u>: #{contract_decision_type}
+                if contract_start
+                  p(class='decisionText topMargin') <u><b>Έναρξη Σύμβασης</b></u>: #{contract_start}
+                if contract_end
+                  p(class='decisionText topMargin') <u><b>Λήξη Σύμβασης</b></u>: #{contract_end}
+                if contractExpensesAmount[0].expense_amount && contractExpensesAmount[0].expense_currency
+                  p(class='decisionText topMargin') <u><b>Ποσό</b></u>: #{contractExpensesAmount[0].expense_amount} #{contractExpensesAmount[0].expense_currency}
+                if contract_is_co_funded == 'true'
+                    p(class='decisionText topMargin') Η σύμβαση είναι συγχρηματοδοτούμενη
               .expenses-table.has-text-centered
+                h2(class='subtitle') Φυσικά πρόσωπα σύμβασης
                 table(class='table is-striped is-bordered')
                   thead
                     tr
                       th ΑΦΜ
                       th Όνομα
                       th Είδος ΑΦΜ
-                      th Ποσό
-                      th Έναρξη Σύμβασης
-                      th Λήξη Σύμβασης
-                      th Είδος Σύμβασης
-                      th Συγχρηματοδοτούμενη Σύμβαση
+                      //- th Ποσό Έργου
+                      //- th Έναρξη Σύμβασης
+                      //- th Λήξη Σύμβασης
+                      //- th Είδος Σύμβασης
+                      //- th Συγχρηματοδοτούμενη Σύμβαση
                   tbody
                     each contractExpense, index in contractExpenses
                       tr
                         td #{contractExpense.afm}
                         td #{contractExpense.name}
                         td #{contractExpense.afm_type}
-                        td #{contractExpensesAmount[index].expense_amount} #{contractExpensesAmount[index].expense_currency}
-                        td #{contractExpense.contract_start}
-                        td #{contractExpense.contract_end}
-                        td #{contractExpense.contract_decision_type}
-                        if (contractExpense.contract_is_co_funded=='true')
-                          td ΝΑΙ
-                        else if (contractExpense.contract_is_co_funded=='false')
-                          td ΟΧΙ
-                        else
-                          td
+
             //- DeclarationSummary Expense
             else if decision_type_english === 'DeclarationSummary'
               p(class='subtitle has-text-centered') Χρηματικά ποσά Περίληψης Διακήρυξης
