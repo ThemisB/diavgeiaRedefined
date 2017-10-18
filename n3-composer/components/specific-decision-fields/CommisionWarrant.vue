@@ -1,26 +1,24 @@
 <template>
   <div class="decisionSpecificFields">
-  <div class="row">
-    <div class="col-xs-3">
+  <div class="columns">
+    <div class="column">
       <label for="primary_officer">Πρωτεύων Διατάκτης</label>
-      <input type="text" name="primary_officer" class="form-control">
+      <input type="text" name="primary_officer" class="input">
       </select>
     </div>
-    <div class="col-xs-3">
+    <div class="column">
       <label for="secondary_officer">Δευτερεύων Διατάκτης</label>
-      <input type="text" name="secondary_officer" class="form-control">
+      <input type="text" name="secondary_officer" class="input">
     </div>
-    <div class="col-xs-3">
+    <div class="column">
       <budget-category></budget-category>
     </div>
-    <div class="col-xs-3">
+    <div class="column">
       <financial-year></financial-year>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <expense-with-kae></expense-with-kae>
-    </div>
+  <div class="columns">
+    <expense-with-kae></expense-with-kae>
   </div>
 </div>
 </template>
