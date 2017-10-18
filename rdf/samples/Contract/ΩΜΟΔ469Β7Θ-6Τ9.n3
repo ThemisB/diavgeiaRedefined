@@ -27,9 +27,14 @@
 	ont:has_expense <Expense/1>;
 	ont:thematic_category "PublicAdministration";
 	ont:number_employees "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	ont:contract_decision_type "Σύμβαση Έργου"@el;
+	ont:contract_start "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:contract_end "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	ont:contract_is_co_funded true;
 	ont:has_private_data false;
 	ont:organization_id "99206920";
 	ont:submission_timestamp "1452594644088";
+	ont:uploader_id "131549";
 	ont:unit_id "74045".
 
 <Consideration/1> a ont:Consideration;
@@ -49,11 +54,6 @@
 <Sponsored/1> a ont:Sponsored;
 	ont:afm "062343801";
 	ont:afm_type "Εθνικό"@el;
-	ont:contract_start "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	ont:contract_end "2015-08-31"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	ont:contract_type "2013-06-20"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-	ont:contract_decision_type "Σύμβαση Έργου"@el;
-	ont:contract_is_co_funded true;
 	ont:name "ΣΕΡΠΕΤΣΙΔΑΚΗ ΑΝΝΑ ΙΩΑΝΝΗΣ"@el.
 
 <Expense/1> a ont:Expense;
@@ -63,5 +63,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Αναπληρωτής Πρυτάνεως Έρευνας & Ανάπτυξης"@el;
-	ont:signer_name "Πολύζος κ. Δημοσθένης"@el;
-	ont:signer_id "131549".
+	ont:signer_name "Πολύζος κ. Δημοσθένης"@el.
