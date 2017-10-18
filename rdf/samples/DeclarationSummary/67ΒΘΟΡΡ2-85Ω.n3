@@ -28,6 +28,7 @@
 	ont:recipient_for_share "Δ/νση Ταχυδρομικών Λειτουργιών (101 88) ΑΘΗΝΑ / e-αποστολή"@el;
 	ont:recipient_for_share "Περ/κη Δ/νση Ταχυδρομικών Λειτουργιών Αττικής (101 10) ΑΘΗΝΑ / e-αποστολή"@el;
 	ont:recipient_for_share "Περ/κη Δ/νση Ταχυδρομικών Λειτουργιών Κεντρ. Μακεδονίας (560 00) ΘΕΣΣΑΛΟΝΙΚΗ / e-αποστολή"@el;
+	ont:uploader_id "100014730";
 	ont:thematic_category "EconomicTradeExchanges";
 	ont:government_institution_budget_code "Τακτικός Προϋπολογισμός"@el;
 	ont:selection_criterion "Χαμηλότερη Τιμή"@el;
@@ -59,9 +60,8 @@
 <Expense/1> a ont:Expense;
 	ont:expense_amount "13008.13";
 	ont:expense_currency "EUR";
-	ont:cpv "66000000-0";.
+	ont:cpv "66000000-0".
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΔΙΕΥΘΥΝΤΗΣ"@el;
-	ont:signer_name "ΑΠΟΣΤΟΛΟΣ ΠΑΝΤΑΖΗΣ"@el;
-	ont:signer_id "100014730".
+	ont:signer_name "ΑΠΟΣΤΟΛΟΣ ΠΑΝΤΑΖΗΣ"@el.
