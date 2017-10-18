@@ -714,6 +714,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Ο τύπος σύμβασης της περίληψης διακήρυξης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1024,6 +1025,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Κωδικός Προϋπολογισμού Φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1867,6 +1869,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Κριτήριο επιλογής.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2093,6 +2096,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Διαδικασία διαγωνισμού.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
