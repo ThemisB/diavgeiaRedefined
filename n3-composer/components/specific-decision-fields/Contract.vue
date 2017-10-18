@@ -1,36 +1,38 @@
 <template>
   <div class="decisionSpecificFields">
-  <div class="row">
-    <div class="col-xs-4">
+  <div class="columns">
+    <div class="column">
       <label for="contract_decision_type">Είδος Πράξης</label>
-      <select class="selectpicker pickers" title="Είδος Πράξης" data-live-search="true" id="contract_decision_type" name="contract_decision_type" data-width="auto" v-model="contractType">
-        <option v-for="contractDecisionType in contractDecisionTypes" :data-tokens="contractDecisionType.keywords" :value="contractDecisionType.text">{{contractDecisionType.text}}</option>
-      </select>
+      <multiselect v-model="contractType" :options="contractDecisionTypes" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε το είδος πράξης</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="contract_decision_type" :value="contractType">
     </div>
-    <div class="col-xs-4">
+    <div class="column">
       <number-employees></number-employees>
     </div>
-    <div v-if="contractType !== 'Σύμβαση Ιδιωτικού Δικαίου Αορίστου Χρόνου'" class="col-xs-4">
-      <label for="contract_is_co_funded" class="contract_is_co_funded text-center">Συγχρηματοδοτούμενο έργο</label>
-      <input type="checkbox" name="contract_is_co_funded" class="contract_is_co_funded">
+    <div v-if="contractType !== 'Σύμβαση Ιδιωτικού Δικαίου Αορίστου Χρόνου'" class="column">
+      <div class="field">
+        <label for="contract_is_co_funded" class="checkbox">Συγχρηματοδοτούμενο έργο<input type="checkbox" name="contract_is_co_funded" id="contract_is_co_funded"></label>
+      </div>
     </div>
   </div>
-  <div class="row" v-if="contractType === 'Σύμβαση Έργου' ">
-    <h4 class="text-center"><u>Στοιχεία Έργου</u></h4>
-    <div class="col-xs-10 col-xs-offset-1">
-        <expense></expense>
+  <div v-if="contractType === 'Σύμβαση Έργου' ">
+    <h4 class="has-text-centered subtitle">Στοιχεία Έργου</h4>
+    <div class="columns">
+      <expense></expense>
     </div>
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <div class="col-xs-4 col-xs-offset-1">
+    <div class="columns" style="padding-bottom:1.5em">
+      <div class="column">
           <label for="contract_start">Έναρξη Έργου</label>
-          <input type="date" class="form-control" name="contract_start">
-        </div>
-        <div class="col-xs-4 col-xs-offset-1">
-          <label for="contract_end">Λήξη Έργου</label>
-          <input type="date" class="form-control" name="contract_end">
-        </div>
+          <input type="date" class="input" name="contract_start">
       </div>
+      <div class="column">
+        <label for="contract_end">Λήξη Έργου</label>
+        <input type="date" class="input" name="contract_end">
+      </div>
+    </div>
     </div>
   </div>
   </div>
@@ -39,24 +41,17 @@
 
 <script>
 
-import $ from 'jquery'
 import NumberEmployees from './common-properties/NumberEmployees.vue'
 import Expense from './common-properties/Expense.vue'
+import Multiselect from 'vue-multiselect'
 
 export default {
   data: () => {
     return {
-      contractDecisionTypes: [
-        {text: 'Σύμβαση Έργου', keywords: 'Σύμβαση Συμβαση Έργου Εργου'},
-        {text: 'Σύμβαση Ιδιωτικού Δικαίου Αορίστου Χρόνου', keywords: 'Σύμβαση Συμβαση Ιδιωτικού Ιδιωτικου Δικαίου Δικαιου Αορίστου Χρόνου Χρονου'},
-        {text: 'Σύμβαση Ιδιωτικού Δικαίου Ορισμένου Χρόνου', keywords: 'Σύμβαση Συμβαση Ιδιωτικού Ιδιωτικου Δικαίου Δικαιου Ορισμένου Ορισμενου Χρόνου Χρονου'}
-      ],
+      contractDecisionTypes: ['Σύμβαση Έργου', 'Σύμβαση Ιδιωτικού Δικαίου Αορίστου Χρόνου','Σύμβαση Ιδιωτικού Δικαίου Ορισμένου Χρόνου'],
       contractType: ''
     }
   },
-  mounted: function () {
-    $('#contract_decision_type').selectpicker()
-  },
-  components: {NumberEmployees, Expense}
+  components: {NumberEmployees, Expense, Multiselect}
 }
 </script>
