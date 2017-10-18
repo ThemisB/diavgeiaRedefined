@@ -2549,7 +2549,11 @@ For more contracts that are uploaded on Diavgeia: https://diavgeia.gov.gr/search
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DeclarationSummary">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΕΡΙΛΗΨΗ ΔΙΑΚΗΡΥΞΗΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΠΕΡΙΛΗΨΗ ΔΙΑΚΗΡΥΞΗΣ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/DeclarationSummary/67%CE%92%CE%98%CE%9F%CE%A1%CE%A12-85%CE%A9.pdf
+
+For more declaration summaries that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A0%CE%95%CE%A1%CE%99%CE%9B%CE%97%CE%A8%CE%97%20%CE%94%CE%99%CE%91%CE%9A%CE%97%CE%A1%CE%A5%CE%9E%CE%97%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
