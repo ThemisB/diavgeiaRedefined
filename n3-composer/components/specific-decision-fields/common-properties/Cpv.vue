@@ -1,7 +1,7 @@
 <template>
   <div>
     <label for="cpv" v-if="number === undefined">CPV</label>
-    <input type="text" :name="getCPVName" class="form-control">
+    <input type="text" :name="getCPVName" class="input">
   </div>
 </template>
 
