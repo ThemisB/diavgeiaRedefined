@@ -237,6 +237,8 @@ class Decision {
           if (contractDecisionType !== 'Σύμβαση Ιδιωτικού Δικαίου Αορίστου Χρόνου') {
             if (this.fields.contract_is_co_funded) {
               this.decisionString += this._formatTriplet('ont', 'contract_is_co_funded', Boolean(this.fields.contract_is_co_funded), 'boolean')
+            } else {
+              this.decisionString += this._formatTriplet('ont', 'contract_is_co_funded', false, 'boolean')
             }
             if (contractDecisionType === 'Σύμβαση Έργου') {
               if (this.fields.expense_amount && this.fields.expense[0].afm) {
