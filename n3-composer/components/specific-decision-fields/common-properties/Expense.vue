@@ -1,35 +1,40 @@
 <template>
-<div class="text-center">
-  <table class="expensesTable table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th>ΑΦΜ</th>
-        <th>ΟΝΟΜΑΤΕΠΩΝΥΜΟ</th>
-        <th>ΠΡΟΣΘΗΚΗ</th>
-      </tr>
-    </thead>
-    <tbody class="text-center">
-      <tr v-for="expense in expensesArray" :key="expense.id = expense">
-        <td><input type="text" :name="getAFM(expense)" class="form-control"></td>
-        <!--
-          TODO
-          Company and afm_type should be found by a web service like
-          GSIS when the user types the afm
-        -->
-        <td><input type="text" :name="getPerson(expense)" value="ΟΝΟΜΑΤΕΠΩΝΥΜΟ Χ" readonly="readonly"></td>
-        <input type="hidden" :value="expense" :name="getExpenseIndex(expense)">
-        <input type="hidden" :name="getAFMType(expense)" value="Εθνικό">
-        <td v-if="expense === 1"><button type="button" class="btn btn-default" v-on:click="incrementExpenses"><span>Προσθήκη {{nextExpense}}ου ΑΦΜ</span></button></td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="row">
-    <div class="col-xs-4 col-xs-offset-1">
-      <label for="expense_amount">Ποσό</label>
-      <input name="expense_amount" type="number" class="form-control">
-    </div>
-    <div class="col-xs-4 col-xs-offset-1">
-      <currencies></currencies>
+<div class="columns">
+  <div class="column">
+    <table class="table is-striped is-bordered has-text-centered expensesTable" style="margin:0 auto;">
+      <thead>
+        <tr>
+          <th>ΑΦΜ</th>
+          <th>ΟΝΟΜΑΤΕΠΩΝΥΜΟ</th>
+          <th>ΕΙΔΟΣ ΑΦΜ</th>
+          <th>ΠΡΟΣΘΗΚΗ</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr v-for="expense in expensesArray" :key="getKey('expense', expense)">
+          <td><input type="text" :name="getAFM(expense)" class="input"></td>
+          <!--
+            TODO
+            Company and afm_type should be found by a web service like
+            GSIS when the user types the afm
+          -->
+          <td><input type="text" :name="getPerson(expense)" value="ΟΝΟΜΑΤΕΠΩΝΥΜΟ Χ" readonly="readonly" class="input"></td>
+          <td><input :name="getAFMType(expense)" value="Εθνικό" readonly class="input"></td>
+          <td v-if="expense === 1"><button type="button" class="button is-info is-outlined" v-on:click="incrementExpenses"><span>Προσθήκη {{nextExpense}}ου ΑΦΜ</span></button></td>
+          <input type="hidden" :value="expense" :name="getExpenseIndex(expense)">
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="column">
+    <div class="columns">
+      <div class="column">
+        <label for="expense_amount">Ποσό</label>
+        <input name="expense_amount" type="number" class="input">
+      </div>
+      <div class="column">
+        <currencies></currencies>
+      </div>
     </div>
   </div>
 </div>
@@ -65,6 +70,9 @@ export default {
     },
     getAFMType: function (expenseNumber) {
       return 'expense[' + expenseNumber + '][afm_type]'
+    },
+    getKey: function (keyName, index) {
+      return keyName + '_' + index
     }
   },
   data: function () {
