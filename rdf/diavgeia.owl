@@ -1700,6 +1700,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/primary_officer">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Πρωτεύων διατάκτης</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1832,6 +1833,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/secondary_officer">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/CommisionWarrant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Δευτερεύων Διατάκτης</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2445,7 +2447,7 @@ For more balance accounts that are uploaded on Diavgeia: https://diavgeia.gov.gr
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/BalanceAccount">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ&quot;
+        <rdfs:comment>Corresponds to &quot;ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ&quot;.
 
 Please pay a visit to this pdf balance account: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/BalanceAccount/71%CE%978%CE%A9%CE%9B%CE%9E-2%CE%A1%CE%9D.pdf
 
@@ -2497,7 +2499,11 @@ For more collegial body commision working group decision types that are uploaded
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/CommisionWarrant">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/CommisionWarrant/7%CE%94%CE%A6%CE%96%CE%9F%CE%954%CE%A1-%CE%92%CE%9A7.pdf 
+
+For more commision warrants that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%95%CE%A0%CE%99%CE%A4%CE%A1%CE%9F%CE%A0%CE%99%CE%9A%CE%9F%20%CE%95%CE%9D%CE%A4%CE%91%CE%9B%CE%9C%CE%91%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
