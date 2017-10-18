@@ -260,8 +260,8 @@ class Decision {
         if (this.fields.selection_criterion) {
           this.decisionString += this._formatTriplet('ont', 'selection_criterion', this.fields.selection_criterion, 'string')
         }
-        if (this.fields.contract_decision_type) {
-          this.decisionString += this._formatTriplet('ont', 'contract_decision_type', this.fields.contract_decision_type, 'string')
+        if (this.fields.contract_type) {
+          this.decisionString += this._formatTriplet('ont', 'contract_type', this.fields.contract_type, 'string')
         }
         if (this.fields.government_institution_budget_code) {
           this.decisionString += this._formatTriplet('ont', 'government_institution_budget_code', this.fields.government_institution_budget_code, 'string')
