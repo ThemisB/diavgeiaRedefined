@@ -1,43 +1,49 @@
 <template>
 <div class="decisionSpecificFields">
-  <div class="row">
-    <div class="col-xs-3">
+  <div class="columns">
+    <div class="column">
       <cpv></cpv>
     </div>
-    <div class="col-xs-3">
+    <div class="column">
       <label for="tendering_procedure">Διαδικασία Διαγωνισμού</label>
-      <select class="selectpicker pickers" title="Διαδικασία Διαγωνισμού" data-live-search="true" id="tendering_procedure" name="tendering_procedure" data-width="auto">
-        <option v-for="tenderingProcedure in tenderingProcedures" :data-tokens="tenderingProcedure.keywords" :value="tenderingProcedure.text">{{tenderingProcedure.text}}</option>
-      </select>
+      <multiselect v-model="selectedTenderingProcedure" :options="tenderingProcedures" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε η διαδικασία διαγωνισμού</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="tendering_procedure" :value="selectedTenderingProcedure">
     </div>
-    <div class="col-xs-3">
-      <label for="contract_decision_type">Τύπος Σύμβασης</label>
-      <select class="selectpicker pickers" title="Τύπος Σύμβασης" data-live-search="true" id="contract_decision_type" name="contract_decision_type" data-width="auto">
-        <option v-for="contractType in contractTypes" :data-tokens="contractType.keywords" :value="contractType.text">{{contractType.text}}</option>
-      </select>
+    <div class="column">
+      <label for="contract_type">Τύπος Σύμβασης</label>
+      <multiselect v-model="selectedContractType" :options="contractTypes" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε ο τύπος σύμβασης</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="contract_type" :value="selectedContractType">
     </div>
-    <div class="col-xs-3">
+    <div class="column">
       <label for="selection_criterion">Κριτήριο Επιλογής</label>
-      <select class="selectpicker pickers" title="Κριτήριο Επιλογής" data-live-search="true" id="selection_criterion" name="selection_criterion" data-width="auto">
-        <option v-for="selectionCriterion in selectionCriteria" :data-tokens="selectionCriterion.keywords" :value="selectionCriterion.text">{{selectionCriterion.text}}</option>
-      </select>
+      <multiselect v-model="selectedSelectionCriterion" :options="selectionCriteria" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε το κριτήριο επιλογής</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="selection_criterion" :value="selectedSelectionCriterion">
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <div class="col-xs-4">
-        <label for="government_institution_budget_code">Κωδικός Προϋπολογισμού Φορέα</label>
-        <select class="selectpicker pickers" title="Κωδικός Προϋπολογισμού Φορέα" data-live-search="true" id="government_institution_budget_code" name="government_institution_budget_code" data-width="auto">
-          <option v-for="budgetCode in budgetCodes" :data-tokens="budgetCode.keywords" :value="budgetCode.text">{{budgetCode.text}}</option>
-        </select>
-      </div>
-      <div class="col-xs-4">
-        <label for="expense_amount">Ποσό</label>
-        <input type="number" class="form-control" name="expense_amount">
-      </div>
-      <div class="col-xs-4">
-        <currencies></currencies>
-      </div>
+  <div class="columns">
+    <div class="column">
+      <label for="government_institution_budget_code">Κωδικός Προϋπολογισμού Φορέα</label>
+      <multiselect v-model="selectedBudgetCode" :options="budgetCodes" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε ο κωδικός προϋπολογισμού φορέα</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="government_institution_budget_code" :value="selectedBudgetCode">
+    </div>
+    <div class="column">
+      <label for="expense_amount">Ποσό</label>
+      <input type="number" step="0.01" class="input" name="expense_amount">
+    </div>
+    <div class="column">
+      <currencies></currencies>
     </div>
   </div>
 </div>
@@ -47,39 +53,23 @@
 
 import Cpv from './common-properties/Cpv.vue'
 import Currencies from './common-properties/Currencies.vue'
+import Multiselect from 'vue-multiselect'
+
 import $ from 'jquery'
 
 export default {
   data: () => {
     return {
-      tenderingProcedures: [
-        {text: 'Ανοικτός', keywords: 'Ανοικτός Ανοικτος'},
-        {text: 'Κλειστός', keywords: 'Κλειστός Κλειστος'},
-        {text: 'Πρόχειρος', keywords: 'Πρόχειρος Προχειρος'}
-      ],
-      selectionCriteria: [
-        {text: 'Συμφερότερη από οικονομικής άποψης', keywords: 'Συμφερότερη Συμφεροτερη Από Απο Οικονομικής Οικονομικης Άποψης Αποψης'},
-        {text: 'Χαμηλότερη Τιμή', keywords: 'Χαμηλότερη Χαμηλοτερη Τιμή Τιμη'}
-      ],
-      contractTypes: [
-        {text: 'Έργα', keywords: 'Έργα Εργα'},
-        {text: 'Μελέτες', keywords: 'Μελέτες Μελετες'},
-        {text: 'Προμήθειες', keywords: 'Προμήθειες Προμηθειες'},
-        {text: 'Υπηρεσίες', keywords: 'Υπηρεσίες Υπηρεσιες'}
-      ],
-      budgetCodes: [
-        {text: 'Πρόγραμμα Δημοσίων Επενδύσεων', keywords: 'Πρόγραμμα Προγραμμα Δημοσίων Δημοσιων Επενδύσεων Επενδυσεων'},
-        {text: 'Συγχρηματοδοτούμενο Έργο', keywords: 'Συγχρηματοδοτούμενο Συγχρηματοδοτουμενο Έργο Εργο'},
-        {text: 'Τακτικός Προϋπολογισμός', keywords: 'Τακτικός Τακτικος Προϋπολογισμός Προϋπολογισμος Προυπολογισμος'}
-      ]
+      tenderingProcedures: ['Ανοικτός', 'Κλειστός', 'Πρόχειρος'],
+      selectionCriteria: ['Συμφερότερη από οικονομικής άποψης','Χαμηλότερη Τιμή'],
+      contractTypes: ['Έργα', 'Μελέτες', 'Προμήθειες', 'Υπηρεσίες'],
+      budgetCodes: ['Πρόγραμμα Δημοσίων Επενδύσεων', 'Συγχρηματοδοτούμενο Έργο', 'Τακτικός Προϋπολογισμός'],
+      selectedTenderingProcedure: '',
+      selectedSelectionCriterion: '',
+      selectedContractType: '',
+      selectedBudgetCode: ''
     }
   },
-  mounted: function () {
-    $('#tendering_procedure').selectpicker()
-    $('#selection_criterion').selectpicker()
-    $('#government_institution_budget_code').selectpicker()
-    $('#contract_decision_type').selectpicker()
-  },
-  components: {Cpv, Currencies}
+  components: {Cpv, Currencies, Multiselect}
 }
 </script>
