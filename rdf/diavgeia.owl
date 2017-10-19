@@ -202,6 +202,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
+        <rdfs:comment>Σχετική Ανάληψη Υποχρέωσης.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -2616,7 +2617,11 @@ For more evaluation reports of law that are uploaded on Diavgeia: https://diavge
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ExpenditureApproval">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΔΑΠΑΝΗΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΕΓΚΡΙΣΗ ΔΑΠΑΝΗΣ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/ExpenditureApproval/7%CE%A7%CE%94%CE%9B46%CE%A8%CE%962%CE%9D-87%CE%9D.pdf
+
+For more evaluation reports of law that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%95%CE%93%CE%9A%CE%A1%CE%99%CE%A3%CE%97%20%CE%94%CE%91%CE%A0%CE%91%CE%9D%CE%97%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
