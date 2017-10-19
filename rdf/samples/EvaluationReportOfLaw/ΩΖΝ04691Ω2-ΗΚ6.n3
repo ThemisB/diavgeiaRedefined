@@ -30,6 +30,7 @@
 	ont:has_private_data false;
 	ont:organization_id "99219675";
 	ont:submission_timestamp "1457335841850";
+	ont:uploader_id "100005898";
 	ont:unit_id "72345".
 
 <Consideration/1> a ont:Consideration;
@@ -64,8 +65,7 @@
     ont:has_text "ΕΛΕΓΧΘΗΚΕ και βεβαιώνεται ότι η ανωτέρω δαπάνη είναι εντός του διαθέσιμου ποσού πίστωσης του/των παρακάτω ΚΑΕ με υπόλοιπο προς ανάληψη 38,482,046.91 (ΚΑΕ 2493.00)"@el.
 
 <Signer/1> a ont:Signer;
-	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΤΗΣ ΠΕΡΙΦ/ΚΗΣ ΔΝΣΗΣ."@el;
-	ont:signer_id "100005898".
+	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΤΗΣ ΠΕΡΙΦ/ΚΗΣ ΔΝΣΗΣ."@el.
 
 <Signer/2> a ont:Signer;
 	ont:signer_job "ΥΠΕΥΘΥΝΟΣ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ"@el.
