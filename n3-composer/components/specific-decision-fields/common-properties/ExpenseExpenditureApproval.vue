@@ -1,125 +1,145 @@
 <template>
-<div class="text-center">
-  <div class="row">
-    <h4><u>Στοιχεία φορέα που υλοποιεί την δωρεά</u></h4>
-    <div class="col-xs-4">
+<div>
+  <h4 class="subtitle has-text-centered">Στοιχεία φορέα που υλοποιεί την δωρεά</h4>
+  <div class="columns">
+    <div class="column">
       <label for="sponsor_afm_type">Τύπος ΑΦΜ Φορέα που υλοποιεί την Δωρεά</label>
-      <select class="afm_type" title="Τύπος ΑΦΜ" data-live-search="true" name="sponsor_afm_type" data-width="auto" v-model="selected">
-        <option v-for="afmType in afmTypes" :data-tokens="afmType.keywords" :value="afmType.text">{{afmType.text}}</option>
-      </select>
+        <multiselect v-model="selected" :options="afmTypes" select-label="" selected-label="" deselect-label="" placeholder="">
+        <span slot="noResult">Δεν βρέθηκε ο τύπος ΑΦΜ</span>
+        </multiselect>
+        <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+        <input type="hidden" name="sponsor_afm_type" :value="selected">
     </div>
     <!-- Εθνικό -->
-    <div class="col-xs-8" v-if="selected === 'Εθνικό'">
-      <div class="col-xs-6">
-        <label for="sponsor_afm">ΑΦΜ Φορέα</label>
-        <input type="text" class="form-control" name="sponsor_afm">
-      </div>
-      <div class="col-xs-6">
-        <label for="sponsor_name">Επωνυμία Φορέα</label>
-        <input type="text" readonly="readonly" name="sponsor_name" value="ΕΠΩΝΥΜΙΑ Χ" class="form-control text-center">
+    <div class="column" v-if="selected === 'Εθνικό'">
+      <div class="columns">
+        <div class="column">
+          <label for="sponsor_afm">ΑΦΜ Φορέα</label>
+          <input type="text" class="input" name="sponsor_afm">
+        </div>
+        <div class="column">
+          <label for="sponsor_name">Επωνυμία Φορέα</label>
+          <input type="text" readonly="readonly" name="sponsor_name" value="ΕΠΩΝΥΜΙΑ Χ" class="input text-center">
+        </div>
       </div>
     </div>
     <!-- Εκτός Ε.Ε. -->
-    <div class="col-xs-8" v-if="selected === 'Εκτός Ε.Ε.'">
-      <div class="col-xs-6">
-        <label for="sponsor_afm">ΑΦΜ Φορέα</label>
-        <input type="text" class="form-control" name="sponsor_afm">
-      </div>
-      <div class="col-xs-6">
-        <label for="sponsor_name">Επωνυμία Φορέα</label>
-        <input type="text" name="sponsor_name" class="form-control text-center">
+    <div class="column" v-if="selected === 'Εκτός Ε.Ε.'">
+      <div class="columns">
+        <div class="column">
+          <label for="sponsor_afm">ΑΦΜ Φορέα</label>
+          <input type="text" class="input" name="sponsor_afm">
+        </div>
+        <div class="column">
+          <label for="sponsor_name">Επωνυμία Φορέα</label>
+          <input type="text" name="sponsor_name" class="input text-center">
+        </div>
       </div>
     </div>
     <!-- Νομικό Πρόσωπο στην Ε.Ε. -->
-    <div class="col-xs-8" v-if="this.selected === 'Νομικό Πρόσωπο στην Ε.Ε.'">
-      <div class="col-xs-4">
-        <label for="country">Χώρα που υπάγεται ο φορέας</label>
-        <select title="Χώρα" data-live-search="true" name="country" data-width="auto" id="countries">
-          <option v-for="country in countries" :data-tokens="country.keywords" :value="country.text">{{country.text}}</option>
-        </select>
-      </div>
-      <div class="col-xs-4">
-        <label for="sponsor_afm">ΑΦΜ Φορέα</label>
-        <input type="text" class="form-control" name="sponsor_afm">
-      </div>
-      <div class="col-xs-4">
-        <label for="sponsor_name">Επωνυμία Φορέα</label>
-        <input type="text" name="sponsor_name" class="form-control text-center" readonly="readonly" value="ΕΠΩΝΥΜΙΑ Χ">
+    <div class="column" v-if="this.selected === 'Νομικό Πρόσωπο στην Ε.Ε.'">
+      <div class="columns">
+        <div class="column">
+          <label for="country">Χώρα που υπάγεται ο φορέας</label>
+            <multiselect v-model="selectedCountry" :options="countries" select-label="" selected-label="" deselect-label="" placeholder="">
+            <span slot="noResult">Δεν βρέθηκε χώρα</span>
+            </multiselect>
+            <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+            <input type="hidden" name="country" :value="selectedCountry">
+        </div>
+        <div class="column">
+          <label for="sponsor_afm">ΑΦΜ Φορέα</label>
+          <input type="text" class="input" name="sponsor_afm">
+        </div>
+        <div class="column">
+          <label for="sponsor_name">Επωνυμία Φορέα</label>
+          <input type="text" name="sponsor_name" class="input text-center" readonly="readonly" value="ΕΠΩΝΥΜΙΑ Χ">
+        </div>
       </div>
     </div>
     <!-- Φυσικό Πρόσωπο στην Ε.Ε. -->
-    <div class="col-xs-8" v-if="this.selected === 'Φυσικό Πρόσωπο στην Ε.Ε.'">
-      <div class="col-xs-4">
-        <label for="country">Χώρα που υπάγεται ο φορέας</label>
-        <select title="Χώρα" data-live-search="true" name="country" data-width="auto" id="countries">
-          <option v-for="country in countries" :data-tokens="country.keywords" :value="country.text">{{country.text}}</option>
-        </select>
-      </div>
-      <div class="col-xs-4">
-        <label for="sponsor_afm">ΑΦΜ Φορέα</label>
-        <input type="text" class="form-control" name="sponsor_afm">
-      </div>
-      <div class="col-xs-4">
-        <label for="sponsor_name">Επωνυμία Φορέα</label>
-        <input type="text" name="sponsor_name" class="form-control text-center" value="ΕΠΩΝΥΜΙΑ Χ">
+    <div class="column" v-if="this.selected === 'Φυσικό Πρόσωπο στην Ε.Ε.'">
+      <div class="columns">
+        <div class="column">
+          <label for="country">Χώρα που υπάγεται ο φορέας</label>
+            <multiselect v-model="selectedCountry" :options="countries" select-label="" selected-label="" deselect-label="" placeholder="">
+            <span slot="noResult">Δεν βρέθηκε χώρα</span>
+            </multiselect>
+            <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+            <input type="hidden" name="country" :value="selectedCountry">
+        </div>
+        <div class="column">
+          <label for="sponsor_afm">ΑΦΜ Φορέα</label>
+          <input type="text" class="input" name="sponsor_afm">
+        </div>
+        <div class="column">
+          <label for="sponsor_name">Επωνυμία Φορέα</label>
+          <input type="text" name="sponsor_name" class="input has-text-centered" value="ΕΠΩΝΥΜΙΑ Χ">
+        </div>
       </div>
     </div>
     <!-- Οργανισμός Χωρίς ΑΦΜ -->
-    <div class="col-xs-8" v-if="this.selected === 'Οργανισμοί χωρίς ΑΦΜ'">
+    <div class="column" v-if="this.selected === 'Οργανισμοί χωρίς ΑΦΜ'">
         <label for="sponsor_name">Οργανισμοί χωρίς Α.Φ.Μ.</label>
-        <select title="Οργανισμοί Χωρίς Α.Φ.Μ." data-live-search="true" name="sponsor_name" data-width="auto" id="sponsor_name">
-          <option v-for="noafm in noAfmOrganizations" :data-tokens="noafm.text" :value="noafm.text">{{noafm.text}}</option>
-        </select>
+          <multiselect v-model="selectedNoAfm" :options="noAfmOrganizations" select-label="" selected-label="" deselect-label="" placeholder="">
+          <span slot="noResult">Δεν βρέθηκε οργανισμός χωρίς ΑΦΜ</span>
+          </multiselect>
+          <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+          <input type="hidden" name="sponsor_name" :value="selectedNoAfm">
     </div>
   </div>
-  <div class="row">
-    <h4 class="text-center">Στοιχεία Αναδόχων</h4>
-    <table class="expensesTable table table-striped table-bordered expensesDonation expensesExpenditureApproval">
-    <thead>
-      <tr>
-        <th>ΑΦΜ</th>
-        <th>ΕΠΩΝΥΜΙΑ</th>
-        <th>ΠΟΣΟ ΜΕ ΦΠΑ</th>
-        <th>CPV</th>
-        <th>Αριθμός ΚΑΕ</th>
-        <th>ΠΡΟΣΘΗΚΗ</th>
-      </tr>
-    </thead>
-    <tbody class="text-center">
-      <tr v-for="expense in expensesArray" :key="expense.id = expense">
-          <td>
-            <input type="text" :name="getAFM(expense)" class="form-control">
-          </td>
-          <td class="text-center">
-              <input type="text" readonly="readonly" :name="getSponsored(expense)" value="ΕΠΩΝΥΜΙΑ Χ" class="form-control text-center">
-          </td>
-          <td class="text-center">
-              <div class="col-xs-6 vcenter">
-              <label :for="getExpense(expense)" style="display:block !important">Ποσό</label>
-              <input type="text" :name="getExpense(expense)" class="form-control">
-            </div>
-              <div class="col-xs-6 vcenter">
-                <currencies :number="expense"></currencies>
-              </div>
-          </td>
-          <td>
-            <cpv :number="expense"></cpv>
-          </td>
-          <td>
-            <kae :number="expense"></kae>
-          </td>
-        <input type="hidden" :value="expense" :name="getExpenseIndex(expense)">
-        <!-- TODO Integrate it with the GSIS service  -->
-        <input type="hidden" value="Εθνικό" :name="getAfmTypeName(expense)">
-        <td v-if="expense === 1"><button type="button" class="btn btn-default" v-on:click="incrementExpenses"><span>Προσθήκη {{nextExpense}}ου Ποσού</span></button></td>
-      </tr>
-    </tbody>
-  </table>
+  <h4 class="subtitle has-text-centered">Στοιχεία Αναδόχων</h4>
+  <div class="columns">
+    <div class="column">
+      <table class="table is-striped is-bordered has-text-centered expensesTable">
+        <thead>
+          <tr>
+            <th>ΑΦΜ</th>
+            <th>ΕΠΩΝΥΜΙΑ</th>
+            <th>ΠΟΣΟ ΜΕ ΦΠΑ</th>
+            <th>CPV</th>
+            <th>Αριθμός ΚΑΕ</th>
+            <th>ΠΡΟΣΘΗΚΗ</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr v-for="expense in expensesArray" :key="getKey('expense', expense)">
+              <td style="vertical-align:middle">
+                <input type="text" :name="getAFM(expense)" class="input">
+              </td>
+              <td style="vertical-align:middle" class="has-text-centered">
+                  <input type="text" readonly="readonly" :name="getSponsored(expense)" value="ΕΠΩΝΥΜΙΑ Χ" class="input has-text-centered">
+              </td>
+              <td class="text-center">
+                <div class="columns">
+                  <div class="column vcenter">
+                    <label :for="getExpense(expense)" style="display:block !important">Ποσό</label>
+                    <input type="text" :name="getExpense(expense)" class="input">
+                  </div>
+                  <div class="column vcenter">
+                    <currencies :number="expense"></currencies>
+                  </div>
+                </div>
+              </td>
+              <td style="vertical-align:middle">
+                <cpv :number="expense"></cpv>
+              </td>
+              <td style="vertical-align:middle">
+                <kae :number="expense"></kae>
+              </td>
+            <input type="hidden" :value="expense" :name="getExpenseIndex(expense)">
+            <!-- TODO Integrate it with the GSIS service  -->
+            <input type="hidden" value="Εθνικό" :name="getAfmTypeName(expense)">
+            <td v-if="expense === 1" style="vertical-align:middle"><button type="button" class="button is-info is-outlined" v-on:click="incrementExpenses"><span>Προσθήκη {{nextExpense}}ου Ποσού</span></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
+  <div class="columns is-centered" style="margin-bottom:1em;">
+    <div class="column is-half">
       <label for="has_related_undertaking">ΑΔΑ Σχετικής Ανάληψης Υποχρέωσης</label>
-      <input name="has_related_undertaking" class="form-control">
+      <input name="has_related_undertaking" class="input">
     </div>
   </div>
 </div>
@@ -127,10 +147,10 @@
 
 <script>
 
-import $ from 'jquery'
 import Currencies from './Currencies.vue'
 import Cpv from './Cpv.vue'
 import Kae from './Kae.vue'
+import Multiselect from 'vue-multiselect'
 
 export default {
   methods: {
@@ -157,6 +177,9 @@ export default {
     },
     getSelectedAFMType: function (expenseNumber) {
       return $('#expense_select_' + expenseNumber).val()
+    },
+    getKey: function (keyName, index) {
+      return keyName + '_' + index
     }
   },
   data: function () {
@@ -166,47 +189,9 @@ export default {
       nextExpense: 2,
       selected: '',
       afmChoice: '',
-      afmTypes: [
-        {text: 'Εθνικό', keywords: 'Εθνικό Εθνικο'},
-        {text: 'Εκτός Ε.Ε.', keywords: 'Εκτός Εκτος ΕΕ Ε.Ε.'},
-        {text: 'Νομικό Πρόσωπο στην Ε.Ε.', keywords: 'Νομικό Νομικο Πρόσωπο Προσωπο στην ΕΕ Ε.Ε.'},
-        {text: 'Φυσικό Πρόσωπο στην Ε.Ε.', keywords: 'Φυσικό Φυσικο Πρόσωπο Προσωπο στην ΕΕ Ε.Ε.'},
-        {text: 'Οργανισμοί χωρίς ΑΦΜ', keywords: 'Οργανισμοί Οργανισμοι Χωρίς Χωρις ΑΦΜ'}
-      ],
-      countries: [
-        {text: 'Αυστρία', keywords: 'Αυστρία Αυστρια'},
-        {text: 'Βέλγιο', keywords: 'Βέλγιο Βελγιο'},
-        {text: 'Βουλγαρία', keywords: 'Κύπρος Κυπρος'},
-        {text: 'Τσεχική Δημοκρατία', keywords: 'Τσεχική Τσεχικη Δημοκρατία Δημοκρατια'},
-        {text: 'Γερμανία', keywords: 'Γερμανία Γερμανια'},
-        {text: 'Δανία', keywords: 'Δανία Δανια'},
-        {text: 'Εσθονία', keywords: 'Εσθονία Εσθονια'},
-        {text: 'Ελλάδα', keywords: 'Ελλάδα Ελλαδα'},
-        {text: 'Ισπανία', keywords: 'Ισπανία Ισπανια'},
-        {text: 'Φινλανδία', keywords: 'Φινλανδία Φινλανδια'},
-        {text: 'Γαλλία', keywords: 'Γαλλία Γαλλια'},
-        {text: 'Ηνωμένο Βασίλειο', keywords: 'Κροατία Κροατια'},
-        {text: 'Ουγγαρία', keywords: 'Ουγγαρία Ουγγαρια'},
-        {text: 'Ιρλανδία', keywords: 'Ιρλανδία Ιρλανδια'},
-        {text: 'Ιταλία', keywords: 'Ιταλία Ιταλια'},
-        {text: 'Λιθουανία', keywords: 'Λιθουανία Λιθουανια'},
-        {text: 'Λουξεμβούργο', keywords: 'Λουξεμβούργο Λουξεμβουργο'},
-        {text: 'Λεττονία', keywords: 'Λεττονία Λεττονια'},
-        {text: 'Μάλτα', keywords: 'Μάλτσα Μαλτα'},
-        {text: 'Κάτω Χώρες', keywords: 'Κάτω Κατω Χώρες Χωρες'},
-        {text: 'Πολωνία', keywords: 'Πολωνία Πολωνια'},
-        {text: 'Πορτογαλία', keywords: 'Πορτογαλία Πορτογαλια'},
-        {text: 'Ρωμανία', keywords: 'Ρωμανία Ρωμανια'},
-        {text: 'Σουηδία', keywords: 'Σουηδία Σουηδια'},
-        {text: 'Σλοβενία', keywords: 'Σλοβενία Σλοβενια'},
-        {text: 'Σλοβακία', keywords: 'Σλοβακία'}
-      ],
-      noAfmOrganizations: [
-        {text: 'Οργανισμός Οικονομικής Συνεργασίας και Ανάπτυξης (ΟΟΣΑ)'},
-        {text: 'INTERNATIONAL SEED TESTING ASSOSIATION (ISTA)'},
-        {text: 'Ευρωπαϊκή Τράπεζα Επενδύσεων'},
-        {text: 'National Reference Laboratory, Department of Proficiency Testing Programmes (NRL, OMPZ)'}
-      ]
+      afmTypes: ['Εθνικό', 'Εκτός Ε.Ε.', 'Νομικό Πρόσωπο στην Ε.Ε.','Φυσικό Πρόσωπο στην Ε.Ε.', 'Οργανισμοί χωρίς ΑΦΜ'],
+      countries: ['Αυστρία', 'Βέλγιο', 'Βουλγαρία', 'Τσεχική Δημοκρατία', 'Γερμανία', 'Δανία', 'Εσθονία', 'Ελλάδα', 'Ισπανία', 'Φινλανδία', 'Γαλλία', 'Ηνωμένο Βασίλειο', 'Ουγγαρία', 'Ιρλανδία', 'Ιταλία', 'Λιθουανία', 'Λουξεμβούργο', 'Λεττονία', 'Μάλτα', 'Κάτω Χώρες', 'Πολωνία', 'Πορτογαλία', 'Ρωμανία', 'Σουηδία', 'Σλοβενία', 'Σλοβακία'],
+      noAfmOrganizations: ['Οργανισμός Οικονομικής Συνεργασίας και Ανάπτυξης (ΟΟΣΑ)', 'INTERNATIONAL SEED TESTING ASSOSIATION (ISTA)', 'Ευρωπαϊκή Τράπεζα Επενδύσεων', 'National Reference Laboratory, Department of Proficiency Testing Programmes (NRL, OMPZ)']
     }
   },
   mounted: function () {
@@ -214,9 +199,7 @@ export default {
     this.lastExpense = 1
     this.nextExpense = 2
     this.expensesArray = [expenseNumber]
-    $('.afm_type').selectpicker()
-    $('#countries').selectpicker()
   },
-  components: {Currencies, Cpv, Kae}
+  components: {Currencies, Cpv, Kae, Multiselect}
 }
 </script>
