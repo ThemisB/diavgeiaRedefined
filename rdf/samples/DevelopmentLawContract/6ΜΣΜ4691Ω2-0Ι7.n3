@@ -41,6 +41,7 @@
 	ont:has_private_data false;
 	ont:organization_id "99219675";
 	ont:submission_timestamp "1473333552193";
+	ont:uploader_id "121880";
 	ont:unit_id "72341".
 
 <Consideration/1> a ont:Consideration;
@@ -74,5 +75,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Η Προϊσταµένη της ∆ιεύθυνσης Οικονοµικών Υπηρεσιών (Β3)"@el;
-	ont:signer_name "Ε. ΑΓΓΕΛΟΠΟΥΛΟΥ"@el;
-	ont:signer_id "121880".
+	ont:signer_name "Ε. ΑΓΓΕΛΟΠΟΥΛΟΥ"@el.
