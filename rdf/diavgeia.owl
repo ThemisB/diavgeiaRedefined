@@ -2575,7 +2575,11 @@ For more development law contracts that are uploaded on Diavgeia: https://diavge
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/DisciplinaryAcquitance">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/DisciplinaryAcquitance/6%CE%A7%CE%9C%CE%93%CE%A916-%CE%9C%CE%A3%CE%92.pdf
+
+For more disciplinary acquaintances  that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%91%CE%98%CE%A9%CE%A9%CE%A4%CE%99%CE%9A%CE%97%20%CE%A0%CE%95%CE%99%CE%98%CE%91%CE%A1%CE%A7%CE%99%CE%9A%CE%97%20%CE%91%CE%A0%CE%9F%CE%A6%CE%91%CE%A3%CE%97%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
