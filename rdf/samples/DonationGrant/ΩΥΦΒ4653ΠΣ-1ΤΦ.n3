@@ -49,6 +49,7 @@
 	ont:kae "8299";
 	ont:organization_id "100015990";
 	ont:submission_timestamp "1473244239140";
+	ont:uploader_id "100008317";
 	ont:unit_id "100008312".
 
 <Consideration/1> a ont:Consideration;
@@ -101,8 +102,7 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Η ΠΡΟΪΣΤΑΜΕΝΗ ΤΟΥ ΤΜΗΜΑΤΟΣ"@el;
-	ont:signer_name "ΕΙΡΗΝΗ ΗΛΙΟΠΟΥΛΟΥ"@el;
-	ont:signer_id "100008317".
+	ont:signer_name "ΕΙΡΗΝΗ ΗΛΙΟΠΟΥΛΟΥ"@el.
 
 <OrganizationSponsor/1> a ont:OrganizationSponsor;
 	ont:afm "090055799";
