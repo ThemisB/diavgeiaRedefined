@@ -29,6 +29,7 @@
 	ont:has_private_data true;
 	ont:organization_id "6262";
 	ont:submission_timestamp "1459937621791";
+	ont:uploader_id "100002256";
 	ont:unit_id "94725".
 
 <Consideration/1> a ont:Consideration;
@@ -50,5 +51,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Ο ΔΗΜΑΡΧΟΣ"@el;
-	ont:signer_name "ΒΑΣΙΛΕΙΟΣ ΠΙΣΤΙΚΙΔΗΣ"@el;
-	ont:signer_id "100002256".
+	ont:signer_name "ΒΑΣΙΛΕΙΟΣ ΠΙΣΤΙΚΙΔΗΣ"@el.
