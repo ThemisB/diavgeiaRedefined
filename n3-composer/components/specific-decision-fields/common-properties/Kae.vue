@@ -1,7 +1,7 @@
 <template>
   <div>
     <label for="kae" v-if="number === undefined">Αριθμός ΚΑΕ</label>
-    <input type="text" :name="getKaeName" class="form-control">
+    <input type="text" :name="getKaeName" class="input">
   </div>
 </template>
 
