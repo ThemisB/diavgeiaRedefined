@@ -55,8 +55,6 @@ import Cpv from './common-properties/Cpv.vue'
 import Currencies from './common-properties/Currencies.vue'
 import Multiselect from 'vue-multiselect'
 
-import $ from 'jquery'
-
 export default {
   data: () => {
     return {
