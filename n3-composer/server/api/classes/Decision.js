@@ -274,9 +274,12 @@ class Decision {
         if (this.fields.kae) {
           this.decisionString += this._formatTriplet('ont', 'kae', this.fields.kae, 'string', false)
         }
-        if (this.fields.expense_amount && this.fields.expense_currency) {
-          this.decisionString += this._formatTriplet('ont', 'has_expense', 'Expense/1', 'entity')
-        }
+        this.fields.expense.forEach((expense, i) => {
+          if (expense.expense_amount && expense.expense_currency && this.fields.sponsor_afm && this.fields.sponsor_name) {
+            this.decisionString += this._formatTriplet('ont', 'has_expense', 'Expense/' + (i + 1), 'entity')
+          }
+        })
+
         break
       case 'SpatialPlanningDecisions':
         if (this.fields.municipality) {
@@ -696,15 +699,15 @@ class Decision {
         break
       case 'DonationGrant':
         // TODO why Diavgeia supports only 1 amount of money for all expenses??
-        this.decisionString += '<Expense/1> a ont:Expense;\n'
         this.fields.expense.forEach((expense, i) => {
-          if (expense.afm) {
+          this.decisionString += '<Expense/' + (i + 1) + '> a ont:Expense;\n'
+          if (expense.afm && expense.afm_type && expense.expense_amount && expense.expense_currency) {
             this.decisionString += this._formatTriplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
           }
+          this.decisionString += this._formatTriplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity')
+          this.decisionString += this._formatTriplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
+          this.decisionString += this._formatTriplet('ont', 'expense_amount_currency', expense.expense_currency, 'string', true, true)
         })
-        this.decisionString += this._formatTriplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity')
-        this.decisionString += this._formatTriplet('ont', 'expense_amount', this.fields.expense_amount, 'string', false)
-        this.decisionString += this._formatTriplet('ont', 'expense_amount_currency', this.fields.expense_currency, 'string', true, true)
 
         // OrganizationSponsor
         this.decisionString += '<OrganizationSponsor/1> a ont:OrganizationSponsor;\n'
@@ -717,9 +720,9 @@ class Decision {
         this.decisionString += this._formatTriplet('ont', 'name', this.fields.sponsor_name, 'string', true, true)
 
         // Sponsored
-        this.fields.expense.forEach((expense) => {
-          if (expense.afm && expense.sponsored && expense.index) {
-            this.decisionString += '<Sponsored/' + expense.index + '> a ont:Sponsored;\n'
+        this.fields.expense.forEach((expense, i) => {
+          if (expense.afm && expense.afm_type && expense.sponsored && expense.index) {
+            this.decisionString += '<Sponsored/' + (i + 1) + '> a ont:Sponsored;\n'
             this.decisionString += this._formatTriplet('ont', 'afm', expense.afm, 'string', false)
             this.decisionString += this._formatTriplet('ont', 'afm_type', expense.afm_type, 'string')
             this.decisionString += this._formatTriplet('ont', 'name', expense.sponsored, 'string', true, true)
