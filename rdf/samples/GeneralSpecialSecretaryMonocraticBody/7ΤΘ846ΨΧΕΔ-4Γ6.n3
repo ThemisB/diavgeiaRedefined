@@ -23,6 +23,7 @@
 	ont:has_private_data false;
 	ont:organization_id "99200192";
 	ont:submission_timestamp "1457424900872";
+	ont:uploader_id "103167";
 	ont:unit_id "73175".
 
 <Consideration/1> a ont:Consideration;
@@ -34,8 +35,7 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΠΡΟΪΣΤΑΜΕΝΗ Δ/ΝΣΗΣ"@el;
-	ont:signer_name "ΣΤΥΛΙΑΝΗ ΚΟΛΙΟΠΟΥΛΟΥ"@el;
-	ont:signer_id "103167".
+	ont:signer_name "ΣΤΥΛΙΑΝΗ ΚΟΛΙΟΠΟΥΛΟΥ"@el.
 
 <Expense/1> a ont:Expense;
 	ont:expense_amount "9370.08";
