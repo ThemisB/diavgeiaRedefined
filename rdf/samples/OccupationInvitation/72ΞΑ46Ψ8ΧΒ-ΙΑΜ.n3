@@ -31,6 +31,7 @@
 	ont:thematic_category "PublicAdministration";
 	ont:has_private_data false;
 	ont:organization_id "99202041";
+	ont:uploader_id "100001408";
 	ont:submission_timestamp "1465284835474";
 	ont:unit_id "72831".
 
@@ -99,5 +100,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Ο ΠΡΥΤΑΝΗΣ"@el;
-	ont:signer_name "ΠΕΡΙΚΛΗΣ ΜΗΤΚΑΣ"@el;
-	ont:signer_id "100001408".
+	ont:signer_name "ΠΕΡΙΚΛΗΣ ΜΗΤΚΑΣ"@el.
