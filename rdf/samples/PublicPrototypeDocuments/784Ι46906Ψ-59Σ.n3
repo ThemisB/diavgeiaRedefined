@@ -27,6 +27,7 @@
 	ont:has_private_data false;
 	ont:organization_id "99222003";
 	ont:submission_timestamp "1404193811006";
+	ont:uploader_id "129341";
 	ont:unit_id "75132".
 
 <Consideration/1> a ont:Consideration;
@@ -48,5 +49,4 @@
 	ont:has_text "Την επικύρωση του θέματος αυθημερόν."@el.
 
 <Signer/1> a ont:Signer;
-	ont:signer_job "Η Γραμματέας του Δ.Σ."@el;
-	ont:signer_id "129341".
+	ont:signer_job "Η Γραμματέας του Δ.Σ."@el.
