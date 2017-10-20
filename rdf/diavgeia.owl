@@ -1259,6 +1259,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/legislative_decree_number">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/LegislativeDecree"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Αριθμός Πράξης Νομοθετικού Περιεχομένου.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2691,7 +2692,11 @@ For more investment placings that are uploaded on Diavgeia: https://diavgeia.gov
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/LegislativeDecree">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1)&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΗ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1)&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.pdf
+
+For more legislative decrees that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%5B%22%CE%A0%CE%A1%CE%91%CE%9E%CE%97%20%CE%9D%CE%9F%CE%9C%CE%9F%CE%98%CE%95%CE%A4%CE%99%CE%9A%CE%9F%CE%A5%20%CE%A0%CE%95%CE%A1%CE%99%CE%95%CE%A7%CE%9F%CE%9C%CE%95%CE%9D%CE%9F%CE%A5%20(%CE%A3%CF%8D%CE%BD%CF%84%CE%B1%CE%B3%CE%BC%CE%B1%22,%22%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%2044%22,%22%20%CF%80%CE%B1%CF%81%201)%22%5D&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
