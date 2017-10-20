@@ -2820,7 +2820,11 @@ For more other owneship transfer of assets that are uploaded on Diavgeia: https:
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/PublicPrototypeDocuments">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/PublicPrototypeDocuments/784%CE%9946906%CE%A8-59%CE%A3.pdf
+
+For more other public prototype documents that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%99%CE%91%20%CE%A0%CE%A1%CE%9F%CE%A4%CE%A5%CE%A0%CE%91%20%CE%95%CE%93%CE%93%CE%A1%CE%91%CE%A6%CE%91%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
