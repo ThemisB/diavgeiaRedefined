@@ -1,9 +1,9 @@
 <template>
-  <div class="decisionSpecificFields row">
-    <div class="col-xs-4">
+  <div class="decisionSpecificFields columns">
+    <div class="column is-one-quarter">
       <normative-type></normative-type>
     </div>
-    <div class="col-xs-8">
+    <div class="column">
       <publish-via></publish-via>
     </div>
   </div>
