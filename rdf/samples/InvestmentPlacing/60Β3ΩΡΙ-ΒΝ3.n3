@@ -23,6 +23,7 @@
 	ont:has_private_data false;
 	ont:organization_id "6105";
 	ont:submission_timestamp "1473317717387";
+	ont:uploader_id "133110";
 	ont:unit_id "93302".
 
 <Consideration/1> a ont:Consideration;
@@ -42,8 +43,7 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ"@el;
-	ont:signer_name "Κούτσικος Κων/νος"@el;
-	ont:signer_id "133110".
+	ont:signer_name "Κούτσικος Κων/νος"@el.
 
 <Signer/2> a ont:Signer;
 	ont:signer_job "ΜΕΛΟΣ ΕΠΙΤΡΟΠΗΣ"@el;

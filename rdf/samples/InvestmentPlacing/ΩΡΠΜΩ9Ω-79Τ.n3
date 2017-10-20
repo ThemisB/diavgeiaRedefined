@@ -20,6 +20,7 @@
 	ont:has_private_data false;
 	ont:organization_id "6057";
 	ont:submission_timestamp "1473410847593";
+	ont:uploader_id "135716";
 	ont:unit_id "10940".
 
 <Consideration/1> a ont:Consideration;
@@ -38,5 +39,5 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Δήμαρχος Βόλβης"@el;
-	ont:signer_name "Διαμαντής Λιάμας"@el;
-	ont:signer_id "135716".
+	ont:signer_name "Διαμαντής Λιάμας"@el.
+
