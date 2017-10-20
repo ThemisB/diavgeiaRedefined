@@ -30,6 +30,7 @@
 	ont:organization_id "54511";
 	ont:asset_name "Γήπεδο"@el;
 	ont:submission_timestamp "1457341365897";
+	ont:uploader_id "100007189";
 	ont:unit_id "92904".
 
 <Consideration/1> a ont:Consideration;
@@ -56,8 +57,7 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΠΡΟΕΔΡΟΣ ΔΣ Ο.Π.Α.Ν.Δ.Α"@el;
-	ont:signer_name "ΧΡΗΣΤΟΣ ΤΕΝΤΟΜΑΣ"@el;
-	ont:signer_id "100007189".
+	ont:signer_name "ΧΡΗΣΤΟΣ ΤΕΝΤΟΜΑΣ"@el.
 
 <OrganizationSponsor/1> a ont:OrganizationSponsor;
 	ont:afm "997420620";
