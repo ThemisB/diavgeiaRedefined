@@ -1,10 +1,10 @@
 <template>
-  <div class="decisionSpecificFields row">
-    <div class="col-xs-4">
+  <div class="decisionSpecificFields columns">
+    <div class="column">
       <label for="legislative_decree_number">Αριθμός Πράξης</label>
-      <input type="text" name="legislative_decree_number" class="form-control">
+      <input type="text" name="legislative_decree_number" class="input">
     </div>
-    <div class="col-xs-8">
+    <div class="column">
       <fek></fek>
     </div>
   </div>
