@@ -2320,6 +2320,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Είδος πράξης Προκήρυξης πλήρωσης θέσεων.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2705,7 +2706,11 @@ For more legislative decrees that are uploaded on Diavgeia: https://diavgeia.gov
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Normative">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΚΑΝΟΝΙΣΤΙΚΗ ΠΡΑΞΗ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΚΑΝΟΝΙΣΤΙΚΗ ΠΡΑΞΗ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/tree/master/rdf/samples/Normative
+
+For more normatives that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%9A%CE%91%CE%9D%CE%9F%CE%9D%CE%99%CE%A3%CE%A4%CE%99%CE%9A%CE%97%20%CE%A0%CE%A1%CE%91%CE%9E%CE%97%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
@@ -2714,7 +2719,12 @@ For more legislative decrees that are uploaded on Diavgeia: https://diavgeia.gov
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OccupationInvitation">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/OccupationInvitation/72%CE%9E%CE%9146%CE%A88%CE%A7%CE%92-%CE%99%CE%91%CE%9C.pdf
+
+For more occupation invitations that are uploaded on Diavgeia:
+https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A0%CE%A1%CE%9F%CE%9A%CE%97%CE%A1%CE%A5%CE%9E%CE%97%20%CE%A0%CE%9B%CE%97%CE%A1%CE%A9%CE%A3%CE%97%CE%A3%20%CE%98%CE%95%CE%A3%CE%95%CE%A9%CE%9D%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
