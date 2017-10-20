@@ -66,6 +66,8 @@
 	ont:fek_issue "Α"@el;
 	ont:fek_year "2015";
 	ont:legislative_decree_number "ΠΝΠ_07.10"@el;
+	ont:uploader_id "100011328";
+	ont:uploader_id "100011130";
 	ont:unit_id "91380".
 
 <Consideration/1> a ont:Consideration;
