@@ -31,6 +31,7 @@
 	ont:has_private_data false;
 	ont:organization_id "100015990";
 	ont:submission_timestamp "1465363673192";
+	ont:uploader_id "100018799";
 	ont:unit_id "71549".
 
 <Consideration/1> a ont:Consideration;
@@ -57,5 +58,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Η ΔΙΕΥΘΥΝΤΡΙΑ Δ.Ε."@el;
-	ont:signer_name "ΜΑΡΙΓΟΥΛΑ ΚΟΣΜΙΔΟΥ"@el;
-	ont:signer_id "100018799".
+	ont:signer_name "ΜΑΡΙΓΟΥΛΑ ΚΟΣΜΙΔΟΥ"@el.
