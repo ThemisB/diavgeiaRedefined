@@ -1776,6 +1776,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Μέσο δημοσίευσης απόφασης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2721,7 +2722,7 @@ For more normatives that are uploaded on Diavgeia: https://diavgeia.gov.gr/searc
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:comment>Corresponds to &quot;ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ&quot;.
 
-Please pay a visit to this pdf decision: https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/OccupationInvitation/72%CE%9E%CE%9146%CE%A88%CE%A7%CE%92-%CE%99%CE%91%CE%9C.pdf
+Please pay a visit to this pdf decision: https://github.com/themisb/diavgeiaRedefined/blob/master/rdf/samples/OccupationInvitation/72%CE%9E%CE%9146%CE%A88%CE%A7%CE%92-%CE%99%CE%91%CE%9C.pdf
 
 For more occupation invitations that are uploaded on Diavgeia:
 https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A0%CE%A1%CE%9F%CE%9A%CE%97%CE%A1%CE%A5%CE%9E%CE%97%20%CE%A0%CE%9B%CE%97%CE%A1%CE%A9%CE%A3%CE%97%CE%A3%20%CE%98%CE%95%CE%A3%CE%95%CE%A9%CE%9D%22&amp;page=0</rdfs:comment>
@@ -2755,7 +2756,12 @@ For more opinions that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OtherDecisions">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΑΤΟΜΙΚΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΛΟΙΠΕΣ ΑΤΟΜΙΚΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/OtherDecisions/%CE%A9%CE%A0%CE%A864653%CE%A0%CE%A3-5%CE%9A%CE%A0.pdf
+
+For more &quot;Other decisions&quot; that are uploaded on Diavgeia:
+https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%9B%CE%9F%CE%99%CE%A0%CE%95%CE%A3%20%CE%91%CE%A4%CE%9F%CE%9C%CE%99%CE%9A%CE%95%CE%A3%20%CE%94%CE%99%CE%9F%CE%99%CE%9A%CE%97%CE%A4%CE%99%CE%9A%CE%95%CE%A3%20%CE%A0%CE%A1%CE%91%CE%9E%CE%95%CE%99%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
