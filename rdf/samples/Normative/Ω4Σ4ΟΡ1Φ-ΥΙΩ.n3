@@ -47,6 +47,7 @@
 	ont:fek_number "145";
 	ont:fek_issue "Δ"@el;
 	ont:fek_year "2016";
+	ont:uploader_id "100011930";
 	ont:normative_type "Πράξη Γενικού Γραμματέα Αποκεντρωμένης Διοίκησης"@el.
 
 <Consideration/1> a ont:Consideration;
@@ -118,5 +119,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΓΕΝΙΚΟΣ Δ/ΝΤΗΣ ΧΩΡΟΤΑΞΙΚΗΣ & ΠΕΡΙΒΑΛΛΟΝΤΙΚΗΣ ΠΟΛΙΤΙΚΗΣ (ΑΣΚΩΝ ΚΑΘΗΚΟΝΤΑ ΓΕΝΙΚΟΥ ΓΡΑΜΜΑΤΕΑ)"@el;
-	ont:signer_name "ΔΙΟΝΥΣΙΟΣ ΠΑΝΑΓΙΩΤΟΠΟΥΛΟΣ"@el;
-	ont:signer_id "100011930".
+	ont:signer_name "ΔΙΟΝΥΣΙΟΣ ΠΑΝΑΓΙΩΤΟΠΟΥΛΟΣ"@el.
