@@ -1,32 +1,38 @@
 <template>
   <div class="decisionSpecificFields">
-    <div class="row">
-      <div class="col-xs-4">
+    <div class="columns">
+      <div class="column">
         <label for="position_decision_type">Είδος Πράξης</label>
-        <select class="selectpicker pickers" title="Είδος Πράξης" data-live-search="true" id="position_decision_type" name="position_decision_type" data-width="auto" v-model="selected">
-          <option v-for="decisionType in decisionTypes" :data-tokens="decisionType.keywords" :value="decisionType.text">{{decisionType.text}}</option>
-        </select>
+        <multiselect v-model="selectedDecisionType" :options="decisionTypes" select-label="" selected-label="" deselect-label="" placeholder="">
+        <span slot="noResult">Δεν βρέθηκε το είδος πράξης</span>
+        </multiselect>
+        <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+        <input type="hidden" name="position_decision_type" :value="selectedDecisionType">
       </div>
-      <div v-if="selected === 'Καθορισμός Αμοιβής - Αποζημίωσης'" class="col-xs-8">
-        <div class="col-xs-6">
-          <label for="expense_amount">Ποσό</label>
-          <input type="number" class="form-control" name="expense_amount">
-        </div>
-        <div class="col-xs-6">
-          <currencies></currencies>
+      <div v-if="selectedDecisionType === 'Καθορισμός Αμοιβής - Αποζημίωσης'" class="column">
+        <div class="columns">
+          <div class="column">
+            <label for="expense_amount">Ποσό</label>
+            <input type="number" class="input" name="expense_amount" step="0.01">
+          </div>
+          <div class="column">
+            <currencies></currencies>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-4 col-xs-offset-1">
+    <div class="columns">
+      <div class="column">
         <label for="position">Θέση</label>
-        <select class="selectpicker pickers" title="Θέση" data-live-search="true" id="position" name="position" data-width="auto">
-          <option v-for="position in positions" :data-tokens="position.keywords" :value="position.text">{{position.text}}</option>
-        </select>
+        <multiselect v-model="selectedPosition" :options="positions" select-label="" selected-label="" deselect-label="" placeholder="">
+        <span slot="noResult">Δεν βρέθηκε θέση</span>
+        </multiselect>
+        <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+        <input type="hidden" name="position" :value="selectedPosition">
       </div>
-      <div class="col-xs-4 col-xs-offset-1">
+      <div class="column">
         <label for="position_org">Φορέας που υφίσταται η θέση</label>
-        <input type="text" class="form-control">
+        <input type="text" class="input" name="position_org">
       </div>
     </div>
   </div>
@@ -34,33 +40,18 @@
 
 <script>
 
-import $ from 'jquery'
 import Currencies from './common-properties/Currencies.vue'
+import Multiselect from 'vue-multiselect'
 
 export default {
   data: () => {
     return {
-      decisionTypes: [
-        {text: 'Αθωωτική Πειθαρχική Απόφαση', keywords: 'Αθωωτική Αθωωτικη Πειθαρχική Πειθαρχικη Απόφαση Αποφαση'},
-        {text: 'Αντικατάσταση', keywords: 'Αντικατάσταση Αντικατασταση'},
-        {text: 'Αποδοχή Παραίτησης', keywords: 'Αποδοχή Αποδοχη Παραίτησης Παραιτησης'},
-        {text: 'Διορισμός', keywords: 'Διορισμός Διορισμος'},
-        {text: 'Καθορισμός Αμοιβής - Αποζημίωσης', keywords: 'Καθορισμός Καθορισμος Αμοιβής Αμοιβης Αποζημίωσης Αποζημιωσης'},
-        {text: 'Παύση', keywords: 'Παύση Παυση'}
-      ],
-      positions: [
-        {text: 'Γενικός Γραμματέας Αποκεντρωμένης Διοίκησης', keywords: 'Γενικός Γενικος Γραμματέας Γραμματεας Αποκεντρωμένης Αποκεντρωμενης Διοίκησης Διοικησης'},
-        {text: 'Γενικός Γραμματέας Υπουργείου', keywords: 'Γενικός Γενικος Γραμματέας Γραμματεας Υπουργείου Υπουργειου'},
-        {text: 'Ειδικός Γραμματέας Υπουργείου', keywords: 'Ειδικός Ειδικος Γραμματέας Γραμματεας Υπουργείου Υπουργειου'},
-        {text: 'Μονομελές Όργανο', keywords: 'Μονομελές Μονομελες Όργανο Οργανο'}
-      ],
-      selected: ''
+      decisionTypes: ['Αθωωτική Πειθαρχική Απόφαση', 'Αντικατάσταση', 'Αποδοχή Παραίτησης','Διορισμός', 'Καθορισμός Αμοιβής - Αποζημίωσης', 'Παύση'],
+      positions: ['Γενικός Γραμματέας Αποκεντρωμένης Διοίκησης', 'Γενικός Γραμματέας Υπουργείου', 'Ειδικός Γραμματέας Υπουργείου', 'Μονομελές Όργανο'],
+      selectedDecisionType: '',
+      selectedPosition: ''
     }
   },
-  mounted: function () {
-    $('#position_decision_type').selectpicker()
-    $('#position').selectpicker()
-  },
-  components: {Currencies}
+  components: {Currencies, Multiselect}
 }
 </script>
