@@ -32,6 +32,7 @@
 	ont:has_private_data false;
 	ont:organization_id "100015969";
 	ont:submission_timestamp "1496232550111";
+	ont:uploader_id "137132";
 	ont:unit_id "93244".
 
 <Consideration/1> a ont:Consideration;
@@ -50,5 +51,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Ο ΛΙΜΕΝΑΡΧΗΣ ΥΠΟΠΛΟΙΑΡΧΟΣ Λ.Σ."@el;
-	ont:signer_name "ΣΙΑΡΜΠΑΣ Στυλιανός"@el;
-	ont:signer_id "137132".
+	ont:signer_name "ΣΙΑΡΜΠΑΣ Στυλιανός"@el.
