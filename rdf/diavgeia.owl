@@ -362,6 +362,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/asset_name">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Το αντικειμένο της παραχώρησης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2783,7 +2784,11 @@ For more other development laws that are uploaded on Diavgeia: https://diavgeia.
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/OwnershipTransferOfAssets">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΑΡΑΧΩΡΗΣΗ ΧΡΗΣΗΣ ΠΕΡΙΟΥΣΙΑΚΩΝ ΣΤΟΙΧΕΙΩΝ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΠΑΡΑΧΩΡΗΣΗ ΧΡΗΣΗΣ ΠΕΡΙΟΥΣΙΑΚΩΝ ΣΤΟΙΧΕΙΩΝ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/OwnershipTransferOfAssets/7%CE%9D7%CE%9A%CE%9F%CE%9E%CE%A9%CE%A1-4%CE%A8%CE%A8.pdf
+
+For more other owneship transfer of assets that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A0%CE%91%CE%A1%CE%91%CE%A7%CE%A9%CE%A1%CE%97%CE%A3%CE%97%20%CE%A7%CE%A1%CE%97%CE%A3%CE%97%CE%A3%20%CE%A0%CE%95%CE%A1%CE%99%CE%9F%CE%A5%CE%A3%CE%99%CE%91%CE%9A%CE%A9%CE%9D%20%CE%A3%CE%A4%CE%9F%CE%99%CE%A7%CE%95%CE%99%CE%A9%CE%9D%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
