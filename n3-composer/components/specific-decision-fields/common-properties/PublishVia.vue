@@ -1,12 +1,14 @@
 <template>
-  <div>
-  <div class="col-xs-6">
+<div class="columns">
+  <div class="column">
     <label for="publish_via">Μέσο Δημοσίευσης της Πράξης</label>
-    <select class="selectpicker pickers" title="Τύπος Πράξης" data-live-search="true" id="publishViaSelector" name="publish_via" data-width="auto" v-model="selected">
-      <option v-for="option in options" :data-tokens="option.keywords" :value="option.text">{{option.text}}</option>
-    </select>
+    <multiselect id="publishViaSelector" v-model="selected" :options="options" select-label="" selected-label="" deselect-label="" placeholder="">
+    <span slot="noResult">Δεν βρέθηκε μέσο δημοσίευσης</span>
+    </multiselect>
+    <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+    <input type="hidden" name="publish_via" :value="selected">
   </div>
-  <div v-if="selected === 'Στο ΦΕΚ'" class="col-xs-6">
+  <div v-if="selected === 'Στο ΦΕΚ'" class="column">
     <fek></fek>
   </div>
 </div>
@@ -14,25 +16,17 @@
 
 <script>
 
-import $ from 'jquery'
 import Fek from './Fek.vue'
+import Multiselect from 'vue-multiselect'
 
 export default {
   data: function () {
     return {
-      options: [
-        {text: 'Ημερήσιος Τύπος', keywords: 'Ημερήσιος Ημερησιος Τύπος Τυπος'},
-        {text: 'Ιστοσελίδα του φορέα', keywords: 'Ιστοσελίδα Ιστοσελιδα Φορέα Φορεα Του'},
-        {text: 'Κατάστημα της Υπηρεσίας', keywords: 'Κατάστημα Καταστημα Υπηρεσίας Υπηρεσιας Της'},
-        {text: 'Στο ΦΕΚ', keywords: 'ΦΕΚ Στο'}
-      ],
+      options: ['Ημερήσιος Τύπος', 'Ιστοσελίδα του φορέα', 'Κατάστημα της Υπηρεσίας', 'Στο ΦΕΚ'],
       selected: ''
     }
   },
-  mounted: function () {
-    $('#publishViaSelector').selectpicker()
-  },
-  components: {Fek}
+  components: {Fek, Multiselect}
 }
 
 </script>
