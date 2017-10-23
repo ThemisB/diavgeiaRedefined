@@ -337,12 +337,21 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment>There are 4 kinds of AFM that an organization may have:
+        <rdfs:comment>There are 5 kinds of AFM that an organization may have:
 
 1. (Natural Person) belongs to E.U.
 2. (Legal Person) belongs to E.U.
 3. National (Countries inside Greece).
-4. Do not belong to E.U.</rdfs:comment>
+4. Do not belong to E.U.
+5. Organizations without afm.
+
+Υπάρχουν 4 είδη ΑΦΜ που μπορεί να έχει ένας οργανισμός:
+
+1. Φυσικό Πρόσωπο στην Ε.Ε.
+2. Νομικό Πρόσωπο στην Ε.Ε.
+3. Εθνικό
+4. Εκτός Ε.Ε.
+5. Οργανισμοί χωρίς ΑΦΜ</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -726,6 +735,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/cpv">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Expense"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Ο αριθμός CPV.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -802,6 +812,9 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The amount of an expense.
+
+Το ποσό μιας δαπάνης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -819,6 +832,9 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The currency of the expense.
+
+Το συνάλλαγμα μιας δαπάνης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -922,7 +938,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment>Τεύχος ΦΕΚ</rdfs:comment>
+        <rdfs:comment>Τεύχος ΦΕΚ.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -944,7 +960,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Αριθμός ΦΕΚ</rdfs:comment>
+        <rdfs:comment>Αριθμός ΦΕΚ.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -966,7 +982,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Έτος ΦΕΚ</rdfs:comment>
+        <rdfs:comment>Έτος ΦΕΚ.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -986,7 +1002,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Το οικονομικό έτος της απόφασης</rdfs:comment>
+        <rdfs:comment xml:lang="el">Το οικονομικό έτος της απόφασης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -996,7 +1012,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_address">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Η διεύθυνση του φορέα</rdfs:comment>
+        <rdfs:comment xml:lang="el">Η διεύθυνση του φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1028,7 +1044,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment>Κωδικός Προϋπολογισμού Φορέα.</rdfs:comment>
+        <rdfs:comment xml:lang="el">Κωδικός Προϋπολογισμού Φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1048,7 +1064,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_email">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Email φορέα</rdfs:comment>
+        <rdfs:comment xml:lang="el">Email φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1088,7 +1104,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_name">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Όνομα φορέα</rdfs:comment>
+        <rdfs:comment xml:lang="el">Όνομα φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1098,7 +1114,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_phone">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Τηλέφωνο επικοινωνίας με τον φορέα</rdfs:comment>
+        <rdfs:comment xml:lang="el">Τηλέφωνο επικοινωνίας με τον φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1108,7 +1124,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_postalcode">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Τ.Κ. φορέα</rdfs:comment>
+        <rdfs:comment xml:lang="el">Τ.Κ. φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1118,7 +1134,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/government_institution_website">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Website φορέα</rdfs:comment>
+        <rdfs:comment xml:lang="el">Website φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1154,7 +1170,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Ο φορέας που αφορά ένας Ισολογισμός-Απολογισμός ή μια Έγκριση Προϋπολογισμού</rdfs:comment>
+        <rdfs:comment xml:lang="el">Ο φορέας που αφορά ένας Ισολογισμός-Απολογισμός ή μια Έγκριση Προϋπολογισμού.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1174,7 +1190,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="el">Αποτελεί property όλων των Entities, όπου ο φορέας χρειαστεί να γράψει κείμενο για την απόφαση (:AfterDecision, :Consideration, :Decision, :PreConsideration, :Verification)</rdfs:comment>
+        <rdfs:comment xml:lang="el">Αποτελεί property όλων των Entities, όπου ο φορέας χρειαστεί να γράψει κείμενο για την απόφαση (:AfterDecision, :Consideration, :Decision, :PreConsideration, :Verification).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1184,6 +1200,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/internal_distribution">
         <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Εσωτερική Διανομή της απόφασης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1193,7 +1210,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/is_balance_account_approval_for_org">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/BalanceAccount"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="el">Εάν η απόφαση είναι έγκριση Ισολογισμού-Απολογισμού τρίτου φορέα</rdfs:comment>
+        <rdfs:comment xml:lang="el">Εάν η απόφαση είναι έγκριση Ισολογισμού-Απολογισμού τρίτου φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1203,7 +1220,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/is_budget_approval_for_org">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/BudgetApproval"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="el">Εάν η απόφαση αφορά έγκριση προϋπολογισμού τρίτου φορέα</rdfs:comment>
+        <rdfs:comment xml:lang="el">Εάν η απόφαση αφορά έγκριση προϋπολογισμού τρίτου φορέα.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1295,6 +1312,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/municipality">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Ο δήμος που αφορά η πράξη.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2070,6 +2088,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Ο τύπος πράξης της πράξης Χωροταξικού-Πολεοδομικού περιεχομένου.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2852,7 +2871,7 @@ For more records that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?a
 
 Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/ServiceChange/%CE%A9%CE%95%CE%924%CE%A9%CE%A85-%CE%96%CE%A40.pdf
 
-For more other public prototype documents that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A5%CE%A0%CE%97%CE%A1%CE%95%CE%A3%CE%99%CE%91%CE%9A%CE%97%20%CE%9C%CE%95%CE%A4%CE%91%CE%92%CE%9F%CE%9B%CE%97%22&amp;page=0</rdfs:comment>
+For more service change documents that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A5%CE%A0%CE%97%CE%A1%CE%95%CE%A3%CE%99%CE%91%CE%9A%CE%97%20%CE%9C%CE%95%CE%A4%CE%91%CE%92%CE%9F%CE%9B%CE%97%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
@@ -2867,7 +2886,11 @@ For more other public prototype documents that are uploaded on Diavgeia: https:/
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/SpatialPlanningDecisions/69%CE%928%CE%9F%CE%A11%CE%A5-%CE%96%CE%A90.pdf
+
+For more spatial planning decisions that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A0%CE%A1%CE%91%CE%9E%CE%95%CE%99%CE%A3%20%CE%A7%CE%A9%CE%A1%CE%9F%CE%A4%CE%91%CE%9E%CE%99%CE%9A%CE%9F%CE%A5%20-%20%CE%A0%CE%9F%CE%9B%CE%95%CE%9F%CE%94%CE%9F%CE%9C%CE%99%CE%9A%CE%9F%CE%A5%20%CE%A0%CE%95%CE%A1%CE%99%CE%95%CE%A7%CE%9F%CE%9C%CE%95%CE%9D%CE%9F%CE%A5%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
@@ -2882,7 +2905,11 @@ For more other public prototype documents that are uploaded on Diavgeia: https:/
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/StartProductionalFunctionOfInvestment">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΑΠΟΦΑΣΗ ΕΝΑΡΞΗΣ ΠΑΡΑΓΩΓΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ ΕΠΕΝΔΥΣΗΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΑΠΟΦΑΣΗ ΕΝΑΡΞΗΣ ΠΑΡΑΓΩΓΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ ΕΠΕΝΔΥΣΗΣ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/StartProductionalFunctionOfInvestment/%CE%A8%CE%9884%CE%9F%CE%A1%CE%99%CE%91-61%CE%9C.pdf
+
+For more start productional function of investment decisions that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%91%CE%A0%CE%9F%CE%A6%CE%91%CE%A3%CE%97%20%CE%95%CE%9D%CE%91%CE%A1%CE%9E%CE%97%CE%A3%20%CE%A0%CE%91%CE%A1%CE%91%CE%93%CE%A9%CE%93%CE%99%CE%9A%CE%97%CE%A3%20%CE%9B%CE%95%CE%99%CE%A4%CE%9F%CE%A5%CE%A1%CE%93%CE%99%CE%91%CE%A3%20%CE%95%CE%A0%CE%95%CE%9D%CE%94%CE%A5%CE%A3%CE%97%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
