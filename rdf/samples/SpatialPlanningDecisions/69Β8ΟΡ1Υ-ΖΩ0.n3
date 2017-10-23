@@ -35,6 +35,7 @@
 	ont:has_private_data false;
 	ont:organization_id "50205";
 	ont:submission_timestamp "1452674845595";
+	ont:uploader_id "112320";
 	ont:unit_id "77472".
 
 <Consideration/1> a ont:Consideration;
@@ -71,5 +72,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Αναπληρωτής Δ/ντης Δασών Χαλκιδικής"@el;
-	ont:signer_id "112320"@el;
 	ont:signer_name "Γεώργιος Καψάλης"@el.
