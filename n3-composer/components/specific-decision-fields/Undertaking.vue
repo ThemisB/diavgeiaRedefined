@@ -1,34 +1,38 @@
 <template>
-  <div class="decisionSpecificFields">
-    <div class="row">
-      <div class="col-xs-3">
+  <div class="decisionSpecificFields" style="padding-bottom:1.3em">
+    <div class="columns">
+      <div class="column">
         <financial-year></financial-year>
       </div>
-      <div class="col-xs-3">
+      <div class="column">
         <budget-category></budget-category>
       </div>
-      <div class="col-xs-3">
+      <div class="column">
         <label for="entry_number">Αριθμός Καταχώρησης</label>
-        <input name="entry_number" class="form-control" type="text">
+        <input name="entry_number" class="input" type="text">
       </div>
-      <div class="col-xs-3">
-        <div class="col-xs-6">
-          <label for="partialead">Τμηματική Ανάληψη</label>
-          <input type="checkbox" name="partialead">
-        </div>
-        <div class="col-xs-6">
-          <label for="recalled_expense">Ανακλητική Απόφαση</label>
-          <input type="checkbox" name="recalled_expense">
+      <div class="column">
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label for="partialead" class="checkbox" style="display:inline-block">Τμηματική Ανάληψη<input id="partialead" name="partialead" type="checkbox"></label>
+            </div>
+          </div>
+          <div class="column">
+            <label for="recalled_expense" class="checkbox" style="display:inline-block">Ανακλητική Ανάληψη<input id="recalled_expense" name="recalled_expense" type="checkbox"></label>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <undertaking-expense></undertaking-expense>
-    </div>
-    <div class="row">
-      <div class="col-xs-6 col-xs-offset-3">
+    <undertaking-expense></undertaking-expense>
+    <div class="columns">
+      <div class="column">
+        <label for="has_related_undertaking">ΑΔΑ Σχετικής Ανάληψης Υποχρέωσης</label>
+        <input name="has_related_undertaking" class="input" placeholder="Ο ΑΔΑ της σχετικής ανάληψης υποχρέωσης">
+      </div>
+      <div class="column">
         <label for="has_related_partial">Σχετική Αρχική Τμηματική</label>
-        <input type="text" class="form-control" placeholder="Ο ΑΔΑ της σχετικής αρχικής τμηματικής απόφασης">
+        <input type="text" class="input" placeholder="Ο ΑΔΑ της σχετικής αρχικής τμηματικής απόφασης">
       </div>
     </div>
   </div>
