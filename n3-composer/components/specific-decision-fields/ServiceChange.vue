@@ -1,12 +1,14 @@
 <template>
-  <div class="decisionSpecificFields row">
-    <div class="col-xs-4">
+  <div class="decisionSpecificFields columns" style="padding-bottom:1.3em">
+    <div class="column is-one-third">
       <label for="service_change_decision_type">Είδος Πράξης</label>
-      <select class="selectpicker pickers" title="Είδος Πράξης" data-live-search="true" id="service_change_decision_type" name="service_change_decision_type" data-width="auto">
-        <option v-for="option in options" :data-tokens="option.keywords" :value="option.text">{{option.text}}</option>
-      </select>
+      <multiselect v-model="selectedOption" :options="options" select-label="" selected-label="" deselect-label="" placeholder="">
+      <span slot="noResult">Δεν βρέθηκε το είδος απόφασης</span>
+      </multiselect>
+      <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+      <input type="hidden" name="collegial_body_party_type" :value="selectedOption">
     </div>
-    <div class="col-xs-8">
+    <div class="column">
       <fek></fek>
     </div>
   </div>
@@ -14,23 +16,16 @@
 
 <script>
 
-import $ from 'jquery'
 import Fek from './common-properties/Fek.vue'
+import Multiselect from 'vue-multiselect'
 
 export default {
   data: () => {
     return {
-      options: [
-        {text: 'Αποδοχή Παραίτησης', keywords: 'Αποδοχή Αποδοχη Παραίτησης Παραιτησης'},
-        {text: 'Διαθεσιμότητα', keywords: 'Διαθεσιμότητα Διαθεσιμοτητα'},
-        {text: 'Λύση Υπαλληλικής Σχέσης', keywords: 'Λύση Λυση Υπαλληλικής Υπαλληλικης Σχέσης Σχεσης'},
-        {text: 'Υποβιβασμός', keywords: 'Υποβιβασμός Υποβιβασμος'}
-      ]
+      options: ['Αποδοχή Παραίτησης', 'Διαθεσιμότητα', 'Λύση Υπαλληλικής Σχέσης', 'Υποβιβασμός'],
+      selectedOption: ''
     }
   },
-  mounted: function () {
-    $('#service_change_decision_type').selectpicker()
-  },
-  components: {Fek}
+  components: {Fek, Multiselect}
 }
 </script>
