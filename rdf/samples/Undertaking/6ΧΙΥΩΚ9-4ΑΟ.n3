@@ -18,7 +18,6 @@
 	ont:decision_call "Προτείνουμε"@el;
 	ont:has_decided <Decision/1>;
 	ont:signed_by <Signer/1>;
-	ont:signed_by <Signer/2>;
 	ont:has_expense_with_kae <ExpenseWithKae/1>;
 	ont:recipient_for_share "Ελεγκτικό Συνέδριο"@el;
 	ont:thematic_category "EconomicTradeExchanges";
@@ -30,6 +29,7 @@
 	ont:budget_category "Τακτικός Προϋπολογισμός"@el;
 	ont:entry_number "A/318"@el;
 	ont:parialead false;
+	ont:uploader_id "129345";
 	ont:recalled_expense false.
 
 <Consideration/1> a ont:Consideration;
@@ -54,17 +54,16 @@
 	ont:has_text "Τη δέσμευση πίστωσης ύψους χίλια τριακόσια ογδονταεπτά ευρώ και τριάντα λεπτά 1.387,30 € για την πληρωμή ισόποσης δαπάνης σε βάρος της πίστωσης του προϋπολογσμού εξόδων του ΔΗΜΟΥ ΜΟΝΕΜΒΑΣΙΑΣ, \"Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)\" Κ.Α.Ε. 25-6263.013 οικ. έτος 2016 για την Συντήρηση και επισκευή λοιπών μηχανημάτων συμπεριλαμβανομένης και της προμήθειας ανταλλακτικών(ΕΚΤΑΚΤΗ)"@el.
 
 <Verification/1> a ont:Verification;
-	ont:verified_by <Signer/2>;
+	ont:verified_by <Verifier/1>;
 	ont:has_text "ΕΛΕΓΧΘΗΚΕ και βεβαιώνεται ότι η ανωτέρω δαπάνη χίλια τριακόσια ογδονταεπτά ευρώ και τριάντα λεπτά (1.387,30) € είναι εντός του διαθεσίμου ποσού πίστωσης του ΔΗΜΟΥ ΜΟΝΕΜΒΑΣΙΑΣ - Κ.Α. 25-6263.013.Καταχωρήθηκε με α/α Α/318 στο Βιβλίο Εγκρίσεων και Εντολών Πληρωμής της Υπηρεσίας μας. Υπόλοιπο προς ανάληψη :€ 5.337,59"@el.
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΑΝΤΙΔΗΜΑΡΧΟΣ ΜΟΝΕΜΒΑΣΙΑΣ"@el;
-	ont:signer_name "ΚΩΝΣΤΑΝΤΙΝΟΣ ΜΑΥΡΟΜΙΧΑΛΗΣ"@el;
-	ont:signer_id "129345".
+	ont:signer_name "ΚΩΝΣΤΑΝΤΙΝΟΣ ΜΑΥΡΟΜΙΧΑΛΗΣ"@el.
 
-<Signer/2> a ont:Signer;
-	ont:signer_job "ΠΡΟΪΣΤΑΜΕΝΟΣ ΤΗΣ ΟΙΚΟΝΟΜΙΚΗΣ ΥΠΗΡΕΣΙΑΣ ΜΟΝΕΜΒΑΣΙΑΣ"@el;
-	ont:signer_name "ΜΙΧΑΛΗΣ ΛΙΒΑΝΟΣ"@el.
+<Verifier/1> a ont:Verifier;
+	ont:verifier_job "ΠΡΟΪΣΤΑΜΕΝΟΣ ΤΗΣ ΟΙΚΟΝΟΜΙΚΗΣ ΥΠΗΡΕΣΙΑΣ ΜΟΝΕΜΒΑΣΙΑΣ"@el;
+	ont:verifier_name "ΜΙΧΑΛΗΣ ΛΙΒΑΝΟΣ"@el.
 
 <ExpenseWithKae/1> a ont:ExpenseWithKae;
 	ont:expense_amount "1387.3";
