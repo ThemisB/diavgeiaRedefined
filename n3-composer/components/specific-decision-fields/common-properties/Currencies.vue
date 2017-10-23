@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label :for="getExpenseCurrencyName">Συνάλλαγμα ποσού</label>
+    <label :for="getExpenseCurrencyName">Συνάλλαγμα</label>
     <multiselect id="fek_issue" v-model="selected" :options="currencies" select-label="" selected-label="" deselect-label="" placeholder="">
     <span slot="noResult">Δεν βρέθηκε το συνάλλαγμα</span>
     </multiselect>
