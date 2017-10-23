@@ -17,6 +17,7 @@
 	ont:organization_id "50024";
 	ont:submission_timestamp "1473059465462";
 	ont:unit_id "72922";
+	ont:uploader_id "103135";
 	ont:record_number "3142/2016";
 	ont:has_present <Present/1>;
 	ont:has_present <Present/2>;
@@ -41,5 +42,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Αντιπρόεδρος Ν.Σ.Κ."@el;
-	ont:signer_name "ΑΛΕΞΑΝΔΡΟΣ Γ. ΚΑΡΑΓΙΑΝΝΗΣ"@el;
-	ont:signer_id "103135".
+	ont:signer_name "ΑΛΕΞΑΝΔΡΟΣ Γ. ΚΑΡΑΓΙΑΝΝΗΣ"@el.
