@@ -2445,6 +2445,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Η κατηγορία της πράξης Ανάθεσης Έργων / Προμηθειών / Υπηρεσιών / Μελετών.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2975,7 +2976,12 @@ https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%91%CE%9D%C
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/WorkAssignmentSupplyServicesStudies">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΑΝΑΘΕΣΗ ΕΡΓΩΝ / ΠΡΟΜΗΘΕΙΩΝ / ΥΠΗΡΕΣΙΩΝ / ΜΕΛΕΤΩΝ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΑΝΑΘΕΣΗ ΕΡΓΩΝ / ΠΡΟΜΗΘΕΙΩΝ / ΥΠΗΡΕΣΙΩΝ / ΜΕΛΕΤΩΝ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/WorkAssignmentSupplyServicesStudies/%CE%A9%CE%A1%CE%A1%CE%A0%CE%A9%CE%9B%CE%9E-2%CE%93%CE%94.pdf
+
+For more work assignement, and supply services studies that are uploaded on Diavgeia:
+https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%91%CE%9D%CE%91%CE%98%CE%95%CE%A3%CE%97%20%CE%95%CE%A1%CE%93%CE%A9%CE%9D%20%2F%20%CE%A0%CE%A1%CE%9F%CE%9C%CE%97%CE%98%CE%95%CE%99%CE%A9%CE%9D%20%2F%20%CE%A5%CE%A0%CE%97%CE%A1%CE%95%CE%A3%CE%99%CE%A9%CE%9D%20%2F%20%CE%9C%CE%95%CE%9B%CE%95%CE%A4%CE%A9%CE%9D%22&amp;page=0</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
