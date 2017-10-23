@@ -1,58 +1,58 @@
 <template>
-<div class="text-center">
-  <div class="row">
-    <h4 class="text-center">Ποσό και ΚΑΕ</h4>
-    <table class="expensesTable table table-striped table-bordered expensesDonation expensesExpenditureApproval">
-    <thead>
-      <tr>
-        <th>ΑΦΜ / ΕΠΩΝΥΜΙΑ</th>
-        <th>ΑΡΙΘΜΟΣ ΚΑΕ</th>
-        <th>ΠΟΣΟ ΜΕ ΦΠΑ</th>
-        <th>ΥΠΟΛΟΙΠΟ ΔΙΑΘΕΣΙΜΗΣ ΠΙΣΤΩΣΗΣ</th>
-        <th>ΥΠΟΛΟΙΠΟ ΚΑΕ</th>
-        <th>ΠΡΟΣΘΗΚΗ</th>
-      </tr>
-    </thead>
-    <tbody class="text-center">
-      <tr v-for="expense in expensesArray" :key="expense.id = expense">
-          <td>
-            <div class="col-xs-6">
-              <input type="text" :name="getAFM(expense)" class="form-control" placeholder="ΑΦΜ">
-            </div>
-            <div class="col-xs-6">
-              <input type="text" readonly="readonly" :name="getSponsored(expense)" value="ΕΠΩΝΥΜΙΑ Χ" class="form-control text-center">
-            </div>
-          </td>
-          <td class="text-center">
-            <kae :number="expense"></kae>
-          </td>
-          <td class="text-center">
-            <div class="col-xs-6 vcenter">
-              <label :for="getExpense(expense)" style="display:block !important">Ποσό</label>
-              <input type="text" :name="getExpense(expense)" class="form-control">
-            </div>
-            <div class="col-xs-6 vcenter">
-              <currencies :number="expense"></currencies>
-            </div>
-          </td>
-          <td>
-            <input type="number" class="form-control" :name="getKaeBudgetRemainder(expense)">
-          </td>
-          <td>
-            <input type="number" class="form-control" :name="getKaeCreditRemainder(expense)">
-          </td>
-        <input type="hidden" :value="expense" :name="getExpenseIndex(expense)">
-        <!-- TODO Integrate it with the GSIS service  -->
-        <input type="hidden" value="Εθνικό" :name="getAfmTypeName(expense)">
-        <td v-if="expense === 1"><button type="button" class="btn btn-default" v-on:click="incrementExpenses"><span>Προσθήκη {{nextExpense}}ου Ποσού</span></button></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-      <label for="has_related_undertaking">ΑΔΑ Σχετικής Ανάληψης Υποχρέωσης</label>
-      <input name="has_related_undertaking" class="form-control">
+<div>
+  <h4 class="subtitle has-text-centered">Ποσά και ΚΑΕ</h4>
+  <div class="columns">
+    <div class="column">
+      <table class="table is-striped is-bordered has-has-text-centered" style="margin:0 auto;">
+      <thead>
+        <tr>
+          <th>ΑΦΜ / ΕΠΩΝΥΜΙΑ</th>
+          <th>ΑΡΙΘΜΟΣ ΚΑΕ</th>
+          <th>ΠΟΣΟ ΜΕ ΦΠΑ</th>
+          <th>ΥΠΟΛΟΙΠΟ ΔΙΑΘΕΣΙΜΗΣ ΠΙΣΤΩΣΗΣ</th>
+          <th>ΥΠΟΛΟΙΠΟ ΚΑΕ</th>
+          <th>ΠΡΟΣΘΗΚΗ</th>
+        </tr>
+      </thead>
+      <tbody class="has-text-centered">
+        <tr v-for="expense in expensesArray" :key="getKey('expense', expense)">
+            <td>
+              <div class="columns">
+                <div class="column">
+                  <input type="text" :name="getAFM(expense)" class="input" placeholder="ΑΦΜ">
+                </div>
+                <div class="column">
+                  <input type="text" readonly="readonly" :name="getSponsored(expense)" value="ΕΠΩΝΥΜΙΑ Χ" class="input has-text-centered">
+                </div>
+              </div>
+            </td>
+            <td class="has-text-centered">
+              <kae :number="expense"></kae>
+            </td>
+            <td class="has-text-centered">
+              <div class="columns">
+                <div class="column vcenter">
+                  <label :for="getExpense(expense)" style="display:block !important">Ποσό</label>
+                  <input type="text" :name="getExpense(expense)" class="input">
+                </div>
+                <div class="column vcenter">
+                  <currencies :number="expense"></currencies>
+                </div>
+              </div>
+            </td>
+            <td>
+              <input type="number" class="input" :name="getKaeBudgetRemainder(expense)" step="0.01">
+            </td>
+            <td>
+              <input type="number" class="input" :name="getKaeCreditRemainder(expense)" step="0.01">
+            </td>
+          <input type="hidden" :value="expense" :name="getExpenseIndex(expense)">
+          <!-- TODO Integrate it with the GSIS service  -->
+          <input type="hidden" value="Εθνικό" :name="getAfmTypeName(expense)">
+          <td v-if="expense === 1"><button type="button" class="button is-info is-outlined" v-on:click="incrementExpenses"><span>Προσθήκη {{nextExpense}}ου Ποσού</span></button></td>
+        </tr>
+      </tbody>
+    </table>
     </div>
   </div>
 </div>
@@ -91,6 +91,9 @@ export default {
     },
     getKaeCreditRemainder: function (expenseNumber) {
       return 'expense[' + expenseNumber + '][kae_credit_remainder]'
+    },
+    getKey: function (keyName, index) {
+      return keyName + '_' + index
     }
   },
   data: function () {
