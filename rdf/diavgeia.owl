@@ -1259,6 +1259,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae_budget_remainder">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Υπόλοιπο διαθέσιμης πίστωσης.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1268,6 +1269,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/kae_credit_remainder">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/ExpenseWithKae"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Υπόλοιπο ΚΑΕ.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1567,6 +1569,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/partialead">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Τμηματική Ανάληψη.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1830,6 +1833,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/recalled_expense">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Undertaking"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Ανακλητική απόφαση.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2918,7 +2922,11 @@ For more start productional function of investment decisions that are uploaded o
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/SuccessfulAppointedRunnerUpList">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ &amp; ΕΠΙΛΑΧΟΝΤΩΝ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ &amp; ΕΠΙΛΑΧΟΝΤΩΝ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/SuccessfulAppointedRunnerUpList/6%CE%9A%CE%A1%CE%99%CE%995%CE%96-5%CE%97%CE%91.pdf
+
+For more successful appointed runner up list decisions that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%5B%22%CE%A0%CE%99%CE%9D%CE%91%CE%9A%CE%95%CE%A3%20%CE%95%CE%A0%CE%99%CE%A4%CE%A5%CE%A7%CE%9F%CE%9D%CE%A4%CE%A9%CE%9D%22,%22%20%CE%94%CE%99%CE%9F%CE%A1%CE%99%CE%A3%CE%A4%CE%95%CE%A9%CE%9D%20%26%20%CE%95%CE%A0%CE%99%CE%9B%CE%91%CE%A7%CE%9F%CE%9D%CE%A4%CE%A9%CE%9D%22%5D&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
@@ -2927,7 +2935,12 @@ For more start productional function of investment decisions that are uploaded o
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Undertaking">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Undertaking/6%CE%A7%CE%99%CE%A5%CE%A9%CE%9A9-4%CE%91%CE%9F.pdf
+
+For more undertakings that are uploaded on Diavgeia:
+https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%91%CE%9D%CE%91%CE%9B%CE%97%CE%A8%CE%97%20%CE%A5%CE%A0%CE%9F%CE%A7%CE%A1%CE%95%CE%A9%CE%A3%CE%97%CE%A3%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
