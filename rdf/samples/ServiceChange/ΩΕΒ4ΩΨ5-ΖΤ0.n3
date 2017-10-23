@@ -27,6 +27,7 @@
 	ont:fek_number "41";
 	ont:fek_issue "Γ"@el;
 	ont:fek_year "2016";
+	ont:uploader_id "110748";
 	ont:unit_id "93991".
 
 <Consideration/1> a ont:Consideration;
@@ -55,5 +56,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΔΗΜΑΡΧΟΣ"@el;
-	ont:signer_id "110748"@el;
 	ont:signer_name "ΕΥΘΥΜΙΟΣ ΚΟΤΖΑΣ"@el.
