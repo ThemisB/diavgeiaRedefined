@@ -1848,6 +1848,7 @@
     <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/record_number">
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/Records"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Αριθμός Πρακτικού.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2833,7 +2834,11 @@ For more other public prototype documents that are uploaded on Diavgeia: https:/
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Records">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΠΡΑΚΤΙΚΑ (Νομικού Συμβουλίου του Κράτους)&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΠΡΑΚΤΙΚΑ (Νομικού Συμβουλίου του Κράτους)&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Records/%CE%A9%CE%A5%CE%9B%CE%A6%CE%9F%CE%A1%CE%A1%CE%95-%CE%97%CE%93%CE%98.pdf
+
+For more records that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A0%CE%A1%CE%91%CE%9A%CE%A4%CE%99%CE%9A%CE%91%20(%CE%9D%CE%BF%CE%BC%CE%B9%CE%BA%CE%BF%CF%8D%20%CE%A3%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AF%CE%BF%CF%85%20%CF%84%CE%BF%CF%85%20%CE%9A%CF%81%CE%AC%CF%84%CE%BF%CF%85%CF%82)%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
