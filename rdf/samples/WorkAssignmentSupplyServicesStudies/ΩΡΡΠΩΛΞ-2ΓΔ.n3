@@ -30,6 +30,7 @@
 	ont:has_private_data false;
 	ont:organization_id "100015969";
 	ont:submission_timestamp "1496232550111";
+	ont:uploader_id "100010971";
 	ont:unit_id "93244".
 
 <PreConsideration> a ont:PreConsideration;
@@ -60,8 +61,7 @@ ont:has_text "Σήµερα 22/12/2015 συνήλθε η επιτροπή που 
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "Πρόεδρος Επιτροπής"@el;
-	ont:signer_name "ΒΑΣΙΛΕΙΟΥ ΕΜΜΑΝΟΥΗΛΙΑ"@el;
-	ont:signer_id "100010971".
+	ont:signer_name "ΒΑΣΙΛΕΙΟΥ ΕΜΜΑΝΟΥΗΛΙΑ"@el.
 
 <Signer/2> a ont:Signer;
 	ont:signer_job "Μέλος Επιτροπής"@el;
