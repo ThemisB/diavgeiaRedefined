@@ -598,12 +598,12 @@ html
                         th Υπόλοιπο διαθέσιμης πίστωσης
                         th Υπόλοιπο ΚΑΕ
                   tbody
-                    each undertakingExpense in undertakingExpenses
+                    each undertakingExpense, index in undertakingExpenses
                       tr
-                        if undertakingExpense.afm && undertakingExpense.name && undertakingExpense.afm_type
-                          td #{undertakingExpense.afm} / #{undertakingExpense.name} / #{undertakingExpense.afm_type}
+                        if undertakingSponsored[index].afm && undertakingSponsored[index].name && undertakingSponsored[index].afm_type
+                          td #{undertakingSponsored[index].afm} / #{undertakingSponsored[index].name} / #{undertakingSponsored[index].afm_type}
                         else
-                          td
+                          td ------
                         td #{undertakingExpense.kae}
                         td #{undertakingExpense.expense_amount} #{undertakingExpense.expense_currency}
                         td #{undertakingExpense.kae_credit_remainder}
