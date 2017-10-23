@@ -29,6 +29,7 @@
 	ont:has_private_data false;
 	ont:organization_id "22949";
 	ont:submission_timestamp "1473251126791";
+	ont:uploader_id "100009619";
 	ont:unit_id "72703".
 
 <Consideration/1> a ont:Consideration;
@@ -74,5 +75,4 @@
 <Signer/1> a ont:Signer;
 	ont:signer_job "Η Πρόεδρος της ΑΔΙΠ"@el;
 	ont:signer_job "Καθηγήτρια"@el;
-	ont:signer_name "Νικολέττα Παϊσίδου"@el;
-	ont:signer_id "100009619".
+	ont:signer_name "Νικολέττα Παϊσίδου"@el.
