@@ -1927,6 +1927,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>Είδος πράξης υπηρεσιακής μεταβολής.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2847,7 +2848,11 @@ For more records that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?a
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/ServiceChange">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:comment>Corresponds to &quot;ΥΠΗΡΕΣΙΑΚΗ ΜΕΤΑΒΟΛΗ&quot;</rdfs:comment>
+        <rdfs:comment>Corresponds to &quot;ΥΠΗΡΕΣΙΑΚΗ ΜΕΤΑΒΟΛΗ&quot;.
+
+Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/ServiceChange/%CE%A9%CE%95%CE%924%CE%A9%CE%A85-%CE%96%CE%A40.pdf
+
+For more other public prototype documents that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A5%CE%A0%CE%97%CE%A1%CE%95%CE%A3%CE%99%CE%91%CE%9A%CE%97%20%CE%9C%CE%95%CE%A4%CE%91%CE%92%CE%9F%CE%9B%CE%97%22&amp;page=0</rdfs:comment>
     </owl:Class>
     
 
