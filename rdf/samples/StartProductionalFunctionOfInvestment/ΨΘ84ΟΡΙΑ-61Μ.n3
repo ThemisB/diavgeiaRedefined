@@ -54,6 +54,7 @@
 	ont:has_private_data false;
 	ont:organization_id "50381";
 	ont:submission_timestamp "1465905620397";
+	ont:uploader_id "100006823";
 	ont:unit_id "82528".
 
 <Consideration/1> a ont:Consideration;
@@ -171,5 +172,4 @@
 
 <Signer/1> a ont:Signer;
 	ont:signer_job "ΠΡΟΕΔΡΟΣ ΤΟΥ ΔΙΟΙΚΗΤΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ ΤΟΥ ΔΗΜΟΤΙΚΟΥ ΒΡΕΦΟΚΟΜΕΙΟΥ ΑΘΗΝΩΝ"@el;
-	ont:signer_name "ΚΑΛΛΙΟΠΗ ΓΙΑΝΝΟΠΟΥΛΟΥ"@el;
-	ont:signer_id "100006823".
+	ont:signer_name "ΚΑΛΛΙΟΠΗ ΓΙΑΝΝΟΠΟΥΛΟΥ"@el.
