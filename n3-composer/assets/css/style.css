@@ -64,25 +64,12 @@ body {
   margin: 0 auto !important;
 }
 
-.expensesWithKae td, .expensesDonation td, .expensesExpenditureApproval td {
+table td {
   vertical-align: middle !important;
 }
-
-.expenses-table th {
-  text-align: center;
-  vertical-align: middle;
+table th, table td {
+  text-align: center !important;
 }
-
-.expenses-table td {
-  text-align: center;
-  vertical-align: middle;
-}
-
-.expenses-table table {
-  margin: 0 auto;
-  margin-top: 1em;
-}
-
 .afmTypeContainer {
   overflow : visible !important;
 }
