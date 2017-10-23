@@ -83,6 +83,7 @@ class PropertiesFormatter {
     this.ownershipTransferOfAssetsSponsored = []
     this.presentArray = []
     this.undertakingExpenses = []
+    this.undertakingSponsored = []
     this.verifiers = []
     this.workAssignmentSupplyServicesStudiesExpenses = []
     this.workAssignmentSupplyServicesStudiesSponsors = []
@@ -127,6 +128,7 @@ class PropertiesFormatter {
     this.properties['ownershipTransferOfAssetsOrganizationSponsor'] = this.ownershipTransferOfAssetsOrganizationSponsor
     this.properties['ownershipTransferOfAssetsSponsored'] = this.ownershipTransferOfAssetsSponsored
     this.properties['undertakingExpenses'] = this.undertakingExpenses
+    this.properties['undertakingSponsored'] = this.undertakingSponsored
     this.properties['workAssignmentSupplyServicesStudiesExpenses'] = this.workAssignmentSupplyServicesStudiesExpenses
     this.properties['workAssignmentSupplyServicesStudiesSponsors'] = this.workAssignmentSupplyServicesStudiesSponsors
     this.properties['paymentFinalisationExpenses'] = this.paymentFinalisationExpenses
@@ -503,6 +505,17 @@ class PropertiesFormatter {
             this._findPredicateValue('UndertakingExpense', 'ont', 'kae_credit_remainder', predicatePair, expenseWithKaeNumber)
           })
         }
+        for (entities in array) {
+          if (entities.indexOf(decisionPrefix + 'Sponsored/') > -1) {
+            let sponsoredArray = entities.split('/')
+            let sponsoredNumber = sponsoredArray[sponsoredArray.length - 1]
+            array[entities].forEach(predicatePairSponsored => {
+              this._findPredicateValue('UndertakingExpense', 'ont', 'afm', predicatePairSponsored, sponsoredNumber)
+              this._findPredicateValue('UndertakingExpense', 'ont', 'afm_type', predicatePairSponsored, sponsoredNumber)
+              this._findPredicateValue('UndertakingExpense', 'ont', 'name', predicatePairSponsored, sponsoredNumber)
+            })
+          }
+        }
       } else if (subject.indexOf(decisionPrefix + 'Present/') > -1) {
         let presentArray = subject.split('/')
         let presentNumber = presentArray[presentArray.length - 1]
@@ -661,6 +674,8 @@ class PropertiesFormatter {
         let undertakingCondition = predicateSearch === 'expense_amount' || predicateSearch === 'expense_amount_currency' || predicateSearch === 'kae' || predicateSearch === 'kae_budget_remainder' || predicateSearch === 'kae_credit_remainder'
         if (undertakingCondition) {
           this._formatObjectProperty(this.undertakingExpenses, predicateSearch, predicatePair, entityIndex)
+        } else if (predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name') {
+          this._formatObjectProperty(this.undertakingSponsored, predicateSearch, predicatePair, entityIndex)
         }
       } else if (subject === 'PaymentFinalisationExpenses') {
         let cond = predicateSearch === 'expense_amount' || predicateSearch === 'expense_amount_currency' || predicateSearch === 'cpv'
