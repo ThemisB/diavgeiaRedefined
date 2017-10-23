@@ -800,13 +800,22 @@ class Decision {
         break
       case 'Undertaking':
         this.fields.expense.forEach((expense, i) => {
-          if (expense.afm && expense.kae && expense.expense_amount && expense.expense_currency && expense.kae_budget_remainder && expense.kae_credit_remainder && expense.index && expense.afm_type && expense.sponsored) {
+          if (expense.kae && expense.expense_amount && expense.expense_currency && expense.kae_budget_remainder && expense.kae_credit_remainder && expense.index) {
             this.decisionString += '<ExpenseWithKae/' + expense.index + '> a ont:ExpenseWithKae;\n'
             this.decisionString += this._formatTriplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
             this.decisionString += this._formatTriplet('ont', 'expense_amount_currency', expense.expense_currency, 'string')
             this.decisionString += this._formatTriplet('ont', 'kae', expense.kae, 'string', false)
             this.decisionString += this._formatTriplet('ont', 'kae_budget_remainder', expense.kae_budget_remainder, 'string', false)
+            if (expense.afm && expense.afm_type && expense.sponsored) {
+              this.decisionString += this._formatTriplet('ont', 'has_sponsored', 'Sponsored/' + (i + 1), 'entity')
+            }
             this.decisionString += this._formatTriplet('ont', 'kae_credit_remainder', expense.kae_credit_remainder, 'string', false, true)
+          }
+          if (expense.afm && expense.afm_type && expense.sponsored) {
+            this.decisionString += '<Sponsored/' + (i + 1) + '> a ont:Sponsored;\n'
+            this.decisionString += this._formatTriplet('ont', 'afm', expense.afm, 'string', false)
+            this.decisionString += this._formatTriplet('ont', 'afm_type', expense.afm_type, 'string')
+            this.decisionString += this._formatTriplet('ont', 'name', expense.sponsored, 'string', true, true)
           }
         })
         break
