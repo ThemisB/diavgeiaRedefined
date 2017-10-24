@@ -89,6 +89,7 @@ class PropertiesFormatter {
     this.workAssignmentSupplyServicesStudiesSponsors = []
     this.paymentFinalisationSponsored = []
     this.paymentFinalisationExpenses = []
+    this.paymentFinalisationDocuments = []
     this.paymentFinalisationOrganizationSponsors = []
     this.paymentFinalisationWithHoldings = []
     this.paymentFinalisationKaeWithSubExpenses = []
@@ -136,6 +137,7 @@ class PropertiesFormatter {
     this.properties['paymentFinalisationOrganizationSponsors'] = this.paymentFinalisationOrganizationSponsors
     this.properties['paymentFinalisationWithHoldings'] = this.paymentFinalisationWithHoldings
     this.properties['paymentFinalisationKaeWithSubExpenses'] = this.paymentFinalisationKaeWithSubExpenses
+    this.properties['paymentFinalisationDocuments'] = this.paymentFinalisationDocuments
   }
 
   formatProperties (array) {
@@ -429,7 +431,7 @@ class PropertiesFormatter {
           /*
            * N expenses
            * For the time being, all expenses share the same OrganizationSponsor
-           * Each expense has M has_documents, 1 payment_reason, L WithHolding entitites, 1 Sponsored, 1 payment_with_withholdings and 1 payment_with_withholdings_currency, 1 cpv, 1 kae, 1 expense_amount and 1 expense_amount_currency.
+           * Each expense has M has_document, 1 payment_reason, L WithHolding entitites, 1 Sponsored, 1 payment_with_withholdings and 1 payment_with_withholdings_currency, 1 cpv, 1 kae, 1 expense_amount and 1 expense_amount_currency.
            * Government institutions should explicit fill payment_with_withholdings and payment_with_withholdings_currency, because
            * in the case of multiple currencies we will not be able to subtract withholdings from expense_amount.
            */
@@ -441,6 +443,7 @@ class PropertiesFormatter {
             this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'payment_with_withholdings', predicatePair, expenseNumber)
             this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'payment_with_withholdings_currency', predicatePair, expenseNumber)
             this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'payment_reason', predicatePair, expenseNumber)
+            this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'has_document', predicatePair, expenseNumber)
             this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'has_withholding', predicatePair, expenseNumber)
             this._findPredicateValue('PaymentFinalisationExpenses', 'ont', 'has_withkaesubexpense', predicatePair, expenseNumber)
             var entities
@@ -691,6 +694,9 @@ class PropertiesFormatter {
           let kaewithsubexpenseArray = predicatePair[1].split('/')
           let kaewithsubexpenseIndex = kaewithsubexpenseArray[kaewithsubexpenseArray.length - 1]
           this._formatObjectProperty(this.paymentFinalisationExpenses, 'kaesubexpense', ['', '"' + (kaewithsubexpenseIndex - 1) + '"'], entityIndex, true)
+        }
+        if (predicateSearch === 'has_document') {
+          this._formatObjectProperty(this.paymentFinalisationDocuments, 'has_document', predicatePair, entityIndex, true)
         }
       } else if (subject === 'PaymentFinalisationSponsored') {
         let cond = predicateSearch === 'afm' || predicateSearch === 'afm_type' || predicateSearch === 'name'
