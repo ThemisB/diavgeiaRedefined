@@ -356,6 +356,7 @@ html
                             th Φορέας Πληρωμής
                             th CPV
                             th ΚΑΕ
+                            th Δικαιολογητικά
                         tbody
                           each paymentFinalisationExpense, index in paymentFinalisationExpenses
                             tr
@@ -392,6 +393,12 @@ html
                                   </ul>
                               else
                                 td ------
+                              td
+                                <ul>
+                                  each document, doc_index in paymentFinalisationDocuments[index].has_document
+                                    - let next_doc_index = doc_index + 1
+                                      li(class='smallMargin') <b>#{next_doc_index}.</b> #{document}
+                                </ul>
             if considerations.length > 0
               h5(class='title has-text-centered is-5') Έχοντας λάβει υπόψη
               ol(class='decisionText')
