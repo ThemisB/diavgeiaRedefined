@@ -1,197 +1,211 @@
 <template>
-  <div>
-      <div class="columns is-centered">
-        <div class="column is-half has-text-centered">
-            <div class="field">
-              <label for="title" class="label">Τίτλος Απόφασης</label>
-                <div class="control">
-                  <textarea class="textarea" id="title" rows="1" name="title" placeholder="π.χ. Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής" required="required"></textarea>
-                </div>
-            </div>
-          </div>
-        </div>
+  <form action="/api/createDecision" method="post">
+    <government-institution-info></government-institution-info>
+    <h2 class="has-text-centered title dvgColor" style="margin-top:0.7em;">Συγγραφή Απόφασης</h2>
+    <!-- DecisionComposer start  -->
+    <div>
         <div class="columns is-centered">
-          <div class="column is-two-thirds">
-            <div class="field">
-              <label for="protocol_number" class="label">Αριθμός Πρωτοκόλλου</label>
-              <input type="text" class="input" id="protocol_number" name="protocol_number" required="required">
-            </div>
-          </div>
-          <div class="private-data column is-one-third has-text-centered">
-            <div class="field">
-              <label for="has_private_data" class="checkbox" style="display:inline-block">Απόφαση με Προσωπικά Δεδομένα&nbsp;<input id="has_private_data" name="has_private_data" type="checkbox"></label>
-            </div>
-          </div>
-        </div>
-      <div class="columns">
-        <div class="column is-half">
-          <label for="decision_type" class="label">Επιλέξτε το είδος της Απόφασης</label>
-          <multiselect title="Επιλέξτε το είδος απόφασης" data-live-search="true" id="decision_type"  data-width="auto" required="required" v-model="selected" :options="DecisionTypes" group-values="data" group-label="label" track-by="text" label="text" placeholder="Επιλέγετε 1 είδος απόφασης" select-label="Πατήστε enter για επιλογή" selected-label="Επιλεγμένο" deselect-label="Πατήστε enter για αφαίρεση">
-          <span slot="noResult">Δεν βρέθηκε είδος απόφασης</span>
-          </multiselect>
-          <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
-          <input type="hidden" name="decision_type" :value="selected.value">
-        </div>
-        <thematic-categories></thematic-categories>
-      </div>
-      <div class="decisions-composer">
-        <div v-if="selected.value !== 'Opinion'">
-          <div class="columns">
-            <div class="column">
-              <h3 class="has-text-centered subtitle">Εισαγωγικό Κείμενο Απόφασης</h3>
-              <textarea class="textarea" id="preconsideration" name="preconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά ένα εισαγωγικό κείμενο της απόφασης, χωρίς να λαμβάνετε υπόψην την ελληνική νομοθεσία"></textarea>
-            </div>
-          </div>
-          <div class="columns">
-            <div class="column">
-              <h3 class="subtitle has-text-centered">Έχοντας λάβει υπόψην</h3>
-              <div id="considerationsWrapper">
-                <consideration v-for="consideration in considerationsArray" v-bind:considerationNumber="consideration" :key="getKey('consideration', consideration)"></consideration>
-              </div>
-              <div class="column has-text-centered addConsiderationBtn">
-                <div class="field">
-                    <a class="button is-info is-outlined" type="button" v-on:click="incrementConsiderations">
-                      <span class="icon is-small is-left">
-                        <i class="fa fa-plus"></i>
-                      </span>
-                      <span>Προσθήκη {{nextConsideration}}ου "έχοντας λάβει υπόψην"</span>
-                    </a>
+          <div class="column is-half has-text-centered">
+              <div class="field">
+                <label for="title" class="label">Τίτλος Απόφασης</label>
+                  <div class="control">
+                    <textarea class="textarea" id="title" rows="1" name="title" placeholder="π.χ. Ανάκληση βεβαίωσης παροχέα υπηρεσιών καταδύσεων αναψυχής" required="required"></textarea>
                   </div>
               </div>
             </div>
           </div>
-            <div class="columns is-centered">
-              <div class="column is-half">
-                <h3 class="subtitle has-text-centered">Αποφάσεις</h3>
-                <div class="field">
-                  <label for="decision_call" class="label has-text-centered">Προσφώνηση Απόφασης</label>
-                  <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, ..." class="input">
+          <div class="columns is-centered">
+            <div class="column is-two-thirds">
+              <div class="field">
+                <label for="protocol_number" class="label">Αριθμός Πρωτοκόλλου</label>
+                <input type="text" class="input" id="protocol_number" name="protocol_number" required="required">
+              </div>
+            </div>
+            <div class="private-data column is-one-third has-text-centered">
+              <div class="field">
+                <label for="has_private_data" class="checkbox" style="display:inline-block">Απόφαση με Προσωπικά Δεδομένα&nbsp;<input id="has_private_data" name="has_private_data" type="checkbox"></label>
+              </div>
+            </div>
+          </div>
+        <div class="columns">
+          <div class="column is-half">
+            <label for="decision_type" class="label">Επιλέξτε το είδος της Απόφασης</label>
+            <multiselect title="Επιλέξτε το είδος απόφασης" data-live-search="true" id="decision_type"  data-width="auto" required="required" v-model="selected" :options="DecisionTypes" group-values="data" group-label="label" track-by="text" label="text" placeholder="Επιλέγετε 1 είδος απόφασης" select-label="Πατήστε enter για επιλογή" selected-label="Επιλεγμένο" deselect-label="Πατήστε enter για αφαίρεση">
+            <span slot="noResult">Δεν βρέθηκε είδος απόφασης</span>
+            </multiselect>
+            <!-- Hack for vue-multiselect, based on this issue https://github.com/monterail/vue-multiselect/issues/299 -->
+            <input type="hidden" name="decision_type" :value="selected.value">
+          </div>
+          <thematic-categories></thematic-categories>
+        </div>
+        <div class="decisions-composer" v-if="selected.value">
+          <div v-if="selected.value !== 'Opinion' && selected.value !== 'PaymentFinalisation'">
+            <div class="columns">
+              <div class="column">
+                <h3 class="has-text-centered subtitle">Εισαγωγικό Κείμενο Απόφασης</h3>
+                <textarea class="textarea" id="preconsideration" name="preconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά ένα εισαγωγικό κείμενο της απόφασης, χωρίς να λαμβάνετε υπόψην την ελληνική νομοθεσία"></textarea>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <h3 class="subtitle has-text-centered">Έχοντας λάβει υπόψην</h3>
+                <div id="considerationsWrapper">
+                  <consideration v-for="consideration in considerationsArray" v-bind:considerationNumber="consideration" :key="getKey('consideration', consideration)"></consideration>
+                </div>
+                <div class="column has-text-centered addConsiderationBtn">
+                  <div class="field">
+                      <a class="button is-info is-outlined" type="button" v-on:click="incrementConsiderations">
+                        <span class="icon is-small is-left">
+                          <i class="fa fa-plus"></i>
+                        </span>
+                        <span>Προσθήκη {{nextConsideration}}ου "έχοντας λάβει υπόψην"</span>
+                      </a>
+                    </div>
                 </div>
               </div>
             </div>
+              <div class="columns is-centered">
+                <div class="column is-half">
+                  <h3 class="subtitle has-text-centered">Αποφάσεις</h3>
+                  <div class="field">
+                    <label for="decision_call" class="label has-text-centered">Προσφώνηση Απόφασης</label>
+                    <input type="text" name="decision_call" id="decision_call" placeholder="π.χ. Αποφασίζουμε, Ανακαλούμε, ..." class="input">
+                  </div>
+                </div>
+              </div>
 
-            <div id="decisionsWrapper columns">
-              <decision v-for="decision in decisionsArray" v-bind:decisionNumber="decision" :key="getKey('decision', decision)"></decision>
-            </div>
-            <div class="column has-text-centered addDecisionsBtn">
-              <div class="field">
-                <a class="button is-info is-outlined" type="button" v-on:click="incrementDecisions">
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-plus"></i>
-                  </span>
-                  <span> Προσθήκη {{nextDecision}}ης Απόφασης</span>
-                </a>
+              <div id="decisionsWrapper columns">
+                <decision v-for="decision in decisionsArray" v-bind:decisionNumber="decision" :key="getKey('decision', decision)"></decision>
+              </div>
+              <div class="column has-text-centered addDecisionsBtn">
+                <div class="field">
+                  <a class="button is-info is-outlined" type="button" v-on:click="incrementDecisions">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-plus"></i>
+                    </span>
+                    <span> Προσθήκη {{nextDecision}}ης Απόφασης</span>
+                  </a>
+                </div>
+              </div>
+            <div class="columns is-centered">
+              <div class="column">
+                <h3 class="subtitle has-text-centered">Επίλογος Απόφασης</h3>
+                <textarea class="textarea" id="afterconsideration" name="afterconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά τον επίλογο της απόφασης."></textarea>
               </div>
             </div>
-          <div class="columns is-centered">
+            <div v-if="!ifInGeneralDecisionsArray(selected.value)">
+              <decision-specific-fields v-bind:selected="selected.value"></decision-specific-fields>
+            </div>
+          </div>
+          <div v-else-if="selected.value === 'Opinion'">
+            <opinion></opinion>
+          </div>
+          <div v-else-if="selected.value === 'PaymentFinalisation'">
+            <payment-finalisation></payment-finalisation>
+          </div>
+          <h2 class="has-text-centered subtitle">Αποδέκτες</h2>
+          <div class="columns" id="allRecipients">
+            <div id="recipientsWrapper" class="column">
+              <h4 class="has-text-centered">Αποδέκτες Απόφασης</h4>
+              <recipient v-for="recipient in recipientsArray" v-bind:number="recipient" :key="getKey('recipient', recipient)"></recipient>
+              <div class="paddingRecipients has-text-centered">
+                <div class="field">
+                  <a class="button is-info is-outlined" type="button" v-on:click="incrementRecipients">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-plus"></i>
+                    </span>
+                    <span>{{nextRecipient}}ος αποδέκτης</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="recipientsShareWrapper" class="column">
+              <h4 class="has-text-centered">Αποδέκτες προς Κοινοποίηση</h4>
+              <recipient-for-share v-for="recipientshare in recipientForShareArray" v-bind:number="recipientshare" :key="getKey('recipientshare', recipientshare)"></recipient-for-share>
+              <div class="paddingRecipients has-text-centered">
+                <div class="field">
+                  <a class="button is-info is-outlined" type="button" v-on:click="incrementRecipientsForShare">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-plus"></i>
+                    </span>
+                    <span>{{nextRecipientForShare}}ος αποδέκτης</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="internalDistributionWrapper" class="column">
+              <h4 class="has-text-centered">Εσωτερική Διανομή</h4>
+              <internal-distribution v-for="internaldistr in internalDistributionArray" v-bind:number="internaldistr" :key="getKey('internaldistr', internaldistr)"></internal-distribution>
+              <div class="paddingRecipients has-text-centered">
+                <div class="field">
+                  <a class="button is-info is-outlined" type="button" v-on:click="incrementInternalDistribution">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-plus"></i>
+                    </span>
+                    <span>{{nextInternalDistribution}}ος αποδέκτης</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="has-text-centered subtitle">Υπογράφοντες &amp; Παρόντες</h2>
+          <div class="columns">
+            <div id="signersWrapper" class="column">
+              <h4 class="has-text-centered subtitle">Οι Υπογραφόντες</h4>
+              <signer v-for="signer in signersArray" v-bind:number="signer" :key="getKey('signer', signer)"></signer>
+              <div class="paddingRecipients has-text-centered">
+                <div class="field">
+                  <a class="button is-info is-outlined" type="button" v-on:click="incrementSigner">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-plus"></i>
+                    </span>
+                    <span>{{nextSigner}}ος υπογραφών</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="present" class="column">
+              <h4 class="has-text-centered subtitle">Ήταν παρόντες στην απόφαση</h4>
+              <present v-for="present in presentsArray" v-bind:number="present" :key="getKey('present', present)"></present>
+              <div class="paddingRecipients has-text-centered">
+                <div class="field">
+                  <a class="button is-info is-outlined" type="button" v-on:click="incrementPresent">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-plus"></i>
+                    </span>
+                    <span>{{nextPresent}}ος παρόντας</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
             <div class="column">
-              <h3 class="subtitle has-text-centered">Επίλογος Απόφασης</h3>
-              <textarea class="textarea" id="afterconsideration" name="afterconsideration" placeholder="Σε αυτό το πεδίο γράφετε προαιρετικά τον επίλογο της απόφασης."></textarea>
-            </div>
-          </div>
-          <div v-if="!ifInGeneralDecisionsArray(selected.value)">
-            <decision-specific-fields v-bind:selected="selected.value"></decision-specific-fields>
-          </div>
-        </div>
-        <div v-else>
-          <opinion></opinion>
-        </div>
-        <h2 class="has-text-centered subtitle">Αποδέκτες</h2>
-        <div class="columns" id="allRecipients">
-          <div id="recipientsWrapper" class="column">
-            <h4 class="has-text-centered">Αποδέκτες Απόφασης</h4>
-            <recipient v-for="recipient in recipientsArray" v-bind:number="recipient" :key="getKey('recipient', recipient)"></recipient>
-            <div class="paddingRecipients has-text-centered">
-              <div class="field">
-                <a class="button is-info is-outlined" type="button" v-on:click="incrementRecipients">
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-plus"></i>
-                  </span>
-                  <span>{{nextRecipient}}ος αποδέκτης</span>
-                </a>
+              <h4 class="has-text-centered subtitle">Η απόφαση ελέγχθηκε από:</h4>
+              <verification v-for="verification in verificationsArray" v-bind:number="verification" :key="getKey('verification', verification)"></verification>
+              <div class="paddingRecipients has-text-centered">
+                <div class="field">
+                  <a class="button is-info is-outlined" type="button" v-on:click="incrementVerifications">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-plus"></i>
+                    </span>
+                    <span>{{nextVerification}}ος έλεγχος</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div id="recipientsShareWrapper" class="column">
-            <h4 class="has-text-centered">Αποδέκτες προς Κοινοποίηση</h4>
-            <recipient-for-share v-for="recipientshare in recipientForShareArray" v-bind:number="recipientshare" :key="getKey('recipientshare', recipientshare)"></recipient-for-share>
-            <div class="paddingRecipients has-text-centered">
-              <div class="field">
-                <a class="button is-info is-outlined" type="button" v-on:click="incrementRecipientsForShare">
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-plus"></i>
-                  </span>
-                  <span>{{nextRecipientForShare}}ος αποδέκτης</span>
-                </a>
-              </div>
-            </div>
           </div>
-          <div id="internalDistributionWrapper" class="column">
-            <h4 class="has-text-centered">Εσωτερική Διανομή</h4>
-            <internal-distribution v-for="internaldistr in internalDistributionArray" v-bind:number="internaldistr" :key="getKey('internaldistr', internaldistr)"></internal-distribution>
-            <div class="paddingRecipients has-text-centered">
-              <div class="field">
-                <a class="button is-info is-outlined" type="button" v-on:click="incrementInternalDistribution">
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-plus"></i>
-                  </span>
-                  <span>{{nextInternalDistribution}}ος αποδέκτης</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2 class="has-text-centered subtitle">Υπογράφοντες &amp; Παρόντες</h2>
-        <div class="columns">
-          <div id="signersWrapper" class="column">
-            <h4 class="has-text-centered subtitle">Οι Υπογραφόντες</h4>
-            <signer v-for="signer in signersArray" v-bind:number="signer" :key="getKey('signer', signer)"></signer>
-            <div class="paddingRecipients has-text-centered">
-              <div class="field">
-                <a class="button is-info is-outlined" type="button" v-on:click="incrementSigner">
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-plus"></i>
-                  </span>
-                  <span>{{nextSigner}}ος υπογραφών</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div id="present" class="column">
-            <h4 class="has-text-centered subtitle">Ήταν παρόντες στην απόφαση</h4>
-            <present v-for="present in presentsArray" v-bind:number="present" :key="getKey('present', present)"></present>
-            <div class="paddingRecipients has-text-centered">
-              <div class="field">
-                <a class="button is-info is-outlined" type="button" v-on:click="incrementPresent">
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-plus"></i>
-                  </span>
-                  <span>{{nextPresent}}ος παρόντας</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column">
-            <h4 class="has-text-centered subtitle">Η απόφαση ελέγχθηκε από:</h4>
-            <verification v-for="verification in verificationsArray" v-bind:number="verification" :key="getKey('verification', verification)"></verification>
-            <div class="paddingRecipients has-text-centered">
-              <div class="field">
-                <a class="button is-info is-outlined" type="button" v-on:click="incrementVerifications">
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-plus"></i>
-                  </span>
-                  <span>{{nextVerification}}ος έλεγχος</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
       </div>
     </div>
-  </div>
+    <!-- DecisionComposer end  -->
+    <div class="columns" v-if="selected.value">
+      <div class="column has-text-centered">
+        <button type="submit" class="button is-primary">Ανεβάστε την Απόφαση</button>
+      </div>
+    </div>
+  </form>
 </template>
 
 <script>
@@ -209,10 +223,12 @@ import $ from 'jquery'
 import autosize from 'autosize'
 import Multiselect from 'vue-multiselect'
 import Opinion from './specific-decision-fields/Opinion.vue'
+import PaymentFinalisation from './specific-decision-fields/PaymentFinalisation.vue'
 import Verification from './Verification.vue'
+import GovernmentInstitutionInfo from '../components/GovernmentInstitutionInfo.vue'
 
 export default {
-  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer, Present, DecisionSpecificFields, Multiselect, Opinion, Verification},
+  components: {ThematicCategories, Consideration, Decision, Recipient, RecipientForShare, InternalDistribution, Signer, Present, DecisionSpecificFields, Multiselect, Opinion, PaymentFinalisation, Verification, GovernmentInstitutionInfo},
   mounted: function () {
     this.lastConsideration = 1
     this.nextConsideration = 2
