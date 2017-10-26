@@ -1,13 +1,14 @@
 <template>
   <div>
-    <label for="cpv" v-if="number === undefined">CPV</label>
+    <label :for="getCPVName" v-if="number === undefined">CPV</label>
+    <label :for="getCPVName" v-if="isPaymentFinilisation" class="label">CPV</label>
     <input type="text" :name="getCPVName" class="input">
   </div>
 </template>
 
 <script>
 export default {
-  props: ['number'],
+  props: ['number', 'isPaymentFinilisation'],
   computed: {
     getCPVName: function () {
       if (this.number !== undefined) {
