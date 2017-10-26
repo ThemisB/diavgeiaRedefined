@@ -30,21 +30,13 @@
     </section>
   <section class="section is-fullheight">
     <div class="container">
-      <div class="alert alert-success alert-dismissible successfulSubmission" role="alert" v-if="success">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        Η απόφαση έχει αναρτηθεί στην Διαύγεια και στο SPARQL endpoint
-      </div>
-
-      <form action="/api/createDecision" method="post">
-        <government-institution-info></government-institution-info>
-        <h2 class="has-text-centered title dvgColor" style="margin-top:0.7em;">Συγγραφή Απόφασης</h2>
-        <decisions-composer></decisions-composer>
-        <div class="columns">
-          <div class="column has-text-centered">
-            <button type="submit" class="button is-primary">Ανεβάστε την Απόφαση</button>
-          </div>
+      <div class="columns is-centered">
+        <div class="notification is-primary is-half colum" v-if="success">
+          <button class="delete"></button>
+            Η απόφαση έχει αναρτηθεί στην Διαύγεια και στο SPARQL endpoint
         </div>
-      </form>
+      </div>
+      <decisions-composer></decisions-composer>
     </div>
   </section>
 </div>
@@ -52,12 +44,16 @@
 
 <script>
 
-import GovernmentInstitutionInfo from '../components/GovernmentInstitutionInfo.vue'
 import DecisionsComposer from '../components/DecisionsComposer.vue'
-
+import $ from 'jquery'
 export default {
-  components: {GovernmentInstitutionInfo, DecisionsComposer},
+  components: {DecisionsComposer},
   mounted: function () {
+
+    $(document).on('click', '.notification > button.delete', function() {
+      $(this).parent().addClass('is-hidden');
+      return false;
+    });
     // On successful form submission API returns URL:?success
     let isSuccess = (function () {
       let param = 'success'
