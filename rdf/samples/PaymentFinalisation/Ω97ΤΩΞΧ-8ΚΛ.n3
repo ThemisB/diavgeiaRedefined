@@ -19,6 +19,8 @@
   ont:protocol_number "5448/2016";
   ont:unit_id "81651";
   ont:submission_timestamp "1457342877531";
+  ont:has_expense <Expense/1>;
+  ont:uploader_id "114297";
   ont:financial_year "2016".
 
 <Signer/1> a ont:Signer;
