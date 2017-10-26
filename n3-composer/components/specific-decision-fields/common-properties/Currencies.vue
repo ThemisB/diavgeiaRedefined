@@ -14,7 +14,7 @@
 import Multiselect from 'vue-multiselect'
 
 export default {
-  props: ['number'],
+  props: ['number', 'withholding_number', 'subExpenseNumber', 'paymentWithHolding'],
   components: {Multiselect},
   data: () => {
     return {
@@ -27,6 +27,13 @@ export default {
   computed: {
     getExpenseCurrencyName: function () {
       if (this.number !== undefined) {
+        if (this.withholding_number !== undefined) {
+          return 'expense[' + this.number + '][withholding][' + this.withholding_number + '][withholding_expense_currency]'
+        } else if (this.subExpenseNumber !== undefined) {
+          return 'expense[' + this.number + '][withKaeSubExpense][' + this.subExpenseNumber + '][expense_amount_currency]'
+        } else if (this.paymentWithHolding === true) {
+          return 'expense[' + this.number + '][payment_with_withholdings_currency]'
+        }
         return 'expense[' + this.number + '][expense_currency]'
       }
       return 'expense_currency'
