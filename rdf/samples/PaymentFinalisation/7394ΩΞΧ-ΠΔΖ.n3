@@ -18,8 +18,11 @@
   ont:organization_id "6253";
   ont:protocol_number "5448/2016";
   ont:reason_multiple_afm_ignorance "Μισθοδοσία"@el;
+  ont:multiple_afm_ignorance_text "ΑΠΟΔΟΧΕΣ ΜΟΝΙΜΩΝ ΥΠΑΛΛΗΛΩΝ"@el;
   ont:unit_id "81651";
   ont:submission_timestamp "1457342877531";
+  ont:has_expense <Expense/1>;
+  ont:uploader_id "114297";
   ont:financial_year "2016".
 
 <Signer/1> a ont:Signer;
@@ -30,9 +33,6 @@
 
 <Signer/3> a ont:Signer;
   ont:signer_job "Ο ΕΚΔΟΤΗΣ"@el.
-
-<Sponsored/1> a ont:Sponsored;
-  ont:name "ΑΠΟΔΟΧΕΣ ΜΟΝΙΜΩΝ ΥΠΑΛΛΗΛΩΝ"@el.
 
 <OrganizationSponsor/1> a ont:OrganizationSponsor;
   ont:afm "997861879";
@@ -87,7 +87,6 @@
 <Expense/1> a ont:Expense;
   ont:expense_amount "88759.18";
   ont:expense_amount_currency "EUR";
-  ont:has_sponsored <Sponsored/1>;
   ont:has_organization_sponsor <OrganizationSponsor/1>;
   ont:payment_reason "ΑΠΟΔΟΧΕΣ ΜΟΝΙΜΩΝ ΥΠΑΛΛΗΛΩΝ - Β' 15/ΜΕΡΟ ΜΑΡΤΙΟΥ ΕΤΟΣ 2016"@el;
   ont:has_document "ΕΑΔ 1/2016 ΣΤΟ ΧΕΠ"@el;
