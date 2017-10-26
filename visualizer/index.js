@@ -263,6 +263,7 @@ class PropertiesFormatter {
         // PaymentFinalisation
         this._findPredicateValue(subject, 'ont', 'reason_multiple_afm_ignorance', predicatePair)
         this._findPredicateValue(subject, 'ont', 'payment_number', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'multiple_afm_ignorance_text', predicatePair)
       })
     }
     /* A second iteration is necessary here, because in the future n3 generator may change
