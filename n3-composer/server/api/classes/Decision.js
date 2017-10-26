@@ -395,6 +395,27 @@ class Decision {
           this.decisionString += this._formatTriplet('ont', 'opinion_government_institution_type', this.fields.opinion_government_institution_type, 'string')
         }
         break
+      case 'PaymentFinalisation':
+        if (this.fields.payment_number) {
+          this.decisionString += this._formatTriplet('ont', 'payment_number', this.fields.payment_number, 'string', false)
+        }
+        if (this.fields.financial_year) {
+          this.decisionString += this._formatTriplet('ont', 'financial_year', this.fields.financial_year, 'string', false)
+        }
+        if (this.fields.reason_multiple_afm_ignorance) {
+          this.decisionString += this._formatTriplet('ont', 'reason_multiple_afm_ignorance', this.fields.reason_multiple_afm_ignorance, 'string')
+          if (this.fields.multiple_afm_ignorance_text) {
+            this.decisionString += this._formatTriplet('ont', 'multiple_afm_ignorance_text', this.fields.multiple_afm_ignorance_text, 'string', true)
+          }
+        }
+        if (this.fields.organizationSponsorAfm && this.fields.organizationSponsorAfmType && this.fields.organizationSponsorName) {
+          this.fields.expense.forEach((expense, i) => {
+            if (((expense.afm && expense.afm_type && expense.name) || this.fields.reason_multiple_afm_ignorance) && expense.expense_amount && expense.expense_currency) {
+              this.decisionString += this._formatTriplet('ont', 'has_expense', 'Expense/' + (i + 1), 'entity')
+            }
+          })
+        }
+        break
     }
   }
 
@@ -436,11 +457,13 @@ class Decision {
       this.decisionString += this._formatTriplet('ont', 'has_preconsideration', 'Preconsideration', 'entity')
     }
 
-    this.fields.considerations.forEach((v, i) => {
-      if (v.text) {
-        this.decisionString += this._formatTriplet('ont', 'has_considered', 'Consideration/' + (i + 1), 'entity')
-      }
-    })
+    if (this.fields.considerations) {
+      this.fields.considerations.forEach((v, i) => {
+        if (v.text) {
+          this.decisionString += this._formatTriplet('ont', 'has_considered', 'Consideration/' + (i + 1), 'entity')
+        }
+      })
+    }
 
     if (this.fields.decisions) {
       // Because Opinions do not have decisions
@@ -495,7 +518,6 @@ class Decision {
       }
       let signerIndexes = []
       // Find Signer Indexes
-      console.log(v)
       Object.keys(v).map(key => {
         if (!isNaN(parseInt(key, 10))) {
           signerIndexes.push(key)
@@ -555,15 +577,17 @@ class Decision {
       this.decisionString += this._formatTriplet('ont', 'has_text', this.fields.preconsideration, 'string', true, true)
     }
     // Considerations Body
-    this.fields.considerations.forEach((legislation) => {
-      if (legislation.text) {
-        this.decisionString += '<Consideration/' + legislation.index + '> a ont:Consideration;\n'
-        if (this._hasLegislationLinking(legislation)) {
-          this.decisionString += this._formatLinking(legislation)
+    if (this.fields.considerations) {
+      this.fields.considerations.forEach((legislation) => {
+        if (legislation.text) {
+          this.decisionString += '<Consideration/' + legislation.index + '> a ont:Consideration;\n'
+          if (this._hasLegislationLinking(legislation)) {
+            this.decisionString += this._formatLinking(legislation)
+          }
+          this.decisionString += this._formatTriplet('ont', 'has_text', legislation.text, 'string', true, true)
         }
-        this.decisionString += this._formatTriplet('ont', 'has_text', legislation.text, 'string', true, true)
-      }
-    })
+      })
+    }
     // Decisions Body
     if (this.fields.decisions) {
       // Because Opinions do not have decisions
@@ -841,6 +865,85 @@ class Decision {
               this.decisionString += this._formatTriplet('ont', 'name', expense.sponsored, 'string', true, true)
             }
           })
+        }
+        break
+      case 'PaymentFinalisation':
+        if (this.fields.organizationSponsorAfm && this.fields.organizationSponsorAfmType && this.fields.organizationSponsorName) {
+          var atLeastOneValidExpense = false
+          var withHoldingMap = {}
+          var withKaeSubExpenseMap = {}
+          var lastwithHolding = 1
+          var lastWithKaeSubExpense = 1
+          this.fields.expense.forEach((expense, i) => {
+            if (((expense.afm && expense.afm_type && expense.name) || this.fields.reason_multiple_afm_ignorance) && expense.expense_amount && expense.expense_currency) {
+              this.decisionString += '<Expense/' + (i + 1) + '> a ont:Expense;\n'
+              this.decisionString += this._formatTriplet('ont', 'expense_amount', expense.expense_amount, 'string', false)
+              this.decisionString += this._formatTriplet('ont', 'expense_amount_currency', expense.expense_currency, 'string', true)
+              if (expense.payment_reason) {
+                this.decisionString += this._formatTriplet('ont', 'payment_reason', expense.payment_reason, 'string', true)
+              }
+              if (expense.cpv) {
+                this.decisionString += this._formatTriplet('ont', 'cpv', expense.cpv, 'string', false)
+              }
+              if (expense.payment_with_withholdings && expense.payment_with_withholdings_currency) {
+                this.decisionString += this._formatTriplet('ont', 'payment_with_withholdings', expense.payment_with_withholdings, 'string', false)
+                this.decisionString += this._formatTriplet('ont', 'payment_with_withholdings_currency', expense.payment_with_withholdings_currency, 'string', true)
+              }
+              if (expense.document) {
+                expense.document.forEach(doc => {
+                  this.decisionString += this._formatTriplet('ont', 'has_document', doc, 'string', true)
+                })
+              }
+              if (expense.withholding) {
+                expense.withholding.forEach(withholding => {
+                  if (withholding.withholding_text && withholding.withholding_expense && withholding.withholding_expense_currency) {
+                    this.decisionString += this._formatTriplet('ont', 'has_withHolding', 'WithHolding/' + lastwithHolding, 'entity', false)
+                    withHoldingMap[lastwithHolding] = withholding
+                    lastwithHolding++
+                  }
+                })
+              }
+              if (expense.withKaeSubExpense) {
+                expense.withKaeSubExpense.forEach(subexpense => {
+                  if (subexpense.kae && subexpense.expense_amount && subexpense.expense_amount_currency) {
+                    this.decisionString += this._formatTriplet('ont', 'has_withkaesubexpense', 'WithKaeSubExpense/' + lastWithKaeSubExpense, 'entity', false)
+                    withKaeSubExpenseMap[lastWithKaeSubExpense] = subexpense
+                    lastWithKaeSubExpense++
+                  }
+                })
+              }
+              this.decisionString += this._formatTriplet('ont', 'has_organization_sponsor', 'OrganizationSponsor/1', 'entity', false, true)
+              if (!this.fields.reason_multiple_afm_ignorance) {
+                this.decisionString += '<Sponsored/' + (i + 1) + '> a ont:Sponsored;\n'
+                this.decisionString += this._formatTriplet('ont', 'name', expense.name, 'string', true)
+                this.decisionString += this._formatTriplet('ont', 'afm', expense.afm, 'string', false)
+                this.decisionString += this._formatTriplet('ont', 'afm_type', expense.afm_type, 'string', true, true)
+              }
+              atLeastOneValidExpense = true
+            }
+          })
+          if (atLeastOneValidExpense) {
+            this.decisionString += '<OrganizationSponsor/1> a ont:OrganizationSponsor;\n'
+            this.decisionString += this._formatTriplet('ont', 'afm', this.fields.organizationSponsorAfm, 'string')
+            this.decisionString += this._formatTriplet('ont', 'afm_type', this.fields.organizationSponsorAfmType, 'string')
+            this.decisionString += this._formatTriplet('ont', 'name', this.fields.organizationSponsorName, 'string', true, true)
+
+            for (let key in withHoldingMap) {
+              let withholding = withHoldingMap[key]
+              this.decisionString += '<WithHolding/' + key + '> a ont:WithHolding;\n'
+              this.decisionString += this._formatTriplet('ont', 'withholding_text', withholding.withholding_text, 'string', true)
+              this.decisionString += this._formatTriplet('ont', 'withholding_expense', withholding.withholding_expense, 'string', false)
+              this.decisionString += this._formatTriplet('ont', 'withholding_expense_currency', withholding.withholding_expense_currency, 'string', true, true)
+            }
+
+            for (let key in withKaeSubExpenseMap) {
+              let subexpense = withKaeSubExpenseMap[key]
+              this.decisionString += '<WithKaeSubExpense/' + key + '> a ont:WithKaeSubExpense;\n'
+              this.decisionString += this._formatTriplet('ont', 'kae', subexpense.kae, 'string', false)
+              this.decisionString += this._formatTriplet('ont', 'expense_amount', subexpense.expense_amount, 'string', false)
+              this.decisionString += this._formatTriplet('ont', 'expense_amount_currency', subexpense.expense_amount_currency, 'string', true, true)
+            }
+          }
         }
         break
     }
