@@ -360,18 +360,18 @@ html
                         tbody
                           each paymentFinalisationExpense, index in paymentFinalisationExpenses
                             tr
-                              if paymentFinalisationSponsored[index].afm
+                              if paymentFinalisationSponsored[index]
                                 td #{paymentFinalisationSponsored[index].name}, με ΑΦΜ <b>#{paymentFinalisationSponsored[index].afm} (#{paymentFinalisationSponsored[index].afm_type})</b>
                               else
-                                td #{paymentFinalisationSponsored[index].name}
+                                td Χωρίς Δικαιούχο <br/> <br/> <b>#{multiple_afm_ignorance_text}</b>
                               td #{paymentFinalisationExpense.payment_reason}
                               td <b>#{paymentFinalisationExpense.expense_amount} #{paymentFinalisationExpense.expense_amount_currency}</b>
-                              if paymentFinalisationExpense.withholding_index > 0
+                              if paymentFinalisationWithHoldings.length > 0
                                 td
                                   <ul>
-                                    each withholding_index, ai_index in paymentFinalisationExpense.withholding_index
+                                    each withholding, ai_index in paymentFinalisationWithHoldings
                                       - let next_ai_index = ai_index + 1
-                                      li <b>#{next_ai_index}.</b> #{paymentFinalisationWithHoldings[withholding_index].withholding_text}, σύνολο <b>#{paymentFinalisationWithHoldings[withholding_index].withholding_expense} #{paymentFinalisationWithHoldings[withholding_index].withholding_expense_currency}</b>
+                                      li(class='smallMargin') <b>#{next_ai_index}.</b> #{withholding.withholding_text}, σύνολο <b>#{withholding.withholding_expense} #{withholding.withholding_expense_currency}</b>
                                   </ul>
                               else
                                 td Δεν υπάρχουν κρατήσεις.
