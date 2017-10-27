@@ -27,7 +27,6 @@
 	ont:has_decided <Decision/2>;
 	ont:signed_by <Signer/1>;
 	ont:recipient_for_share "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
-	ont:recipient_for_action "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
 	ont:thematic_category "Employment";
 	ont:has_private_data false;
 	ont:organization_id "100015969";
