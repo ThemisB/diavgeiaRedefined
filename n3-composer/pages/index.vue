@@ -70,7 +70,7 @@ export default {
       return false
     })
 
-    if (checkParam('sucess')) {
+    if (checkParam('success')) {
       this.success = true
       history.pushState(null, '', window.location.href.substring(0, window.location.href.indexOf('?')))
     }
