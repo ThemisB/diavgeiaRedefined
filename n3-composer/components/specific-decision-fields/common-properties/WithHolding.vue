@@ -26,7 +26,7 @@
         <span class="icon is-small is-left">
           <i class="fa fa-plus"></i>
         </span>
-        <span>{{nextWithHolding}}η παρακράτηση</span>
+        <span>{{nextWithHolding}}η κράτηση</span>
       </a>
     </div>
   </div>
