@@ -3,5 +3,8 @@
   "isDecisionsSaveDirHome": true,
   "sparqlEndpointUrl": "http://localhost:3030",
   "dataset": "decisions",
-  "SOH_put_executable": "../sparql_endpoint/fuseki/bin/s-put"
+  "SOH_put_executable": "../sparql_endpoint/fuseki/bin/s-put",
+  "mongoPort": "27017",
+  "mongoURL": "localhost",
+  "mongoDBName": "diavgeiaRedefinedMongoDB"
 }
