@@ -26,7 +26,6 @@
 	ont:has_decided <Decision/1>;
 	ont:signed_by <Signer/1>;
 	ont:recipient_for_share "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
-	ont:recipient_for_action "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
 	ont:thematic_category "PublicAdministration";
 	ont:fek_number "814"@el;
 	ont:fek_issue "Γ"@el;
