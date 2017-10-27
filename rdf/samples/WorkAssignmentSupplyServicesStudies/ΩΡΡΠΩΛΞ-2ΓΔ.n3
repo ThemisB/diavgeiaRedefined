@@ -24,7 +24,6 @@
 	ont:signed_by <Signer/3>;
 	ont:has_expense <Expense/1>;
 	ont:recipient_for_share "ΥΝΑΝΠ/Α.Λ.Σ.-ΕΛ.ΑΚΤ./ΔΛΑ Α'"@el;
-	ont:recipient_for_action "8η ΠΕΔΙΛΣ-ΕΛ.ΑΚΤ."@el;
 	ont:work_assignment_etc_category "Προμήθειες"@el;
 	ont:thematic_category "EconomicTradeExchanges";
 	ont:has_private_data false;
