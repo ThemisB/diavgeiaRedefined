@@ -31,9 +31,13 @@
   <section class="section is-fullheight">
     <div class="container">
       <div class="columns is-centered">
-        <div class="notification is-primary is-half colum" v-if="success">
+        <div class="notification is-primary is-half column" v-if="success">
           <button class="delete"></button>
             Η απόφαση έχει αναρτηθεί στην Διαύγεια και στο SPARQL endpoint
+        </div>
+        <div class="notification is-danger is-half column" v-if="error">
+          <button class="delete"></button>
+            Η απόφαση δεν έχει αναρτηθεί στην Διαύγεια, λόγω εσωτερικού σφάλματος.
         </div>
       </div>
       <decisions-composer></decisions-composer>
@@ -55,8 +59,7 @@ export default {
       return false;
     });
     // On successful form submission API returns URL:?success
-    let isSuccess = (function () {
-      let param = 'success'
+    let checkParam = (function (param) {
       let url = window.location.href
       param = param.replace(/[[\]]/g, '\\$&')
       let regex = new RegExp('[?&]' + param + '(=([^&#]*)|&|#|$)')
@@ -65,16 +68,22 @@ export default {
         return true
       }
       return false
-    })()
+    })
 
-    if (isSuccess) {
+    if (checkParam('sucess')) {
       this.success = true
+      history.pushState(null, '', window.location.href.substring(0, window.location.href.indexOf('?')))
+    }
+
+    if (checkParam('error')) {
+      this.error = true
       history.pushState(null, '', window.location.href.substring(0, window.location.href.indexOf('?')))
     }
   },
   data: function () {
     return {
-      success: false
+      success: false,
+      error: false
     }
   }
 }
