@@ -3,6 +3,17 @@ const config = require('config')
 const path = require('path')
 const {spawnSync} = require('child_process')
 
+const zlib = require('zlib')
+const gzip = zlib.createGzip()
+
+const MongoClient = require('mongodb').MongoClient
+const assert = require('assert')
+const mongoPort = config.get('mongoPort')
+const mongoURL = config.get('mongoURL')
+const mongoDBName = config.get('mongoDBName')
+
+const dbURL = 'mongodb://' + mongoURL + ':' + mongoPort + '/' + mongoDBName
+
 const ONT = '<http://diavgeia.gov.gr/ontology/>'
 const ELI = '<http://data.europa.eu/eli/ontology#>'
 const LEG = '<http://legislation.di.uoa.gr/eli/>'
@@ -962,14 +973,49 @@ class Decision {
     this._writeGeneralInfo()
     this._writeDecisionBody()
     this._writeRestEntities()
+
     var _this = this
+
+    var insertDecisionToMongo = function (db, callback) {
+      var collection = db.collection('decisions')
+      // Insert some documents
+      collection.insert([
+        {
+          iun: _this.fields.iun,
+          version: _this.fields.version,
+          date: new Date()
+        }
+      ], function (err, result) {
+        assert.equal(err, null)
+        callback(result)
+      })
+    }
+    // Use connect method to connect to the server
+    MongoClient.connect(dbURL, function (err, db) {
+      assert.equal(null, err)
+      insertDecisionToMongo(db, function () {
+        db.close()
+      })
+    })
+
     const storageDirectory = this._getN3DecisionsLocation()
     fs.ensureDirSync(storageDirectory)
-    const filePath = storageDirectory + '/' + _this.fields.iun + '_' + _this.fields.version + '.n3'
-    fs.outputFileSync(filePath, this.decisionString)
+    let unzipedFilepath = storageDirectory + '/' + this.fields.iun + '_' + this.fields.version + '.n3'
+    let gzipedFilepath = unzipedFilepath + '.gz'
+    const out = fs.createWriteStream(gzipedFilepath)
+    fs.outputFileSync(unzipedFilepath, this.decisionString)
+    const inp = fs.createReadStream(unzipedFilepath)
+    inp.pipe(gzip).pipe(out)
+
     const resolvedPath = path.resolve(config.get('SOH_put_executable'))
-    let SOH = spawnSync(resolvedPath, [config.get('sparqlEndpointUrl') + '/' + config.get('dataset'), 'default', filePath])
-    return SOH.stderr
+    let SOH = spawnSync(resolvedPath, [config.get('sparqlEndpointUrl') + '/' + config.get('dataset'), 'default', unzipedFilepath])
+    fs.unlink(unzipedFilepath)
+    if (!SOH.stderr.toString()) {
+      return true
+    } else {
+      console.log(SOH.stderr.toString())
+      return false
+    }
   }
 }
 
