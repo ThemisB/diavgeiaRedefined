@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import bodyParser from 'body-parser'
 import Decision from './classes/Decision.js'
+
 var router = Router()
 
 router.use(bodyParser.urlencoded({ extended: true }))
@@ -8,11 +9,14 @@ router.use(bodyParser.urlencoded({ extended: true }))
 router.post('/createDecision', function (req, res) {
   // TODO These 4 fields (IUN, Version, unitIds, organizationId) should be set
   // by the current implementation of Diavgeia
-  let err = new Decision(req.body, '60Β3ΩΡΙ-ΒΝ3', 'b4ae1411-f81d-437b-9c63-a8b7d4ed866b', ['6105'], '93302').generateN3()
-  if (err) {
-    res.redirect('/?error')
+  const crypto = require('crypto')
+  let iun = 'ΑΔΑ-' + crypto.randomBytes(8).toString('hex')
+  let version = crypto.randomBytes(15).toString('hex')
+  let status = new Decision(req.body, iun, version, ['6105'], '93302').generateN3()
+  if (status) {
+    res.redirect('/?success')
   }
-  res.redirect('/?success')
+  res.redirect('/?error')
 })
 
 export default router
