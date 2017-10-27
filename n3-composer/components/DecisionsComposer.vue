@@ -265,7 +265,6 @@ export default {
       DecisionTypes: [
         {
           data: [
-            {text: 'ΝΟΜΟΣ', value: 'Law', keywords: 'Νόμος Νομος'},
             {text: 'ΠΡΑΞΗ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1)', value: 'LegislativeDecree', keywords: 'Πράξη Πραξη Νομοθετικού Νομοθετικου Περιεχομένου Περιεχομενου Σύνταγμα Συνταγμα Άρθρο αρθρο παρ 44 1'},
             {text: 'ΚΑΝΟΝΙΣΤΙΚΗ ΠΡΑΞΗ', value: 'Normative', keywords: 'Κανονιστική Κανονιστικη Πράξη Πραξη'},
             {text: 'ΕΓΚΥΚΛΙΟΣ', value: 'Circular', keywords: 'Εγκύκλιος Εγκυκλιος'},
