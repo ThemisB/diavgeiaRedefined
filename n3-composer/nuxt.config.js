@@ -5,7 +5,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Διαύγεια - Δημιουργία Απόφασης',
+    titleTemplate: 'Διαύγεια - %s',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -33,6 +33,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  modules: ['@nuxtjs/axios'],
+  axios: {
+  },
   build: {
     /*
     ** Run ESLINT on save
