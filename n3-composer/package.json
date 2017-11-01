@@ -26,6 +26,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/axios": "^4.4.0",
     "autosize": "^4.0.0",
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
@@ -33,9 +34,11 @@
     "bootstrap-select": "^1.12.4",
     "config": "^1.26.2",
     "cross-env": "^5.0.5",
+    "expand-home-dir": "0.0.3",
     "express": "^4.15.3",
     "fs-extra": "^4.0.1",
     "jquery": "^3.2.1",
+    "moment": "^2.19.1",
     "mongodb": "^2.2.33",
     "nuxt": "^1.0.0-rc11",
     "source-map-support": "^0.4.15",
