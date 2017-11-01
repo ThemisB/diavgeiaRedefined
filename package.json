@@ -1,0 +1,27 @@
+{
+  "name": "diavgeiaredefined",
+  "version": "1.0.0",
+  "description": "gsoc17-diavgeia ===============",
+  "main": "deploy.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themisb/diavgeiaRedefined.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/themisb/diavgeiaRedefined/issues"
+  },
+  "homepage": "https://github.com/themisb/diavgeiaRedefined#readme",
+  "devDependencies": {
+    "config": "^1.27.0",
+    "expand-home-dir": "0.0.3",
+    "npm-run": "^4.1.2"
+  }
+}
