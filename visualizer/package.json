@@ -21,6 +21,7 @@
   "homepage": "https://github.com/eellak/gsoc17-diavgeia/visualizer#readme",
   "dependencies": {
     "bulma": "^0.5.1",
+    "expand-home-dir": "0.0.3",
     "express": "^4.15.4",
     "n3": "^0.11.1",
     "pug": "^2.0.0-rc.3"
