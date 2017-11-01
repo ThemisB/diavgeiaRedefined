@@ -2,15 +2,13 @@ const fs = require('fs-extra')
 const config = require('config')
 const path = require('path')
 const {spawnSync} = require('child_process')
-
-const zlib = require('zlib')
-const gzip = zlib.createGzip()
-
 const MongoClient = require('mongodb').MongoClient
 const assert = require('assert')
 const mongoPort = config.get('mongoPort')
 const mongoURL = config.get('mongoURL')
 const mongoDBName = config.get('mongoDBName')
+
+const expandHomeDir = require('expand-home-dir')
 
 const dbURL = 'mongodb://' + mongoURL + ':' + mongoPort + '/' + mongoDBName
 
@@ -27,6 +25,25 @@ class Decision {
     this.fields.organizationId = organizationId
     this.decisionString = ''
     this.verifierCounter = 1
+  }
+
+  static getDecisions (cb) {
+    var getDecisionsMongo = function (db, callback) {
+      var collection = db.collection('decisions')
+      // Insert some documents
+      collection.find({}).toArray(function (err, decisions) {
+        assert.equal(err, null)
+        callback(decisions)
+      })
+    }
+    // Use connect method to connect to the server
+    MongoClient.connect(dbURL, function (err, db) {
+      assert.equal(null, err)
+      getDecisionsMongo(db, function (decisions) {
+        db.close()
+        cb(decisions)
+      })
+    })
   }
 
   _formatTriplet (ontology, propertyName, propertyValue, propertyRange, stringGreek = true, lastTriplet = false) {
@@ -961,11 +978,11 @@ class Decision {
   }
 
   _getN3DecisionsLocation () {
-    var decisionN3StoreLocation = config.get('decisionsSaveDir')
-    if (config.get('isDecisionsSaveDirHome') === true) {
-      return process.env.HOME + '/' + path.normalize(decisionN3StoreLocation)
+    let storageDir = expandHomeDir(config.get('decisionsSaveDir'))
+    if (!fs.existsSync(storageDir)) {
+      fs.mkdirSync(storageDir)
     }
-    return path.normalize(decisionN3StoreLocation)
+    return storageDir
   }
 
   generateN3 () {
@@ -983,6 +1000,7 @@ class Decision {
         {
           iun: _this.fields.iun,
           version: _this.fields.version,
+          title: _this.fields.title,
           date: new Date()
         }
       ], function (err, result) {
@@ -1005,6 +1023,8 @@ class Decision {
     const out = fs.createWriteStream(gzipedFilepath)
     fs.outputFileSync(unzipedFilepath, this.decisionString)
     const inp = fs.createReadStream(unzipedFilepath)
+    const zlib = require('zlib')
+    const gzip = zlib.createGzip()
     inp.pipe(gzip).pipe(out)
 
     const resolvedPath = path.resolve(config.get('SOH_put_executable'))
