@@ -5,6 +5,10 @@ const fs = require('fs')
 const express = require('express')
 const app = express()
 const path = require('path')
+const zlib = require('zlib')
+process.env.NODE_CONFIG_DIR = '../n3-composer/config'
+const config = require('config')
+const expandHomeDir = require('expand-home-dir')
 
 const DECISIONS_DIRECTORY = path.resolve('../rdf/samples')
 
@@ -18,42 +22,93 @@ app.set('views', './views')
 app.set('view engine', 'pug')
 
 app.get('/visualize', function (req, res) {
-  if (req.query.decisionFolder && req.query.iun) {
-    var decisionFolder = path.normalize(req.query.decisionFolder).replace(/^(\.\.[/\\])+/, '')
+  var demoCondition = req.query.decisionFolder && req.query.iun
+  var productionCondition = req.query.iun && req.query.version
+  var decisionFolder
+  var version
+  if (demoCondition || productionCondition) {
+    if (demoCondition) {
+      decisionFolder = path.normalize(req.query.decisionFolder).replace(/^(\.\.[/\\])+/, '')
+    } else {
+      version = path.normalize(req.query.version).replace(/^(\.\.[/\\])+/, '')
+    }
     var iun = path.normalize(req.query.iun).replace(/^(\.\.[/\\])+/, '')
-    let rdfStream = fs.createReadStream(DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3')
-    rdfStream.on('error', () => {
-      console.error('N3 file ' + DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3' + ' does not exist')
-      res.status(404).send('Not found')
-    })
-
-    var array = {}
-    rdfStream.on('open', () => {
-      parser.parse(rdfStream, (err, triple, prefixes) => {
-        if (err) {
-          res.status(500).send('Internal Error')
-        }
-        if (triple) {
-          var predicateAndObject = [triple.predicate, triple.object]
-          if (!array[triple.subject]) {
-            array[triple.subject] = [predicateAndObject]
-          } else {
-            array[triple.subject].push(predicateAndObject)
-          }
-        }
+    if (demoCondition) {
+      let rdfStream = fs.createReadStream(DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3')
+      rdfStream.on('error', () => {
+        console.error('N3 file ' + DECISIONS_DIRECTORY + '/' + decisionFolder + '/' + iun + '.n3' + ' does not exist')
+        res.status(404).send('Not found')
       })
-    })
-    rdfStream.on('end', function () {
-      const generalPropertiesFormatter = new PropertiesFormatter()
-      generalPropertiesFormatter.formatProperties(array)
-      generalPropertiesFormatter.addConsiderationsToGeneralProperties()
-      generalPropertiesFormatter.addDecisionsToGeneralProperties()
-      generalPropertiesFormatter.addSignersToGeneralProperties()
-      generalPropertiesFormatter.addExpensesToGeneralProperties()
-      generalPropertiesFormatter.addPresentArrayToGeneralProperties()
-      generalPropertiesFormatter.addVerifiersToGeneralProperties()
-      res.render('index', generalPropertiesFormatter.properties)
-    })
+
+      var array = {}
+      rdfStream.on('open', () => {
+        parser.parse(rdfStream, (err, triple, prefixes) => {
+          if (err) {
+            res.status(500).send('Internal Error')
+          }
+          if (triple) {
+            var predicateAndObject = [triple.predicate, triple.object]
+            if (!array[triple.subject]) {
+              array[triple.subject] = [predicateAndObject]
+            } else {
+              array[triple.subject].push(predicateAndObject)
+            }
+          }
+        })
+      })
+      rdfStream.on('end', function () {
+        const generalPropertiesFormatter = new PropertiesFormatter()
+        generalPropertiesFormatter.formatProperties(array)
+        generalPropertiesFormatter.addConsiderationsToGeneralProperties()
+        generalPropertiesFormatter.addDecisionsToGeneralProperties()
+        generalPropertiesFormatter.addSignersToGeneralProperties()
+        generalPropertiesFormatter.addExpensesToGeneralProperties()
+        generalPropertiesFormatter.addPresentArrayToGeneralProperties()
+        generalPropertiesFormatter.addVerifiersToGeneralProperties()
+        res.render('index', generalPropertiesFormatter.properties)
+      })
+    } else {
+      let decisionDirectory = expandHomeDir(config.get('decisionsSaveDir'))
+      fs.readFile(decisionDirectory + '/' + iun + '_' + version + '.n3.gz', (err, data) => {
+        if (err) {
+          res.status(404).send('Not found')
+        }
+        zlib.unzip(data, (err, decisionBuffer) => {
+          if (err) {
+            res.status(404).send('Not found')
+          }
+          // Convert decompressed buffer to readable stream in order to pass it to the N3 parser
+          var stream = require('stream')
+          var rdfStream = new stream.PassThrough()
+          rdfStream.end(decisionBuffer)
+          var array = {}
+          parser.parse(rdfStream, (err, triple, prefixes) => {
+            if (err) {
+              res.status(500).send('Internal Error')
+            }
+            if (triple) {
+              var predicateAndObject = [triple.predicate, triple.object]
+              if (!array[triple.subject]) {
+                array[triple.subject] = [predicateAndObject]
+              } else {
+                array[triple.subject].push(predicateAndObject)
+              }
+            }
+          })
+          rdfStream.on('end', () => {
+            const generalPropertiesFormatter = new PropertiesFormatter()
+            generalPropertiesFormatter.formatProperties(array)
+            generalPropertiesFormatter.addConsiderationsToGeneralProperties()
+            generalPropertiesFormatter.addDecisionsToGeneralProperties()
+            generalPropertiesFormatter.addSignersToGeneralProperties()
+            generalPropertiesFormatter.addExpensesToGeneralProperties()
+            generalPropertiesFormatter.addPresentArrayToGeneralProperties()
+            generalPropertiesFormatter.addVerifiersToGeneralProperties()
+            res.render('index', generalPropertiesFormatter.properties)
+          })
+        })
+      })
+    }
   } else {
     res.status(404).send('Not found')
   }
