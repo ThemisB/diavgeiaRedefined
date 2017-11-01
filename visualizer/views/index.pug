@@ -444,7 +444,7 @@ html
                                 <span>,</span>
                               if signer.signer_name
                                 <span> #{signer.signer_name}</span>
-            if signers
+            if signers.length
               - let haveOrHas = signers.length > 1 ? 'έχουν' : 'έχει'
               if signers.length
               .decisionText.has-text-right.verifiersSigners <span>Την απόφαση την #{haveOrHas} υπογράψει:</span>
