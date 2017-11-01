@@ -85,6 +85,11 @@ export default {
       success: false,
       error: false
     }
+  },
+  head() {
+    return {
+      title: 'Συγγραφή Αποφάσεων'
+    }
   }
 }
 </script>
