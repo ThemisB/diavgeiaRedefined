@@ -7,5 +7,6 @@
   "SOH_put_executable": "../sparql_endpoint/fuseki/bin/s-post",
   "mongoPort": "27017",
   "mongoURL": "localhost",
-  "mongoDBName": "diavgeiaRedefinedMongoDB"
+  "mongoDBName": "diavgeiaRedefinedMongoDB",
+  "blockchainPoBMinutes": 5
 }
