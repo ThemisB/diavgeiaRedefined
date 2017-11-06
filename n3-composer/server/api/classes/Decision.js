@@ -30,8 +30,7 @@ class Decision {
   static getDecisions (cb) {
     var getDecisionsMongo = function (db, callback) {
       var collection = db.collection('decisions')
-      // Insert some documents
-      collection.find({}).toArray(function (err, decisions) {
+      collection.find().toArray(function (err, decisions) {
         assert.equal(err, null)
         callback(decisions)
       })
@@ -42,6 +41,25 @@ class Decision {
       getDecisionsMongo(db, function (decisions) {
         db.close()
         cb(decisions)
+      })
+    })
+  }
+
+  static getLastBlockchainCommit (cb) {
+    var getLastBlockchainCommitMongo = function (db, callback) {
+      var collection = db.collection('blockchainCommits')
+      // get latest blockchain transaction
+      collection.find().sort({_id: -1}).limit(1).toArray(function (err, commit) {
+        assert.equal(err, null)
+        callback(commit)
+      })
+    }
+    // Use connect method to connect to the server
+    MongoClient.connect(dbURL, function (err, db) {
+      assert.equal(null, err)
+      getLastBlockchainCommitMongo(db, function (commit) {
+        db.close()
+        cb(commit)
       })
     })
   }
