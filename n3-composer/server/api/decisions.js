@@ -1,6 +1,8 @@
 import { Router } from 'express'
 import bodyParser from 'body-parser'
 import Decision from './classes/Decision.js'
+import sanitize from 'sanitize-filename'
+
 var router = Router()
 
 router.use(bodyParser.urlencoded({ extended: true }))
@@ -24,6 +26,24 @@ router.post('/getdecisions', function (req, res) {
     res.setHeader('Content-Type', 'application/json')
     res.send(JSON.stringify(decisions))
   })
+})
+
+router.get('/downloadDecision', function (req, res) {
+  if (!req.query.iun || !req.query.version) {
+    res.send(404)
+  }
+  let iun = sanitize(req.query.iun)
+  let version = sanitize(req.query.version)
+  const fs = require('fs')
+  const config = require('config')
+  const expandHomeDir = require('expand-home-dir')
+  let storageDir = expandHomeDir(config.get('decisionsSaveDir'))
+  let fullPathDecision = storageDir + '/' + iun + '_' + version + '.n3.gz'
+  if (!fs.existsSync(fullPathDecision)) {
+    res.send(404)
+  } else {
+    res.download(fullPathDecision)
+  }
 })
 
 export default router
