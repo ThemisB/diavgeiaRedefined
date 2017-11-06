@@ -30,6 +30,7 @@
     </section>
   <section class="section is-fullheight">
     <div class="container">
+      <countdown v-bind:blockchainCommitObj="blockchainCommitObj"></countdown>
       <div v-for="decision in decisions">
         <div class="columns" v-if="decisionsCounter % 3 === 0">
           <decision v-bind:decision="decision"></decision>
@@ -47,6 +48,7 @@
 
 import axios from 'axios'
 import Decision from '../components/navigation/Decision.vue'
+import Countdown from '../components/navigation/Countdown.vue'
 
 export default {
   head() {
@@ -61,9 +63,10 @@ export default {
   },
   async asyncData({app}) {
     const decisions = await app.$axios.$post('getdecisions')
-    return {decisions}
+    const blockchainCommitObj = await app.$axios.$post('getLastBlockchainCommit')
+    return {decisions, blockchainCommitObj}
   },
-  components: {Decision}
+  components: {Decision, Countdown}
 }
 
 </script>
