@@ -11,10 +11,10 @@
       </div>
       <footer class="card-footer">
         <p class="card-footer-item">
-          <span><a :href="visualiseLink(decision)" target="_blank">Oπτικοποίηση</a></span>
+          <span><a :href="visualiseLink()" target="_blank">Oπτικοποίηση</a></span>
         </p>
         <p class="card-footer-item">
-          <span>Κατεβάστε την απόφαση</span>
+          <span><a :href="getDownloadLink()">Κατεβάστε την απόφαση</a></span>
         </p>
       </footer>
     </div>
@@ -28,12 +28,15 @@ import moment from 'moment'
 export default {
   props: ['decision'],
   methods: {
-    visualiseLink: function() {
+    visualiseLink: function () {
       return 'localhost:3333/visualize?iun=' + this.decision.iun + '&version=' + this.decision.version
+    },
+    getDownloadLink: function () {
+      return '/api/downloadDecision?iun=' + this.decision.iun + '&version=' + this.decision.version
     }
   },
   filters: {
-    formatDate: function(value) {
+    formatDate: function (value) {
       if (value) {
         return moment(String(value)).format('DD/MM/YYYY, hh:mm')
       }
