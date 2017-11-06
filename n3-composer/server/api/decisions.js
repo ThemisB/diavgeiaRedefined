@@ -5,6 +5,8 @@ import sanitize from 'sanitize-filename'
 
 var router = Router()
 
+const config = require('config')
+
 router.use(bodyParser.urlencoded({ extended: true }))
 
 router.post('/createDecision', function (req, res) {
@@ -35,7 +37,6 @@ router.get('/downloadDecision', function (req, res) {
   let iun = sanitize(req.query.iun)
   let version = sanitize(req.query.version)
   const fs = require('fs')
-  const config = require('config')
   const expandHomeDir = require('expand-home-dir')
   let storageDir = expandHomeDir(config.get('decisionsSaveDir'))
   let fullPathDecision = storageDir + '/' + iun + '_' + version + '.n3.gz'
@@ -44,6 +45,18 @@ router.get('/downloadDecision', function (req, res) {
   } else {
     res.download(fullPathDecision)
   }
+})
+
+router.post('/getLastBlockchainCommit', function (req, res) {
+  let blockchainPoBMinutes = config.get('blockchainPoBMinutes')
+  Decision.getLastBlockchainCommit((commit) => {
+    res.setHeader('Content-Type', 'application/json')
+    let commitObj = {
+      lastCommit: commit[0].date,
+      blockchainPoBMinutes
+    }
+    res.send(JSON.stringify(commitObj))
+  })
 })
 
 export default router
