@@ -53,10 +53,25 @@ router.post('/getLastBlockchainCommit', function (req, res) {
     res.setHeader('Content-Type', 'application/json')
     let commitObj = {
       lastCommit: commit[0].date,
+      txId: commit[0].txId,
+      tree: commit[0].tree,
       blockchainPoBMinutes
     }
     res.send(JSON.stringify(commitObj))
   })
 })
 
+router.get('/getLastMerkleTree', function (req, res) {
+  Decision.getLastBlockchainCommit((commit) => {
+    res.setHeader('Content-Type', 'application/json')
+    res.send({tree: commit[0].tree})
+  })
+})
+
+router.post('/getAllBlockchainCommits', function (req, res) {
+  Decision.getAllBlockchainCommits((commits) => {
+    res.setHeader('Content-Type', 'application/json')
+    res.send({commits})
+  })
+})
 export default router
