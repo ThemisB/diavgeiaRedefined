@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h3 class="has-text-centered subtitle" style="padding-bottom:2em"><b>Blockchain Status</b>: {{blockchainCommitObj | formatDate}}</h3>
+    <h3 class="has-text-centered subtitle"><b>Blockchain Status</b>: {{blockchainCommitObj | formatDate}}</h3>
+    <h4 class="has-text-centered subtitle is-6" style="padding-bottom:2em"><b>Τελευταίο Commit στο Blockchain</b>: <a :href="getLastBlockchainCommitLink(blockchainCommitObj)" target="_blank">{{blockchainCommitObj.txId}}</a> (<a href="/api/getLastMerkleTree" target="_blank">Merkle Tree</a>)</h4>
   </div>
 </template>
 
@@ -12,8 +13,8 @@ import moment from 'moment'
 export default {
   props: ['blockchainCommitObj'],
   methods: {
-    visualiseLink: function () {
-      return 'localhost:3333/visualize?iun=' + this.decision.iun + '&version=' + this.decision.version
+    getLastBlockchainCommitLink: function (blockchainCommitObj) {
+      return 'https://live.blockcypher.com/btc-testnet/tx/' + blockchainCommitObj.txId
     }
   },
   filters: {
