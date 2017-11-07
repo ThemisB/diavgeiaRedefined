@@ -30,28 +30,43 @@ class BTCCommiter {
    */
 
   /**
-   *  Get the data of the files inside decisionsFolder
-   *  @private
-   *  @returns {Promise}
-   *  @resolve {DecisionsData}
+   * Get the decisions that have not commited yet to blockchain
+   * @private
+   * @returns {Promise}
+   * @resolve {DecisionsData}
    */
 
-  _getDecisionsData() {
-    var _btcCommiter = this;
-    console.log(__dirname)
-    console.log(_btcCommiter.decisionsFolder)
-    return co(function* () {
-      const filenames = yield fs.readdir(_btcCommiter.decisionsFolder);
-      const readAllFiles = filename => co(function*(){
-        let fullpath = path.normalize(_btcCommiter.decisionsFolder+'/'+filename);
-        let data = yield fs.readFile(fullpath);
-        return {filepath:fullpath,data};
-      });
-      const filenamesBuffer = yield filenames.map(readAllFiles);
-      return filenamesBuffer;
-    });
-  }
-
+   _getDecisionsNotCommitedYet() {
+     var _btcCommiter = this;
+     return co(function* () {
+       let environment = (process.env.NODE_ENV !== undefined) ? process.env.NODE_ENV : 'development';
+       let n3ConfigurationFilePromise = yield fs.readFile('../n3-composer/config/' + environment + '.json');
+       let n3ConfigurationFile = JSON.parse(n3ConfigurationFilePromise);
+       var monk = require('monk');
+       var wrap = require('co-monk');
+       let db = monk(n3ConfigurationFile['mongoURL'] + '/' + n3ConfigurationFile['mongoDBName']);
+       var blockchainCommitsCollection = wrap(db.get('blockchainCommits'));
+       var lastCommit = yield blockchainCommitsCollection.find({}, {sort: {_id: -1}, limit: 1});
+       let lastCommitDate = lastCommit[0].date;
+       var decisionsCollection = wrap(db.get('decisions'));
+       let q = {
+         date: {
+          '$gte': new Date(lastCommitDate)
+         }
+       };
+       var decisionsNotCommited = yield decisionsCollection.find(q, 'iun version');
+       const expandHomeDir = require('expand-home-dir');
+       const decisionsDirectory = expandHomeDir(n3ConfigurationFile['decisionsSaveDir']);
+       var array = [];
+       const readAllFiles = decision => co(function*(){
+         let fullpath = decisionsDirectory + '/' + decision.iun + '_' + decision.version + '.n3.gz';
+         let data = yield fs.readFile(fullpath);
+         return {filepath: fullpath, data};
+       });
+       const filenamesBuffer = yield decisionsNotCommited.map(readAllFiles);
+       return filenamesBuffer;
+     })
+   }
   /**
    * @typedef {Array.<DecisionHash>} DecisionsHash
    */
@@ -164,7 +179,6 @@ class BTCCommiter {
        yield dvgWallet.db.send(tx);
        yield spv.sendTX(tx);
        const txId = tx.txid();
-       console.log('Proof of burn tx with hash ', txId , ' was broadcasted!');
        return txId;
      });
    }
@@ -176,7 +190,7 @@ class BTCCommiter {
     */
 
    /**
-    * Reads decisions inside decisionsFolder, creates the Merkle Tree
+    * Reads decisions that have not commited yet,
     * creates a tx and broadcasts it to the blockchain.
     * @return {Published}
     */
@@ -184,10 +198,19 @@ class BTCCommiter {
     publishDecisionsToBTC(dvgWallet, spv) {
       var _btcCommiter = this;
       return co(function*(){
-        const data = yield _btcCommiter._getDecisionsData();
+        const data = yield _btcCommiter._getDecisionsNotCommitedYet();
         const hashes = yield _btcCommiter._getDecisionsHash(data);
         const tree = _btcCommiter._constructMerkleTree(hashes);
         const txId = yield _btcCommiter._broadcastMerkleTreeTransaction(tree.root, dvgWallet, spv);
+        let environment = (process.env.NODE_ENV !== undefined) ? process.env.NODE_ENV : 'development';
+        let n3ConfigurationFilePromise = yield fs.readFile('../n3-composer/config/' + environment + '.json');
+        let n3ConfigurationFile = JSON.parse(n3ConfigurationFilePromise);
+        var monk = require('monk');
+        var wrap = require('co-monk');
+        let db = monk(n3ConfigurationFile['mongoURL'] + '/' + n3ConfigurationFile['mongoDBName']);
+        var blockchainCommitsCollection = wrap(db.get('blockchainCommits'));
+        // Stored merkle tree and txId to mongo
+        yield blockchainCommitsCollection.insert({txId, tree, date: new Date()});
         return { tree, txId };
       });
     };
