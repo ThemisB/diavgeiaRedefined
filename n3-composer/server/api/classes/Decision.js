@@ -64,6 +64,23 @@ class Decision {
     })
   }
 
+  static getAllBlockchainCommits (cb) {
+    var getAllBlockchainCommitsMongo = function (db, callback) {
+      var collection = db.collection('blockchainCommits')
+      collection.find().sort({_id: -1}).toArray(function (err, commit) {
+        assert.equal(err, null)
+        callback(commit)
+      })
+    }
+    MongoClient.connect(dbURL, function (err, db) {
+      assert.equal(null, err)
+      getAllBlockchainCommitsMongo(db, function (commit) {
+        db.close()
+        cb(commit)
+      })
+    })
+  }
+
   _formatTriplet (ontology, propertyName, propertyValue, propertyRange, stringGreek = true, lastTriplet = false) {
     var str = '\t' + ontology + ':' + propertyName + ' '
     if (propertyRange === 'string' && stringGreek) {
