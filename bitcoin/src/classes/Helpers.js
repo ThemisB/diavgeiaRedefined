@@ -74,12 +74,11 @@ class Helpers {
    * @param {SPVNode} spv
    * @returns {Published}
    */
-   
+
   static publishToBTC(decisionsPath, dvgWallet, spv) {
     return co( function*() {
       const btcCommiter = new BTCCommiter(decisionsPath);
       const published = yield btcCommiter.publishDecisionsToBTC(dvgWallet, spv);
-      console.log(published)
       return published;
     });
   }
