@@ -54,7 +54,7 @@ class BTCCommiter {
           '$gte': new Date(lastCommitDate)
          }
        };
-       var decisionsNotCommited = yield decisionsCollection.find(q, 'iun version');
+       var decisionsNotCommited = yield decisionsCollection.find(q, {sort: {date: -1}}, 'iun version');
        const expandHomeDir = require('expand-home-dir');
        const decisionsDirectory = expandHomeDir(n3ConfigurationFile['decisionsSaveDir']);
        var array = [];
