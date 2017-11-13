@@ -2,10 +2,14 @@ import { Router } from 'express'
 import bodyParser from 'body-parser'
 import Decision from './classes/Decision.js'
 import sanitize from 'sanitize-filename'
+import mongosanitize from 'mongo-sanitize'
 
 var router = Router()
 
 const config = require('config')
+const fs = require('fs')
+const expandHomeDir = require('expand-home-dir')
+const storageDir = expandHomeDir(config.get('decisionsSaveDir'))
 
 router.use(bodyParser.urlencoded({ extended: true }))
 
@@ -30,15 +34,29 @@ router.post('/getdecisions', function (req, res) {
   })
 })
 
+router.post('/getDecisionsByTxIndex', function (req, res) {
+  if (!req.query.txIndex) {
+    res.send(404)
+  } else {
+    let txIndex = mongosanitize(req.query.txIndex)
+    var Promise = require('bluebird')
+    Decision.getDecisionsByTxIndex(txIndex, (decisions) => {
+      Promise.map(decisions, (decision) => {
+        let fullPathDecision = storageDir + '/' + decision.iun + '_' + decision.version + '.n3.gz'
+        return fs.readFileAsync(fullPathDecision)
+      }).then(function (decisions) {
+        res.send(JSON.stringify(decisions))
+      })
+    })
+  }
+})
+
 router.get('/downloadDecision', function (req, res) {
   if (!req.query.iun || !req.query.version) {
     res.send(404)
   }
   let iun = sanitize(req.query.iun)
   let version = sanitize(req.query.version)
-  const fs = require('fs')
-  const expandHomeDir = require('expand-home-dir')
-  let storageDir = expandHomeDir(config.get('decisionsSaveDir'))
   let fullPathDecision = storageDir + '/' + iun + '_' + version + '.n3.gz'
   if (!fs.existsSync(fullPathDecision)) {
     res.send(404)
