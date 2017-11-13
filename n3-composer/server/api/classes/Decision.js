@@ -81,6 +81,24 @@ class Decision {
     })
   }
 
+  static getDecisionsByTxIndex (index, cb) {
+    var getDecisionsMongoByTxIndex = function (db, callback) {
+      var collection = db.collection('decisions')
+      collection.find({txIndex: parseInt(index)}, {_id: false}).sort({date: -1}).toArray(function (err, decisions) {
+        assert.equal(err, null)
+        callback(decisions)
+      })
+    }
+    // Use connect method to connect to the server
+    MongoClient.connect(dbURL, function (err, db) {
+      assert.equal(null, err)
+      getDecisionsMongoByTxIndex(db, function (decisions) {
+        db.close()
+        cb(decisions)
+      })
+    })
+  }
+
   _formatTriplet (ontology, propertyName, propertyValue, propertyRange, stringGreek = true, lastTriplet = false) {
     var str = '\t' + ontology + ':' + propertyName + ' '
     if (propertyRange === 'string' && stringGreek) {
