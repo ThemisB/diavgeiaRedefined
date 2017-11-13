@@ -1,0 +1,36 @@
+{
+  "name": "bitcoin-validator",
+  "version": "1.0.0",
+  "description": "NodeJS Application which ensures that Diavgeia data is consistent to Bitcoin Blockchain",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themisb/diavgeiaRedefined.git"
+  },
+  "keywords": [
+    "diavgeia",
+    "bitcoin",
+    "blockchain",
+    "validator"
+  ],
+  "author": "Themis Beris",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.0",
+    "bcoin": "^1.0.0-beta.15",
+    "bluebird": "^3.5.1",
+    "co": "^4.6.0",
+    "config": "^1.28.0",
+    "merkle-tree-gen": "^1.1.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.10.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
