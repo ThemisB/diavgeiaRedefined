@@ -1,0 +1,6 @@
+{
+  "network": "testnet",
+  "diavgeiaURI": "http://localhost:3000",
+  "xpubkey": "tpubDDFBirTed1enfMHrMyc2b6KSaKwHWp1kFDWyhsByF3iNiVUh749cNs1tft4t7ikVydzNMFRzD5e7wmz4mbvPKhDNis9VypeUt9T8YVcbnxp",
+  "hash_algorithm": "sha256"
+}
