@@ -46,15 +46,30 @@ class BTCCommiter {
        var wrap = require('co-monk');
        let db = monk(n3ConfigurationFile['mongoURL'] + '/' + n3ConfigurationFile['mongoDBName']);
        var blockchainCommitsCollection = wrap(db.get('blockchainCommits'));
-       var lastCommit = yield blockchainCommitsCollection.find({}, {sort: {_id: -1}, limit: 1});
-       let lastCommitDate = lastCommit[0].date;
+       var lastCommitDate = yield blockchainCommitsCollection.findOne({}, {sort: {_id: -1}, limit: 1, fields:{'date' : 1, '_id': 0 }});
+
+       // If at least one PoB has been done
+       if (lastCommitDate !== null) {
+         console.log(lastCommitDate)
+         lastCommitDate = lastCommitDate.date;
+       }
+
        var decisionsCollection = wrap(db.get('decisions'));
-       let q = {
-         date: {
-          '$gte': new Date(lastCommitDate)
-         }
-       };
-       var decisionsNotCommited = yield decisionsCollection.find(q, {sort: {date: -1}}, 'iun version');
+       var decisionsNotCommited;
+
+       // Get all decisions that have not been commited yet
+       if (lastCommitDate !== null) {
+          let q = {
+            date: {
+             '$gte': new Date(lastCommitDate)
+            }
+          };
+         decisionsNotCommited = yield decisionsCollection.find(q, {sort: {date: -1}, fields:{'iun': 1, 'version': 1, '_id': '1'}});
+       } else {
+        // No PoB has been done yet. So we should get all decisions.
+        decisionsNotCommited = yield decisionsCollection.find({}, {sort: {date: -1}, fields:{'iun': 1, 'version': 1, '_id': '1'}});
+       }
+
        const expandHomeDir = require('expand-home-dir');
        const decisionsDirectory = expandHomeDir(n3ConfigurationFile['decisionsSaveDir']);
        var array = [];
@@ -64,7 +79,9 @@ class BTCCommiter {
          return {filepath: fullpath, data};
        });
        const filenamesBuffer = yield decisionsNotCommited.map(readAllFiles);
-       return filenamesBuffer;
+       const ObjectID = require('mongodb').ObjectID;
+       decisionsNotCommited = yield decisionsNotCommited.map(decision => new ObjectID(decision._id));
+       return [filenamesBuffer, decisionsNotCommited];
      })
    }
   /**
@@ -131,6 +148,9 @@ class BTCCommiter {
    */
   _constructMerkleTree(decisionsHash) {
     const hashes = decisionsHash.map(decisionHash => decisionHash.hash);
+    if (hashes.length === 0) {
+      throw 'NO_DECISIONS';
+    }
     const merkleTreeArgs = {
       array: hashes,
       hashalgo: config.get('hash_algorithm'),
@@ -142,7 +162,7 @@ class BTCCommiter {
         tree = tr;
       }
       else {
-        assert.fail('Merkle Tree construction error', err);
+        throw new Error('Merkle Tree construction error', err);
       }
     });
     return tree;
@@ -198,8 +218,10 @@ class BTCCommiter {
     publishDecisionsToBTC(dvgWallet, spv) {
       var _btcCommiter = this;
       return co(function*(){
-        const data = yield _btcCommiter._getDecisionsNotCommitedYet();
-        const hashes = yield _btcCommiter._getDecisionsHash(data);
+        const uncommitedData = yield _btcCommiter._getDecisionsNotCommitedYet();
+        const rawData = uncommitedData[0]
+        const uncommitedDecisionObjs = uncommitedData[1]
+        const hashes = yield _btcCommiter._getDecisionsHash(rawData);
         const tree = _btcCommiter._constructMerkleTree(hashes);
         const txId = yield _btcCommiter._broadcastMerkleTreeTransaction(tree.root, dvgWallet, spv);
         let environment = (process.env.NODE_ENV !== undefined) ? process.env.NODE_ENV : 'development';
@@ -209,8 +231,11 @@ class BTCCommiter {
         var wrap = require('co-monk');
         let db = monk(n3ConfigurationFile['mongoURL'] + '/' + n3ConfigurationFile['mongoDBName']);
         var blockchainCommitsCollection = wrap(db.get('blockchainCommits'));
+        var decisionsCollection = wrap(db.get('decisions'));
         // Stored merkle tree and txId to mongo
-        yield blockchainCommitsCollection.insert({txId, tree, date: new Date()});
+        let txIndex = yield blockchainCommitsCollection.count({});
+        yield blockchainCommitsCollection.insert({txId, tree, date: new Date(), txIndex});
+        yield decisionsCollection.update({ _id : { $in: uncommitedDecisionObjs }}, {$set: {txIndex}}, {multi: true});
         return { tree, txId };
       });
     };
