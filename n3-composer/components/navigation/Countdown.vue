@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h3 class="has-text-centered subtitle"><b>Blockchain Status</b>: {{blockchainCommitObj | formatDate}}</h3>
-    <h4 class="has-text-centered subtitle is-6" style="padding-bottom:2em"><b>Τελευταίο Commit στο Blockchain</b>: <a :href="getLastBlockchainCommitLink(blockchainCommitObj)" target="_blank">{{blockchainCommitObj.txId}}</a> (<a href="/api/getLastMerkleTree" target="_blank">Merkle Tree</a>)</h4>
+    <div v-if="blockchainCommitObj">
+      <h3 class="has-text-centered subtitle"><b>Blockchain Status</b>: {{blockchainCommitObj | formatDate}}</h3>
+      <h4 class="has-text-centered subtitle is-6" style="padding-bottom:2em"><b>Τελευταίο Commit στο Blockchain</b>: <a :href="getLastBlockchainCommitLink(blockchainCommitObj)" target="_blank">{{blockchainCommitObj.txId}}</a> (<a href="/api/getLastMerkleTree" target="_blank">Merkle Tree</a>)</h4>
+    </div>
+    <div v-else>
+      <h3 class="has-text-centered subtitle is-4" style="padding-bottom:2em">Δεν έχει αναρτηθεί καμία απόφαση στο <span style="color: #ff9900">Bitcoin Blockchain</span> ακόμα.</h3>
+    </div>
   </div>
 </template>
 
@@ -14,7 +19,7 @@ export default {
   props: ['blockchainCommitObj'],
   methods: {
     getLastBlockchainCommitLink: function (blockchainCommitObj) {
-      return 'https://live.blockcypher.com/btc-testnet/tx/' + blockchainCommitObj.txId
+      return 'https://chain.so/tx/BTCTEST/' + blockchainCommitObj.txId
     }
   },
   filters: {
