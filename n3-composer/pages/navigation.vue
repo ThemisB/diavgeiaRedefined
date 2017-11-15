@@ -31,13 +31,8 @@
   <section class="section is-fullheight">
     <div class="container">
       <countdown v-bind:blockchainCommitObj="blockchainCommitObj"></countdown>
-      <div v-for="decision in decisions">
-        <div class="columns" v-if="decisionsCounter % 3 === 0">
-          <decision v-bind:decision="decision"></decision>
-        </div>
-        <div v-else>
-          <decision></decision>
-        </div>
+      <div class="columns" v-for="i in Math.ceil(decisions.length / 3)">
+        <decision v-for="decision in decisions.slice((i-1) * 3, i * 3)" v-bind:decision="decision" :key="getDecisionsCounter()"></decision>
       </div>
     </div>
   </section>
@@ -59,6 +54,12 @@ export default {
   data: function ()  {
     return {
       decisionsCounter: 0
+    }
+  },
+  methods: {
+    getDecisionsCounter: function () {
+      this.decisionsCounter++
+      return 'decision_' + this.decisionsCounter
     }
   },
   async asyncData({app}) {
