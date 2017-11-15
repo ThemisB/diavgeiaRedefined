@@ -32,9 +32,8 @@ class Helpers {
     .then(()=> {
 
       var address = dvgWallet.getAddress('base58');
-      var xpub = dvgWallet.master.key.toPublic().xpubkey();
-      console.log('Wallet Address', address);
-      console.log('Xpub',xpub,'\n');
+      console.log('Charge your wallet at BTC address: ', address);
+      console.log('-----MASTER PUBLIC KEY ', dvgWallet.account.accountKey.xpubkey(), ' -----\n');
 
       spv.pool.watchAddress(dvgWallet.getAddress());
 
@@ -79,7 +78,7 @@ class Helpers {
     return co( function*() {
       const btcCommiter = new BTCCommiter(decisionsPath);
       const published = yield btcCommiter.publishDecisionsToBTC(dvgWallet, spv);
-      return published;
+      process.exit(1);
     });
   }
 }
