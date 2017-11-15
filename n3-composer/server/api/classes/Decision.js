@@ -30,7 +30,7 @@ class Decision {
   static getDecisions (cb) {
     var getDecisionsMongo = function (db, callback) {
       var collection = db.collection('decisions')
-      collection.find().toArray(function (err, decisions) {
+      collection.find({}, {_id: false}).sort({_id: -1}).toArray(function (err, decisions) {
         assert.equal(err, null)
         callback(decisions)
       })
@@ -84,7 +84,7 @@ class Decision {
   static getDecisionsByTxIndex (index, cb) {
     var getDecisionsMongoByTxIndex = function (db, callback) {
       var collection = db.collection('decisions')
-      collection.find({txIndex: parseInt(index)}, {_id: false}).sort({date: -1}).toArray(function (err, decisions) {
+      collection.find({txIndex: parseInt(index)}, {_id: false}).sort({_id: -1}).toArray(function (err, decisions) {
         assert.equal(err, null)
         callback(decisions)
       })
@@ -523,6 +523,7 @@ class Decision {
     this.decisionString += this._formatTriplet('ont', 'has_private_data', Boolean(this.fields.has_private_data), 'boolean')
     this.decisionString += this._formatTriplet('ont', 'government_institution_name', this.fields.government_institution_name, 'string')
     this.decisionString += this._formatTriplet('ont', 'protocol_number', this.fields.protocol_number, 'string')
+    this._writeGovernmentInstitutionsOptionalInfo()
     if (this.fields.decision_call) {
       this.decisionString += this._formatTriplet('ont', 'decision_call', this.fields.decision_call, 'string')
     }
