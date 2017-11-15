@@ -140,7 +140,8 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
         validTransactions[txIndex] = 1
       }
       for (let i = 0; i < blockchainResults.length; i++) {
-        verifyDiavgeia(blockchainResults[i], commits[i].txId, commits[i].txIndex, gzipedDecisions[i])
+        let txIndex = commits[i].txIndex
+        verifyDiavgeia(blockchainResults[i], commits[i].txId, txIndex, gzipedDecisions[txIndex])
       }
       // If everything is ok, validTransactions should be an array filled with 1
       let allTxChecked = validTransactions.every(tx => tx === 1)
