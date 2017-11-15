@@ -89,3 +89,12 @@ table th, table td {
 .recipientsLabel {
   font-size: 0.9em;
 }
+
+.btcColor {
+  color: #ff9900 !important;
+  font-size: 1.2em;
+}
+
+.noDecoration {
+  border-bottom-color: transparent !important;
+}
