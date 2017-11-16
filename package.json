@@ -6,8 +6,15 @@
   "directories": {
     "doc": "docs"
   },
+  "per-env": {
+
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "per-env",
+    "build:development": "node deploy.js --dev &",
+    "prestart": "mongod --fork --logpath /dev/null",
+    "start:development": "npm run build:development && cd n3-composer && npm run dev",
+    "stop": "mongo admin --eval 'db.shutdownServer()' > /dev/null"
   },
   "repository": {
     "type": "git",
@@ -23,5 +30,8 @@
     "config": "^1.27.0",
     "expand-home-dir": "0.0.3",
     "npm-run": "^4.1.2"
+  },
+  "dependencies": {
+    "node-schedule": "^1.2.5"
   }
 }
