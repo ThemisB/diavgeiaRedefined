@@ -66,15 +66,13 @@ router.get('/downloadDecision', function (req, res) {
 })
 
 router.post('/getLastBlockchainCommit', function (req, res) {
-  let blockchainPoBMinutes = config.get('blockchainPoBMinutes')
   Decision.getLastBlockchainCommit((commit) => {
     res.setHeader('Content-Type', 'application/json')
     if (commit.length) {
       let commitObj = {
         lastCommit: commit[0].date,
         txId: commit[0].txId,
-        tree: commit[0].tree,
-        blockchainPoBMinutes
+        tree: commit[0].tree
       }
       res.send(JSON.stringify(commitObj))
     } else {
