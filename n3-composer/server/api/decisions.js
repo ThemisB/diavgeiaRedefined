@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import bodyParser from 'body-parser'
-import Decision from './classes/Decision.js'
+
 import sanitize from 'sanitize-filename'
 import mongosanitize from 'mongo-sanitize'
 
@@ -10,6 +10,8 @@ const config = require('config')
 const fs = require('fs')
 const expandHomeDir = require('expand-home-dir')
 const storageDir = expandHomeDir(config.get('decisionsSaveDir'))
+const co = require('co')
+const Decision = require('./classes/Decision.js')
 
 router.use(bodyParser.urlencoded({ extended: true }))
 
@@ -19,18 +21,51 @@ router.post('/createDecision', function (req, res) {
   const crypto = require('crypto')
   let iun = 'ΑΔΑ-' + crypto.randomBytes(8).toString('hex')
   let version = crypto.randomBytes(15).toString('hex')
-  let status = new Decision(req.body, iun, version, ['6105'], '93302').generateN3()
-  if (status) {
-    res.redirect('/?success')
-  } else {
+  co(function * () {
+    return new Decision(req.body, iun, version, ['6105'], '93302').generateN3()
+  }).then((status) => {
+    if (status) {
+      res.redirect('/?success')
+    } else {
+      res.redirect('/?error')
+    }
+  }).catch((err) => {
     res.redirect('/?error')
-  }
+    throw err
+  })
+})
+
+router.post('/createDecisionBenchmark', function (req, res) {
+  // TODO These 4 fields (IUN, Version, unitIds, organizationId) should be set
+  // by the current implementation of Diavgeia
+  const crypto = require('crypto')
+  let iun = 'ΑΔΑ-' + crypto.randomBytes(8).toString('hex')
+  let version = crypto.randomBytes(15).toString('hex')
+  co(function * () {
+    return new Decision(req.body, iun, version, ['6105'], '93302', true).generateN3()
+  }).then((status) => {
+    if (status) {
+      res.setHeader('Content-Type', 'application/json')
+      res.send(JSON.stringify('OK'))
+    } else {
+      res.setHeader('Content-Type', 'application/json')
+      res.send(JSON.stringify('FAIL'))
+    }
+  }).catch((err) => {
+    res.setHeader('Content-Type', 'application/json')
+    res.send(JSON.stringify('FAIL'))
+    throw err
+  })
 })
 
 router.post('/getdecisions', function (req, res) {
-  Decision.getDecisions((decisions) => {
+  co(function * () {
+    return Decision.getDecisions()
+  }).then((decisions) => {
     res.setHeader('Content-Type', 'application/json')
     res.send(JSON.stringify(decisions))
+  }).catch((err) => {
+    throw err
   })
 })
 
@@ -39,14 +74,21 @@ router.post('/getDecisionsByTxIndex', function (req, res) {
     res.send(404)
   } else {
     let txIndex = mongosanitize(req.query.txIndex)
-    var Promise = require('bluebird')
-    Decision.getDecisionsByTxIndex(txIndex, (decisions) => {
+    co(function * () {
+      return Decision.getDecisionsByTxIndex(txIndex)
+    }).then((decisions) => {
+      console.log(decisions)
+      var Promise = require('bluebird')
       Promise.map(decisions, (decision) => {
         let fullPathDecision = storageDir + '/' + decision.iun + '_' + decision.version + '.n3.gz'
         return fs.readFileAsync(fullPathDecision)
       }).then(function (decisions) {
         res.send(JSON.stringify(decisions))
+      }).catch((err) => {
+        throw err
       })
+    }).catch((err) => {
+      throw err
     })
   }
 })
@@ -66,37 +108,49 @@ router.get('/downloadDecision', function (req, res) {
 })
 
 router.post('/getLastBlockchainCommit', function (req, res) {
-  Decision.getLastBlockchainCommit((commit) => {
+  co(function * () {
+    return Decision.getLastBlockchainCommit()
+  }).then((commit) => {
     res.setHeader('Content-Type', 'application/json')
-    if (commit.length) {
+    if (commit) {
       let commitObj = {
-        lastCommit: commit[0].date,
-        txId: commit[0].txId,
-        tree: commit[0].tree
+        lastCommit: commit.date,
+        txId: commit.txId,
+        tree: commit.tree
       }
       res.send(JSON.stringify(commitObj))
     } else {
       res.send(JSON.stringify(undefined))
     }
+  }).catch((err) => {
+    throw err
   })
 })
 
 router.get('/getLastMerkleTree', function (req, res) {
-  Decision.getLastBlockchainCommit((commit) => {
-    if (commit.length) {
+  co(function * () {
+    return Decision.getLastBlockchainCommit()
+  }).then((commit) => {
+    if (commit) {
       res.setHeader('Content-Type', 'application/json')
-      res.send({tree: commit[0].tree})
+      res.send({tree: commit.tree})
     } else {
       res.setHeader('Content-Type', 'application/json')
       res.send(JSON.stringify(null))
     }
+  }).catch((err) => {
+    throw err
   })
 })
 
 router.post('/getAllBlockchainCommits', function (req, res) {
-  Decision.getAllBlockchainCommits((commits) => {
+  co(function * () {
+    return Decision.getAllBlockchainCommits()
+  }).then((commits) => {
     res.setHeader('Content-Type', 'application/json')
     res.send({commits})
+  }).catch((err) => {
+    throw err
   })
 })
 export default router
