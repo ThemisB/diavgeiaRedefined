@@ -1,7 +1,7 @@
 {
   "name": "diavgeiaredefined",
   "version": "1.0.0",
-  "description": "gsoc17-diavgeia ===============",
+  "description": "Runs all main components of DiavgeiaRedefined (N3-composer, Fuseki Server, Visualizer).",
   "main": "deploy.js",
   "directories": {
     "doc": "docs"
@@ -12,16 +12,16 @@
   "scripts": {
     "start": "per-env",
     "build:development": "node deploy.js --dev &",
-    "prestart": "mongod --fork --logpath /dev/null",
+    "prestart": "sh ./prestart.sh",
     "start:development": "npm run build:development && cd n3-composer && npm run dev",
-    "stop": "mongo admin --eval 'db.shutdownServer()' > /dev/null"
+    "stop": "sh ./stop.sh"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/themisb/diavgeiaRedefined.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Themis Beris",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/themisb/diavgeiaRedefined/issues"
   },
