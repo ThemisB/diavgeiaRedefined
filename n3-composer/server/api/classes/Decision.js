@@ -1,23 +1,22 @@
-const fs = require('fs-extra')
+const fs = require('co-fs')
 const config = require('config')
 const path = require('path')
-const {spawnSync} = require('child_process')
-const MongoClient = require('mongodb').MongoClient
-const assert = require('assert')
-const mongoPort = config.get('mongoPort')
+const spawn = require('co-child-process')
 const mongoURL = config.get('mongoURL')
 const mongoDBName = config.get('mongoDBName')
-
+const stdfs = require('fs')
 const expandHomeDir = require('expand-home-dir')
 
-const dbURL = 'mongodb://' + mongoURL + ':' + mongoPort + '/' + mongoDBName
+const db = require('monk')(mongoURL + '/' + mongoDBName)
+const co = require('co')
+const wrap = require('co-monk')
 
 const ONT = '<http://diavgeia.gov.gr/ontology/>'
 const ELI = '<http://data.europa.eu/eli/ontology#>'
 const LEG = '<http://legislation.di.uoa.gr/eli/>'
 
 class Decision {
-  constructor (fields, iun, version, unitIds, organizationId) {
+  constructor (fields, iun, version, unitIds, organizationId, benchmark = false) {
     this.fields = fields
     this.fields.iun = iun
     this.fields.version = version
@@ -25,77 +24,38 @@ class Decision {
     this.fields.organizationId = organizationId
     this.decisionString = ''
     this.verifierCounter = 1
+    this.benchmark = benchmark
   }
 
-  static getDecisions (cb) {
-    var getDecisionsMongo = function (db, callback) {
-      var collection = db.collection('decisions')
-      collection.find({}, {_id: false}).sort({_id: -1}).toArray(function (err, decisions) {
-        assert.equal(err, null)
-        callback(decisions)
-      })
-    }
-    // Use connect method to connect to the server
-    MongoClient.connect(dbURL, function (err, db) {
-      assert.equal(null, err)
-      getDecisionsMongo(db, function (decisions) {
-        db.close()
-        cb(decisions)
-      })
+  static getDecisions () {
+    return co(function * () {
+      var collection = wrap(db.collection('decisions'))
+      var decisions = yield collection.find({}, { sort: {_id: -1}, fields: { '_id': 0 } })
+      return decisions
     })
   }
 
-  static getLastBlockchainCommit (cb) {
-    var getLastBlockchainCommitMongo = function (db, callback) {
-      var collection = db.collection('blockchainCommits')
-      // get latest blockchain transaction
-      collection.find().sort({_id: -1}).limit(1).toArray(function (err, commit) {
-        assert.equal(err, null)
-        callback(commit)
-      })
-    }
-    // Use connect method to connect to the server
-    MongoClient.connect(dbURL, function (err, db) {
-      assert.equal(null, err)
-      getLastBlockchainCommitMongo(db, function (commit) {
-        db.close()
-        cb(commit)
-      })
+  static getLastBlockchainCommit () {
+    return co(function * () {
+      var collection = wrap(db.collection('blockchainCommits'))
+      var commit = yield collection.findOne({}, {sort: {_id: -1}, limit: 1})
+      return commit
     })
   }
 
-  static getAllBlockchainCommits (cb) {
-    var getAllBlockchainCommitsMongo = function (db, callback) {
-      var collection = db.collection('blockchainCommits')
-      collection.find().sort({_id: -1}).toArray(function (err, commit) {
-        assert.equal(err, null)
-        callback(commit)
-      })
-    }
-    MongoClient.connect(dbURL, function (err, db) {
-      assert.equal(null, err)
-      getAllBlockchainCommitsMongo(db, function (commit) {
-        db.close()
-        cb(commit)
-      })
+  static getAllBlockchainCommits () {
+    return co(function * () {
+      var collection = wrap(db.collection('blockchainCommits'))
+      var commits = yield collection.find({}, {sort: {_id: -1}})
+      return commits
     })
   }
 
-  static getDecisionsByTxIndex (index, cb) {
-    var getDecisionsMongoByTxIndex = function (db, callback) {
-      var collection = db.collection('decisions')
-      collection.find({txIndex: parseInt(index)}, {_id: false}).sort({_id: -1}).toArray(function (err, decisions) {
-        assert.equal(err, null)
-        callback(decisions)
-      })
-    }
-    // Use connect method to connect to the server
-    MongoClient.connect(dbURL, function (err, db) {
-      assert.equal(null, err)
-      getDecisionsMongoByTxIndex(db, function (decisions) {
-        db.close()
-        cb(decisions)
-      })
+  static getDecisionsByTxIndex (index) {
+    return co(function * () {
+      var collection = wrap(db.collection('decisions'))
+      var decisions = yield collection.find({txIndex: parseInt(index)}, {sort: {_id: -1}})
+      return decisions
     })
   }
 
@@ -143,7 +103,7 @@ class Decision {
       this.decisionString += this._formatTriplet('ont', 'government_institution_phone', this.fields.government_institution_phone, 'string', false)
     }
     if (this.fields.government_institution_fax) {
-      this.decisionString += this._formatTriplet('ont', 'fax', this.fields.government_institution_fax, 'string', false)
+      this.decisionString += this._formatTriplet('ont', 'government_institution_fax', this.fields.government_institution_fax, 'string', false)
     }
     if (this.fields.government_institution_website) {
       this.decisionString += this._formatTriplet('ont', 'government_institution_website', this.fields.government_institution_website, 'string', false)
@@ -561,60 +521,74 @@ class Decision {
     }
 
     // Recipients
-    this.fields.internal_distr.forEach((v, i) => {
-      if (v.name) {
-        this.decisionString += this._formatTriplet('ont', 'internal_distribution', v.name, 'string')
-      }
-    })
-
-    this.fields.recipient_for_share.forEach((v, i) => {
-      if (v.name) {
-        this.decisionString += this._formatTriplet('ont', 'recipient_for_share', v.name, 'string')
-      }
-    })
-
-    this.fields.recipient.forEach((v, i) => {
-      if (v.name) {
-        this.decisionString += this._formatTriplet('ont', 'recipient', v.name, 'string')
-      }
-    })
-
-    // Signers
-    this.fields.signer.forEach((v, i) => {
-      if (v.text) {
-        this.decisionString += this._formatTriplet('ont', 'signed_by', 'Signer/' + (i + 1), 'entity')
-      }
-    })
-
-    // Present
-    this.fields.present.forEach((v, i) => {
-      if (v.text) {
-        this.decisionString += this._formatTriplet('ont', 'has_present', 'Present/' + (i + 1), 'entity')
-      }
-    })
-
-    // Verification
-    this.fields.verification.forEach((v, i) => {
-      if (!v.has_text || !v.index) {
-        return
-      }
-      let signerIndexes = []
-      // Find Signer Indexes
-      Object.keys(v).map(key => {
-        if (!isNaN(parseInt(key, 10))) {
-          signerIndexes.push(key)
+    if (this.fields.internal_distr) {
+      this.fields.internal_distr.forEach((v, i) => {
+        if (v.name) {
+          this.decisionString += this._formatTriplet('ont', 'internal_distribution', v.name, 'string')
         }
       })
-      for (let i = 0; i < signerIndexes.length; i++) {
-        let signerIndex = signerIndexes[i]
-        if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
-          this.decisionString += this._formatTriplet('ont', 'has_verified', 'Verification/' + v.index, 'entity')
-          break
-        }
-      }
-    })
+    }
 
-    this._writeSpecialProperties()
+    if (this.fields.recipient_for_share) {
+      this.fields.recipient_for_share.forEach((v, i) => {
+        if (v.name) {
+          this.decisionString += this._formatTriplet('ont', 'recipient_for_share', v.name, 'string')
+        }
+      })
+    }
+
+    if (this.fields.recipient) {
+      this.fields.recipient.forEach((v, i) => {
+        if (v.name) {
+          this.decisionString += this._formatTriplet('ont', 'recipient', v.name, 'string')
+        }
+      })
+    }
+
+    // Signers
+    if (this.fields.signer) {
+      this.fields.signer.forEach((v, i) => {
+        if (v.text) {
+          this.decisionString += this._formatTriplet('ont', 'signed_by', 'Signer/' + (i + 1), 'entity')
+        }
+      })
+    }
+
+    // Present
+    if (this.fields.present) {
+      this.fields.present.forEach((v, i) => {
+        if (v.text) {
+          this.decisionString += this._formatTriplet('ont', 'has_present', 'Present/' + (i + 1), 'entity')
+        }
+      })
+    }
+
+    // Verification
+    if (this.fields.verification) {
+      this.fields.verification.forEach((v, i) => {
+        if (!v.has_text || !v.index) {
+          return
+        }
+        let signerIndexes = []
+        // Find Signer Indexes
+        Object.keys(v).map(key => {
+          if (!isNaN(parseInt(key, 10))) {
+            signerIndexes.push(key)
+          }
+        })
+        for (let i = 0; i < signerIndexes.length; i++) {
+          let signerIndex = signerIndexes[i]
+          if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
+            this.decisionString += this._formatTriplet('ont', 'has_verified', 'Verification/' + v.index, 'entity')
+            break
+          }
+        }
+      })
+    }
+
+    if (!this.benchmark) {
+      this._writeSpecialProperties()
+    }
 
     // Dates
     var date = new Date()
@@ -692,51 +666,57 @@ class Decision {
 
   _writeRestEntities () {
     // Signers
-    this.fields.signer.forEach((signer) => {
-      if (signer.name) {
-        this.decisionString += '<Signer/' + signer.index + '> a ont:Signer;\n'
-        this.decisionString += this._formatTriplet('ont', 'signer_name', signer.name, 'string')
-        this.decisionString += this._formatTriplet('ont', 'signer_job', signer.job, 'string', true, true)
-      }
-    })
+    if (this.fields.signer) {
+      this.fields.signer.forEach((signer) => {
+        if (signer.name) {
+          this.decisionString += '<Signer/' + signer.index + '> a ont:Signer;\n'
+          this.decisionString += this._formatTriplet('ont', 'signer_name', signer.name, 'string')
+          this.decisionString += this._formatTriplet('ont', 'signer_job', signer.job, 'string', true, true)
+        }
+      })
+    }
     // Present
-    this.fields.present.forEach((present) => {
-      if (present.name) {
-        this.decisionString += '<Present/' + present.index + '> a ont:Present;\n'
-        this.decisionString += this._formatTriplet('ont', 'present_name', present.name, 'string')
-        this.decisionString += this._formatTriplet('ont', 'present_title', present.role, 'string', true, true)
-      }
-    })
+    if (this.fields.present) {
+      this.fields.present.forEach((present) => {
+        if (present.name) {
+          this.decisionString += '<Present/' + present.index + '> a ont:Present;\n'
+          this.decisionString += this._formatTriplet('ont', 'present_name', present.name, 'string')
+          this.decisionString += this._formatTriplet('ont', 'present_title', present.role, 'string', true, true)
+        }
+      })
+    }
     // Verifier
-    this.fields.verification.forEach((v, i) => {
-      var perSignerIndex = {}
-      if (!v.has_text || !v.index) {
-        return
-      }
-      let signerIndexes = []
-      // Find Signer Indexes
-      Object.keys(v).map(key => {
-        if (!isNaN(parseInt(key, 10))) {
-          signerIndexes.push(key)
+    if (this.fields.verification) {
+      this.fields.verification.forEach((v, i) => {
+        var perSignerIndex = {}
+        if (!v.has_text || !v.index) {
+          return
         }
+        let signerIndexes = []
+        // Find Signer Indexes
+        Object.keys(v).map(key => {
+          if (!isNaN(parseInt(key, 10))) {
+            signerIndexes.push(key)
+          }
+        })
+        this.decisionString += '<Verification/' + (parseInt(i) + 1) + '> a ont:Verification;\n'
+        signerIndexes.map(signerIndex => {
+          if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
+            this.decisionString += this._formatTriplet('ont', 'verified_by', 'Verifier/' + this.verifierCounter, 'entity')
+            perSignerIndex[signerIndex] = this.verifierCounter
+            this.verifierCounter ++
+          }
+        })
+        this.decisionString += this._formatTriplet('ont', 'has_text', v.has_text, 'string', true, true)
+        signerIndexes.map((signerIndex, _index) => {
+          if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
+            this.decisionString += '<Verifier/' + perSignerIndex[signerIndex] + '> a ont:Verifier;\n'
+            this.decisionString += this._formatTriplet('ont', 'verifier_job', v[signerIndex].signer_job, 'string')
+            this.decisionString += this._formatTriplet('ont', 'verifier_name', v[signerIndex].signer_name, 'string', true, true)
+          }
+        })
       })
-      this.decisionString += '<Verification/' + (parseInt(i) + 1) + '> a ont:Verification;\n'
-      signerIndexes.map(signerIndex => {
-        if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
-          this.decisionString += this._formatTriplet('ont', 'verified_by', 'Verifier/' + this.verifierCounter, 'entity')
-          perSignerIndex[signerIndex] = this.verifierCounter
-          this.verifierCounter ++
-        }
-      })
-      this.decisionString += this._formatTriplet('ont', 'has_text', v.has_text, 'string', true, true)
-      signerIndexes.map((signerIndex, _index) => {
-        if (v[signerIndex] && v[signerIndex].signer_name && v[signerIndex].signer_job) {
-          this.decisionString += '<Verifier/' + perSignerIndex[signerIndex] + '> a ont:Verifier;\n'
-          this.decisionString += this._formatTriplet('ont', 'verifier_job', v[signerIndex].signer_job, 'string')
-          this.decisionString += this._formatTriplet('ont', 'verifier_name', v[signerIndex].signer_name, 'string', true, true)
-        }
-      })
-    })
+    }
     // Expenses
     switch (this.fields.decision_type) {
       case 'Award':
@@ -1033,63 +1013,48 @@ class Decision {
 
   _getN3DecisionsLocation () {
     let storageDir = expandHomeDir(config.get('decisionsSaveDir'))
-    if (!fs.existsSync(storageDir)) {
-      fs.mkdirSync(storageDir)
-    }
-    return storageDir
+    return co(function * () {
+      let exists = fs.exists(storageDir)
+      if (!exists) {
+        yield fs.mkdir(storageDir)
+      }
+      return storageDir
+    })
   }
 
   generateN3 () {
     this._writePrefixes()
     this._writeGeneralInfo()
     this._writeDecisionBody()
-    this._writeRestEntities()
+    if (!this.benchmark) {
+      this._writeRestEntities()
+    }
 
     var _this = this
-
-    var insertDecisionToMongo = function (db, callback) {
+    return co(function * () {
       var collection = db.collection('decisions')
-      // Insert some documents
-      collection.insert([
-        {
-          iun: _this.fields.iun,
-          version: _this.fields.version,
-          title: _this.fields.title,
-          date: new Date()
-        }
-      ], function (err, result) {
-        assert.equal(err, null)
-        callback(result)
-      })
-    }
-    // Use connect method to connect to the server
-    MongoClient.connect(dbURL, function (err, db) {
-      assert.equal(null, err)
-      insertDecisionToMongo(db, function () {
-        db.close()
-      })
+      // we do not use co-monk here to achieve higher throughput
+      collection.insert({iun: _this.fields.iun, version: _this.fields.version, title: _this.fields.title, date: new Date()})
+      const storageDirectory = yield _this._getN3DecisionsLocation()
+      let unzipedFilepath = storageDirectory + '/' + _this.fields.iun + '_' + _this.fields.version + '.n3'
+      let gzipedFilepath = unzipedFilepath + '.gz'
+      const outStream = stdfs.createWriteStream(gzipedFilepath)
+      yield fs.writeFile(unzipedFilepath, _this.decisionString)
+      const inp = stdfs.createReadStream(unzipedFilepath)
+      const zlib = require('zlib')
+      const gzip = zlib.createGzip()
+      inp.pipe(gzip).pipe(outStream)
+      const resolvedPath = path.resolve(config.get('SOH_post_executable'))
+      let output = yield spawn(resolvedPath, [config.get('sparqlEndpointUrl') + '/' + config.get('dataset'), 'default', unzipedFilepath])
+      return {output, outStream, unzipedFilepath}
+    }).then((retObj) => {
+      fs.unlink(retObj.unzipedFilepath)
+      if (!retObj.output) {
+        return true
+      } else {
+        return retObj.output
+      }
     })
-
-    const storageDirectory = this._getN3DecisionsLocation()
-    fs.ensureDirSync(storageDirectory)
-    let unzipedFilepath = storageDirectory + '/' + this.fields.iun + '_' + this.fields.version + '.n3'
-    let gzipedFilepath = unzipedFilepath + '.gz'
-    const out = fs.createWriteStream(gzipedFilepath)
-    fs.outputFileSync(unzipedFilepath, this.decisionString)
-    const inp = fs.createReadStream(unzipedFilepath)
-    const zlib = require('zlib')
-    const gzip = zlib.createGzip()
-    inp.pipe(gzip).pipe(out)
-
-    const resolvedPath = path.resolve(config.get('SOH_put_executable'))
-    let SOH = spawnSync(resolvedPath, [config.get('sparqlEndpointUrl') + '/' + config.get('dataset'), 'default', unzipedFilepath])
-    fs.unlink(unzipedFilepath)
-    if (!SOH.stderr.toString()) {
-      return true
-    } else {
-      console.log(SOH.stderr.toString())
-      return false
-    }
   }
 }
 
