@@ -12,15 +12,4 @@ const fs = require('fs')
 const expandHomeDir = require('expand-home-dir')
 const npmRun = require('npm-run')
 
-// FUSEKI CONFIGURATIONS
-// Open Fuseki server
-let sparqlStoreDir = expandHomeDir(config.get('sparqlStoreDir'))
-if (!fs.existsSync(sparqlStoreDir)) {
-  fs.mkdirSync(sparqlStoreDir)
-}
-process.env.FUSEKI_HOME="sparql_endpoint/fuseki"
-process.env.FUSEKI_BASE=expandHomeDir("~/.fuseki_run")
-spawn('sparql_endpoint/fuseki/fuseki-server', ['--update', '--loc', sparqlStoreDir, '/' + config.get('dataset')])
-
-// Visualizer
 fork('index.js', {cwd: 'visualizer', stdio: 'ignore'})
