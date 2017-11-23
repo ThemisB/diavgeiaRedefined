@@ -77,13 +77,13 @@ router.post('/getDecisionsByTxIndex', function (req, res) {
     co(function * () {
       return Decision.getDecisionsByTxIndex(txIndex)
     }).then((decisions) => {
-      console.log(decisions)
       var Promise = require('bluebird')
       Promise.map(decisions, (decision) => {
         let fullPathDecision = storageDir + '/' + decision.iun + '_' + decision.version + '.n3.gz'
         return fs.readFileAsync(fullPathDecision)
       }).then(function (decisions) {
-        res.send(JSON.stringify(decisions))
+        const JSONB = require('json-buffer')
+        res.send(JSONB.stringify(decisions))
       }).catch((err) => {
         throw err
       })
