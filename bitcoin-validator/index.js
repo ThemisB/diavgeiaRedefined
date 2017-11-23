@@ -27,11 +27,11 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
     return new Promise((resolve, reject) => {
       request.post(diavgeiaURI + '/api/getDecisionsByTxIndex?txIndex=' + txIndex, function (err, httpResponse, txByIndexData) {
         if (err) return reject(err)
-        resolve(JSON.parse(txByIndexData))
+        const JSONB = require('json-buffer')
+        resolve(JSONB.parse(txByIndexData))
       })
     })
   }
-
   async.mapLimit(txIndexes, 5, async function (txIndex) {
     let gzipedDecision = await requestDecisionsByTxIndex(txIndex)
     return gzipedDecision
@@ -113,7 +113,7 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
             var crypto = require('crypto')
             let hashes = decisionsPerTx.map(decision => {
               let hash = crypto.createHash(config.get('hash_algorithm'))
-              hash.update(Buffer.from(decision.data))
+              hash.update(Buffer.from(decision))
               return hash.digest('hex')
             })
             const merkleTreeArgs = {
@@ -139,6 +139,7 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
         })
         validTransactions[txIndex] = 1
       }
+      console.time('verificationTime')
       for (let i = 0; i < blockchainResults.length; i++) {
         let txIndex = commits[i].txIndex
         verifyDiavgeia(blockchainResults[i], commits[i].txId, txIndex, gzipedDecisions[txIndex])
@@ -149,6 +150,7 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
         throw new Error(`Diavgeia and blockchain are inconsistent!
           Reason: Not all txs have been checked`)
       }
+      console.timeEnd('verificationTime')
     })
   })
 })
