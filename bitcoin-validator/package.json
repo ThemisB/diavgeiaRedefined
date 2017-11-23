@@ -21,6 +21,7 @@
     "bluebird": "^3.5.1",
     "co": "^4.6.0",
     "config": "^1.28.0",
+    "json-buffer": "^3.0.0",
     "merkle-tree-gen": "^1.1.0",
     "request": "^2.83.0"
   },
