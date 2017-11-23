@@ -6,9 +6,7 @@
   "directories": {
     "doc": "docs"
   },
-  "per-env": {
-
-  },
+  "per-env": {},
   "scripts": {
     "start": "per-env",
     "build:development": "node deploy.js --dev &",
