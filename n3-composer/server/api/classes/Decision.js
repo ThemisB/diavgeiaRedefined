@@ -324,7 +324,10 @@ class Decision {
         break
       case 'SpatialPlanningDecisions':
         if (this.fields.municipality) {
-          this.decisionString += this._formatTriplet('ont', 'municipality', this.fields.municipality, 'string')
+          let kallikratisLinking = require('../../assets/kallikratis.json')
+          if (this.fields.municipality in kallikratisLinking) {
+            this.decisionString += this._formatTriplet('ont', 'has_municipality', kallikratisLinking[this.fields.municipality], 'entity')
+          }
         }
         if (this.fields.spatial_planning_decision_type) {
           this.decisionString += this._formatTriplet('ont', 'spatial_planning_decision_type', this.fields.spatial_planning_decision_type, 'string')
