@@ -305,7 +305,7 @@ class PropertiesFormatter {
         // ServiceChange
         this._findPredicateValue(subject, 'ont', 'service_change_decision_type', predicatePair)
         // SpatialPlanningDecisions
-        this._findPredicateValue(subject, 'ont', 'municipality', predicatePair)
+        this._findPredicateValue(subject, 'ont', 'has_municipality', predicatePair)
         this._findPredicateValue(subject, 'ont', 'spatial_planning_decision_type', predicatePair)
         // StartProductionalFunctionOfInvestment, SuccessfulAppointedRunnerUpList
         this._findPredicateValue(subject, 'ont', 'has_related_occupation_invitation', predicatePair)
@@ -822,6 +822,9 @@ class PropertiesFormatter {
           this.properties['decision_type_english'] = value.replace(ONT, '')
         }
         return decisionType
+      } else if (predicateSearch === 'has_municipality') {
+        let kallikratis = require('./assets/kallikratis.json')
+        this.properties['municipality'] = kallikratis[value]
       } else {
         let literalValue = N3Util.getLiteralValue(value)
         this.properties[predicateSearch] = literalValue
