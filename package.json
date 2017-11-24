@@ -30,6 +30,7 @@
     "npm-run": "^4.1.2"
   },
   "dependencies": {
-    "node-schedule": "^1.2.5"
+    "node-schedule": "^1.2.5",
+    "per-env": "^1.0.2"
   }
 }
