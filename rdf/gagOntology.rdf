@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY strdf "http://strdf.di.uoa.gr/ontology#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ontology "http://geo.linkedopendata.gr/gag/ontology/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/owl/owlapi/turtle#"
+     xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:strdf="http://strdf.di.uoa.gr/ontology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ontology="http://geo.linkedopendata.gr/gag/ontology/">
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://strdf.di.uoa.gr/ontology#WKT -->
+
+    <rdfs:Datatype rdf:about="&strdf;WKT"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_έδρα -->
+
+    <owl:ObjectProperty rdf:about="&ontology;έχει_έδρα">
+        <rdfs:domain rdf:resource="&ontology;Δήμος"/>
+        <rdfs:range rdf:resource="&ontology;Δημοτική_Κοινότητα"/>
+        <rdfs:range rdf:resource="&ontology;Τοπική_Κοινότητα"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/ανήκει_σε -->
+
+    <owl:ObjectProperty rdf:about="&ontology;ανήκει_σε">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+        <rdfs:domain rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_γεωμετρία -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;έχει_γεωμετρία">
+        <rdfs:domain rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="&strdf;WKT"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_επίσημο_όνομα -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;έχει_επίσημο_όνομα">
+        <rdfs:domain rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_κωδικό -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;έχει_κωδικό">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_πληθυσμό -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;έχει_πληθυσμό">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Αποκεντρωμένη_Διοίκηση -->
+
+    <owl:Class rdf:about="&ontology;Αποκεντρωμένη_Διοίκηση">
+        <rdfs:subClassOf rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Δήμος -->
+
+    <owl:Class rdf:about="&ontology;Δήμος">
+        <rdfs:subClassOf rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Ενότητα -->
+
+    <owl:Class rdf:about="&ontology;Δημοτική_Ενότητα">
+        <rdfs:subClassOf rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Κοινότητα -->
+
+    <owl:Class rdf:about="&ontology;Δημοτική_Κοινότητα">
+        <rdfs:subClassOf rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα -->
+
+    <owl:Class rdf:about="&ontology;Διοικητική_Μονάδα"/>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Περιφέρεια -->
+
+    <owl:Class rdf:about="&ontology;Περιφέρεια">
+        <rdfs:subClassOf rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Περιφερειακή_Ενότητα -->
+
+    <owl:Class rdf:about="&ontology;Περιφερειακή_Ενότητα">
+        <rdfs:subClassOf rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Τοπική_Κοινότητα -->
+
+    <owl:Class rdf:about="&ontology;Τοπική_Κοινότητα">
+        <rdfs:subClassOf rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Χώρα -->
+
+    <owl:Class rdf:about="&ontology;Χώρα">
+        <rdfs:subClassOf rdf:resource="&ontology;Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ontology;Αποκεντρωμένη_Διοίκηση"/>
+            <rdf:Description rdf:about="&ontology;Δήμος"/>
+            <rdf:Description rdf:about="&ontology;Δημοτική_Ενότητα"/>
+            <rdf:Description rdf:about="&ontology;Δημοτική_Κοινότητα"/>
+            <rdf:Description rdf:about="&ontology;Περιφέρεια"/>
+            <rdf:Description rdf:about="&ontology;Περιφερειακή_Ενότητα"/>
+            <rdf:Description rdf:about="&ontology;Τοπική_Κοινότητα"/>
+            <rdf:Description rdf:about="&ontology;Χώρα"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
