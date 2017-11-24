@@ -13,6 +13,7 @@
      xmlns:ontology="http://data.europa.eu/eli/ontology#">
     <owl:Ontology rdf:about="http://diavgeia.gov.gr/ontology/">
         <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle"/>
         <terms:contributor>Themis Beris</terms:contributor>
         <terms:creator>Themis Beris</terms:creator>
         <vann:preferredNamespacePrefix>dvg</vann:preferredNamespacePrefix>
@@ -146,6 +147,15 @@
         <rdfs:comment>:has_expense_with_kae links one of (:CommisionWarrant, :Undertaking) with a :ExpenseWithKae.
 
 Το :has_expense_with_kae, συνδέει ένα από τα (:CommisionWarrant, :Undertaking) με ένα :ExpenseWithKae.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://diavgeia.gov.gr/ontology/has_municipality -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_municipality">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Δήμος"/>
     </owl:ObjectProperty>
     
 
@@ -1364,16 +1374,6 @@
         <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/PaymentFinalisation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Σύντομο κείμενο που εξηγεί τον λόγω παράληψης πολλαπλών ΑΦΜ.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/municipality -->
-
-    <owl:DatatypeProperty rdf:about="http://diavgeia.gov.gr/ontology/municipality">
-        <rdfs:domain rdf:resource="http://diavgeia.gov.gr/ontology/SpatialPlanningDecisions"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Ο δήμος που αφορά η πράξη.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -3113,6 +3113,12 @@ Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRede
 For more work assignement, and supply services studies that are uploaded on Diavgeia:
 https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%91%CE%9D%CE%91%CE%98%CE%95%CE%A3%CE%97%20%CE%95%CE%A1%CE%93%CE%A9%CE%9D%20%2F%20%CE%A0%CE%A1%CE%9F%CE%9C%CE%97%CE%98%CE%95%CE%99%CE%A9%CE%9D%20%2F%20%CE%A5%CE%A0%CE%97%CE%A1%CE%95%CE%A3%CE%99%CE%A9%CE%9D%20%2F%20%CE%9C%CE%95%CE%9B%CE%95%CE%A4%CE%A9%CE%9D%22&amp;page=0</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Δήμος -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Δήμος"/>
 </rdf:RDF>
 
 
