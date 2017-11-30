@@ -1048,10 +1048,18 @@ class Decision {
       const gzip = zlib.createGzip()
       inp.pipe(gzip).pipe(outStream)
       const resolvedPath = path.resolve(config.get('SOH_post_executable'))
-      let output = yield spawn(resolvedPath, [config.get('sparqlEndpointUrl') + '/' + config.get('dataset'), 'default', unzipedFilepath])
+      var output
+      if (!_this.benchmark) {
+        // Blockchain benchmark is unrelated to rdf store insertion, so ignore it
+        output = yield spawn(resolvedPath, [config.get('sparqlEndpointUrl') + '/' + config.get('dataset'), 'default', unzipedFilepath])
+      } else {
+        output = undefined
+      }
       return {output, outStream, unzipedFilepath}
     }).then((retObj) => {
-      fs.unlink(retObj.unzipedFilepath)
+      retObj.outStream.on('finish', () => {
+        fs.unlink(retObj.unzipedFilepath)
+      })
       if (!retObj.output) {
         return true
       } else {
