@@ -78,7 +78,7 @@ class Helpers {
     return co( function*() {
       const btcCommiter = new BTCCommiter(decisionsPath);
       const published = yield btcCommiter.publishDecisionsToBTC(dvgWallet, spv);
-      process.exit(1);
+      process.exit(0);
     });
   }
 }
