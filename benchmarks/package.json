@@ -5,6 +5,11 @@
   "main": ".eslintrc.js",
   "dependencies": {
     "async": "^2.6.0",
+    "co": "^4.6.0",
+    "co-child-process": "^1.1.0",
+    "expand-home-dir": "0.0.3",
+    "moment": "^2.19.2",
+    "monk": "^6.0.5",
     "random-int": "^1.0.0",
     "request": "^2.83.0"
   },
