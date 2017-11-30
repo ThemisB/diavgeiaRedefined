@@ -23,7 +23,8 @@
     "config": "^1.28.0",
     "json-buffer": "^3.0.0",
     "merkle-tree-gen": "^1.1.0",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "sleep": "^5.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
