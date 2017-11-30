@@ -19,7 +19,6 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
     txIndexes.push(i)
   }
   diavgeiaAddresses[txNum] = bcoin.keyring(chain.derive(txNum)).getAddress('base58')
-
   const async = require('async')
 
   // requestDecisionsByTxIndex: Fetch decisions data from Diavgeia server
@@ -61,6 +60,7 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
 
     async.mapLimit(commits, 1, async function (commit) {
       const response = await requestChainSo(commit.txId, commit.txIndex)
+      require('sleep').sleep(5) // do not overload chain.so
       return response
     }, (err, blockchainResults) => {
       // We have gathered all the data from the api
@@ -111,22 +111,25 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
             // Now calculate the merkle root from data of diavgeia
             var merkle = require('merkle-tree-gen')
             var crypto = require('crypto')
-            let hashes = decisionsPerTx.map(decision => {
+            let hashFunction = (decision) => {
               let hash = crypto.createHash(config.get('hash_algorithm'))
               hash.update(Buffer.from(decision))
               return hash.digest('hex')
-            })
-            const merkleTreeArgs = {
-              array: hashes,
-              hashalgo: config.get('hash_algorithm'),
-              hashlist: true
             }
-            merkle.fromArray(merkleTreeArgs, function (err, tree) {
+            async.mapSeries(decisionsPerTx, hashFunction, (err, hashes) => {
               if (err) throw err
-              if (tree.root !== merkleRootChainSo) {
-                throw new Error(`Diavgeia and blockchain are inconsistent!
-                  Reason: Diavgeia API provides us the root: ${tree.root} while it has been commited to blockchain the following merkle root: ${merkleRootChainSo}`)
+              const merkleTreeArgs = {
+                array: hashes,
+                hashalgo: config.get('hash_algorithm'),
+                hashlist: true
               }
+              merkle.fromArray(merkleTreeArgs, function (err, tree) {
+                if (err) throw err
+                if (tree.root !== merkleRootChainSo) {
+                  throw new Error(`Diavgeia and blockchain are inconsistent!
+                    Reason: Diavgeia API provides us the root: ${tree.root} while it has been commited to blockchain the following merkle root: ${merkleRootChainSo}`)
+                }
+              })
             })
             // Now we have to check the hash of each decision.
           } else if (output.type === 'pubkeyhash') {
