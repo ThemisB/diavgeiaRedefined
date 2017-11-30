@@ -52,7 +52,7 @@ async.eachSeries(daysArray, (_, next) => {
           }
         }).then(() => {
           console.log('Cleanup process is running..')
-          // cleaner.clean() // cleans everything that benchmark has made
+          cleaner.clean() // cleans everything that benchmark has made
         })
       }
       next()
