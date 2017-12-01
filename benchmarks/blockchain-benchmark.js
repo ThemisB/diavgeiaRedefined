@@ -1,12 +1,12 @@
 /*
  * This benchmark is used to measure the per-day verification time, that is the
  * time needed to verify that Diavgeia is consistent with Bitcoin blockchain.
- * The benchmark tries to mimic a common day of Diavgeia (about 13.000 daily
- * decisions). We measure the time needed to verify a month's heavy workload (
- * 390.000 decisions and 30 blockchain commits).
+ * The benchmark tries to mimic a common day of Diavgeia (about 16.000 daily
+ * decisions). We measure the time needed to verify a month's (22 working days)
+ * workload (352.000 decisions and 22 blockchain commits).
  *
  * Important: You should have already setup Diavgeias' wallet and it should be
- * charged with some bitcoin (in order to pay miner fees).
+ * charged with some bitcoins (in order to pay miner fees).
  */
 
 const importer = require('./importer.js')
@@ -15,7 +15,7 @@ const spawn = require('co-child-process')
 const path = require('path')
 const co = require('co')
 const async = require('async')
-const DAYS = 30
+const DAYS = 22
 
 var daysArray = Array.from(Array(DAYS), () => 0)
 var daysCompleted = 0
@@ -43,7 +43,7 @@ async.eachSeries(daysArray, (_, next) => {
             verificationTime = yield spawn('node', ['index.js'], {cwd: path.resolve('../bitcoin-validator')})
             const moment = require('moment')
             const fs = require('fs')
-            let filename = 'verification-' + moment().format('yyyy-mm-dd:hh:mm:ss') + '.out'
+            let filename = 'verification-' + moment().format('MMMM-Do-YYYY-h:mm:ss') + '.out'
             fs.writeFile(filename, verificationTime, (err) => {
               if (err) throw err
             })
