@@ -60,7 +60,7 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
 
     async.mapLimit(commits, 1, async function (commit) {
       const response = await requestChainSo(commit.txId, commit.txIndex)
-      require('sleep').sleep(5) // do not overload chain.so
+      require('sleep').sleep(10) // do not overload chain.so
       return response
     }, (err, blockchainResults) => {
       // We have gathered all the data from the api
