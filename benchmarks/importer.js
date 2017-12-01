@@ -3,7 +3,7 @@ exports.import = (cb) => {
   const request = require('request')
   const async = require('async')
   const LOCALHOST = 'http://localhost:3000'
-  const PER_DAY_DECISIONS = 13000
+  const PER_DAY_DECISIONS = 16000
 
   const randomDecisions = []
   for (let i = 0; i < PER_DAY_DECISIONS; i++) {
