@@ -13,7 +13,6 @@
      xmlns:ontology="http://data.europa.eu/eli/ontology#">
     <owl:Ontology rdf:about="http://diavgeia.gov.gr/ontology/">
         <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
-        <owl:imports rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle"/>
         <terms:contributor>Themis Beris</terms:contributor>
         <terms:creator>Themis Beris</terms:creator>
         <vann:preferredNamespacePrefix>dvg</vann:preferredNamespacePrefix>
@@ -43,6 +42,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://strdf.di.uoa.gr/ontology#WKT -->
+
+    <rdfs:Datatype rdf:about="http://strdf.di.uoa.gr/ontology#WKT"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -57,8 +73,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Conclusion"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Consideration"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Decision"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -82,6 +98,18 @@
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/has_concluded -->
+
+    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_concluded">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Conclusion"/>
+        <rdfs:comment>:has_concluded links a :LegalResource (decision type) with a :Decision.
+
+Το :has_concluded, συνδέει ένα :LegalResource (τύπο απόφασης) με ένα :Decision.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/has_considered -->
 
     <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_considered">
@@ -90,18 +118,6 @@
         <rdfs:comment>:has_considered links a :LegalResource (decision type) with a :Consideration.
 
 Το :has_considered, συνδέει ένα :LegalResource (τύπο απόφασης) με ένα :Consideration.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/has_decided -->
-
-    <owl:ObjectProperty rdf:about="http://diavgeia.gov.gr/ontology/has_decided">
-        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
-        <rdfs:range rdf:resource="http://diavgeia.gov.gr/ontology/Decision"/>
-        <rdfs:comment>:has_decided links a :LegalResource (decision type) with a :Decision.
-
-Το :has_decided, συνδέει ένα :LegalResource (τύπο απόφασης) με ένα :Decision.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -335,6 +351,28 @@
         <rdfs:comment>:verified_by links a :Verification with a :Verifier.
 
 Το :verified_by συνδέει ένα :Verification με ένα :Verifier.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_έδρα -->
+
+    <owl:ObjectProperty rdf:about="http://geo.linkedopendata.gr/gag/ontology/έχει_έδρα">
+        <rdfs:domain rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Δήμος"/>
+        <rdfs:range rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Κοινότητα"/>
+        <rdfs:range rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Τοπική_Κοινότητα"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/ανήκει_σε -->
+
+    <owl:ObjectProperty rdf:about="http://geo.linkedopendata.gr/gag/ontology/ανήκει_σε">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
     </owl:ObjectProperty>
     
 
@@ -1266,8 +1304,8 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/AfterDecision"/>
+                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Conclusion"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Consideration"/>
-                    <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Decision"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/PreConsideration"/>
                     <rdf:Description rdf:about="http://diavgeia.gov.gr/ontology/Verification"/>
                 </owl:unionOf>
@@ -2511,6 +2549,44 @@
     
 
 
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_γεωμετρία -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkedopendata.gr/gag/ontology/έχει_γεωμετρία">
+        <rdfs:domain rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="http://strdf.di.uoa.gr/ontology#WKT"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_επίσημο_όνομα -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkedopendata.gr/gag/ontology/έχει_επίσημο_όνομα">
+        <rdfs:domain rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_κωδικό -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkedopendata.gr/gag/ontology/έχει_κωδικό">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/έχει_πληθυσμό -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkedopendata.gr/gag/ontology/έχει_πληθυσμό">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2623,12 +2699,26 @@ For more commision warrants that are uploaded on Diavgeia: https://diavgeia.gov.
     
 
 
+    <!-- http://diavgeia.gov.gr/ontology/Conclusion -->
+
+    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Conclusion">
+        <rdfs:comment xml:lang="(http://legislation.di.uoa.gr/) ή με άλλες αποφάσεις της διαύγειας, με την χρήση του :considers object property.">Decisions of Diavgeia follow the &quot;Having Considered - We decide&quot; pattern. Each decision has one or multiple :Decision entities, representing the &quot;We decide&quot; decision body.
+
+Each :Conclusion may link to the greek legislation ontology (http://legislation.di.uoa.gr/) or to other decisions of Diavgeia, using the eli:cites object property.
+
+Οι αποφάσεις της Διαυγείας, ακολουθούν το &quot;Έχοντας λάβει υπόψην - Αποφασίζουμε&quot; μοτίβο. Καθέ απόφαση, μπορεί να έχει μία ή περισσότερες :Decision οντότητες, όπου αναπαριστούν το &quot;Αποφασίζουμε&quot; κομμάτι της απόφασης.
+
+Κάθε :Conclusion, μπορεί να κάνει link με την ΝΟΜΟΘΕΣΙ</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://diavgeia.gov.gr/ontology/Consideration -->
 
     <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Consideration">
         <rdfs:comment>Decisions of Diavgeia follow the &quot;Having Considered - We decide&quot; pattern. Each decision has one or multiple :Consideration entities, representing the &quot;Having Considered&quot; decision body.
 
-Each :Consideration may link to the greek legislation ontology (http://legislation.di.uoa.gr/) or to other decisions of Diavgeia, using the :considers object property.
+Each :Consideration may link to the greek legislation ontology (http://legislation.di.uoa.gr/) or to other decisions of Diavgeia, using the eli:cites object property.
 
 Οι αποφάσεις της Διαυγείας, ακολουθούν το &quot;Έχοντας λάβει υπόψην - Αποφασίζουμε&quot; μοτίβο. Καθέ απόφαση, μπορεί να έχει μία ή περισσότερες :Consideration οντότητες, όπου αναπαριστούν το &quot;Έχοντας λάβει υπόψην&quot; κομμάτι της απόφασης.
 
@@ -2646,20 +2736,6 @@ Each :Consideration may link to the greek legislation ontology (http://legislati
 Please pay a visit to this pdf decision: https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/samples/Contract/%CE%A9%CE%9C%CE%9F%CE%94469%CE%927%CE%98-6%CE%A49.pdf
 
 For more contracts that are uploaded on Diavgeia: https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%A3%CE%A5%CE%9C%CE%92%CE%91%CE%A3%CE%97%22&amp;page=0</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://diavgeia.gov.gr/ontology/Decision -->
-
-    <owl:Class rdf:about="http://diavgeia.gov.gr/ontology/Decision">
-        <rdfs:comment>Decisions of Diavgeia follow the &quot;Having Considered - We decide&quot; pattern. Each decision has one or multiple :Decision entities, representing the &quot;We decide&quot; decision body.
-
-Each :Decision may link to the greek legislation ontology (http://legislation.di.uoa.gr/) or to other decisions of Diavgeia, using the :considers object property.
-
-Οι αποφάσεις της Διαυγείας, ακολουθούν το &quot;Έχοντας λάβει υπόψην - Αποφασίζουμε&quot; μοτίβο. Καθέ απόφαση, μπορεί να έχει μία ή περισσότερες :Decision οντότητες, όπου αναπαριστούν το &quot;Αποφασίζουμε&quot; κομμάτι της απόφασης.
-
-Κάθε :Decision, μπορεί να κάνει link με την ΝΟΜΟΘΕΣΙ@ (http://legislation.di.uoa.gr/) ή με άλλες αποφάσεις της Διαύγειας, με την χρήση του :considers object property.</rdfs:comment>
     </owl:Class>
     
 
@@ -3116,9 +3192,97 @@ https://diavgeia.gov.gr/search?advanced&amp;query=decisionType:%22%CE%91%CE%9D%C
     
 
 
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Αποκεντρωμένη_Διοίκηση -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Αποκεντρωμένη_Διοίκηση">
+        <rdfs:subClassOf rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkedopendata.gr/gag/ontology/Δήμος -->
 
-    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Δήμος"/>
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Δήμος">
+        <rdfs:subClassOf rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Ενότητα -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Ενότητα">
+        <rdfs:subClassOf rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Κοινότητα -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Κοινότητα">
+        <rdfs:subClassOf rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Περιφέρεια -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Περιφέρεια">
+        <rdfs:subClassOf rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Περιφερειακή_Ενότητα -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Περιφερειακή_Ενότητα">
+        <rdfs:subClassOf rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Τοπική_Κοινότητα -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Τοπική_Κοινότητα">
+        <rdfs:subClassOf rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkedopendata.gr/gag/ontology/Χώρα -->
+
+    <owl:Class rdf:about="http://geo.linkedopendata.gr/gag/ontology/Χώρα">
+        <rdfs:subClassOf rdf:resource="http://geo.linkedopendata.gr/gag/ontology/Διοικητική_Μονάδα"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://geo.linkedopendata.gr/gag/ontology/Αποκεντρωμένη_Διοίκηση"/>
+            <rdf:Description rdf:about="http://geo.linkedopendata.gr/gag/ontology/Δήμος"/>
+            <rdf:Description rdf:about="http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Ενότητα"/>
+            <rdf:Description rdf:about="http://geo.linkedopendata.gr/gag/ontology/Δημοτική_Κοινότητα"/>
+            <rdf:Description rdf:about="http://geo.linkedopendata.gr/gag/ontology/Περιφέρεια"/>
+            <rdf:Description rdf:about="http://geo.linkedopendata.gr/gag/ontology/Περιφερειακή_Ενότητα"/>
+            <rdf:Description rdf:about="http://geo.linkedopendata.gr/gag/ontology/Τοπική_Κοινότητα"/>
+            <rdf:Description rdf:about="http://geo.linkedopendata.gr/gag/ontology/Χώρα"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
