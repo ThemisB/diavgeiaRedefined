@@ -30,7 +30,7 @@ class Decision {
   static getDecisions () {
     return co(function * () {
       var collection = wrap(db.collection('decisions'))
-      var decisions = yield collection.find({}, { sort: {_id: -1}, fields: { '_id': 0 } })
+      var decisions = yield collection.find({}, { sort: {date: -1}, fields: { '_id': 0 } })
       return decisions
     })
   }
@@ -38,7 +38,7 @@ class Decision {
   static getLastBlockchainCommit () {
     return co(function * () {
       var collection = wrap(db.collection('blockchainCommits'))
-      var commit = yield collection.findOne({}, {sort: {_id: -1}, limit: 1})
+      var commit = yield collection.findOne({}, {sort: {date: -1}, limit: 1})
       return commit
     })
   }
@@ -46,7 +46,7 @@ class Decision {
   static getAllBlockchainCommits () {
     return co(function * () {
       var collection = wrap(db.collection('blockchainCommits'))
-      var commits = yield collection.find({}, {sort: {_id: -1}})
+      var commits = yield collection.find({}, {sort: {_id: -1}, fields: {'txId': 1, 'txIndex': 1}})
       return commits
     })
   }
@@ -54,7 +54,7 @@ class Decision {
   static getDecisionsByTxIndex (index) {
     return co(function * () {
       var collection = wrap(db.collection('decisions'))
-      var decisions = yield collection.find({txIndex: parseInt(index)}, {sort: {_id: -1}})
+      var decisions = yield collection.find({txIndex: parseInt(index)}, {sort: {date: -1}})
       return decisions
     })
   }
