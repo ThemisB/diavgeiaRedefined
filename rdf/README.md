@@ -1,13 +1,12 @@
-Adoption of RDF in Diavgeia
+Expressing decisions in RDF
 ====
 
 Sections
 -------
-1. [Diavgeia Issues](#diavgeia-issues)
-2. [The RDF Schema](#the-rdf-schema)
+1. [Why should we use RDF?](#why-should-we-use-rdf?)
+2. [The Diavgeia ontology](#the-diavgeia-ontology)
 3. [Decision Types and Samples](#decision-types-and-samples)
-4. [URIs - ELI](#uris---eli)
-5. [General Schema Classes](#general-schema-classes)
+4. [General Schema Classes](#general-schema-classes)
     1. [Consideration](#consideration)
     2. [Decision](#decision)
     3. [PreConsideration](#preconsideration)
@@ -19,8 +18,8 @@ Sections
     9. [Verification](#verification)
     10. [Signer](#signer)
     11. [Present](#present)
-6. [Common Data Properties](#common-data-properties)
-7. [Decision specific Object and Data Properties](#decision-specific-object-and-data-properties)
+5. [Common Data Properties](#common-data-properties)
+6. [Decision specific Object and Data Properties](#decision-specific-object-and-data-properties)
     1. [Appointment](#appointment)
     2. [Award](#award)
     3. [BalanceAccount](#balanceaccount)
@@ -52,79 +51,90 @@ Sections
     29. [SuccessfulAppointedRunnerUpList](#successfulappointedrunneruplist)
     30. [Undertaking](#undertaking)
     31. [WorkAssignmentSupplyServicesStudies](#workassignmentsupplyservicesstudies)
-8. [Conclusions](#conclusions)
 
-Diavgeia Issues
---------
+## Why should we use RDF?
+Public sector decisions cover a broad spectrum of activities in Greece. The Greek government has enacted 34 different decision types that may be uploaded on Diavgeia. The decision type is chosen by the government institutions according to the context of the decision. Despite the many different decision types, we observed that the majority of them follow the same pattern. A decision starts by refering to a number of different Greek laws on which is based and then gives the main text of the decision. The following figure illustrates an example of an *Appointment* decision type that adheres to the aforementioned pattern.
 
-1. By the time i write this documentation, Diavgeia hosts over 24.3 Million pdf documents. That said, it is obvious that there is a great demand for space storage, as well as the fact that documents are stored as pdf files, eliminates our ability to extract statistical information. Extraction of statistical information is based on unreliable techniques (i.e. OCR) and thus we can not explore documents in an efficient way (i.e. pose queries). In other words, we want to upgrade the currently stored [1 star-decisions to 5 stars-decisions](http://5stardata.info/en/) and save some disk space.
+![The appointment example](https://i.imgur.com/CAj2FCr.png)
 
-2. The majority of decisions, follow the model of `taking into consideration the law  X - we decide`. We want to make sure, that these laws exist and link each decision with the laws that has taken into consideration, or even with other decisions of Diavgeia. Ideally, the user would be able to just click a consideration of the decision and read the specific law of the greek legislation. That would greatly limit the time spend on navigating through the greek law.
+ Despite the fact that this pattern can be used to define a common format for the different types of decisions, for the time being, public sector authorities upload their decisions as PDF files which follow no structuring of their textual content. Futhermore, citizens have no guarantee that the legislative references of a decision exist and are valid (such as *Laws* and *Presidential Decree* of the appointment example). By using the [5-star rating model](http://5stardata.info/) for data, Greek public sector decisions are marked as 1-star.
 
-## The RDF Schema
+DiavgeiaRedefined improves the current way of publishing Greek public sector decisions on the Web, by expressing them as 5-star open linked data. It takes advantage of the aforementioned pattern and we develop the [Diavgeia ontology](https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/diavgeia.owl). Technically, we view decisions as a collection of legal RDF documents with this standard structure.
 
-We will solve the aforementioned issues, by expressing decisions using a RDF Schema. A "side-effect" of this work is to promote the [Open Linked Data movement](https://en.wikipedia.org/wiki/Linked_data#Linked_open_data) and more generally the [open governance](https://en.wikipedia.org/wiki/Open_government).
+We also employ the [Nomothesia](http://legislation.di.uoa.gr/) in order to ensure that the references to Greek legislation exist. Nomothesia has so far published 5 primary types of Greek legislation (*Constitution*, *Presidential Decrees*, *Laws*, *Acts of Ministerial Cabinet*, and *Ministerial Decisions*), as well as, 2 secondary ones (*Legislative Acts* and *Regulatory Provisions*). Nomothesia structures all legal documents, by using persistent URIs according to the template proposed by ELI `http://www.legislation.di.uoa.gr/eli/{type}/{year}/{id}`. For instance, for the first provision of the appointment example, a linking of Diavgeia with the Nomothesia URI `http://legislation.di.uoa.gr/eli/law/2007/3549/article/25/paragraph/1` can be made. By integrating Nomothesia into Diavgeia, we also give citizens the ability to simply click to the legislative references of public sector decisions and see instantly the relevant passage of Greek legislation.
+
+
+**Metadata inconsistency**
+
+In addition to the uploading of the PDF file, public sector authorities also have to fill metadata information which describe the decision. The metadata used vary according to the type of decision. For instance, the metadata of the ExpenditureApproval decision type, holds important information about government's expenditure (such as the sender and receiver VAT registration numbers, the expense amount, etc). Diavgeia offers an [OpenDataAPI](https://diavgeia.gov.gr/api/help) that can be used as an endpoint to query over the metadata. Despite the fact that OpenDataAPI is a step towards promoting transparency, inconsistency between decision text and metadata information is possible (see the [related article](https://eellak.ellak.gr/2016/07/06/veltionontas-tin-piotita-dedomenon-stin-diavgia/) about inconsistent metadata on Diavgeia website). DiavgeiaRedefined embeds metadata information into the RDF document, eliminating the possibility of inconsistency.
+
+**Identifiers and Modifications of Decisions**
+
+Each decision is assigned a unique Internet Uploading Number (IUN), certifying that the decision has been uploaded on Diavgeia. IUN is of significant importance, since citizens and other public authorities can use decisions, by solely referring to their unique number. In addition to IUN, each decision is also assigned a unique version token. Government institutions can upload a new version of a decision by claiming a new version token, but maintaining the same IUN. Diavgeia functions in an append-only manner, as it maintains the original decision with all its subsequent modifications. This is exactly why Diavgeia is amenable to blockchain technologies (Stamper and Consistency Verifier).
+
+## The Diavgeia Ontology
+
+The ontology of Diavgeia is based on the pattern followed by public sector decisions, as discussed above. It imports and uses properties that are defined in the [ELI ontology](http://eli.fr/) and the [Nomothesia ontology](http://legislation.di.uoa.gr/legislation.owl). The core of Diavgeia ontology can be illustrated as follows:
+
+![The Diavgeia ontology](https://i.imgur.com/cwkYZfd.png)
+
+
+The 34 different decision types can be viewed as legal documents (class `LegalResource` of the ELI ontology). A decision (`LegalResource`) `changes` itself, by generating a new `version` and maintaining its unique `iun`. A `LegalResource` is composed of multiple `Considerations` and `Conclusions`. The `Consideration` class models the passages that are used to prove the validity of the decision (e.g. the three provisions of the appointment example), while `Conclusion` models the passages that are used as conclusions of the decision (that is the final passage of the appointment example). Both `Consideration` and `Conclusion` classes, use the `cites` property of the ELI ontology, to make a reference either to Greek Legislation (Nomothesia) or to another decision of Diavgeia. The `has_text` property is used to describe the text body of either `Consideration` or `Conclusion`.
+
+The Diavgeia ontology offers 121 properties to cover all the particularities of different decision types. In addition to `Consideration` and `Conclusion`, the ontology provides classes which describe important public sector activities. For instance the class `Expenses` links an expense of a public authority to an individual or business. For the time being, this crucial information is expressed as metadata of the PDF decision, underlying the possibility of metadata inconsistency. By merging metadata and decision text in a single RDF file, this possibility is eliminated.
+
+In order to identify legal resources, we also need appropriate URIs. Persistent URIs is a strongly recommended best practice, according to ELI. It is very important to have reliable means to identify the public sector decisions. We can structure the persistent URIs of decisions according to the template `http://www.diavgeia.gov.gr/eli/{iun}/{version}`. Modifications of a decision result to the generation of a new URI which has the same `iun` and a new `version` number. Thus, the version of an enacted decision can be seen as the decision which has the most recent `date_publication` for a specific `iun`.
+
+**Visualization of Diavgeia ontology** : A visualization of the Diavgeia ontology can be found on this [page](83.212.100.94/ontodoc/).
 
 ### Decision Types and Samples
 
-Diavgeia currently hosts 34 different decision types and thus the implemented rdf schema should support all of them. Decisions share some common properties, but we should take care of the special properties each one may have. You can find some samples [here](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples) and explore the specific decision properties.
+Diavgeia currently hosts 34 different decision types and thus the implemented rdf schema should support all of them. Decisions share some common properties, but we should take care of the special properties each one may have. You can find some samples [here](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples) and explore the specific decision properties.
 
-It follows a table which shows the match between the different types of decisions and the greek translation which are currently used in Diavgeia.
+It follows a table which shows the mapping between the different types of decisions and the greek translation which are currently used in Diavgeia.
 
 
 | RDF Decision Classes      |     Greek Translation     |
 | --------------------------| :------------------------:|
-| [Appointment](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Appointment)              | ΔΙΟΡΙΣΜΟΣ                 |
-| [Award](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Award)                     | ΚΑΤΑΚΥΡΩΣΗ                |
-| [BalanceAccount](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/BalanceAccount)            | ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ |
-| [BudgetApproval](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/BudgetApproval)            | ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ    |
-| [Circular](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Circular)                  | ΕΓΚΥΚΛΙΟΣ                 |
-| [CollegialBodyCommisionWorkingGroup](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/CollegialBodyCommisionWorkingGroup) | ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΣΥΛΛΟΓΙΚΟ ΟΡΓΑΝΟ - ΕΠΙΤΡΟΠΗ - ΟΜΑΔΑ ΕΡΓΑΣΙΑΣ - ΟΜΑΔΑ ΕΡΓΟΥ - ΜΕΛΗ ΣΥΛΛΟΓΙΚΟΥ ΟΡΓΑΝΟΥ                 |
-| [CommisionWarrant](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/CommisionWarrant)          | ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ        |
-| [Contract](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Contract)                  | ΣΥΜΒΑΣΗ                   |
-| [DeclarationSummary](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/DeclarationSummary)        | ΠΕΡΙΛΗΨΗ ΔΙΑΚΗΡΥΞΗΣ       |
-| [DevelopmentLawContract](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/DevelopmentLawContract)    | ΣΥΜΒΑΣΗ - ΠΡΑΞΕΙΣ ΑΝΑΠΤΥΞΙΑΚΩΝ ΝΟΜΩΝ |
-| [DisciplinaryAcquitance](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/DisciplinaryAcquitance)   | ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ |
-| [DonationGrant](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/DonationGrant)             | ΔΩΡΕΑ - ΕΠΙΧΟΡΗΓΗΣΗ       |
-| [EvaluationReportOfLaw](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/EvaluationReportOfLaw)     | ΕΚΘΕΣΗ ΑΠΟΤΙΜΗΣΗΣ ΓΙΑ ΤΗΝ ΚΑΤΑΣΤΑΣΗ ΤΗΣ ΥΦΙΣΤΑΜΕΝΗΣ ΝΟΜΟΘΕΣΙΑΣ |
-| [ExpenditureApproval](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/ExpenditureApproval)       | ΕΓΚΡΙΣΗ ΔΑΠΑΝΗΣ           |
-| [GeneralSpecialSecretaryMonocraticBody](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/GeneralSpecialSecretaryMonocraticBody)       | ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΘΕΣΗ ΓΕΝΙΚΟΥ - ΕΙΔΙΚΟΥ ΓΡΑΜΜΑΤΕΑ - ΜΟΝΟΜΕΛΕΣ ΟΡΓΑΝΟ          |
-| [InvestmentPlacing](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/InvestmentPlacing)         | ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ |
+| [Appointment](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Appointment)              | ΔΙΟΡΙΣΜΟΣ                 |
+| [Award](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Award)                     | ΚΑΤΑΚΥΡΩΣΗ                |
+| [BalanceAccount](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/BalanceAccount)            | ΙΣΟΛΟΓΙΣΜΟΣ - ΑΠΟΛΟΓΙΣΜΟΣ |
+| [BudgetApproval](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/BudgetApproval)            | ΕΓΚΡΙΣΗ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ    |
+| [Circular](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Circular)                  | ΕΓΚΥΚΛΙΟΣ                 |
+| [CollegialBodyCommisionWorkingGroup](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/CollegialBodyCommisionWorkingGroup) | ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΣΥΛΛΟΓΙΚΟ ΟΡΓΑΝΟ - ΕΠΙΤΡΟΠΗ - ΟΜΑΔΑ ΕΡΓΑΣΙΑΣ - ΟΜΑΔΑ ΕΡΓΟΥ - ΜΕΛΗ ΣΥΛΛΟΓΙΚΟΥ ΟΡΓΑΝΟΥ                 |
+| [CommisionWarrant](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/CommisionWarrant)          | ΕΠΙΤΡΟΠΙΚΟ ΕΝΤΑΛΜΑ        |
+| [Contract](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Contract)                  | ΣΥΜΒΑΣΗ                   |
+| [DeclarationSummary](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/DeclarationSummary)        | ΠΕΡΙΛΗΨΗ ΔΙΑΚΗΡΥΞΗΣ       |
+| [DevelopmentLawContract](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/DevelopmentLawContract)    | ΣΥΜΒΑΣΗ - ΠΡΑΞΕΙΣ ΑΝΑΠΤΥΞΙΑΚΩΝ ΝΟΜΩΝ |
+| [DisciplinaryAcquitance](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/DisciplinaryAcquitance)   | ΑΘΩΩΤΙΚΗ ΠΕΙΘΑΡΧΙΚΗ ΑΠΟΦΑΣΗ |
+| [DonationGrant](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/DonationGrant)             | ΔΩΡΕΑ - ΕΠΙΧΟΡΗΓΗΣΗ       |
+| [EvaluationReportOfLaw](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/EvaluationReportOfLaw)     | ΕΚΘΕΣΗ ΑΠΟΤΙΜΗΣΗΣ ΓΙΑ ΤΗΝ ΚΑΤΑΣΤΑΣΗ ΤΗΣ ΥΦΙΣΤΑΜΕΝΗΣ ΝΟΜΟΘΕΣΙΑΣ |
+| [ExpenditureApproval](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/ExpenditureApproval)       | ΕΓΚΡΙΣΗ ΔΑΠΑΝΗΣ           |
+| [GeneralSpecialSecretaryMonocraticBody](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/GeneralSpecialSecretaryMonocraticBody)       | ΠΡΑΞΗ ΠΟΥ ΑΦΟΡΑ ΣΕ ΘΕΣΗ ΓΕΝΙΚΟΥ - ΕΙΔΙΚΟΥ ΓΡΑΜΜΑΤΕΑ - ΜΟΝΟΜΕΛΕΣ ΟΡΓΑΝΟ          |
+| [InvestmentPlacing](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/InvestmentPlacing)         | ΠΡΑΞΗ ΥΠΑΓΩΓΗΣ ΕΠΕΝΔΥΣΕΩΝ |
 | Law                       | ΝΟΜΟΣ                     |
-| [LegislativeDecree](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/LegislativeDecree)         | ΠΡΑΞΗ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1) |
-| [Normative](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Normative)                 | ΚΑΝΟΝΙΣΤΙΚΗ ΠΡΑΞΗ         |
-| [OccupationInvitation](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/OccupationInvitation)      | ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ |
-| [Opinion](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Opinion)                   | ΓΝΩΜΟΔΟΤΗΣΗ               |
-| [OtherDecisions](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/OtherDecisions)            | ΛΟΙΠΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ|
-| [OtherDevelopmentLaw](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/OtherDevelopmentLaw)       | ΑΛΛΗ ΠΡΑΞΗ ΑΝΑΠΤΥΞΙΑΚΟΥ ΝΟΜΟΥ|
-| [OwnershipTransferOfAssets](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/OwnershipTransferOfAssets) | ΠΑΡΑΧΩΡΗΣΗ ΧΡΗΣΗΣ ΠΕΡΙΟΥΣΙΑΚΩΝ ΣΤΟΙΧΕΙΩΝ  |
+| [LegislativeDecree](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/LegislativeDecree)         | ΠΡΑΞΗ ΝΟΜΟΘΕΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ (Σύνταγμα, άρθρο 44, παρ 1) |
+| [Normative](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Normative)                 | ΚΑΝΟΝΙΣΤΙΚΗ ΠΡΑΞΗ         |
+| [OccupationInvitation](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/OccupationInvitation)      | ΠΡΟΚΗΡΥΞΗ ΠΛΗΡΩΣΗΣ ΘΕΣΕΩΝ |
+| [Opinion](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Opinion)                   | ΓΝΩΜΟΔΟΤΗΣΗ               |
+| [OtherDecisions](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/OtherDecisions)            | ΛΟΙΠΕΣ ΔΙΟΙΚΗΤΙΚΕΣ ΠΡΑΞΕΙΣ|
+| [OtherDevelopmentLaw](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/OtherDevelopmentLaw)       | ΑΛΛΗ ΠΡΑΞΗ ΑΝΑΠΤΥΞΙΑΚΟΥ ΝΟΜΟΥ|
+| [OwnershipTransferOfAssets](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/OwnershipTransferOfAssets) | ΠΑΡΑΧΩΡΗΣΗ ΧΡΗΣΗΣ ΠΕΡΙΟΥΣΙΑΚΩΝ ΣΤΟΙΧΕΙΩΝ  |
 | PaymentFinalisation     | ΟΡΙΣΤΙΚΟΠΟΙΗΣΗ ΠΛΗΡΩΜΗΣ   |
-| [PublicPrototypeDocuments](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/PublicPrototypeDocuments)  | ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ   |
-| [Records](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Records)                   | ΠΡΑΚΤΙΚΑ (Νομικού Συμβουλίου του Κράτους)  |
-| [ServiceChange](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/ServiceChange)             | ΥΠΗΡΕΣΙΑΚΗ ΜΕΤΑΒΟΛΗ       |
-| [SpatialPlanningDecisions](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/SpatialPlanningDecisions)  | ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ |
-| [StartProductionalFunctionOfInvestment](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/StartProductionalFunctionOfInvestment)  | ΑΠΟΦΑΣΗ ΕΝΑΡΞΗΣ ΠΑΡΑΓΩΓΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ ΕΠΕΝΔΥΣΗΣ |
-| [SuccessfulAppointedRunnerUpList](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/SuccessfulAppointedRunnerUpList)        | ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ & ΕΠΙΛΑΧΟΝΤΩΝ     |
-| [Undertaking](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Undertaking)               | ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ|
-| [WorkAssignmentSupplyServicesStudies](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/WorkAssignmentSupplyServicesStudies)| ΑΝΑΘΕΣΗ ΕΡΓΩΝ / ΠΡΟΜΗΘΕΙΩΝ / ΥΠΗΡΕΣΙΩΝ / ΜΕΛΕΤΩΝ      |
+| [PublicPrototypeDocuments](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/PublicPrototypeDocuments)  | ΔΗΜΟΣΙΑ ΠΡΟΤΥΠΑ ΕΓΓΡΑΦΑ   |
+| [Records](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Records)                   | ΠΡΑΚΤΙΚΑ (Νομικού Συμβουλίου του Κράτους)  |
+| [ServiceChange](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/ServiceChange)             | ΥΠΗΡΕΣΙΑΚΗ ΜΕΤΑΒΟΛΗ       |
+| [SpatialPlanningDecisions](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/SpatialPlanningDecisions)  | ΠΡΑΞΕΙΣ ΧΩΡΟΤΑΞΙΚΟΥ - ΠΟΛΕΟΔΟΜΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ |
+| [StartProductionalFunctionOfInvestment](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/StartProductionalFunctionOfInvestment)  | ΑΠΟΦΑΣΗ ΕΝΑΡΞΗΣ ΠΑΡΑΓΩΓΙΚΗΣ ΛΕΙΤΟΥΡΓΙΑΣ ΕΠΕΝΔΥΣΗΣ |
+| [SuccessfulAppointedRunnerUpList](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/SuccessfulAppointedRunnerUpList)        | ΠΙΝΑΚΕΣ ΕΠΙΤΥΧΟΝΤΩΝ, ΔΙΟΡΙΣΤΕΩΝ & ΕΠΙΛΑΧΟΝΤΩΝ     |
+| [Undertaking](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Undertaking)               | ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ|
+| [WorkAssignmentSupplyServicesStudies](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/WorkAssignmentSupplyServicesStudies)| ΑΝΑΘΕΣΗ ΕΡΓΩΝ / ΠΡΟΜΗΘΕΙΩΝ / ΥΠΗΡΕΣΙΩΝ / ΜΕΛΕΤΩΝ      |
 
 You can click on the RDF-Classes to see the samples, organized in directories. These directories may have 3 or 4 files inside. More specifically:
   1. There is a `.pdf` file, which is found in the current production website of Diavgeia and it can be downloaded from https://diavgeia.gov.gr/{IUN}
   2. A `metadata.json` file, which has the metadata that government institutions may fill during the procedure. Metadata is downloaded from https://diavgeia.gov.gr/luminapi/api/decisions/{IUN}
-  3. Α `version_history.json` file, which corresponds to the history of a specific decision. This file is included only in the examples that alternate a decision (e.g. this [DonationGrant](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/DonationGrant/version_history.json))
+  3. Α `version_history.json` file, which corresponds to the history of a specific decision. This file is included only in the examples that alternate a decision (e.g. this [DonationGrant](https://github.com/themisb/diavgeiaRedefined/blob/master/rdf/samples/DonationGrant/version_history.json))
   4. A `.n3` file, which is the decision expressed according to the rdf schema.
-
-## URIs - ELI
-
-  Recently, the European Council introduced the European Legislation Identifier ([ELI](http://www.eli.fr/en/)) as a new common framework that has to be adopted by the national legal publishing systems in order to unify and link national legislation with European legislation. Diavgeia's RDF Schema adopts the ELI URI Format, as follows:
-
-  `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}`
-
-  IUN (or ADA for Greeks) is the unique Internet Uploading Number (IUN) which a decision gets when it has been successfully uploaded to Diavgeia. However, IUN alone can not identify a decision, due to its possible alternations. There are two kinds of modifications that can occur in a decision:
-  1. **Metadata Correction** : Government institutions correct only typos and wrong metadata of a decision, but the main concept of the decision remains unchanged. Then, new decisions hold the same IUN, but they are assigned a unique Version Identifier.
-  2. **Decision Change** : Government institutions may completely change a decision (remove considerations, add more acts, etc) and when this is the case, Diavgeia gives a new IUN (and Version) to the document.
-
-  Every different decision type is implemented as a subclass of `eli:LegalResource`. The `eli:repeals` object property links a decision with another decision when a correction happens. It is obvious that a `eli:repeals` which connects two entities that have the same IUN version, indicates a *Metadata Correction*, whereas in the case of decisions with different IUN, it indicates a *Decision Change*.
 
 ### General Schema Classes
   The ontology prefix of Diavgeia is `dvg` with value `http://diavgeia.gov.gr/ontology/`. In the following sections we will refer to `Decision(LegalResource)` as the Class which contains all the different decision types of Diavgeia and is in fact the eli:LegalResource class.
@@ -136,7 +146,7 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
 
   *Properties*
   - A `Decision(LegalResource)` uses the **dvg:has_considered** object property to connect the decision entity with its [Considerations](#consideration) |`Range → dvg:LegalResource`|.
-  - A [Consideration](consideration) uses the **dvg:considers** object property, in order to link to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/), or to other decisions of Diavgeia. For instance the second consideration of [this legislative decree](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.n3), is expressed as `<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/2>`, it **dvg:considers** the *article 18 of law 3446/2006* and the last one can be found at  `<http://legislation.di.uoa.gr/eli/law/2006/3446/article/18>`. |`Range → dvg:LegalResource or ontology:LegalResource`|
+  - A [Consideration](consideration) uses the **dvg:considers** object property, in order to link to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/), or to other decisions of Diavgeia. For instance the second consideration of [this legislative decree](https://github.com/themisb/diavgeiaRedefined/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.n3), is expressed as `<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Consideration/2>`, it **dvg:considers** the *article 18 of law 3446/2006* and the last one can be found at  `<http://legislation.di.uoa.gr/eli/law/2006/3446/article/18>`. |`Range → dvg:LegalResource or ontology:LegalResource`|
   - [Considerations](#consideration) also have **dvg:text** data property which is the actual text that government institutions write. |`Range → xsd:string`|
 
 - - -
@@ -148,7 +158,7 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
 
   *Properties*
   - A `Decision(LegalResource)` uses the **dvg:has_decided** object property to connect the decision entity with its [Decisions](#decision).
-  - A [Decision](#decision) uses the **dvg:decision_relates** object property, in order to link to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/), or to other decisions of Diavgeia. For instance the forth decision of [this legislative decree](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.n3), is expressed as `<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/4>`, it  **dvg:decision_relates** the *second paragraph of article 18 of law 3446/2006* and the last one can be found at `<http://legislation.di.uoa.gr/eli/law/2006/3446/article/18/paragraph/2>`. |`Range → dvg:LegalResource or ontology:LegalResource`|
+  - A [Decision](#decision) uses the **dvg:decision_relates** object property, in order to link to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/), or to other decisions of Diavgeia. For instance the forth decision of [this legislative decree](https://github.com/themisb/diavgeiaRedefined/blob/master/rdf/samples/LegislativeDecree/%CE%A9%CE%9F00%CE%98%CE%A9%CE%A0-%CE%A7%CE%94%CE%9D.n3), is expressed as `<http://diavgeia.gov.gr/eli/decision/ΩΟ00ΘΩΠ-ΧΔΝ/51c1bc5c-0eb8-4cb5-8204-3a48efef91bb/Decision/4>`, it  **dvg:decision_relates** the *second paragraph of article 18 of law 3446/2006* and the last one can be found at `<http://legislation.di.uoa.gr/eli/law/2006/3446/article/18/paragraph/2>`. |`Range → dvg:LegalResource or ontology:LegalResource`|
   - [Decisions](#decision) also have **dvg:has_text** data property which is the actual text that government institutions write. |`Range → xsd:string`|
 
 - - -
@@ -230,7 +240,7 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
 
   *Description* : [Verification](#verification) represents an individual which authorizes the decision.
 
-  For instance, [this undertaking](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/Undertaking/6%CE%A7%CE%99%CE%A5%CE%A9%CE%9A9-4%CE%91%CE%9F.n3) has been verified by "ΜΙΧΑΛΗΣ ΛΙΒΑΝΟΣ", which is the chief of the Financial Service of Monemvasia.
+  For instance, [this undertaking](https://github.com/themisb/diavgeiaRedefined/blob/master/rdf/samples/Undertaking/6%CE%A7%CE%99%CE%A5%CE%A9%CE%9A9-4%CE%91%CE%9F.n3) has been verified by "ΜΙΧΑΛΗΣ ΛΙΒΑΝΟΣ", which is the chief of the Financial Service of Monemvasia.
 
   *Properties* :
   - A `Decision(LegalResource)` uses the **dvg:has_verified** object property to declare a [Verification](#verification). |`Range → dvg:Verification`|
@@ -255,7 +265,7 @@ You can click on the RDF-Classes to see the samples, organized in directories. T
 #### Present
   *Format* : `http://diavgeia.gov.gr/eli/decision/{IUN}/{Version}/Verification/{verification_number}`
 
-  *Description* : [Present](#present) represents a person which was present when the decision was written (e.g. [this record](https://github.com/eellak/gsoc17-diavgeia/blob/master/rdf/samples/Records/%CE%A9%CE%A5%CE%9B%CE%A6%CE%9F%CE%A1%CE%A1%CE%95-%CE%97%CE%93%CE%98.n3)).
+  *Description* : [Present](#present) represents a person which was present when the decision was written (e.g. [this record](https://github.com/themisb/diavgeiaRedefined/blob/master/rdf/samples/Records/%CE%A9%CE%A5%CE%9B%CE%A6%CE%9F%CE%A1%CE%A1%CE%95-%CE%97%CE%93%CE%98.n3)).
 
   *Properties* :
   - A `Decision(LegalResource)` uses the **dvg:has_present** object property to declare a [Present](#present).
@@ -507,7 +517,7 @@ This type of decision does not have any specific object or data properties.
 
 **Greek Translation** : ΓΝΩΜΟΔΟΤΗΣΗ
 
-*Note* : Opinion's format differentiates from other decisions, but it is quite specific. You can consider [this opinion sample](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples/Opinion).
+*Note* : Opinion's format differentiates from other decisions, but it is quite specific. You can consider [this opinion sample](https://github.com/themisb/diavgeiaRedefined/tree/master/rdf/samples/Opinion).
 
 **Data Properties**
   - **opinion_question_number** : Opinions have a specific question number which is used for reference. |`Range → xsd:string`|
@@ -634,10 +644,3 @@ This type of decision does not have any specific object or data properties.
 
 **Data Properties**
   - **work_assignment_etc_category** : |`Range → OneOf{"Έργα"@el , "Μελέτες"@el , "Προμήθειες"@el , "Υπηρεσίες"@el}`|
-
-Conclusions
------------
-
-The proposed rdf schema solves all the aforementioned problems. As far as the disk space is concerned, `.pdf` [samples](https://github.com/eellak/gsoc17-diavgeia/tree/master/rdf/samples) take up 7.1MB (without the extra metadata of `metadata.json` files), while the compressed `.n3` samples (that is `.n3.bz2` files) take up 72ΚΒ and include the information of `metadata.json` files.
-
-Moreover, we have linked the `decisions.owl` to the [Greek Legislation Ontology](http://legislation.di.uoa.gr/) and by adopting ELI, we unified and linked our ontology with European legislation.
