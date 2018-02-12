@@ -41,7 +41,7 @@ async.eachSeries(daysArray, (_, next) => {
         co(function * () {
           var verificationTime
           try {
-            verificationTime = yield spawn('node', ['index.js'], {cwd: path.resolve('../bitcoin-validator')})
+            verificationTime = yield spawn('node', ['index.js'], {cwd: path.resolve('../consistency-verifier')})
             const moment = require('moment')
             const fs = require('fs')
             let filename = 'verification-' + moment().format('MMMM-Do-YYYY-h:mm:ss') + '.out'
