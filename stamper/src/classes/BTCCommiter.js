@@ -40,7 +40,7 @@ class BTCCommiter {
      var _btcCommiter = this;
      return co(function* () {
        let environment = (process.env.NODE_ENV !== undefined) ? process.env.NODE_ENV : 'development';
-       let n3ConfigurationFilePromise = yield fs.readFile('../n3-composer/config/' + environment + '.json');
+       let n3ConfigurationFilePromise = yield fs.readFile('../web-editor/config/' + environment + '.json');
        let n3ConfigurationFile = JSON.parse(n3ConfigurationFilePromise);
        var monk = require('monk');
        var wrap = require('co-monk');
@@ -224,7 +224,7 @@ class BTCCommiter {
         const tree = _btcCommiter._constructMerkleTree(hashes);
         const txId = yield _btcCommiter._broadcastMerkleTreeTransaction(tree.root, dvgWallet, spv);
         let environment = (process.env.NODE_ENV !== undefined) ? process.env.NODE_ENV : 'development';
-        let n3ConfigurationFilePromise = yield fs.readFile('../n3-composer/config/' + environment + '.json');
+        let n3ConfigurationFilePromise = yield fs.readFile('../web-editor/config/' + environment + '.json');
         let n3ConfigurationFile = JSON.parse(n3ConfigurationFilePromise);
         var monk = require('monk');
         var wrap = require('co-monk');
