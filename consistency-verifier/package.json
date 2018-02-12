@@ -1,18 +1,23 @@
 {
-  "name": "bitcoin-validator",
+  "name": "consistency-verifier",
   "version": "1.0.0",
-  "description": "NodeJS Application which ensures that Diavgeia data is consistent to Bitcoin Blockchain",
+  "description": "Tool which verifies the integrity of the published decisions",
+  "bugs": {
+    "url": "https://github.com/ThemisB/diavgeiaRedefined/issues"
+  },
+  "homepage": "https://github.com/ThemisB/diavgeiaRedefined/consistency-verifier#readme",
+  "keywords": [
+    "diavgeia",
+    "consistency",
+    "verifier",
+    "integrity",
+    "bitcoin"
+  ],
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/themisb/diavgeiaRedefined.git"
   },
-  "keywords": [
-    "diavgeia",
-    "bitcoin",
-    "blockchain",
-    "validator"
-  ],
   "author": "Themis Beris",
   "license": "MIT",
   "dependencies": {
