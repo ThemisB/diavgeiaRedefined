@@ -1,22 +1,21 @@
 {
-  "name": "n3-composer",
+  "name": "web-editor",
   "version": "1.0.0",
-  "description": "App based on Nuxt & Vue that greek government institutions can use to compose their decisions in a HTML form and on backend generate the corresponding turtle files",
+  "description": "App based on Nuxt & Vue that greek government institutions can use to author their decisions in a HTML form and on backend generate the corresponding compressed decisions expressed in RDF",
   "author": "Themis Beris",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eellak/gsoc17-diavgeia/issues"
+    "url": "https://github.com/ThemisB/diavgeiaRedefined/issues"
   },
-  "homepage": "https://github.com/eellak/gsoc17-diavgeia/n3-composer#readme",
+  "homepage": "https://github.com/ThemisB/diavgeiaRedefined/web-editor#readme",
   "keywords": [
     "diavgeia",
-    "n3-composer",
-    "HTML",
-    "turtle files"
+    "web-editor",
+    "HTML"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eellak/gsoc17-diavgeia.git"
+    "url": "git+https://github.com/ThemisB/diavgeiaRedefined.git"
   },
   "scripts": {
     "dev": "backpack dev",
