@@ -188,11 +188,10 @@ class BTCCommiter {
        var mtx = new bcoin.mtx();
        mtx.addOutput({
          script,
-         value: config.get('proof_of_burn_fee'),
          address: null
        });
        var coins = yield dvgWallet.getCoins();
-       yield mtx.fund(coins, {changeAddress, confirmed: true});
+       yield mtx.fund(coins, {changeAddress, rate: 706560, confirmed: true});
        yield dvgWallet.sign(mtx);
        var tx = mtx.toTX();
        yield dvgWallet.db.addTX(tx);
