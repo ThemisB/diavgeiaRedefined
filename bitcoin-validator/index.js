@@ -71,89 +71,90 @@ request.post(diavgeiaURI + '/api/getAllBlockchainCommits', function (err, httpRe
       }
       // Then verify Diavgeia-Blockchain
       let verifyDiavgeia = (blockchainResults, txId, txIndex, decisionsPerTx) => {
-        if (blockchainResults.status !== 'success') {
-          throw new Error('Unexpected chainso API error')
-        }
-        let data = blockchainResults.data
-        // tx must have exactly one input
-        if (data.inputs.length !== 1) {
-          throw new Error(`Diavgeia and blockchain are inconsistent!
-            Reason: Transaction must have exactly one input (Diavgeia's address)`)
-        }
-        // Check for address mismatch
-        if (data.inputs[0].address !== diavgeiaAddresses[txIndex]) {
-          throw new Error(`Diavgeia and blockchain are inconsistent!
-            Reason: Mismatched public addresses. Expecting ${diavgeiaAddresses[txIndex]} but ${data.inputs[0].address} found.`)
-        }
-        // tx must have exactly two outputs (PoB and Change Address)
-        if (data.outputs.length !== 2) {
-          throw new Error(`Diavgeia and blockchain are inconsistent!
-            Reason: Transaction must have exactly two outputs (Proof of Burn output and Change Address)`)
-        }
-        let hexToAscii = (strInp) => {
-          let hex = strInp.toString()
-          let str = ''
-          for (let n = 0; n < hex.length; n += 2) {
-            str += String.fromCharCode(parseInt(hex.substr(n, 2), 16))
+        return new Promise((resolve, reject) => {
+          if (blockchainResults.status !== 'success') {
+            throw new Error('Unexpected chainso API error')
           }
-          return str
-        }
-        data.outputs.forEach(output => {
-          if (output.type === 'nulldata') {
-            // PoB
-            let scriptArray = output.script.split(' ')
-            if (scriptArray[0] !== 'OP_RETURN') {
-              throw new Error(`Diavgeia and blockchain are inconsistent!
-                Reason: OP_RETURN is not the first part of the script code`)
+          let data = blockchainResults.data
+          // tx must have exactly one input
+          if (data.inputs.length !== 1) {
+            throw new Error(`Diavgeia and blockchain are inconsistent!
+              Reason: Transaction must have exactly one input (Diavgeia's address)`)
+          }
+          // Check for address mismatch
+          if (data.inputs[0].address !== diavgeiaAddresses[txIndex]) {
+            throw new Error(`Diavgeia and blockchain are inconsistent!
+              Reason: Mismatched public addresses. Expecting ${diavgeiaAddresses[txIndex]} but ${data.inputs[0].address} found.`)
+          }
+          // tx must have exactly two outputs (PoB and Change Address)
+          if (data.outputs.length !== 2) {
+            throw new Error(`Diavgeia and blockchain are inconsistent!
+              Reason: Transaction must have exactly two outputs (Proof of Burn output and Change Address)`)
+          }
+          let hexToAscii = (strInp) => {
+            let hex = strInp.toString()
+            let str = ''
+            for (let n = 0; n < hex.length; n += 2) {
+              str += String.fromCharCode(parseInt(hex.substr(n, 2), 16))
             }
-            let merkleRoot = scriptArray[1]
-            let merkleRootChainSo = hexToAscii(merkleRoot)
-            // Now calculate the merkle root from data of diavgeia
+            return str
+          }
+          var crypto = require('crypto')
+          let hashFunction = (decision) => {
+            let hash = crypto.createHash(config.get('hash_algorithm'))
+            hash.update(Buffer.from(decision))
+            return hash.digest('hex')
+          }
+
+          let output = data.outputs[0]
+          let scriptArray = output.script.split(' ')
+          if (scriptArray[0] !== 'OP_RETURN') {
+            throw new Error(`Diavgeia and blockchain are inconsistent!
+              Reason: OP_RETURN is not the first part of the script code`)
+          }
+          let merkleRoot = scriptArray[1]
+          let merkleRootChainSo = hexToAscii(merkleRoot)
+          // Now calculate the merkle root from data of diavgeia
+          Promise.all(decisionsPerTx.map(hashFunction)).then((hashes) => {
+            if (err) throw err
             var merkle = require('merkle-tree-gen')
-            var crypto = require('crypto')
-            let hashFunction = (decision) => {
-              let hash = crypto.createHash(config.get('hash_algorithm'))
-              hash.update(Buffer.from(decision))
-              return hash.digest('hex')
+            const merkleTreeArgs = {
+              array: hashes,
+              hashalgo: config.get('hash_algorithm'),
+              hashlist: true
             }
-            async.mapSeries(decisionsPerTx, hashFunction, (err, hashes) => {
+            merkle.fromArray(merkleTreeArgs, function (err, tree) {
               if (err) throw err
-              const merkleTreeArgs = {
-                array: hashes,
-                hashalgo: config.get('hash_algorithm'),
-                hashlist: true
+              if (tree.root !== merkleRootChainSo) {
+                reject(new Error(`Diavgeia and blockchain are inconsistent!
+                  Reason: Computed merkle root: ${tree.root}. It has been commited to blockchain the following merkle root: ${merkleRootChainSo}`))
               }
-              merkle.fromArray(merkleTreeArgs, function (err, tree) {
-                if (err) throw err
-                if (tree.root !== merkleRootChainSo) {
-                  throw new Error(`Diavgeia and blockchain are inconsistent!
-                    Reason: Diavgeia API provides us the root: ${tree.root} while it has been commited to blockchain the following merkle root: ${merkleRootChainSo}`)
-                }
-              })
+              validTransactions[txIndex] = 1
+              resolve()
             })
-            // Now we have to check the hash of each decision.
-          } else if (output.type === 'pubkeyhash') {
-            // Change address
-            if (output.address !== diavgeiaAddresses[txIndex + 1]) {
-              throw new Error(`Diavgeia and blockchain are inconsistent!
-                Reason: Diavgeia Change address is ${output.address} while it should be ${diavgeiaAddresses[txIndex + 1]}`)
-            }
-          }
+          }).catch((err) => {
+            if (err) throw err
+          })
         })
-        validTransactions[txIndex] = 1
       }
+
       console.time('verificationTime')
+      var promises = []
       for (let i = 0; i < blockchainResults.length; i++) {
         let txIndex = commits[i].txIndex
-        verifyDiavgeia(blockchainResults[i], commits[i].txId, txIndex, gzipedDecisions[txIndex])
+        promises.push(verifyDiavgeia(blockchainResults[i], commits[i].txId, txIndex, gzipedDecisions[txIndex]))
       }
-      // If everything is ok, validTransactions should be an array filled with 1
-      let allTxChecked = validTransactions.every(tx => tx === 1)
-      if (!allTxChecked) {
-        throw new Error(`Diavgeia and blockchain are inconsistent!
-          Reason: Not all txs have been checked`)
-      }
-      console.timeEnd('verificationTime')
+      Promise.all(promises).then(() => {
+        // If everything is ok, validTransactions should be an array filled with 1
+        let allTxChecked = validTransactions.every(tx => tx === 1)
+        if (!allTxChecked) {
+          throw new Error(`Diavgeia and blockchain are inconsistent!
+            Reason: Not all txs have been checked`)
+        }
+        console.timeEnd('verificationTime')
+      }).catch((err) => {
+        if (err) throw err
+      })
     })
   })
 })
