@@ -30,6 +30,7 @@ async.eachSeries(daysArray, (_, next) => {
       try {
         output = yield spawn('node', ['src/scripts/main.js', '--commit', 'commit'], {cwd: path.resolve('../bitcoin')})
       } catch (e) {
+        console.error(e)
       }
       return output
     }).then(() => {
