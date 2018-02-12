@@ -3,7 +3,7 @@ if (process.argv.length > 2 ) {
 } else {
   process.env.NODE_ENV = "development"
 }
-process.env.NODE_CONFIG_DIR = "n3-composer/config"
+process.env.NODE_CONFIG_DIR = "web-editor/config"
 
 const config = require('config')
 const {spawn} = require('child_process')
