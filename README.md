@@ -1,4 +1,8 @@
-diavgeiaRedefined
+DiavgeiaRedefined: Diavgeia using Semantic Web technologies and Permissionless Blockchains
 ===============
 
-TBD.
+## DiavgeiaRedefined in a nutshell
+
+DiavgeiaRedefined is a re-engineering of Diavgeia, the Greek government
+portal for open and transparent public administration. This repository studies how decisions of Greek government institutions can be modeled using
+ontologies expressed in OWL ([Diavgeia ontology](https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/diavgeia.owl)). The [Web editor](https://github.com/ThemisB/diavgeiaRedefined/tree/master/web-editor) is a tool which enables Greek government institutions to author their decisions inside a web browser and transparently publish these decisions expressed in RDF. The [Visualizer](https://github.com/ThemisB/diavgeiaRedefined/tree/master/visualizer) tool can be used by any interested party in order to visualize any RDF decision of Diavgeia online, on their web browser. The bitcoin blockchain enables government decisions to remain immutable ([Stamper](https://github.com/ThemisB/diavgeiaRedefined/tree/master/stamper)). Any interested party can verify the integrity of the uploaded decisions, by using the [Consistency Verifier](https://github.com/ThemisB/diavgeiaRedefined/tree/master/consistency-verifier) tool. Finally, the [SPARQL endpoint](https://github.com/ThemisB/diavgeiaRedefined/tree/master/sparql_endpoint) empowers citizens to more easy explore decisions and detect possible government corruption in a Semantic query-like fashion.
