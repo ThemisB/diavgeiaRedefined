@@ -1,6 +1,6 @@
 exports.clean = () => {
   const expandHomeDir = require('expand-home-dir')
-  const devConfigFile = require('../n3-composer/config/development.json')
+  const devConfigFile = require('../web-editor/config/development.json')
   const decisionsSaveDir = devConfigFile.decisionsSaveDir
   const fs = require('fs')
   const path = require('path')
