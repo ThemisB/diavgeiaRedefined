@@ -1,8 +1,22 @@
 {
   "name": "benchmarks",
   "version": "1.0.0",
-  "description": "",
-  "main": ".eslintrc.js",
+  "description": "Benchmarks used to measure the scalability of the consistency verifier tool",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/ThemisB/diavgeiaRedefined/issues"
+  },
+  "homepage": "https://github.com/ThemisB/diavgeiaRedefined/benchmarks#readme",
+  "keywords": [
+    "diavgeia",
+    "benchmarks",
+    "consistency-verifier",
+    "scalability"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themisb/diavgeiaRedefined.git"
+  },
   "dependencies": {
     "async": "^2.6.0",
     "co": "^4.6.0",
