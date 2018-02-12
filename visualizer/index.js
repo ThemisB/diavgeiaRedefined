@@ -6,7 +6,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const zlib = require('zlib')
-process.env.NODE_CONFIG_DIR = '../n3-composer/config'
+process.env.NODE_CONFIG_DIR = '../web-editor/config'
 const config = require('config')
 const expandHomeDir = require('expand-home-dir')
 
