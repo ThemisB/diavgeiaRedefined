@@ -34,8 +34,6 @@ exports.generate = () => {
   }
 
   let optionalFields = {
-    preconsideration: crypto.randomBytes(randomInt(150, 350)).toString('hex'),
-    afterconsideration: crypto.randomBytes(randomInt(150, 350)).toString('hex'),
     decision_call: crypto.randomBytes(randomInt(10, 30)).toString('hex')
   }
 
