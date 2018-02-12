@@ -1,7 +1,7 @@
 {
   "name": "diavgeiaredefined",
   "version": "1.0.0",
-  "description": "Runs all main components of DiavgeiaRedefined (N3-composer, Fuseki Server, Visualizer).",
+  "description": "Runs all main components of DiavgeiaRedefined (Web Editor, Fuseki Server, Visualizer).",
   "main": "deploy.js",
   "directories": {
     "doc": "docs"
@@ -11,7 +11,7 @@
     "start": "per-env",
     "build:development": "node deploy.js --dev &",
     "prestart": "sh ./prestart.sh",
-    "start:development": "node --max-old-space-size=8192 /usr/local/bin/npm run build:development && cd n3-composer && node --max-old-space-size=8192 /usr/local/bin/npm run build &&  node --max-old-space-size=8192 /usr/local/bin/npm run start",
+    "start:development": "node --max-old-space-size=8192 /usr/local/bin/npm run build:development && cd web-editor && node --max-old-space-size=8192 /usr/local/bin/npm run build &&  node --max-old-space-size=8192 /usr/local/bin/npm run start",
     "stop": "sh ./stop.sh"
   },
   "repository": {
