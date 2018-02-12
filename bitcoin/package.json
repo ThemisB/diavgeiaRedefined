@@ -23,17 +23,17 @@
   "homepage": "https://github.com/eellak/gsoc17-diavgeia/bitcoin#readme",
   "dependencies": {
     "argparse": "^1.0.9",
-    "bcoin": "^1.0.0-beta.12",
+    "bcoin": "^1.0.0-beta.15",
     "co": "^4.6.0",
     "co-fs": "^1.2.0",
     "co-monk": "^1.0.0",
-    "config": "^1.26.1",
+    "config": "^1.29.4",
     "expand-home-dir": "0.0.3",
     "merkle-tree-gen": "^1.1.0",
     "mongo": "^0.1.0",
     "monk": "^6.0.5"
   },
   "devDependencies": {
-    "jsdoc": "^3.5.1"
+    "jsdoc": "^3.5.5"
   }
 }
