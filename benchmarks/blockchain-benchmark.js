@@ -28,7 +28,7 @@ async.eachSeries(daysArray, (_, next) => {
     co(function * () {
       var output
       try {
-        output = yield spawn('node', ['src/scripts/main.js', '--commit', 'commit'], {cwd: path.resolve('../bitcoin')})
+        output = yield spawn('node', ['src/scripts/main.js', '--commit'], {cwd: path.resolve('../bitcoin')})
       } catch (e) {
         console.error(e)
       }
