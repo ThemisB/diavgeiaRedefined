@@ -1,34 +1,41 @@
-# N3-Composer
+Web Editor
+==========
 
-> App based on Nuxt & Vue that greek government institutions can use, in order to compose their decisions in a HTML form. The submission of the form results to the creation of a .n3 decision
+The web editor is used exclusively by public sector authorities. It is a well-structured HTML form that government institutions can use in order to write their decisions. The HTML elements of the form are associated with the properties and classes of [Diavgeia ontology](https://github.com/ThemisB/diavgeiaRedefined/blob/master/rdf/diavgeia.owl). By submitting the form, the decision is stored both as a compressed Notation3 file in the filesystem of Diavgeia and in Jena Apache's triple store.
 
-## Build Setup
+Configuration
+-------------
 
-``` bash
-# install n3-composer dependencies
-$ npm install
-# Build for production
-$ npm run build
-# Run n3-composer
-$ npm start
+```json
+{
+  "decisionsSaveDir": "~/diavgeiaN3Decisions",
+  "isDecisionsSaveDirHome": true,
+  "sparqlEndpointUrl": "http://localhost:3030",
+  "sparqlStoreDir": "/mydir/.sparqlstore",
+  "dataset": "decisions",
+  "SOH_post_executable": "../sparql_endpoint/fuseki/bin/s-post",
+  "mongoDBName": "diavgeiaRedefinedMongoDB",
+  "mongoPort": "27017",
+  "mongoURL": "localhost"
+}
 ```
 
-*Important*: In order for your decisions to be saved to your SPARQL endpoint, you should have [Fuseki server running first](https://github.com/eellak/gsoc17-diavgeia/tree/master/sparql_endpoint).
+**decisionsSaveDir** : The directory in which compressed Notation3 decisions will be stored.
 
-*Important*: N3-composer uses [node-config](https://github.com/lorenwest/node-config). Before running the application in production mode, you should edit [this configuration file](https://github.com/eellak/gsoc17-diavgeia/tree/master/n3-composer/config/production.json). This file has the following values that you should edit according to your needs:
+**isDecisionsSaveDirHome** : True if *decisionsSaveDir* contains a home directory.
 
-**decisionsSaveDir**: The directory in which .n3 decisions will be saved.
+**sparqlEndpointUrl** : The Fuseki/SPARQL endpoint url.
 
-**isDecisionsSaveDirHome**: If set to true, *decisionsSaveDir* is a relative directory having your home directory as root. Else *decisionsSaveDir* is an absolute path.
+**sparqlStoreDir** : The directory in which Fuseki will store its data.
 
-**sparqlEndpointUrl**: The url that your SPARQL Server is running.
+**dataset** : The name of the dataset used in Fuseki.
 
-**dataset**: The dataset name which is used to store .n3 decisions to the rdf store.
+**SOH_post_executable** : The place where SOH s-post resides. You usually have to leave it as it is.
 
-**SOH_put_executable**: The path of the executable which is responsible for storing .n3 decisions to your SPARQL endpoint. Normally, you do not have to edit this value.
+**mongoDBName** : The name of the Mongo database.
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+**mongoPort** : The port of the mongo.
 
-## Backpack
+**mongoURL** : The url used on the mongo connection.
 
-We use [backpack](https://github.com/palmerhq/backpack) to watch and build the application, so you can use the latest ES6 features (module syntax, async/await, etc.).
+**NOTE** : After configuring your `.json` file, you have to export the *NODE_ENV* according to the configuration file name. For instance, if you have named your configuration file `development.json` you have to `export NODE_ENV=development`. Please read more about this, [here](https://github.com/lorenwest/node-config/wiki/Environment-Variables)
