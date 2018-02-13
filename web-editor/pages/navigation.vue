@@ -100,7 +100,7 @@ export default {
     const blockchainCommitObj = await app.$axios.$post('getLastBlockchainCommit')
     return {decisions, blockchainCommitObj}
   },
-  components: {Decision, Countdown}
+  components: {Countdown}
 }
 
 </script>
