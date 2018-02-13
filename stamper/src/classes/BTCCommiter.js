@@ -15,9 +15,7 @@ class BTCCommiter {
    * @param {String} decisionsFolder - A folder that contains all the decisions that will be commited in a tx on the Bitcoin blockchain.
    */
 
-  constructor(decisionsFolder) {
-    this.decisionsFolder = decisionsFolder;
-  }
+  constructor() {}
 
   /**
    * @typedef {Array.<DecisionData>} DecisionsData
@@ -181,8 +179,8 @@ class BTCCommiter {
      return co(function* () {
        var opcodes = bcoin.script.opcodes;
        var script = new bcoin.script();
-       script.push(opcodes.OP_RETURN);
-       script.push(root);
+       script.pushSym('OP_RETURN');
+       script.pushString(root);
        script.compile();
        var changeAddress = dvgWallet.getAddress();
        var mtx = new bcoin.mtx();
