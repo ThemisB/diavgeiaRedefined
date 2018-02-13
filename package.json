@@ -11,7 +11,7 @@
     "start": "per-env",
     "build:development": "node deploy.js --dev &",
     "prestart": "sh ./prestart.sh",
-    "start:development": "node --max-old-space-size=8192 /usr/local/bin/npm run build:development && cd web-editor && node --max-old-space-size=8192 /usr/local/bin/npm run build &&  node --max-old-space-size=8192 /usr/local/bin/npm run start",
+    "start:development": "npm run build:development && cd web-editor && npm run build && npm run start",
     "stop": "sh ./stop.sh"
   },
   "repository": {
