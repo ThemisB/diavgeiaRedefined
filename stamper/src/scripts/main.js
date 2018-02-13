@@ -12,7 +12,7 @@ const Helpers = require('../classes/Helpers');
 
   var parser = new ArgumentParser({
     addHelp: true,
-    description: 'Script for commiting Diavgeia decisions to Bitcoin Blockchain'
+    description: 'Script for storing Diavgeia decisions on Bitcoin Blockchain'
   });
 
   parser.addArgument(
@@ -38,14 +38,13 @@ const Helpers = require('../classes/Helpers');
   parser.addArgument(
     ['--commit'],
     {
-      help:'Commits all the decisions inside decisionsPath to Bitcoin blockchain',
-      nargs: 1,
-      metavar: 'decisionsPath'
+      help:'Commits all the decisions that have not been stamped yet to the Bitcoin blockchain',
+      nargs: 0
     }
   );
 
   var args = parser.parseArgs();
-  if (!args['spv'] && !args['commit'] && !args['init']) {
+  if (!args['spv']  && !args['init'] && !args['commit']) {
     parser.printHelp();
     return;
   }
@@ -61,13 +60,12 @@ const Helpers = require('../classes/Helpers');
     walletdb = yield wallet.getWalletDB();
   }
   dvgWallet = yield walletdb.get(config.get('wallet_id'));
-
   if (!args['spv'] && !args['commit'])
     return;
 
-  assert(dvgWallet != undefined, `No wallet '${config.get('wallet_id')}' found.You have to initialize it first.`)
+  assert(dvgWallet != null, `No wallet '${config.get('wallet_id')}' found.You have to initialize it first.`)
   const spv = Helpers.runSPV(walletdb, dvgWallet);
   if (args['commit']) {
-    Helpers.publishToBTC(args['commit'][0], dvgWallet, spv);
+    Helpers.publishToBTC(dvgWallet, spv);
   }
 }));
