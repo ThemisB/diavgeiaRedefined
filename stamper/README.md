@@ -59,7 +59,7 @@ The application uses the [node-config](https://github.com/lorenwest/node-config)
 
 **wallet_id** : The name of Diavgeia's wallet.
 
-**network** : The cryptocurrency in which decisions will be uploaded to. The value can be one of `main, testnet, regtest, segnet4`. `Main` corresponds to the main Bitcoin Network and this is the value that should be used in production. For testing reasons i highly recommend to use `testnet` as you can get free BTC and experiment with the application without worrying about real BTC.
+**network** : The Bitcoin network in which decisions will be uploaded to. The value can be one of `main, testnet, regtest, segnet4`. `Main` corresponds to the main Bitcoin Network and this is the value that should be used in production. For testing reasons i highly recommend to use `testnet` as you can get free BTC and experiment with the application without worrying about real BTC.
 
 **hash_algorithm** : The algorithm which will be used on Merkle Tree Construction. The `hash_algorithm` is dependent on the available algorithms supported by the version of OpenSSL platform. Examples are `sha256`, `sha512`, etc. On recent releases of OpenSSL, `openssl list-message-digest-algorithms` will display the available digest algorithms.
 
