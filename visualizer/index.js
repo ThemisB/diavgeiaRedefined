@@ -6,8 +6,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const zlib = require('zlib')
-process.env.NODE_CONFIG_DIR = '../web-editor/config'
-const config = require('config')
+const resolve = require('path').resolve
 const expandHomeDir = require('expand-home-dir')
 
 const DECISIONS_DIRECTORY = path.resolve('../rdf/samples')
@@ -68,7 +67,10 @@ app.get('/visualize', function (req, res) {
         res.render('index', generalPropertiesFormatter.properties)
       })
     } else {
-      let decisionDirectory = expandHomeDir(config.get('decisionsSaveDir'))
+      let webEditorConfigFile = resolve(__dirname, '../web-editor/config')
+      webEditorConfigFile += process.env.NODE_ENV === 'development' ? '/development.json' : '/production.json'
+      let decisionDirectory = JSON.parse(fs.readFileSync(webEditorConfigFile, 'utf8'))
+      decisionDirectory = expandHomeDir(decisionDirectory['decisionsSaveDir'])
       fs.readFile(decisionDirectory + '/' + iun + '_' + version + '.n3.gz', (err, data) => {
         if (err) {
           res.status(404).send('Not found')
