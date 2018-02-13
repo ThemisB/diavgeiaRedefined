@@ -30,7 +30,7 @@ class Wallet {
     return co(function* () {
       let walletdb = yield _wallet.getWalletDB();
       let existingWallet = yield walletdb.get(_wallet.id);
-      if (existingWallet === undefined) {
+      if (existingWallet === null) {
         yield walletdb.create({
           id:_wallet.id
         });
