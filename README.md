@@ -9,7 +9,7 @@ ontologies expressed in OWL ([Diavgeia ontology](https://github.com/ThemisB/diav
 
 ## Installation & Usage
 
-As a minimum requirement, you have to install on your system a NodeJS version >= 8.0. [[download link]]([https://nodejs.org/en/download/current/]). It also requires a running MongoDB instance.
+As a minimum requirement, you have to install on your system a NodeJS version >= 8.0 ([download link]([https://nodejs.org/en/download/current/])). It also requires a running MongoDB instance.
 
 Having successfully installed NodeJS >= 8.0, you have to also install the related dependencies (node_modules), simply by running `node install_dependencies.js` on the root of the project folder.
 
