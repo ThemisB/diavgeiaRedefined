@@ -3,7 +3,7 @@ Expressing decisions in RDF
 
 Sections
 -------
-1. [Why should we use RDF?](#why-should-we-use-rdf?)
+1. [Why should we use RDF?](#why-should-we-use-rdf)
 2. [The Diavgeia ontology](#the-diavgeia-ontology)
 3. [Decision Types and Samples](#decision-types-and-samples)
 4. [General Schema Classes](#general-schema-classes)
@@ -85,7 +85,7 @@ The Diavgeia ontology offers 121 properties to cover all the particularities of 
 
 In order to identify legal resources, we also need appropriate URIs. Persistent URIs is a strongly recommended best practice, according to ELI. It is very important to have reliable means to identify the public sector decisions. We can structure the persistent URIs of decisions according to the template `http://www.diavgeia.gov.gr/eli/{iun}/{version}`. Modifications of a decision result to the generation of a new URI which has the same `iun` and a new `version` number. Thus, the version of an enacted decision can be seen as the decision which has the most recent `date_publication` for a specific `iun`.
 
-**Visualization of Diavgeia ontology** : A visualization of the Diavgeia ontology can be found on this [page](83.212.100.94/ontodoc/).
+**Visualization of Diavgeia ontology** : A visualization of the Diavgeia ontology can be found on this [page](http://83.212.100.94/ontodoc/).
 
 ### Decision Types and Samples
 
