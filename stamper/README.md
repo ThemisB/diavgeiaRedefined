@@ -1,5 +1,5 @@
-Adoption of Bitcoin Blockchain in Diavgeia
-====
+Stamper
+=======
 
 Sections
 -------
