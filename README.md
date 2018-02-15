@@ -15,11 +15,17 @@ Having successfully installed NodeJS >= 8.0, you have to also install the relate
 
 After that you have to edit the related configuration files, as explained to the README files of the corresponding components (see [web-editor](https://github.com/ThemisB/diavgeiaRedefined/tree/master/web-editor/README.md), [stamper](https://github.com/ThemisB/diavgeiaRedefined/blob/master/stamper/README.md) and [consistency-verifier](https://github.com/ThemisB/diavgeiaRedefined/tree/master/consistency-verifier/README.md)))
 
+In order to start all the services of the project, simply run `npm start` on the root of the project.
+
+In order to stop all the services kill the running npm process and then type `npm stop`.
+
 ## Components of DiavgeiaRedefined
 
 In order to better understand the goal of this project, please pay a visit to the links of the components of DiavgeiaRedefined, as provided below. The README files explain in great detail their functionality and benefits.
 
 * The *Diavgeia ontology* and related RDF topics (see the following  [README](https://github.com/ThemisB/diavgeiaRedefined/tree/master/rdf/README.md))
+
+* See some [SPARQL queries](https://github.com/ThemisB/diavgeiaRedefined/tree/master/sparql_endpoint) one may pose to scrutinize the public sector.
 
 * The Web Editor component (see the following [README](https://github.com/ThemisB/diavgeiaRedefined/tree/master/web-editor/README.md))
 
@@ -28,7 +34,3 @@ In order to better understand the goal of this project, please pay a visit to th
 * Stamper (see the following [README](https://github.com/ThemisB/diavgeiaRedefined/tree/master/stamper/README.md))
 
 * The Consistency Verifier tool (see the [README](https://github.com/ThemisB/diavgeiaRedefined/tree/master/consistency-verifier/README.md))
-
-
-
-
