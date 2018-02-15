@@ -11,7 +11,7 @@ Verification Algorithm
 
 Consistency Verifier is the tool which can be used by the interested parties in order to verify that decisions have remained immutable over time. Algorithm 1 formalizes the steps Consistency Verifier takes to verify the integrity of decisions.
 
-The first step is to download the compressed Notation3 decisions which have been included in stamping transactions. Afterwards, the verifier downloads in ascending time order all bitcoin transactions (using the \textit{chain.so} bitcoin block reader, available at \url{https://chain.so/}), related to the used public addresses derived from Diavgeia's master public key. In case of a stamping transaction, the verifier constructs the Merkle tree using the decisions of the first step. If the computed Merkle root is equal to the Merkle root found on the stamping transaction, decisions have remained unmodified.
+The first step is to download the compressed Notation3 decisions which have been included in stamping transactions. Afterwards, the verifier downloads in ascending time order all bitcoin transactions (using the [chain.so](https://chain.so/) bitcoin block reader), related to the used public addresses derived from Diavgeia's master public key. In case of a stamping transaction, the verifier constructs the Merkle tree using the decisions of the first step. If the computed Merkle root is equal to the Merkle root found on the stamping transaction, decisions have remained unmodified.
 
 For the time being, the verification algorithm performs a "full verification", meaning that it checks that all decisions of Diavgeia have remained immutable. In the future, we plan to implement an "inclusion verification", that is given a pair of `iun`-`version`, we can check if a given decision has already been stamped, employing the published Merkle Tree.
 
@@ -27,7 +27,7 @@ Configuration
 }
 ```
 
-**network** : The Bitcoin network in which the verifier will run. The value can be one of `main, testnet, regtest, segnet4`. `Main` corresponds to the main Bitcoin Network and this is the value that should be used in production. For testing reasons i highly recommend to use `testnet` as you can get free BTC and experiment with the application without worrying about real BTC.
+**network** : The Bitcoin network in which the verifier will run. The value can be one of `main`, `testnet`, `regtest`, `segnet4`. `Main` corresponds to the main Bitcoin Network and this is the value that should be used in production. For testing reasons i highly recommend to use `testnet` as you can get free BTC and experiment with the application without worrying about real BTC.
 
 **diavgeiaURI** : This is the URI of the endpoint which Diavgeia offers the ability to download the decisions of the public authorities (e.g. `https://diavgeia.gov.gr/`). For testing reasons you can set it to `http://localhost:3000`.
 
